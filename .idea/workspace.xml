@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gQUNadQnkYOwC9kwiXj3KVHuUN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Dart" />
+  </component>
+  <component name="RunManager" selected="Dart Command Line App.SnareLang4Example">
+    <configuration name="SnareLang4Example" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="filePath" value="$PROJECT_DIR$/example/snarelang4_example.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SnareLang4Test" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <option name="filePath" value="$PROJECT_DIR$/test/snarelang4_test.dart" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Dart Command Line App.SnareLang4Example" />
+      <item itemvalue="Dart Test.SnareLang4Test" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="" />
+      <created>1598046271495</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598046271495</updated>
+      <workItem from="1598046272753" duration="2921000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2058" y="717" width="1084" height="732" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598049193662">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="2058" y="717" width="1084" height="732" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1598049193662" />
+    <state x="2332" y="864" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1598049175723">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="2332" y="864" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1598049175723" />
+    <state width="2261" height="603" key="GridCell.Tab.0.bottom" timestamp="1598049132676">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state width="2261" height="603" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1598049132676" />
+    <state width="2261" height="603" key="GridCell.Tab.0.center" timestamp="1598049132676">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state width="2261" height="603" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1598049132676" />
+    <state width="2261" height="603" key="GridCell.Tab.0.left" timestamp="1598049132676">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state width="2261" height="603" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1598049132676" />
+    <state width="2261" height="603" key="GridCell.Tab.0.right" timestamp="1598049132676">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state width="2261" height="603" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1598049132676" />
+    <state x="2306" y="808" width="587" height="502" key="find.popup" timestamp="1598049115276">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="2306" y="808" width="587" height="502" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1598049115276" />
+  </component>
+</project>
