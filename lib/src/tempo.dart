@@ -23,11 +23,12 @@ import '../snarelang4.dart';
 /// \tempo 7=8 9   okay, and 9 is a note
 /// \tempo 7:8 9   fail because 9 might be a note
 /// \tempo 10  fail because next thing might be a number for a note
-
+///
+/// But really this should also be accepted:    \tempo <bpm>
 
 class Tempo {
   NoteDuration noteDuration = NoteDuration();
-  int bpm;
+  int bpm = 84; // initialize?
 
   String toString() {
     return '\\tempo $noteDuration=$bpm';
@@ -47,12 +48,17 @@ class Tempo {
 /// tempoParser
 ///
 Parser tempoParser = ( // what about whitespace?
-    string('\\tempo').trim() & durationParser.trim() & char('=').trim() & wholeNumberParser
+    string('\\tempo').trim() & (durationParser.trim() & char('=').trim()).optional().trim() & wholeNumberParser
+//Parser tempoParser = ( // what about whitespace?
+//    string('\\tempo').trim() & durationParser.trim() & char('=').trim() & wholeNumberParser
 ).trim().map((value) {
   //print('\nIn TempoParser and value is -->$value<--');
   var tempo = Tempo();
-  tempo.noteDuration = value[1];
-  tempo.bpm = value[3];
+  if (value[1] != null) {
+    NoteDuration noteDuration = value[1][0];
+    tempo.noteDuration = noteDuration;
+  }
+  tempo.bpm = value[2];
   //print('Leaving tempoParser returning value $tempo');
   return tempo;
 });

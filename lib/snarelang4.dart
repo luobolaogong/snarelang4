@@ -4,6 +4,7 @@
 library snarelang4;
 
 export 'src/dynamic.dart';
+export 'src/midi.dart';
 export 'src/note.dart';
 export 'src/score.dart';
 export 'src/tempo.dart';

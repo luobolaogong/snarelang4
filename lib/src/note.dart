@@ -1,4 +1,5 @@
 import 'package:petitparser/petitparser.dart';
+import '../snarelang4.dart';
 
 enum NoteArticulation {
   marcato, // '^' big accent
@@ -7,8 +8,10 @@ enum NoteArticulation {
 }
 
 class NoteDuration {
-  num firstNumber; // should be an int?
-  num secondNumber;
+  int firstNumber = 4; // initialize????
+  num secondNumber = 1;
+//  num firstNumber; // should be an int?
+//  num secondNumber;
 
   NoteDuration();
 //  NoteDuration(this.firstNumber, this.secondNumber);
@@ -38,13 +41,17 @@ class Note {
   NoteArticulation articulation;
   NoteDuration duration;
   NoteType noteType = NoteType.rightTap;  // correct here?
-  int velocity;
+//  int velocity; // Perhaps this will go into MidiNote or something
+  Dynamic dynamic; // gets a value during first pass through the score list
+
   Note() {
     duration = NoteDuration();
   }
+
   String toString() {
-    return 'Articulation: ${articulation}, Duration: ${duration}, NoteType: ${noteType}';
+    return 'Articulation: $articulation, Duration: $duration, NoteType: $noteType, Dynamic: $dynamic';
   }
+
   swapHands() {
     switch (noteType) {
       case NoteType.rightTap:
@@ -134,6 +141,9 @@ Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberPars
   duration.firstNumber = value[0];
   if (value[1] != null) { // prob unnec
     duration.secondNumber = value[1][1];
+  }
+  else {
+    duration.secondNumber = 1; // wild guess that this fixes things
   }
   //print('Leaving DurationParser returning duration $duration');
   return duration;

@@ -46,6 +46,29 @@ int toVelocity(Dynamic dynamic) {
   }
   return velocity;
 }
+Dynamic toDynamic(dynamicString) {
+  switch (dynamicString) {
+    case 'ppp':
+      return Dynamic.ppp;
+    case 'pp':
+      return Dynamic.pp;
+    case 'p':
+      return Dynamic.p;
+    case 'mp':
+      return Dynamic.mp;
+    case 'mf':
+      return Dynamic.mf;
+    case 'f':
+      return Dynamic.f;
+    case 'ff':
+      return Dynamic.ff;
+    case 'fff':
+      return Dynamic.fff;
+    default:
+      print('What kinda string is that? -->$dynamicString<--');
+      return Dynamic.mf;
+  }
+}
 
 ///
 /// DynamicParser
