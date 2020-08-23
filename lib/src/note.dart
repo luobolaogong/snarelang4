@@ -2,14 +2,17 @@ import 'package:petitparser/petitparser.dart';
 import '../snarelang4.dart';
 
 enum NoteArticulation {
-  marcato, // '^' big accent
+  tenuto, // '_' small accent
   accent, // '>' normal accent
-  tenuto // '_' small accent
+  marcato // '^' big accent
 }
 
 class NoteDuration {
-  int firstNumber = 4; // initialize????
-  num secondNumber = 1;
+  int firstNumber; // initialize????
+  int secondNumber;
+//  int firstNumber = 4; // initialize????
+//  int secondNumber = 1;
+
 //  num firstNumber; // should be an int?
 //  num secondNumber;
 
@@ -41,7 +44,7 @@ class Note {
   NoteArticulation articulation;
   NoteDuration duration;
   NoteType noteType = NoteType.rightTap;  // correct here?
-//  int velocity; // Perhaps this will go into MidiNote or something
+  int velocity; // Perhaps this will go into MidiNote or something, new
   Dynamic dynamic; // gets a value during first pass through the score list
 
   Note() {
@@ -102,15 +105,14 @@ Parser articulationParser = (
   //print('\nIn Articulationparser');
   NoteArticulation articulation;
   switch (value) {
-    case '^':
-      articulation = NoteArticulation.marcato;
+    case '_':
+      articulation = NoteArticulation.tenuto;
       break;
     case '>':
       articulation = NoteArticulation.accent;
       break;
-    case '_':
-    case '-': // get rid of this one
-      articulation = NoteArticulation.tenuto;
+    case '^':
+      articulation = NoteArticulation.marcato;
       break;
     default:
       print('What was that articulation? -->${value}<--');

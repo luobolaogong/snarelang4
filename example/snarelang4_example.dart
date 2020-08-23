@@ -13,6 +13,7 @@ import 'package:logging/logging.dart';
 /// Also, study this: https://github.com/truj/midica
 /// which appears to be a Java app that has an interface but can be command line.
 ///
+/// This is good for doing new Dart things: https://dart.dev/codelabs/dart-cheatsheet
 
 
 
@@ -111,7 +112,7 @@ void main(List<String> arguments) {
     ..addOption(commandLineTimeSig,
         abbr: 's',
         help:
-        'initial/default time signature, using ratio notation like 3:4 or 4:4 or 9:8, etc',
+        'initial/default time signature, like 3/4 or 4/4 or 9/8, etc',
         valueHelp: 'bpmValue')
     ..addFlag(help,
         abbr: 'h',
@@ -158,12 +159,13 @@ void main(List<String> arguments) {
   if (argResults[commandLineDynamic] != null) {
 //    overrideDynamic = argResults[commandLineDynamic]; // wrong
     String dynamicString = argResults[commandLineDynamic];
-    overrideDynamic = toDynamic(dynamicString); // dislike global functions/methods
+    overrideDynamic = stringToDynamic(dynamicString); // dislike global functions/methods
   }
   if (argResults[commandLineTimeSig] != null) {
-    String sigWithColon = argResults[commandLineTimeSig]; // wrong
+    String sig = argResults[commandLineTimeSig]; // expecting num/denom
 //    List<String> sigParts = sigWithColon.split(new RegExp(r'\:'));
-    List sigParts = sigWithColon.split(':');
+//    List sigParts = sigWithColon.split(':');
+    List sigParts = sig.split('/');
     overrideTimeSig = TimeSig();
     overrideTimeSig.numerator = int.parse(sigParts[0]);
     overrideTimeSig.denominator = int.parse(sigParts[1]);
@@ -187,27 +189,37 @@ void main(List<String> arguments) {
     return;
   }
   Score score = result.value;
-  score.applyShorthands();
-  score.applyDynamics();
 
+  // New
+  var defaultFirstNoteProperties = Note();
+  defaultFirstNoteProperties.duration.firstNumber = 4;
+  defaultFirstNoteProperties.duration.secondNumber = 1;
+  defaultFirstNoteProperties.noteType = NoteType.leftTap; // ???
+  defaultFirstNoteProperties.dynamic = overrideDynamic; // new
+
+  score.applyShorthands(defaultFirstNoteProperties);
+//  score.applyShorthands();
+  //score.applyDynamics();
+
+  // create midi events list now?
 
 
   final ticksPerBeat = 10080; // TODO: Put this in one place, it's in 2 files now, better than 840 or 480
 
   // Create Midi header
   var midi = Midi(); // I guess "midi" is already defined elsewhere
-  var midiHeaderOut =  midi.fillInHeader(ticksPerBeat); // 840 ticks per beat seems good
+  var midiHeader =  midi.createMidiHeader(ticksPerBeat); // 840 ticks per beat seems good
 
   // Create Midi tracks
 //  var tracks = midi.fillInTracks(numerator, denominator, tempoOverrideBpm, ticksPerBeat, result.value.elements, nominalVolume);
-  var tracks = midi.fillInTracks(score.elements, overrideTimeSig, overrideTempo, overrideDynamic);
+  var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic);
 
 
   // Add the header and tracks list into a MidiFile, and write it
-  var midiFileOut = MidiFile(tracks, midiHeaderOut);
+  var midiFile = MidiFile(midiTracks, midiHeader);
   var midiWriterCopy = MidiWriter();
   var midiFileOutFile = File(argResults[outMidiFilesPath]);
-  midiWriterCopy.writeMidiToFile(midiFileOut, midiFileOutFile); // will crash here
+  midiWriterCopy.writeMidiToFile(midiFile, midiFileOutFile); // will crash here
   print('Done writing midifile ${midiFileOutFile.path}');
 }
 
@@ -272,7 +284,7 @@ void main(List<String> arguments) {
 //  // 1.  Determine the total time duration from the start to the end,
 //  // 2.  For each note
 //  // 3.     calculate the percentage of the elapsed time to that note compared to the total time
-//  // 4.     Scale the velocity accordingly (Set the velocity to that fraction of the dynamic difference)
+//  // 4.     Ramp the velocity accordingly (Set the velocity to that fraction of the dynamic difference)
 //
 //
 //  // Apply shorthands and absolute velocities

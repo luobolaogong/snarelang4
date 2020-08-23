@@ -11,7 +11,7 @@ import '../snarelang4.dart';
 ///
 /// That list can be handed over to a Midi processor to be used to create
 /// a list of midi events.  At some time in that process note velocities
-/// will get applied, which are a product of the absolute and scaled dynamics
+/// will get applied, which are a product of the absolute and rampd dynamics
 /// and note type.
 ///
 class Score {
@@ -53,15 +53,21 @@ class Score {
   /// expanded to volume/velocity later.
   /// Also, when the note type is not specified, swap hand order from the previous note.
   ///
-  void applyShorthands() {
+//  void applyShorthands() {
+  void applyShorthands(Note defaultNote) {
     // bad logic.  Off by one stuff:
-    var previousNote = Note();
-    previousNote.duration.firstNumber = 4;
-    previousNote.duration.secondNumber = 1;
-    previousNote.noteType = NoteType.leftTap; // ???
-    previousNote.dynamic = Dynamic.mf; // new.  Conflicts with what may come in on command line
+    var previousNote = defaultNote;
+//    var previousNote = Note();
+//    previousNote.duration.firstNumber = 4;
+//    previousNote.duration.secondNumber = 1;
+//    previousNote.noteType = NoteType.leftTap; // ???
+//    previousNote.dynamic = Dynamic.mf; // new.  Conflicts with what may come in on command line
 
     for (var element in elements) {
+      if (element.runtimeType == Dynamic) { // new
+        previousNote.dynamic = element;
+        continue;
+      }
       if (element.runtimeType != Note) {
         continue;
       }
@@ -85,13 +91,13 @@ class Score {
     return;
   }
 
-  void applyDynamics() {
-    Dynamic currentDynamic;
-    for (var element in elements) {
-      print('looking at $element to apply dynamics');
-    }
-    return;
-  }
+//  void applyDynamics() {
+//    Dynamic currentDynamic;
+//    for (var element in elements) {
+//      print('looking at $element to apply dynamics');
+//    }
+//    return;
+//  }
 }
 
 ///
