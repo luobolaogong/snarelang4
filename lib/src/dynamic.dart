@@ -1,4 +1,7 @@
 import 'package:petitparser/petitparser.dart';
+import 'package:logging/logging.dart';
+
+final log = Logger('Dynamic');
 
 enum Dynamic {
   ppp,
@@ -89,6 +92,9 @@ int dynamicToVelocity(Dynamic dynamic) {
 //      break;
 //    case Dynamic.ramp:
 //      break;
+    default:
+      log.info('What kine dynamic was that? $dynamic');
+      break;
   }
   return velocity;
 }
@@ -111,7 +117,7 @@ Dynamic stringToDynamic(dynamicString) {
     case 'fff':
       return Dynamic.fff;
     default:
-      print('What kinda string is that? -->$dynamicString<--');
+      log.info('What kinda string is that? -->$dynamicString<--');
       return Dynamic.mf;
   }
 }
@@ -134,7 +140,7 @@ Parser dynamicParser = (
     string('\\decresc') |
     string('\\cresc')
 ).trim().map((value) { // trim?  Yes!  Makes a difference
-  //print('\nIn Dynamicparser');
+  //log.info('\nIn Dynamicparser');
   Dynamic dynamic;
   switch (value) {
     case '\\ppp':
@@ -169,6 +175,6 @@ Parser dynamicParser = (
       dynamic =  Dynamic.ramp;
       break;
   }
-  //print('Leaving DynamicParser returning value $dynamic');
+  //log.info('Leaving DynamicParser returning value $dynamic');
   return dynamic;
 });

@@ -185,7 +185,11 @@ void main(List<String> arguments) {
   Result result = Score.load(piecesOfMusic);
 
   if (result.isFailure) {
-    print('Failed to parse some part of one of the scores parts, and message: ${result.message}');
+    log.info('Failed to parse the scores. Message: ${result.message}');
+    var rowCol = result.toPositionString().split(':');
+    log.info('Check line ${rowCol[0]}, character ${rowCol[1]}');
+    log.info('Should be around this character: ${result.buffer[result.position]}');
+//    log.info('^'.padLeft(result.position));
     return;
   }
   Score score = result.value;
@@ -220,7 +224,7 @@ void main(List<String> arguments) {
   var midiWriterCopy = MidiWriter();
   var midiFileOutFile = File(argResults[outMidiFilesPath]);
   midiWriterCopy.writeMidiToFile(midiFile, midiFileOutFile); // will crash here
-  print('Done writing midifile ${midiFileOutFile.path}');
+  log.info('Done writing midifile ${midiFileOutFile.path}');
 }
 
 

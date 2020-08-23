@@ -82,12 +82,12 @@ class Note {
         noteType = NoteType.rightBuzz;
         break;
       case NoteType.previousNoteDurationOrType:
-        print('Do what?????');
+        log.info('Do what?????');
         break;
       case NoteType.rest:
         break;
       default:
-        print('What was that note type?  $noteType');
+        log.info('What was that note type?  $noteType');
         break;
     }
   }
@@ -102,7 +102,7 @@ Parser articulationParser = (
     char('_') |
     char('-')    // get rid of this one
 ).trim().map((value) { // trim()?
-  //print('\nIn Articulationparser');
+  //log.info('\nIn Articulationparser');
   NoteArticulation articulation;
   switch (value) {
     case '_':
@@ -115,9 +115,9 @@ Parser articulationParser = (
       articulation = NoteArticulation.marcato;
       break;
     default:
-      print('What was that articulation? -->${value}<--');
+      log.info('What was that articulation? -->${value}<--');
   }
-  //print('Leaving Articulationparser returning articulation $articulation');
+  //log.info('Leaving Articulationparser returning articulation $articulation');
   return articulation;
 });
 
@@ -127,9 +127,9 @@ Parser articulationParser = (
 /// WholeNumberParser
 ///
 Parser wholeNumberParser = digit().plus().flatten().trim().map((value) { // not sure need sideeffect true
-  //print('\nIn WholeNumberparser');
+  //log.info('\nIn WholeNumberparser');
   final theWholeNumber = int.parse(value);
-  //print('Leaving WholeNumberparser returning theWholeNumber $theWholeNumber');
+  //log.info('Leaving WholeNumberparser returning theWholeNumber $theWholeNumber');
   return theWholeNumber;
 });
 
@@ -138,7 +138,7 @@ Parser wholeNumberParser = digit().plus().flatten().trim().map((value) { // not 
 ///
 
 Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberParser).optional()).map((value) { // trim?
-  //print('\nIn DurationParser');
+  //log.info('\nIn DurationParser');
   var duration = NoteDuration();
   duration.firstNumber = value[0];
   if (value[1] != null) { // prob unnec
@@ -147,7 +147,7 @@ Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberPars
   else {
     duration.secondNumber = 1; // wild guess that this fixes things
   }
-  //print('Leaving DurationParser returning duration $duration');
+  //log.info('Leaving DurationParser returning duration $duration');
   return duration;
 });
 
@@ -155,7 +155,7 @@ Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberPars
 /// TypeParser
 ///
 Parser typeParser = pattern('TtFfDdZzr.').trim().map((value) { // trim?
-  //print('\nIn TypeParser');
+  //log.info('\nIn TypeParser');
   NoteType noteType;
   switch (value) {
     case 'T':
@@ -189,10 +189,10 @@ Parser typeParser = pattern('TtFfDdZzr.').trim().map((value) { // trim?
       noteType = NoteType.previousNoteDurationOrType;
       break;
     default:
-      print('Hey, this shoulda been a failure cause got -->${value[0]}<-- and will return null');
+      log.info('Hey, this shoulda been a failure cause got -->${value[0]}<-- and will return null');
       break;
   }
-  //print('Leaving TypeParser returning noteType $noteType');
+  //log.info('Leaving TypeParser returning noteType $noteType');
   return noteType;
 });
 
@@ -210,11 +210,11 @@ Parser noteParser = (
     (durationParser) |
     (typeParser)
 ).trim().map((valuesOrValue) { // trim?
-  //print('\nIn NoteParser');
+  //log.info('\nIn NoteParser');
   var note = Note();
 
   if (valuesOrValue == null) {  //
-    print('does this ever happen?  Hope not.  Perhaps if no match?');
+    log.info('does this ever happen?  Hope not.  Perhaps if no match?');
   }
   // Handle cases ABC, AB, AC, BC
   if (valuesOrValue is List) {
@@ -244,6 +244,6 @@ Parser noteParser = (
     }
   }
 
-  //print('Leaving NoteParser returning note -->$note<--');
+  //log.info('Leaving NoteParser returning note -->$note<--');
   return note;
 });

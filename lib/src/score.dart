@@ -1,6 +1,11 @@
 import 'dart:io';
 import 'package:petitparser/petitparser.dart';
 import '../snarelang4.dart';
+import 'package:logging/logging.dart';
+
+
+
+//final log = Logger('Score');
 
 // TODO: Put public facing types in this file.
 
@@ -24,10 +29,10 @@ class Score {
   static Result load(List<String> scoresPaths) {
     var scoresBuffer = StringBuffer();
     for (var filePath in scoresPaths) {
-      print('gunna process file $filePath');
+      log.info('gunna process file $filePath');
       var inputFile = File(filePath);
       if (!inputFile.existsSync()) {
-        print('File does not exist at ${inputFile.path}');
+        log.info('File does not exist at ${inputFile.path}');
         continue;
       }
       var fileContents = inputFile.readAsStringSync(); // per line better?
@@ -36,13 +41,16 @@ class Score {
       }
       scoresBuffer.write(fileContents);
     }
+    //
+    // Parse the score's text elements, notes and other stuff
+    //
     var result = scoreParser.parse(scoresBuffer.toString());
     if (result.isSuccess) {
       Score score = result.value;
-      print('parse succeeded.  This many elements: ${score.elements.length}'); // wrong
+      log.info('parse succeeded.  This many elements: ${score.elements.length}'); // wrong
     }
     else {
-      print('parse failed: ${result.message}');
+      log.info('parse failed: ${result.message}');
     }
     return result;
   }
@@ -57,36 +65,58 @@ class Score {
   void applyShorthands(Note defaultNote) {
     // bad logic.  Off by one stuff:
     var previousNote = defaultNote;
-//    var previousNote = Note();
-//    previousNote.duration.firstNumber = 4;
-//    previousNote.duration.secondNumber = 1;
-//    previousNote.noteType = NoteType.leftTap; // ???
-//    previousNote.dynamic = Dynamic.mf; // new.  Conflicts with what may come in on command line
-
     for (var element in elements) {
+      print('element is ${element.runtimeType} and has this $element');
       if (element.runtimeType == Dynamic) { // new
+        if (element == Dynamic.ramp) {
+          continue;
+        }
         previousNote.dynamic = element;
         continue;
       }
       if (element.runtimeType != Note) {
-        continue;
+        continue; // what else are we skipping here?
       }
-      Note note = element;
-      if (note.duration == null || note.noteType == NoteType.previousNoteDurationOrType) { // looks bad logic
-        note.duration = previousNote.duration;
+      //
+      // This section is risky. This could contain bad logic:
+      //
+      // Usually to repeat a previous note we just have '.' by itself, but we could have
+      // '4.' to mean quarter note, but same note type as before, or
+      // '.T' to mean same duration as previous note, but make this one a right tap, or
+      // '>.' to mean same note as before, but accented this time.
+      //
+      if (element.noteType == NoteType.previousNoteDurationOrType) {
+        element.duration = previousNote.duration;
+        element.dynamic = previousNote.dynamic;
+        element.noteType = previousNote.noteType;
+        element.swapHands(); // check that nothing stupid happens if element is a rest or dynamic or something else
       }
-      if (note.noteType == null || note.noteType == NoteType.previousNoteDurationOrType) {
-        note.noteType = previousNote.noteType;
-        // Also swap hands
-        note.swapHands();
+      else {
+//        element.duration ??= previousNote.duration;
+        element.duration.firstNumber ??= previousNote.duration.firstNumber; // new
+        element.duration.secondNumber ??= previousNote.duration.secondNumber;
+        element.dynamic ??= previousNote.dynamic;
+        if (element.noteType == null) {
+          element.noteType = previousNote.noteType;
+          element.swapHands();
+        }
       }
-      if (note.dynamic == null || note.noteType == NoteType.previousNoteDurationOrType) {
-        note.dynamic = previousNote.dynamic;
-      }
+//      if (note.duration == null || note.noteType == NoteType.previousNoteDurationOrType) { // looks bad logic
+//        note.duration = previousNote.duration;
+//      }
+//      if (note.noteType == null || note.noteType == NoteType.previousNoteDurationOrType) {
+//        note.noteType = previousNote.noteType;
+//        // Also swap hands
+//        note.swapHands();
+//      }
+//      if (note.dynamic == null || note.noteType == NoteType.previousNoteDurationOrType) {
+//        note.dynamic = previousNote.dynamic;
+//      }
 //      if (note.velocity == null || note.noteType == NoteType.previousNoteDurationOrType) {
 //        note.velocity = previousNote.velocity;
 //      }
-      previousNote = note; // watch for previousNoteDurationOrType
+//      previousNote = note; // watch for previousNoteDurationOrType
+      previousNote = element; // watch for previousNoteDurationOrType
     }
     return;
   }
@@ -104,19 +134,19 @@ class Score {
 /// ScoreParser
 ///
 Parser scoreParser = ((tempoParser | dynamicParser | timeSigParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-  //print('\nIn Scoreparser');
+  //log.info('\nIn Scoreparser');
   var score = Score();
   if (values is List) {
     for (var value in values) {
-      //print('ScoreParser, value: -->$value<--');
+      log.info('ScoreParser, value: -->$value<--');
       score.elements.add(value);
-      //print('ScoreParser, Now score.elements has this many elements: ${score.elements.length}');
+      //log.info('ScoreParser, Now score.elements has this many elements: ${score.elements.length}');
     }
   }
   else { // I don't think this happens when there's only one value.  It's still in a list
-    print('Did not get a list, got this: -->$values<--');
+    log.info('Did not get a list, got this: -->$values<--');
     score.elements.add(values); // right? new
   }
-  //print('Leaving Scoreparser returning score $score');
+  //log.info('Leaving Scoreparser returning score $score');
   return score;
 });

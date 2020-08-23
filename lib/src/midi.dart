@@ -129,7 +129,7 @@ class Midi {
   //MyMidiWriter() {
 //    Logger.root.level = Level.ALL;
 //    Logger.root.onRecord.listen((record) {
-//      print('MyMidiWriter.dart ${record.level.name}: ${record.time}: ${record.message}');
+//      log.info('MyMidiWriter.dart ${record.level.name}: ${record.time}: ${record.message}');
 //    });
   // }
 
@@ -218,15 +218,16 @@ class Midi {
         setTempoEvent.type = 'setTempo';
         setTempoEvent.microsecondsPerBeat = (60000000.0 / bpm).floor(); // not round()?
         trackEventsList.add(setTempoEvent);
+        print('We got a setTempo event');
         continue;
       }
       if (element is Dynamic) {
         if (element == Dynamic.ramp) {
-          print('This dynamic element is a ramp.  Skipping it for now.');
+          log.info('This dynamic element is a ramp.  Skipping it for now.');
           continue;
         }
-        newVelocity = dynamicToVelocity(element);
-        print('This dynamic element has an equivalent velocity of $newVelocity to be used for future notes until next dynamic element occurs.');
+        newVelocity = dynamicToVelocity(element); // watch out
+        log.info('This is a Dynamic element, and it is $element, and has an equivalent velocity of $newVelocity to be used for future notes until next dynamic element occurs.');
         continue;
       }
       // Adjust note volumes based on type of note and articulations
@@ -251,6 +252,10 @@ class Midi {
       // Determine volume/velocity additions based on note type
       noteVelocityAddition = 0;
       if (element is Note) {
+        //print('okay we have a Note now.');
+        if (element.duration == null || element.duration.firstNumber == null) {
+          print('hey, watch out this note has a duration that has not been set.  why??????????????????????');
+        }
         var velocity = dynamicToVelocity(element.dynamic);
         switch (element.noteType) {
           case NoteType.leftTap:
@@ -292,10 +297,10 @@ class Midi {
         //note.velocity = noteVelocity + noteVelocityAddition; // fix velocity/dynamics later
         // Hey, wanna call this on just notes, or pass in all elements and handle the different elements there?
         final ticksPerBeat = 10080; // better than 840 or 480      TODO: PUT THIS ELSEWHERE LATER
-        noteOnNoteOff(element, noteChannel, ticksPerBeat, trackEventsList); // what, does this add the note to the list?  Prob
+        addNoteOnOffToTrackEventsList(element, noteChannel, ticksPerBeat, trackEventsList); // what, does this add the note to the list?  Prob
       }
       else {
-        print('skipping this note since not a note.  It is a ${element.runtimeType}');
+        log.info('skipping this note since not a note.  It is a ${element.runtimeType}');
       }
     };
 
@@ -318,7 +323,7 @@ class Midi {
   /// Clean this up later.
   ///
 //  double noteOnNoteOff(num snareLangNoteNameValue, int noteNumber, int velocity, int channel, int ticksPerBeat, List<MidiEvent> trackEventsList) {
-  double noteOnNoteOff(Note note, int channel, int ticksPerBeat, List<MidiEvent> trackEventsList) {
+  double addNoteOnOffToTrackEventsList(Note note, int channel, int ticksPerBeat, List<MidiEvent> trackEventsList) {
 
 //    num snareLangNoteNameValue = note.duration.firstNumber / note.duration.secondNumber;
 //    num snareLangNoteNameValue;
@@ -384,6 +389,7 @@ class Midi {
     noteOffEvent.noteNumber = noteNumber;
     noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
     noteOffEvent.channel = channel;
+    
     trackEventsList.add(noteOffEvent);
 
     // By rounding, what fraction of a tick are we adding or subtracting to the set of notes?
@@ -402,7 +408,9 @@ class Midi {
     var diffTicksAsDouble = noteTicksAsDouble - noteOffEvent.deltaTime;
     cumulativeRoundoffTicks += diffTicksAsDouble;
 
-    log.info('noteOnNoteOff, Created note events for noteName ${snareLangNoteNameValue}, deltaTime ${noteOffEvent.deltaTime} (${noteTicksAsDouble}), velocity: ${note.velocity}, number: ${noteNumber}, cumulative roundoff ticks: $cumulativeRoundoffTicks');
+    log.info('noteOnNoteOff, Created note events for noteName ${snareLangNoteNameValue}, '
+        'deltaTime ${noteOffEvent.deltaTime} (${noteTicksAsDouble}), velocity: ${note.velocity}, '
+        'number: ${noteNumber}, cumulative roundoff ticks: $cumulativeRoundoffTicks');
     return diffTicksAsDouble;
   }
 }

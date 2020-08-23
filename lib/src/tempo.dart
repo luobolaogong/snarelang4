@@ -52,13 +52,13 @@ Parser tempoParser = ( // what about whitespace?
 //Parser tempoParser = ( // what about whitespace?
 //    string('\\tempo').trim() & durationParser.trim() & char('=').trim() & wholeNumberParser
 ).trim().map((value) {
-  //print('\nIn TempoParser and value is -->$value<--');
+  //log.info('\nIn TempoParser and value is -->$value<--');
   var tempo = Tempo();
   if (value[1] != null) {
     NoteDuration noteDuration = value[1][0];
     tempo.noteDuration = noteDuration;
   }
   tempo.bpm = value[2];
-  //print('Leaving tempoParser returning value $tempo');
+  //log.info('Leaving tempoParser returning value $tempo');
   return tempo;
 });
