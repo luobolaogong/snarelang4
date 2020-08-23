@@ -212,22 +212,23 @@ class Midi {
     // which have duration, type, and articulation info.
     // Loop through them, set noteNumber and velocity, and then add to the notes track.
     for (var element in elements) {
+      //print('In Midi.createMidiEventsList, and looking at element type ${element.runtimeType} ==> $element');
       if (element is Tempo) {
         bpm = element.bpm;
         var setTempoEvent = SetTempoEvent();
         setTempoEvent.type = 'setTempo';
         setTempoEvent.microsecondsPerBeat = (60000000.0 / bpm).floor(); // not round()?
         trackEventsList.add(setTempoEvent);
-        print('We got a setTempo event');
+        //print('Midi.createMidiEventsList, We got a setTempo event');
         continue;
       }
       if (element is Dynamic) {
         if (element == Dynamic.ramp) {
-          log.info('This dynamic element is a ramp.  Skipping it for now.');
+          log.info('Midi.createMidiEventsList, This dynamic element is a ramp.  Skipping it for now.');
           continue;
         }
-        newVelocity = dynamicToVelocity(element); // watch out
-        log.info('This is a Dynamic element, and it is $element, and has an equivalent velocity of $newVelocity to be used for future notes until next dynamic element occurs.');
+        newVelocity = dynamicToVelocity(element);
+        log.info('Midi.createMidiEventsList, This is a Dynamic element, and it is $element, and has an equivalent velocity of $newVelocity to be used for future notes until next dynamic element occurs.');
         continue;
       }
       // Adjust note volumes based on type of note and articulations

@@ -16,33 +16,24 @@ import 'package:logging/logging.dart';
 /// This is good for doing new Dart things: https://dart.dev/codelabs/dart-cheatsheet
 
 
-
-//// What?  Are these the initial default values if not specified either on command line or in the files?
-//var tempoOverrideBpm = 82;
-//var numerator = 4;
-//var denominator = 4;
-//var nominalVolume = 70;
-////var nominalVolume = 50;
-
 void main(List<String> arguments) {
 
 
   //
-  // Set up logging
+  // Set up logging.  Does this somehow apply to all files?
   //
-  Logger.root.level = Level.INFO;
+  Logger.root.level = Level.WARNING;
   Logger.root.onRecord.listen((record) {
     print('${record.level.name}: ${record.time}: ${record.message}');
   });
   final log = Logger('MyParser');
 
-  // tempo is something that should be provided in the text score.
-  // But if specified on the command line, it should be considered an override.
-  // But if not in the score and not on the command line, then there should be a default value.
-  // So, we've got "textScoreTempo", "commandLineTempo", and "defaultTempo"
-  //
 
-// What?  Are these the initial default values if not specified either on command line or in the files?
+  // 'override' is probably wrong.  I don't think we override anything in the score.  If the score
+  // says tempo is 60, then we're not going to override it to something else.  Same with dynamics
+  // or time signature.  We can have default values, and the user can set values on the command line,
+  // which would override the default values, but we're not overriding what's in the score.
+  // So, this next section should be reviewed, and at least change 'override' to 'fromCommandLine'
   int overrideTempo; // deliberately null
   var defaultTempo = 82;
   const commandLineTempo = 'tempo';
@@ -52,29 +43,14 @@ void main(List<String> arguments) {
   const commandLineDynamic = 'dynamic';
 
   TimeSig overrideTimeSig; // deliberately null
-  TimeSig defaultTimeSig = TimeSig();
+  var defaultTimeSig = TimeSig();
   defaultTimeSig.numerator = 4;
   defaultTimeSig.denominator = 4;
   const commandLineTimeSig = 'sig';
 
-//  var numerator = 4;
-//  var denominator = 4;
-//  var nominalVolume = 70;
-////var nominalVolume = 50;
-
-  //
-  // Handle command line args/options/flags
-  // * list of tunes/pieces, p or f
-  // * name out output midi, m
-  // * tempo/bpm, t
-  // * output volume???, (secret) v
-  //
   const inFilesList = 'input';
-//  const inPiecesList = 'pieces'; // get rid of this later
-//  const inFilesList = 'files';
   const outMidiFilesPath = 'midi';
   const help = 'help';
-  //const signature = 'signature';
 
   var now = DateTime.now();
   ArgResults argResults;
@@ -87,17 +63,6 @@ void main(List<String> arguments) {
         help:
         'List as many input SnareLang input files/pieces you want, separated by commas, without spaces.',
         valueHelp: 'path1,path2,...')
-
-//    ..addMultiOption(inPiecesList,
-//        abbr: 'p', // or 'i'
-//        help:
-//        'List as many input SnareLang input pieces/files you want, separated by commas, without spaces.',
-//        valueHelp: '<path1>,<path2>,...')
-//    ..addMultiOption(inFilesList,
-//        abbr: 'f', // or 'i'
-//        help:
-//        'List as many input SnareLang input files/pieces you want, separated by commas, without spaces.',
-//        valueHelp: '<path1>,<path2>,...')
     ..addOption(commandLineTempo,
         abbr: 't',
         help:
@@ -109,7 +74,7 @@ void main(List<String> arguments) {
         help:
         'initial/default dynamic, using values like mf or f or ff, etc',
         valueHelp: 'bpmValue')
-    ..addOption(commandLineTimeSig,
+    ..addOption(commandLineTimeSig, // of questionable utillity
         abbr: 's',
         help:
         'initial/default time signature, like 3/4 or 4/4 or 9/8, etc',
@@ -119,24 +84,12 @@ void main(List<String> arguments) {
         negatable: false,
         help:
         'help by showing usage then exiting')
-//    ..addMultiOption(signature,
-//        abbr: 's',
-//        help:
-//            'time signature as two numbers, notes per bar followed by the type of note that gets one beat',
-//        valueHelp: '3 4')
     ..addOption(outMidiFilesPath,
         abbr: 'o',
         defaultsTo: timeStampedMidiOutCurDirName,
         help:
         'This is the output midi file name and path.  Defaults to "Tune<dateAndTime>.midi"',
         valueHelp: 'midiOutPathName');
-//    ..addOption(outMidiFilesPath,
-//        abbr: 'm', // or 'o'
-//        defaultsTo: timeStampedMidiOutCurDirName,
-//        help:
-//        'This is the output midi file name and path.  Defaults to "Tune<dateAndTime>.midi"',
-//        valueHelp: '<midiOutPathName>');
-  // how do you add a --help option?
   argResults = parser.parse(arguments);
 
   if (argResults.rest.isNotEmpty) {
@@ -157,14 +110,11 @@ void main(List<String> arguments) {
     overrideTempo = int.parse(argResults[commandLineTempo]);
   }
   if (argResults[commandLineDynamic] != null) {
-//    overrideDynamic = argResults[commandLineDynamic]; // wrong
     String dynamicString = argResults[commandLineDynamic];
     overrideDynamic = stringToDynamic(dynamicString); // dislike global functions/methods
   }
   if (argResults[commandLineTimeSig] != null) {
     String sig = argResults[commandLineTimeSig]; // expecting num/denom
-//    List<String> sigParts = sigWithColon.split(new RegExp(r'\:'));
-//    List sigParts = sigWithColon.split(':');
     List sigParts = sig.split('/');
     overrideTimeSig = TimeSig();
     overrideTimeSig.numerator = int.parse(sigParts[0]);
@@ -181,7 +131,6 @@ void main(List<String> arguments) {
 
 
 
-//  Score score = Score();
   Result result = Score.load(piecesOfMusic);
 
   if (result.isFailure) {
@@ -202,10 +151,7 @@ void main(List<String> arguments) {
   defaultFirstNoteProperties.dynamic = overrideDynamic; // new
 
   score.applyShorthands(defaultFirstNoteProperties);
-//  score.applyShorthands();
-  //score.applyDynamics();
 
-  // create midi events list now?
 
 
   final ticksPerBeat = 10080; // TODO: Put this in one place, it's in 2 files now, better than 840 or 480
@@ -215,7 +161,6 @@ void main(List<String> arguments) {
   var midiHeader =  midi.createMidiHeader(ticksPerBeat); // 840 ticks per beat seems good
 
   // Create Midi tracks
-//  var tracks = midi.fillInTracks(numerator, denominator, tempoOverrideBpm, ticksPerBeat, result.value.elements, nominalVolume);
   var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic);
 
 
@@ -224,7 +169,7 @@ void main(List<String> arguments) {
   var midiWriterCopy = MidiWriter();
   var midiFileOutFile = File(argResults[outMidiFilesPath]);
   midiWriterCopy.writeMidiToFile(midiFile, midiFileOutFile); // will crash here
-  log.info('Done writing midifile ${midiFileOutFile.path}');
+  print('Done writing midifile ${midiFileOutFile.path}');
 }
 
 

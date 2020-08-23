@@ -32,7 +32,7 @@ class Score {
       log.info('gunna process file $filePath');
       var inputFile = File(filePath);
       if (!inputFile.existsSync()) {
-        log.info('File does not exist at ${inputFile.path}');
+        log.warning('File does not exist at ${inputFile.path}');
         continue;
       }
       var fileContents = inputFile.readAsStringSync(); // per line better?
@@ -50,7 +50,7 @@ class Score {
       log.info('parse succeeded.  This many elements: ${score.elements.length}'); // wrong
     }
     else {
-      log.info('parse failed: ${result.message}');
+      log.warning('parse failed: ${result.message}');
     }
     return result;
   }
@@ -64,17 +64,27 @@ class Score {
 //  void applyShorthands() {
   void applyShorthands(Note defaultNote) {
     // bad logic.  Off by one stuff:
-    var previousNote = defaultNote;
+//    var previousNote = defaultNote;
+    var previousNote = Note();
+    previousNote.dynamic = defaultNote.dynamic; // unnec
+    previousNote.velocity = defaultNote.velocity; // unnec
+    previousNote.articulation = defaultNote.articulation;
+    previousNote.duration = defaultNote.duration;
+    previousNote.noteType = defaultNote.noteType;
+    log.info('In top of Score.applyShorthands and just set "previousNote" to be the defaultNote passed in, which is $defaultNote');
     for (var element in elements) {
-      print('element is ${element.runtimeType} and has this $element');
+      log.info('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
       if (element.runtimeType == Dynamic) { // new
         if (element == Dynamic.ramp) {
+          log.info('In Score.applyShorthands(), and since element is type ${element.runtimeType}, I am skipping it.');
           continue;
         }
+        log.info('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a ramp, I am marking previousNote s dynamic to be same, and skipping');
         previousNote.dynamic = element;
         continue;
       }
       if (element.runtimeType != Note) {
+        log.warning('I have no idea what this type of element is, but skipping it.');
         continue; // what else are we skipping here?
       }
       //
@@ -90,6 +100,7 @@ class Score {
         element.dynamic = previousNote.dynamic;
         element.noteType = previousNote.noteType;
         element.swapHands(); // check that nothing stupid happens if element is a rest or dynamic or something else
+        log.info('In Score.applyShorthands(), and since note was just a dot, just set element to have previousNote props, so element is now ${element}.');
       }
       else {
 //        element.duration ??= previousNote.duration;
@@ -100,24 +111,18 @@ class Score {
           element.noteType = previousNote.noteType;
           element.swapHands();
         }
+        log.info('In Score.applyShorthands(), and note was not just a dot, but wanted to make sure did the shorthand fill in, so now element is ${element}.');
       }
-//      if (note.duration == null || note.noteType == NoteType.previousNoteDurationOrType) { // looks bad logic
-//        note.duration = previousNote.duration;
-//      }
-//      if (note.noteType == null || note.noteType == NoteType.previousNoteDurationOrType) {
-//        note.noteType = previousNote.noteType;
-//        // Also swap hands
-//        note.swapHands();
-//      }
-//      if (note.dynamic == null || note.noteType == NoteType.previousNoteDurationOrType) {
-//        note.dynamic = previousNote.dynamic;
-//      }
-//      if (note.velocity == null || note.noteType == NoteType.previousNoteDurationOrType) {
-//        note.velocity = previousNote.velocity;
-//      }
-//      previousNote = note; // watch for previousNoteDurationOrType
-      previousNote = element; // watch for previousNoteDurationOrType
+      //previousNote = element; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
+      previousNote.dynamic = element.dynamic;
+      previousNote.velocity = element.velocity; // unnec?
+      previousNote.articulation = element.articulation;
+      previousNote.duration = element.duration;
+      previousNote.noteType = element.noteType;
+
+      log.info('bottom of loop Score.applyShorthands(), just updated previousNote to point to be this ${previousNote}.');
     }
+    log.info('leaving Score.applyShorthands()\n');
     return;
   }
 
