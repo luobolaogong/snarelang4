@@ -13,7 +13,7 @@ class TimeSig {
   int denominator;
 
   String toString() {
-    return '\\time $numerator/$denominator';
+    return 'TimeSig: $numerator/$denominator';
   }
 
 }
@@ -22,7 +22,7 @@ class TimeSig {
 /// timeSigParser
 ///
 Parser timeSigParser = ( // what about whitespace?
-    string('\\time').trim() & wholeNumberParser.trim() & char('/').trim() & wholeNumberParser.trim()
+    string('/time').trim() & wholeNumberParser.trim() & char('/').trim() & wholeNumberParser.trim()
 ).trim().map((value) {
   //log.info('\nIn timeSigParser and value is -->$value<--');
   var timeSig = TimeSig();

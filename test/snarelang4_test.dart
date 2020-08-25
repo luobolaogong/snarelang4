@@ -12,65 +12,65 @@ void main() {
     });
     group('Test single Score elements', () {
       test('Dynamics test ppp', () {
-        Result result = scoreParser.parse('\\ppp');
+        Result result = scoreParser.parse('/ppp');
         expect(result.value.elements.elementAt(0), Dynamic.ppp);
       });
       test('Dynamics test pp', () {
-        Result result = scoreParser.parse('\\pp');
+        Result result = scoreParser.parse('/pp');
         expect(result.value.elements.elementAt(0), Dynamic.pp);
       });
       test('Dynamics test p', () {
-        Result result = scoreParser.parse('\\p');
+        Result result = scoreParser.parse('/p');
         expect(result.value.elements.elementAt(0), Dynamic.p);
       });
       test('Dynamics test mp', () {
-        Result result = scoreParser.parse('\\mp');
+        Result result = scoreParser.parse('/mp');
         expect(result.value.elements.elementAt(0), Dynamic.mp);
       });
       test('Dynamics test mf', () {
-        Result result = scoreParser.parse('\\mf');
+        Result result = scoreParser.parse('/mf');
         expect(result.value.elements.elementAt(0), Dynamic.mf);
       });
       test('Dynamics test f', () {
-        Result result = scoreParser.parse('\\f');
+        Result result = scoreParser.parse('/f');
         var score = result.value;
         expect(score.elements.elementAt(0), Dynamic.f);
       });
       test('Dynamics test ff', () {
-        Result result = scoreParser.parse('\\ff');
+        Result result = scoreParser.parse('/ff');
         expect(result.value.elements.elementAt(0), Dynamic.ff);
       });
       test('Dynamics test fff', () {
-        Result result = scoreParser.parse('\\fff');
+        Result result = scoreParser.parse('/fff');
         expect(result.value.elements.elementAt(0), Dynamic.fff);
       });
       test('Dynamics test >', () {
-        Result result = scoreParser.parse('\\>');
+        Result result = scoreParser.parse('/>');
         expect(result.value.elements.elementAt(0), Dynamic.ramp);
       });
       test('Dynamics test <', () {
-        Result result = scoreParser.parse('\\<');
+        Result result = scoreParser.parse('/<');
         expect(result.value.elements.elementAt(0), Dynamic.ramp);
       });
       test('Dynamics test cresc', () {
-        Result result = scoreParser.parse('\\cresc');
+        Result result = scoreParser.parse('/cresc');
         expect(result.value.elements.elementAt(0), Dynamic.ramp);
       });
       test('Dynamics test dim', () {
-        Result result = scoreParser.parse('\\dim');
+        Result result = scoreParser.parse('/dim');
         expect(result.value.elements.elementAt(0), Dynamic.ramp);
       });
       test('Dynamics test decresc', () {
-        Result result = scoreParser.parse('\\decresc');
+        Result result = scoreParser.parse('/decresc');
         expect(result.value.elements.elementAt(0), Dynamic.ramp);
       });
       test('Set of score elements', () {
-        Result result = scoreParser.parse('\\time 2/4 \\tempo 4=99 \\mf 16 T >8 . . . \\ff _Z 24f ^6d \\dim . . . \\p F . . \\tempo 8:2=88 ');
+        Result result = scoreParser.parse('/time 2/4 /tempo 4=99 /mf 16 T >8 . . . /ff _Z 24f ^6d /dim . . . /p F . . /tempo 8:2=88 ');
         expect(result.isSuccess, isTrue);
       });
 
       test('Time signature', () {
-        Result result = scoreParser.parse('\\time 3/8');
+        Result result = scoreParser.parse('/time 3/8');
         expect((result.value.elements
             .elementAt(0)
             .numerator + result.value.elements
@@ -79,7 +79,7 @@ void main() {
       });
 
       test('Tempo', () {
-        var result = scoreParser.parse('\\tempo 4:9=1011');
+        var result = scoreParser.parse('/tempo 4:9=1011');
         Tempo tempo = result.value.elements.elementAt(0);
         expect((tempo.noteDuration.firstNumber + tempo.noteDuration.secondNumber + tempo.bpm), 4 + 9 + 1011);
       });

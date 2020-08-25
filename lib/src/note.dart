@@ -7,7 +7,7 @@ enum NoteArticulation {
   marcato // '^' big accent
 }
 
-class NoteDuration {
+class NoteDuration { // change this to Duration if possible, which conflicts, I think with something
   int firstNumber; // initialize????
   int secondNumber;
 //  int firstNumber = 4; // initialize????
@@ -20,10 +20,16 @@ class NoteDuration {
 //  NoteDuration(this.firstNumber, this.secondNumber);
 
 
-
   String toString() {
-    return '$firstNumber:$secondNumber';
+    return 'NoteDuration: $firstNumber:$secondNumber';
   }
+}
+
+int beatFractionToTicks(num beatFraction) {
+  //int ticksPerBeat = 10080
+  var durationInTicks = (Midi.ticksPerBeat * beatFraction).floor(); // why not .round()?
+//  var durationInTicks = (4 * Midi.ticksPerBeat * secondNumber / firstNumber).floor(); // why not .round()?
+  return durationInTicks;
 }
 
 
@@ -42,7 +48,7 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
 
 class Note {
   NoteArticulation articulation;
-  NoteDuration duration;
+  NoteDuration duration; // also "SnareLangNoteNameValue".  can be used to calculate ticks, right?  noteTicks = (4 * ticksPerBeat) / SnareLangNoteNameValue
   NoteType noteType = NoteType.rightTap;  // correct here?
   int velocity; // Perhaps this will go into MidiNote or something, new
   Dynamic dynamic; // gets a value during first pass through the score list
@@ -52,7 +58,7 @@ class Note {
   }
 
   String toString() {
-    return 'Articulation: $articulation, Duration: $duration, NoteType: $noteType, Dynamic: $dynamic';
+    return 'Note: Articulation: $articulation, Duration: $duration, NoteType: $noteType, Dynamic: $dynamic';
   }
 
   swapHands() {
@@ -91,13 +97,18 @@ class Note {
         break;
     }
   }
+
+//  int durationToTicks(int ticksPerBeat, Duration snareLangNoteNameValue) {
+//    int ticks = (4 * ticksPerBeat / snareLangNoteNameValue).floor(); // ????
+//    return ticks;
+//  }
 }
 
 ///
 /// ArticulationParser
 ///
 Parser articulationParser = (
-    char('^') | // maybe change these to pattern('\\^>-_')
+    char('^') | // maybe change these to pattern('/^>-_')
     char('>') |
     char('_') |
     char('-')    // get rid of this one

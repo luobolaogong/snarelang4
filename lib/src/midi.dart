@@ -124,6 +124,7 @@ import '../snarelang4.dart';
 
 
 class Midi {
+  static final ticksPerBeat = 10080;
 //  // Was getting double log messages, so maybe one global one is good enough, wich I think is in MyParser.dart
   final log = Logger('MyMidiWriter'); // does nothing on it's own, right?
   //MyMidiWriter() {
@@ -140,19 +141,15 @@ class Midi {
   double cumulativeRoundoffTicks = 0.0;
 
   ///   Create a MidiHeader object, which I did not define, which is part of MidiFile, and return it.
-  MidiHeader createMidiHeader(int ticksPerBeat) {
+//  MidiHeader createMidiHeader(int ticksPerBeat) {
+  MidiHeader createMidiHeader() {
     // Construct a header with values for name, and whatever else
-    var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
+    var midiHeaderOut = MidiHeader(ticksPerBeat: Midi.ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
+//    var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
     return midiHeaderOut;
   }
 
-  /// Create a list of MidiEvent lists, one list per track.  First list is special.  After that it's just tracks.
-  /// For now we have two tracks only.
-//  List<List<MidiEvent>> fillInTracks(int timeSigNumerator, int timeSigDenominator, int bpm, int ticksPerBeat, List<Note> notes, int nominalVolume) {
-  List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, int bpm, Dynamic dynamic) {
-    // Construct a list to put lists of track events in.
-    var listOfTrackEventsLists = <List<MidiEvent>>[];
-
+  List<MidiEvent> doSpecialFirstTrack(TimeSig timeSig, int bpm) {
     // Construct a list to put track events in.
     var trackEventsList = <MidiEvent>[];
 
@@ -192,13 +189,23 @@ class Midi {
     setTempoEvent.microsecondsPerBeat = (60000000.0 / bpm).floor(); // not round()?
     trackEventsList.add(setTempoEvent);
 
-    // End of that special first track, so add it to the list of lists
+    return trackEventsList;
+  }
+
+  /// Create a list of MidiEvent lists, one list per track.  First list is special.  After that it's just tracks.
+  /// For now we have two tracks only.
+  List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, int bpm, Dynamic dynamic) {
+    // Construct a list to put lists of track events in.
+    var listOfTrackEventsLists = <List<MidiEvent>>[];
+    // Do special first track (why?)
+    var trackEventsList = doSpecialFirstTrack(timeSig, bpm);
     listOfTrackEventsLists.add(trackEventsList);
 
 
-
-
     // Start a new list of events, most will be notes, but not all.
+    // Set event velocities for notes from elements (including ramps).
+    // Process any tempo elements.
+
     trackEventsList = <MidiEvent>[];
 
     int noteVelocityAddition;
@@ -206,70 +213,131 @@ class Midi {
     var noteVolume = dynamicToVelocity(dynamic);
     var noteChannel = 0;
     var newVelocity = 0;
+    Ramp currentRamp;
+    var inRamp = false;
+    var isFirstNoteInRamp = true;
+    Note previousNote;
+    num cumulativeDurationSinceRampStartNote = 0;
 
-
-    // "elements" is a list of Score objects, most of which are notes
-    // which have duration, type, and articulation info.
-    // Loop through them, set noteNumber and velocity, and then add to the notes track.
+    log.fine('Starting to convert score elements into midi events.');
     for (var element in elements) {
-      //print('In Midi.createMidiEventsList, and looking at element type ${element.runtimeType} ==> $element');
+      log.finer('In Midi.createMidiEventsList top of loop, with $element');
+
       if (element is Tempo) {
         bpm = element.bpm;
         var setTempoEvent = SetTempoEvent();
         setTempoEvent.type = 'setTempo';
         setTempoEvent.microsecondsPerBeat = (60000000.0 / bpm).floor(); // not round()?
         trackEventsList.add(setTempoEvent);
-        //print('Midi.createMidiEventsList, We got a setTempo event');
+        log.finest('Midi.createMidiEventsList loop, We got a setTempo event');
         continue;
       }
-      if (element is Dynamic) {
-        if (element == Dynamic.ramp) {
-          log.info('Midi.createMidiEventsList, This dynamic element is a ramp.  Skipping it for now.');
+      // Don't worry about doing timeSigs for now, I think, but later probably yes, when do Sets.
+      // I mean, tempo for a 6/8 is set where the beat is a dotted eighth.  Does that fit in here?
+
+
+        if (element is Ramp) {
+          log.fine('\t\tMidi.createMidiEventsList loop, This dynamic element is a ramp which already has the slope in it, to calculate the new velocitis for all notes in the ramp: ${element}');
+          inRamp = true;
+          currentRamp = element;
           continue;
         }
-        newVelocity = dynamicToVelocity(element);
-        log.info('Midi.createMidiEventsList, This is a Dynamic element, and it is $element, and has an equivalent velocity of $newVelocity to be used for future notes until next dynamic element occurs.');
+
+      // I think by this time every element has a dynamic value, so should be able to skip Dynamic elements,
+      // but still want to turn off inRamp so won't apply ramp slope to following notes.
+      if (element is Dynamic) {
+        log.fine('Midi.createMidiEventsList loop, element is a Dynamic, so it means the end of a ramp if in a ramp, but make sure finish off the previous note.');
+        inRamp = false; // whether in a ramp or not, inRamp should go false here
+        currentRamp = null;  // is this right????????
+        //        newVelocity = dynamicToVelocity(element);
+//        log.finer('Midi.createMidiEventsList, This is a Dynamic element, and it is $element, and has an equivalent velocity of $newVelocity to be used for future notes until next dynamic element occurs.');
         continue;
       }
-      // Adjust note volumes based on type of note and articulations
-//      if (!(element is Note)) { // new
-//        continue;
-//      }
-      // Velocities should be clamped from 0 to 127.
-      // Velocities are based on an equal linear scale from ppp (16) to fff (127)
-      // SoundFont recordings should probably all be normalized to the same level, and then if the velocity is
-      // low, choose the soft recording, and if the velocity is loud, choose the loud.
-      //
-      // Accents/Articulations affect velocities.
-      // Perhaps "_" increases to next dynamic level, and ">" increases two dynamic levels, and "^" up 3
-      // And since each dynamic level is basically 16 more than previous level, we could just say that
-      // "_" add 16, ">" add 32, and "^" and 48, but cap at 127.
-      //
-      // Also, note types affect velocities to some extent.  A drag is louder than a flam is louder than a tap.
-      // A flam is maybe an increase of 6, a drag increases by 10 (of course with a note cap of 127).
-      // Grace notes are recorded with their principle notes, so there are no separate grace notes.  If there were, they'd be
-      // at an absolute level of about 10 (for 2 and 3 stroke ruffs and maybe flams, but not drags)
-      //
-      // Determine volume/velocity additions based on note type
-      noteVelocityAddition = 0;
+
       if (element is Note) {
-        //print('okay we have a Note now.');
+        noteVelocityAddition = 0; // ???????????????
+
+        log.finest('In Midi createMidiEventsTracksList, in loop, so will assign and adjust velocities for this note: $element');
+        // Adjust note volumes based on type of note and articulation and ramp slope
+        //
+        // Accents/Articulations affect velocities.
+        // "_" add 16, ">" add 32, and "^" and 48, but cap at 127.
+        //
+        // Note types affect velocities to some extent.
+        // A flam is maybe an increase of 6, a drag increases by 10 (of course with a note cap of 127).
+        // (Grace notes are recorded with their principle notes, so there are no separate grace notes.  If there were, they'd be
+        // at an absolute level of about 10 (for 2 and 3 stroke ruffs and maybe flams, but not drags))
+        //
+        // 1.  Note's get velocities first, based on their current Dynamic.
+        // 2.  After that we calculate and adjust the velocity according to its Ramp.
+        // 3.  Then articulations, and then
+        // 4.  note types, and
+        // 5.  finally clamp.
+
         if (element.duration == null || element.duration.firstNumber == null) {
-          print('hey, watch out this note has a duration that has not been set.  why??????????????????????');
+          log.warning('hey, watch out this note has a duration that has not been set.  why??????????????????????');
         }
+
+
         var velocity = dynamicToVelocity(element.dynamic);
+        //print('\t\t\tHey, are we gunna go into ramp?');
+        if (inRamp) {
+          print('\t\t\tWe re in a ramp');
+          if (isFirstNoteInRamp) {
+            print('\t\tThis is first note in ramp so will not adjust velocity due to ramp.');
+            previousNote = element;
+            isFirstNoteInRamp = false;
+          }
+          else {
+            // To calculate the change in velocity, need to know the note's current time position in the ramp.
+            print('\t\tThis is subsequent note in a ramp, so will calculate time position relative to first note by doing accumulation.');
+            cumulativeDurationSinceRampStartNote += (previousNote.duration.secondNumber / previousNote.duration.firstNumber);
+            print('\t\tcumulativeDurationSinceRampStartNote: $cumulativeDurationSinceRampStartNote');
+            int cumulativeTicksSinceRampStartNote = beatFractionToTicks(cumulativeDurationSinceRampStartNote);
+            print('\t\t\tcumulativeTicksSinceRampStartNote: $cumulativeTicksSinceRampStartNote and ramp slope is ${currentRamp.slope}');
+//            num newVelocity = dynamicToVelocity(currentRamp.startDynamic) + currentRamp.slope * cumulativeDurationSinceRampStartNote;
+//            velocity += (currentRamp.slope * cumulativeDurationSinceRampStartNote).round();
+//            velocity += (currentRamp.slope * cumulativeTicksSinceRampStartNote).round();
+            print('\t\t\tHey, wanna add this much to the velocity: ${currentRamp.slope * cumulativeTicksSinceRampStartNote}');
+            velocity += (currentRamp.slope * cumulativeTicksSinceRampStartNote).round();
+            isFirstNoteInRamp = false;
+            previousNote = element; // new
+          }
+        }
+        print('\t\tAfter scaling velocity due to ramp, it is $velocity');
+
+
+
+
+
+        // Determine volume/velocity additions based on articulations/accents
+        switch (element.articulation) {
+          case NoteArticulation.tenuto: // '_'
+            velocity += 16;
+//          noteVelocityAddition = (noteVelocity * 0.25).round();
+            break;
+          case NoteArticulation.accent: // '>'
+            velocity += 32;
+            break;
+          case NoteArticulation.marcato: // '^'
+            velocity += 48;
+//          noteVelocityAddition = (noteVelocity * 0.75).round();
+            break;
+        }
+
+
+        // Do changes based on note type
         switch (element.noteType) {
           case NoteType.leftTap:
           case NoteType.rightTap:
-            noteVelocityAddition = 0;
             break;
           case NoteType.leftFlam:
           case NoteType.rightFlam:
-            noteVelocityAddition = 6;
+          velocity += 6;
             break;
           case NoteType.leftDrag:
           case NoteType.rightDrag:
-            noteVelocityAddition = 10;
+          velocity += 10;
             break;
           case NoteType.leftBuzz:
           case NoteType.rightBuzz:
@@ -280,32 +348,25 @@ class Midi {
             log.warning('What the heck was that note? $element.type');
         }
 
-        // Determine volume/velocity additions based on articulations/accents
-        switch (element.articulation) {
-          case NoteArticulation.tenuto: // '_'
-            noteVelocityAddition += 16;
-//          noteVelocityAddition = (noteVelocity * 0.25).round();
-            break;
-          case NoteArticulation.accent: // '>'
-            noteVelocityAddition += 32;
-            break;
-          case NoteArticulation.marcato: // '^'
-            noteVelocityAddition += 48;
-//          noteVelocityAddition = (noteVelocity * 0.75).round();
-            break;
-        }
-        element.velocity = (velocity + noteVelocityAddition).clamp(0,127); // clip it
-        //note.velocity = noteVelocity + noteVelocityAddition; // fix velocity/dynamics later
-        // Hey, wanna call this on just notes, or pass in all elements and handle the different elements there?
-        final ticksPerBeat = 10080; // better than 840 or 480      TODO: PUT THIS ELSEWHERE LATER
-        addNoteOnOffToTrackEventsList(element, noteChannel, ticksPerBeat, trackEventsList); // what, does this add the note to the list?  Prob
+
+
+        print('adjusted velocity is $velocity');
+        element.velocity = velocity.clamp(0,127); // clip it
+        //        element.velocity = (velocity + noteVelocityAddition).clamp(0,127); // clip it
+        print('clamped velocity is ${element.velocity}');
+
+
+
+
+        //final ticksPerBeat = 10080; // better than 840 or 480      TODO: PUT THIS ELSEWHERE LATER
+        addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList); // what, does this add the note to the list?  Prob
+//        addNoteOnOffToTrackEventsList(element, noteChannel, Midi.ticksPerBeat, trackEventsList); // what, does this add the note to the list?  Prob
+        continue;
       }
-      else {
-        log.info('skipping this note since not a note.  It is a ${element.runtimeType}');
-      }
+      log.info('skipping this note since not a note.  It is a ${element.runtimeType}');
     };
 
-    if (trackEventsList.length == 0) {
+    if (trackEventsList.isEmpty) {
       log.fine('What?  no events for track?');
     }
     // Add this second list to the list of lists
@@ -324,7 +385,8 @@ class Midi {
   /// Clean this up later.
   ///
 //  double noteOnNoteOff(num snareLangNoteNameValue, int noteNumber, int velocity, int channel, int ticksPerBeat, List<MidiEvent> trackEventsList) {
-  double addNoteOnOffToTrackEventsList(Note note, int channel, int ticksPerBeat, List<MidiEvent> trackEventsList) {
+//  double addNoteOnOffToTrackEventsList(Note note, int channel, int ticksPerBeat, List<MidiEvent> trackEventsList) {
+  double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList) {
 
 //    num snareLangNoteNameValue = note.duration.firstNumber / note.duration.secondNumber;
 //    num snareLangNoteNameValue;
@@ -333,7 +395,7 @@ class Midi {
       log.severe('note should not have a null duration.');
     }
 //    num snareLangNoteNameValue = note.duration.firstNumber / note.duration.secondNumber;
-    int snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+    var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
 //    }
     //var noteNumber = note.number;
 //    var velocity = note.velocity;
@@ -341,7 +403,7 @@ class Midi {
     if (note.noteType == NoteType.rest) {
       note.velocity = 0; // new, nec?
     }
-
+    // Maybe this should be put into Note, even though it's a MIDI thing.
     var noteNumber;
     switch (note.noteType) {
       case NoteType.rightTap:
@@ -386,7 +448,7 @@ class Midi {
 
     var noteOffEvent = NoteOffEvent();
     noteOffEvent.type = 'noteOff';
-    noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
+    noteOffEvent.deltaTime = (4 * Midi.ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
     noteOffEvent.noteNumber = noteNumber;
     noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
     noteOffEvent.channel = channel;
@@ -405,14 +467,14 @@ class Midi {
     // wish I had 9th and 18th notes, which are triplets in triplets, so this is worth working on in
     // the future.
     //
-    var noteTicksAsDouble = 4 * ticksPerBeat / snareLangNoteNameValue;
+    var noteTicksAsDouble = 4 * Midi.ticksPerBeat / snareLangNoteNameValue;
     var diffTicksAsDouble = noteTicksAsDouble - noteOffEvent.deltaTime;
     cumulativeRoundoffTicks += diffTicksAsDouble;
 
     log.info('noteOnNoteOff, Created note events for noteName ${snareLangNoteNameValue}, '
         'deltaTime ${noteOffEvent.deltaTime} (${noteTicksAsDouble}), velocity: ${note.velocity}, '
         'number: ${noteNumber}, cumulative roundoff ticks: $cumulativeRoundoffTicks');
-    return diffTicksAsDouble;
+    return diffTicksAsDouble; // kinda strange
   }
 }
 

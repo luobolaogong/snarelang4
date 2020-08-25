@@ -31,7 +31,7 @@ class Tempo {
   int bpm = 84; // initialize?
 
   String toString() {
-    return '\\tempo $noteDuration=$bpm';
+    return 'Tempo: bpm: $bpm, NoteDuration: $noteDuration';
   }
 }
 
@@ -48,7 +48,7 @@ class Tempo {
 /// tempoParser
 ///
 Parser tempoParser = ( // what about whitespace?
-    string('\\tempo').trim() & (durationParser.trim() & char('=').trim()).optional().trim() & wholeNumberParser
+    string('/tempo').trim() & (durationParser.trim() & char('=').trim()).optional().trim() & wholeNumberParser
 //Parser tempoParser = ( // what about whitespace?
 //    string('\\tempo').trim() & durationParser.trim() & char('=').trim() & wholeNumberParser
 ).trim().map((value) {
