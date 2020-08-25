@@ -30,7 +30,7 @@ class Ramp {
 
   String toString() {
 //    return 'Ramp: starting Dynamic: $startDynamic, ending Dynamic: $endDynamic, Duration (ticks): $durationInTicks, Slope: $slope';
-    return 'Ramp: starting Dynamic: $startDynamic, ending Dynamic: $endDynamic, startVelocity: $startVelocity, endVelocity: $endVelocity, totalTicksStartToEnd: $totalTicksStartToEnd, Slope: $slope';
+    return 'Ramp: startDynamic: $startDynamic, endDynamic: $endDynamic, startVelocity: $startVelocity, endVelocity: $endVelocity, totalTicksStartToEnd: $totalTicksStartToEnd, Slope: $slope';
   }
 }
 
@@ -164,7 +164,7 @@ Parser rampParser = (
     string('/decresc') |
     string('/cresc')
 ).trim().map((value) {
-  log.fine('In RampParser');
+  log.finest('In RampParser');
   Ramp ramp;
   switch (value) {
     case '/>':
@@ -175,7 +175,7 @@ Parser rampParser = (
       ramp =  Ramp();
       break;
   }
-  log.fine('Leaving RampParser returning value $ramp');
+  log.finest('Leaving RampParser returning value $ramp');
   return ramp;
 });
 //Parser rampParser = (

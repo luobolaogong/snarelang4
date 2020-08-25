@@ -22,7 +22,9 @@ class TimeSig {
 /// timeSigParser
 ///
 Parser timeSigParser = ( // what about whitespace?
-    string('/time').trim() & wholeNumberParser.trim() & char('/').trim() & wholeNumberParser.trim()
+//    string('/time').trim() & wholeNumberParser.trim() & char('/').trim() & wholeNumberParser.trim()
+    string('/time').trim() & wholeNumberParser.trim() & char('/').trim() & wholeNumberParser
+
 ).trim().map((value) {
   //log.info('\nIn timeSigParser and value is -->$value<--');
   var timeSig = TimeSig();

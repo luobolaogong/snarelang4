@@ -208,166 +208,222 @@ class Midi {
 
     trackEventsList = <MidiEvent>[];
 
-    int noteVelocityAddition;
-    var noteNumber = 60; // Initial/default note number == tap
-    var noteVolume = dynamicToVelocity(dynamic);
+//    int noteVelocityAddition;
+//    var noteNumber = 60; // Initial/default note number == tap
+//    var noteVolume = dynamicToVelocity(dynamic);
     var noteChannel = 0;
-    var newVelocity = 0;
-    Ramp currentRamp;
-    var inRamp = false;
-    var isFirstNoteInRamp = true;
-    Note previousNote;
-    num cumulativeDurationSinceRampStartNote = 0;
-
-    log.fine('Starting to convert score elements into midi events.');
-    for (var element in elements) {
-      log.finer('In Midi.createMidiEventsList top of loop, with $element');
-
-      if (element is Tempo) {
-        bpm = element.bpm;
-        var setTempoEvent = SetTempoEvent();
-        setTempoEvent.type = 'setTempo';
-        setTempoEvent.microsecondsPerBeat = (60000000.0 / bpm).floor(); // not round()?
-        trackEventsList.add(setTempoEvent);
-        log.finest('Midi.createMidiEventsList loop, We got a setTempo event');
-        continue;
-      }
-      // Don't worry about doing timeSigs for now, I think, but later probably yes, when do Sets.
-      // I mean, tempo for a 6/8 is set where the beat is a dotted eighth.  Does that fit in here?
+//    var newVelocity = 0;
+//    Ramp currentRamp;
+//    var inRamp = false;
+//    var isFirstNoteInRamp = true;
+//    Note previousNote;
+//    num cumulativeDurationSinceRampStartNote = 0;
 
 
-        if (element is Ramp) {
-          log.fine('\t\tMidi.createMidiEventsList loop, This dynamic element is a ramp which already has the slope in it, to calculate the new velocitis for all notes in the ramp: ${element}');
-          inRamp = true;
-          currentRamp = element;
-          continue;
-        }
-
-      // I think by this time every element has a dynamic value, so should be able to skip Dynamic elements,
-      // but still want to turn off inRamp so won't apply ramp slope to following notes.
-      if (element is Dynamic) {
-        log.fine('Midi.createMidiEventsList loop, element is a Dynamic, so it means the end of a ramp if in a ramp, but make sure finish off the previous note.');
-        inRamp = false; // whether in a ramp or not, inRamp should go false here
-        currentRamp = null;  // is this right????????
-        //        newVelocity = dynamicToVelocity(element);
-//        log.finer('Midi.createMidiEventsList, This is a Dynamic element, and it is $element, and has an equivalent velocity of $newVelocity to be used for future notes until next dynamic element occurs.');
-        continue;
-      }
-
-      if (element is Note) {
-        noteVelocityAddition = 0; // ???????????????
-
-        log.finest('In Midi createMidiEventsTracksList, in loop, so will assign and adjust velocities for this note: $element');
-        // Adjust note volumes based on type of note and articulation and ramp slope
-        //
-        // Accents/Articulations affect velocities.
-        // "_" add 16, ">" add 32, and "^" and 48, but cap at 127.
-        //
-        // Note types affect velocities to some extent.
-        // A flam is maybe an increase of 6, a drag increases by 10 (of course with a note cap of 127).
-        // (Grace notes are recorded with their principle notes, so there are no separate grace notes.  If there were, they'd be
-        // at an absolute level of about 10 (for 2 and 3 stroke ruffs and maybe flams, but not drags))
-        //
-        // 1.  Note's get velocities first, based on their current Dynamic.
-        // 2.  After that we calculate and adjust the velocity according to its Ramp.
-        // 3.  Then articulations, and then
-        // 4.  note types, and
-        // 5.  finally clamp.
-
-        if (element.duration == null || element.duration.firstNumber == null) {
-          log.warning('hey, watch out this note has a duration that has not been set.  why??????????????????????');
-        }
 
 
-        var velocity = dynamicToVelocity(element.dynamic);
-        //print('\t\t\tHey, are we gunna go into ramp?');
-        if (inRamp) {
-          print('\t\t\tWe re in a ramp');
-          if (isFirstNoteInRamp) {
-            print('\t\tThis is first note in ramp so will not adjust velocity due to ramp.');
-            previousNote = element;
-            isFirstNoteInRamp = false;
-          }
-          else {
-            // To calculate the change in velocity, need to know the note's current time position in the ramp.
-            print('\t\tThis is subsequent note in a ramp, so will calculate time position relative to first note by doing accumulation.');
-            cumulativeDurationSinceRampStartNote += (previousNote.duration.secondNumber / previousNote.duration.firstNumber);
-            print('\t\tcumulativeDurationSinceRampStartNote: $cumulativeDurationSinceRampStartNote');
-            int cumulativeTicksSinceRampStartNote = beatFractionToTicks(cumulativeDurationSinceRampStartNote);
-            print('\t\t\tcumulativeTicksSinceRampStartNote: $cumulativeTicksSinceRampStartNote and ramp slope is ${currentRamp.slope}');
-//            num newVelocity = dynamicToVelocity(currentRamp.startDynamic) + currentRamp.slope * cumulativeDurationSinceRampStartNote;
-//            velocity += (currentRamp.slope * cumulativeDurationSinceRampStartNote).round();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    log.fine('Starting to convert score elements into midi events.');
+//    for (var element in elements) {
+//      log.finer('In Midi.createMidiEventsList top of loop, with $element');
+//
+//      if (element is Tempo) {
+//        bpm = element.bpm;
+//        var setTempoEvent = SetTempoEvent();
+//        setTempoEvent.type = 'setTempo';
+//        setTempoEvent.microsecondsPerBeat = (60000000.0 / bpm).floor(); // not round()?
+//        trackEventsList.add(setTempoEvent);
+//        log.finest('Midi.createMidiEventsList loop, We got a setTempo event');
+//        continue;
+//      }
+//      // Don't worry about doing timeSigs for now, I think, but later probably yes, when do Sets.
+//      // I mean, tempo for a 6/8 is set where the beat is a dotted eighth.  Does that fit in here?
+//
+//
+//        if (element is Ramp) {
+//          log.fine('\t\tMidi.createMidiEventsList loop, This dynamic element is a ramp which already has the slope in it, to calculate the new velocitis for all notes in the ramp: ${element}');
+//          inRamp = true;
+//          currentRamp = element;
+//          continue;
+//        }
+//
+//      // I think by this time every element has a dynamic value, so should be able to skip Dynamic elements,
+//      // but still want to turn off inRamp so won't apply ramp slope to following notes.
+//      if (element is Dynamic) {
+//        log.fine('Midi.createMidiEventsList loop, element is a Dynamic, so it means the end of a ramp if in a ramp, but make sure finish off the previous note.');
+//        inRamp = false; // whether in a ramp or not, inRamp should go false here
+//        currentRamp = null;  // is this right????????
+//        //        newVelocity = dynamicToVelocity(element);
+////        log.finer('Midi.createMidiEventsList, This is a Dynamic element, and it is $element, and has an equivalent velocity of $newVelocity to be used for future notes until next dynamic element occurs.');
+//        continue;
+//      }
+//
+//      if (element is Note) {
+//        noteVelocityAddition = 0; // ???????????????
+//
+//        log.finest('In Midi createMidiEventsTracksList, in loop, so will assign and adjust velocities for this note: $element');
+//        // Adjust note volumes based on type of note and articulation and ramp slope
+//        //
+//        // Accents/Articulations affect velocities.
+//        // "_" add 16, ">" add 32, and "^" and 48, but cap at 127.
+//        //
+//        // Note types affect velocities to some extent.
+//        // A flam is maybe an increase of 6, a drag increases by 10 (of course with a note cap of 127).
+//        // (Grace notes are recorded with their principle notes, so there are no separate grace notes.  If there were, they'd be
+//        // at an absolute level of about 10 (for 2 and 3 stroke ruffs and maybe flams, but not drags))
+//        //
+//        // 1.  Note's get velocities first, based on their current Dynamic.
+//        // 2.  After that we calculate and adjust the velocity according to its Ramp.
+//        // 3.  Then articulations, and then
+//        // 4.  note types, and
+//        // 5.  finally clamp.
+//
+//        if (element.duration == null || element.duration.firstNumber == null) {
+//          log.warning('hey, watch out this note has a duration that has not been set.  why??????????????????????');
+//        }
+//
+//
+//        var velocity = dynamicToVelocity(element.dynamic);
+//        //print('\t\t\tHey, are we gunna go into ramp?');
+//        if (inRamp) {
+//          print('\t\t\tWe re in a ramp');
+//          if (isFirstNoteInRamp) {
+//            print('\t\tThis is first note in ramp so will not adjust velocity due to ramp.');
+//            previousNote = element;
+//            isFirstNoteInRamp = false;
+//          }
+//          else {
+//            // To calculate the change in velocity, need to know the note's current time position in the ramp.
+//            print('\t\tThis is subsequent note in a ramp, so will calculate time position relative to first note by doing accumulation.');
+//            cumulativeDurationSinceRampStartNote += (previousNote.duration.secondNumber / previousNote.duration.firstNumber);
+//            print('\t\tcumulativeDurationSinceRampStartNote: $cumulativeDurationSinceRampStartNote');
+//            int cumulativeTicksSinceRampStartNote = beatFractionToTicks(cumulativeDurationSinceRampStartNote);
+//            print('\t\t\tcumulativeTicksSinceRampStartNote: $cumulativeTicksSinceRampStartNote and ramp slope is ${currentRamp.slope}');
+////            num newVelocity = dynamicToVelocity(currentRamp.startDynamic) + currentRamp.slope * cumulativeDurationSinceRampStartNote;
+////            velocity += (currentRamp.slope * cumulativeDurationSinceRampStartNote).round();
+////            velocity += (currentRamp.slope * cumulativeTicksSinceRampStartNote).round();
+//            print('\t\t\tHey, wanna add this much to the velocity: ${currentRamp.slope * cumulativeTicksSinceRampStartNote}');
 //            velocity += (currentRamp.slope * cumulativeTicksSinceRampStartNote).round();
-            print('\t\t\tHey, wanna add this much to the velocity: ${currentRamp.slope * cumulativeTicksSinceRampStartNote}');
-            velocity += (currentRamp.slope * cumulativeTicksSinceRampStartNote).round();
-            isFirstNoteInRamp = false;
-            previousNote = element; // new
-          }
-        }
-        print('\t\tAfter scaling velocity due to ramp, it is $velocity');
+//            isFirstNoteInRamp = false;
+//            previousNote = element; // new
+//          }
+//        }
+//        print('\t\tAfter scaling velocity due to ramp, it is $velocity');
+//
+//
+//
+//
+//
+//        // Determine volume/velocity additions based on articulations/accents
+//        switch (element.articulation) {
+//          case NoteArticulation.tenuto: // '_'
+//            velocity += 16;
+////          noteVelocityAddition = (noteVelocity * 0.25).round();
+//            break;
+//          case NoteArticulation.accent: // '>'
+//            velocity += 32;
+//            break;
+//          case NoteArticulation.marcato: // '^'
+//            velocity += 48;
+////          noteVelocityAddition = (noteVelocity * 0.75).round();
+//            break;
+//        }
+//
+//
+//        // Do changes based on note type
+//        switch (element.noteType) {
+//          case NoteType.leftTap:
+//          case NoteType.rightTap:
+//            break;
+//          case NoteType.leftFlam:
+//          case NoteType.rightFlam:
+//          velocity += 6;
+//            break;
+//          case NoteType.leftDrag:
+//          case NoteType.rightDrag:
+//          velocity += 10;
+//            break;
+//          case NoteType.leftBuzz:
+//          case NoteType.rightBuzz:
+//            break;
+//          case NoteType.rest:
+//            break;
+//          default:
+//            log.warning('What the heck was that note? $element.type');
+//        }
+//
+//
+//
+//        print('adjusted velocity is $velocity');
+//        element.velocity = velocity.clamp(0,127); // clip it
+//        //        element.velocity = (velocity + noteVelocityAddition).clamp(0,127); // clip it
+//        print('clamped velocity is ${element.velocity}');
+//
+//
+//
+//
+//        //final ticksPerBeat = 10080; // better than 840 or 480      TODO: PUT THIS ELSEWHERE LATER
+//        addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList); // what, does this add the note to the list?  Prob
+////        addNoteOnOffToTrackEventsList(element, noteChannel, Midi.ticksPerBeat, trackEventsList); // what, does this add the note to the list?  Prob
+//        continue;
+//      }
+//      log.info('skipping this note since not a note.  It is a ${element.runtimeType}');
+//    };
 
 
 
-
-
-        // Determine volume/velocity additions based on articulations/accents
-        switch (element.articulation) {
-          case NoteArticulation.tenuto: // '_'
-            velocity += 16;
-//          noteVelocityAddition = (noteVelocity * 0.25).round();
-            break;
-          case NoteArticulation.accent: // '>'
-            velocity += 32;
-            break;
-          case NoteArticulation.marcato: // '^'
-            velocity += 48;
-//          noteVelocityAddition = (noteVelocity * 0.75).round();
-            break;
-        }
-
-
-        // Do changes based on note type
-        switch (element.noteType) {
-          case NoteType.leftTap:
-          case NoteType.rightTap:
-            break;
-          case NoteType.leftFlam:
-          case NoteType.rightFlam:
-          velocity += 6;
-            break;
-          case NoteType.leftDrag:
-          case NoteType.rightDrag:
-          velocity += 10;
-            break;
-          case NoteType.leftBuzz:
-          case NoteType.rightBuzz:
-            break;
-          case NoteType.rest:
-            break;
-          default:
-            log.warning('What the heck was that note? $element.type');
-        }
-
-
-
-        print('adjusted velocity is $velocity');
-        element.velocity = velocity.clamp(0,127); // clip it
-        //        element.velocity = (velocity + noteVelocityAddition).clamp(0,127); // clip it
-        print('clamped velocity is ${element.velocity}');
-
-
-
-
-        //final ticksPerBeat = 10080; // better than 840 or 480      TODO: PUT THIS ELSEWHERE LATER
-        addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList); // what, does this add the note to the list?  Prob
-//        addNoteOnOffToTrackEventsList(element, noteChannel, Midi.ticksPerBeat, trackEventsList); // what, does this add the note to the list?  Prob
+    for (var element in elements) {
+      if (element is Note) {
+        addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList);
         continue;
       }
-      log.info('skipping this note since not a note.  It is a ${element.runtimeType}');
-    };
+      // What about elements like tempo changes?
+        log.warning('have something else not putting into the track: ${element.runtimeType}');
+    }
+
+
+
 
     if (trackEventsList.isEmpty) {
-      log.fine('What?  no events for track?');
+      log.warning('What?  no events for track?');
     }
     // Add this second list to the list of lists
     listOfTrackEventsLists.add(trackEventsList);

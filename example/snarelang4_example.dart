@@ -135,7 +135,8 @@ void main(List<String> arguments) {
   //     and notes should have no velocities or ticks.  (or maybe they do have dynamics)
   // 3.  Scan the elements list for ramp markers,
   // 4.  Go through the elements and set velocities based on dynamics and ramps
-
+//Result testResult = timeSigParser.parse('/time 3/4');
+//print(testResult);
 
   Result result = Score.load(piecesOfMusic);
 
@@ -162,89 +163,90 @@ void main(List<String> arguments) {
   //
   score.applyShorthands(defaultFirstNoteProperties);
   for (var element in score.elements) {
-    print('After shorthand phase: $element');
+    log.finer('After shorthand phase: $element');
   }
 
-  //final ticksPerBeat = 10080; // TODO: Put this in one place, it's in 2 files now, better than 840 or 480
-
-
-
-  // How do we do dynamic ramps?  We're running through a list of elements and hit a ramp indication.
-  // That means from that point until the next specified dynamic, we want to modify the velocities of
-  // all intermediate notes.  But we don't know what those notes are until we hit the next dynamic.
-  // As soon as we hit that next dynamic, we know what the dynamic ramp range is, and we know the total
-  // duration of time for the ramp.  Therefore, we know the "slope" of the ramp.  Then we have to
-  // reprocess those notes in the range and calculate and set the velocity of the note based on it's
-  // timing since the start.
-  //
-  // For each note we multiply that slope value
-  // by the elapsed ticks since the ramp marker and add it to the note's current velocity.
-  //
-
-  // 3.  Scan the elements list for ramp markers, and set their slope values.
-  //     a.  Get a pointer to the ramp marker
-  //     b.  Set it's starting dynamic based on the dynamic at the time, which could be either from a dynamic mark or the previous note's dynamic, whichever is more recent.
-  //     c.  When hit next dynamic marker, set the ramp's ending dynamic, and the total duration to that marker.
-  log.info('Starting search for ramps and setting their values.');
-  Ramp currentRamp;
-  Dynamic mostRecentDynamic;
-  num accumulatedDurationAsFraction = 0;
-  //double currentRampDurationInTicks;
-  var inRamp = false;
-  for (var element in score.elements) {
-
-    if (element is Note) {
-      //previousNote = element;
-      mostRecentDynamic = element.dynamic; // I know, hack,
-      if (inRamp) {
-//        accumulatedTicks += (4 * ticksPerBeat * (element.duration.secondNumber / element.duration.firstNumber)); // prob better to convert later
-        accumulatedDurationAsFraction += element.duration.secondNumber / element.duration.firstNumber;
-        log.info('Doing ramps... This note is inside a ramp.  accumulated duration: $accumulatedDurationAsFraction');
-      }
-      continue;
-    }
-
-    if (element is Ramp) {
-      currentRamp = element;
-      currentRamp.startDynamic = mostRecentDynamic;
-      currentRamp.startVelocity = dynamicToVelocity(mostRecentDynamic);
-      //currentRampDurationInTicks = 0;
-      inRamp = true;
-      log.info('Doing ramps while looping only for ramps... found ramp marker and starting a ramp.');
-      continue;
-    }
-
-    if (element is Dynamic) {
-      if (inRamp) {
-        currentRamp.endDynamic = element;
-        currentRamp.endVelocity = dynamicToVelocity(element);
-//        var accumulatedTicks = 4 * ticksPerBeat * accumulatedDurationAsFraction;
-//        var accumulatedTicks = (4 * Midi.ticksPerBeat * accumulatedDurationAsFraction).round();
-        var accumulatedTicks = (Midi.ticksPerBeat * accumulatedDurationAsFraction).round(); // eba
-        currentRamp.totalTicksStartToEnd = accumulatedTicks;
-        //currentRampDurationInTicks = accumulatedTicks;
-        currentRamp.slope = (currentRamp.endVelocity - currentRamp.startVelocity) / accumulatedTicks;    // rise / run
-//        currentRamp.slope = accumulatedTicks / (currentRamp.endVelocity - currentRamp.startVelocity);    // rise / run
+  score.applyDynamics();
+//  //final ticksPerBeat = 10080; // TODO: Put this in one place, it's in 2 files now, better than 840 or 480
+//
+//
+//
+//  // How do we do dynamic ramps?  We're running through a list of elements and hit a ramp indication.
+//  // That means from that point until the next specified dynamic, we want to modify the velocities of
+//  // all intermediate notes.  But we don't know what those notes are until we hit the next dynamic.
+//  // As soon as we hit that next dynamic, we know what the dynamic ramp range is, and we know the total
+//  // duration of time for the ramp.  Therefore, we know the "slope" of the ramp.  Then we have to
+//  // reprocess those notes in the range and calculate and set the velocity of the note based on it's
+//  // timing since the start.
+//  //
+//  // For each note we multiply that slope value
+//  // by the elapsed ticks since the ramp marker and add it to the note's current velocity.
+//  //
+//
+//  // 3.  Scan the elements list for ramp markers, and set their slope values.
+//  //     a.  Get a pointer to the ramp marker
+//  //     b.  Set it's starting dynamic based on the dynamic at the time, which could be either from a dynamic mark or the previous note's dynamic, whichever is more recent.
+//  //     c.  When hit next dynamic marker, set the ramp's ending dynamic, and the total duration to that marker.
+//  log.info('Starting search for ramps and setting their values.');
+//  Ramp currentRamp;
+//  Dynamic mostRecentDynamic;
+//  num accumulatedDurationAsFraction = 0;
+//  //double currentRampDurationInTicks;
+//  var inRamp = false;
+//  for (var element in score.elements) {
+//
+//    if (element is Note) {
+//      //previousNote = element;
+//      mostRecentDynamic = element.dynamic; // I know, hack,
+//      if (inRamp) {
+////        accumulatedTicks += (4 * ticksPerBeat * (element.duration.secondNumber / element.duration.firstNumber)); // prob better to convert later
+//        accumulatedDurationAsFraction += element.duration.secondNumber / element.duration.firstNumber;
+//        log.info('Doing ramps... This note is inside a ramp.  accumulated duration: $accumulatedDurationAsFraction');
+//      }
+//      continue;
+//    }
+//
+//    if (element is Ramp) {
+//      currentRamp = element;
+//      currentRamp.startDynamic = mostRecentDynamic;
+//      currentRamp.startVelocity = dynamicToVelocity(mostRecentDynamic);
+//      //currentRampDurationInTicks = 0;
+//      inRamp = true;
+//      log.info('Doing ramps while looping only for ramps... found ramp marker and starting a ramp.');
+//      continue;
+//    }
+//
+//    if (element is Dynamic) {
+//      if (inRamp) {
+//        currentRamp.endDynamic = element;
+//        currentRamp.endVelocity = dynamicToVelocity(element);
+////        var accumulatedTicks = 4 * ticksPerBeat * accumulatedDurationAsFraction;
+////        var accumulatedTicks = (4 * Midi.ticksPerBeat * accumulatedDurationAsFraction).round();
+//        var accumulatedTicks = (Midi.ticksPerBeat * accumulatedDurationAsFraction).round(); // eba
+//        currentRamp.totalTicksStartToEnd = accumulatedTicks;
+//        //currentRampDurationInTicks = accumulatedTicks;
 //        currentRamp.slope = (currentRamp.endVelocity - currentRamp.startVelocity) / accumulatedTicks;    // rise / run
-//        currentRamp.slope = (dynamicToVelocity(currentRamp.endDynamic) - dynamicToVelocity(currentRamp.startDynamic)) / accumulatedTicks;    // rise / run
-//        currentRamp.rise = (dynamicToVelocity(currentRamp.endDynamic);
-//        currentRamp.run =
-        log.info('Doing ramps... hit a Dynamic and currently in ramp, so ending ramp.  ramp slope: ${currentRamp.slope}, accumulatedTicks: $accumulatedTicks, accumulatedDurationAsFraction: $accumulatedDurationAsFraction');
-        accumulatedDurationAsFraction = 0;
-
-        print(currentRamp);
-        currentRamp = null; // good idea?
-        inRamp = false;
-      }
-      else {
-        log.info('Doing ramps... hit a Dynamic but not in currently in ramp.');
-      }
-      mostRecentDynamic = element; // yeah, we can have a dynamic mark followed immediately by a ramp, and so the previous note will not have the new dynamic
-      continue;
-    }
-    log.info('Doing ramps... found other kine element: ${element.runtimeType} and ignoring.');
-  }
-  log.info('Done finding and setting ramp values for entire score.\n');
+////        currentRamp.slope = accumulatedTicks / (currentRamp.endVelocity - currentRamp.startVelocity);    // rise / run
+////        currentRamp.slope = (currentRamp.endVelocity - currentRamp.startVelocity) / accumulatedTicks;    // rise / run
+////        currentRamp.slope = (dynamicToVelocity(currentRamp.endDynamic) - dynamicToVelocity(currentRamp.startDynamic)) / accumulatedTicks;    // rise / run
+////        currentRamp.rise = (dynamicToVelocity(currentRamp.endDynamic);
+////        currentRamp.run =
+//        log.info('Doing ramps... hit a Dynamic and currently in ramp, so ending ramp.  ramp slope: ${currentRamp.slope}, accumulatedTicks: $accumulatedTicks, accumulatedDurationAsFraction: $accumulatedDurationAsFraction');
+//        accumulatedDurationAsFraction = 0;
+//
+//        print(currentRamp);
+//        currentRamp = null; // good idea?
+//        inRamp = false;
+//      }
+//      else {
+//        log.info('Doing ramps... hit a Dynamic but not in currently in ramp.');
+//      }
+//      mostRecentDynamic = element; // yeah, we can have a dynamic mark followed immediately by a ramp, and so the previous note will not have the new dynamic
+//      continue;
+//    }
+//    log.info('Doing ramps... found other kine element: ${element.runtimeType} and ignoring.');
+//  }
+//  log.info('Done finding and setting ramp values for entire score.\n');
 
   // 4.  Go through the elements and set velocities based on dynamics and ramps.
   //     I guess will do this in midi.createMidiEventsTracksList
