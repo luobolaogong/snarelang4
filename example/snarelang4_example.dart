@@ -22,7 +22,7 @@ void main(List<String> arguments) {
   //
   // Set up logging.  Does this somehow apply to all files?
   //
-  Logger.root.level = Level.FINER;
+  Logger.root.level = Level.WARNING;
   Logger.root.onRecord.listen((record) {
     print('${record.level.name}: ${record.time}: ${record.message}');
   });

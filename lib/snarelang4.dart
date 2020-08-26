@@ -3,6 +3,7 @@
 /// More dartdocs go here.
 library snarelang4;
 
+export 'src/comment.dart';
 export 'src/dynamic.dart';
 export 'src/midi.dart';
 export 'src/note.dart';

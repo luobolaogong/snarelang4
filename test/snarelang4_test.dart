@@ -11,6 +11,10 @@ void main() {
       score = Score();
     });
     group('Test single Score elements', () {
+      test('Comment test ', () {
+        Result result = scoreParser.parse('// The entire line starting at first of line!');
+        expect(result.value.elements.elementAt(0), '// The entire line starting at first of line!');
+      });
       test('Dynamics test ppp', () {
         Result result = scoreParser.parse('/ppp');
         expect(result.value.elements.elementAt(0), Dynamic.ppp);
@@ -46,23 +50,23 @@ void main() {
       });
       test('Dynamics test >', () {
         Result result = scoreParser.parse('/>');
-        expect(result.value.elements.elementAt(0), Dynamic.ramp);
+        expect(result.value.elements.elementAt(0), Ramp);
       });
       test('Dynamics test <', () {
         Result result = scoreParser.parse('/<');
-        expect(result.value.elements.elementAt(0), Dynamic.ramp);
+        expect(result.value.elements.elementAt(0), Ramp);
       });
       test('Dynamics test cresc', () {
         Result result = scoreParser.parse('/cresc');
-        expect(result.value.elements.elementAt(0), Dynamic.ramp);
+        expect(result.value.elements.elementAt(0), Ramp);
       });
       test('Dynamics test dim', () {
         Result result = scoreParser.parse('/dim');
-        expect(result.value.elements.elementAt(0), Dynamic.ramp);
+        expect(result.value.elements.elementAt(0), Ramp);
       });
       test('Dynamics test decresc', () {
         Result result = scoreParser.parse('/decresc');
-        expect(result.value.elements.elementAt(0), Dynamic.ramp);
+        expect(result.value.elements.elementAt(0), Ramp);
       });
       test('Set of score elements', () {
         Result result = scoreParser.parse('/time 2/4 /tempo 4=99 /mf 16 T >8 . . . /ff _Z 24f ^6d /dim . . . /p F . . /tempo 8:2=88 ');

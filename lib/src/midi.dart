@@ -416,7 +416,7 @@ class Midi {
         continue;
       }
       // What about elements like tempo changes?
-        log.warning('have something else not putting into the track: ${element.runtimeType}');
+        log.finer('have something else not putting into the track: ${element.runtimeType}, $element');
     }
 
 
@@ -527,7 +527,7 @@ class Midi {
     var diffTicksAsDouble = noteTicksAsDouble - noteOffEvent.deltaTime;
     cumulativeRoundoffTicks += diffTicksAsDouble;
 
-    log.info('noteOnNoteOff, Created note events for noteName ${snareLangNoteNameValue}, '
+    log.finest('noteOnNoteOff, Created note events for noteName ${snareLangNoteNameValue}, '
         'deltaTime ${noteOffEvent.deltaTime} (${noteTicksAsDouble}), velocity: ${note.velocity}, '
         'number: ${noteNumber}, cumulative roundoff ticks: $cumulativeRoundoffTicks');
     return diffTicksAsDouble; // kinda strange

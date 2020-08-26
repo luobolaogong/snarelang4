@@ -83,10 +83,6 @@ class Score {
       log.finest('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
 //      if (element is Dynamic) { // new
       if (element is Dynamic) { // new
-//        if (element == Dynamic.ramp) {
-//          log.fine('In Score.applyShorthands(), and since element is type ${element.runtimeType}, I am skipping it.');
-//          continue;
-//        }
         log.finest('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a ramp, I am marking previousNote s dynamic to be same, and skipping');
         previousNote.dynamic = element;
         continue;
@@ -96,13 +92,12 @@ class Score {
         continue;
       }
       if (element is Tempo) {
-        //latestTempo = element;
-        log.warning('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
+        log.finer('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
         continue;
       }
       if (!(element is Note)) {
-        log.warning('Score.applyShorthands(), What is this element, which will be skipped for now?: ${element.runtimeType}');
-        continue; // what else are we skipping here?
+        log.finer('Score.applyShorthands(), What is this element, which will be skipped for now?: ${element.runtimeType}');
+        continue;
       }
       //
       // This section is risky. This could contain bad logic:
@@ -195,7 +190,6 @@ class Score {
           log.finest('Score.applyDynamics(), Doing ramps... hit a Dynamic ($element) and currently in ramp, so ending ramp.  ramp slope: ${currentRamp.slope}, accumulatedTicks: $accumulatedTicks, accumulatedDurationAsFraction: $accumulatedDurationAsFraction');
           accumulatedDurationAsFraction = 0;
 
-          print(currentRamp);
           currentRamp = null; // good idea?
           inRamp = false;
         }
@@ -328,7 +322,8 @@ class Score {
 /// ScoreParser
 ///
 //Parser scoreParser = ((tempoParser | dynamicParser | timeSigParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-Parser scoreParser = ((timeSigParser | tempoParser | dynamicParser | rampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+// Parser scoreParser = ((timeSigParser | tempoParser | dynamicParser | rampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+Parser scoreParser = ((commentParser | timeSigParser | tempoParser | dynamicParser | rampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
   log.finest('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {

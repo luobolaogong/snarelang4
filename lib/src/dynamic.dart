@@ -29,7 +29,6 @@ class Ramp {
   num slope;
 
   String toString() {
-//    return 'Ramp: starting Dynamic: $startDynamic, ending Dynamic: $endDynamic, Duration (ticks): $durationInTicks, Slope: $slope';
     return 'Ramp: startDynamic: $startDynamic, endDynamic: $endDynamic, startVelocity: $startVelocity, endVelocity: $endVelocity, totalTicksStartToEnd: $totalTicksStartToEnd, Slope: $slope';
   }
 }
