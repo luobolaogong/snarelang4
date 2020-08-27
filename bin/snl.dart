@@ -6,7 +6,6 @@ import 'package:args/args.dart';
 import 'package:dart_midi/dart_midi.dart';
 import 'package:logging/logging.dart';
 
-/// Should rename this file to "snl.dart" perhaps, and it should NOT be in the example area.  Maybe in bin dir
 ///
 /// Take a look at WebAudioFont  https://github.com/surikov/webaudiofont
 /// which is a JavaScript thing so that you can play midi in a web page.
@@ -63,7 +62,7 @@ void main(List<String> arguments) {
   ArgResults argResults;
   // If no midi file given, but 1 input file given, name it same with .midi
   var timeStampedMidiOutCurDirName =
-      'Tune${now.year}${now.month}${now.day}${now.hour}${now.minute}.midi';
+      'Tune${now.year}${now.month}${now.day}${now.hour}${now.minute}.mid';
   final parser = ArgParser()
     ..addMultiOption(inFilesList,
         abbr: 'i',
@@ -99,6 +98,14 @@ void main(List<String> arguments) {
         valueHelp: 'midiOutPathName');
   argResults = parser.parse(arguments);
 
+  if (argResults.arguments.isEmpty) {
+    print('No arguments provided.  Aborting ...');
+    print('Usage:\n${parser.usage}');
+    print(
+        'Example: <thisProg> -p Tunes/BadgeOfScotland.snl,Tunes/RowanTree.snl,Tunes/ScotlandTheBrave.snl --midi midifiles/BadgeSet.mid');
+    exitCode = 2; // does anything?
+    return;
+  }
   if (argResults.rest.isNotEmpty) {
     print('Ignoring command line arguments: -->${argResults.rest}<-- and aborting ...');
     print('Usage:\n${parser.usage}');

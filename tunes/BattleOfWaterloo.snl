@@ -1,11 +1,12 @@
 // Battle of Waterloo
-// Set tempo in app invocation for now
 
+// /time 6/8 // test later
+// /tempo 8:3=100 // fix later
+/tempo 84
 
 // Roll-off
-/mf /< 24Z . . . . .    . . . . . .  /ff 2T
-/mf /< 24Z . . . . .    . . . . . .  /ff 4T
-
+/mf /< 24Z . . . . .    . . . . . .  /f 2T
+/mf /< 24Z . . . . .    . . . . . .  /f 4T
 
 /mf
 
@@ -13,33 +14,39 @@
 
 // first bar, all play only first tap, and flam
 >6T 24r 24t                  /mp 24Z . . 8t            8F      24Z . .              ^40T 20z .  24T . .
+
 // second bar, all play
-/mf 12f  24t  12F 30f        30T . . .  >8T            /p /> 24Z . . . . .          /mf >8T   32T . . .
+/mf 12f  24t  12F >30f       30T . . .  >8T            /p /> 24Z . . . . .          /mf >8T   32T . . .
+
 // 3rd bar
->6T 24r 24t                  /mp  24Z . . 24t . .      /f  >12T  24t  12r  >30t     . . . >.  >8T
+>6T 24r 24t                  /mp  24Z . . 24t . .      /f  >12T  24t  12r  ^30t     . . . ^.  ^8T
+
 // 4th bar
-/mp >40T 20z . 24Z .  t      >40T 20z . >40t 20z .     >4T  /mf                     8F 32T . . .
+/mp ^40T 20z . 24Z .  ^t      ^40T 20z . ^40t 20z .     ^4T  /mf                     8F 32T . . .
 
 
 
 // Repeat first 3 bars above
 /mf >6T 24r 24t              /mp 24Z . . 8t            8F  24Z . .                  ^40T 20z .  24T . .
-/mf 12f  24t  12F 30f        30T . . .  >8T            /p /<  24Z . . . . .         /mf >8T   32T . . .
->6T 24r 24t                  /mp 24Z . . 24t . .       /f  >12T  24t  12r  >30t     . . . >.  >8T
+
+/mf 12f  24t  12F >30f       30T . . .  >8T            /p /<  24Z . . . . .         /mf >8T   32T . . .
+
+>6T 24r 24t                  /mp 24Z . . 24t . .       /f  >12T  24t  12r  ^30t     . . . ^.  ^8T
+
 // This is the 2nd ending
 /p /< 24Z . . . . .          . . . . . .               /f >4T                       8r 8t
 
 
 // 2nd part
-/f ^40T 20z . 24z . >24t     >40T 20z . >40t 20Z .     ^40T 20z . 24z . >24t        40T 20z . 24t . .
-/mf 12f  24t  12F 30f        30T . . .  >8T            /p /< 24Z . . . . .          /mf  >8T   32T . . .
->6T 24r 24t                  /mp 24Z . . 24t . .       /f >12T  24t  12r  >30t      . . . >.  >8T
-/mp >40T 20z . 24Z . t       >40T 20z . >40t 20z .     /mf >4T                      8F /mf 32T . . .
+/f ^40T 20z . 24z . ^24t     ^40T 20z . ^40t 20Z .     ^40T 20z . 24z . ^24t        ^40T 20z . 24t . .
+/mf 12f  24t  12F >30f       30T . . .  >8T            /p /< 24Z . . . . .          /mf  >8T   32T . . .
+>6T 24r 24t                  /mp 24Z . . 24t . .       /f >12T  24t  12r  ^30t      . . . ^.  ^8T
+/mp ^40T 20z . 24Z . ^t       ^40T 20z . ^40t 20z .    ^4T /mf                     8F 32T . . .
 
 
 // 1st part, but take 2nd ending
 /mf>6T 24r 24t               /mp   24Z . . 8t          8F  24Z . .                  ^40T 20z .  24T . .
-/mf 12f  24t  12F 30f        30T . . .  >8T            /p /<  24Z . . . . .         /mf   >8T   32T . . .
+/mf 12f  24t  12F >30f       30T . . .  >8T            /p /<  24Z . . . . .         /mf   >8T   32T . . .
 >6T 24r 24t                  /mp 24Z . . 24t . .       /f >12T  24t  12r  >30t      . . . >.  >8T
 
 // second ending of first part

@@ -28,7 +28,7 @@ import '../snarelang4.dart';
 
 class Tempo {
   NoteDuration noteDuration = NoteDuration();
-  int bpm = 84; // initialize?
+  int bpm = 84; // initialize?  Wow, it's set elsewhere isn't it?  Where do this best, if at all?
 
   String toString() {
     return 'Tempo: bpm: $bpm, NoteDuration: $noteDuration';

@@ -54,7 +54,7 @@ class Score {
       log.fine('Done with first pass -- loaded raw notes, no shorthands yet.\n');
     }
     else {
-      log.warning('Score parse failed: ${result.message}');
+      log.info('Score parse failed.  Parse message: ${result.message}');
     }
     return result;
   }
@@ -80,7 +80,7 @@ class Score {
     previousNote.noteType = defaultNote.noteType;
     log.finest('In top of Score.applyShorthands and just set "previousNote" to be the defaultNote passed in, which is $defaultNote');
     for (var element in elements) {
-      log.finest('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
+      //log.finest('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
 //      if (element is Dynamic) { // new
       if (element is Dynamic) { // new
         log.finest('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a ramp, I am marking previousNote s dynamic to be same, and skipping');
@@ -93,6 +93,10 @@ class Score {
       }
       if (element is Tempo) {
         log.finer('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
+        continue;
+      }
+      if (element is TimeSig) {
+        log.finer('Score.applyShorthands(), Not applying shorthand to TimeSig element.  Skipping it for now.');
         continue;
       }
       if (!(element is Note)) {
