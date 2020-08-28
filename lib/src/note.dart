@@ -48,7 +48,7 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
 
 class Note {
   NoteArticulation articulation;
-  NoteDuration duration; // also "SnareLangNoteNameValue".  can be used to calculate ticks, right?  noteTicks = (4 * ticksPerBeat) / SnareLangNoteNameValue
+  NoteDuration duration; // prob should have constructor construct one of these.  Of course.  also "SnareLangNoteNameValue".  can be used to calculate ticks, right?  noteTicks = (4 * ticksPerBeat) / SnareLangNoteNameValue
   NoteType noteType = NoteType.rightTap;  // correct here?
   int velocity; // Perhaps this will go into MidiNote or something, new
   Dynamic dynamic; // gets a value during first pass through the score list

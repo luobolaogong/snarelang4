@@ -216,6 +216,36 @@ class Midi {
     }
   }
 
+  List<MidiEvent> createMidiEventsMetronomeTrack(int nBarsMetronome, Tempo tempo, Note note) {
+    var channel = 0;
+    var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+
+    var metronomeTrackEventsList = <MidiEvent>[];
+    var totalNotes = nBarsMetronome * 4;
+    for (var metBeatCtr = 0; metBeatCtr < totalNotes; metBeatCtr++) {
+      var noteOnEvent = NoteOnEvent();
+      noteOnEvent.type = 'noteOn';
+      noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???
+      noteOnEvent.noteNumber = 80;
+      noteOnEvent.velocity = note.velocity;
+      noteOnEvent.channel = channel;
+      metronomeTrackEventsList.add(noteOnEvent);
+
+      var noteOffEvent = NoteOffEvent();
+      noteOffEvent.type = 'noteOff';
+      noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
+      noteOffEvent.noteNumber = 80;
+      noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
+      noteOffEvent.channel = channel;
+
+      metronomeTrackEventsList.add(noteOffEvent);
+
+    }
+    return metronomeTrackEventsList;
+  }
+
+
+
   /// Create a list of MidiEvent lists, one list per track.  First list is special.  After that it's just tracks.
   /// For now we have two tracks only.  Regarding the parameters bpm and timeSig and dynamic, these are really defaults if not specified in the score, right?  But we stick them into first track which is probably wrong
   // List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, int bpm, Dynamic dynamic) {
@@ -224,42 +254,45 @@ class Midi {
     var listOfTrackEventsLists = <List<MidiEvent>>[];
     // Do special first track (why?)  Also, should pass in Tempo not bpm
     // Fix this later so can avoid doing a special first track, if possible:
-    var trackEventsList = doSpecialFirstTrack(timeSig, tempo); // do we really need this?  Maybe so if score doesn't do tempo or timeSig
-    listOfTrackEventsLists.add(trackEventsList);
+    var specialTrackEventsList = doSpecialFirstTrack(timeSig, tempo); // do we really need this?  Maybe so if score doesn't do tempo or timeSig
+    listOfTrackEventsLists.add(specialTrackEventsList);
+    // var trackEventsList = doSpecialFirstTrack(timeSig, tempo); // do we really need this?  Maybe so if score doesn't do tempo or timeSig
+    // listOfTrackEventsLists.add(trackEventsList);
 
 
     // Start a new list of events, most will be notes, but not all.
     // Set event velocities for notes from elements (including ramps).
     // Process any tempo elements.
 
-    trackEventsList = <MidiEvent>[];
+    var snareTrackEventsList = <MidiEvent>[];
 
     var noteChannel = 0;
 
     for (var element in elements) {
       if (element is Note) {
-        addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList);
+        addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList);
         continue;
       }
       if (element is Tempo) {
-        addTempoChangeToTrackEventsList(element, noteChannel, trackEventsList);
+        addTempoChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
         continue;
       }
       if (element is TimeSig) { // what?  comment????
-        addTimeSigChangeToTrackEventsList(element, noteChannel, trackEventsList);
+        addTimeSigChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
         continue;
       }
       log.finer('have something else not putting into the track: ${element.runtimeType}, $element');
     }
 
-
-
-
-    if (trackEventsList.isEmpty) {
+    if (snareTrackEventsList.isEmpty) {
       log.warning('What?  no events for track?');
     }
+
     // Add this second list to the list of lists
-    listOfTrackEventsLists.add(trackEventsList);
+    listOfTrackEventsLists.add(snareTrackEventsList);
+
+    // Add another test list to the list of lists, eventually perhaps a metronome track, or BD or tenors or pipes
+    //listOfTrackEventsLists.add(metronomeTrackEventsList);
 
     return listOfTrackEventsLists;
   }

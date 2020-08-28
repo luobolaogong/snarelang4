@@ -1,10 +1,10 @@
-import 'package:snarelang4/snarelang4.dart';
-import 'package:petitparser/petitparser.dart';
 import 'dart:io';
 
 import 'package:args/args.dart';
 import 'package:dart_midi/dart_midi.dart';
 import 'package:logging/logging.dart';
+import 'package:petitparser/petitparser.dart';
+import 'package:snarelang4/snarelang4.dart';
 
 ///
 /// Take a look at WebAudioFont  https://github.com/surikov/webaudiofont
@@ -28,7 +28,6 @@ void main(List<String> arguments) {
   });
   final log = Logger('MyParser');
 
-
   // 'override' is probably wrong.  I don't think we override anything in the score.  If the score
   // says tempo is 60, then we're not going to override it to something else.  Same with dynamics
   // or time signature.  We can have default values, and the user can set values on the command line,
@@ -36,6 +35,7 @@ void main(List<String> arguments) {
   // So, this next section should be reviewed, and at least change 'override' to 'fromCommandLine'
   // int overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
   Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
+  int nBarsMetronome;
   // var defaultTempo = 84;
   var defaultTempo = Tempo(); // 84;
   // defaultTempo.noteDuration = NoteDuration(); // allow for null/unspecified
@@ -56,7 +56,9 @@ void main(List<String> arguments) {
 
   const inFilesList = 'input';
   const outMidiFilesPath = 'midi';
+  const commandLineLogLevel = 'loglevel';
   const help = 'help';
+  const commandLineMetronome = 'met';
 
   var now = DateTime.now();
   ArgResults argResults;
@@ -69,6 +71,14 @@ void main(List<String> arguments) {
         help:
         'List as many input SnareLang input files/pieces you want, separated by commas, without spaces.',
         valueHelp: 'path1,path2,...')
+    ..addOption(commandLineLogLevel,
+        hide: true,
+        abbr: 'l',
+        allowed: ['ALL', 'FINEST', 'FINER', 'FINE', 'CONFIG', 'INFO', 'WARNING', 'SEVERE', 'SHOUT', 'OFF'],
+        defaultsTo: 'OFF',
+        help:
+        'Set the log level.  This is a hidden optionl',
+        valueHelp: '-l ALL')
     ..addOption(commandLineTempo,
         abbr: 't',
         help:
@@ -82,9 +92,15 @@ void main(List<String> arguments) {
         valueHelp: 'bpmValue')
     ..addOption(commandLineTimeSig, // of questionable utillity
         abbr: 's',
+        //defaultsTo: '4/4', // do this???  Maybe, don't wanna take time now to fine out
         help:
         'initial/default time signature, like 3/4 or 4/4 or 9/8, etc',
         valueHelp: 'bpmValue')
+    ..addOption(commandLineMetronome, // of questionable utillity
+        abbr: 'm',
+        help:
+        'string indicating metronome tempo and number of bars.  This is an experiment',
+        valueHelp: 'nBars')
     ..addFlag(help,
         abbr: 'h',
         negatable: false,
@@ -120,9 +136,48 @@ void main(List<String> arguments) {
     return;
   }
 
+  if (argResults[commandLineLogLevel] != null) {
+    switch (argResults[commandLineLogLevel]) {
+      case 'ALL':
+        Logger.root.level = Level.ALL;
+        break;
+      case 'FINEST':
+        Logger.root.level = Level.FINEST;
+        break;
+      case 'FINER':
+        Logger.root.level = Level.FINER;
+        break;
+      case 'FINE':
+        Logger.root.level = Level.FINE;
+        break;
+      case 'CONFIG':
+        Logger.root.level = Level.CONFIG;
+        break;
+      case 'INFO':
+        Logger.root.level = Level.INFO;
+        break;
+      case 'WARNING':
+        Logger.root.level = Level.WARNING;
+        break;
+      case 'SEVERE':
+        Logger.root.level = Level.SEVERE;
+        break;
+      case 'SHOUT':
+        Logger.root.level = Level.SHOUT;
+        break;
+      case 'OFF':
+        Logger.root.level = Level.OFF;
+        break;
+      default:
+        Logger.root.level = Level.OFF;
+    }
+  }
   if (argResults[commandLineTempo] != null) {
     // overrideTempo = int.parse(argResults[commandLineTempo]);
     overrideTempo.bpm = int.parse(argResults[commandLineTempo]);
+  }
+  if (argResults[commandLineMetronome] != null) {
+    nBarsMetronome = int.parse(argResults[commandLineMetronome]);
   }
   if (argResults[commandLineDynamic] != null) {
     String dynamicString = argResults[commandLineDynamic];
@@ -190,6 +245,17 @@ void main(List<String> arguments) {
   // Create Midi tracks.  This overrideTempo thing, and probably also TimeSig and Dynamic don't make sense.  These should probably be 'default' values
   // next line should have overrideTempo be a Tempo, not an int
   var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic);
+
+  // Now try a simple metronome track
+  if (nBarsMetronome != null && nBarsMetronome > 0) { // cheap cheap cheap
+    var metronomeNote = Note();
+    metronomeNote.duration = NoteDuration(); // this is silly
+    metronomeNote.duration.firstNumber = 4;
+    metronomeNote.duration.secondNumber = 1;
+    metronomeNote.velocity = 127;
+    var metronomeTrack = midi.createMidiEventsMetronomeTrack(nBarsMetronome, overrideTempo, metronomeNote);
+    midiTracks.add(metronomeTrack);
+  }
 
 
   // Add the header and tracks list into a MidiFile, and write it
