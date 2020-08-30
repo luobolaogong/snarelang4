@@ -140,6 +140,7 @@ class Midi {
   MidiHeader createMidiHeader() {
     // Construct a header with values for name, and whatever else
     // var midiHeaderOut = MidiHeader(ticksPerBeat: Midi.ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
+    print('hey watch that numTracks thing in header.');
     var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
 //    var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
     return midiHeaderOut;
@@ -173,23 +174,36 @@ class Midi {
     // But I guess they need to have this before any notes.
     var timeSignatureEvent = TimeSignatureEvent();
     timeSignatureEvent.type = 'timeSignature';
-    timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects sound or tempo????
+    timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects tempo????
     timeSignatureEvent.denominator = timeSig.denominator;
     timeSignatureEvent.metronome = 18; // for module synchronization
-    timeSignatureEvent.thirtyseconds = 8; // Perhaps for notation purposes
+    timeSignatureEvent.thirtyseconds = 8; // What used for?  Is this num 32nd's in a quarter, or in a beat?????????????????????????????????????????????????????
     trackEventsList.add(timeSignatureEvent);
 
     // Add a tempo event.  Again, can't this happen anywhere?
     // But I guess they need to have this before any notes.
     // Should pull these lines of code into separate method, because other tracks may want to do same.
     //addTempoChangeToTrackEventsList(new Tempo(), 42, trackEventsList);
-    var setTempoEvent = SetTempoEvent();
-    setTempoEvent.type = 'setTempo';
-    // Do we need to modify the bpm field if the duration field is not 4:1?  I think it does need to be modified for MIDI writing.  Maybe here.
-    //num realBpm = adjustTempoForNonQuarterBeats(tempo);
-    setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / tempo.bpm).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
-    trackEventsList.add(setTempoEvent);
+//     var setTempoEvent = SetTempoEvent();
+//     setTempoEvent.type = 'setTempo';
+//     print('Do we need to modify the bpm field if the duration field is not 4:1?  I think it does need to be modified for MIDI writing.  Maybe here.');
+//     //num realBpm = adjustTempoForNonQuarterBeats(tempo);
+// //    tempo.bpm = (tempo.bpm * 8 / 3 / 4).round();
+//     var adjustedBpmForFeedingIntoMidi = adjustTempoForNonQuarterBeats(tempo);
+//     print('Bpm is {$tempo.bpm}, adjusted bpm: $adjustedBpmForFeedingIntoMidi');
+//     // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / tempo.bpm).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+//     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / adjustedBpmForFeedingIntoMidi).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+//     trackEventsList.add(setTempoEvent);
 
+    var noteChannel = 0;
+
+    //var adjustedBpmForFeedingIntoMidi = adjustTempoForNonQuarterBeats(tempo);
+   // print('This next thing is totally new.  trying to adjust tempo when not in 4/4 time.');
+    //tempo.bpm = adjustedBpmForFeedingIntoMidi;
+    addTempoChangeToTrackEventsList(tempo, noteChannel, trackEventsList);
+
+
+//print('prob shoulda adjusted bpm so that it matches a quarter note, of "beat" is always a quarter to midi.  Otherwise gotta calc');
     return trackEventsList;
   }
 
@@ -202,23 +216,31 @@ class Midi {
   // If 6/8 time and there are 60 dotted quarters per min, then msbp is also 1M, but maybe it should be (3/2)M so that a quarter note will get the right number of microseconds.  Don't know.
   //
   // Do this later, in order to handle 6/8, 9/8, and whatever else, like 7/8, etc.
-  num adjustTempoForNonQuarterBeats(Tempo tempo) {
-    print('tempo was given as $tempo');
-    if (tempo.noteDuration != null) {
-      var firstNumber = tempo.noteDuration.firstNumber;
-      var secondNumber = tempo.noteDuration.secondNumber;
-      if (firstNumber != 4 && secondNumber != 4) {
-        print('must adjust, because not 4');
-        // In 4/4, if q=60 then bpm = 60
-        // In 2/4, if q=60 then bpm = 60, and midi
-        // In 2/2, if half note == 60, then bpm is bpm is 60, I think.  But the midi number is different
-      }
-    }
-  }
+  // int adjustTempoForNonQuarterBeats(Tempo tempo) {
+  //   print('tempo was given as $tempo');
+  //   if (tempo.noteDuration != null) {
+  //     var firstNumber = tempo.noteDuration.firstNumber;
+  //     var secondNumber = tempo.noteDuration.secondNumber;
+  //     print('Should adjust if not based on quarter, probably.  And special case 6/8, 9/8, 3/8, 12/8, 3n/8 are probably based on dotted quarter beat.  7/8, 5/8 10/8 etc probably based on eighth notes');
+  //     print('And what about based on half note?');
+  //     if (firstNumber != 4 && secondNumber != 4) {
+  //       // In 4/4, if q=60 then bpm = 60
+  //       // In 2/4, if q=60 then bpm = 60, and midi
+  //       // In 2/2, if half note == 60, then bpm is bpm is 60, I think.  But the midi number is different
+  //       var returnThisNewBpm = (2 * tempo.bpm / (firstNumber / secondNumber)).round(); // wild guess. prob wrong.  Check other places
+  //       return returnThisNewBpm; // coerces?
+  //     }
+  //
+  //   }
+  //   else {
+  //     return tempo.bpm;
+  //   }
+  // }
 
   List<MidiEvent> createMidiEventsMetronomeTrack(int nBarsMetronome, Tempo tempo, Note note) {
     var channel = 0;
-    var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+    // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+    var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber); // is this right???????
 
     var metronomeTrackEventsList = <MidiEvent>[];
     var totalNotes = nBarsMetronome * 4;
@@ -274,6 +296,9 @@ class Midi {
         continue;
       }
       if (element is Tempo) {
+        // var adjustedBpmForFeedingIntoMidi = adjustTempoForNonQuarterBeats(tempo);
+        // print('This next thing is totally new.  trying to adjust tempo when not in 4/4 time.');
+        // element.bpm = adjustedBpmForFeedingIntoMidi;
         addTempoChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
         continue;
       }
@@ -312,7 +337,10 @@ class Midi {
     var setTempoEvent = SetTempoEvent();
     setTempoEvent.type = 'setTempo';
     // next line not correct is it?  tempo.bpm is based on a beat note, which needs to be consulted
-    setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / tempo.bpm).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+    // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / tempo.bpm).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+   var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4);
+   // var useThisTempo = tempo.bpm;
+    setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
     trackEventsList.add(setTempoEvent);
   }
     ///
@@ -327,7 +355,8 @@ class Midi {
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
     }
-    var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+    // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+    var snareLangNoteNameValue = note.duration.firstNumber / note.duration.secondNumber; // is this right???????
     if (note.noteType == NoteType.rest) {
       note.velocity = 0; // new, nec?
     }

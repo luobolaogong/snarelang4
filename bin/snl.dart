@@ -16,7 +16,7 @@ import 'package:snarelang4/snarelang4.dart';
 
 
 void main(List<String> arguments) {
-
+  print('Staring snl ...');
 
   //
   // Set up logging.  Does this somehow apply to all files?
@@ -37,10 +37,10 @@ void main(List<String> arguments) {
   Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
   int nBarsMetronome;
   // var defaultTempo = 84;
-  var defaultTempo = Tempo(); // 84;
+  var defaultTempo = Tempo(); // constructor does create the NoteDuratino part.
   // defaultTempo.noteDuration = NoteDuration(); // allow for null/unspecified
-  // defaultTempo.noteDuration.firstNumber = 4;
-  // defaultTempo.noteDuration.secondNumber = 1;
+  defaultTempo.noteDuration.firstNumber = 4;
+  defaultTempo.noteDuration.secondNumber = 1;
   defaultTempo.bpm = 84;
   const commandLineTempo = 'tempo'; // change to commandLineTempoIndexName
 
@@ -52,7 +52,7 @@ void main(List<String> arguments) {
   var defaultTimeSig = TimeSig();
   defaultTimeSig.numerator = 4;
   defaultTimeSig.denominator = 4;
-  const commandLineTimeSig = 'sig';
+  const commandLineTimeSig = 'time';
 
   const inFilesList = 'input';
   const outMidiFilesPath = 'midi';
@@ -112,7 +112,15 @@ void main(List<String> arguments) {
         help:
         'This is the output midi file name and path.  Defaults to "Tune<dateAndTime>.midi"',
         valueHelp: 'midiOutPathName');
-  argResults = parser.parse(arguments);
+  try {
+    argResults = parser.parse(arguments);
+  }
+  catch (exception) {
+    print('Usage:\n${parser.usage}');
+    print('${exception}  Exiting...');
+    exitCode = 3; // "Process finished with exit code 3"
+    return;
+  }
 
   if (argResults.arguments.isEmpty) {
     print('No arguments provided.  Aborting ...');
@@ -174,7 +182,8 @@ void main(List<String> arguments) {
   }
   if (argResults[commandLineTempo] != null) {
     // overrideTempo = int.parse(argResults[commandLineTempo]);
-    overrideTempo.bpm = int.parse(argResults[commandLineTempo]);
+    // overrideTempo.bpm = int.parse(argResults[commandLineTempo]); // Should allow for note that gets beat, as in 8:3=104 rather than just 104
+    overrideTempo = parseTempo(argResults[commandLineTempo]); // expect either '104' (quarter note assumed) or '8:3=104'
   }
   if (argResults[commandLineMetronome] != null) {
     nBarsMetronome = int.parse(argResults[commandLineMetronome]);
@@ -266,3 +275,24 @@ void main(List<String> arguments) {
   print('Done writing midifile ${midiFileOutFile.path}');
 }
 
+// expect either '104' (quarter note assumed) or '8:3=104'
+Tempo parseTempo(String noteTempoString) {
+  var tempo = Tempo();
+  // var parts = tempoString.split(r'[:=]');
+  var noteTempoParts = noteTempoString.split('=');
+  if (noteTempoParts.length == 1) {
+    tempo.bpm = int.parse(noteTempoParts[0]);
+    tempo.noteDuration.firstNumber = 4;
+    tempo.noteDuration.secondNumber = 1;
+  }
+  else if (noteTempoParts.length == 2) {
+    var noteParts = noteTempoParts[0].split(':');
+    tempo.noteDuration.firstNumber = int.parse(noteParts[0]);
+    tempo.noteDuration.secondNumber = int.parse(noteParts[1]);
+    tempo.bpm = int.parse(noteTempoParts[1]); // wrong of course
+  }
+  else {
+    print('Failed to parse tempo correctly: -->$noteTempoString<--');
+  }
+  return tempo;
+}

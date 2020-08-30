@@ -27,12 +27,13 @@ import '../snarelang4.dart';
 /// But really this should also be accepted:    \tempo <bpm>
 
 class Tempo {
-  NoteDuration noteDuration = NoteDuration();
+  NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good
   int bpm = 84; // initialize?  Wow, it's set elsewhere isn't it?  Where do this best, if at all?
 
   String toString() {
-    return 'Tempo: bpm: $bpm, NoteDuration: $noteDuration';
+    return 'Tempo: bpm: $bpm, $noteDuration';
   }
+
 }
 
 /// I think we're not going to allow for accel or deaccel
@@ -55,7 +56,7 @@ Parser tempoParser = ( // what about whitespace?
   //log.info('\nIn TempoParser and value is -->$value<--');
   var tempo = Tempo();
   if (value[1] != null) {
-    NoteDuration noteDuration = value[1][0];
+    NoteDuration noteDuration = value[1][0]; // NoteDurationParser returns an object
     tempo.noteDuration = noteDuration;
   }
   tempo.bpm = value[2];
