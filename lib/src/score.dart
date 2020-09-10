@@ -150,12 +150,16 @@ class Score {
       if (!(element is Note)) {
         continue;
       }
+      var note = element as Note; // this looks like a cast, which is what I want
+      if (note.dynamic == null) {
+        continue;
+      }
       element.velocity = dynamicToVelocity(element.dynamic);
     }
 
     // 3.  Scan the elements list for ramp markers, and set their properties
     print('');
-    log.finest('Score.applyDynamics(), Starting search for ramps and setting their values.');
+    log.finest('Score.applyDynamics(), Starting search for ramps and setting their values.  THIS MAY BE WRONG NOW THAT I''M APPLYING DYNAMICS DURING SHORTHAND PHASE');
     Ramp currentRamp;
     Dynamic mostRecentDynamic;
     num accumulatedDurationAsFraction = 0;
@@ -234,16 +238,16 @@ class Score {
       }
       if (element is Note) {
         log.finest('\telement is a Note...');
-
+        var note = element as Note;
         // If a note is not in a ramp, skip it
         if (!inRamp) {
-          log.finest('\t\tNote element is not in ramp, so skipping it.  But it has velocity ${element.velocity}');
+          log.finest('\t\tNote element is not in ramp, so skipping it.  But it has velocity ${note.velocity}');
           continue;
         }
         // We have a note in a ramp, and will now adjust its velocity solely by it's Ramp slope and starting time in the ramp.
         if (isFirstNoteInRamp) {
-          log.finest('\t\tGot first note in ramp.  Will not adjust velocity, which is ${element.velocity}');
-          previousNote = element;
+          log.finest('\t\tGot first note in ramp.  Will not adjust velocity, which is ${note.velocity}');
+          previousNote = note;
           isFirstNoteInRamp = false;
         }
         else {
@@ -254,10 +258,10 @@ class Score {
           var cumulativeTicksSinceRampStartNote = beatFractionToTicks(cumulativeDurationSinceRampStartNote);
           log.finest('\t\t\tcumulativeTicksSinceRampStartNote: $cumulativeTicksSinceRampStartNote and ramp slope is ${currentRamp.slope}');
           log.finest('\t\t\tUsing slope and position in ramp, wanna add this much to the velocity: ${currentRamp.slope * cumulativeTicksSinceRampStartNote}');
-          element.velocity += (currentRamp.slope * cumulativeTicksSinceRampStartNote).round();
-          log.finest('\t\t\tSo now this element has velocity ${element.velocity}');
+          note.velocity += (currentRamp.slope * cumulativeTicksSinceRampStartNote).round();
+          log.finest('\t\t\tSo now this element has velocity ${note.velocity}');
           isFirstNoteInRamp = false;
-          previousNote = element; // new
+          previousNote = note; // new
         }
       }
     }
@@ -269,29 +273,30 @@ class Score {
       if (!(element is Note)) {
         continue;
       }
-      switch (element.articulation) {
+      var note = element as Note;
+      switch (note.articulation) {
         case NoteArticulation.tenuto: // '_'
-          element.velocity += 16;
+          note.velocity += 16;
           break;
         case NoteArticulation.accent: // '>'
-          element.velocity += 32;
+          note.velocity += 32;
           break;
         case NoteArticulation.marcato: // '^'
-          element.velocity += 48;
+          note.velocity += 48;
           break;
       }
 
-      switch (element.noteType) {
+      switch (note.noteType) {
         case NoteType.leftTap:
         case NoteType.rightTap:
           break;
         case NoteType.leftFlam:
         case NoteType.rightFlam:
-          element.velocity += 6;
+          note.velocity += 6;
           break;
         case NoteType.leftDrag:
         case NoteType.rightDrag:
-          element.velocity += 10;
+          note.velocity += 10;
           break;
         case NoteType.leftBuzz:
         case NoteType.rightBuzz:
@@ -299,14 +304,14 @@ class Score {
         case NoteType.rest:
           break;
         default:
-          log.warning('What the heck was that note? $element.type');
+          log.warning('What the heck was that note? $note.type');
       }
 
-      log.finest('adjusted velocity is ${element.velocity}');
-      if (element.velocity > 127 || element.velocity < 0) {
-        log.finer('Will clamp velocity because it is ${element.velocity}');
-        element.velocity = element.velocity.clamp(0, 127);
-        log.fine('clamped velocity is ${element.velocity}');
+      log.finest('adjusted velocity is ${note.velocity}');
+      if (note.velocity > 127 || note.velocity < 0) {    // hmmmm did I screw this up by doing the cast with "as" to Note?  Lost velocity value????
+        log.finer('Will clamp velocity because it is ${note.velocity}');
+        note.velocity = note.velocity.clamp(0, 127);
+        log.fine('clamped velocity is ${note.velocity}');
       }
     }
 
