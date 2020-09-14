@@ -22,9 +22,6 @@ import 'package:snarelang4/snarelang4.dart';
 /// Add bagpipe midi (Unfortunately, http://r.fifi.free.fr/BagPipe/guide_en.htm doesn't appear to produce midi)
 ///
 ///
-///
-///
-///   // These constants should perhaps be made global and listed only once
 const commandLineTempo = 'tempo'; // change to commandLineTempoIndexName
 const commandLineDynamic = 'dynamic';
 const commandLineTimeSig = 'time';
@@ -34,10 +31,12 @@ const commandLineLogLevel = 'loglevel';
 const help = 'help';
 const commandLineMetronome = 'met';
 const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes';
+const commandLineUsePadSoundFont = 'pad';
 
 void main(List<String> arguments) {
   print('Staring snl ...');
-
+  var usePadSoundFont = false;
+  var loopBuzzes = false;
   //
   // Set up logging.  Does this somehow apply to all files?
   //
@@ -54,31 +53,27 @@ void main(List<String> arguments) {
   // which would override the default values, but we're not overriding what's in the score.
   // So, this next section should be reviewed, and at least change 'override' to 'fromCommandLine'
   // int overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
-  Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
-  int nBarsMetronome;
   // var defaultTempo = 84;
+  var defaultDynamic = Dynamic.mf;
   var defaultTempo = Tempo(); // constructor does create the NoteDuratino part.
-  // defaultTempo.noteDuration = NoteDuration(); // allow for null/unspecified
   defaultTempo.noteDuration.firstNumber = 4;
   defaultTempo.noteDuration.secondNumber = 1;
   defaultTempo.bpm = 84;
-
-  Dynamic overrideDynamic; // deliberately null.  Right?
-  var defaultDynamic = Dynamic.mf;
-
-  TimeSig overrideTimeSig; // deliberately null
   var defaultTimeSig = TimeSig();
   defaultTimeSig.numerator = 4;
   defaultTimeSig.denominator = 4;
 
-  final argResults = createArgParser(arguments, overrideTempo, nBarsMetronome, overrideDynamic, overrideTimeSig, defaultDynamic, defaultTempo, defaultTimeSig);
+  Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
+  TimeSig overrideTimeSig; // deliberately null
+  Dynamic overrideDynamic; // deliberately null.  Right?
+  int nBarsMetronome;
+  //
+  // Parse the command line arguments
+  //
+  final argResults = parseCommandLineArgs(arguments);
+
   if (argResults[commandLineTempo] != null) {
-    // overrideTempo = int.parse(argResults[commandLineTempo]);
-    // overrideTempo.bpm = int.parse(argResults[commandLineTempo]); // Should allow for note that gets beat, as in 8:3=104 rather than just 104
     overrideTempo = parseTempo(argResults[commandLineTempo]); // expect either '104' (quarter note assumed) or '8:3=104'
-  }
-  if (argResults[commandLineMetronome] != null) {
-    nBarsMetronome = int.parse(argResults[commandLineMetronome]);
   }
   if (argResults[commandLineDynamic] != null) {
     String dynamicString = argResults[commandLineDynamic];
@@ -91,190 +86,23 @@ void main(List<String> arguments) {
     overrideTimeSig.numerator = int.parse(sigParts[0]);
     overrideTimeSig.denominator = int.parse(sigParts[1]);
   }
-  // scan score elements for initial timesig numerator and denominator, if specified???????????????????
+  if (argResults[commandLineMetronome] != null) { // this is for the metronome track, right?  Experimental
+    nBarsMetronome = int.parse(argResults[commandLineMetronome]);
+  }
+
+  if (argResults[commandLineContinuousSustainedLoopedBuzzes]) {
+    print('Hmmmm, got this flag for looping buzzes');
+    loopBuzzes = true; // where does this get tied in?
+  }
+  var something = argResults[commandLineUsePadSoundFont];
+  if (argResults[commandLineUsePadSoundFont]) {
+    print('Want to use pad, eh?');
+    usePadSoundFont = true;
+  }
+
   overrideDynamic ??= defaultDynamic; // check check check check check.  And does this update the param coming in?
-  overrideTempo ??= defaultTempo;
-  overrideTimeSig ??= defaultTimeSig;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // final parser = createArgParser(arguments);
-  // const commandLineTempo = 'tempo'; // change to commandLineTempoIndexName
-  // const commandLineDynamic = 'dynamic';
-  // const commandLineTimeSig = 'time';
-  //
-  // const inFilesList = 'input';
-  // const outMidiFilesPath = 'midi';
-  // const commandLineLogLevel = 'loglevel';
-  // const help = 'help';
-  // const commandLineMetronome = 'met';
-  // const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes';
-  // var now = DateTime.now();
-  // ArgResults argResults;
-  // // If no midi file given, but 1 input file given, name it same with .midi
-  // var timeStampedMidiOutCurDirName =
-  //     'Tune${now.year}${now.month}${now.day}${now.hour}${now.minute}.mid';
-  // final parser = ArgParser()
-  //   ..addMultiOption(inFilesList,
-  //       abbr: 'i',
-  //       help:
-  //       'List as many input SnareLang input files/pieces you want, separated by commas, without spaces.',
-  //       valueHelp: 'path1,path2,...')
-  //   ..addOption(commandLineLogLevel,
-  //       hide: true,
-  //       abbr: 'l',
-  //       allowed: ['ALL', 'FINEST', 'FINER', 'FINE', 'CONFIG', 'INFO', 'WARNING', 'SEVERE', 'SHOUT', 'OFF'],
-  //       defaultsTo: 'OFF',
-  //       help:
-  //       'Set the log level.  This is a hidden optionl',
-  //       valueHelp: '-l ALL')
-  //   ..addOption(commandLineTempo,
-  //       abbr: 't',
-  //       help:
-  //       'tempo override in bpm, assuming quarter note is a beat',
-  //       valueHelp: 'bpmValue')
-  //   ..addOption(commandLineDynamic,
-  //       abbr: 'd',
-  //       allowed: ['ppp', 'pp', 'p', 'mp', 'mf', 'f', 'ff', 'fff'],
-  //       help:
-  //       'initial/default dynamic, using values like mf or f or ff, etc',
-  //       valueHelp: 'bpmValue')
-  //   ..addOption(commandLineTimeSig, // of questionable utillity
-  //       abbr: 's',
-  //       //defaultsTo: '4/4', // do this???  Maybe, don't wanna take time now to fine out
-  //       help:
-  //       'initial/default time signature, like 3/4 or 4/4 or 9/8, etc',
-  //       valueHelp: 'bpmValue')
-  //   ..addOption(commandLineMetronome, // of questionable utillity
-  //       abbr: 'm',
-  //       help:
-  //       'string indicating metronome tempo and number of bars.  This is an experiment',
-  //       valueHelp: 'nBars')
-  // // render buzzes without pulses, make them continuous, and therefore looped by the sound font
-  // // pipers might like that, but not snares, because we want to know how to play buzz strokes correctly.
-  // // This means need to have two different buzz numbers, and this flag will choose the correct one
-  //   ..addFlag(commandLineContinuousSustainedLoopedBuzzes,
-  //       negatable: false,
-  //       help:
-  //       'if you want looped rolls choose this so that when slowed down it will still sound like a continuous roll which is good for pipers, but not snares')
-  //   ..addFlag(help,
-  //       abbr: 'h',
-  //       negatable: false,
-  //       help:
-  //       'help by showing usage then exiting')
-  //   ..addOption(outMidiFilesPath,
-  //       abbr: 'o',
-  //       defaultsTo: timeStampedMidiOutCurDirName,
-  //       help:
-  //       'This is the output midi file name and path.  Defaults to "Tune<dateAndTime>.midi"',
-  //       valueHelp: 'midiOutPathName');
-  // try {
-  //   argResults = parser.parse(arguments);
-  // }
-  // catch (exception) {
-  //   print('Usage:\n${parser.usage}');
-  //   print('${exception}  Exiting...');
-  //   exitCode = 3; // "Process finished with exit code 3"
-  //   return;
-  // }
-  //
-  // if (argResults.arguments.isEmpty) {
-  //   print('No arguments provided.  Aborting ...');
-  //   print('Usage:\n${parser.usage}');
-  //   print(
-  //       'Example: <thisProg> -p Tunes/BadgeOfScotland.snl,Tunes/RowanTree.snl,Tunes/ScotlandTheBrave.snl --midi midifiles/BadgeSet.mid');
-  //   exitCode = 2; // does anything?
-  //   return;
-  // }
-  // if (argResults.rest.isNotEmpty) {
-  //   print('Ignoring command line arguments: -->${argResults.rest}<-- and aborting ...');
-  //   print('Usage:\n${parser.usage}');
-  //   print(
-  //       'Example: <thisProg> -p Tunes/BadgeOfScotland.snl,Tunes/RowanTree.snl,Tunes/ScotlandTheBrave.snl --midi midifiles/BadgeSet.mid');
-  //   exitCode = 2; // does anything?
-  //   return;
-  // }
-  //
-  // if (argResults[help]) {
-  //   print('Usage:\n${parser.usage}');
-  //   return;
-  // }
-  //
-  // if (argResults[commandLineLogLevel] != null) {
-  //   switch (argResults[commandLineLogLevel]) {
-  //     case 'ALL':
-  //       Logger.root.level = Level.ALL;
-  //       break;
-  //     case 'FINEST':
-  //       Logger.root.level = Level.FINEST;
-  //       break;
-  //     case 'FINER':
-  //       Logger.root.level = Level.FINER;
-  //       break;
-  //     case 'FINE':
-  //       Logger.root.level = Level.FINE;
-  //       break;
-  //     case 'CONFIG':
-  //       Logger.root.level = Level.CONFIG;
-  //       break;
-  //     case 'INFO':
-  //       Logger.root.level = Level.INFO;
-  //       break;
-  //     case 'WARNING':
-  //       Logger.root.level = Level.WARNING;
-  //       break;
-  //     case 'SEVERE':
-  //       Logger.root.level = Level.SEVERE;
-  //       break;
-  //     case 'SHOUT':
-  //       Logger.root.level = Level.SHOUT;
-  //       break;
-  //     case 'OFF':
-  //       Logger.root.level = Level.OFF;
-  //       break;
-  //     default:
-  //       Logger.root.level = Level.OFF;
-  //   }
-  // }
-  // if (argResults[commandLineTempo] != null) {
-  //   // overrideTempo = int.parse(argResults[commandLineTempo]);
-  //   // overrideTempo.bpm = int.parse(argResults[commandLineTempo]); // Should allow for note that gets beat, as in 8:3=104 rather than just 104
-  //   overrideTempo = parseTempo(argResults[commandLineTempo]); // expect either '104' (quarter note assumed) or '8:3=104'
-  // }
-  // if (argResults[commandLineMetronome] != null) {
-  //   nBarsMetronome = int.parse(argResults[commandLineMetronome]);
-  // }
-  // if (argResults[commandLineDynamic] != null) {
-  //   String dynamicString = argResults[commandLineDynamic];
-  //   overrideDynamic = stringToDynamic(dynamicString); // dislike global functions/methods
-  // }
-  // if (argResults[commandLineTimeSig] != null) {
-  //   String sig = argResults[commandLineTimeSig]; // expecting num/denom
-  //   List sigParts = sig.split('/');
-  //   overrideTimeSig = TimeSig();
-  //   overrideTimeSig.numerator = int.parse(sigParts[0]);
-  //   overrideTimeSig.denominator = int.parse(sigParts[1]);
-  // }
-  // // scan score elements for initial timesig numerator and denominator, if specified???????????????????
-  // overrideDynamic ??= defaultDynamic;
-  // overrideTempo ??= defaultTempo;
-  // overrideTimeSig ??= defaultTimeSig;
-
-  // Since allow for different args to do same thing, combine them.
-//  List<String> piecesOfMusic = [...argResults[inPiecesList], ...argResults[inFilesList]]; // can't change to var
-
-  // const inFilesList = 'input'; // fix later, this doesn't belong here, it's below
+  overrideTempo ??= defaultTempo; // scan score first?
+  overrideTimeSig ??= defaultTimeSig; // scan score first?
 
   //var piecesOfMusic = [...argResults[inFilesList]]; // can't change to var, why????
    List<String> piecesOfMusic = [...argResults[inFilesList]]; // can't change to var.  Why?
@@ -288,7 +116,7 @@ void main(List<String> arguments) {
 //Result testResult = timeSigParser.parse('/time 3/4');
 //print(testResult);
 
-  var result = Score.load(piecesOfMusic);
+  var result = Score.load(piecesOfMusic); // hey, this probably parsed at least one tempo and one timesig
   // Result result = Score.load(piecesOfMusic);
 
   if (result.isFailure) {
@@ -300,7 +128,8 @@ void main(List<String> arguments) {
     return;
   }
   Score score = result.value;
-
+  // At this point we have a list of elements that comprise the score, but haven't kept track of the first
+  // timesig or tempo if they were in there.
   // New
   var defaultFirstNoteProperties = Note();
   defaultFirstNoteProperties.duration.firstNumber = 4;
@@ -319,17 +148,44 @@ void main(List<String> arguments) {
 
   score.applyDynamics();
 
+  var firstTimeSigInScore = score.scanForFirstTimeSig();
+  var firstTempoInScore = score.scanForFirstTempo();
+  // One or the other or both those objects may be null, if not specified in the file.  But if either are specified, then we should use them to create the first
+  // track's time sig and/or tempo
+  if (firstTimeSigInScore != null) {
+    overrideTimeSig = firstTimeSigInScore;
+  }
+  if (firstTempoInScore != null) {
+    overrideTempo = firstTempoInScore;
+  }
+  // overrideTimeSig ??= firstTimeSigInScore;
+  // overrideTempo ??= firstTempoInScore;
+  // Watch out, this is pretty much duplicate code in another place, and it's probably wrong here, 'cause slightly different
+  // High chance this is faulty code in this area.
+  if (overrideTempo.noteDuration.firstNumber == null || overrideTempo.noteDuration.secondNumber == null) {
+    if (overrideTimeSig.denominator == 8 && overrideTimeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+      overrideTempo.noteDuration.firstNumber = 8;
+      overrideTempo.noteDuration.secondNumber = 3;
+    }
+    else {
+      overrideTempo.noteDuration.firstNumber ??= overrideTimeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+      overrideTempo.noteDuration.secondNumber ??= 1;
+    }
+  }
+
+
+
+
+
   // Create Midi header
   var midi = Midi(); // I guess "midi" is already defined elsewhere
   var midiHeader =  midi.createMidiHeader(); // 840 ticks per beat seems good
 
-  // Create Midi tracks.  This overrideTempo thing, and probably also TimeSig and Dynamic don't make sense.  These should probably be 'default' values
-  // next line should have overrideTempo be a Tempo, not an int.  STOP HERE FIGURE THIS OUT>
-  // This stuff is new.  Don't know if it's right.
+  // Create Midi tracks.
   overrideTimeSig ??= defaultTimeSig;
   overrideTempo ??= defaultTempo;
   overrideDynamic ??= defaultDynamic;
-  var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic);
+  var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
 
   // Now try a simple metronome track
   if (nBarsMetronome != null && nBarsMetronome > 0) { // cheap cheap cheap
@@ -356,11 +212,6 @@ void main(List<String> arguments) {
 
 
 
-
-
-
-
-
 // expect either '104' (quarter note assumed) or '8:3=104'
 Tempo parseTempo(String noteTempoString) {
   var tempo = Tempo();
@@ -383,39 +234,9 @@ Tempo parseTempo(String noteTempoString) {
   return tempo;
 }
 
-
-
-
-
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-// OKAY GOTTA REWORK THIS NEXT FUNCTION, BECAUSE I DON'T THINK PARAMS ARE GETTING VALUES SET FOR WHEN THIS FUNCTION RETURNS.  PASS IN NULL, SET IT TO SOMETHING, AND WHEN THIS FUNCTION RETURNS IT'S STILL NULL.
-
-
-
-// ArgParser createArgParser(List<String> arguments) {
-// Experimenting with arguments/params.  They can be modified.  Not marking them as const, which maybe should usually be done, they will be modified
-ArgResults createArgParser(List<String> arguments, Tempo overrideTempo, int nBarsMetronome, Dynamic overrideDynamic, TimeSig overrideTimeSig, Dynamic defaultDynamic, Tempo defaultTempo, TimeSig defaultTimeSig) {
-  // // These constants should perhaps be made global and listed only once
-  // const commandLineTempo = 'tempo'; // change to commandLineTempoIndexName
-  // const commandLineDynamic = 'dynamic';
-  // const commandLineTimeSig = 'time';
-  // const inFilesList = 'input';
-  // const outMidiFilesPath = 'midi';
-  // const commandLineLogLevel = 'loglevel';
-  // const help = 'help';
-  // const commandLineMetronome = 'met';
-  // const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes';
-
-
+// ArgResults createArgParser(List<String> arguments, Tempo overrideTempo, int nBarsMetronome, Dynamic overrideDynamic, TimeSig overrideTimeSig, Dynamic defaultDynamic, Tempo defaultTempo, TimeSig defaultTimeSig) {
+// ArgResults createArgParser(List<String> arguments, Dynamic defaultDynamic, Tempo defaultTempo, TimeSig defaultTimeSig) {
+ArgResults parseCommandLineArgs(List<String> arguments) {
   var now = DateTime.now();
   ArgResults argResults;
   // If no midi file given, but 1 input file given, name it same with .midi
@@ -465,6 +286,10 @@ ArgResults createArgParser(List<String> arguments, Tempo overrideTempo, int nBar
         negatable: false,
         help:
         'if you want looped rolls choose this so that when slowed down it will still sound like a continuous roll which is good for pipers, but not snares')
+    ..addFlag(commandLineUsePadSoundFont,
+        negatable: false,
+        help:
+        'if you want the midi file to be a practice pad sound, specify this flag')
     ..addFlag(help,
         abbr: 'h',
         negatable: false,
@@ -549,30 +374,5 @@ ArgResults createArgParser(List<String> arguments, Tempo overrideTempo, int nBar
         Logger.root.level = Level.OFF;
     }
   }
-  // if (argResults[commandLineTempo] != null) {
-  //   // overrideTempo = int.parse(argResults[commandLineTempo]);
-  //   // overrideTempo.bpm = int.parse(argResults[commandLineTempo]); // Should allow for note that gets beat, as in 8:3=104 rather than just 104
-  //   overrideTempo = parseTempo(argResults[commandLineTempo]); // expect either '104' (quarter note assumed) or '8:3=104'
-  // }
-  // if (argResults[commandLineMetronome] != null) {
-  //   nBarsMetronome = int.parse(argResults[commandLineMetronome]);
-  // }
-  // if (argResults[commandLineDynamic] != null) {
-  //   String dynamicString = argResults[commandLineDynamic];
-  //   overrideDynamic = stringToDynamic(dynamicString); // dislike global functions/methods.  Does this update the param??????????????
-  // }
-  // if (argResults[commandLineTimeSig] != null) {
-  //   String sig = argResults[commandLineTimeSig]; // expecting num/denom
-  //   List sigParts = sig.split('/');
-  //   overrideTimeSig = TimeSig();
-  //   overrideTimeSig.numerator = int.parse(sigParts[0]);
-  //   overrideTimeSig.denominator = int.parse(sigParts[1]);
-  // }
-  // // scan score elements for initial timesig numerator and denominator, if specified???????????????????
-  // overrideDynamic ??= defaultDynamic; // check check check check check.  And does this update the param coming in?
-  // overrideTempo ??= defaultTempo;
-  // overrideTimeSig ??= defaultTimeSig;
-
-  // return parser;
   return argResults;
 }

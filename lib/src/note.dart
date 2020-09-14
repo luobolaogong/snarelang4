@@ -42,6 +42,12 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   leftDrag,
   rightBuzz,
   leftBuzz,
+  leftTuzz,
+  rightTuzz,
+  leftRuff2,
+  rightRuff2,
+  leftRuff3,
+  rightRuff3,
   rest,
   previousNoteDurationOrType
 }
@@ -86,6 +92,24 @@ class Note {
         break;
       case NoteType.leftBuzz:
         noteType = NoteType.rightBuzz;
+        break;
+      case NoteType.rightTuzz:
+        noteType = NoteType.leftTuzz;
+        break;
+      case NoteType.leftTuzz:
+        noteType = NoteType.rightTuzz;
+        break;
+      case NoteType.rightRuff2:
+        noteType = NoteType.leftRuff2;
+        break;
+      case NoteType.leftRuff2:
+        noteType = NoteType.rightRuff2;
+        break;
+      case NoteType.rightRuff3:
+        noteType = NoteType.leftRuff3;
+        break;
+      case NoteType.leftRuff3:
+        noteType = NoteType.rightRuff3;
         break;
       case NoteType.previousNoteDurationOrType:
         log.info('Do what?????');
@@ -165,7 +189,7 @@ Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberPars
 ///
 /// TypeParser
 ///
-Parser typeParser = pattern('TtFfDdZzr.').trim().map((value) { // trim?
+Parser typeParser = pattern('TtFfDdZzXxYyVvr.').trim().map((value) { // trim?
   //log.info('\nIn TypeParser');
   NoteType noteType;
   switch (value) {
@@ -192,6 +216,24 @@ Parser typeParser = pattern('TtFfDdZzr.').trim().map((value) { // trim?
       break;
     case 'z':
       noteType = NoteType.leftBuzz;
+      break;
+    case 'X':
+      noteType = NoteType.rightTuzz;
+      break;
+    case 'x':
+      noteType = NoteType.leftTuzz;
+      break;
+    case 'Y':
+      noteType = NoteType.rightRuff2;
+      break;
+    case 'y':
+      noteType = NoteType.leftRuff2;
+      break;
+    case 'V':
+      noteType = NoteType.rightRuff3;
+      break;
+    case 'v':
+      noteType = NoteType.leftRuff3;
       break;
     case 'r':
       noteType = NoteType.rest;

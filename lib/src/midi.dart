@@ -3,7 +3,7 @@ import 'package:logging/logging.dart';
 
 import '../snarelang4.dart';
 
-
+bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sound font file has soft,med,loud recordings, and mapped offsets by 10
 ///
 /// The Dart midi library, which is basically a rewrite of a JavaScript library:
 /// https://pub.dev/documentation/dart_midi/latest/midi/midi-library.html
@@ -121,7 +121,21 @@ import '../snarelang4.dart';
 /// because 840 is 2^3 * 3 * 5 * 7  (whereas 960 is 2^6 * 3 * 5) and can therefore subdivide
 /// a quarter note into several subdivisions evenly.
 
-
+/// Different subject: sustained notes, such as rolls and tap rolls (tuzzes).
+/// If you record them faster, the pulse is faster and shorter, and you're squeezing in, pressuring in, rebounds.
+/// If you record them slower, the pulse is slower and longer, and you're trying to get more rebounds to happen and smooth it out.
+/// If you play back the midi at the tempo as recorded, it should sound fine, but if you change the tempo then what happens to the sustain?
+/// Does the faster midi tempo clip off the sustain, or does it compress all the rebounds into the shorter duration?
+/// I suspect it clips.
+/// This means that if you record roll pulses fast, but play the midi slow, it will sound buzz, buzz, buzz, buzz, rather than
+/// buzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz.
+/// And if you record it slow, and play it back fast, it clips the buzz before you get all the notes to play, and so I think the pulses stand out more, and rolls sound lazy.
+///
+/// You could record both ways and have the program substitute in the correct sound font recording based on the tempo of the music at that place,
+/// but the user changes the tempo, usually slowing it down.
+///
+/// So, it seems to me that when recording, slow it down to 75% of the performance tempo.  For example, if a march is to be played at 84, for practice
+/// purposes someone may want to slow it down to 54, so maybe record it at 64
 
 class Midi {
   static final ticksPerBeat = 10080; // put this elsewhere later
@@ -200,6 +214,27 @@ class Midi {
     //var adjustedBpmForFeedingIntoMidi = adjustTempoForNonQuarterBeats(tempo);
    // print('This next thing is totally new.  trying to adjust tempo when not in 4/4 time.');
     //tempo.bpm = adjustedBpmForFeedingIntoMidi;
+
+    // fix tempo here if can.  Do we have a valid timeSig here?  Maybe just default.  But if command line has tempo, then
+    // it may need to be fixed.
+    // Watch out, this is duplicate code in another place
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
+      if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+        tempo.noteDuration.firstNumber = 8;
+        tempo.noteDuration.secondNumber = 3;
+      }
+      else {
+        tempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+        tempo.noteDuration.secondNumber ??= 1;
+      }
+    }
+
+
+
+
+
+
     addTempoChangeToTrackEventsList(tempo, noteChannel, trackEventsList);
 
 
@@ -271,7 +306,24 @@ class Midi {
   /// Create a list of MidiEvent lists, one list per track.  First list is special.  After that it's just tracks.
   /// For now we have two tracks only.  Regarding the parameters bpm and timeSig and dynamic, these are really defaults if not specified in the score, right?  But we stick them into first track which is probably wrong
   // List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, int bpm, Dynamic dynamic) {
-  List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic) {
+  List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont) {
+    log.fine('In Midi.createMidiEventsTracksList()');
+    // Watch out, this is duplicate code in another place
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! This probably does nothing, because we're not monitoring for tempos or timesigs as parse through file or scan it previous to this point
+    if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
+      if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+        tempo.noteDuration.firstNumber = 8;
+        tempo.noteDuration.secondNumber = 3;
+      }
+      else {
+        tempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+        tempo.noteDuration.secondNumber ??= 1;
+      }
+    }
+
+
+
+
     // Construct a list to put lists of track events in.
     var listOfTrackEventsLists = <List<MidiEvent>>[];
     // Do special first track (why?)  Also, should pass in Tempo not bpm
@@ -292,14 +344,34 @@ class Midi {
 
     for (var element in elements) {
       if (element is Note) {
-        addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList);
+        addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
         continue;
       }
       if (element is Tempo) {
         // var adjustedBpmForFeedingIntoMidi = adjustTempoForNonQuarterBeats(tempo);
         // print('This next thing is totally new.  trying to adjust tempo when not in 4/4 time.');
         // element.bpm = adjustedBpmForFeedingIntoMidi;
-        addTempoChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
+        var tempo = element as Tempo;
+        // addTempoChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
+        // Fix tempos that didn't specify a note duration.  Usually should be 4:1 (for 2/4, 3/4, 4/4, 5/4, 6/4, 7/4, ...),
+        // but could be 2:1 (for 2/2, 3/2, 4/2, 5/2, ...), 8:1 (for 1/8, 2/8, 4/8, 5/8, 7/8, ...) unless 6/8, 9/8, 12/8 time, then it's 8:3.
+        // So, if tempo not specified, as in '/tempo 84' then look at time signature.
+        // Use its denominator as the tempo.noteDuration.firstNumber.
+        // But if denominator is 8 and numerator is multiple of 3, then set the tempo.noteDuration to be 8:3.
+        //
+        // WATCH OUT, DUPLICATE CODE
+        if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
+          if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+            tempo.noteDuration.firstNumber = 8;
+            tempo.noteDuration.secondNumber = 3;
+          }
+          else {
+            tempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+            tempo.noteDuration.secondNumber ??= 1;
+          }
+        }
+
+        addTempoChangeToTrackEventsList(tempo, noteChannel, snareTrackEventsList);
         continue;
       }
       if (element is TimeSig) { // what?  comment????
@@ -318,6 +390,7 @@ class Midi {
 
     // Add another test list to the list of lists, eventually perhaps a metronome track, or BD or tenors or pipes
     //listOfTrackEventsLists.add(metronomeTrackEventsList);
+    log.finer('Leaving Midi.createMidiEventsTracksList()');
 
     return listOfTrackEventsLists;
   }
@@ -333,12 +406,15 @@ class Midi {
     trackEventsList.add(timeSignatureEvent);
 
   }
+  // Prior to calling this, tempo should have a note duration in it
   void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
     var setTempoEvent = SetTempoEvent();
     setTempoEvent.type = 'setTempo';
+    // tempo.noteDuration.firstNumber ??= 4; // should probably be the timesig's bottom note value
+    // tempo.noteDuration.secondNumber ??= 1; // but if the timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
     // next line not correct is it?  tempo.bpm is based on a beat note, which needs to be consulted
     // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / tempo.bpm).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
-   var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4);
+   var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
    // var useThisTempo = tempo.bpm;
     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
     trackEventsList.add(setTempoEvent);
@@ -350,7 +426,7 @@ class Midi {
   /// a something like 1.333333, so it shouldn't be called a NameValue like "4:3" could be.
   /// Clean this up later.
   ///
-  double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList) {
+  double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
 
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
@@ -365,28 +441,55 @@ class Midi {
     switch (note.noteType) {
       case NoteType.rightTap:
         noteNumber = 60;
+        // noteNumber = 60;
         break;
       case NoteType.leftTap:
         noteNumber = 70;
+        // noteNumber = 70;
         break;
       case NoteType.rightFlam:
         noteNumber = 61;
+        // noteNumber = 61;
         break;
       case NoteType.leftFlam:
         noteNumber = 71;
+        // noteNumber = 71;
         break;
       case NoteType.rightDrag:
-        noteNumber = 62;
+        noteNumber = 72; // temp until find out soundfont problem
+        // noteNumber = 62;
+        // noteNumber = 62;
         break;
       case NoteType.leftDrag:
         noteNumber = 72;
+        // noteNumber = 72;
         break;
       case NoteType.rightBuzz:
-        noteNumber = 69;
+        noteNumber = 63;
+        // noteNumber = 69;
         break;
       case NoteType.leftBuzz:
-        noteNumber = 69;
+        noteNumber = 73;
+        // noteNumber = 69;
         break;
+      case NoteType.leftTuzz:
+        noteNumber = 74;
+        break;
+      case NoteType.rightTuzz:
+        noteNumber = 64;
+        break;
+      case NoteType.leftRuff2:
+      noteNumber = 75;
+      break;
+      case NoteType.rightRuff2:
+      noteNumber = 65;
+      break;
+      case NoteType.leftRuff3:
+      noteNumber = 76;
+      break;
+      case NoteType.rightRuff3:
+      noteNumber = 66;
+      break;
       case NoteType.rest:
         noteNumber = 99; // see if this helps stop blowups when writing
         break;
@@ -394,19 +497,26 @@ class Midi {
         log.fine('noteOnNoteOff, What the heck was that note? $note.type');
     }
 
-    //
-    // This is new, to take advantage of the 3 different volume levels in the recordings, which were separated by 10 note numbers.
-    //
-    if (note.velocity < 50) {
-      log.finer('Note velocity is ${note.velocity}, so switched to quiet recording.');
-      noteNumber -= 10;
+    // FIX THIS LATER WHEN SOUND FONT HAS SOFT/MED/LOUD RECORDINGS.
+    if (soundFontHasSoftMediumLoudRecordings) {
+      //
+      // This is new, to take advantage of the 3 different volume levels in the recordings, which were separated by 10 note numbers.
+      //
+      if (note.velocity < 50) {
+        log.finer('Note velocity is ${note.velocity}, so switched to quiet recording.');
+        noteNumber -= 10;
+      }
+      else if (note.velocity > 100) {
+        log.finer('Note velocity is ${note.velocity}, so switched to loud recording.');
+        noteNumber += 10;
+      }
+      else {
+        log.finer('Note velocity is ${note.velocity}, so did not switch recording.');
+      }
     }
-    else if (note.velocity > 100) {
-      log.finer('Note velocity is ${note.velocity}, so switched to loud recording.');
-      noteNumber += 10;
-    }
-    else {
-      log.finer('Note velocity is ${note.velocity}, so did not switch recording.');
+
+    if (usePadSoundFont) {
+      noteNumber -= 20;
     }
 
     var noteOnEvent = NoteOnEvent();

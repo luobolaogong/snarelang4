@@ -61,5 +61,5 @@ Parser tempoParser = ( // what about whitespace?
   }
   tempo.bpm = value[2];
   //log.info('Leaving tempoParser returning value $tempo');
-  return tempo;
+  return tempo; // This goes into the list of elements that make up a score, which we process one by one later.
 });

@@ -1,8 +1,8 @@
 // Battle of Waterloo
-
-// /time 6/8 // test later
-// /tempo 8:3=100 // fix later
+// next line could be a problem.  What are the defaults for note duration?
 /tempo 84
+//tempo 4=42
+
 
 // Roll-off
 /mf /< 24Z . . . . .    . . . . . .  /f 2T

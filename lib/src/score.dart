@@ -21,6 +21,8 @@ import 'package:logging/logging.dart';
 ///
 class Score {
   List elements = [];
+  TimeSig firstTimeSig;
+  Tempo firstTempo;
 
   String toString() {
     return 'Score: ${elements.toString()}'; // could do a forEach and collect each element into a string with \n between each
@@ -29,7 +31,7 @@ class Score {
   static Result load(List<String> scoresPaths) {
     var scoresBuffer = StringBuffer();
     for (var filePath in scoresPaths) {
-      log.fine('gunna process file $filePath');
+      log.fine('Parsing file $filePath');
       var inputFile = File(filePath);
       if (!inputFile.existsSync()) {
         log.warning('File does not exist at ${inputFile.path}');
@@ -42,19 +44,20 @@ class Score {
       scoresBuffer.write(fileContents);
     }
     //
-    // Parse the score's text elements, notes and other stuff
+    // Parse the score's text elements, notes and other stuff.  The intermediate parse results like Tempo and TimeSig
+    // are in the list that is result.value, and processed later.
     //
     var result = scoreParser.parse(scoresBuffer.toString());
     if (result.isSuccess) {
       Score score = result.value;
-      log.info('parse succeeded.  This many elements: ${score.elements.length}\n'); // wrong
+      log.finer('parse succeeded.  This many elements: ${score.elements.length}\n'); // wrong
       for (var element in score.elements) {
-        log.finer('\tAfter score raw parse, element list has this: $element');
+        log.finest('\tAfter score raw parse, element list has this: $element');
       }
       log.fine('Done with first pass -- loaded raw notes, no shorthands yet.\n');
     }
     else {
-      log.info('Score parse failed.  Parse message: ${result.message}');
+      log.finer('Score parse failed.  Parse message: ${result.message}');
     }
     return result;
   }
@@ -71,7 +74,7 @@ class Score {
     // bad logic.  Off by one stuff:
 //    var previousNote = defaultNote;
     //Tempo latestTempo;
-    log.finest('In applyShorthands');
+    log.fine('In applyShorthands');
     var previousNote = Note();
     previousNote.dynamic = defaultNote.dynamic; // unnec
     previousNote.velocity = defaultNote.velocity; // unnec
@@ -138,13 +141,13 @@ class Score {
 
       log.finest('bottom of loop Score.applyShorthands(), just updated previousNote to point to be this ${previousNote}.');
     }
-    log.finest('leaving Score.applyShorthands()\n');
+    log.finer('leaving Score.applyShorthands()\n');
     return;
   }
 
 
   void applyDynamics() {
-
+    log.fine('In Score.applyDynamics()');
     // First set note velocities based on their dynamic values only.
     for (var element in elements) {
       if (!(element is Note)) {
@@ -266,7 +269,7 @@ class Score {
       }
     }
 
-    log.info('Adjusting note velocities by articulation...');
+    log.fine('Adjusting note velocities by articulation...');
 
     // Adjust note velocity based on articulation and type, and clamp.
     for (var element in elements) {
@@ -296,10 +299,19 @@ class Score {
           break;
         case NoteType.leftDrag:
         case NoteType.rightDrag:
-          note.velocity += 10;
+          //note.velocity += 10; // commented out because of a video I saw which says it softens the note
           break;
         case NoteType.leftBuzz:
         case NoteType.rightBuzz:
+          break;
+        case NoteType.leftTuzz:
+        case NoteType.rightTuzz:
+          break;
+        case NoteType.leftRuff2:
+        case NoteType.rightRuff2:
+          break;
+        case NoteType.leftRuff3:
+        case NoteType.rightRuff3:
           break;
         case NoteType.rest:
           break;
@@ -309,9 +321,9 @@ class Score {
 
       log.finest('adjusted velocity is ${note.velocity}');
       if (note.velocity > 127 || note.velocity < 0) {    // hmmmm did I screw this up by doing the cast with "as" to Note?  Lost velocity value????
-        log.finer('Will clamp velocity because it is ${note.velocity}');
+        log.finest('Will clamp velocity because it is ${note.velocity}');
         note.velocity = note.velocity.clamp(0, 127);
-        log.fine('clamped velocity is ${note.velocity}');
+        log.finest('clamped velocity is ${note.velocity}');
       }
     }
 
@@ -325,6 +337,36 @@ class Score {
 //    }
 //    return;
 //  }
+
+  // These two are new.  We want to know the first tempo and time signature that is specified in the score.
+  // There may not be either value, but if there is we want to set them for the midi file header, I think.
+  // Not sure it's required though for the header.  Check on that.  Also, don't need to return it if it's
+  // also available as part of the Score object.
+  //
+  TimeSig scanForFirstTimeSig() {
+    for (var element in elements) {
+      if (!(element is TimeSig)) {
+        continue;
+      }
+      firstTimeSig = element;
+      return firstTimeSig;
+    }
+    return null;
+  }
+
+  Tempo scanForFirstTempo() {
+    for (var element in elements) {
+      if (!(element is Tempo)) {
+        continue;
+      }
+      firstTempo = element;
+      return firstTempo;
+    }
+    return null;
+  }
+
+
+
 }
 
 ///
@@ -333,7 +375,7 @@ class Score {
 //Parser scoreParser = ((tempoParser | dynamicParser | timeSigParser | noteParser).plus()).trim().end().map((values) {    // trim()?
 // Parser scoreParser = ((timeSigParser | tempoParser | dynamicParser | rampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
 Parser scoreParser = ((commentParser | timeSigParser | tempoParser | dynamicParser | rampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-  log.finest('In Scoreparser, will now add values from parse result list to score.elements');
+  log.finer('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {
     for (var value in values) {

@@ -1,92 +1,98 @@
 // Banjo Breakdown
 /time 6/8
-/tempo 8:3=104
+//tempo 8:3=104
+/tempo 124
+/mf
 8:3T . . .
 
+// 1st line
 8F 8t . 4f 16Z .
 4T 8 12Z . . 8t
-8T . 8D  >12t z .  8t    // that's a tap roll, may want to slide it to ">30t 20z ."
-16T . . . >8t  >8t . .  // Why is that first 8th note not as loud as the one after it? Bec left hand is stronger
+//8T . 8D  >12t z .  8t    // that's a tap roll, may want to slide it to ">30t 20z ."
+8T . 8D  /< 12x z .  8t /f /mf    // that's a tap roll, may want to slide it to ">30t 20z ."
+/< 16T . . . >8t /f /mf  >8t . .  // Why is that first 8th note not as loud as the one after it? Bec left hand is stronger
 
 8F 8t . 4f 16Z .
 4T 8 12Z . . 8t
-8T . . >12t z . 8T
-8t . . >12T z . 8t
+8T . . /< 12x z . 8T /f /mf
+8t . . /< 12X z . 8t /f /mf
+
+
 
 // 2nd line
 8T . . 4f 16Z .
 4T 8 12Z . . 8t
-8T . 8D  >12t z .  8t
-16T . . . >8t  >8t . .
+8T . 8D  /< 12X z . /f 8t /mf
+/< 16T . . . >8t /f /mf  >8t . .
 
 >8T 16t 16t >8t  . . .   // changed hand order on 2nd accent because left is louder
-12Z . . 8t  >12T z . 8t
+12Z . . 8t  /< 12X z . /f 8t /mf
 8t . 8F 8t . .
 8:3F  8:3r
 
 // 3rd line
-12Z . . 8t . . .
+/< 12Z . . /f 8t /mf . . .
 4F 16Z . 4T 8t
-8T . 8D >12t z . 8t
-16T . . . >8t >8t . .
+8T . 8D /< 12X z . 8t /f /mf
+/< 16T . . . >8t /f /mf >8t . .
 
-12Z . . 8t . . .
+/< 12Z . . 8t /f /mf . . .
 4f 16Z . 4T 8t
-8T . . >12t 12Z . 8T
-8t . . >12T 12z . 8t
+8T . . /< 12X 12z . 8T /f /mf
+8t . . /< 12X 12z . 8t /f /mf
 
 // 4th line
->12T 12z . 8t . . .
+/< 12X 12z . 8t /f /mf . . .
 4f 12Z . 4T 8t
-8T . 8D >12t 12Z . 8T
-16T . . . >8t >8t . .
+8T . 8D /< 12X z . 8t /f /mf
+/< 16T . . . >8t /f /mf >8t . .
 
 >8t 16t 16t >8t . . .   // changed hand order on 2nd accent
-12Z . . 8t  >12T z . 8t
+12Z . . 8t  /< 12X z . 8t /f /mf
 8T . 8F 8t . 8f
-8:3F 16Z . . . . .
+8:3F /< 16Z . . . . .
 
 // 5th line
-8T . . 4f 8f
-8T . 8D >12T 12z . 8t
+8T /f /mf . . 4f 8f
+8T . 8D /< 12X z . 8t /f /mf
 8T . . 4f 8D
-16t . . . >8t >8T . .
+/< 16T . . . >8t /f /mf >8T . .
 
 8F 8t . 4f 8f
-8T . 8D >12t 12z . 8t
->12T 12z . 8t . . .
-8t . . >12T 12z . 8t
+8T . 8D /< 12X z . 8t /f /mf
+>12X 12z . 8t . . .
+8t . . /< 12X z . 8t /f /mf
 
 // 6th line
 8T . . 4f 8f
-8T . 8D 12T 12z . 8t
+8T . 8D /< 12X z . 8t /f /mf
 8T . . 4f 8D
-16t . . . >8T >8t . .
+/< 16T . . . >8t /f /mf >8t . .
 
 >8t 16t 16t >8T . . .
-12Z . . 8t  >12T z . 8t
+12Z . . 8t  /< 12X z . 8t /f /mf
 8T . 8F 8t . .
-16Z . . . . . 8T . 8D
+/< 16Z . . . . . 8T /f /mf . 8D
 
 // 7th line
->12T 12z . 8t . . 8D
+/< 12X 12z . 8t /f /mf . . 8D
 16T . . . >8T . . .
 4F 8f 8r 4F
 16f 16T 8t >8T . . .
 
->12 12z . 8t . . 8D
+/< 12X 12z . 8t /f /mf . . 8D
 16T . . . >8T . . .
 8:3F 8:3r
 4:3r
 
 // 8th line
->12T 12z . 8t . . 8D
-16T . . . >8T . . .
+/< 12X 12z . 8t /f /mf . . 8D
+/< 16T . . . >8t /f /mf . . .
 4F . .
 16f 16T 8t >8T . . .
 
 >8T 16t 16t >8T . . .
-12Z . . 8t >12T 12z . 8t
+12Z . . 8t /< 12X z . 8t /f /mf
 8T . 8F 8t . 8f
 8:3F  8:3r
 
