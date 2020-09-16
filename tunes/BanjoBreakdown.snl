@@ -1,7 +1,7 @@
 // Banjo Breakdown
 /time 6/8
 //tempo 8:3=104
-/tempo 124
+/tempo 104
 /mf
 8:3T . . .
 
@@ -12,16 +12,26 @@
 8T . 8D  /< 12x z .  8t /f /mf    // that's a tap roll, may want to slide it to ">30t 20z ."
 /< 16T . . . >8t /f /mf  >8t . .  // Why is that first 8th note not as loud as the one after it? Bec left hand is stronger
 
+/tempo 52
+
 8F 8t . 4f 16Z .
 4T 8 12Z . . 8t
+
+/tempo 62
 8T . . /< 12x z . 8T /f /mf
+/tempo 72
 8t . . /< 12X z . 8t /f /mf
+/tempo 82
 
 
 
 // 2nd line
 8T . . 4f 16Z .
+/tempo 92
+
 4T 8 12Z . . 8t
+/tempo 104
+
 8T . 8D  /< 12X z . /f 8t /mf
 /< 16T . . . >8t /f /mf  >8t . .
 
