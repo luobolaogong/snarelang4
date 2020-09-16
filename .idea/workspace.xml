@@ -19,8 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Minor changes.  Flag to change to a drum pad sound font.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Might start working on accelerandos and deaccels.  Check in first.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/snarelang4_example.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/snarelang4_example.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/dynamic.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/dynamic.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/snarelang4_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/snarelang4_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tunes/BanjoBreakdown.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BanjoBreakdown.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +111,7 @@
       <workItem from="1599717413047" duration="2184000" />
       <workItem from="1599982588522" duration="5553000" />
       <workItem from="1600019611885" duration="25656000" />
-      <workItem from="1600295808526" duration="341000" />
+      <workItem from="1600295808526" duration="2938000" />
     </task>
     <task id="LOCAL-00001" summary="End of day.  Reorganized and working on static dynamics.">
       <created>1598082786459</created>
@@ -191,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600069996861</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Might start working on accelerandos and deaccels.  Check in first.">
+      <created>1600296180811</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600296180811</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +235,8 @@
     <MESSAGE value="End of day.  Not much change.  Seems can adjust to 6/8 time with dotted quarter as met beat." />
     <MESSAGE value="Broke out some of the command line processing." />
     <MESSAGE value="Minor changes.  Flag to change to a drum pad sound font." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes.  Flag to change to a drum pad sound font." />
+    <MESSAGE value="Might start working on accelerandos and deaccels.  Check in first." />
+    <option name="LAST_COMMIT_MESSAGE" value="Might start working on accelerandos and deaccels.  Check in first." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1442" y="1031" width="2083" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600069625474">
@@ -253,34 +267,34 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2394" y="768" width="401" height="577" key="Github.UntrackedFilesDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1598049414726" />
-    <state width="2827" height="940" key="GridCell.Tab.0.bottom" timestamp="1600070030217">
+    <state width="2827" height="890" key="GridCell.Tab.0.bottom" timestamp="1600299402184">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2827" height="940" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1600070030217" />
-    <state width="2827" height="940" key="GridCell.Tab.0.center" timestamp="1600070030217">
+    <state width="2827" height="890" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1600299402184" />
+    <state width="2827" height="890" key="GridCell.Tab.0.center" timestamp="1600299402184">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2827" height="940" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1600070030217" />
-    <state width="2827" height="940" key="GridCell.Tab.0.left" timestamp="1600070030217">
+    <state width="2827" height="890" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1600299402184" />
+    <state width="2827" height="890" key="GridCell.Tab.0.left" timestamp="1600299402184">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2827" height="940" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1600070030217" />
-    <state width="2827" height="940" key="GridCell.Tab.0.right" timestamp="1600070030217">
+    <state width="2827" height="890" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1600299402184" />
+    <state width="2827" height="890" key="GridCell.Tab.0.right" timestamp="1600299402184">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2827" height="940" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1600070030217" />
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1600070008021">
+    <state width="2827" height="890" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1600299402184" />
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1600297675087">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1600070008021" />
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1600297675087" />
     <state width="1140" height="1014" key="XDebugger.FullValuePopup" timestamp="1598495962053">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="1140" height="1014" key="XDebugger.FullValuePopup/0.0.3840.2120@0.0.3840.2120" timestamp="1598495962053" />
-    <state x="1451" y="808" width="1442" height="560" key="find.popup" timestamp="1600043289207">
+    <state x="1451" y="808" width="1442" height="560" key="find.popup" timestamp="1600299380006">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1451" y="808" width="1442" height="560" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1600043289207" />
+    <state x="1451" y="808" width="1442" height="560" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1600299380006" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

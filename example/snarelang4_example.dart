@@ -141,8 +141,8 @@
 //   // 1.  Parse the score text, creating a List of raw score elements; no note dynamics, velocities, or ticks.
 //   // 2.  Apply shorthands so that each note has full note property values including dynamic, and no "." notes,
 //   //     and notes should have no velocities or ticks.  (or maybe they do have dynamics)
-//   // 3.  Scan the elements list for ramp markers,
-//   // 4.  Go through the elements and set velocities based on dynamics and ramps
+//   // 3.  Scan the elements list for dynamicsRamp markers,
+//   // 4.  Go through the elements and set velocities based on dynamics and dynamicsRamps
 // //Result testResult = timeSigParser.parse('/time 3/4');
 // //print(testResult);
 //

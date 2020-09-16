@@ -5,20 +5,20 @@ final log = Logger('Dynamic');
 
 ///
 /// New 8/24/23.  Changing Dynamic so that it's only the dynamic names, and not
-/// hairpin cressc, decresc, and dim.  Those will be termed 'ramps'.
+/// hairpin cressc, decresc, and dim.  Those will be termed 'dynamicsRamps'.
 ///
 /// Dynamic markings in the text version, such as f, and fff apply to the notes
-/// following it.  Likewise, Ramp marks apply to notes following it and apply to
+/// following it.  Likewise, DynamicsRamp marks apply to notes following it and apply to
 /// all notes prior to the next Dynamic mark.
 ///
-/// The code does not account for errors, such as hitting another ramp marker
+/// The code does not account for errors, such as hitting another dynamicsRamp marker
 /// before hitting another dynamic marker, or hitting the end of the score.
 /// I suppose if two hairpins were next to each other, like <> or >< then
 /// you could perhaps guess what the missing dynamic would be, but for now will
-/// just ignore all ramps until hit the next Dynamic marker.  If there isn't
-/// one, then the Ramp marker doesn't get its full value, and we should ignore
-/// it when determining velocities.  So, just ignore Ramps that don't have a slope.
-class Ramp {
+/// just ignore all dynamicsRamps until hit the next Dynamic marker.  If there isn't
+/// one, then the DynamicsRamp marker doesn't get its full value, and we should ignore
+/// it when determining velocities.  So, just ignore DynamicsRamps that don't have a slope.
+class DynamicsRamp {
   Dynamic startDynamic; // perhaps should store as velocity?
   Dynamic endDynamic;
   int startVelocity;
@@ -29,7 +29,7 @@ class Ramp {
   num slope;
 
   String toString() {
-    return 'Ramp: startDynamic: $startDynamic, endDynamic: $endDynamic, startVelocity: $startVelocity, endVelocity: $endVelocity, totalTicksStartToEnd: $totalTicksStartToEnd, Slope: $slope';
+    return 'DynamicsRamp: startDynamic: $startDynamic, endDynamic: $endDynamic, startVelocity: $startVelocity, endVelocity: $endVelocity, totalTicksStartToEnd: $totalTicksStartToEnd, Slope: $slope';
   }
 }
 
@@ -45,7 +45,7 @@ enum Dynamic {
 //  dim,
 //  decresc,
 //  cresc,
-//  ramp
+//  dynamicsRamp
 }
 
 // Are these velocity numbers from 0 to 127?  Assume so.
@@ -156,28 +156,28 @@ Dynamic stringToDynamic(dynamicString) {
 // something's wrong here.  Looks strange.
 // Also, put in own file?  Maybe, although it's a kind of dynamic marking.
 // But still, it's kinda a pseudo element.
-Parser rampParser = (
+Parser dynamicsRampParser = (
     string('/>') |
     string('/<') |
     string('/dim') |
     string('/decresc') |
     string('/cresc')
 ).trim().map((value) {
-  log.finest('In RampParser');
-  Ramp ramp;
+  log.finest('In dynamicsRampParser');
+  DynamicsRamp dynamicsRamp;
   switch (value) {
     case '/>':
     case '/<':
     case '/cresc':
     case '/dim':
     case '/decresc':
-      ramp =  Ramp();
+      dynamicsRamp =  DynamicsRamp();
       break;
   }
-  log.finest('Leaving RampParser returning value $ramp');
-  return ramp;
+  log.finest('Leaving dynamicsRampParser returning value $dynamicsRamp');
+  return dynamicsRamp;
 });
-//Parser rampParser = (
+//Parser dynamicsRampParser = (
 //    string('\\>') |
 //    string('\\<') |
 //    string('\\dim') |
@@ -185,24 +185,24 @@ Parser rampParser = (
 //    string('\\cresc')
 //).trim().map((value) {
 //  log.fine('In RampParser');
-//  Ramp ramp;
+//  Ramp dynamicsRamp;
 //  switch (value) {
 //    case '\\>':
 //    case '\\<':
 //    case '\\cresc':
 //    case '\\dim':
 //    case '\\decresc':
-//      ramp =  Ramp();
+//      dynamicsRamp =  Ramp();
 //      break;
 //  }
-//  log.fine('Leaving RampParser returning value $ramp');
-//  return ramp;
+//  log.fine('Leaving RampParser returning value $dynamicsRamp');
+//  return dynamicsRamp;
 //});
 
 /////
 ///// DynamicOrRampParser
 /////
-//Parser dynamicOrRampParser = (dynamicParser | rampParser).trim().map((value){
+//Parser dynamicOrRampParser = (dynamicParser | dynamicsRampParser).trim().map((value){
 //
 //});
 

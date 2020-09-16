@@ -335,7 +335,7 @@ class Midi {
 
 
     // Start a new list of events, most will be notes, but not all.
-    // Set event velocities for notes from elements (including ramps).
+    // Set event velocities for notes from elements (including dynamicsRamps).
     // Process any tempo elements.
 
     var snareTrackEventsList = <MidiEvent>[];
