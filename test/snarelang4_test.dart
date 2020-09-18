@@ -50,23 +50,23 @@ void main() {
       });
       test('Dynamics test >', () {
         Result result = scoreParser.parse('/>');
-        expect(result.value.elements.elementAt(0), DynamicsRamp);
+        expect(result.value.elements.elementAt(0), DynamicRamp);
       });
       test('Dynamics test <', () {
         Result result = scoreParser.parse('/<');
-        expect(result.value.elements.elementAt(0), DynamicsRamp);
+        expect(result.value.elements.elementAt(0), DynamicRamp);
       });
       test('Dynamics test cresc', () {
         Result result = scoreParser.parse('/cresc');
-        expect(result.value.elements.elementAt(0), DynamicsRamp);
+        expect(result.value.elements.elementAt(0), DynamicRamp);
       });
       test('Dynamics test dim', () {
         Result result = scoreParser.parse('/dim');
-        expect(result.value.elements.elementAt(0), DynamicsRamp);
+        expect(result.value.elements.elementAt(0), DynamicRamp);
       });
       test('Dynamics test decresc', () {
         Result result = scoreParser.parse('/decresc');
-        expect(result.value.elements.elementAt(0), DynamicsRamp);
+        expect(result.value.elements.elementAt(0), DynamicRamp);
       });
       test('Set of score elements', () {
         Result result = scoreParser.parse('/time 2/4 /tempo 4=99 /mf 16 T >8 . . . /ff _Z 24f ^6d /dim . . . /p F . . /tempo 8:2=88 ');

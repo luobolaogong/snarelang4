@@ -5,31 +5,29 @@ final log = Logger('Dynamic');
 
 ///
 /// New 8/24/23.  Changing Dynamic so that it's only the dynamic names, and not
-/// hairpin cressc, decresc, and dim.  Those will be termed 'dynamicsRamps'.
+/// hairpin cressc, decresc, and dim.  Those will be termed 'dynamicRamps'.
 ///
 /// Dynamic markings in the text version, such as f, and fff apply to the notes
-/// following it.  Likewise, DynamicsRamp marks apply to notes following it and apply to
+/// following it.  Likewise, DynamicRamp marks apply to notes following it and apply to
 /// all notes prior to the next Dynamic mark.
 ///
-/// The code does not account for errors, such as hitting another dynamicsRamp marker
+/// The code does not account for errors, such as hitting another dynamicRamp marker
 /// before hitting another dynamic marker, or hitting the end of the score.
 /// I suppose if two hairpins were next to each other, like <> or >< then
 /// you could perhaps guess what the missing dynamic would be, but for now will
-/// just ignore all dynamicsRamps until hit the next Dynamic marker.  If there isn't
-/// one, then the DynamicsRamp marker doesn't get its full value, and we should ignore
-/// it when determining velocities.  So, just ignore DynamicsRamps that don't have a slope.
-class DynamicsRamp {
+/// just ignore all dynamicRamps until hit the next Dynamic marker.  If there isn't
+/// one, then the DynamicRamp marker doesn't get its full value, and we should ignore
+/// it when determining velocities.  So, just ignore DynamicRamps that don't have a slope.
+class DynamicRamp {
   Dynamic startDynamic; // perhaps should store as velocity?
   Dynamic endDynamic;
   int startVelocity;
   int endVelocity;
   int totalTicksStartToEnd;
-//  Duration totalDuration; // not ticks, I guess
-  //num durationInTicks; // ?????????????????????
   num slope;
 
   String toString() {
-    return 'DynamicsRamp: startDynamic: $startDynamic, endDynamic: $endDynamic, startVelocity: $startVelocity, endVelocity: $endVelocity, totalTicksStartToEnd: $totalTicksStartToEnd, Slope: $slope';
+    return 'DynamicRamp: startDynamic: $startDynamic, endDynamic: $endDynamic, startVelocity: $startVelocity, endVelocity: $endVelocity, totalTicksStartToEnd: $totalTicksStartToEnd, Slope: $slope';
   }
 }
 
@@ -45,7 +43,7 @@ enum Dynamic {
 //  dim,
 //  decresc,
 //  cresc,
-//  dynamicsRamp
+//  dynamicRamp
 }
 
 // Are these velocity numbers from 0 to 127?  Assume so.
@@ -156,28 +154,28 @@ Dynamic stringToDynamic(dynamicString) {
 // something's wrong here.  Looks strange.
 // Also, put in own file?  Maybe, although it's a kind of dynamic marking.
 // But still, it's kinda a pseudo element.
-Parser dynamicsRampParser = (
+Parser dynamicRampParser = (
     string('/>') |
     string('/<') |
     string('/dim') |
     string('/decresc') |
     string('/cresc')
 ).trim().map((value) {
-  log.finest('In dynamicsRampParser');
-  DynamicsRamp dynamicsRamp;
+  log.finest('In dynamicRampParser');
+  DynamicRamp dynamicRamp;
   switch (value) {
     case '/>':
     case '/<':
     case '/cresc':
     case '/dim':
     case '/decresc':
-      dynamicsRamp =  DynamicsRamp();
+      dynamicRamp =  DynamicRamp();
       break;
   }
-  log.finest('Leaving dynamicsRampParser returning value $dynamicsRamp');
-  return dynamicsRamp;
+  log.finest('Leaving dynamicRampParser returning value $dynamicRamp');
+  return dynamicRamp;
 });
-//Parser dynamicsRampParser = (
+//Parser dynamicRampParser = (
 //    string('\\>') |
 //    string('\\<') |
 //    string('\\dim') |
@@ -185,24 +183,24 @@ Parser dynamicsRampParser = (
 //    string('\\cresc')
 //).trim().map((value) {
 //  log.fine('In RampParser');
-//  Ramp dynamicsRamp;
+//  Ramp dynamicRamp;
 //  switch (value) {
 //    case '\\>':
 //    case '\\<':
 //    case '\\cresc':
 //    case '\\dim':
 //    case '\\decresc':
-//      dynamicsRamp =  Ramp();
+//      dynamicRamp =  Ramp();
 //      break;
 //  }
-//  log.fine('Leaving RampParser returning value $dynamicsRamp');
-//  return dynamicsRamp;
+//  log.fine('Leaving RampParser returning value $dynamicRamp');
+//  return dynamicRamp;
 //});
 
 /////
 ///// DynamicOrRampParser
 /////
-//Parser dynamicOrRampParser = (dynamicParser | dynamicsRampParser).trim().map((value){
+//Parser dynamicOrRampParser = (dynamicParser | dynamicRampParser).trim().map((value){
 //
 //});
 

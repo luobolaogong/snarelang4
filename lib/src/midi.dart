@@ -209,14 +209,8 @@ class Midi {
 //     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / adjustedBpmForFeedingIntoMidi).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
 //     trackEventsList.add(setTempoEvent);
 
-    var noteChannel = 0;
+    var noteChannel = 0; // Is this essentially a "tempo track", or a "control track"?
 
-    //var adjustedBpmForFeedingIntoMidi = adjustTempoForNonQuarterBeats(tempo);
-   // print('This next thing is totally new.  trying to adjust tempo when not in 4/4 time.');
-    //tempo.bpm = adjustedBpmForFeedingIntoMidi;
-
-    // fix tempo here if can.  Do we have a valid timeSig here?  Maybe just default.  But if command line has tempo, then
-    // it may need to be fixed.
     // Watch out, this is duplicate code in another place
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
@@ -236,6 +230,9 @@ class Midi {
 
 
     addTempoChangeToTrackEventsList(tempo, noteChannel, trackEventsList);
+
+    // HMMMMMMMM, could the rest of this track0 be used to do tempo ramping where needed?  Seems complicated.
+    // Maybe I shouldn't take the time to work on this.
 
 
 //print('prob shoulda adjusted bpm so that it matches a quarter note, of "beat" is always a quarter to midi.  Otherwise gotta calc');
@@ -335,7 +332,7 @@ class Midi {
 
 
     // Start a new list of events, most will be notes, but not all.
-    // Set event velocities for notes from elements (including dynamicsRamps).
+    // Set event velocities for notes from elements (including dynamicRamps).
     // Process any tempo elements.
 
     var snareTrackEventsList = <MidiEvent>[];
@@ -410,12 +407,7 @@ class Midi {
   void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
     var setTempoEvent = SetTempoEvent();
     setTempoEvent.type = 'setTempo';
-    // tempo.noteDuration.firstNumber ??= 4; // should probably be the timesig's bottom note value
-    // tempo.noteDuration.secondNumber ??= 1; // but if the timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-    // next line not correct is it?  tempo.bpm is based on a beat note, which needs to be consulted
-    // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / tempo.bpm).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
    var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
-   // var useThisTempo = tempo.bpm;
     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
     trackEventsList.add(setTempoEvent);
   }

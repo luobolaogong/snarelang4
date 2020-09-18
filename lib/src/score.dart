@@ -16,7 +16,7 @@ import 'package:logging/logging.dart';
 ///
 /// That list can be handed over to a Midi processor to be used to create
 /// a list of midi events.  At some time in that process note velocities
-/// will get applied, which are a product of the absolute and dynamicsRampd dynamics
+/// will get applied, which are a product of the absolute and dynamicRampd dynamics
 /// and note type.
 ///
 class Score {
@@ -86,16 +86,20 @@ class Score {
       //log.finest('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
 //      if (element is Dynamic) { // new
       if (element is Dynamic) { // new
-        log.finest('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a dynamicsRamp, I am marking previousNote s dynamic to be same, and skipping');
+        log.finest('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a dynamicRamp, I am marking previousNote s dynamic to be same, and skipping');
         previousNote.dynamic = element;
         continue;
       }
-      if (element is DynamicsRamp) {
-        log.finest('Score.applyShorthands(), and element is a DynamicsRamp so skipping it.');
+      if (element is DynamicRamp) {
+        log.finest('Score.applyShorthands(), and element is a DynamicRamp so skipping it.');
         continue;
       }
       if (element is Tempo) {
         log.finer('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
+        continue;
+      }
+      if (element is TempoRamp) {
+        log.finest('Score.applyShorthands(), and element is a TempoRamp so skipping it.');
         continue;
       }
       if (element is TimeSig) {
@@ -160,110 +164,110 @@ class Score {
       element.velocity = dynamicToVelocity(element.dynamic);
     }
 
-    // 3.  Scan the elements list for dynamicsRamp markers, and set their properties
+    // 3.  Scan the elements list for dynamicRamp markers, and set their properties
     print('');
-    log.finest('Score.applyDynamics(), Starting search for dynamicsRamps and setting their values.  THIS MAY BE WRONG NOW THAT I''M APPLYING DYNAMICS DURING SHORTHAND PHASE');
-    DynamicsRamp currentDynamicsRamp;
+    log.finest('Score.applyDynamics(), Starting search for dynamicRamps and setting their values.  THIS MAY BE WRONG NOW THAT I''M APPLYING DYNAMICS DURING SHORTHAND PHASE');
+    DynamicRamp currentDynamicRamp;
     Dynamic mostRecentDynamic;
     num accumulatedDurationAsFraction = 0;
-    //double currentDynamicsRampDurationInTicks;
-    var inDynamicsRamp = false;
+    //double currentDynamicRampDurationInTicks;
+    var inDynamicRamp = false;
     for (var element in elements) {
 
       if (element is Note) {
         mostRecentDynamic = element.dynamic; // I know, hack,
-        if (inDynamicsRamp) {
+        if (inDynamicRamp) {
           accumulatedDurationAsFraction += element.duration.secondNumber / element.duration.firstNumber;
-          log.finest('Score.applyDynamics(), Doing dynamicsRamps... This note is inside a dynamicsRamp.  accumulated duration: $accumulatedDurationAsFraction');
+          log.finest('Score.applyDynamics(), Doing dynamicRamps... This note is inside a dynamicRamp.  accumulated duration: $accumulatedDurationAsFraction');
         }
         else {
-          log.finest('Score.applyDynamics(), Doing dynamicsRamps... This note is NOT inside a dynamicsRamp, so is ignored in this phase of setting dynamicsRamp values.');
+          log.finest('Score.applyDynamics(), Doing dynamicRamps... This note is NOT inside a dynamicRamp, so is ignored in this phase of setting dynamicRamp values.');
         }
         continue;
       }
 
-      if (element is DynamicsRamp) {
-        currentDynamicsRamp = element;
-        currentDynamicsRamp.startDynamic = mostRecentDynamic;
-        currentDynamicsRamp.startVelocity = dynamicToVelocity(mostRecentDynamic);
-        inDynamicsRamp = true;
-        log.finest('Score.applyDynamics(), Doing dynamicsRamps while looping only for dynamicsRamps... found dynamicsRamp marker and starting a dynamicsRamp.');
+      if (element is DynamicRamp) {
+        currentDynamicRamp = element;
+        currentDynamicRamp.startDynamic = mostRecentDynamic;
+        currentDynamicRamp.startVelocity = dynamicToVelocity(mostRecentDynamic);
+        inDynamicRamp = true;
+        log.finest('Score.applyDynamics(), Doing dynamicRamps while looping only for dynamicRamps... found dynamicRamp marker and starting a dynamicRamp.');
         continue;
       }
 
       if (element is Dynamic) {
-        if (inDynamicsRamp) {
-          currentDynamicsRamp.endDynamic = element;
-          currentDynamicsRamp.endVelocity = dynamicToVelocity(element);
+        if (inDynamicRamp) {
+          currentDynamicRamp.endDynamic = element;
+          currentDynamicRamp.endVelocity = dynamicToVelocity(element);
           var accumulatedTicks = (Midi.ticksPerBeat * accumulatedDurationAsFraction).round();
-          currentDynamicsRamp.totalTicksStartToEnd = accumulatedTicks;
-          currentDynamicsRamp.slope = (currentDynamicsRamp.endVelocity - currentDynamicsRamp.startVelocity) / accumulatedTicks;    // rise / run
-          log.finest('Score.applyDynamics(), Doing dynamicsDynamicsRamps... hit a Dynamic ($element) and currently in dynamicsRamp, so ending dynamicsRamp.  dynamicsRamp slope: ${currentDynamicsRamp.slope}, accumulatedTicks: $accumulatedTicks, accumulatedDurationAsFraction: $accumulatedDurationAsFraction');
+          currentDynamicRamp.totalTicksStartToEnd = accumulatedTicks;
+          currentDynamicRamp.slope = (currentDynamicRamp.endVelocity - currentDynamicRamp.startVelocity) / accumulatedTicks;    // rise / run
+          log.finest('Score.applyDynamics(), Doing dynamicsDynamicRamps... hit a Dynamic ($element) and currently in dynamicRamp, so ending dynamicRamp.  dynamicRamp slope: ${currentDynamicRamp.slope}, accumulatedTicks: $accumulatedTicks, accumulatedDurationAsFraction: $accumulatedDurationAsFraction');
           accumulatedDurationAsFraction = 0;
 
-          currentDynamicsRamp = null; // good idea?
-          inDynamicsRamp = false;
+          currentDynamicRamp = null; // good idea?
+          inDynamicRamp = false;
         }
         else {
-          log.finest('Score.applyDynamics(), Doing dynamicsRamps... hit a Dynamic but not in currently in dynamicsRamp.');
+          log.finest('Score.applyDynamics(), Doing dynamicRamps... hit a Dynamic but not in currently in dynamicRamp.');
         }
-        mostRecentDynamic = element; // yeah, we can have a dynamic mark followed immediately by a dynamicsRamp, and so the previous note will not have the new dynamic
+        mostRecentDynamic = element; // yeah, we can have a dynamic mark followed immediately by a dynamicRamp, and so the previous note will not have the new dynamic
         continue;
       }
-      log.finest('Score.applyDynamics(), Doing dynamicsRamps... found other kine element: ${element.runtimeType} and ignoring.');
+      log.finest('Score.applyDynamics(), Doing dynamicRamps... found other kine element: ${element.runtimeType} and ignoring.');
     }
-    log.finest('Score.applyDynamics(), Done finding and setting dynamicsRamp values for entire score.\n');
+    log.finest('Score.applyDynamics(), Done finding and setting dynamicRamp values for entire score.\n');
 
 
-    log.finest('Score.applyDynamics(), starting to adjust dynamicsRamped notes...');
-    // Adjust dynamicsRamp note velocities based solely on their dynamicsRamp and position in dynamicsRamp, not articulations or type.
+    log.finest('Score.applyDynamics(), starting to adjust dynamicRamped notes...');
+    // Adjust dynamicRamp note velocities based solely on their dynamicRamp and position in dynamicRamp, not articulations or type.
     // Each note already has a velocity.
-    inDynamicsRamp = false;
-    var isFirstNoteInDynamicsRamp = true;
+    inDynamicRamp = false;
+    var isFirstNoteInDynamicRamp = true;
     Note previousNote;
-    num cumulativeDurationSinceDynamicsRampStartNote = 0;
+    num cumulativeDurationSinceDynamicRampStartNote = 0;
     for (var element in elements) {
-      if (element is DynamicsRamp) {
-        log.finest('\telement is a DynamicsRamp, so setting inDynamicsRamp to true, and setting currentDynamicsRamp to point to it.');
-        inDynamicsRamp = true;
-        currentDynamicsRamp = element;
-        isFirstNoteInDynamicsRamp = true;
-        cumulativeDurationSinceDynamicsRampStartNote = 0; // new
+      if (element is DynamicRamp) {
+        log.finest('\telement is a DynamicRamp, so setting inDynamicRamp to true, and setting currentDynamicRamp to point to it.');
+        inDynamicRamp = true;
+        currentDynamicRamp = element;
+        isFirstNoteInDynamicRamp = true;
+        cumulativeDurationSinceDynamicRampStartNote = 0; // new
         continue;
       }
       if (element is Dynamic) {
-        log.finest('\telement is a Dynamic, so resetting dynamicsRamp related stuff.');
-        inDynamicsRamp = false;
-        currentDynamicsRamp = null;
-        isFirstNoteInDynamicsRamp = true;
-        cumulativeDurationSinceDynamicsRampStartNote = 0; // new
+        log.finest('\telement is a Dynamic, so resetting dynamicRamp related stuff.');
+        inDynamicRamp = false;
+        currentDynamicRamp = null;
+        isFirstNoteInDynamicRamp = true;
+        cumulativeDurationSinceDynamicRampStartNote = 0; // new
         continue;
       }
       if (element is Note) {
         log.finest('\telement is a Note...');
         var note = element as Note;
-        // If a note is not in a dynamicsRamp, skip it
-        if (!inDynamicsRamp) {
-          log.finest('\t\tNote element is not in dynamicsRamp, so skipping it.  But it has velocity ${note.velocity}');
+        // If a note is not in a dynamicRamp, skip it
+        if (!inDynamicRamp) {
+          log.finest('\t\tNote element is not in dynamicRamp, so skipping it.  But it has velocity ${note.velocity}');
           continue;
         }
-        // We have a note in a dynamicsRamp, and will now adjust its velocity solely by it's DynamicsRamp slope and starting time in the dynamicsRamp.
-        if (isFirstNoteInDynamicsRamp) {
-          log.finest('\t\tGot first note in dynamicsRamp.  Will not adjust velocity, which is ${note.velocity}');
+        // We have a note in a dynamicRamp, and will now adjust its velocity solely by it's DynamicRamp slope and starting time in the dynamicRamp.
+        if (isFirstNoteInDynamicRamp) {
+          log.finest('\t\tGot first note in dynamicRamp.  Will not adjust velocity, which is ${note.velocity}');
           previousNote = note;
-          isFirstNoteInDynamicsRamp = false;
+          isFirstNoteInDynamicRamp = false;
         }
         else {
-          // Get note's current time position in the dynamicsRamp.
-          log.finest('\t\tGot subsequent note in a dynamicsRamp, so will calculate time position relative to first note by doing accumulation.');
-          cumulativeDurationSinceDynamicsRampStartNote += (previousNote.duration.secondNumber / previousNote.duration.firstNumber);
-          log.finest('\t\t\tcumulativeDurationSinceRampStartNote: $cumulativeDurationSinceDynamicsRampStartNote');
-          var cumulativeTicksSinceDynamicsRampStartNote = beatFractionToTicks(cumulativeDurationSinceDynamicsRampStartNote);
-          log.finest('\t\t\tcumulativeTicksSinceDynamicsRampStartNote: $cumulativeTicksSinceDynamicsRampStartNote and dynamicsDynamicsRamp slope is ${currentDynamicsRamp.slope}');
-          log.finest('\t\t\tUsing slope and position in dynamicsRamp, wanna add this much to the velocity: ${currentDynamicsRamp.slope * cumulativeTicksSinceDynamicsRampStartNote}');
-          note.velocity += (currentDynamicsRamp.slope * cumulativeTicksSinceDynamicsRampStartNote).round();
+          // Get note's current time position in the dynamicRamp.
+          log.finest('\t\tGot subsequent note in a dynamicRamp, so will calculate time position relative to first note by doing accumulation.');
+          cumulativeDurationSinceDynamicRampStartNote += (previousNote.duration.secondNumber / previousNote.duration.firstNumber);
+          log.finest('\t\t\tcumulativeDurationSinceRampStartNote: $cumulativeDurationSinceDynamicRampStartNote');
+          var cumulativeTicksSinceDynamicRampStartNote = beatFractionToTicks(cumulativeDurationSinceDynamicRampStartNote);
+          log.finest('\t\t\tcumulativeTicksSinceDynamicRampStartNote: $cumulativeTicksSinceDynamicRampStartNote and dynamicsDynamicRamp slope is ${currentDynamicRamp.slope}');
+          log.finest('\t\t\tUsing slope and position in dynamicRamp, wanna add this much to the velocity: ${currentDynamicRamp.slope * cumulativeTicksSinceDynamicRampStartNote}');
+          note.velocity += (currentDynamicRamp.slope * cumulativeTicksSinceDynamicRampStartNote).round();
           log.finest('\t\t\tSo now this element has velocity ${note.velocity}');
-          isFirstNoteInDynamicsRamp = false;
+          isFirstNoteInDynamicRamp = false;
           previousNote = note; // new
         }
       }
@@ -373,8 +377,8 @@ class Score {
 /// ScoreParser
 ///
 //Parser scoreParser = ((tempoParser | dynamicParser | timeSigParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-// Parser scoreParser = ((timeSigParser | tempoParser | dynamicParser | dynamicsRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-Parser scoreParser = ((commentParser | timeSigParser | tempoParser | dynamicParser | dynamicsRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+// Parser scoreParser = ((timeSigParser | tempoParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+Parser scoreParser = ((commentParser | timeSigParser | tempoParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
   log.finer('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {
