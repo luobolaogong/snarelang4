@@ -154,133 +154,28 @@ class Midi {
   MidiHeader createMidiHeader() {
     // Construct a header with values for name, and whatever else
     // var midiHeaderOut = MidiHeader(ticksPerBeat: Midi.ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
-    print('hey watch that numTracks thing in header.');
-    var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
-//    var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
+    print('hey watch that numTracks thing in header (default 2), and also format (default 1).');
+    // var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:3); // puts this in header with prop "ppq"  What would 2 do?
+    // Format of 1 seems the only value that works.  See midi spec somewhere about this.
+    // numTracks doesn't seem to matter???
+    var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format:1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
     return midiHeaderOut;
   }
 
-  // List<MidiEvent> doSpecialFirstTrack(TimeSig timeSig, int bpm) {    // bpm is insufficient.  Should pass in Tempo
-  List<MidiEvent> doSpecialFirstTrack(TimeSig timeSig, Tempo tempo) {    // bpm is insufficient.  Should pass in Tempo
-    // Construct a list to put track events in.
-    var trackEventsList = <MidiEvent>[];
 
-    // Start the special first track.  Not sure this is how it has to be, but it's
-    // how other midi files have done it.
-
-    // Add a track name
-    var trackNameEvent = TrackNameEvent();
-    trackNameEvent.text = 'Snare'; // strangely puts this in the header, under the prop "name"
-    trackNameEvent.deltaTime = 0;
-    trackEventsList.add(trackNameEvent);
-
-    // Add file creation meta data, like the program that created the midi file.
-    var textEvent = TextEvent();
-    textEvent.type = 'text';
-    textEvent.text = 'creator:';
-    trackEventsList.add(textEvent);
-    textEvent = TextEvent();
-    textEvent.type = 'text';
-    textEvent.text = 'SnareLang';
-    trackEventsList.add(textEvent);
-
-    // Add a time signature event for this track, though this can happen anywhere, right?
-    // But I guess they need to have this before any notes.
-    var timeSignatureEvent = TimeSignatureEvent();
-    timeSignatureEvent.type = 'timeSignature';
-    timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects tempo????
-    timeSignatureEvent.denominator = timeSig.denominator;
-    timeSignatureEvent.metronome = 18; // for module synchronization
-    timeSignatureEvent.thirtyseconds = 8; // What used for?  Is this num 32nd's in a quarter, or in a beat?????????????????????????????????????????????????????
-    trackEventsList.add(timeSignatureEvent);
-
-    // Add a tempo event.  Again, can't this happen anywhere?
-    // But I guess they need to have this before any notes.
-    // Should pull these lines of code into separate method, because other tracks may want to do same.
-    //addTempoChangeToTrackEventsList(new Tempo(), 42, trackEventsList);
-//     var setTempoEvent = SetTempoEvent();
-//     setTempoEvent.type = 'setTempo';
-//     print('Do we need to modify the bpm field if the duration field is not 4:1?  I think it does need to be modified for MIDI writing.  Maybe here.');
-//     //num realBpm = adjustTempoForNonQuarterBeats(tempo);
-// //    tempo.bpm = (tempo.bpm * 8 / 3 / 4).round();
-//     var adjustedBpmForFeedingIntoMidi = adjustTempoForNonQuarterBeats(tempo);
-//     print('Bpm is {$tempo.bpm}, adjusted bpm: $adjustedBpmForFeedingIntoMidi');
-//     // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / tempo.bpm).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
-//     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / adjustedBpmForFeedingIntoMidi).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
-//     trackEventsList.add(setTempoEvent);
-
-    var noteChannel = 0; // Is this essentially a "tempo track", or a "control track"?
-
-    // Watch out, this is duplicate code in another place
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
-      if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-        tempo.noteDuration.firstNumber = 8;
-        tempo.noteDuration.secondNumber = 3;
-      }
-      else {
-        tempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-        tempo.noteDuration.secondNumber ??= 1;
-      }
-    }
-
-
-
-
-
-
-    addTempoChangeToTrackEventsList(tempo, noteChannel, trackEventsList);
-
-    // HMMMMMMMM, could the rest of this track0 be used to do tempo ramping where needed?  Seems complicated.
-    // Maybe I shouldn't take the time to work on this.
-
-
-//print('prob shoulda adjusted bpm so that it matches a quarter note, of "beat" is always a quarter to midi.  Otherwise gotta calc');
-    return trackEventsList;
-  }
-
-  // To set the tempo in midi you calculate microsecondsPerBeat, which I think means microsecondPerQuarter this is the formula:
-  // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / tempo.bpm)
-  // I think that MIDI wants to know the number of microseconds per quarter note, not per beat.  Not sure.
-  //
-  // So, if 4/4 time, and there are 60 quarters in a minute, then microsecondPerBeat is 60M/60 == 1M
-  // If 2/4 time and there are 30 halfs in a minute, then mspb is 60M/30 == 2M
-  // If 6/8 time and there are 60 dotted quarters per min, then msbp is also 1M, but maybe it should be (3/2)M so that a quarter note will get the right number of microseconds.  Don't know.
-  //
-  // Do this later, in order to handle 6/8, 9/8, and whatever else, like 7/8, etc.
-  // int adjustTempoForNonQuarterBeats(Tempo tempo) {
-  //   print('tempo was given as $tempo');
-  //   if (tempo.noteDuration != null) {
-  //     var firstNumber = tempo.noteDuration.firstNumber;
-  //     var secondNumber = tempo.noteDuration.secondNumber;
-  //     print('Should adjust if not based on quarter, probably.  And special case 6/8, 9/8, 3/8, 12/8, 3n/8 are probably based on dotted quarter beat.  7/8, 5/8 10/8 etc probably based on eighth notes');
-  //     print('And what about based on half note?');
-  //     if (firstNumber != 4 && secondNumber != 4) {
-  //       // In 4/4, if q=60 then bpm = 60
-  //       // In 2/4, if q=60 then bpm = 60, and midi
-  //       // In 2/2, if half note == 60, then bpm is bpm is 60, I think.  But the midi number is different
-  //       var returnThisNewBpm = (2 * tempo.bpm / (firstNumber / secondNumber)).round(); // wild guess. prob wrong.  Check other places
-  //       return returnThisNewBpm; // coerces?
-  //     }
-  //
-  //   }
-  //   else {
-  //     return tempo.bpm;
-  //   }
-  // }
 
   List<MidiEvent> createMidiEventsMetronomeTrack(int nBarsMetronome, Tempo tempo, Note note) {
-    var channel = 0;
+    var channel = 1; // ??????????????????????????  What's a channel?
     // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
     var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber); // is this right???????
 
     var metronomeTrackEventsList = <MidiEvent>[];
-    var totalNotes = nBarsMetronome * 4;
+    var totalNotes = nBarsMetronome * 4; // wrong, assumes 4/4, not 6/8
     for (var metBeatCtr = 0; metBeatCtr < totalNotes; metBeatCtr++) {
       var noteOnEvent = NoteOnEvent();
       noteOnEvent.type = 'noteOn';
       noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???
-      noteOnEvent.noteNumber = 80;
+      noteOnEvent.noteNumber = 60; // wrong, right is a right tap.  Let's have something special
       noteOnEvent.velocity = note.velocity;
       noteOnEvent.channel = channel;
       metronomeTrackEventsList.add(noteOnEvent);
@@ -288,8 +183,9 @@ class Midi {
       var noteOffEvent = NoteOffEvent();
       noteOffEvent.type = 'noteOff';
       noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
-      noteOffEvent.noteNumber = 80;
-      noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
+      noteOffEvent.noteNumber = 60;
+      // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
+      noteOffEvent.velocity = 0; // shouldn't this just be 0?
       noteOffEvent.channel = channel;
 
       metronomeTrackEventsList.add(noteOffEvent);
@@ -298,13 +194,14 @@ class Midi {
     return metronomeTrackEventsList;
   }
 
+  // DOUBT WE NEED ALL THESE PARAMS
+  List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont) {
+    log.fine('In Midi.createTrackZeroMidiEventsList()');
+    //
+    // Do TrackZero
+    //
+    var trackZeroEventsList = <MidiEvent>[];
 
-
-  /// Create a list of MidiEvent lists, one list per track.  First list is special.  After that it's just tracks.
-  /// For now we have two tracks only.  Regarding the parameters bpm and timeSig and dynamic, these are really defaults if not specified in the score, right?  But we stick them into first track which is probably wrong
-  // List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, int bpm, Dynamic dynamic) {
-  List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont) {
-    log.fine('In Midi.createMidiEventsTracksList()');
     // Watch out, this is duplicate code in another place
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! This probably does nothing, because we're not monitoring for tempos or timesigs as parse through file or scan it previous to this point
     if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
@@ -319,37 +216,91 @@ class Midi {
     }
 
 
+    // Add a track name
+    var trackNameEvent = TrackNameEvent();
+    trackNameEvent.text = 'Snare'; // strangely puts this in the header, under the prop "name"
+    trackNameEvent.deltaTime = 0;
+    trackZeroEventsList.add(trackNameEvent);
+
+    // Add file creation meta data, like the program that created the midi file.
+    var textEvent = TextEvent();
+    textEvent.type = 'text';
+    textEvent.text = 'creator:';
+    trackZeroEventsList.add(textEvent);
+    textEvent = TextEvent();
+    textEvent.type = 'text';
+    textEvent.text = 'SnareLang';
+    trackZeroEventsList.add(textEvent);
+
+    // Add a time signature event for this track, though this can happen anywhere, right?
+    // But I guess they need to have this before any notes.
+    var timeSignatureEvent = TimeSignatureEvent();
+    timeSignatureEvent.type = 'timeSignature';
+    timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects tempo????
+    timeSignatureEvent.denominator = timeSig.denominator;
+    timeSignatureEvent.metronome = 18; // for module synchronization
+    timeSignatureEvent.thirtyseconds = 8; // What used for?  Is this num 32nd's in a quarter, or in a beat?????????????????????????????????????????????????????
+    trackZeroEventsList.add(timeSignatureEvent);
+
+    //var noteChannel = 0; // Is this essentially a "tempo track", or a "control track"?
+
+    // Watch out, this is duplicate code in another place
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
+      if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+        tempo.noteDuration.firstNumber = 8;
+        tempo.noteDuration.secondNumber = 3;
+      }
+      else {
+        tempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+        tempo.noteDuration.secondNumber ??= 1;
+      }
+    }
+
+    // addTempoChangeToTrackEventsList(tempo, noteChannel, trackZeroEventsList);
+    addTempoChangeToTrackEventsList(tempo, trackZeroEventsList); // a bit strange.  Have to convert tempo to midi.  Can't just add tempo to track without converting
 
 
-    // Construct a list to put lists of track events in.
-    var listOfTrackEventsLists = <List<MidiEvent>>[];
-    // Do special first track (why?)  Also, should pass in Tempo not bpm
-    // Fix this later so can avoid doing a special first track, if possible:
-    var specialTrackEventsList = doSpecialFirstTrack(timeSig, tempo); // do we really need this?  Maybe so if score doesn't do tempo or timeSig
-    listOfTrackEventsLists.add(specialTrackEventsList);
+    // Put metronome here?
+
+    // Do tempo ramps here?
+
+
+
+
+
+
+
+    //listOfTrackEventsLists.add(trackZeroEventList); // Can we add to this track 0 later, to add metronome or tempo ramps?
     // var trackEventsList = doSpecialFirstTrack(timeSig, tempo); // do we really need this?  Maybe so if score doesn't do tempo or timeSig
     // listOfTrackEventsLists.add(trackEventsList);
+    return trackZeroEventsList;
+  }
 
+  /// Create a list of MidiEvent lists, one list per track.  First list is for the special TrackZero
+  /// which is timesig and tempo, but maybe will be used for tempo mapping if we do tempo ramps.
+  /// After that tracks for snare, metronome, pad tenors? bass? pipes?
+  /// But since we've only got one list of elements, and these are currently for snare, this method should
+  /// be changed to "createSnareTrackList", given the snare score
+  // List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, int bpm, Dynamic dynamic) {
+  List<MidiEvent> createSnareMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont) {
+    log.fine('In Midi.createMidiEventsTracksList()');
 
-    // Start a new list of events, most will be notes, but not all.
-    // Set event velocities for notes from elements (including dynamicRamps).
-    // Process any tempo elements.
-
+    //
+    // Do Snare track
+    //
     var snareTrackEventsList = <MidiEvent>[];
 
-    var noteChannel = 0;
+    //var noteChannel = 0; // what for?
 
     for (var element in elements) {
       if (element is Note) {
-        addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
+        // addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
+        addNoteOnOffToTrackEventsList(element, snareTrackEventsList, usePadSoundFont); // return value unused
         continue;
       }
       if (element is Tempo) {
-        // var adjustedBpmForFeedingIntoMidi = adjustTempoForNonQuarterBeats(tempo);
-        // print('This next thing is totally new.  trying to adjust tempo when not in 4/4 time.');
-        // element.bpm = adjustedBpmForFeedingIntoMidi;
         var tempo = element as Tempo;
-        // addTempoChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
         // Fix tempos that didn't specify a note duration.  Usually should be 4:1 (for 2/4, 3/4, 4/4, 5/4, 6/4, 7/4, ...),
         // but could be 2:1 (for 2/2, 3/2, 4/2, 5/2, ...), 8:1 (for 1/8, 2/8, 4/8, 5/8, 7/8, ...) unless 6/8, 9/8, 12/8 time, then it's 8:3.
         // So, if tempo not specified, as in '/tempo 84' then look at time signature.
@@ -368,32 +319,27 @@ class Midi {
           }
         }
 
-        addTempoChangeToTrackEventsList(tempo, noteChannel, snareTrackEventsList);
+        // addTempoChangeToTrackEventsList(tempo, noteChannel, snareTrackEventsList);
+        addTempoChangeToTrackEventsList(tempo, snareTrackEventsList);
         continue;
       }
       if (element is TimeSig) { // what?  comment????
-        addTimeSigChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
+        // addTimeSigChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
+        addTimeSigChangeToTrackEventsList(element, snareTrackEventsList);
         continue;
       }
       log.finer('have something else not putting into the track: ${element.runtimeType}, $element');
-    }
+    } // end of list of events to add to snare track
 
     if (snareTrackEventsList.isEmpty) {
       log.warning('What?  no events for track?');
     }
-
-    // Add this second list to the list of lists
-    listOfTrackEventsLists.add(snareTrackEventsList);
-
-    // Add another test list to the list of lists, eventually perhaps a metronome track, or BD or tenors or pipes
-    //listOfTrackEventsLists.add(metronomeTrackEventsList);
-    log.finer('Leaving Midi.createMidiEventsTracksList()');
-
-    return listOfTrackEventsLists;
+    return snareTrackEventsList;
   }
 
 
-  void addTimeSigChangeToTrackEventsList(TimeSig timeSig, int channel, List<MidiEvent> trackEventsList) {
+  // void addTimeSigChangeToTrackEventsList(TimeSig timeSig, int channel, List<MidiEvent> trackEventsList) {
+  void addTimeSigChangeToTrackEventsList(TimeSig timeSig, List<MidiEvent> trackEventsList) {
     var timeSignatureEvent = TimeSignatureEvent();
     timeSignatureEvent.type = 'timeSignature';
     timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects sound or tempo????
@@ -401,24 +347,29 @@ class Midi {
     timeSignatureEvent.metronome = 18; // for module synchronization
     timeSignatureEvent.thirtyseconds = 8; // Perhaps for notation purposes
     trackEventsList.add(timeSignatureEvent);
-
   }
+
   // Prior to calling this, tempo should have a note duration in it
-  void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
+  // void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
+  /// trackEventsList could be track zero or other
+  void addTempoChangeToTrackEventsList(Tempo tempo, List<MidiEvent> trackEventsList) {
     var setTempoEvent = SetTempoEvent();
     setTempoEvent.type = 'setTempo';
-   var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
+    var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+    log.fine('Adding tempo change event to some track events list, possibly track zero, but any track events list');
     trackEventsList.add(setTempoEvent);
   }
-    ///
+
+  ///
   /// Create and add a NoteOnEvent and a NoteOffEvent to the list of events for a track,
   /// The caller of this method has access to the Note which holds the nameValue and type, etc.
   /// May want to watch out for cumulative rounding errors.  "snareLangNoteNameValue" can be
   /// a something like 1.333333, so it shouldn't be called a NameValue like "4:3" could be.
   /// Clean this up later.
   ///
-  double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
+  // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
+  double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
 
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
@@ -516,16 +467,19 @@ class Midi {
     noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???
     noteOnEvent.noteNumber = noteNumber;
     noteOnEvent.velocity = note.velocity;
-    noteOnEvent.channel = channel;
+    // noteOnEvent.channel = channel;
+    noteOnEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
     trackEventsList.add(noteOnEvent);
 
     var noteOffEvent = NoteOffEvent();
     noteOffEvent.type = 'noteOff';
     noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
     noteOffEvent.noteNumber = noteNumber;
-    noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
-    noteOffEvent.channel = channel;
-    
+    // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
+    noteOffEvent.velocity = 0; // shouldn't this just be 0?
+    // noteOffEvent.channel = channel;
+    noteOffEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
+
     trackEventsList.add(noteOffEvent);
 
     // By rounding, what fraction of a tick are we adding or subtracting to the set of notes?

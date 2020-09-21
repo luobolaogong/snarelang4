@@ -1,6 +1,22 @@
 import 'package:petitparser/petitparser.dart'; // defines Result
 import '../snarelang4.dart';
 ///
+/// Placing tempo events into a MIDI file is important, but to do accel's and rit's
+/// are not important for pipe band music, and therefore is less important than other
+/// development tasks.  Still, if it was easy, I'd do it.
+///
+/// The way to do tempo ramps is probably to use track 0 and put the incremental tempo
+/// changes into the score spaced out by rests.
+///
+/// I assume that a tempo event in any track will affect all other tracks.  I doubt you
+/// can have two different tracks running at two different tempos.  So, normally I'd
+/// put the tempo change into the score along with the notes, but doing ramped incremental
+/// tempo changes would mess up the notes, and therefore would need to be in a different
+/// track.  This kinda means that you have to create a "map" of tempos, and then go back
+/// and update track 0.
+///
+///
+///
 /// LilyPond uses '\tempo <note> = <bpm>'
 /// e.g.  \tempo 4 = 132
 /// Midi requires tempo to be in microseconds per beat (60000000.0 / bpm)
@@ -70,10 +86,17 @@ import '../snarelang4.dart';
 //
 // From the MIDI fanatic's technical brainwashing center:
 //
-// In a format 0 file, the tempo changes are scattered throughout the one MTrk. In format 1, the very first MTrk should consist of only the tempo (and time signature) events so that it could be read by some device capable of generating a "tempo map". It is best not to place MIDI events in this MTrk. In format 2, each MTrk should begin with at least one initial tempo (and time signature) event.
+// In a format 0 file, the tempo changes are scattered throughout the one MTrk.
+// In format 1, the very first MTrk should consist of only the tempo (and time signature)
+// events so that it could be read by some device capable of generating a "tempo map".
+// It is best not to place MIDI events in this MTrk.
+// In format 2, each MTrk should begin with at least one initial tempo (and time signature) event.
 //
-// That said, some sequencers do break this rule and put actual MIDI events in the first track alongside timing info, since the standard isn't so specific in this regard. Your program should deal with both cases, since it is likely to encounter MIDI files in the wild which are formatted in this way.
-///
+// That said, some sequencers do break this rule and put actual MIDI events in the first track
+// alongside timing info, since the standard isn't so specific in this regard.
+// Your program should deal with both cases, since it is likely to encounter MIDI files
+// in the wild which are formatted in this way.
+/// So it seems to me that I can put timing ramps in track 0
 class TempoRamp {
   Tempo startTempo; // perhaps should store as velocity?
   Tempo endTempo;

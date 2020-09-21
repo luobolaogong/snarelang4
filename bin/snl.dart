@@ -32,7 +32,7 @@ const help = 'help';
 const commandLineMetronome = 'met';
 const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes';
 const commandLineUsePadSoundFont = 'pad';
-
+// This is way too long.  Fix.
 void main(List<String> arguments) {
   print('Staring snl ...');
   var usePadSoundFont = false;
@@ -94,7 +94,7 @@ void main(List<String> arguments) {
     print('Hmmmm, got this flag for looping buzzes');
     loopBuzzes = true; // where does this get tied in?
   }
-  var something = argResults[commandLineUsePadSoundFont];
+  //var something = argResults[commandLineUsePadSoundFont];
   if (argResults[commandLineUsePadSoundFont]) {
     print('Want to use pad, eh?');
     usePadSoundFont = true;
@@ -180,24 +180,35 @@ void main(List<String> arguments) {
 
   // Create Midi header
   var midi = Midi(); // I guess "midi" is already defined elsewhere
+  // var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
+
   var midiHeader =  midi.createMidiHeader(); // 840 ticks per beat seems good
 
   // Create Midi tracks.
+  var midiTracks = <List<MidiEvent>>[];
+  
   overrideTimeSig ??= defaultTimeSig;
   overrideTempo ??= defaultTempo;
   overrideDynamic ??= defaultDynamic;
-  var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
 
-  // Now try a simple metronome track
+  var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
+  midiTracks.add(trackZeroEventList); // Can we add to this track 0 later, to add metronome or tempo ramps?
+
+  // Now try a simple metronome experiment
   if (nBarsMetronome != null && nBarsMetronome > 0) { // cheap cheap cheap
     var metronomeNote = Note();
     metronomeNote.duration = NoteDuration(); // this is silly
-    metronomeNote.duration.firstNumber = 4;
-    metronomeNote.duration.secondNumber = 1;
-    metronomeNote.velocity = 127;
+    metronomeNote.duration.firstNumber = overrideTempo.noteDuration.firstNumber; // totally wrong
+    metronomeNote.duration.secondNumber = overrideTempo.noteDuration.secondNumber;
+    metronomeNote.velocity = 104;
     var metronomeTrack = midi.createMidiEventsMetronomeTrack(nBarsMetronome, overrideTempo, metronomeNote);
-    midiTracks.add(metronomeTrack);
+    midiTracks.add(metronomeTrack); // Oh, add a new track to the midi
   }
+
+  // var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
+  var snareMidiEventsList = midi.createSnareMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
+  midiTracks.add(snareMidiEventsList);
+
 
 
   // Add the header and tracks list into a MidiFile, and write it

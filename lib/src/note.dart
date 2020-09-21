@@ -58,7 +58,7 @@ class Note {
   NoteType noteType = NoteType.rightTap;  // correct here?
   int velocity; // Perhaps this will go into MidiNote or something, new
   Dynamic dynamic; // gets a value during first pass through the score list
-
+  //int midiNoteNumber; // experiment 9/20/2020  This would be the midi soundfont number, related to NoteType
   Note() {
     duration = NoteDuration();
   }
