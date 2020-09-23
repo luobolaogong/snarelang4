@@ -283,7 +283,7 @@ class Midi {
   /// But since we've only got one list of elements, and these are currently for snare, this method should
   /// be changed to "createSnareTrackList", given the snare score
   // List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, int bpm, Dynamic dynamic) {
-  List<MidiEvent> createSnareMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont) {
+  List<MidiEvent> createSnareMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes) {
     log.fine('In Midi.createMidiEventsTracksList()');
 
     //
@@ -292,11 +292,15 @@ class Midi {
     var snareTrackEventsList = <MidiEvent>[];
 
     //var noteChannel = 0; // what for?
+    var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
 
     for (var element in elements) {
+      if (element is Voice) {
+        currentVoice = element; // ????
+      }
       if (element is Note) {
         // addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
-        addNoteOnOffToTrackEventsList(element, snareTrackEventsList, usePadSoundFont); // return value unused
+        addNoteOnOffToTrackEventsList(element, snareTrackEventsList, usePadSoundFont, loopBuzzes, currentVoice); // return value unused
         continue;
       }
       if (element is Tempo) {
@@ -357,7 +361,7 @@ class Midi {
     setTempoEvent.type = 'setTempo';
     var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
-    log.fine('Adding tempo change event to some track events list, possibly track zero, but any track events list');
+    log.finer('Adding tempo change event to some track events list, possibly track zero, but any track events list');
     trackEventsList.add(setTempoEvent);
   }
 
@@ -369,7 +373,7 @@ class Midi {
   /// Clean this up later.
   ///
   // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
-  double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
+  double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) {
 
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
@@ -382,55 +386,90 @@ class Midi {
     // Maybe this should be put into Note, even though it's a MIDI thing.
     var noteNumber;
     switch (note.noteType) {
-      case NoteType.rightTap:
+      case NoteType.tapRight:
         noteNumber = 60;
-        // noteNumber = 60;
+        if (voice == Voice.unison) {
+          noteNumber = 20;
+        }
         break;
-      case NoteType.leftTap:
+      // case NoteType.tapUnison:
+      //   noteNumber = 20;
+      //   break;
+      case NoteType.tapLeft:
         noteNumber = 70;
-        // noteNumber = 70;
+        if (voice == Voice.unison) {
+          noteNumber = 20;
+        }
         break;
-      case NoteType.rightFlam:
+      // case NoteType.flamUnison:
+      //   noteNumber = 21;
+      //   break;
+      case NoteType.flamRight:
         noteNumber = 61;
-        // noteNumber = 61;
+        if (voice == Voice.unison) {
+          noteNumber = 21;
+        }
         break;
-      case NoteType.leftFlam:
+      case NoteType.flamLeft:
         noteNumber = 71;
-        // noteNumber = 71;
+        if (voice == Voice.unison) {
+          noteNumber = 21;
+        }
         break;
-      case NoteType.rightDrag:
+      // case NoteType.dragUnison:
+      //   noteNumber = 21; // wrong, but don't have a drag recorded yet by SLOT
+      //   break;
+      case NoteType.dragRight:
         noteNumber = 72; // temp until find out soundfont problem
-        // noteNumber = 62;
-        // noteNumber = 62;
+        if (voice == Voice.unison) {
+          noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
+        }
         break;
-      case NoteType.leftDrag:
+      case NoteType.dragLeft:
         noteNumber = 72;
-        // noteNumber = 72;
+        if (voice == Voice.unison) {
+          noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
+        }
         break;
-      case NoteType.rightBuzz:
+      // case NoteType.rollUnison:
+      //   noteNumber = 23; // this one is looped.  This is called RollSlot
+      //   break;
+      case NoteType.buzzRight:
         noteNumber = 63;
-        // noteNumber = 69;
+        if (loopBuzzes) {
+          noteNumber = 67; // this one is looped
+        }
+        if (voice == Voice.unison) {
+          noteNumber = 23;// wrong, but don't have a drag recorded yet by SLOT
+        }
         break;
-      case NoteType.leftBuzz:
+      case NoteType.buzzLeft:
+        // If loop, add 4 to be 77
         noteNumber = 73;
-        // noteNumber = 69;
+        if (loopBuzzes) {
+          noteNumber = 77; // this one is looped
+        }
+        if (voice == Voice.unison) {
+          noteNumber = 23;// wrong, but don't have a drag recorded yet by SLOT
+        }
         break;
-      case NoteType.leftTuzz:
+      // Later add SLOT Tuzzes, they have lots in the recording
+      case NoteType.tuzzLeft:
         noteNumber = 74;
         break;
-      case NoteType.rightTuzz:
+      case NoteType.tuzzRight:
         noteNumber = 64;
         break;
-      case NoteType.leftRuff2:
+      case NoteType.ruff2Left:
       noteNumber = 75;
       break;
-      case NoteType.rightRuff2:
+      case NoteType.ruff2Right:
       noteNumber = 65;
       break;
-      case NoteType.leftRuff3:
+      case NoteType.ruff3Left:
       noteNumber = 76;
       break;
-      case NoteType.rightRuff3:
+      case NoteType.ruff3Right:
       noteNumber = 66;
       break;
       case NoteType.rest:

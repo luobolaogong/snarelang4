@@ -5,6 +5,7 @@ library snarelang4;
 
 export 'src/comment.dart';
 export 'src/dynamic.dart';
+export 'src/voice.dart';
 export 'src/midi.dart';
 export 'src/note.dart';
 export 'src/score.dart';

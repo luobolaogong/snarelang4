@@ -135,7 +135,7 @@ void main(List<String> arguments) {
   var defaultFirstNoteProperties = Note();
   defaultFirstNoteProperties.duration.firstNumber = 4;
   defaultFirstNoteProperties.duration.secondNumber = 1;
-  defaultFirstNoteProperties.noteType = NoteType.leftTap; // ???
+  defaultFirstNoteProperties.noteType = NoteType.tapLeft; // ???
   defaultFirstNoteProperties.dynamic = overrideDynamic; // new    make sure has a dynamic.  If not specified, use default.
 
 
@@ -206,7 +206,7 @@ void main(List<String> arguments) {
   }
 
   // var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
-  var snareMidiEventsList = midi.createSnareMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
+  var snareMidiEventsList = midi.createSnareMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes);
   midiTracks.add(snareMidiEventsList);
 
 

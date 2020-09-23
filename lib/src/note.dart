@@ -32,30 +32,55 @@ int beatFractionToTicks(num beatFraction) {
   return durationInTicks;
 }
 
-
+// add ensemble (SLOT) notes too, and rolls for loops
 enum NoteType { // I think I can change this to "Type", because I don't think it's a keyword, but maybe it is
-  rightTap,
-  leftTap,
-  rightFlam,
-  leftFlam,
-  rightDrag,
-  leftDrag,
-  rightBuzz,
-  leftBuzz,
-  leftTuzz,
-  rightTuzz,
-  leftRuff2,
-  rightRuff2,
-  leftRuff3,
-  rightRuff3,
+  tapRight,
+  tapLeft,
+  tapUnison,
+  flamRight,
+  flamLeft,
+  flamUnison,
+  dragRight,
+  dragLeft,
+  dragUnison,
+  buzzRight, // this can be looped
+  buzzLeft, // this can be looped
+  tuzzLeft,
+  tuzzRight,
+  tuzzUnison,
+  ruff2Left,
+  ruff2Right,
+  ruff2Unison,
+  ruff3Left,
+  ruff3Right,
+  ruff3Unison,
+  roll, // prob need to add roll recordings for snare and pad.  Currently only have SLOT recording I think
   rest,
   previousNoteDurationOrType
 }
+// enum NoteType { // I think I can change this to "Type", because I don't think it's a keyword, but maybe it is
+//   rightTap,
+//   leftTap,
+//   rightFlam,
+//   leftFlam,
+//   rightDrag,
+//   leftDrag,
+//   rightBuzz,
+//   leftBuzz,
+//   leftTuzz,
+//   rightTuzz,
+//   leftRuff2,
+//   rightRuff2,
+//   leftRuff3,
+//   rightRuff3,
+//   rest,
+//   previousNoteDurationOrType
+// }
 
 class Note {
   NoteArticulation articulation;
   NoteDuration duration; // prob should have constructor construct one of these.  Of course.  also "SnareLangNoteNameValue".  can be used to calculate ticks, right?  noteTicks = (4 * ticksPerBeat) / SnareLangNoteNameValue
-  NoteType noteType = NoteType.rightTap;  // correct here?
+  NoteType noteType = NoteType.tapRight;  // correct here?
   int velocity; // Perhaps this will go into MidiNote or something, new
   Dynamic dynamic; // gets a value during first pass through the score list
   //int midiNoteNumber; // experiment 9/20/2020  This would be the midi soundfont number, related to NoteType
@@ -69,47 +94,47 @@ class Note {
 
   swapHands() {
     switch (noteType) {
-      case NoteType.rightTap:
-        noteType = NoteType.leftTap;
+      case NoteType.tapRight:
+        noteType = NoteType.tapLeft;
         break;
-      case NoteType.leftTap:
-        noteType = NoteType.rightTap;
+      case NoteType.tapLeft:
+        noteType = NoteType.tapRight;
         break;
-      case NoteType.rightFlam:
-        noteType = NoteType.leftFlam;
+      case NoteType.flamRight:
+        noteType = NoteType.flamLeft;
         break;
-      case NoteType.leftFlam:
-        noteType = NoteType.rightFlam;
+      case NoteType.flamLeft:
+        noteType = NoteType.flamRight;
         break;
-      case NoteType.rightDrag:
-        noteType = NoteType.leftDrag;
+      case NoteType.dragRight:
+        noteType = NoteType.dragLeft;
         break;
-      case NoteType.leftDrag:
-        noteType = NoteType.rightDrag;
+      case NoteType.dragLeft:
+        noteType = NoteType.dragRight;
         break;
-      case NoteType.rightBuzz:
-        noteType = NoteType.leftBuzz;
+      case NoteType.buzzRight:
+        noteType = NoteType.buzzLeft;
         break;
-      case NoteType.leftBuzz:
-        noteType = NoteType.rightBuzz;
+      case NoteType.buzzLeft:
+        noteType = NoteType.buzzRight;
         break;
-      case NoteType.rightTuzz:
-        noteType = NoteType.leftTuzz;
+      case NoteType.tuzzRight:
+        noteType = NoteType.tuzzLeft;
         break;
-      case NoteType.leftTuzz:
-        noteType = NoteType.rightTuzz;
+      case NoteType.tuzzLeft:
+        noteType = NoteType.tuzzRight;
         break;
-      case NoteType.rightRuff2:
-        noteType = NoteType.leftRuff2;
+      case NoteType.ruff2Right:
+        noteType = NoteType.ruff2Left;
         break;
-      case NoteType.leftRuff2:
-        noteType = NoteType.rightRuff2;
+      case NoteType.ruff2Left:
+        noteType = NoteType.ruff2Right;
         break;
-      case NoteType.rightRuff3:
-        noteType = NoteType.leftRuff3;
+      case NoteType.ruff3Right:
+        noteType = NoteType.ruff3Left;
         break;
-      case NoteType.leftRuff3:
-        noteType = NoteType.rightRuff3;
+      case NoteType.ruff3Left:
+        noteType = NoteType.ruff3Right;
         break;
       case NoteType.previousNoteDurationOrType:
         log.info('Do what?????');
@@ -194,49 +219,52 @@ Parser typeParser = pattern('TtFfDdZzXxYyVvr.').trim().map((value) { // trim?
   NoteType noteType;
   switch (value) {
     case 'T':
-      noteType = NoteType.rightTap;
+      noteType = NoteType.tapRight;
       break;
     case 't':
-      noteType = NoteType.leftTap;
+      noteType = NoteType.tapLeft;
       break;
     case 'F':
-      noteType = NoteType.rightFlam;
+      noteType = NoteType.flamRight;
       break;
     case 'f':
-      noteType = NoteType.leftFlam;
+      noteType = NoteType.flamLeft;
       break;
     case 'D':
-      noteType = NoteType.rightDrag;
+      noteType = NoteType.dragRight;
       break;
     case 'd':
-      noteType = NoteType.leftDrag;
+      noteType = NoteType.dragLeft;
       break;
     case 'Z':
-      noteType = NoteType.rightBuzz;
+      noteType = NoteType.buzzRight;
       break;
     case 'z':
-      noteType = NoteType.leftBuzz;
+      noteType = NoteType.buzzLeft;
       break;
     case 'X':
-      noteType = NoteType.rightTuzz;
+      noteType = NoteType.tuzzRight;
       break;
     case 'x':
-      noteType = NoteType.leftTuzz;
+      noteType = NoteType.tuzzLeft;
       break;
     case 'Y':
-      noteType = NoteType.rightRuff2;
+      noteType = NoteType.ruff2Right;
       break;
     case 'y':
-      noteType = NoteType.leftRuff2;
+      noteType = NoteType.ruff2Left;
       break;
     case 'V':
-      noteType = NoteType.rightRuff3;
+      noteType = NoteType.ruff3Right;
       break;
     case 'v':
-      noteType = NoteType.leftRuff3;
+      noteType = NoteType.ruff3Left;
       break;
     case 'r':
       noteType = NoteType.rest;
+      break;
+    case 'R':
+      noteType = NoteType.roll;
       break;
     case '.':
       noteType = NoteType.previousNoteDurationOrType;

@@ -3,7 +3,8 @@
 /tempo 84
 //tempo 4=42
 
-
+// This /unison stuff doesn't sound good at this time due to the recording of SLOT.  So postpone working on this for now
+//unison
 // Roll-off
 /mf /< 24Z . . . . .    . . . . . .  /f 2T
 /mf /< 24Z . . . . .    . . . . . .  /f 4T
@@ -13,7 +14,7 @@
 8F /mf 32T . . .  // Pickup, all play
 
 // first bar, all play only first tap, and flam
->6T 24r 24t                  /mp 24Z . . 8t            8F      24Z . .              ^40T 20z .  24T . .
+>6T 24r 24t                  /mp 24Z . . 8t            8F    24Z . .              ^40T 20z .  24T . .
 
 // second bar, all play
 /mf 12f  24t  12F >30f       30T . . .  >8T            /p /> 24Z . . . . .          /mf >8T   32T . . .

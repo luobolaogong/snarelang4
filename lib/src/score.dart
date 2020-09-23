@@ -294,28 +294,28 @@ class Score {
       }
 
       switch (note.noteType) {
-        case NoteType.leftTap:
-        case NoteType.rightTap:
+        case NoteType.tapLeft:
+        case NoteType.tapRight:
           break;
-        case NoteType.leftFlam:
-        case NoteType.rightFlam:
+        case NoteType.flamLeft:
+        case NoteType.flamRight:
           note.velocity += 6;
           break;
-        case NoteType.leftDrag:
-        case NoteType.rightDrag:
+        case NoteType.dragLeft:
+        case NoteType.dragRight:
           //note.velocity += 10; // commented out because of a video I saw which says it softens the note
           break;
-        case NoteType.leftBuzz:
-        case NoteType.rightBuzz:
+        case NoteType.buzzLeft:
+        case NoteType.buzzRight:
           break;
-        case NoteType.leftTuzz:
-        case NoteType.rightTuzz:
+        case NoteType.tuzzLeft:
+        case NoteType.tuzzRight:
           break;
-        case NoteType.leftRuff2:
-        case NoteType.rightRuff2:
+        case NoteType.ruff2Left:
+        case NoteType.ruff2Right:
           break;
-        case NoteType.leftRuff3:
-        case NoteType.rightRuff3:
+        case NoteType.ruff3Left:
+        case NoteType.ruff3Right:
           break;
         case NoteType.rest:
           break;
@@ -378,7 +378,7 @@ class Score {
 ///
 //Parser scoreParser = ((tempoParser | dynamicParser | timeSigParser | noteParser).plus()).trim().end().map((values) {    // trim()?
 // Parser scoreParser = ((timeSigParser | tempoParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-Parser scoreParser = ((commentParser | timeSigParser | tempoParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+Parser scoreParser = ((commentParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
   log.finer('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {
