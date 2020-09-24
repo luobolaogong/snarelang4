@@ -2,6 +2,14 @@ import 'package:petitparser/petitparser.dart';
 // import 'package:logging/logging.dart';
 
 // final log = Logger('Voice');
+// The following is perhaps not the way to do this thing of switching between solo and unison.
+// Seems to me that could just use another track for the unison parts, while the solo track continues on.
+
+
+// So I think I'll abandon this for now
+
+
+
 
 /// I don't know what to call this yet.  The idea is that sometimes maybe a soloist should play,
 /// and other times all should play (unison), and maybe other times a different instrument should

@@ -17,7 +17,6 @@ class Comment {
 /// commentParser
 ///
 Parser commentParser = (
-    // string('//').trim() & pattern('\n\r').neg().star().trim() & pattern('\n\r').trim().optional()
     string('//') & pattern('\n\r').neg().star() & pattern('\n\r').optional()
 ).flatten().trim().map((value) {
   log.finest('\nIn commentParser and value is -->$value<--');

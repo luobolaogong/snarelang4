@@ -19,17 +19,40 @@ import 'package:logging/logging.dart';
 /// will get applied, which are a product of the absolute and dynamicRampd dynamics
 /// and note type.
 ///
+/// Actually, a Score is perhaps made up of multiple "staves", or "staffs".  All the
+/// staffs/staves are called a system, I think.
+/// So, a score could be composed of a snare staff and a tenor staff, and a bass staff,
+/// and each is played simultaneously for a score.  The tempo and tempo changes will be
+/// for the set of parallel staves.
+///
+/// So, to support this, I think SNL should allow for a new designation word, like
+/// "staff n", or "stave n", or "stave all" and maybe "staff end".  I suppose "n" could
+/// be the name of the stave.  A stave would correspond to a track, perhaps.  I don't
+/// know what a channel is yet in this Dart library.  If you change the channel number
+/// does it change the track?  I don't think so.  I think channel is perhaps the "transport"
+/// mechanism, and I don't need to worry about it.  Perhaps it's ignored.  I don't know.
+///
+/// I collect events into an events list, and add that list to the midi lists of event lists.
+/// I don't think each event list starts out with a name, does it?  I think the midi header
+/// says something.
+///
+///
+///
 class Score {
   List elements = [];
   TimeSig firstTimeSig;
   Tempo firstTempo;
+  Staff firstStaff;
 
   String toString() {
     return 'Score: ${elements.toString()}'; // could do a forEach and collect each element into a string with \n between each
   }
 
-  static Result load(List<String> scoresPaths) {
-    var scoresBuffer = StringBuffer();
+  static Result loadAndParse(List<String> scoresPaths) {
+    //
+    // First load the raw score files
+    //
+    var scoresStringBuffer = StringBuffer();
     for (var filePath in scoresPaths) {
       log.fine('Parsing file $filePath');
       var inputFile = File(filePath);
@@ -41,13 +64,13 @@ class Score {
       if (fileContents.length == 0) {
         continue;
       }
-      scoresBuffer.write(fileContents);
+      scoresStringBuffer.write(fileContents);
     }
     //
     // Parse the score's text elements, notes and other stuff.  The intermediate parse results like Tempo and TimeSig
     // are in the list that is result.value, and processed later.
     //
-    var result = scoreParser.parse(scoresBuffer.toString());
+    var result = scoreParser.parse(scoresStringBuffer.toString());
     if (result.isSuccess) {
       Score score = result.value;
       log.finer('parse succeeded.  This many elements: ${score.elements.length}\n'); // wrong
@@ -369,6 +392,17 @@ class Score {
     return null;
   }
 
+  Staff scanForFirstStaff() {
+    for (var element in elements) {
+      if (!(element is Staff)) {
+        continue;
+      }
+      firstStaff = element;
+      return firstStaff;
+    }
+    return null;
+  }
+
 
 
 }
@@ -378,7 +412,7 @@ class Score {
 ///
 //Parser scoreParser = ((tempoParser | dynamicParser | timeSigParser | noteParser).plus()).trim().end().map((values) {    // trim()?
 // Parser scoreParser = ((timeSigParser | tempoParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-Parser scoreParser = ((commentParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+Parser scoreParser = ((commentParser | staffParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
   log.finer('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {
@@ -395,3 +429,87 @@ Parser scoreParser = ((commentParser | timeSigParser | tempoParser | voiceParser
   log.finest('Leaving Scoreparser returning score in parsed and objectified form.');
   return score;
 });
+
+
+/// I think the idea here is to be able to insert the keywords '/staff snare' or
+/// '/staff tenor', ... and that staff continues on as the only staff being written
+/// to, until either the end of the score, or there's another /staff designation.
+/// So, it's 'staff <name>'
+enum StaffId {
+  snare,
+  unison, // snareEnsemble
+  pad,
+  tenor, // possibly pitch based notes rather than having tenor1, tenor2, ...
+  bass,
+  pipes
+}
+
+class Staff {
+  StaffId id; // the default should be snare.  How do you do that?
+
+  String toString() {
+    return 'Staff: id: $id';
+  }
+}
+
+///
+/// staffParser
+///
+final staffId = (letter() & word().star()).flatten();
+Parser staffParser = (
+    string('/staff').trim() & staffId).trim().map((value) {
+  log.fine('\nIn staffParser and value is -->$value<--');
+  var staff = Staff();
+  staff.id = staffStringToId(value[1]);
+  log.fine('Leaving staffParser returning value $staff');
+  return staff;
+});
+
+StaffId staffStringToId(String staffString) {
+  StaffId staffId;
+  switch (staffString) {
+    case 'snare':
+      staffId = StaffId.snare;
+      break;
+    case 'snareUnison':
+      staffId = StaffId.unison;
+      break;
+    case 'pad':
+      staffId = StaffId.pad;
+      break;
+    case 'tenor':
+      staffId = StaffId.tenor;
+      break;
+    case 'bass':
+      staffId = StaffId.bass;
+      break;
+    case 'pipes':
+      staffId = StaffId.pipes;
+      break;
+    default:
+      log.severe('Bad staff identifier: $staffString');
+      staffId = StaffId.snare;
+      break;
+  }
+  return staffId;
+}
+
+String staffIdToString(StaffId id) {
+  switch (id) {
+    case StaffId.snare:
+      return 'snare';
+    case StaffId.unison:
+      return 'unison';
+    case StaffId.pad:
+      return 'pad';
+    case StaffId.tenor:
+      return 'tenor';
+    case StaffId.bass:
+      return 'bass';
+    case StaffId.pipes:
+      return 'pipes';
+    default:
+      log.severe('Bad staff id: $id');
+      return null;
+  }
+}

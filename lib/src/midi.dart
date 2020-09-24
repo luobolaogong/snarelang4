@@ -1,6 +1,6 @@
 import 'package:dart_midi/dart_midi.dart';
 import 'package:logging/logging.dart';
-
+import 'dart:math';
 import '../snarelang4.dart';
 
 bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sound font file has soft,med,loud recordings, and mapped offsets by 10
@@ -137,6 +137,56 @@ bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sou
 /// So, it seems to me that when recording, slow it down to 75% of the performance tempo.  For example, if a march is to be played at 84, for practice
 /// purposes someone may want to slow it down to 54, so maybe record it at 64
 
+
+/// 2.2 - MIDI File Formats 0,1 and 2A Format 0 file has a header chunk followed by one track chunk.
+/// It is the most interchangeable representation of data.  It is very useful for a simple single-track
+/// player in a program which needs to make synthesisers make sounds, but which is primarily concerned
+/// with something else such as mixers or sound effect boxes. It is very desirable to be able to produce
+/// such a format, even if your program is track-based, in order to work with these simple programs.
+/// A Format 1 or 2 file has a header chunk followed by one or more track chunks. programs which support
+/// several simultaneous tracks should be able to save and read data in format 1, a vertically one dimensional
+/// form, that is, as a collection of tracks. Programs which support several independent patterns should be able to
+/// save and read data in format 2, a horizontally one dimensional form. Providing these minimum capabilities
+/// will ensure maximum interchangeability.In a MIDI system with a computer and a SMPTE synchroniser which uses
+/// Song Pointer and Timing Clock,tempo maps (which describe the tempo throughout the track, and may also
+/// include time signature information, so that the bar number may be derived) are generally created on the computer.
+/// To use them with the synchroniser, it is necessary to transfer them from the computer. To make it easy for the synchroniser to
+/// extract this data from a MIDI File, tempo information should always be stored in the first MTrk chunk. For a
+/// format 0 file, the tempo will be scattered through the track and the tempo map reader should ignore the
+/// intervening events; for a format 1 file, the tempo map must be stored as the first track. It is polite to a tempo
+/// map reader to offer your user the ability to make a format 0 file with just the tempo, unless you can use
+/// format 1.All MIDI Files should specify tempo and time signature. If they don't, the time signature is assumed to be
+/// 4/4,and the tempo 120 beats per minute. In format 0, these meta-events should occur at least at the beginning of
+/// the single multi-channel track. In format 1, these meta-events should be contained in the first track. In format2,
+/// each of the temporally independent patterns should contain at least initial time signature and tempo
+/// information.Format IDs to support other structures may be defined in the future. A program encountering an unknown
+/// format ID may still read other MTrk chunks it finds from the file, as format 1 or 2, if its user can make sense
+/// of them and arrange them into some other structure if appropriate. Also, more parameters may be added to the
+/// MThd chunk in the future: it is important to read and honour the length, even if it is longer than 6.
+///
+/// Channel vs track vs patch vs program vs ...  I think maybe they're all kinda the same thing.
+///
+///
+///
+/// Standard MIDI file format, updatedhttp://www.csw2.co.uk/tech/midi2.htm5 of 2310/22/2003 10:35 AM
+/// the synchroniser, it is necessary to transfer them from the computer. To make it easy for the synchroniser to
+/// extract this data from a MIDI File, tempo information should always be stored in the first MTrk chunk. For a
+/// format 0 file, the tempo will be scattered through the track and the tempo map reader should ignore the
+/// intervening events; for a format 1 file, the tempo map must be stored as the first track. It is polite to a tempo
+/// map reader to offer your user the ability to make a format 0 file with just the tempo, unless you can use
+/// format 1.All MIDI Files should specify tempo and time signature. If they don't, the time signature is assumed
+/// to be 4/4,and the tempo 120 beats per minute. In format 0, these meta-events should occur at least at the beginning of
+/// the single multi-channel track. In format 1, these meta-events should be contained in the first track.
+/// In format2, each of the temporally independent patterns should contain at least initial time signature and tempo
+/// information.Format IDs to support other structures may be defined in the future. A program encountering an unknown
+/// format ID may still read other MTrk chunks it finds from the file, as format 1 or 2, if its user can make sense
+/// of them and arrange them into some other structure if appropriate. Also, more parameters may be added to the
+/// MThd chunk in the future: it is important to read and honour the length, even if it is longer than 6
+///
+///
+/// Every note has a channel.  I don't know how that works if you change the channel.  Perhaps it's only for "transport"
+/// of signal?
+
 class Midi {
   static final ticksPerBeat = 10080; // put this elsewhere later
   static final microsecondsPerMinute = 60000000;
@@ -150,7 +200,10 @@ class Midi {
   // problem durations are for notes such as 9, 11, 13, 17, 18, 19 and others.  Not a big deal.
   double cumulativeRoundoffTicks = 0.0;
 
+  ///
   ///   Create a MidiHeader object, which I did not define, which is part of MidiFile, and return it.
+  ///   I don't think there's anything much in this header.  I don't know how it relates to a real
+  ///   midi file.
   MidiHeader createMidiHeader() {
     // Construct a header with values for name, and whatever else
     // var midiHeaderOut = MidiHeader(ticksPerBeat: Midi.ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
@@ -168,10 +221,11 @@ class Midi {
     var channel = 1; // ??????????????????????????  What's a channel?
     // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
     var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber); // is this right???????
-
+    //var randomGenerator = Random();
     var metronomeTrackEventsList = <MidiEvent>[];
     var totalNotes = nBarsMetronome * 4; // wrong, assumes 4/4, not 6/8
     for (var metBeatCtr = 0; metBeatCtr < totalNotes; metBeatCtr++) {
+      //channel = randomGenerator.nextInt(4); // test to see if this does anything
       var noteOnEvent = NoteOnEvent();
       noteOnEvent.type = 'noteOn';
       noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???
@@ -195,7 +249,8 @@ class Midi {
   }
 
   // DOUBT WE NEED ALL THESE PARAMS
-  List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont) {
+  // List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic) {
+  List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo) {
     log.fine('In Midi.createTrackZeroMidiEventsList()');
     //
     // Do TrackZero
@@ -218,7 +273,9 @@ class Midi {
 
     // Add a track name
     var trackNameEvent = TrackNameEvent();
-    trackNameEvent.text = 'Snare'; // strangely puts this in the header, under the prop "name"
+    // trackNameEvent.text = 'Snare'; // strangely puts this in the header, under the prop "name"
+    // trackNameEvent.text = staff.id.toString(); // no, not for trackZero
+    trackNameEvent.text = 'TempoMap'; // just a guess.  Used for anything?
     trackNameEvent.deltaTime = 0;
     trackZeroEventsList.add(trackNameEvent);
 
@@ -229,7 +286,7 @@ class Midi {
     trackZeroEventsList.add(textEvent);
     textEvent = TextEvent();
     textEvent.type = 'text';
-    textEvent.text = 'SnareLang';
+    textEvent.text = 'SnareLang'; // change name later, as we're not just doing snare, something unique saying "language", and ""any duration"
     trackZeroEventsList.add(textEvent);
 
     // Add a time signature event for this track, though this can happen anywhere, right?
@@ -282,25 +339,56 @@ class Midi {
   /// After that tracks for snare, metronome, pad tenors? bass? pipes?
   /// But since we've only got one list of elements, and these are currently for snare, this method should
   /// be changed to "createSnareTrackList", given the snare score
-  // List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, int bpm, Dynamic dynamic) {
-  List<MidiEvent> createSnareMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes) {
+  ///
+  /// This should not be "snare".  It's for any track other than trackZero, right?  These are named or numbered
+  /// tracks.
+  List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
+  // List<MidiEvent> createMidiTrackEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
     log.fine('In Midi.createMidiEventsTracksList()');
+    Staff currentStaff = staff;
+
+    var midiTracks = <List<MidiEvent>>[];
 
     //
-    // Do Snare track
+    // Start an initial track
     //
-    var snareTrackEventsList = <MidiEvent>[];
+    var trackEventsList = <MidiEvent>[];
 
     //var noteChannel = 0; // what for?
     var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
 
+
+    // Add a track name to see if it helps keep things straight
+    var trackNameEvent = TrackNameEvent();
+    trackNameEvent.text = staffIdToString(staff.id); // ??
+    trackNameEvent.deltaTime = 0;
+    trackEventsList.add(trackNameEvent);
+
+    //bool startNewTrack = false;
     for (var element in elements) {
       if (element is Voice) {
         currentVoice = element; // ????
       }
+      if (element is Staff) {
+        // fix logic in this section.  first time through, etc.
+        if (element.id == currentStaff.id || midiTracks.isEmpty) {
+          // do nothing, it's the same staff, no change
+          continue;
+        }
+        //
+        // Close off the old track, and add it to the list, then start a new track
+        //
+        midiTracks.add(trackEventsList);
+        trackEventsList = <MidiEvent>[]; // start a new one
+        var trackNameEvent = TrackNameEvent();
+        trackNameEvent.text = staffIdToString(staff.id); // ??
+        trackNameEvent.deltaTime = 0;
+        trackEventsList.add(trackNameEvent);
+        continue;
+      }
       if (element is Note) {
         // addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
-        addNoteOnOffToTrackEventsList(element, snareTrackEventsList, usePadSoundFont, loopBuzzes, currentVoice); // return value unused
+        addNoteOnOffToTrackEventsList(element, trackEventsList, usePadSoundFont, loopBuzzes, currentVoice); // add staff param?  // return value unused
         continue;
       }
       if (element is Tempo) {
@@ -324,21 +412,22 @@ class Midi {
         }
 
         // addTempoChangeToTrackEventsList(tempo, noteChannel, snareTrackEventsList);
-        addTempoChangeToTrackEventsList(tempo, snareTrackEventsList);
+        addTempoChangeToTrackEventsList(tempo, trackEventsList);
         continue;
       }
       if (element is TimeSig) { // what?  comment????
         // addTimeSigChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
-        addTimeSigChangeToTrackEventsList(element, snareTrackEventsList);
+        addTimeSigChangeToTrackEventsList(element, trackEventsList);
         continue;
       }
       log.finer('have something else not putting into the track: ${element.runtimeType}, $element');
     } // end of list of events to add to snare track
 
-    if (snareTrackEventsList.isEmpty) {
+    if (trackEventsList.isEmpty) {  // right here?????
       log.warning('What?  no events for track?');
     }
-    return snareTrackEventsList;
+    // return trackEventsList;
+    return midiTracks;
   }
 
 
@@ -373,7 +462,7 @@ class Midi {
   /// Clean this up later.
   ///
   // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
-  double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) {
+  double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) { // add staff?
 
     if (note.duration == null) {
       log.severe('note should not have a null duration.');

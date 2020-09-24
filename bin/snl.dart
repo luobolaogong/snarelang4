@@ -23,6 +23,7 @@ import 'package:snarelang4/snarelang4.dart';
 ///
 ///
 const commandLineTempo = 'tempo'; // change to commandLineTempoIndexName
+const commandLineStaff = 'staff';
 const commandLineDynamic = 'dynamic';
 const commandLineTimeSig = 'time';
 const inFilesList = 'input';
@@ -37,6 +38,8 @@ void main(List<String> arguments) {
   print('Staring snl ...');
   var usePadSoundFont = false;
   var loopBuzzes = false;
+  //var staff = Staff(); // test
+  //staff.id = StaffId.snare; // test
   //
   // Set up logging.  Does this somehow apply to all files?
   //
@@ -58,6 +61,10 @@ void main(List<String> arguments) {
   var defaultTempo = Tempo(); // constructor does create the NoteDuratino part.
   defaultTempo.noteDuration.firstNumber = 4;
   defaultTempo.noteDuration.secondNumber = 1;
+
+  var defaultStaff = Staff(); // helpful?
+  defaultStaff.id = StaffId.snare;
+
   defaultTempo.bpm = 84;
   var defaultTimeSig = TimeSig();
   defaultTimeSig.numerator = 4;
@@ -66,6 +73,7 @@ void main(List<String> arguments) {
   Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
   TimeSig overrideTimeSig; // deliberately null
   Dynamic overrideDynamic; // deliberately null.  Right?
+  Staff overrideStaff; // need?
   int nBarsMetronome;
   //
   // Parse the command line arguments
@@ -74,6 +82,9 @@ void main(List<String> arguments) {
 
   if (argResults[commandLineTempo] != null) {
     overrideTempo = parseTempo(argResults[commandLineTempo]); // expect either '104' (quarter note assumed) or '8:3=104'
+  }
+  if (argResults[commandLineStaff] != null) {
+    overrideStaff = parseStaff(argResults[commandLineStaff]);
   }
   if (argResults[commandLineDynamic] != null) {
     String dynamicString = argResults[commandLineDynamic];
@@ -117,7 +128,7 @@ void main(List<String> arguments) {
 //Result testResult = timeSigParser.parse('/time 3/4');
 //print(testResult);
 
-  var result = Score.load(piecesOfMusic); // hey, this probably parsed at least one tempo and one timesig
+  var result = Score.loadAndParse(piecesOfMusic); // hey, this probably parsed at least one tempo and one timesig
   // Result result = Score.load(piecesOfMusic);
 
   if (result.isFailure) {
@@ -151,6 +162,7 @@ void main(List<String> arguments) {
 
   var firstTimeSigInScore = score.scanForFirstTimeSig();
   var firstTempoInScore = score.scanForFirstTempo();
+  var firstStaffInScore = score.scanForFirstStaff(); // need?
   // One or the other or both those objects may be null, if not specified in the file.  But if either are specified, then we should use them to create the first
   // track's time sig and/or tempo
   if (firstTimeSigInScore != null) {
@@ -158,6 +170,9 @@ void main(List<String> arguments) {
   }
   if (firstTempoInScore != null) {
     overrideTempo = firstTempoInScore;
+  }
+  if (firstStaffInScore != null) { // isn't there a shorthand for this?
+    overrideStaff = firstStaffInScore;
   }
   // overrideTimeSig ??= firstTimeSigInScore;
   // overrideTempo ??= firstTempoInScore;
@@ -190,8 +205,10 @@ void main(List<String> arguments) {
   overrideTimeSig ??= defaultTimeSig;
   overrideTempo ??= defaultTempo;
   overrideDynamic ??= defaultDynamic;
+  overrideStaff ??= defaultStaff;
 
-  var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
+  // var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic); // last param nec???
+  var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo); // last param nec???
   midiTracks.add(trackZeroEventList); // Can we add to this track 0 later, to add metronome or tempo ramps?
 
   // Now try a simple metronome experiment
@@ -205,9 +222,9 @@ void main(List<String> arguments) {
     midiTracks.add(metronomeTrack); // Oh, add a new track to the midi
   }
 
-  // var midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont);
-  var snareMidiEventsList = midi.createSnareMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes);
-  midiTracks.add(snareMidiEventsList);
+  midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
+  //var midiTrackEventsList = midi.createMidiTrackEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
+  //midiTracks.add(midiTrackEventsList);
 
 
 
@@ -246,8 +263,12 @@ Tempo parseTempo(String noteTempoString) {
   return tempo;
 }
 
-// ArgResults createArgParser(List<String> arguments, Tempo overrideTempo, int nBarsMetronome, Dynamic overrideDynamic, TimeSig overrideTimeSig, Dynamic defaultDynamic, Tempo defaultTempo, TimeSig defaultTimeSig) {
-// ArgResults createArgParser(List<String> arguments, Dynamic defaultDynamic, Tempo defaultTempo, TimeSig defaultTimeSig) {
+Staff parseStaff(String staffString) {
+  var staff = Staff();
+  staff.id = staffStringToId(staffString);
+  return staff;
+}
+
 ArgResults parseCommandLineArgs(List<String> arguments) {
   var now = DateTime.now();
   ArgResults argResults;
@@ -269,6 +290,12 @@ ArgResults parseCommandLineArgs(List<String> arguments) {
         help:
         'Set the log level.  This is a hidden optionl',
         valueHelp: '-l ALL')
+    ..addOption(commandLineStaff, // prob should also allow --stave and --track
+        allowed: ['snare', 'snareUnison', 'tenor', 'bass', 'pipes'],
+        defaultsTo: 'snare',
+        help:
+        'Set the first staff name.  Defaults to snare',
+        valueHelp: '--staff bass')
     ..addOption(commandLineTempo,
         abbr: 't',
         help:
