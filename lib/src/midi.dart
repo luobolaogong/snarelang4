@@ -334,23 +334,30 @@ class Midi {
     return trackZeroEventsList;
   }
 
-  /// Create a list of MidiEvent lists, one list per track.  First list is for the special TrackZero
-  /// which is timesig and tempo, but maybe will be used for tempo mapping if we do tempo ramps.
-  /// After that tracks for snare, metronome, pad tenors? bass? pipes?
-  /// But since we've only got one list of elements, and these are currently for snare, this method should
-  /// be changed to "createSnareTrackList", given the snare score
+  /// Add lists of events to tracks, and add the tracks to the list of midiTracks passed in.
+  /// For now, only one track is worked on at a time.  A new track is created when one of the elements
+  /// is a Staff element.  There would be a new track for each instrument, or ensemble.  Snare, snareUnison,
+  /// pad, tenor, bass, pipes.
   ///
-  /// This should not be "snare".  It's for any track other than trackZero, right?  These are named or numbered
-  /// tracks.
-  List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
+  /// So, we're cruisin' along adding elements to a list and if we run out of elements then we're done with
+  /// the list and we add it, as a "track" to the midiTracks list.  Or, if we encounter a new Staff element,
+  /// then we probably just add the existing list to the midiTracks list, and start a new list and add it later.
+  ///
+  /// The midiTracks list already has a trackZero list, which contains timeSig, and Tempo, and is supposed to
+  /// be able to hold a tempoMap.
+  ///
+  // List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
   // List<MidiEvent> createMidiTrackEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
+  // List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
+  // List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, Staff overrideStaff) {
+  List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, overrideStaff) {
     log.fine('In Midi.createMidiEventsTracksList()');
-    Staff currentStaff = staff;
+    //var currentStaff = overrideStaff; // this is strange.  We've got an element that could be a Staff, and we've got a passed in Staff
 
-    var midiTracks = <List<MidiEvent>>[];
+//    var midiTracks = <List<MidiEvent>>[];
 
     //
-    // Start an initial track
+    // Start a track to be added to the midiTracks list
     //
     var trackEventsList = <MidiEvent>[];
 
@@ -358,33 +365,53 @@ class Midi {
     var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
 
 
-    // Add a track name to see if it helps keep things straight
-    var trackNameEvent = TrackNameEvent();
-    trackNameEvent.text = staffIdToString(staff.id); // ??
-    trackNameEvent.deltaTime = 0;
-    trackEventsList.add(trackNameEvent);
+    // // Add a track name to see if it helps keep things straight
+    if (overrideStaff != null) { // ?????  what good does this do?  Maybe if there's no track designation given in the score we use this one as the first element of a new track?
+      var trackNameEvent = TrackNameEvent();
+      trackNameEvent.text = staffIdToString(overrideStaff.id); // only useful if nothing specified at start of score, right?
+      trackNameEvent.deltaTime = 0;
+      //trackEventsList.add(trackNameEvent);
+      if (overrideStaff.id == StaffId.pad) { // total shot in the dark
+        usePadSoundFont = true;
+      }
+      else {
+        usePadSoundFont = false;
+      }
+    }
 
     //bool startNewTrack = false;
     for (var element in elements) {
-      if (element is Voice) {
-        currentVoice = element; // ????
-      }
-      if (element is Staff) {
-        // fix logic in this section.  first time through, etc.
-        if (element.id == currentStaff.id || midiTracks.isEmpty) {
-          // do nothing, it's the same staff, no change
-          continue;
+      if (element is Staff) { // I do not trust the logic in this section.  Revisit later
+        // // if (staff.id == currentStaff.id || midiTracks.isEmpty) {
+        // if (midiTracks.isEmpty) {
+        //   print('In addMidiEventsToTracks and got a Staff element, and is either same as current, or this track is empty, so doing nothing with it and skipping it.');
+        //   continue;
+        // }
+        print('Oh, looks like we have a new Staff element and so it is time to close off the old track and add it to the list and start a new one.');
+
+        // do something here to change the patch or channel or something so the soundfont can be accessed correctly?
+        if (element.id == StaffId.pad) {
+          usePadSoundFont = true;
+        }
+        else {
+          usePadSoundFont = false;
         }
         //
         // Close off the old track, and add it to the list, then start a new track
         //
-        midiTracks.add(trackEventsList);
-        trackEventsList = <MidiEvent>[]; // start a new one
-        var trackNameEvent = TrackNameEvent();
-        trackNameEvent.text = staffIdToString(staff.id); // ??
-        trackNameEvent.deltaTime = 0;
-        trackEventsList.add(trackNameEvent);
-        continue;
+        if (trackEventsList.isNotEmpty) {
+          midiTracks.add(trackEventsList);
+          trackEventsList = <MidiEvent>[]; // start a new one
+          var trackNameEvent = TrackNameEvent();
+          // trackNameEvent.text = staffIdToString(overrideStaff.id); // ??
+          trackNameEvent.text = staffIdToString(element.id); // ??
+          trackNameEvent.deltaTime = 0;  // time since the previous event?
+          trackEventsList.add(trackNameEvent);
+          continue;
+        }
+      }
+      if (element is Voice) { // may get rid of Voice, since starting to develop tracks
+        currentVoice = element; // ????
       }
       if (element is Note) {
         // addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
@@ -401,12 +428,12 @@ class Midi {
         //
         // WATCH OUT, DUPLICATE CODE
         if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
-          if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+          if (overrideTimeSig.denominator == 8 && overrideTimeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
             tempo.noteDuration.firstNumber = 8;
             tempo.noteDuration.secondNumber = 3;
           }
           else {
-            tempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+            tempo.noteDuration.firstNumber ??= overrideTimeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
             tempo.noteDuration.secondNumber ??= 1;
           }
         }
@@ -420,12 +447,13 @@ class Midi {
         addTimeSigChangeToTrackEventsList(element, trackEventsList);
         continue;
       }
-      log.finer('have something else not putting into the track: ${element.runtimeType}, $element');
+      log.warning('have something else not putting into the track: ${element.runtimeType}, $element');
     } // end of list of events to add to snare track
 
     if (trackEventsList.isEmpty) {  // right here?????
       log.warning('What?  no events for track?');
     }
+    midiTracks.add(trackEventsList); // right?
     // return trackEventsList;
     return midiTracks;
   }

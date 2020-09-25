@@ -43,7 +43,7 @@
 // Line 5
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
 6t >15t . . . .  6T 15f 15T . . .
-/dim   >12X 12z .  /mp >12x 12Z >12t  >12X 12z >12t /cresc >12x 12Z .
+/dim   >12X 12z .  /mp >12x 12z 12t  12X 12z 12t /cresc >12x 12Z .
 6T /fff /f 12t >6F 12t 6T >12f  6T 12t
 
 // Line 6
@@ -67,8 +67,8 @@
 
 /staff pad
 
-1r 1r
-1r 1r
+12Z . . . . .   . . . . . . 1T
+12Z . . . . .   . . . . . . 1T
 
 
 
@@ -83,10 +83,10 @@
 6r 12r 6F 12t       6T 15f 15T . . .
 
 // Line 2
-1T
-1r
-1r
-1r
+>6 12t 6T 12T 4f 12Z . .
+8t >16T . . . . .   6T 15f 15T . . .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >12
+16T . . >16t 16T . . >16t  >4T  12T . .
 
 // Line 3
 >4f >6F 24r . 6r 15r . . . .
@@ -94,7 +94,6 @@
 4F  24F 24T 12t .  6t 12t  6F 24r .
 6r 12r  6F 12t  6T 15f T . . .
 
-// stopped unison editing here
 // Line 4
 >4T  >6F 24Z .  6T >15t . . . .
 >6T 12t 6T 24f 24t 12t . . 6f 12t
@@ -102,10 +101,10 @@
 16T . . >16t 16T . . >16t  >4T  .
 
 // Line 5
-12Z . T 6 24Z . 12T . . 6t 36t 36T T
-6t >15t . . . .  6T 15f 15T . . .
-/dim   >12X 12z .  /mp >12x 12Z >12t  >12X 12z >12t /cresc >12x 12Z .
-6T /fff /f 12t >6F 12t 6T >12f  6T 12t
+12Z . T 6 24Z . 12T . . 4t
+2r  6r 15f 15T . . .
+4T 4r 6r >12t /cresc >12x 12Z .
+6T /fff /f 12t >6F 12r 6r >12f  6T 12t
 
 // Line 6
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
@@ -114,10 +113,10 @@
 16T . . >16t 16T . . >16t  >4T  .
 
 // Line 7
->6F 12t  >6F 12T  6t >15f 15T . . .
+>6F 12t  >4F 4r .
 /cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
->12X 12z . >12x 12Z . 16T . . . 6T 12t   /f
-6T 12t >6F 12t  6T >12f 6t 12t
+1r
+6r 12r >6F 12r  6r >12f 6r 12r
 
 // Line 8
 >6F 12t  >6F 12T  6t >15f 15T . . .

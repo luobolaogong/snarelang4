@@ -121,6 +121,10 @@ class Score {
         log.finer('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
         continue;
       }
+      if (element is Staff) {
+        log.finer('Score.applyShorthands(), Not applying shorthand to Staff element.  Skipping it for now.');
+        continue;
+      }
       if (element is TempoRamp) {
         log.finest('Score.applyShorthands(), and element is a TempoRamp so skipping it.');
         continue;

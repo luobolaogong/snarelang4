@@ -113,6 +113,7 @@ void main(List<String> arguments) {
 
   overrideDynamic ??= defaultDynamic; // check check check check check.  And does this update the param coming in?
   overrideTempo ??= defaultTempo; // scan score first?
+  overrideStaff ??= defaultStaff;
   overrideTimeSig ??= defaultTimeSig; // scan score first?
 
   //var piecesOfMusic = [...argResults[inFilesList]]; // can't change to var, why????
@@ -171,9 +172,11 @@ void main(List<String> arguments) {
   if (firstTempoInScore != null) {
     overrideTempo = firstTempoInScore;
   }
-  if (firstStaffInScore != null) { // isn't there a shorthand for this?
-    overrideStaff = firstStaffInScore;
-  }
+
+  // if (firstStaffInScore != null) { // isn't there a shorthand for this?
+  //   overrideStaff = firstStaffInScore;
+  // }
+
   // overrideTimeSig ??= firstTimeSigInScore;
   // overrideTempo ??= firstTempoInScore;
   // Watch out, this is pretty much duplicate code in another place, and it's probably wrong here, 'cause slightly different
@@ -221,9 +224,12 @@ void main(List<String> arguments) {
     var metronomeTrack = midi.createMidiEventsMetronomeTrack(nBarsMetronome, overrideTempo, metronomeNote);
     midiTracks.add(metronomeTrack); // Oh, add a new track to the midi
   }
-
-  midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
+  // No, next line should be addMidiEventsTracksToList
+  //midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
   //var midiTrackEventsList = midi.createMidiTrackEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
+  // midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
+  // midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, usePadSoundFont, loopBuzzes, overrideStaff);
+  midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, usePadSoundFont, loopBuzzes, overrideStaff);
   //midiTracks.add(midiTrackEventsList);
 
 
