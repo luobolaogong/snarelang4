@@ -9,11 +9,7 @@
 12Z . . . . .   . . . . . . 1T
 12Z . . . . .   . . . . . . 1T
 
-
-
-
 /f
-
 
 // Line 1
 >6F 12t 6T 12T 4f 12Z . .
@@ -24,8 +20,8 @@
 // Line 2
 >6 12t 6T 12T 4f 12Z . .
 8t >16T . . . . .   6T 15f 15T . . .
->6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >12
-16T . . >16t 16T . . >16t  >4T  12T . .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >16t
+16T . . >16t 16T . . >12t  >4T  12T . .
 
 // Line 3
 >4f >6F 24Z . 6T >15t . . . .
@@ -37,8 +33,8 @@
 // Line 4
 >4T  >6F 24Z .  6T >15t . . . .
 >6T 12t 6T 24f 24t 12t . . 6f 12t
->6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >12
-16T . . >16t 16T . . >16t  >4T  .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >16t
+16T . . >16t 16T . . >12t  >4T  .
 
 // Line 5
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
@@ -49,8 +45,8 @@
 // Line 6
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
 6t >15t . . . .  6T 15f 15T . . .
->6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >12
-16T . . >16t 16T . . >16t  >4T  .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >16t
+16T . . >16t 16T . . >12t  >4T  .
 
 // Line 7
 >6F 12t  >6F 12T  6t >15f 15T . . .
@@ -61,20 +57,20 @@
 // Line 8
 >6F 12t  >6F 12T  6t >15f 15T . . .
 /cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
->6T 24Z . 6T /cresc >15T 15T . . .  6T /ff >12
-16T . . ^16t 16T . . ^16t  ^2T
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /ff >16t
+16T . . ^16t 16T . . ^12t  ^2T
 
+
+// We should do an "include 'tireeSnareChips.snl'" here, rather than put it here.
+// I thought I'd be able to just list all the part files on the command line,
+// and maybe I can do that, but include would be cool.
 
 /staff pad
 
 12Z . . . . .   . . . . . . 1T
 12Z . . . . .   . . . . . . 1T
 
-
-
-
 /f
-
 
 // Line 1
 >6F 12t 6T 12T 4f 4r
@@ -85,8 +81,8 @@
 // Line 2
 >6 12t 6T 12T 4f 12Z . .
 8t >16T . . . . .   6T 15f 15T . . .
->6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >12
-16T . . >16t 16T . . >16t  >4T  12T . .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >16t
+16T . . >16t 16T . . >12t  >4T  12T . .
 
 // Line 3
 >4f >6F 24r . 6r 15r . . . .
@@ -97,8 +93,8 @@
 // Line 4
 >4T  >6F 24Z .  6T >15t . . . .
 >6T 12t 6T 24f 24t 12t . . 6f 12t
->6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >12
-16T . . >16t 16T . . >16t  >4T  .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >16t
+16T . . >16t 16T . . >12t  >4T  .
 
 // Line 5
 12Z . T 6 24Z . 12T . . 4t
@@ -109,8 +105,8 @@
 // Line 6
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
 6t >15t . . . .  6T 15f 15T . . .
->6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >12
-16T . . >16t 16T . . >16t  >4T  .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >16t
+16T . . >16t 16T . . >12t  >4T  .
 
 // Line 7
 >6F 12t  >4F 4r .
@@ -121,8 +117,5 @@
 // Line 8
 >6F 12t  >6F 12T  6t >15f 15T . . .
 /cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
->6T 24Z . 6T /cresc >15T 15T . . .  6T /ff >12
-16T . . ^16t 16T . . ^16t  ^2T
-
-
-
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /ff >16t
+16T . . ^16t 16T . . ^12t  ^2T
