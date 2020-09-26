@@ -1,0 +1,67 @@
+// Captain Lachlan McPhail of Tiree
+// Bass
+
+/time 2/2
+/tempo 2=76
+/staff bass
+/ff
+
+// Set the beat
+4r . . .
+
+// To the right, quick march
+2r . . .
+
+// Roll off
+2B . 1B 2B . 1B
+
+// Line 1
+/ff ^4B /mf . . .
+/ff ^4B /mf . . .
+/ff ^4B /mf . . .
+/ff ^4B /mf . . .
+
+// Line 2
+/ff ^4B /mf . . .
+/ff ^4B /mf . . .
+4B 6r 12B 2r
+^4B . . 4r
+
+// Line 3
+^4B ^4b 4r .
+/ff ^4B /mf . . .
+4B 6r 12B 2r
+/ff ^4B /mf . . .
+
+// Line 4
+/ff ^4B /mf . . .
+/ff ^4B /mf . . .
+4B 6r 12B 2r
+^4B . . 4r
+
+
+// Line 5
+/ff ^4B /mf . . .
+/ff ^4B /mf . . .
+4B 6r 12B 4r 6r 12B
+/ff ^4B /mf . . .
+
+
+// Line 6
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 6r 12B 2R
+^4B . . 4r
+
+// Line 7
+^4B ^4b 6r 12B 4r
+4B 6r 12B 2r
+4B . . 4r
+/ff ^4B /mf . . .
+
+// Line 8
+4B 4r 4b 4r
+4B 6r 12B 2r
+/ff ^4B /mf . . .
+^4B . . 4r
+

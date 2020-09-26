@@ -31,13 +31,13 @@ const outMidiFilesPath = 'midi';
 const commandLineLogLevel = 'loglevel';
 const help = 'help';
 const commandLineMetronome = 'met';
-const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes';
+const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes'; // seems not to work.  Forget until fix soundFont for Roll
 const commandLineUsePadSoundFont = 'pad';
 // This is way too long.  Fix.
 void main(List<String> arguments) {
   print('Staring snl ...');
   var usePadSoundFont = false;
-  var loopBuzzes = false;
+  var loopBuzzes = false; // this is not working currently with "roll" R
   //var staff = Staff(); // test
   //staff.id = StaffId.snare; // test
   //
@@ -103,7 +103,7 @@ void main(List<String> arguments) {
 
   if (argResults[commandLineContinuousSustainedLoopedBuzzes]) {
     print('Hmmmm, got this flag for looping buzzes');
-    loopBuzzes = true; // where does this get tied in?
+    loopBuzzes = true; // where does this get tied in?  Doesn't seem to work
   }
   //var something = argResults[commandLineUsePadSoundFont];
   if (argResults[commandLineUsePadSoundFont]) {

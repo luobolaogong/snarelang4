@@ -55,6 +55,9 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   ruff3Right,
   ruff3Unison,
   roll, // prob need to add roll recordings for snare and pad.  Currently only have SLOT recording I think
+  bassLeft,
+  bassRight,
+  met,
   rest,
   previousNoteDurationOrType
 }
@@ -136,8 +139,18 @@ class Note {
       case NoteType.ruff3Left:
         noteType = NoteType.ruff3Right;
         break;
+      case NoteType.bassRight:
+        noteType = NoteType.bassLeft;
+        break;
+      case NoteType.bassLeft:
+        noteType = NoteType.bassRight;
+        break;
       case NoteType.previousNoteDurationOrType:
         log.info('Do what?????');
+        break;
+      case NoteType.roll:
+        break;
+      case NoteType.met:
         break;
       case NoteType.rest:
         break;
@@ -214,7 +227,7 @@ Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberPars
 ///
 /// TypeParser
 ///
-Parser typeParser = pattern('TtFfDdZzXxYyVvr.').trim().map((value) { // trim?
+Parser typeParser = pattern('TtFfDdZzXxYyVvRMBbr.').trim().map((value) { // trim?
   //log.info('\nIn TypeParser');
   NoteType noteType;
   switch (value) {
@@ -260,11 +273,20 @@ Parser typeParser = pattern('TtFfDdZzXxYyVvr.').trim().map((value) { // trim?
     case 'v':
       noteType = NoteType.ruff3Left;
       break;
-    case 'r':
-      noteType = NoteType.rest;
-      break;
     case 'R':
       noteType = NoteType.roll;
+      break;
+    case 'M':
+      noteType = NoteType.met;
+      break;
+    case 'B':
+      noteType = NoteType.bassRight;
+      break;
+    case 'b':
+      noteType = NoteType.bassLeft;
+      break;
+    case 'r':
+      noteType = NoteType.rest;
       break;
     case '.':
       noteType = NoteType.previousNoteDurationOrType;

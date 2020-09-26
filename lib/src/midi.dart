@@ -400,6 +400,9 @@ class Midi {
         // Close off the old track, and add it to the list, then start a new track
         //
         if (trackEventsList.isNotEmpty) {
+          var endOfTrackEvent = EndOfTrackEvent(); // this is new
+          endOfTrackEvent.deltaTime = 0;
+          trackEventsList.add(endOfTrackEvent);
           midiTracks.add(trackEventsList);
           trackEventsList = <MidiEvent>[]; // start a new one
           var trackNameEvent = TrackNameEvent();
@@ -447,12 +450,17 @@ class Midi {
         addTimeSigChangeToTrackEventsList(element, trackEventsList);
         continue;
       }
-      log.warning('have something else not putting into the track: ${element.runtimeType}, $element');
+      log.fine('have something else not putting into the track: ${element.runtimeType}, $element');
     } // end of list of events to add to snare track
 
     if (trackEventsList.isEmpty) {  // right here?????
       log.warning('What?  no events for track?');
     }
+    // Is this necessary?  Was working fine without it.
+    var endOfTrackEvent = EndOfTrackEvent(); // this is new too.  One above like it
+    endOfTrackEvent.deltaTime = 0;
+    trackEventsList.add(endOfTrackEvent);
+
     midiTracks.add(trackEventsList); // right?
     // return trackEventsList;
     return midiTracks;
@@ -491,7 +499,7 @@ class Midi {
   ///
   // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
   double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) { // add staff?
-
+    // var graceOffset = 0;
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
     }
@@ -509,33 +517,38 @@ class Midi {
           noteNumber = 20;
         }
         break;
-      // case NoteType.tapUnison:
-      //   noteNumber = 20;
-      //   break;
+    // case NoteType.tapUnison:
+    //   noteNumber = 20;
+    //   break;
       case NoteType.tapLeft:
         noteNumber = 70;
         if (voice == Voice.unison) {
           noteNumber = 20;
         }
         break;
-      // case NoteType.flamUnison:
-      //   noteNumber = 21;
-      //   break;
+    // case NoteType.flamUnison:
+    //   noteNumber = 21;
+    //   break;
       case NoteType.flamRight:
         noteNumber = 61;
         if (voice == Voice.unison) {
           noteNumber = 21;
         }
+        // test.  A positive number pushes the flam back so it's late.  But a neg number isn't allowed,
+        // so seems that the previous note's duration has to be shortened.  But what if a flam is the first
+        // note of a score?  Nothing before it to shave off.  Can the sound font compensate for this?????
+        // graceOffset = 1234;
         break;
       case NoteType.flamLeft:
         noteNumber = 71;
         if (voice == Voice.unison) {
           noteNumber = 21;
         }
+        // graceOffset = 1234; // test
         break;
-      // case NoteType.dragUnison:
-      //   noteNumber = 21; // wrong, but don't have a drag recorded yet by SLOT
-      //   break;
+    // case NoteType.dragUnison:
+    //   noteNumber = 21; // wrong, but don't have a drag recorded yet by SLOT
+    //   break;
       case NoteType.dragRight:
         noteNumber = 72; // temp until find out soundfont problem
         if (voice == Voice.unison) {
@@ -548,29 +561,35 @@ class Midi {
           noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
         }
         break;
-      // case NoteType.rollUnison:
-      //   noteNumber = 23; // this one is looped.  This is called RollSlot
-      //   break;
+      case NoteType.bassRight:
+        noteNumber = 10; // temp until find out soundfont problem
+        break;
+      case NoteType.bassLeft:
+        noteNumber = 11;
+        break;
+    // case NoteType.rollUnison:
+    //   noteNumber = 23; // this one is looped.  This is called RollSlot
+    //   break;
       case NoteType.buzzRight:
         noteNumber = 63;
         if (loopBuzzes) {
-          noteNumber = 67; // this one is looped
+          noteNumber = 67; // this one is looped but not quick enough?
         }
         if (voice == Voice.unison) {
-          noteNumber = 23;// wrong, but don't have a drag recorded yet by SLOT
+          noteNumber = 23;// wrong?
         }
         break;
       case NoteType.buzzLeft:
-        // If loop, add 4 to be 77
+      // If loop, add 4 to be 77
         noteNumber = 73;
         if (loopBuzzes) {
-          noteNumber = 77; // this one is looped
+          noteNumber = 77; // this one is looped, but not quick enough????
         }
         if (voice == Voice.unison) {
           noteNumber = 23;// wrong, but don't have a drag recorded yet by SLOT
         }
         break;
-      // Later add SLOT Tuzzes, they have lots in the recording
+    // Later add SLOT Tuzzes, they have lots in the recording
       case NoteType.tuzzLeft:
         noteNumber = 74;
         break;
@@ -578,17 +597,23 @@ class Midi {
         noteNumber = 64;
         break;
       case NoteType.ruff2Left:
-      noteNumber = 75;
-      break;
+        noteNumber = 75;
+        break;
       case NoteType.ruff2Right:
-      noteNumber = 65;
-      break;
+        noteNumber = 65;
+        break;
       case NoteType.ruff3Left:
-      noteNumber = 76;
-      break;
+        noteNumber = 76;
+        break;
       case NoteType.ruff3Right:
-      noteNumber = 66;
-      break;
+        noteNumber = 66;
+        break;
+      case NoteType.roll:
+        noteNumber = 40;
+        break;
+      case NoteType.met: // new
+        noteNumber = 1;
+        break;
       case NoteType.rest:
         noteNumber = 99; // see if this helps stop blowups when writing
         break;
@@ -617,10 +642,14 @@ class Midi {
     if (usePadSoundFont) {
       noteNumber -= 20;
     }
-
+    //
+    // Here it is.  Here's where the note will go into a list of midi events.
+    // deltaTime has been 0, but may need to adjust for roundoffs, or perhaps for gracenotes preceding beat?
+    //
     var noteOnEvent = NoteOnEvent();
     noteOnEvent.type = 'noteOn';
-    noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???
+    noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?
+    // noteOnEvent.deltaTime = graceOffset; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?
     noteOnEvent.noteNumber = noteNumber;
     noteOnEvent.velocity = note.velocity;
     // noteOnEvent.channel = channel;
@@ -630,6 +659,7 @@ class Midi {
     var noteOffEvent = NoteOffEvent();
     noteOffEvent.type = 'noteOff';
     noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
+    // noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round() - graceOffset; // keep track of roundoff?
     noteOffEvent.noteNumber = noteNumber;
     // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
     noteOffEvent.velocity = 0; // shouldn't this just be 0?

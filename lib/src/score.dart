@@ -344,6 +344,15 @@ class Score {
         case NoteType.ruff3Left:
         case NoteType.ruff3Right:
           break;
+        case NoteType.bassLeft:
+        case NoteType.bassRight:
+          note.velocity += 10;
+          break;
+        case NoteType.roll:
+          break;
+        case NoteType.met:
+          // note.velocity -= 40;
+          break;
         case NoteType.rest:
           break;
         default:
