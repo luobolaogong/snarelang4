@@ -21,6 +21,10 @@ import 'package:snarelang4/snarelang4.dart';
 /// Check absolute tempo changes
 /// Add bagpipe midi (Unfortunately, http://r.fifi.free.fr/BagPipe/guide_en.htm doesn't appear to produce midi)
 ///
+/// Just learned something: Rosegarden (linux only) is a pretty good midi player.  It can loop and load a
+/// sound font.  The tricky thing was that I needed to have QSynth up and working in order to hear the
+/// result, and maybe I needed to tell it too about the sound font.  Probably only need to do it on qsynth.
+/// Shouldn't need both.  Like VLC doesn't need qsynth.
 ///
 const commandLineTempo = 'tempo'; // change to commandLineTempoIndexName
 const commandLineStaff = 'staff';
@@ -30,7 +34,7 @@ const inFilesList = 'input';
 const outMidiFilesPath = 'midi';
 const commandLineLogLevel = 'loglevel';
 const help = 'help';
-const commandLineMetronome = 'met';
+//const commandLineMetronome = 'met';
 const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes'; // seems not to work.  Forget until fix soundFont for Roll
 const commandLineUsePadSoundFont = 'pad';
 // This is way too long.  Fix.
@@ -97,9 +101,9 @@ void main(List<String> arguments) {
     overrideTimeSig.numerator = int.parse(sigParts[0]);
     overrideTimeSig.denominator = int.parse(sigParts[1]);
   }
-  if (argResults[commandLineMetronome] != null) { // this is for the metronome track, right?  Experimental
-    nBarsMetronome = int.parse(argResults[commandLineMetronome]);
-  }
+  // if (argResults[commandLineMetronome] != null) { // this is for the metronome track, right?  Experimental
+  //   nBarsMetronome = int.parse(argResults[commandLineMetronome]);
+  // }
 
   if (argResults[commandLineContinuousSustainedLoopedBuzzes]) {
     print('Hmmmm, got this flag for looping buzzes');
@@ -297,7 +301,7 @@ ArgResults parseCommandLineArgs(List<String> arguments) {
         'Set the log level.  This is a hidden optionl',
         valueHelp: '-l ALL')
     ..addOption(commandLineStaff, // prob should also allow --stave and --track
-        allowed: ['snare', 'snareUnison', 'tenor', 'bass', 'pipes'],
+        allowed: ['snare', 'snareUnison', 'tenor', 'bass', 'metronome', 'met', 'pipes'],
         defaultsTo: 'snare',
         help:
         'Set the first staff name.  Defaults to snare',
@@ -319,11 +323,11 @@ ArgResults parseCommandLineArgs(List<String> arguments) {
         help:
         'initial/default time signature, like 3/4 or 4/4 or 9/8, etc',
         valueHelp: 'bpmValue')
-    ..addOption(commandLineMetronome, // of questionable utillity
-        abbr: 'm',
-        help:
-        'string indicating metronome tempo and number of bars.  This is an experiment',
-        valueHelp: 'nBars')
+    // ..addOption(commandLineMetronome, // of questionable utillity
+    //     abbr: 'm',
+    //     help:
+    //     'string indicating metronome tempo and number of bars.  This is an experiment',
+    //     valueHelp: 'nBars')
   // render buzzes without pulses, make them continuous, and therefore looped by the sound font
   // pipers might like that, but not snares, because we want to know how to play buzz strokes correctly.
   // This means need to have two different buzz numbers, and this flag will choose the correct one

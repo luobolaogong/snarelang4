@@ -4,7 +4,7 @@
 /time 2/2
 /tempo 2=76
 /staff bass
-/ff
+/mf
 
 // Set the beat
 4r . . .
@@ -16,52 +16,52 @@
 2B . 1B 2B . 1B
 
 // Line 1
-/ff ^4B /mf . . .
-/ff ^4B /mf . . .
-/ff ^4B /mf . . .
-/ff ^4B /mf . . .
+/mf >4B /mp . . .
+/mf >4B /mp . . .
+/mf >4B /mp . . .
+/mf >4B /mp . . .
 
 // Line 2
-/ff ^4B /mf . . .
-/ff ^4B /mf . . .
+/mf >4B /mp . . .
+/mf >4B /mp . . .
 4B 6r 12B 2r
-^4B . . 4r
+>4B . . 4r
 
 // Line 3
-^4B ^4b 4r .
-/ff ^4B /mf . . .
+>4B >4b 4r .
+/mf >4B /mp . . .
 4B 6r 12B 2r
-/ff ^4B /mf . . .
+/mf >4B /mp . . .
 
 // Line 4
-/ff ^4B /mf . . .
-/ff ^4B /mf . . .
+/mf >4B /mp . . .
+/mf >4B /mp . . .
 4B 6r 12B 2r
-^4B . . 4r
+>4B . . 4r
 
 
 // Line 5
-/ff ^4B /mf . . .
-/ff ^4B /mf . . .
+/mf >4B /mp . . .
+/mf >4B /mp . . .
 4B 6r 12B 4r 6r 12B
-/ff ^4B /mf . . .
+/mf >4B /mp . . .
 
 
 // Line 6
 4B 4r 4B 4r
 4B 4r 4B 4r
 4B 6r 12B 2R
-^4B . . 4r
+>4B . . 4r
 
 // Line 7
-^4B ^4b 6r 12B 4r
+>4B >4b 6r 12B 4r
 4B 6r 12B 2r
 4B . . 4r
-/ff ^4B /mf . . .
+/mf >4B /mp . . .
 
 // Line 8
 4B 4r 4b 4r
 4B 6r 12B 2r
-/ff ^4B /mf . . .
-^4B . . 4r
+/mf >4B /mp . . .
+>4B . . 4r
 

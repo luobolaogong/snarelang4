@@ -346,7 +346,7 @@ class Score {
           break;
         case NoteType.bassLeft:
         case NoteType.bassRight:
-          note.velocity += 10;
+          note.velocity -= 20;
           break;
         case NoteType.roll:
           break;
@@ -454,6 +454,7 @@ enum StaffId {
   pad,
   tenor, // possibly pitch based notes rather than having tenor1, tenor2, ...
   bass,
+  met,
   pipes
 }
 
@@ -484,7 +485,7 @@ StaffId staffStringToId(String staffString) {
     case 'snare':
       staffId = StaffId.snare;
       break;
-    case 'snareUnison':
+    case 'unison':
       staffId = StaffId.unison;
       break;
     case 'pad':
@@ -495,6 +496,10 @@ StaffId staffStringToId(String staffString) {
       break;
     case 'bass':
       staffId = StaffId.bass;
+      break;
+    case 'met':
+    case 'metronome':
+      staffId = StaffId.met;
       break;
     case 'pipes':
       staffId = StaffId.pipes;
@@ -519,6 +524,8 @@ String staffIdToString(StaffId id) {
       return 'tenor';
     case StaffId.bass:
       return 'bass';
+    case StaffId.met:
+      return 'met';
     case StaffId.pipes:
       return 'pipes';
     default:

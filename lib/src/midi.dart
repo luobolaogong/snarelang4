@@ -271,13 +271,14 @@ class Midi {
     }
 
 
-    // Add a track name
+    // Add a track name for track zero, which maybe will be called TempoMap if it's used that way
     var trackNameEvent = TrackNameEvent();
     // trackNameEvent.text = 'Snare'; // strangely puts this in the header, under the prop "name"
     // trackNameEvent.text = staff.id.toString(); // no, not for trackZero
     trackNameEvent.text = 'TempoMap'; // just a guess.  Used for anything?
     trackNameEvent.deltaTime = 0;
     trackZeroEventsList.add(trackNameEvent);
+    print('added track name event to track zero: ${trackNameEvent.text}');
 
     // Add file creation meta data, like the program that created the midi file.
     var textEvent = TextEvent();
@@ -364,7 +365,7 @@ class Midi {
     //var noteChannel = 0; // what for?
     var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
 
-
+    // what the crud?  a trackNameEvent before any elements are read???
     // // Add a track name to see if it helps keep things straight
     if (overrideStaff != null) { // ?????  what good does this do?  Maybe if there's no track designation given in the score we use this one as the first element of a new track?
       var trackNameEvent = TrackNameEvent();
@@ -387,7 +388,7 @@ class Midi {
         //   print('In addMidiEventsToTracks and got a Staff element, and is either same as current, or this track is empty, so doing nothing with it and skipping it.');
         //   continue;
         // }
-        print('Oh, looks like we have a new Staff element and so it is time to close off the old track and add it to the list and start a new one.');
+        print('New Staff element ${element.id}');
 
         // do something here to change the patch or channel or something so the soundfont can be accessed correctly?
         if (element.id == StaffId.pad) {
@@ -402,7 +403,7 @@ class Midi {
         if (trackEventsList.isNotEmpty) {
           var endOfTrackEvent = EndOfTrackEvent(); // this is new
           endOfTrackEvent.deltaTime = 0;
-          trackEventsList.add(endOfTrackEvent);
+          trackEventsList.add(endOfTrackEvent); // sure???????
           midiTracks.add(trackEventsList);
           trackEventsList = <MidiEvent>[]; // start a new one
           var trackNameEvent = TrackNameEvent();
@@ -410,6 +411,10 @@ class Midi {
           trackNameEvent.text = staffIdToString(element.id); // ??
           trackNameEvent.deltaTime = 0;  // time since the previous event?
           trackEventsList.add(trackNameEvent);
+          print('added track name events: ${trackNameEvent.text}');
+          if (trackNameEvent.text == staffIdToString(StaffId.unison)) { // THIS IS A TOTAL HACK.  Clear up this Staff/Track and Voice stuff.  Prob remove Voice, and make Unison an instrument
+            currentVoice = Voice.unison;
+          }
           continue;
         }
       }
@@ -459,7 +464,7 @@ class Midi {
     // Is this necessary?  Was working fine without it.
     var endOfTrackEvent = EndOfTrackEvent(); // this is new too.  One above like it
     endOfTrackEvent.deltaTime = 0;
-    trackEventsList.add(endOfTrackEvent);
+    trackEventsList.add(endOfTrackEvent); // quite sure???
 
     midiTracks.add(trackEventsList); // right?
     // return trackEventsList;
@@ -513,7 +518,7 @@ class Midi {
     switch (note.noteType) {
       case NoteType.tapRight:
         noteNumber = 60;
-        if (voice == Voice.unison) {
+        if (voice == Voice.unison) { // get rid of this voice stuff and just make the unison its own noteType
           noteNumber = 20;
         }
         break;
@@ -523,7 +528,7 @@ class Midi {
       case NoteType.tapLeft:
         noteNumber = 70;
         if (voice == Voice.unison) {
-          noteNumber = 20;
+          noteNumber = 30;
         }
         break;
     // case NoteType.flamUnison:
@@ -542,7 +547,7 @@ class Midi {
       case NoteType.flamLeft:
         noteNumber = 71;
         if (voice == Voice.unison) {
-          noteNumber = 21;
+          noteNumber = 31;
         }
         // graceOffset = 1234; // test
         break;
@@ -558,14 +563,14 @@ class Midi {
       case NoteType.dragLeft:
         noteNumber = 72;
         if (voice == Voice.unison) {
-          noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
+          noteNumber = 31;// wrong, but don't have a drag recorded yet by SLOT
         }
         break;
       case NoteType.bassRight:
         noteNumber = 10; // temp until find out soundfont problem
         break;
       case NoteType.bassLeft:
-        noteNumber = 11;
+        noteNumber = 10;
         break;
     // case NoteType.rollUnison:
     //   noteNumber = 23; // this one is looped.  This is called RollSlot
@@ -576,7 +581,7 @@ class Midi {
           noteNumber = 67; // this one is looped but not quick enough?
         }
         if (voice == Voice.unison) {
-          noteNumber = 23;// wrong?
+          noteNumber = 23;
         }
         break;
       case NoteType.buzzLeft:
@@ -586,15 +591,21 @@ class Midi {
           noteNumber = 77; // this one is looped, but not quick enough????
         }
         if (voice == Voice.unison) {
-          noteNumber = 23;// wrong, but don't have a drag recorded yet by SLOT
+          noteNumber = 33;
         }
         break;
     // Later add SLOT Tuzzes, they have lots in the recording
       case NoteType.tuzzLeft:
         noteNumber = 74;
+        if (voice == Voice.unison) {
+          noteNumber = 34;// wrong
+        }
         break;
       case NoteType.tuzzRight:
         noteNumber = 64;
+        if (voice == Voice.unison) {
+          noteNumber = 24;// wrong
+        }
         break;
       case NoteType.ruff2Left:
         noteNumber = 75;
@@ -610,6 +621,9 @@ class Midi {
         break;
       case NoteType.roll:
         noteNumber = 40;
+        if (voice == Voice.unison) {
+          noteNumber = 37;// wrong
+        }
         break;
       case NoteType.met: // new
         noteNumber = 1;
