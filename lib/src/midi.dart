@@ -566,6 +566,12 @@ class Midi {
           noteNumber = 31;// wrong, but don't have a drag recorded yet by SLOT
         }
         break;
+      case NoteType.tenorRight:
+        noteNumber = 16;
+        break;
+      case NoteType.tenorLeft:
+        noteNumber = 16;
+        break;
       case NoteType.bassRight:
         noteNumber = 10; // temp until find out soundfont problem
         break;

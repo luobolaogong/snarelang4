@@ -1,0 +1,128 @@
+// Captain Norman Orr Ewing
+// 2/4 March
+// J. Reid Maxwell
+// Nov 8, 2017
+// This is the lead snare part.  I don't think there are chips parts to this one.
+// There's some notation about 1st and 2nd endings, which are a bit confusing.
+
+/staff snare
+/time 2/4 // these two lines can be in other files too, but must match
+/tempo 70    // not sure.  Recording is around 68-70
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
+
+// Roll off
+/f
+24Z . . . . .   . . . . . . 2T
+24Z . . . . .   . . . . . . 4T 8r 12T 24t
+
+// Line 1
+24Z . . 8t  8F 12T 24t
+24Z . . . . . 8T .
+24Z . . . . 24t  40X 20z . 40x 20z .
+24t . . 40x 20Z .  8T 12T 24t
+
+// Line 2
+24Z . . 8t  8F 12T 24t
+24Z . . . . . 8T .
+12F 24t 24T . >24T  12t 24F 12t 24t
+24Z . . . . .  8T 12T 24t
+
+// (repeat lines 1 and 2:)
+
+// Line 1
+24Z . . 8t  8F 12T 24t
+24Z . . . . . 8T .
+24Z . . . . 24t  40X 20z . 40x 20z .
+24t . . 40x 20Z .  8T 12T 24t
+
+// Line 2
+24Z . . 8t  8F 12T 24t
+24Z . . . . . 8T .
+12F 24t 24T . >24T  12t 24F 12t 24t
+24Z . . . . .  8T 24T 12t
+
+
+// Line 3
+12F 24t 12t >30t . . . . >8T
+24Z . . 8t  24Z . . 24t . .
+8F 12r 24t  24Z . . 8t
+8F 24Z . . 40x 20Z . 32T . . .
+
+// Line 4
+>12T 24t 12T >30t . . . . >12T >32t
+32t . . >32t . . . >24t  >8T .
+12F 24 t 24t . >24T  12t 24F 12t 24t
+24Z . . . . . 8T 24T 12t
+
+// repeat of lines 3 and 4
+
+
+// Line 3
+12F 24t 12t >30t . . . . >8T
+24Z . . 8t  24Z . . 24t . .
+8F 12r 24t  24Z . . 8t
+8F 24Z . . 40x 20Z . 32T . . .
+
+// Line 4
+>12T 24t 12T >30t . . . . >12T >32t
+32t . . >32t . . . >24t  >8T .
+12F 24 t 24t . >24T  12t 24F 12t 24t
+24Z . . . . . 8T 24Z . 24t
+
+// Line 5
+40x 20z . 40X 20z . 24t . . 8F
+24Z . . . . .  40X 20z 20z 24Z . 24t
+40X 20z . 24z . 24t  12T 24t 12F >30t
+30T . . . >40X 20z . 8t  24Z . 24t
+
+// Line 6
+40x 20z . 40X 20z . 24t . . 8F
+24Z . . . . . 8T .
+12F 24t . . >24T  12t 24F 12t 24t
+24Z . . . . . 8T 24Z . 24T
+
+// repeat lines 5 and 6
+
+40x 20z . 40X 20z . 24t . . 8F
+24Z . . . . .  40X 20z 20z 24Z . 24t
+40X 20z . 24z . 24t  12T 24t 12F >30t
+30T . . . >40X 20z . 8t  24Z . 24t
+
+// Line 6
+40x 20z . 40X 20z . 24t . . 8F
+24Z . . . . . 8T .
+12F 24t . . >24T  12t 24F 12t 24t
+24Z . . . . . 8T 32t . . .
+
+// Line 7
+40X 20z . 8t  24T . . 8f
+4F 24Z . . . . 24t
+40X 20z . 24z . >24t  12T 24t 12F >30t
+30T . . . >12T 24t 24Z . . 24t . .
+
+// Line 8
+12F >32t . . . >32t . . . 24t >8T    // not sure
+24Z . . . . . 24T . . 8f
+12F 24t . . >24T  12t 24F 12t 24t
+24Z . . . . . 8T 32T . . .
+
+// repeat lines 7 and 8
+// Line 7
+40X 20z . 8t  24T . . 8f
+4F 24Z . . . . 24t
+40X 20z . 24z . >24t  12T 24t 12F >30t
+30T . . . >12T 24t 24Z . . 24t . .
+
+// Line 8
+12F >32t . . . >32t . . . 24t >8T    // not sure
+24Z . . . . . 24T . . 8f
+12F 24t . . >24T  12t 24F 12t 24t
+24Z . . . . . 8T 8r
+
+

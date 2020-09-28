@@ -1,0 +1,78 @@
+// Captain Norman Orr Ewing
+// Metronome only
+
+/staff metronome
+/time 2/4 // yes both of these lines can be here and in snare score
+/tempo 70    // not sure
+
+// Set the beat
+/fff
+8M . . .
+4M . . .
+
+/ff
+// "To the right, quick march"
+4M . . .
+
+// Roll off
+4M . . . . . . .
+
+/mf
+// Line 1
+4M . . . . . . .
+
+// Line 2
+4M . . . . . . .
+
+// repeat lines 1 and 2
+// Line 1
+4M . . . . . . .
+
+// Line 2
+4M . . . . . . .
+
+
+// Line 3
+4M . . . . . . .
+
+// Line 4
+4M . . . . . . .
+
+// repeat lines 3 and 4
+
+// Line 3
+4M . . . . . . .
+
+// Line 4
+4M . . . . . . .
+
+
+// Line 5
+4M . . . . . . .
+
+// Line 6
+4M . . . . . . .
+
+// repeat lines 5 and 6
+
+// Line 5
+4M . . . . . . .
+
+// Line 6
+4M . . . . . . .
+
+
+// Line 7
+4M . . . . . . .
+
+// Line 8
+4M . . . . . . .
+
+// repeat lines 7 and 8
+
+// Line 7
+4M . . . . . . .
+
+// Line 8
+4M . . . . . . .
+

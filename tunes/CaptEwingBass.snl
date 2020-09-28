@@ -1,0 +1,123 @@
+//Captain Normon Orr Ewing
+// 2/4 March
+//
+
+/staff bass
+/time 2/4 // these two lines can be in other files too, but must match
+//tempo 70    // not sure
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
+
+
+/f
+
+4B . . 4r
+4B . . 4r
+
+// Line 1
+8B . 4B
+4B .
+4B 8B .
+8r 8B 4b
+
+//Line 2
+8B . 4B
+4B .
+4B 4r
+4B .
+
+// repeat lines 1 & 2
+
+// Line 1
+8B . 4B
+4B .
+4B 8B .
+8r 8B 4b
+
+//Line 2
+8B . 4B
+4B .
+4B 4r
+4B .
+
+// Line 3
+6B 24r 24b  8r 8B
+8B . 4B
+4B 8B .
+8B . 4B
+
+// Line 4
+4B 4r 2r
+4B 4r
+4B .
+
+// repeat of lines 3 and 4
+
+// Line 3
+6B 24r 24b  8r 8B
+8B . 4B
+4B 8B .
+8B . 4B
+
+// Line 4
+4B 4r 2r
+4B 4r
+4B .
+
+// Line 5
+8B . . .
+4B .
+4B 4r
+8r 8B 4b
+
+// Line 6
+8B . . .
+4B .
+4B 4r
+4B .
+
+//  repeat of lines 5 and 6
+
+// Line 5
+8B . . .
+4B .
+4B 4r
+8r 8B 4b
+
+// Line 6
+8B . . .
+4B .
+4B 4r
+4B .
+
+// Line 7
+8B . 8r 8b
+4B 4r
+6B 24r 24b  8r 8B
+8r 8B 4b
+
+// Line 8
+4B 4r
+4B 8B .
+4B 4r
+4B .
+
+// repeat of lines 7 and 8
+
+// Line 7
+8B . 8r 8b
+4B 4r
+6B 24r 24b  8r 8B
+8r 8B 4b
+
+// Line 8
+4B 4r
+4B 8B .
+4B 4r
+4B .
+

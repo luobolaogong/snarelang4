@@ -344,6 +344,10 @@ class Score {
         case NoteType.ruff3Left:
         case NoteType.ruff3Right:
           break;
+        case NoteType.tenorLeft:
+        case NoteType.tenorRight:
+          note.velocity -= 20;
+          break;
         case NoteType.bassLeft:
         case NoteType.bassRight:
           note.velocity -= 20;

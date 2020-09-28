@@ -55,6 +55,8 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   ruff3Right,
   ruff3Unison,
   roll, // prob need to add roll recordings for snare and pad.  Currently only have SLOT recording I think
+  tenorLeft,
+  tenorRight,
   bassLeft,
   bassRight,
   met,
@@ -138,6 +140,12 @@ class Note {
         break;
       case NoteType.ruff3Left:
         noteType = NoteType.ruff3Right;
+        break;
+      case NoteType.tenorRight:
+        noteType = NoteType.tenorLeft;
+        break;
+      case NoteType.tenorLeft:
+        noteType = NoteType.tenorRight;
         break;
       case NoteType.bassRight:
         noteType = NoteType.bassLeft;
@@ -227,7 +235,7 @@ Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberPars
 ///
 /// TypeParser
 ///
-Parser typeParser = pattern('TtFfDdZzXxYyVvRMBbr.').trim().map((value) { // trim?
+Parser typeParser = pattern('TtFfDdZzXxYyVvRMNnBbr.').trim().map((value) { // trim?
   //log.info('\nIn TypeParser');
   NoteType noteType;
   switch (value) {
@@ -279,11 +287,17 @@ Parser typeParser = pattern('TtFfDdZzXxYyVvRMBbr.').trim().map((value) { // trim
     case 'M':
       noteType = NoteType.met;
       break;
-    case 'B':
+    case 'B': // wrong to give an instrument just a note type like this because then you can't specify flams, rolls, and other strokes
       noteType = NoteType.bassRight;
       break;
-    case 'b':
+    case 'b':  // wrong to give an instrument just a note type like this because then you can't specify flams, rolls, and other strokes
       noteType = NoteType.bassLeft;
+      break;
+    case 'N': // wrong to give an instrument just a note type like this because then you can't specify flams, rolls, and other strokes
+      noteType = NoteType.tenorRight;
+      break;
+    case 'n':  // wrong to give an instrument just a note type like this because then you can't specify flams, rolls, and other strokes
+      noteType = NoteType.tenorLeft;
       break;
     case 'r':
       noteType = NoteType.rest;
