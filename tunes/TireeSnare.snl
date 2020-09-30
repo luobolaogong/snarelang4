@@ -6,18 +6,23 @@
 // You can load them both in on the command line as in
 // --input=tunes/Tiree.snl,tunes/TireeSnareChips.snl
 
-/time 2/2
-/tempo 2=72
 /staff snare
 
-//4T . 8T . . .
-//4V . . . 8V . . . . . . .
-//4V . . . 8V . . . . . . .
-// Metronome
-1r . .
+/time 2/2
+/tempo 2=72
 
+/ff
+// Get attention and set the beat
+2r . . . 1r . . .
+// By the right, quick march
+1r . . .
+
+
+// Roll off
 12Z . . . . .   . . . . . . 1T
 12Z . . . . .   . . . . . . 1T
+
+
 
 /f
 

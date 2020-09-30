@@ -4,15 +4,51 @@
 // Nov 8, 2017
 // This is the lead snare part.  I don't think there are chips parts to this one.
 // There's some notation about 1st and 2nd endings, which are a bit confusing.
+// And I now see I did it wrong, so I have to change this.  First part mostly/only I think.
+// Also, don't muffle tenor drum when there are rests.  The score has rests pretty much just for counting ease.
 
-
-// FIX DYNAMICS.  ADD CRESCENDOS
-
-
+// Changed Tuzzes to even notes, not 40X 20z 20Z but >24X 24z 24Z
+// But if don't use tuzzes, then it would be 40T 20z 20Z
+// I guess it maybe depends on if I want to teach strokes, and then the
+// the 40T 20z 20Z way, because there's no such thing as 40X 20z 20z
+// in real playing.  I mean, yeah it's okay to teach 24 24 24 but
+// to play it correctly it's more like 40T 20z 20Z.
 
 /staff snare
 /time 2/4 // these two lines can be in other files too, but must match
 /tempo 70    // not sure.  Recording is around 68-70
+
+
+
+// What about tuzzes?  Do that 5 subdivision thing in space of 3 (20t 40z 40z)?  Or subdivide by 2 (8X 8z)?
+// If no tuzz recording then do that subdivide by 5 (Xx.x.)or by 7 or
+// What do tuzzes sound like?
+
+//24T . . . . .
+
+// Tuzzes as 24 24 24 sound better than tap buzzes at 40 20 20
+//24Z . . . . 24t  >24X 24z . >24x 24z .
+//24Z . . . . 24t  >24X 24z . >24x 24z .
+//24Z . . . . 24t  24X 24z . 24x 24z .
+//24Z . . . . 24t  24X 24z . 24x 24z .
+
+// non-tuzzes, but these don't sound so bad either:
+//24Z . . . . 24t  40T 20z . 40t 20z .
+//24Z . . . . 24t  40T 20z . 40t 20z .
+//24Z . . . . 24t  40T 20z . 40t 20z .
+//24Z . . . . 24t  40T 20z . 40t 20z .
+
+
+
+//56T 28z 14Z 56t 28Z 14z
+//24T 24z . 24t 24Z .
+
+
+
+
+
+
+
 
 // Wait for met to establish tempo
 8r . . .
@@ -31,8 +67,8 @@
 // Line 1
 /cresc 24Z . . 8t /fff /f  8F 12T 24t
 /cresc 24Z . . . . . 8T /fff /mf .
-/cresc 24Z . . . . 24t  40X 20z . 40x 20z .
-24t /fff /mf . . /cresc 40x 20Z .  8T /fff /mf 12T 24t
+/cresc 24Z . . . . 24t  >24X 24z . >24x 24Z .
+24t /fff /mf . . /cresc >24x 24Z .  8T /fff /mf 12T 24t
 
 // Line 2
 /cresc 24Z . . 8t  /fff /mf 8F 12T 24t
@@ -45,8 +81,8 @@
 // Line 1
 /cresc 24Z . . 8t  /fff /mf 8F 12T 24t
 /cresc 24Z . . . . . 8T /fff /mf .
-/cresc 24Z . . . . 24t  40X 20z . 40x 20z .
-24t /fff /mf . . /cresc 40x 20Z .  8T /fff /mf 12T 24t
+/cresc 24Z . . . . 24t  >24X 24z . >24x 24Z .
+24t /fff /mf . . /cresc >24x 24Z .  8T /fff /mf 12T 24t
 
 // Line 2
 /cresc 24Z . . 8t /fff /mf  8F 12T 24t
@@ -59,7 +95,7 @@
 12F 24t 12t >30t . . . . >8T
 /cresc 24Z . . 8t  /fff /mf 24Z . . 24t /fff /mf . .
 8F 12r 24t  /cresc 24Z . . 8t /fff /mf
-8F /cresc 24Z . . 40x 20Z . 32T . . .
+8F /cresc 24Z . . >24x 24Z . 32T . . .
 
 // Line 4
 >12T /fff /mf 24t 12T >30t . . . . >12T >32t
@@ -74,7 +110,7 @@
 12F 24t 12t >30t . . . . >8T
 /cresc 24Z . . 8t  /fff /mf /cresc 24Z . . 24t . .
 8F /fff /mf 12r 24t  /cresc 24Z . . 8t /fff /mf
-8F /cresc 24Z . . 40x 20Z . 32T . . .
+8F /cresc 24Z . . >24x 24Z . 32T . . .
 
 // Line 4
 >12T /fff /mf 24t 12T >30t . . . . >12T >32t
@@ -83,47 +119,47 @@
 /cresc 24Z . . . . . 8T /fff /mf /cresc 24Z . 24t
 
 // Line 5
-/fff /mf /cresc 40x 20z . 40X 20z . 24t . . 8F /fff /mf
-/cresc 24Z . . . . .  40X 20z 20z 24Z . 24t
-40X 20z . 24z . 24t  12T /fff /mf 24t 12F >30t
-30T . . . /cresc >40X 20z . 8t  24Z . 24t
+/fff /mf /cresc >24X 24z . >24x 24Z . 24t . . 8F /fff /mf
+/cresc 24Z . . . . .  >24X 24z 24z 24Z . 24t
+>24X 24z . 24z . 24t  12T /fff /mf 24t 12F >30t
+30T . . . /cresc >24X 24z . 8t  24Z . 24t
 
 // Line 6
-40x 20z . 40X 20z . 24t . . 8F /fff /mf
+>24X 24z . >24x 24Z . 24t . . 8F /fff /mf
 /cresc 24Z . . . . . 8T /fff /mf .
 12F 24t . . >24T  12t 24F 12t 24t
 /cresc 24Z . . . . . 8T /fff /mf /cresc 24Z . 24T
 
 // repeat lines 5 and 6
 
-40x 20z . 40X 20z . 24t . . 8F /fff /mf
-/cresc 24Z . . . . .  40X 20z 20z 24Z . 24t
-40X 20z . 24z . 24t  12T /fff /mf 24t 12F >30t
-30T . . . /cresc >40X 20z . 8t  /fff /mf /cresc 24Z . 24t
+>24X 24z . >24x 24Z . 24t . . 8F /fff /mf
+/cresc 24Z . . . . .  >24X 24z . . . 24t
+>24X 24z . 24z . 24t  12T /fff /mf 24t 12F >30t
+30T . . . /cresc >24X 24z . 8t  /fff /mf /cresc 24Z . 24t
 
 // Line 6
-40x 20z . 40X 20z . 24t . . 8F /fff /mf
+>24X 24z . >24x 24Z . 24t . . 8F /fff /mf
 /cresc 24Z . . . . . 8T /fff /mf .
 12F 24t . . >24T  12t 24F 12t 24t
 /cresc 24Z . . . . . 8T /fff /mf 32t . . .
 
 // Line 7
-/cresc 40X 20z . 8t /fff /mf  24T . . 8f
+/cresc >24X 24z . 8t /fff /mf  24T . . 8f
 4F /cresc 24Z . . . . 24t
-40X 20z . 24z . >24t  12T 24t 12F >30t /fff /mf
-30T . . . >12T 24t 24Z . . 24t . .
+>24X 24z . 24z . >24t  12T 24t 12F >30t /fff /mf
+30T . . . >12T 24t /cresc 24Z . . 24t . .
 
 // Line 8
-12F >32t . . . >32t . . . 24t >8T    // not sure
+12F /fff /mf >32t . . . >32t . . . 24t >8T    // not sure
 /cresc 24Z . . . . . 24T . . 8f /fff /mf
 12F 24t . . >24T  12t 24F 12t 24t
 /cresc 24Z . . . . . 8T /fff /mf 32T . . .
 
 // repeat lines 7 and 8
 // Line 7
-/cresc 40X 20z . 8t /fff /mf  24T . . 8f
+/cresc >24X 24z . 8t /fff /mf  24T . . 8f
 4F /cresc 24Z . . . . 24t
-40X 20z . 24z . >24t  12T /fff /mf 24t 12F >30t
+>24X 24z . 24z . >24t  12T /fff /mf 24t 12F >30t
 30T . . . >12T 24t /cresc 24Z . . 24t . .
 
 // Line 8

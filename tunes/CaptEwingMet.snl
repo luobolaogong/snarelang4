@@ -6,18 +6,18 @@
 /tempo 70    // not sure
 
 // Set the beat
-/fff
+/mf
 8M . . .
 4M . . .
 
-/ff
+/mf
 // "To the right, quick march"
 4M . . .
 
 // Roll off
 4M . . . . . . .
 
-/mf
+/mp
 // Line 1
 4M . . . . . . .
 

@@ -1,0 +1,67 @@
+// Captain Lachlan McPhail of Tiree
+// Tenor
+
+/staff tenor
+/time 2/2
+/tempo 2=72
+
+/ff
+// Get attention and set the beat
+2r . . . 1r . . .
+// By the right, quick march
+1r . . .
+
+/mf
+
+// Roll off
+2N . 1N 2N . 1N
+
+// Line 1
+>4N . . .
+>4N . . .
+>4N . . .
+>4N . 6N 3n
+
+// Line 2
+2N .
+2N .
+3N 12r 3n 6N 12n
+>4N . . 4r
+
+// Line 3
+>4N >2n 4r
+>4N . . .
+6N 12n     6r 6N 12r 6N 12r 12n
+>4N . 12N 24n 4r
+
+
+// Line 4
+4N 4r 4N 4r
+4n 4r 4n 4r
+4N 12r 24n  12r 12N 24n 24r
+>4N . . 4r
+
+// Line 5
+>4N . . .
+>4N . . .
+4N 12r 24n  12r 12N 24n 24r
+>4N . 12N 24n 4r
+
+
+// Line 6
+4N 4r 2r
+4N 4r 2r
+4N 12r 24n  12r 12N 24n 24r
+>4N . . 4r
+
+// Line 7
+4N 4n 12r 24N 4r
+4N 12r 24n 12r 12N 24n 24r
+4N . . 4r
+>4N . 12N 24n 4r
+
+// Line 8
+4N 4r 4n 4r
+4N 12r 24n 12r 12N 24n 24r
+12r 12N 12n      12r 12N 24n 24r
+>4N . . 4r

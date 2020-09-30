@@ -57,7 +57,7 @@ class Score {
       log.fine('Parsing file $filePath');
       var inputFile = File(filePath);
       if (!inputFile.existsSync()) {
-        log.warning('File does not exist at ${inputFile.path}');
+        log.warning('File does not exist at "${inputFile.path}"');
         continue;
       }
       var fileContents = inputFile.readAsStringSync(); // per line better?
@@ -346,11 +346,11 @@ class Score {
           break;
         case NoteType.tenorLeft:
         case NoteType.tenorRight:
-          note.velocity -= 20;
+          note.velocity += 20;
           break;
         case NoteType.bassLeft:
         case NoteType.bassRight:
-          note.velocity -= 20;
+          note.velocity += 40;
           break;
         case NoteType.roll:
           break;

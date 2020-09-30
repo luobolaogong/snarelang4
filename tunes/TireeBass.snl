@@ -1,16 +1,17 @@
 // Captain Lachlan McPhail of Tiree
 // Bass
 
-/time 2/2
-/tempo 2=76
 /staff bass
+/time 2/2
+/tempo 2=72
+
+/ff
+// Get attention and set the beat
+2r . . . 1r . . .
+// By the right, quick march
+1r . . .
+
 /mf
-
-// Set the beat
-4r . . .
-
-// To the right, quick march
-2r . . .
 
 // Roll off
 2B . 1B 2B . 1B
@@ -50,7 +51,7 @@
 // Line 6
 4B 4r 4B 4r
 4B 4r 4B 4r
-4B 6r 12B 2R
+4B 6r 12B 2r
 >4B . . 4r
 
 // Line 7

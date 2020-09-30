@@ -275,7 +275,8 @@ class Midi {
     var trackNameEvent = TrackNameEvent();
     // trackNameEvent.text = 'Snare'; // strangely puts this in the header, under the prop "name"
     // trackNameEvent.text = staff.id.toString(); // no, not for trackZero
-    trackNameEvent.text = 'TempoMap'; // just a guess.  Used for anything?
+    // trackNameEvent.text = 'TempoMap'; // just a guess.  Used for anything?
+    trackNameEvent.text = 'TrackZero';
     trackNameEvent.deltaTime = 0;
     trackZeroEventsList.add(trackNameEvent);
     print('added track name event to track zero: ${trackNameEvent.text}');
@@ -365,13 +366,13 @@ class Midi {
     //var noteChannel = 0; // what for?
     var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
 
-    // what the crud?  a trackNameEvent before any elements are read???
-    // // Add a track name to see if it helps keep things straight
+    // what the crud?  a trackNameEvent before any elements are read???  Where did that come from?  From default value looks like.
+    // Does this mean we want to be ready to add a track name at the start of a track if there wasn't such a name and we're gunna put something else in?
     if (overrideStaff != null) { // ?????  what good does this do?  Maybe if there's no track designation given in the score we use this one as the first element of a new track?
       var trackNameEvent = TrackNameEvent();
-      trackNameEvent.text = staffIdToString(overrideStaff.id); // only useful if nothing specified at start of score, right?
+      trackNameEvent.text = staffIdToString(overrideStaff.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
       trackNameEvent.deltaTime = 0;
-      //trackEventsList.add(trackNameEvent);
+      //trackEventsList.add(trackNameEvent); // missing this line causes "imported MIDI" to be track name???????????????????
       if (overrideStaff.id == StaffId.pad) { // total shot in the dark
         usePadSoundFont = true;
       }
@@ -380,16 +381,18 @@ class Midi {
       }
     }
 
-    //bool startNewTrack = false;
+    // Go through the elements, seeing what each one is, and add it to the current track if right kind of element
     for (var element in elements) {
-      if (element is Staff) { // I do not trust the logic in this section.  Revisit later
+      if (element is Staff) { // I do not trust the logic in this section.  Revisit later.  Does this mean that we'd better have a Staff command at the start of a score?????????????  Bad idea/dependency
         // // if (staff.id == currentStaff.id || midiTracks.isEmpty) {
         // if (midiTracks.isEmpty) {
         //   print('In addMidiEventsToTracks and got a Staff element, and is either same as current, or this track is empty, so doing nothing with it and skipping it.');
         //   continue;
         // }
         print('New Staff element ${element.id}');
-
+        if (element.id == StaffId.met) {
+          print('stop here, we need to add the name of the track, which should be met');
+        }
         // do something here to change the patch or channel or something so the soundfont can be accessed correctly?
         if (element.id == StaffId.pad) {
           usePadSoundFont = true;
@@ -398,28 +401,34 @@ class Midi {
           usePadSoundFont = false;
         }
         //
-        // Close off the old track, and add it to the list, then start a new track
+        // At this point we have a current track which may or may not have anything in it except maybe a track name event.
+        // (Check that out)
+        // Whether it does or doesn't, close it and add it (maybe), and start a new track and put the name into it.
         //
         if (trackEventsList.isNotEmpty) {
           var endOfTrackEvent = EndOfTrackEvent(); // this is new
           endOfTrackEvent.deltaTime = 0;
           trackEventsList.add(endOfTrackEvent); // sure???????
+
           midiTracks.add(trackEventsList);
           trackEventsList = <MidiEvent>[]; // start a new one
+        }
           var trackNameEvent = TrackNameEvent();
           // trackNameEvent.text = staffIdToString(overrideStaff.id); // ??
-          trackNameEvent.text = staffIdToString(element.id); // ??
+          trackNameEvent.text = staffIdToString(element.id); // ????????????????????????????????????????????????????????????????????????????????????????????????
           trackNameEvent.deltaTime = 0;  // time since the previous event?
           trackEventsList.add(trackNameEvent);
           print('added track name events: ${trackNameEvent.text}');
           if (trackNameEvent.text == staffIdToString(StaffId.unison)) { // THIS IS A TOTAL HACK.  Clear up this Staff/Track and Voice stuff.  Prob remove Voice, and make Unison an instrument
             currentVoice = Voice.unison;
           }
-          continue;
-        }
+          //continue; // was here, moved down
+        //}
+        continue; // new here
       }
       if (element is Voice) { // may get rid of Voice, since starting to develop tracks
         currentVoice = element; // ????
+        continue; // new
       }
       if (element is Note) {
         // addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
@@ -450,12 +459,16 @@ class Midi {
         addTempoChangeToTrackEventsList(tempo, trackEventsList);
         continue;
       }
-      if (element is TimeSig) { // what?  comment????
+      if (element is TimeSig) { // THIS IS WRONG.  SHOULD BE 2/2  not 2/4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
         // addTimeSigChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
         addTimeSigChangeToTrackEventsList(element, trackEventsList);
         continue;
       }
-      log.fine('have something else not putting into the track: ${element.runtimeType}, $element');
+      if (element is Comment) {
+        log.finer('Not putting comment into track event list: ${element.comment}');
+        continue;
+      }
+      log.finer('have something else not putting into the track: ${element.runtimeType}, $element');
     } // end of list of events to add to snare track
 
     if (trackEventsList.isEmpty) {  // right here?????

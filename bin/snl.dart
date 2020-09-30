@@ -214,20 +214,29 @@ void main(List<String> arguments) {
   overrideDynamic ??= defaultDynamic;
   overrideStaff ??= defaultStaff;
 
-  // var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic); // last param nec???
-  var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo); // last param nec???
-  midiTracks.add(trackZeroEventList); // Can we add to this track 0 later, to add metronome or tempo ramps?
 
-  // Now try a simple metronome experiment
-  if (nBarsMetronome != null && nBarsMetronome > 0) { // cheap cheap cheap
-    var metronomeNote = Note();
-    metronomeNote.duration = NoteDuration(); // this is silly
-    metronomeNote.duration.firstNumber = overrideTempo.noteDuration.firstNumber; // totally wrong
-    metronomeNote.duration.secondNumber = overrideTempo.noteDuration.secondNumber;
-    metronomeNote.velocity = 104;
-    var metronomeTrack = midi.createMidiEventsMetronomeTrack(nBarsMetronome, overrideTempo, metronomeNote);
-    midiTracks.add(metronomeTrack); // Oh, add a new track to the midi
-  }
+
+  // Keep this for later when add tempoMap for accel/ritard
+  // // TrackZero is of questionable use at this time.  If we need it then it should probably be for just a tempoMap when I do accel/rit
+  // // var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic); // last param nec???
+  // var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo); // last param nec???
+  // midiTracks.add(trackZeroEventList); // Can we add to this track 0 later, to add metronome or tempo ramps?
+
+
+
+  // Probably will phase this out.  We don't metronome clicks with a loop.  We just make a separate track with written metronome notes
+  // // Now try a simple metronome experiment
+  // if (nBarsMetronome != null && nBarsMetronome > 0) { // cheap cheap cheap
+  //   var metronomeNote = Note();
+  //   metronomeNote.duration = NoteDuration(); // this is silly
+  //   metronomeNote.duration.firstNumber = overrideTempo.noteDuration.firstNumber; // totally wrong
+  //   metronomeNote.duration.secondNumber = overrideTempo.noteDuration.secondNumber;
+  //   metronomeNote.velocity = 104;
+  //   var metronomeTrack = midi.createMidiEventsMetronomeTrack(nBarsMetronome, overrideTempo, metronomeNote);
+  //   midiTracks.add(metronomeTrack); // Oh, add a new track to the midi
+  // }
+
+
   // No, next line should be addMidiEventsTracksToList
   //midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
   //var midiTrackEventsList = midi.createMidiTrackEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
