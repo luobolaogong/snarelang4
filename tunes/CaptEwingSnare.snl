@@ -2,91 +2,22 @@
 // 2/4 March
 // J. Reid Maxwell
 // Nov 8, 2017
-// This is the lead snare part.  I don't think there are chips parts to this one.
+// This is the lead snare part.  No chips part.
 
-// There's some notation about 1st and 2nd endings, which are a bit confusing.
-// And I now see I did it wrong, so I have to change this.  First part mostly/only I think.
 
-// Also, don't muffle tenor drum when there are rests.  The score has rests pretty much just for counting ease.
 
 // Also those 30th notes with a final 24th or whatever, leaves too much gap
 
-// Changed Tuzzes to even notes, not 40X 20z 20Z but >24X 24z 24Z
-// But if don't use tuzzes, then it would be 40T 20z 20Z
-// I guess it maybe depends on if I want to teach strokes, doing it
-// 40T 20z 20Z, because there's no such thing as the sequence 40X 20z 20Z
-// I mean, yeah it's okay to teach 24T 24z 24Z but
-// to play it correctly it's more like 40T 20z 20Z.
+// Debate on Tuzzes.  At this time I've decided to do this:
+// _40T 20z . _40t 20Z .
+// instead of this:
+// _24X 24z . _24x 24Z .
+// Because the second one cannot be played by a human, and the first is
+// teachable.
 
 /staff snare
 /time 2/4 // these two lines can be in other files too, but must match
 /tempo 70    // Target 70.  Recording is around 68-70
-
-
-
-// What about tuzzes?  Do that 5 subdivision thing in space of 3 (20t 40z 40z)?  Or subdivide by 2 (8X 8z)?
-// If no tuzz recording then do that subdivide by 5 (Xx.x.)or by 7 or
-// What do tuzzes sound like?
-
-// not good because buzzes don't last long enough
-//>72T 18z . >72t 18Z .
-//>72T 18z . >72t 18Z .
-//>72T 18z . >72t 18Z .
-//>72T 18z . >72t 18Z .
-
-
-// This one is pretty good, but not playable, and therefore not teachable
-//_24X 24z . _24x 24Z .
-//_24X 24z . _24x 24Z .
-//>24X 24z . >24x 24Z . // this is a bit better than marcato above
-//>24X 24z . >24x 24Z .
-
-// This one sound best, up to tempo, and playable.  Should have recorded at a slower tempo perhaps
-//_40T 20z . _40t 20Z . // I think this is the best one
-//_40T 20z . _40t 20Z .
-//>40T 20z . >40t 20Z . // accents a bit too loud
-//>40T 20z . >40t 20Z .
-
-
-// too much gap after the 20z, and need an accent on the 40T
-//40T 20z . 40t 20Z .
-//40T 20z . 40t 20Z .
-//40T 20z . 40t 20Z .
-//40T 20z . 40t 20Z .
-
-
-
-
-// These are too uneven
-//56T 56:3Z . 56t 56:3z .
-//56T 56:3Z . 56t 56:3z .
-
-//>56T 56:3Z . >56t 56:3z .
-//>56T 56:3Z . >56t 56:3z .
-
-//>24T . . >. . .
-//>24T . . >. . .
-
-// Tuzzes as 24 24 24 sound better than tap buzzes at 40 20 20
-//24Z . . . . 24t  >24X 24z . >24x 24z .
-//24Z . . . . 24t  >24X 24z . >24x 24z .
-//24Z . . . . 24t  24X 24z . 24x 24z .
-//24Z . . . . 24t  24X 24z . 24x 24z .
-
-// non-tuzzes, but these don't sound so bad either:
-//24Z . . . . 24t  40T 20z . 40t 20z .
-//24Z . . . . 24t  40T 20z . 40t 20z .
-//24Z . . . . 24t  40T 20z . 40t 20z .
-//24Z . . . . 24t  40T 20z . 40t 20z .
-
-
-
-//56T 28z 14Z 56t 28Z 14z
-//24T 24z . 24t 24Z .
-
-
-
-
 
 
 
@@ -104,17 +35,19 @@
 /cresc 24Z . . . . .   . . . . . . 2T /fff /mf
 /cresc 24Z . . . . .   . . . . . . 4T /fff /mf   8r 12T 24t
 
+
+
 /f
 // Line 1
 /cresc 24Z . . 8t /fff /f  8F 12T 24t
 /cresc 24Z . . . . . 8T /fff /mf .
 /cresc 24Z . . . . _24t  _40T 20z . _40t 20Z .
-24t /fff /mf . . /cresc  _40t 20Z .  8T /fff /mf 12T 24t
+_24t /fff /mf . . /cresc  _40t 20Z .  8T /fff /mf 12T 24t
 
 // Line 2
 /cresc 24Z . . 8t  /fff /mf 8F 12T 24t
 /cresc 24Z . . . . . 8T /fff /mf .
-12F 24t 24T . >24T  12t 24F 12t 24t
+12F 24t 24T . ^24T  12t 24F 12t 24t
 /cresc 24Z . . . . .  8T /fff /mf 12T 24t
 
 
@@ -122,12 +55,12 @@
 /cresc 24Z . . 8t  /fff /mf 8F 12T 24t
 /cresc 24Z . . . . . 8T /fff /mf .
 /cresc 24Z . . . . 24t  _40T 20z . _40t 20Z .
-24t /fff /mf . . /cresc  _40t 20Z .  8T /fff /mf 12T 24t
+_24t /fff /mf . . /cresc  _40t 20Z .  8T /fff /mf 12T 24t
 
 // Repeat of Line 2
 /cresc 24Z . . 8t /fff /mf  8F 12T 24t
 /cresc 24Z . . . . . 8T /fff /mf .
-12F 24t 24T . >24T  12t 24F 12t 24t
+12F 24t 24T . ^24T  12t 24F 12t 24t
 /cresc 24Z . . . . .  8T /fff /mf 24T 12t
 
 
@@ -139,7 +72,7 @@
 
 // Line 4
 >12T /fff /mf 24t 12T >30t . . . . >12T >32t
-32t . . >32t . . . >24t  >8T .
+32t . . >32t . . . >32t  >8T 96r 8t     // changed the 24 to a 32 to avoid gap, and had to add 96r
 12F 24 t 24t . >24T  12t 24F 12t 24t
 /cresc 24Z . . . . . 8T /fff /mf 24T 12t
 
@@ -148,40 +81,36 @@
 12F 24t 12t >30t . . . . >8T
 /cresc 24Z . . 8t  /fff /mf /cresc 24Z . . 24t . .
 8F /fff /mf 12r 24t  /cresc 24Z . . 8t /fff /mf
-8F /cresc 24Z . .  _40t 20Z . 32T . . . /fff /mf  // this line slightly different
+8F /cresc 24Z . .  _40t 20Z . 32T . . . /fff /f  // this line slightly different
 
 // repeat of line 2:
 /cresc 24Z . . 8t /fff /mf  8F 12T 24t
 /cresc 24Z . . . . . 8T /fff /mf .
-12F 24t 24T . >24T  12t 24F 12t 24t
+12F 24t 24T . ^24T  12t 24F 12t 24t
 /cresc 24Z . . . . .  8T /fff /mf 24T 12t
-
-
-
 
 // Line 5
 /fff /mf /cresc _40T 20z . _40t 20Z .  24t . . 8F /fff /mf
-/cresc 24Z . . . . .  _40T 20z 20z 24Z . 24t
+/cresc 24Z . . . . .  _40T 20z 20z 24Z . _24t
 _40t 20Z . 24z . 24t  12T /fff /mf 24t 12F >30t
 30T . . . /cresc  _40t 20Z . 8t  24Z . 24t
 
 // Line 6
 _40T 20z . _40t 20Z .  24t . . 8F /fff /mf
 /cresc 24Z . . . . . 8T /fff /mf .
-12F 24t . . >24T  12t 24F 12t 24t
+12F 24t . . ^24T  12t 24F 12t 24t
 /cresc 24Z . . . . . 8T /fff /mf /cresc 24Z . 24T
 
-// repeat lines 5 and 6
-
+// repeat line 5
 _40T 20z . _40t 20Z .  24t . . 8F /fff /mf
 /cresc 24Z . . . . .  _40T 20z . 24z . 24t
 _40T 20z . 24z . 24t  12T /fff /mf 24t 12F >30t
 30T . . . /cresc  _40t 20Z . 8t  /fff /mf /cresc 24Z . 24t
 
-// Line 6
+// Repeat of Line 6
 _40T 20z . _40t 20Z .  24t . . 8F /fff /mf
 /cresc 24Z . . . . . 8T /fff /mf .
-12F 24t . . >24T  12t 24F 12t 24t
+12F 24t . . ^24T  12t 24F 12t 24t
 /cresc 24Z . . . . . 8T /fff /mf 32t . . .
 
 // Line 7
@@ -191,22 +120,22 @@ _40T 20z . 24z . >24t  12T 24t 12F >30t /fff /mf
 30T . . . >12T 24t /cresc 24Z . . 24t . .
 
 // Line 8
-12F /fff /mf >32t . . . >32t . . . 24t >8T    // not sure
+//12F /fff /mf >32t . . . >32t . . . 24t >8T    // not sure
+12F /fff /mf >32t . . . >32t . . . 32t >8T 96r    // not sure
 /cresc 24Z . . . . . 24T . . 8f /fff /mf
-12F 24t . . >24T  12t 24F 12t 24t
+12F 24t . . ^24T  12t 24F 12t 24t
 /cresc 24Z . . . . . 8T /fff /mf 32T . . .
 
-// repeat lines 7 and 8
-// Line 7
+// Repeat of Line 7
 /cresc  _40t 20Z . 8t /fff /mf  24T . . 8f
 4F /cresc 24Z . . . . 24t
 _40T 20z . 24z . >24t  12T /fff /mf 24t 12F >30t
 30T . . . >12T 24t /cresc 24Z . . 24t . .
 
-// Line 8
+// Repeat of Line 8
 12F /fff /mf  >32t . . . >32t . . . 24t >8T    // not sure
 /cresc 24Z . . . . . 24T /fff /mf . . 8f
-12F /cresc 24t . . >24T  /fff /mf 12t 24F 12t 24t
+12F /cresc 24t . . ^24T  /fff /mf 12t 24F 12t 24t
 /cresc 24Z . . . . . 8T /fff 8r
 
 

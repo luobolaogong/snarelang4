@@ -36,7 +36,8 @@
 >6 12t 6T 12T 4f 12Z . .
 8t >16T . . . . .   6T 15f 15T . . .
 >6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >16t
-16T . . >16t 16T . . >12t  >4T  12T . .
+// 16T . . >16t 16T . . >12t  >4T  12T . .
+16T . . >16t 16T . . >16t  >4T 48r  12T . .
 
 // Line 3
 >4f >6F 24Z . 6T >15t . . . .
@@ -49,7 +50,7 @@
 >4T  >6F 24Z .  6T >15t . . . .
 >6T 12t 6T 24f 24t 12t . . 6f 12t
 >6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >16t
-16T . . >16t 16T . . >12t  >4T  .
+16T . . >16t 16T . . >16t  >4T 48r  4t
 
 // Line 5
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
@@ -61,7 +62,7 @@
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
 6t >15t . . . .  6T 15f 15T . . .
 >6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >16t
-16T . . >16t 16T . . >12t  >4T  .
+16T . . >16t 16T . . >16t  >4T 48r 4t
 
 // Line 7
 >6F 12t  >6F 12T  6t >15f 15T . . .
@@ -73,7 +74,7 @@
 >6F 12t  >6F 12T  6t >15f 15T . . .
 /cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
 >6T 24Z . 6T /cresc >15T 15T . . .  6T /ff >16t
-16T . . ^16t 16T . . ^12t  ^2T
+16T . . ^16t 16T . . ^16t  ^2T 48r
 
 
 // We should do an "include 'tireeSnareChips.snl'" here, rather than put it here.

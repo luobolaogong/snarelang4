@@ -1,0 +1,83 @@
+// Captain Lachlan McPhail of Tiree
+// Snare unison part
+// The regular lead snare is the file Tiree.snl
+// Since this file is kinda meant to go with the lead snare part, I don't know
+// what would happen if you also had the tempo and timesig stuff in this file, as in
+//   /time 2/2
+//   /tempo 2=76
+// It should work, but I haven't checked, because what if you have a different tempo or timesig
+// here than there?
+
+// This chips soundfont sounds bad.  Perhaps modify my snare sound somehow to make it fatter.
+// Perhaps modify the pitch slightly, and spread out the balance somehow.  Don't know how to
+// make a stereo image work in a sound font.  I know you can set the balance for each mono recording,
+// but how do you make a stereo image with one track?
+
+/staff unison
+
+/time 2/2
+/tempo 2=72
+
+/ff
+// Get attention and set the beat
+2r . . . 1r . . .
+// By the right, quick march
+1r . . .
+
+
+// Roll off
+
+12Z . . . . .   . . . . . . 1T
+12Z . . . . .   . . . . . . 1T
+
+
+
+/f
+
+// Line 1
+>6F 12t 6T 12T 4f 4r
+2r    6r 15f 15T . . .
+>6T 12t 6T 12T 4f 4F
+6r 12r 6F 12t       6T 15f 15T . . .
+
+// Line 2
+>6 12t 6T 12T 4f 12Z . .
+8t >16T . . . . .   6T 15f 15T . . .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >16t
+16T . . >16t 16T . . >16t  >4T 48r  12T . .
+
+// Line 3
+>4f >6F 24r . 6r 15r . . . .
+>6T 12t 6T 24r 24r 12r . . 6r 12r
+4F  24F 24T 12t .  6t 12t  6F 24r .
+6r 12r  6F 12t  6T 15f T . . .
+
+// Line 4
+>4T  >6F 24Z .  6T >15t . . . .
+>6T 12t 6T 24f 24t 12t . . 6f 12t
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >16t
+16T . . >16t 16T . . >16t  >4T 48r  4t
+
+// Line 5
+12Z . T 6 24Z . 12T . . 4t
+2r  6r 15f 15T . . .
+4T 4r 6r >12t /cresc >12x 12Z .
+6T /fff /f 12t >6F 12r 6r >12f  6T 12t
+
+// Line 6
+12Z . T 6 24Z . 12T . . 6t 36t 36T T
+6t >15t . . . .  6T 15f 15T . . .
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f >16t
+16T . . >16t 16T . . >16t  >4T 48r  4t
+
+// Line 7
+>6F 12t  >4F 4r .
+/cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
+1r
+6r 12r >6F 12r  6r >12f 6r 12r
+
+// Line 8
+>6F 12t  >6F 12T  6t >15f 15T . . .
+/cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
+>6T 24Z . 6T /cresc >15T 15T . . .  6T /ff >16t
+16T . . ^16t 16T . . ^16t  ^2T 48r
