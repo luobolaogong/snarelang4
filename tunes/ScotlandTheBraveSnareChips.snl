@@ -1,0 +1,51 @@
+// Scotland the Brave
+// Common March
+// J. Reid Maxwell
+// May 20, 2005
+// This is the lead snare part.  There is a chips part.
+
+/staff pad
+/time 4/4
+/tempo 80
+
+// Wait for met to establish tempo
+//8r . . .
+//4r . . .
+
+// "To the right, quick march"
+//4r . . .
+
+/mf
+
+// Roll off
+//cresc 24Z . . . . .   . . . . . . 2T /fff /mf
+//cresc 24Z . . . . .   . . . . . . 4T /fff /mf   8r 12T 24t
+
+
+
+/f
+// Line 1
+1r
+/mf /< 24Z . . . . . _40T 20z . 24Z . 24t  _40T /ff /mf 20z . 8t 24Z . . 8t
+4F 4r . .
+4r /mf /< 24Z . . . . . 8T /ff /mf 12r 24t  12f ^24T 12t 24
+
+// Line 2
+/mf /< 24Z . . . . . 8T /ff /mf 12r 24t 8F 8t 24Z . . 8t
+/mf /< 24Z . . . . . _40T 20z . 24Z . 24t  _40T /ff /mf 20z . 8t 24Z . . 8t
+4F /mf /< 24Z . . . . t 8T /ff /mf . /< 24Z . . 24t . .
+4F /ff /mf /< 24Z . . . . 24t _40T 20z . 24z . . 8T /ff /mf .
+
+
+// Line 3
+1r
+4r /mf /< 24Z . . . . . 8T /ff /mf . 24Z . . 8t
+4r . . /mf /< 24Z . . . . 24t
+>8T /ff /mf /< 24Z . . 8T 8F 24T . . 8f 24Z . . 8t
+
+// Line 4
+/mf /< 24Z . . . . . 24:5T /ff /mf 24t 8F 8t 24Z . . 8t
+/mf /< 24Z . . . . . _40T 20z . 24z . 24t  _40T /ff /mf 20z .  8t  24Z . . 8t
+4F /mf /< 24Z . . . . 24t 8t /ff /mf . /< 24Z . . 24t . .
+4F /ff /mf /< 24Z . . . . 24t  _40T /ff 20z . 24z . . 4T
+

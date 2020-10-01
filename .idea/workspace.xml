@@ -19,10 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Started looking at Tiree to fix it.  I hope nobody looks at this stuff&#10;because it's pretty bad.  I just want to save it somewhere safe.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Updated snare part toCaptEwing to add some crescendos, soften &#10;initial rolls, and fix 1st/2nd endings.">
+      <change afterPath="$PROJECT_DIR$/tunes/ScotlandTheBraveSnare.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/ScotlandTheBraveSnareChips.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CaptEwingSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CaptEwingSnare.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/snarelang4_example.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/snarelang4_example.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/ScotlandTheBrave.snl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
       <method v="2" />
     </configuration>
     <configuration name="snl" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=tunes/CaptEwingMet.snl,tunes/CaptEwingSnare.snl,tunes/CaptEwingTenor.snl,tunes/CaptEwingBass.snl -o midifiles/CaptEwing.mid -l FINE --dynamic f" />
+      <option name="arguments" value="--input=tunes/ScotlandTheBraveSnare.snl,tunes/ScotlandTheBraveSnareChips.snl -o midifiles/ScotlandTheBrave.mid -l FINE --dynamic f" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -122,7 +125,7 @@
       <workItem from="1601319918874" duration="18725000" />
       <workItem from="1601445478440" duration="5215000" />
       <workItem from="1601493908149" duration="22609000" />
-      <workItem from="1601574833893" duration="3236000" />
+      <workItem from="1601574833893" duration="7942000" />
     </task>
     <task id="LOCAL-00001" summary="End of day.  Reorganized and working on static dynamics.">
       <created>1598082786459</created>
@@ -320,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601536446898</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Updated snare part toCaptEwing to add some crescendos, soften &#10;initial rolls, and fix 1st/2nd endings.">
+      <created>1601578311010</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1601578311010</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +349,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ready to next start into ramp dynamics.  So, temp checkin." />
     <MESSAGE value="Ramping dynamics, getting closer.  Logic and math need fixing, but I heard it kinda work." />
     <MESSAGE value="Battle of Waterloo tune without dynamics." />
     <MESSAGE value="Ramped dynamics seem to work okay, and also comments." />
@@ -364,17 +373,18 @@
     <MESSAGE value="Played around with Tuzz timing.  In one way it sounds better, but&#10;doesn't teach correctly." />
     <MESSAGE value="Improved tenor parts to not have as many rests/muffles." />
     <MESSAGE value="Started looking at Tiree to fix it." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started looking at Tiree to fix it." />
+    <MESSAGE value="Updated snare part toCaptEwing to add some crescendos, soften &#10;initial rolls, and fix 1st/2nd endings." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated snare part toCaptEwing to add some crescendos, soften &#10;initial rolls, and fix 1st/2nd endings." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="1442" y="1031" width="2083" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601578069477">
+    <state x="1442" y="1031" width="2083" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601582092454">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1442" y="1031" width="2083" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1601578069477" />
+    <state x="1442" y="1031" width="2083" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1601582092454" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600981694193">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -403,22 +413,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2394" y="768" width="401" height="577" key="Github.UntrackedFilesDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1598049414726" />
-    <state width="1980" height="585" key="GridCell.Tab.0.bottom" timestamp="1601577946209">
+    <state width="1980" height="585" key="GridCell.Tab.0.bottom" timestamp="1601583502733">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1980" height="585" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1601577946209" />
-    <state width="1980" height="585" key="GridCell.Tab.0.center" timestamp="1601577946209">
+    <state width="1980" height="585" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1601583502733" />
+    <state width="1980" height="585" key="GridCell.Tab.0.center" timestamp="1601583502733">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1980" height="585" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1601577946209" />
-    <state width="1980" height="585" key="GridCell.Tab.0.left" timestamp="1601577946209">
+    <state width="1980" height="585" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1601583502733" />
+    <state width="1980" height="585" key="GridCell.Tab.0.left" timestamp="1601583502732">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1980" height="585" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1601577946209" />
-    <state width="1980" height="585" key="GridCell.Tab.0.right" timestamp="1601577946209">
+    <state width="1980" height="585" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1601583502732" />
+    <state width="1980" height="585" key="GridCell.Tab.0.right" timestamp="1601583502733">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1980" height="585" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1601577946209" />
+    <state width="1980" height="585" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1601583502733" />
     <state x="1507" y="709" key="SettingsEditor" timestamp="1600648695311">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
