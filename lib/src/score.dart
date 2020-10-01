@@ -348,7 +348,7 @@ class Score {
           break;
         case NoteType.flamLeft:
         case NoteType.flamRight:
-          note.velocity += 6;
+          note.velocity += 16;
           break;
         case NoteType.dragLeft:
         case NoteType.dragRight:
