@@ -1,0 +1,50 @@
+// Scotland the Brave
+// Common March
+// J. Reid Maxwell
+// May 20, 2005
+// This is the tenor part.
+
+/staff tenor
+/time 4/4
+/tempo 80
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
+
+
+/f
+// Roll off
+4N . 2N
+4N . 2N
+
+
+/f
+// Line 1
+4N . 2N
+4N . 2N
+4N . . 8N 24n . .
+1N
+
+// Line 2
+4N . 2N
+4N . 2N
+4N 24:5N 24n 4N 8N 24n . .
+4N . . .
+
+// Line 3
+2N 8N . 8N 24n . .
+2N 8N . . .
+2N 4r 8N 24n . .
+2N 24N . . 8:3n
+
+// Line 4
+4N . 2N
+4N . 2N
+4N 24:5N 24n  4N 8N 24n . .
+4N . . .
+
+

@@ -1,0 +1,33 @@
+// Scotland The Brave
+// Metronome only
+
+/staff metronome
+/time 4/4 // yes both of these lines can be here and in snare score
+/tempo 80    // not sure
+
+// Set the beat
+/mf
+8M . . .
+4M . . .
+
+/mf
+// "To the right, quick march"
+4M . . .
+
+// Roll off
+4M . . . . . . .
+
+
+/mp
+// Line 1
+4M . . . . . . . . . . . . . . .
+
+// Line 2
+4M . . . . . . . . . . . . . . .
+
+// Line 3
+4M . . . . . . . . . . . . . . .
+
+// Line 4
+4M . . . . . . . . . . . . . . .
+

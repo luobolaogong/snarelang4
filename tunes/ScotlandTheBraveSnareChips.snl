@@ -9,17 +9,17 @@
 /tempo 80
 
 // Wait for met to establish tempo
-//8r . . .
-//4r . . .
+8r . . .
+4r . . .
 
 // "To the right, quick march"
-//4r . . .
+4r . . .
 
 /mf
 
 // Roll off
-//cresc 24Z . . . . .   . . . . . . 2T /fff /mf
-//cresc 24Z . . . . .   . . . . . . 4T /fff /mf   8r 12T 24t
+/cresc 24Z . . . . .   . . . . . . 2T /fff /mf
+/cresc 24Z . . . . .   . . . . . . 2T /fff /mf
 
 
 

@@ -54,7 +54,7 @@ class Score {
     //
     var scoresStringBuffer = StringBuffer();
     for (var filePath in scoresPaths) {
-      log.fine('Loading file $filePath');
+      log.info('Loading file $filePath');
       var inputFile = File(filePath);
       if (!inputFile.existsSync()) {
         log.warning('File does not exist at "${inputFile.path}"');
@@ -498,7 +498,7 @@ class Staff {
 final staffId = (letter() & word().star()).flatten();
 Parser staffParser = (
     string('/staff').trim() & staffId).trim().map((value) {
-  log.fine('\nIn staffParser and value is -->$value<--');
+  log.fine('In staffParser and value is -->$value<--');
   var staff = Staff();
   staff.id = staffStringToId(value[1]);
   log.fine('Leaving staffParser returning value $staff');
