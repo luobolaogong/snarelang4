@@ -54,16 +54,29 @@ class Score {
     //
     var scoresStringBuffer = StringBuffer();
     for (var filePath in scoresPaths) {
-      log.fine('Parsing file $filePath');
+      log.fine('Loading file $filePath');
       var inputFile = File(filePath);
       if (!inputFile.existsSync()) {
         log.warning('File does not exist at "${inputFile.path}"');
         continue;
       }
       var fileContents = inputFile.readAsStringSync(); // per line better?
-      if (fileContents.length == 0) {
+      if (fileContents.isEmpty) {
+        log.info('File ${filePath} appears to be empty.  Skipping it.');
         continue;
       }
+      // Do a parse for validity
+
+      var result = scoreParser.parse(fileContents);
+      if (result.isFailure) {
+        log.severe('Failed to parse $filePath. Message: ${result.message}');
+        var rowCol = result.toPositionString().split(':');
+        log.severe('Check line ${rowCol[0]}, character ${rowCol[1]}');
+        log.severe('Should be around this character: ${result.buffer[result.position]}');
+        return result; // yeah I know the parent function will report too.  Fix later.
+      }
+
+
       scoresStringBuffer.write(fileContents);
     }
     //
@@ -253,9 +266,11 @@ class Score {
     var isFirstNoteInDynamicRamp = true;
     Note previousNote;
     num cumulativeDurationSinceDynamicRampStartNote = 0;
+    var elementCtr = 0; // test to see if can help pinpoint dynamic ramp mistake in score
     for (var element in elements) {
+      elementCtr++;
       if (element is DynamicRamp) {
-        log.finest('\telement is a DynamicRamp, so setting inDynamicRamp to true, and setting currentDynamicRamp to point to it.');
+        log.finest('\telement $elementCtr is a DynamicRamp, so setting inDynamicRamp to true, and setting currentDynamicRamp to point to it.');
         inDynamicRamp = true;
         currentDynamicRamp = element;
         isFirstNoteInDynamicRamp = true;
@@ -263,7 +278,7 @@ class Score {
         continue;
       }
       if (element is Dynamic) {
-        log.finest('\telement is a Dynamic, so resetting dynamicRamp related stuff.');
+        log.finest('\telement $elementCtr is a Dynamic, so resetting dynamicRamp related stuff.');
         inDynamicRamp = false;
         currentDynamicRamp = null;
         isFirstNoteInDynamicRamp = true;
@@ -275,27 +290,34 @@ class Score {
         var note = element as Note;
         // If a note is not in a dynamicRamp, skip it
         if (!inDynamicRamp) {
-          log.finest('\t\tNote element is not in dynamicRamp, so skipping it.  But it has velocity ${note.velocity}');
+          log.finest('\t\tNote element $elementCtr is not in dynamicRamp, so skipping it.  But it has velocity ${note.velocity}');
           continue;
         }
         // We have a note in a dynamicRamp, and will now adjust its velocity solely by it's DynamicRamp slope and starting time in the dynamicRamp.
         if (isFirstNoteInDynamicRamp) {
-          log.finest('\t\tGot first note in dynamicRamp.  Will not adjust velocity, which is ${note.velocity}');
+          log.finest('\t\tGot first note (#$elementCtr ) in dynamicRamp.  Will not adjust velocity, which is ${note.velocity}');
           previousNote = note;
           isFirstNoteInDynamicRamp = false;
         }
         else {
           // Get note's current time position in the dynamicRamp.
-          log.finest('\t\tGot subsequent note in a dynamicRamp, so will calculate time position relative to first note by doing accumulation.');
+          log.finest('\t\tGot subsequent note (#$elementCtr) in a dynamicRamp, so will calculate time position relative to first note by doing accumulation.');
           cumulativeDurationSinceDynamicRampStartNote += (previousNote.duration.secondNumber / previousNote.duration.firstNumber);
           log.finest('\t\t\tcumulativeDurationSinceRampStartNote: $cumulativeDurationSinceDynamicRampStartNote');
           var cumulativeTicksSinceDynamicRampStartNote = beatFractionToTicks(cumulativeDurationSinceDynamicRampStartNote);
           log.finest('\t\t\tcumulativeTicksSinceDynamicRampStartNote: $cumulativeTicksSinceDynamicRampStartNote and dynamicsDynamicRamp slope is ${currentDynamicRamp.slope}');
-          log.finest('\t\t\tUsing slope and position in dynamicRamp, wanna add this much to the velocity: ${currentDynamicRamp.slope * cumulativeTicksSinceDynamicRampStartNote}');
-          note.velocity += (currentDynamicRamp.slope * cumulativeTicksSinceDynamicRampStartNote).round();
-          log.finest('\t\t\tSo now this element has velocity ${note.velocity}');
-          isFirstNoteInDynamicRamp = false;
-          previousNote = note; // new
+          if (currentDynamicRamp.slope == null) { // hack
+            print('Still in dynamic ramp, right?  Well, got a null at note element $elementCtr, Note duration: ${note.duration}');
+            log.severe('Error in dynamic ramp.  Not sure what to do.  Did we have a ramp start, and no ramp end?');
+          }
+          else {
+            log.finest('\t\t\tUsing slope and position in dynamicRamp, wanna add this much to the velocity: ${currentDynamicRamp.slope *
+                cumulativeTicksSinceDynamicRampStartNote}');
+            note.velocity += (currentDynamicRamp.slope * cumulativeTicksSinceDynamicRampStartNote).round();
+            log.finest('\t\t\tSo now this element has velocity ${note.velocity}');
+            isFirstNoteInDynamicRamp = false;
+            previousNote = note; // new
+          }
         }
       }
     }

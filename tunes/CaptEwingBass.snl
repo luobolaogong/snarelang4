@@ -31,15 +31,14 @@
 4B 4r
 4B .
 
-// repeat lines 1 & 2
 
-// Line 1
+// Repeat of Line 1
 8B . 4B
 4B .
 4B 8B .
 8r 8B 4b
 
-//Line 2
+// Repeat of Line 2
 8B . 4B
 4B .
 4B 4r
@@ -56,16 +55,16 @@
 4B 4r
 4B .
 
-// repeat of lines 3 and 4
 
-// Line 3
+// Repeat of Line 3
 6B 24r 24b  8r 8B
 8B . 4B
 4B 8B .
 8B . 4B
 
-// Line 4
-4B 4r 2r
+// Repeat of Line 2
+8B . 4B
+4B .
 4B 4r
 4B .
 
@@ -81,15 +80,14 @@
 4B 4r
 4B .
 
-//  repeat of lines 5 and 6
 
-// Line 5
+// Repeat of Line 5
 8B . . .
 4B .
 4B 4r
 8r 8B 4b
 
-// Line 6
+// Repeat of Line 6
 8B . . .
 4B .
 4B 4r
@@ -107,15 +105,14 @@
 4B 4r
 4B .
 
-// repeat of lines 7 and 8
 
-// Line 7
+// Repeat of Line 7
 8B . 8r 8b
 4B 4r
 6B 24r 24b  8r 8B
 8r 8B 4b
 
-// Line 8
+// Repeat of Line 8
 4B 4r
 4B 8B .
 4B 4r

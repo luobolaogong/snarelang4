@@ -1,4 +1,4 @@
-// Captain Normon Orr Ewing
+// Captain Norman Orr Ewing
 // 2/4 March
 //
 
@@ -22,107 +22,103 @@
 // Line 1
 4N .
 4N .
-6N 24r 24n 4N
+24:5N 24n 4N
 2r
 
 //Line 2
 4N .
 4N .
-6N 24r 24n 12r 24N 12n 24n
+24:5N 24:3N 24N 12n 24n
 4N .
 
-// repeat lines 1 & 2
 
-// Line 1
+// Repeat of Line 1
 4N .
 4N .
-6N 24r 24n 4N
+24:5N 24n 4N
 2r
 
-//Line 2
+// Repeat of Line 2
 4N .
 4N .
-6N 24r 24n 12r 24N 12n 24n
+24:5N 24:3N 24N 12n 24n
 4N .
 
 // Line 3
-4N 4r
+2N
 4r 8N 24n . .
-4N 4r
-4N 4r
+2N
+2N
 
 // Line 4
-6N 24r 24n 8r 12N 24n
-12r 24n 12r 24n 4N
-6N 24r 24n 12r 24N 12n 24n
+24:5N 6n 12N 24:3n
+   24:3N 24n 4N
+24:5N 24:3N 24N 12n 24n
 4N .
 
 
-// repeat of lines 3 and 4
-
-// Line 3
-4N 4r
+// Repeat of Line 3
+2N
 4r 8N 24n . .
-4N 4r
-4N 4r
+2N
+2N
 
-// Line 4
-6N 24r 24n 8r 12N 24n
-12r 24n 12r 24n 4N
-6N 24r 24n 12r 24N 12n 24n
+// Repeat of Line 2
 4N .
-
-// Line 5
-4N 4r
-2r
-6N 24r 24n 12N 24n 12N 24n
-8r 8N 4n
-
-// Line 6
-4N 4r
-2r
-6N 24r 24N  12r 24N 12n 24n
+4N .
+24:5N 24:3N 24N 12n 24n
 4N .
 
 
-//  repeat of lines 5 and 6
 
 // Line 5
-4N 4r
+2N
 2r
-6N 24r 24n 12N 24n 12N 24n
-8r 8N 4n
+24:5N 24n 12N 24n 12N 6n
+   8N 4n
 
 // Line 6
-4N 4r
+2N
 2r
-6N 24r 24N  12r 24N 12n 24n
+24:5N 24:3N 24N 12n 24n
+4N .
+
+
+// Repeat of Line 5
+2N
+2r
+24:5N 24n 12N 24n 12N 6n
+   8N 4n
+
+// Repeat of Line 6
+2N
+2r
+24:5N 24:3N 24N 12n 24n
 4N .
 
 
 // Line 7
-4N 24N . . 8n
-4r 6N 24r 24n
-4N  8r 12N 24n
-4r 8N 24n . .
+4N 24N . . 8:3n
+   24:5N 24n
+8:3N 12N 24:7n
+   8N 24n . .
 
 // Line 8
-12N 24n  12r 24n  8r 8N
-2r
-6N 24r 24N  12r 24N 12n 24n
+12N 24:3n  6n 8:3N
+   4r
+24:5N 24:3N 24N 12n 24n
 4N .
 
-// repeat of lines 7 and 8
 
-// Line 7
-4N 24N . . 8n
-4r 6N 24r 24n
-4N  8r 12N 24n
-4r 8N 24n . .
+// Repeat of Line 7
+4N 24N . . 8:3n
+   24:5N 24n
+8:3N 12N 24:7n
+   8N 24n . .
 
-// Line 8
-12N 24n  12r 24n  8r 8N
-2r
-6N 24r 24N  12r 24N 12n 24n
+// Repeat of Line 8
+12N 24:3n  6n 8:3N
+   4r
+24:5N 24:3N 24N 12n 24n
 4N .
 

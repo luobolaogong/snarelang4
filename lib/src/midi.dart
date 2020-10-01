@@ -459,7 +459,7 @@ class Midi {
         addTempoChangeToTrackEventsList(tempo, trackEventsList);
         continue;
       }
-      if (element is TimeSig) { // THIS IS WRONG.  SHOULD BE 2/2  not 2/4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+      if (element is TimeSig) { // THIS IS WRONG.  SHOULD BE 2/2 for that tune in 2/2  not 2/4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
         // addTimeSigChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
         addTimeSigChangeToTrackEventsList(element, trackEventsList);
         continue;
