@@ -1,0 +1,51 @@
+// Flett From Flotta
+// Tenor
+// Common March
+// J. Reid Maxwell
+// December 11, 2014
+
+/staff tenor
+/time 4/4
+/tempo 84
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
+
+/mf
+
+// Roll off
+4N . 2N
+4N . 2N
+
+/mf
+
+// Line 1
+2N 2n
+2N 2n
+2N 2r
+24:5N 24n 8N 8:3n 4n
+
+// Line 2
+2N 2n
+2N 8:3N 24n . .
+24:5N 24N 12n 24n 8:3N 4r
+2N 2N
+
+// Line 3
+2N 4r 8N .
+2N 2n
+2N 4r 8N .
+24:5N 24n 8N 8:3n 4n
+
+// Line 4
+2N 2n
+2N 8:3N 24n . .
+24:5N 24N 12n 24n 8:3N 4r
+2N 2N
+
+
+

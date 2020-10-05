@@ -1,33 +1,51 @@
-// Flett From Flotta, Snare
-/tempo 84
-/time 4/4
+// Flett From Flotta
+// Snare
+// Common March
+// J. Reid Maxwell
+// December 11, 2014
 
-/mf /<
-24Z . . . . .    . . . . . .    2T /ff
-/mf /<
-24Z . . . . .    . . . . . .   4T /ff
+/staff snare
+/time 4/4
+/tempo 84
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
 
 /mf
-8r  12T  24
 
+// Roll off
+/cresc 24Z . . . . .   . . . . . . 2T /fff /mf
+/cresc 24Z . . . . .   . . . . . . 4T /fff /mf
+
+/mf
+8r  12T  24  // pickups
+
+// Line 1
 6F 24r 24t           /mf /< 24z . .  8t /ff        /mf /< 24Z . . . . .  >8T /ff     /mf /<  24Z . .
 _6t /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        4F              /< 24Z . . 24t . .
 _6F /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        /< 24Z . . . . .    >8T /ff.  /mf
 /< 24Z . . . . /ff >24t /mf    ^40T 20z . _8t      /< 24Z . . . . .   >6T /ff  /mf   24r 24t
 
+// Line 2
 6F 24r 24t           /< 24z . . 8t /ff /mf         /< 24Z . . . . .   >8T /ff  /mf   /< 24z . .
 6t /ff /mf 24r 24t           /< 24z . . 8t /ff /mf         /< 24Z . . . . .   >40T /ff /mf  /< 20z . 24t . .
 8F /ff /mf 12t >24T          12t 24t 12F >24t    /< 24t . .  8F /ff /mf    /< 24Z . . . . _24t /ff /mf
 /< ^40T 20z . 24z . .    24Z . . . . .      ^4T /ff   /mf          /< 24Z . . 8t /ff /mf
 
+// Line 3
 /< 24Z . . . . .      >8T  /ff /mf    .          /< 24Z . . . . .  >8T /ff   /mf   /< 24Z . .
 6t /ff /mf 24r 24t           /< 24z . . 8t /ff    4F      /mf        /< 24Z . . _24t . .
-4F /ff                  /mf /< 24z . . 8t /ff    /mf /< 24Z . . . . .  ^40T /ff  /mf 20z .  _8t /f
-/mf /< 24Z . . . . >24t /ff /mf   >40T 20z . 8t /f /mf     /< 24Z . . . . .   ^6T /ff /mf 24r 24t
+4F /ff                  /mf /< 24z . . 8t /ff    /mf /< 24Z . . . . .  _40T /ff  /mf 20z .  _8t /f
+/mf /< 24Z . . . . >24t /ff /mf   _40T 20z . 8t /f /mf     /< 24Z . . . . .   ^6T /ff /mf 24r 24t
 
+// Line 4
 6F 24r 24t           /mf /< 24z . . 8t /ff         /mf  /< 24Z . . . . .  ^8T /ff /mf /< 24Z . .
-6t /ff /mf 24r 24t           /mf /< 24z . . 8t /ff        /mf  /< 24Z . . . . .   /ff   /mf /< ^40T 20z . 24t . . /ff
-8F 12t ^24T          12t 24t 12F ^24t    /mf /< 24t . . 8F /ff /mf    24Z . . . . _24t /ff
-^40T /mf /< 20z . 24z . .    24Z . . . . .        ^4T /ff              4r
+6t /ff /mf 24r 24t           /mf /< 24z . . 8t /ff        /mf  /< 24Z . . . . .   /ff   /mf /< _40T 20z . 24t . .
+8F /ff 12t ^24T          12t 24t 12F ^24t    /mf /< 24t . . 8F /ff /mf    24Z . . . . _24t
+^40T /ff /mf /< 20z . 24z . .    24Z . . . . .        ^4T /ff              4r
 
 

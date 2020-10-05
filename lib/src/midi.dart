@@ -248,6 +248,8 @@ class Midi {
     return metronomeTrackEventsList;
   }
 
+
+
   // DOUBT WE NEED ALL THESE PARAMS
   // List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic) {
   List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo) {
@@ -325,16 +327,15 @@ class Midi {
     // Do tempo ramps here?
 
 
-
-
-
-
-
     //listOfTrackEventsLists.add(trackZeroEventList); // Can we add to this track 0 later, to add metronome or tempo ramps?
     // var trackEventsList = doSpecialFirstTrack(timeSig, tempo); // do we really need this?  Maybe so if score doesn't do tempo or timeSig
     // listOfTrackEventsLists.add(trackEventsList);
     return trackZeroEventsList;
   }
+
+
+
+
 
   /// Add lists of events to tracks, and add the tracks to the list of midiTracks passed in.
   /// For now, only one track is worked on at a time.  A new track is created when one of the elements
@@ -348,10 +349,6 @@ class Midi {
   /// The midiTracks list already has a trackZero list, which contains timeSig, and Tempo, and is supposed to
   /// be able to hold a tempoMap.
   ///
-  // List<List<MidiEvent>> createMidiEventsTracksList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
-  // List<MidiEvent> createMidiTrackEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
-  // List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic, bool usePadSoundFont, bool loopBuzzes, Staff staff) {
-  // List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, Staff overrideStaff) {
   List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, overrideStaff) {
     log.fine('In Midi.createMidiEventsTracksList()');
     //var currentStaff = overrideStaff; // this is strange.  We've got an element that could be a Staff, and we've got a passed in Staff
@@ -381,7 +378,8 @@ class Midi {
       }
     }
 
-    // Go through the elements, seeing what each one is, and add it to the current track if right kind of element
+    // Go through the elements, seeing what each one is, and add it to the current track if right kind of element.
+    // Of course this is not yet written to midi.
     for (var element in elements) {
       if (element is Staff) { // I do not trust the logic in this section.  Revisit later.  Does this mean that we'd better have a Staff command at the start of a score?????????????  Bad idea/dependency
         // // if (staff.id == currentStaff.id || midiTracks.isEmpty) {
@@ -389,10 +387,7 @@ class Midi {
         //   print('In addMidiEventsToTracks and got a Staff element, and is either same as current, or this track is empty, so doing nothing with it and skipping it.');
         //   continue;
         // }
-        print('New Staff element ${element.id}');
-        if (element.id == StaffId.met) {
-          print('stop here, we need to add the name of the track, which should be met');
-        }
+        log.fine('New Staff element ${element.id}');
         // do something here to change the patch or channel or something so the soundfont can be accessed correctly?
         if (element.id == StaffId.pad) {
           usePadSoundFont = true;
@@ -431,6 +426,12 @@ class Midi {
         continue; // new
       }
       if (element is Note) {
+        // If the note is flam, drag, or ruff we should adjust placement of the note in the timeline so that the
+        // principle part of the note is where it should go (and adjust after the note by the same difference.)
+        // To do this, we need access to the previous note to shorten it.  So that means gotta process in a separate
+        // loop, probably, prior to this point, or maybe after.  And it's only for a snare staff/track.
+        // And can't assume the previous element in the list was a note!  Could be a dynamic element, or tempo, etc.
+        //
         // addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
         addNoteOnOffToTrackEventsList(element, trackEventsList, usePadSoundFont, loopBuzzes, currentVoice); // add staff param?  // return value unused
         continue;
@@ -485,6 +486,7 @@ class Midi {
   }
 
 
+
   // void addTimeSigChangeToTrackEventsList(TimeSig timeSig, int channel, List<MidiEvent> trackEventsList) {
   void addTimeSigChangeToTrackEventsList(TimeSig timeSig, List<MidiEvent> trackEventsList) {
     var timeSignatureEvent = TimeSignatureEvent();
@@ -508,12 +510,14 @@ class Midi {
     trackEventsList.add(setTempoEvent);
   }
 
+
+
   ///
   /// Create and add a NoteOnEvent and a NoteOffEvent to the list of events for a track,
   /// The caller of this method has access to the Note which holds the nameValue and type, etc.
   /// May want to watch out for cumulative rounding errors.  "snareLangNoteNameValue" can be
   /// a something like 1.333333, so it shouldn't be called a NameValue like "4:3" could be.
-  /// Clean this up later.
+  /// Clean this up later.  It's too long for one thing.
   ///
   // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
   double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) { // add staff?
@@ -679,10 +683,17 @@ class Midi {
     // Here it is.  Here's where the note will go into a list of midi events.
     // deltaTime has been 0, but may need to adjust for roundoffs, or perhaps for gracenotes preceding beat?
     //
+    // Not sure.  But if the note is something like a three stroke ruff then it probably needs to be
+    // shifted earlier in the timeline, which means subtract time off the previous note, and then add
+    // that time back to the end of the note.  And to do this I need access to the previous note, or next
+    // note.  And that means this adjustment has to be done before we write it to midi.  Well,
+    // what happens in this method?  Do we write to midi here?  No, looks like it's just written to a
+    // list.  But, noteOnEvent and noteOffEvent are midi objects, not mine.
+    //
     var noteOnEvent = NoteOnEvent();
     noteOnEvent.type = 'noteOn';
     noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?
-    // noteOnEvent.deltaTime = graceOffset; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?
+    // noteOnEvent.deltaTime = graceOffset; // Can you do a negative amount, and add the rest on the off note?
     noteOnEvent.noteNumber = noteNumber;
     noteOnEvent.velocity = note.velocity;
     // noteOnEvent.channel = channel;

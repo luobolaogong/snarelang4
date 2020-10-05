@@ -79,6 +79,10 @@ class Score {
 
       scoresStringBuffer.write(fileContents);
     }
+    if (scoresStringBuffer.isEmpty) {
+      log.severe('There is nothing to parse.  Exiting...');
+      exit(42); // 42 is a joke
+    }
     //
     // Parse the score's text elements, notes and other stuff.  The intermediate parse results like Tempo and TimeSig
     // are in the list that is result.value, and processed later.

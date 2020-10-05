@@ -1,0 +1,51 @@
+// Flett From Flotta
+// Bass
+// Common March
+// J. Reid Maxwell
+// December 11, 2014
+
+/staff bass
+/time 4/4
+/tempo 84
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
+
+/mf
+
+// Roll off
+4B . 2B
+4B . 2B
+
+/mf
+
+// Line 1
+4B 8B . 4B .
+4B 8B . 2B
+4B 8B . 4B .
+2B 4B .
+
+// Line 2
+4B 8B . 4B .
+2B 4B .
+8:3B 4b 8B 4B
+2B 2B
+
+// Line 3
+4B 8B . 2B
+4B 8B . 2B
+4B 8B . 4B 8B .
+2B 4B .
+
+// Line 4
+4B 8B . 4B .
+2B 4B .
+8:3B 4b 8B 4B
+2B 2B
+
+
+
