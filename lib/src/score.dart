@@ -65,8 +65,9 @@ class Score {
         log.info('File ${filePath} appears to be empty.  Skipping it.');
         continue;
       }
-      // Do a parse for validity
-
+      //
+      // Do an initial parse for validity, exiting if failure, and throw away result no matter what.
+      //
       var result = scoreParser.parse(fileContents);
       if (result.isFailure) {
         log.severe('Failed to parse $filePath. Message: ${result.message}');
@@ -75,8 +76,6 @@ class Score {
         log.severe('Should be around this character: ${result.buffer[result.position]}');
         return result; // yeah I know the parent function will report too.  Fix later.
       }
-
-
       scoresStringBuffer.write(fileContents);
     }
     if (scoresStringBuffer.isEmpty) {
@@ -88,6 +87,7 @@ class Score {
     // are in the list that is result.value, and processed later.
     //
     var result = scoreParser.parse(scoresStringBuffer.toString());
+    // Just report the result in the log
     if (result.isSuccess) {
       Score score = result.value;
       log.finer('parse succeeded.  This many elements: ${score.elements.length}\n'); // wrong
@@ -99,6 +99,7 @@ class Score {
     else {
       log.finer('Score parse failed.  Parse message: ${result.message}');
     }
+    // And return the actual Result object, which contains a Score object, which contains elements.
     return result;
   }
 
@@ -193,10 +194,10 @@ class Score {
     return;
   }
 
-
+  // This is a big one.  Maybe break it up?
   void applyDynamics() {
     log.fine('In Score.applyDynamics()');
-    // First set note velocities based on their dynamic values only.
+    // For each note in the list set the velocity field based on the dynamic field, which is strange, because why not do it initially?
     for (var element in elements) {
       if (!(element is Note)) {
         continue;
@@ -208,7 +209,7 @@ class Score {
       element.velocity = dynamicToVelocity(element.dynamic);
     }
 
-    // 3.  Scan the elements list for dynamicRamp markers, and set their properties
+    // Scan the elements list for dynamicRamp markers, and set their properties
     print('');
     log.finest('Score.applyDynamics(), Starting search for dynamicRamps and setting their values.  THIS MAY BE WRONG NOW THAT I''M APPLYING DYNAMICS DURING SHORTHAND PHASE');
     DynamicRamp currentDynamicRamp;
@@ -397,8 +398,11 @@ class Score {
       }
     }
 
-
+    return;
   }
+
+
+
 
 //  void applyDynamics() {
 //    Dynamic currentDynamic;
@@ -446,7 +450,158 @@ class Score {
     return null;
   }
 
+  /// This comment is also in midi.dart.  So change/summarize it there.
+  ///
+  /// Need to work out timing of notes that have grace notes, like 3 stroke ruffs.
+  ///
+  /// First, for a snare drum I usually think of the note as happening at a point in time and
+  /// that the note has no duration, but that's not really true.  A tenor drum has a long ring
+  /// to is.  The sound decays over a long period of time.  The snare not so much, but it
+  /// too has a sound that has a duration, if only for the acoustics of the room where it was
+  /// recorded.  It's just not as noticeable.  So, I should forget the idea that a note is
+  /// just a point in time.  A note has a duration that is specified by the NoteOn and NoteOff
+  /// events.  When the NoteOff event happens, then the note's duration stops.
+  ///
+  /// Every note has a NoteOn and NoteOff event, and both those events have a deltaTime value.
+  /// DeltaTime says when the event starts relative to the previous NoteOn or NoteOff.
+  /// A NoteOn event usually has a DeltaTime of 0 because it starts immediately when the
+  /// previous NoteOff event occurs.  A NoteOff event has a DeltaTime that represents the
+  /// duration of the note, which means the amount of time since NoteOn started.
+  ///
+  /// So, DeltaTime is a duration since the previous event, but for the NoteOff event it represents the
+  /// duration of the note which started with a NoteOn event.
+  ///
+  /// This would therefore be a simple sequence of 0 followed by the note duration for the
+  /// NoteOn and NoteOff sequence for each note, if we didn't have to adjust for grace notes.
+  ///
+  /// For notes with grace notes we need to slide the note's sound/sample to the left by
+  /// the duration of the grace notes so that the principle note will be where it's expected to be.
+  /// That means the the previous note's duration has to be shortened, which means it's
+  /// NoteOff event's DeltaTime has to be reduced, and the current note's NoteOff deltaTime
+  /// should be lengthened the same amount.  (Don't play with the NoteOn's deltaTime.  More complicated that way)
+  /// But that lengthened NoteOff's deltaTime may be shortened later if the following note
+  /// has grace notes.
+  ///
+  /// But, we should be talking about absolute time, which is not affected by tempo.  The gracenotes have
+  /// an absolute time duration, in milliseconds, not some function of the tempo.  So, MAYBE if
+  /// the tempo is 60bpm, then the numbers are right here.  But if the tempo is slower, these numbers
+  /// are too high, and if if the tempo is faster, these notes are too low
+  ///
+  /// I set some values empirically.  They're based on a tempo of 100bpm.  They have to be scaled by the current tempo.
+  /// I don't know how that affects time signature tempos like 3/8, 6/8, 9/8, where the beat is a dotted quarter.
+  ///
+  /// So, basically you're looking at two notes at once: the current note and the previous note.
+  /// If the current note has grace notes, reduce the previous note's NoteOff deltaTime, and
+  /// increase the current note's NoteOff deltaTime the same amount.  Then advance.
+  /// Special condition for first note.  Maybe not last note.
+  ///
+  void adjustForGraceNotes() {
+    log.info("In adjustForGraceNotes");
+    var graceNotesDuration = 0; // Actually, the units are wrong.  This should be a percentage thing, I think.  Changes based on tempo.  For slow tempos the number is too high.  For fast tempos, too low.
+    var noteOffDeltaTimeShift = 0;
 
+    // just a wild stab to handle first note case in list
+    var previousNote = Note();
+    previousNote.duration = NoteDuration();
+    previousNote.duration.firstNumber = 4; // nec?
+    previousNote.duration.secondNumber = 1; // nec?
+    // previousNote.preNoteShift = 0;
+    // previousNote.postNoteShift = 0;
+    previousNote.noteOffDeltaTimeShift = 0;
+
+    var tempoBpm = 84; // default?
+
+    log.finest('In top of Score.adjustForGraceNotes and just set "previousNote" to be some default value');
+    for (var element in elements) {
+      if (element is Tempo) {
+        log.info('In adjustForGraceNotes(), tempo is $element');
+        tempoBpm = element.bpm;
+        continue;
+      }
+      else if (element is Note) {
+        var note = element as Note; // unnec cast, it says, but I want to
+        // Bad logic, I'm sure:
+        switch (note.noteType) {
+          case NoteType.flamLeft:
+          case NoteType.flamRight:
+          case NoteType.flamUnison:
+            graceNotesDuration = (180 / (100 / tempoBpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+            previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
+            note.noteOffDeltaTimeShift += graceNotesDuration;
+            previousNote = note; // probably wrong.  Just want to work with pointers
+            break;
+          case NoteType.dragLeft:
+          case NoteType.dragRight:
+          case NoteType.dragUnison:
+            graceNotesDuration = (250 / (100 / tempoBpm)).round();
+            previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
+            note.noteOffDeltaTimeShift += graceNotesDuration;
+            previousNote = note; // probably wrong.  Just want to work with pointers
+            break;
+          case NoteType.ruff2Left:
+          case NoteType.ruff2Right:
+          case NoteType.ruff2Unison:
+            graceNotesDuration = (1400 / (100 / tempoBpm)).round();
+            previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
+            note.noteOffDeltaTimeShift += graceNotesDuration;
+            previousNote = note; // probably wrong.  Just want to work with pointers
+            break;
+          case NoteType.ruff3Left:
+          case NoteType.ruff3Right:
+          case NoteType.ruff3Unison:
+            graceNotesDuration = (1900 / (100 / tempoBpm)).round();
+            previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
+            note.noteOffDeltaTimeShift += graceNotesDuration;
+            previousNote = note; // probably wrong.  Just want to work with pointers
+            break;
+          default: // a note without gracenotes, or a rest
+            graceNotesDuration = 0;
+            // previousNote.postNoteShift -= graceNotesDuration;
+            // note.preNoteShift = -graceNotesDuration;
+            // note.postNoteShift = graceNotesDuration;
+            //previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
+            previousNote = note; // probably wrong.  Just want to work with pointers
+            break;
+
+        }
+        // previousNote.postNoteShift -= shiftNoteMilliseconds;
+        // note.preNoteShift -= shiftNoteMilliseconds;
+        // note.postNoteShift += shiftNoteMilliseconds;
+        // previousNote = note; // probably wrong.  Just want to work with pointers
+        continue;
+      }
+      else {
+        log.fine('Score.adjustForGraceNotes() whatever this element is ($element), it is not important for adjusting durations due to gracenotes.');
+        continue;
+      }
+
+//       if (element.noteType == NoteType.previousNoteDurationOrType) {
+//         element.duration = previousNote.duration;
+//         //element.dynamic = previousNote.dynamic;
+//         element.noteType = previousNote.noteType;
+//         //element.swapHands(); // check that nothing stupid happens if element is a rest or dynamic or something else
+//       }
+//       else {
+// //        element.duration ??= previousNote.duration;
+//         element.duration.firstNumber ??= previousNote.duration.firstNumber; // new
+//         element.duration.secondNumber ??= previousNote.duration.secondNumber;
+//         //element.dynamic ??= previousNote.dynamic;
+//         if (element.noteType == null) {
+//           element.noteType = previousNote.noteType;
+//           //element.swapHands();
+//         }
+//       }
+//       //previousNote = element; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
+//       previousNote.dynamic = element.dynamic;
+// //      previousNote.velocity = element.velocity; // unnec?
+//       //previousNote.articulation = element.articulation;
+//       previousNote.duration = element.duration;
+//       previousNote.noteType = element.noteType;
+    }
+    log.info('Leaving adjustForGraceNotes');
+    return;
+
+  }
 
 }
 

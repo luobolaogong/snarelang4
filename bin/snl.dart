@@ -37,6 +37,8 @@ const help = 'help';
 //const commandLineMetronome = 'met';
 const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes'; // seems not to work.  Forget until fix soundFont for Roll
 const commandLineUsePadSoundFont = 'pad';
+
+
 // This is way too long.  Fix.
 void main(List<String> arguments) {
   print('Staring snl ...');
@@ -120,54 +122,17 @@ void main(List<String> arguments) {
   overrideStaff ??= defaultStaff;
   overrideTimeSig ??= defaultTimeSig; // scan score first?
 
-  //var piecesOfMusic = [...argResults[inFilesList]]; // can't change to var, why????
-   List<String> piecesOfMusic = [...argResults[inFilesList]]; // can't change to var.  Why?
+  List<String> piecesOfMusic = [...argResults[inFilesList]]; // can't change to var.  Why?
 
-  // What are the phases?
-  // 1.  Parse the score text, creating a List of raw score elements; no note dynamics, velocities, or ticks.
-  // 2.  Apply shorthands so that each note has full note property values including dynamic, and no "." notes,
-  //     and notes should have no velocities or ticks.  (or maybe they do have dynamics)
-  // 3a.  Scan the elements list for dynamicRamp markers,
-  // 3b.  Scan the elements list for tempoRamp markers,
-  // 4.  Go through the elements and set velocities based on dynamics and dynamicRamps
-//Result testResult = timeSigParser.parse('/time 3/4');
-//print(testResult);
-
-  var result = Score.loadAndParse(piecesOfMusic); // hey, this probably parsed at least one tempo and one timesig
-  // Result result = Score.load(piecesOfMusic);
-
-  if (result.isFailure) {
-    log.severe('Failed to parse the scores. Message: ${result.message}');
-    var rowCol = result.toPositionString().split(':');
-    log.severe('Check line ${rowCol[0]}, character ${rowCol[1]}');
-    log.severe('Should be around this character: ${result.buffer[result.position]}');
-//    log.info('^'.padLeft(result.position));
-    return;
-  }
-  Score score = result.value;
-  // At this point we have a list of elements that comprise the score, but haven't kept track of the first
-  // timesig or tempo if they were in there.
-  // New
-  var defaultFirstNoteProperties = Note();
-  defaultFirstNoteProperties.duration.firstNumber = 4;
-  defaultFirstNoteProperties.duration.secondNumber = 1;
-  defaultFirstNoteProperties.noteType = NoteType.tapLeft; // ???
-  defaultFirstNoteProperties.dynamic = overrideDynamic; // new    make sure has a dynamic.  If not specified, use default.
+  // var score = doThePhases(piecesOfMusic, overrideDynamic, overrideTimeSig, overrideTempo);
+  var score = doThePhases(piecesOfMusic);
 
 
-  //
-  // Apply shorthands to the list, meaning fill in the blanks that are in the raw list, including Dynamics.
-  //
-  score.applyShorthands(defaultFirstNoteProperties);
-  for (var element in score.elements) {
-    log.finer('After shorthand phase: $element');
-  }
 
-  score.applyDynamics();
 
+  // This sets up "override" values, before calling addMidiEventsToTracks, but not sure why.
   var firstTimeSigInScore = score.scanForFirstTimeSig();
   var firstTempoInScore = score.scanForFirstTempo();
-  var firstStaffInScore = score.scanForFirstStaff(); // need?
   // One or the other or both those objects may be null, if not specified in the file.  But if either are specified, then we should use them to create the first
   // track's time sig and/or tempo
   if (firstTimeSigInScore != null) {
@@ -177,12 +142,6 @@ void main(List<String> arguments) {
     overrideTempo = firstTempoInScore;
   }
 
-  // if (firstStaffInScore != null) { // isn't there a shorthand for this?
-  //   overrideStaff = firstStaffInScore;
-  // }
-
-  // overrideTimeSig ??= firstTimeSigInScore;
-  // overrideTempo ??= firstTempoInScore;
   // Watch out, this is pretty much duplicate code in another place, and it's probably wrong here, 'cause slightly different
   // High chance this is faulty code in this area.
   if (overrideTempo.noteDuration.firstNumber == null || overrideTempo.noteDuration.secondNumber == null) {
@@ -195,9 +154,14 @@ void main(List<String> arguments) {
       overrideTempo.noteDuration.secondNumber ??= 1;
     }
   }
+  overrideTimeSig ??= defaultTimeSig;
+  overrideTempo ??= defaultTempo;
+  overrideDynamic ??= defaultDynamic;
+  overrideStaff ??= defaultStaff;
 
 
 
+  // Now do some Midi stuff
 
 
   // Create Midi header
@@ -208,42 +172,22 @@ void main(List<String> arguments) {
 
   // Create Midi tracks.
   var midiTracks = <List<MidiEvent>>[];
-  
-  overrideTimeSig ??= defaultTimeSig;
-  overrideTempo ??= defaultTempo;
-  overrideDynamic ??= defaultDynamic;
-  overrideStaff ??= defaultStaff;
 
-
-
-  // Keep this for later when add tempoMap for accel/ritard
-  // // TrackZero is of questionable use at this time.  If we need it then it should probably be for just a tempoMap when I do accel/rit
-  // // var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic); // last param nec???
-  // var trackZeroEventList = midi.createTrackZeroMidiEventsList(score.elements, overrideTimeSig, overrideTempo); // last param nec???
-  // midiTracks.add(trackZeroEventList); // Can we add to this track 0 later, to add metronome or tempo ramps?
-
-
-
-  // Probably will phase this out.  We don't metronome clicks with a loop.  We just make a separate track with written metronome notes
-  // // Now try a simple metronome experiment
-  // if (nBarsMetronome != null && nBarsMetronome > 0) { // cheap cheap cheap
-  //   var metronomeNote = Note();
-  //   metronomeNote.duration = NoteDuration(); // this is silly
-  //   metronomeNote.duration.firstNumber = overrideTempo.noteDuration.firstNumber; // totally wrong
-  //   metronomeNote.duration.secondNumber = overrideTempo.noteDuration.secondNumber;
-  //   metronomeNote.velocity = 104;
-  //   var metronomeTrack = midi.createMidiEventsMetronomeTrack(nBarsMetronome, overrideTempo, metronomeNote);
-  //   midiTracks.add(metronomeTrack); // Oh, add a new track to the midi
-  // }
-
-
-  // No, next line should be addMidiEventsTracksToList
-  //midiTracks = midi.createMidiEventsTracksList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
-  //var midiTrackEventsList = midi.createMidiTrackEventsList(score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
-  // midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, overrideTempo, overrideDynamic, usePadSoundFont, loopBuzzes, overrideStaff);
-  // midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, usePadSoundFont, loopBuzzes, overrideStaff);
+  // We do want to add the events to the tracks before sending the tracks to the MidiFile/Writer,
+  // but what happened to the processing phases before that?
+  //
   midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, usePadSoundFont, loopBuzzes, overrideStaff);
-  //midiTracks.add(midiTrackEventsList);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -257,6 +201,99 @@ void main(List<String> arguments) {
   midiWriterCopy.writeMidiToFile(midiFile, midiFileOutFile); // will crash here
   print('Done writing midifile ${midiFileOutFile.path}');
 }
+
+
+// What are the phases?
+// 1.  Parse the score text, creating a List of raw score elements; no note dynamics, velocities, or ticks.
+// 2.  Apply shorthands so that each note has full note property values including dynamic, and no "." notes,
+//     and notes should have no velocities or ticks.  (or maybe they do have dynamics)
+// 3.  Scan the elements list for dynamicRamp markers and set dynamics/velocities,
+// 4.  Scan the elements list for tempoRamp markers,
+// 5.  Go through the elements and adjust timings due to notes with grace notes.  Keep track of current tempo?  What if other tracks change tempo?
+//     Probably should work on trackZero and move all tempos to it somehow and go off of it.
+
+// Score doThePhases(List<String> piecesOfMusic, Dynamic overrideDynamic, TimeSig overrideTimeSig, Tempo overrideTempo) {
+Score doThePhases(List<String> piecesOfMusic) {
+  //
+  // Phase 1: load and parse the score, returning the Score, which contains a list of all elements, as PetitParser parses and creates them
+  //
+  var result = Score.loadAndParse(piecesOfMusic); // hey, this probably parsed at least one tempo and one timesig
+  // Result result = Score.load(piecesOfMusic);
+
+  if (result.isFailure) {
+    log.severe('Failed to parse the scores. Message: ${result.message}');
+    var rowCol = result.toPositionString().split(':');
+    log.severe('Check line ${rowCol[0]}, character ${rowCol[1]}');
+    log.severe('Should be around this character: ${result.buffer[result.position]}');
+//    log.info('^'.padLeft(result.position));
+    // return;
+    exit(42);
+  }
+  // Since parsing succeeded, we should have the Score element in the result value
+  Score score = result.value;
+
+
+  // At this point we have a list of elements that comprise the score, but haven't kept track of the first
+  // timesig or tempo if they were in there.  So for now create defaults for these:
+  var defaultFirstNoteProperties = Note();
+  defaultFirstNoteProperties.duration.firstNumber = 4;
+  defaultFirstNoteProperties.duration.secondNumber = 1;
+  defaultFirstNoteProperties.noteType = NoteType.tapLeft; // ???
+  // defaultFirstNoteProperties.dynamic = overrideDynamic; // new    make sure has a dynamic.  If not specified, use default.
+  defaultFirstNoteProperties.dynamic = Dynamic.f; // Not sure how important this is, or if it's wrong.  Wrong value?  Should have global values somewhere for these defaults;
+
+
+
+
+
+
+  // Phase 2:
+  // Apply shorthands to the list, meaning fill in the blanks that are in the raw list, including Dynamics.
+  //
+  score.applyShorthands(defaultFirstNoteProperties);
+  for (var element in score.elements) {
+    log.finer('After shorthand phase: $element');
+  }
+
+  // Phase 3:
+  // Apply dynamics and dynamic ramps
+  //
+  score.applyDynamics();
+
+  // Phase 4:
+  // Apply tempo ramps
+  // later
+
+  score.adjustForGraceNotes(); // maybe do this similar to how applyShorthands is done
+
+  // // This doesn't look like a phase.  Looks like just setting up some "override" values
+  // var firstTimeSigInScore = score.scanForFirstTimeSig();
+  // var firstTempoInScore = score.scanForFirstTempo();
+  // // One or the other or both those objects may be null, if not specified in the file.  But if either are specified, then we should use them to create the first
+  // // track's time sig and/or tempo
+  // if (firstTimeSigInScore != null) {
+  //   overrideTimeSig = firstTimeSigInScore;
+  // }
+  // if (firstTempoInScore != null) {
+  //   overrideTempo = firstTempoInScore;
+  // }
+  //
+  // // Watch out, this is pretty much duplicate code in another place, and it's probably wrong here, 'cause slightly different
+  // // High chance this is faulty code in this area.
+  // if (overrideTempo.noteDuration.firstNumber == null || overrideTempo.noteDuration.secondNumber == null) {
+  //   if (overrideTimeSig.denominator == 8 && overrideTimeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+  //     overrideTempo.noteDuration.firstNumber = 8;
+  //     overrideTempo.noteDuration.secondNumber = 3;
+  //   }
+  //   else {
+  //     overrideTempo.noteDuration.firstNumber ??= overrideTimeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+  //     overrideTempo.noteDuration.secondNumber ??= 1;
+  //   }
+  // }
+  return score;
+}
+
+
 
 
 

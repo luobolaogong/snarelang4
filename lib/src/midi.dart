@@ -517,6 +517,44 @@ class Midi {
   /// The caller of this method has access to the Note which holds the nameValue and type, etc.
   /// May want to watch out for cumulative rounding errors.  "snareLangNoteNameValue" can be
   /// a something like 1.333333, so it shouldn't be called a NameValue like "4:3" could be.
+  ///
+  /// Need to work out timing of notes that have grace notes, like 3 stroke ruffs.
+  ///
+  /// First, for a snare drum I usually think of the note as happening at a point in time and
+  /// that the note has no duration, but that's not really true.  A tenor drum has a long ring
+  /// to is.  The sound decays over a long period of time.  The snare not so much, but it
+  /// too has a sound that has a duration, if only for the acoustics of the room where it was
+  /// recorded.  It's just not as noticeable.  So, I should forget the idea that a note is
+  /// just a point in time.  A note has a duration that is specified by the NoteOn and NoteOff
+  /// events.  When the NoteOff event happens, then the note's duration stops.
+  ///
+  /// Every note has a NoteOn and NoteOff event, and both those events have a deltaTime value.
+  /// DeltaTime says when the event starts relative to the previous NoteOn or NoteOff.
+  /// A NoteOn event usually has a DeltaTime of 0 because it starts immediately when the
+  /// previous NoteOff event occurs.  A NoteOff event has a DeltaTime that represents the
+  /// duration of the note, which means the amount of time since NoteOn started.
+  ///
+  /// So, DeltaTime is a duration since the previous event, but for the NoteOff event it represents the
+  /// duration of the note which started with a NoteOn event.
+  ///
+  /// This would therefore be a simple sequence of 0 followed by the note duration for the
+  /// NoteOn and NoteOff sequence for each note, if we didn't have to adjust for grace notes.
+  ///
+  /// For notes with grace notes we need to slide the note's sound/sample to the left by
+  /// the duration of the grace notes so that the principle note will be where it's expected to be.
+  /// That means the the previous note's duration has to be shortened, which means it's
+  /// NoteOff event's DeltaTime has to be reduced, and the current note's NoteOff deltaTime
+  /// should be lengthened the same amount.  (Don't play with the NoteOn's deltaTime.  More complicated that way)
+  /// But that lengthened NoteOff's deltaTime may be shortened later if the following note
+  /// has grace notes.
+  ///
+  /// So, basically you're looking at two notes at once: the current note and the previous note.
+  /// If the current note has grace notes, reduce the previous note's NoteOff deltaTime, and
+  /// increase the current note's NoteOff deltaTime the same amount.  Then advance.
+  /// Special condition for first note.  Maybe not last note.
+  ///
+  /// BUT in this method we only have access to the current note.  So the logic doesn't go here.
+  ///
   /// Clean this up later.  It's too long for one thing.
   ///
   // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
@@ -525,160 +563,22 @@ class Midi {
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
     }
-    // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+
+
+
+
+    // Determine the noteNumber for the note.  The noteNumber determines what soundFont sample to play
+    note.setNoteNumber(voice, loopBuzzes, usePadSoundFont);
+
+
+
+      // // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
     var snareLangNoteNameValue = note.duration.firstNumber / note.duration.secondNumber; // is this right???????
     if (note.noteType == NoteType.rest) {
       note.velocity = 0; // new, nec?
     }
-    // Maybe this should be put into Note, even though it's a MIDI thing.
-    var noteNumber;
-    switch (note.noteType) {
-      case NoteType.tapRight:
-        noteNumber = 60;
-        if (voice == Voice.unison) { // get rid of this voice stuff and just make the unison its own noteType
-          noteNumber = 20;
-        }
-        break;
-    // case NoteType.tapUnison:
-    //   noteNumber = 20;
-    //   break;
-      case NoteType.tapLeft:
-        noteNumber = 70;
-        if (voice == Voice.unison) {
-          noteNumber = 30;
-        }
-        break;
-    // case NoteType.flamUnison:
-    //   noteNumber = 21;
-    //   break;
-      case NoteType.flamRight:
-        noteNumber = 61;
-        if (voice == Voice.unison) {
-          noteNumber = 21;
-        }
-        // test.  A positive number pushes the flam back so it's late.  But a neg number isn't allowed,
-        // so seems that the previous note's duration has to be shortened.  But what if a flam is the first
-        // note of a score?  Nothing before it to shave off.  Can the sound font compensate for this?????
-        // graceOffset = 1234;
-        break;
-      case NoteType.flamLeft:
-        noteNumber = 71;
-        if (voice == Voice.unison) {
-          noteNumber = 31;
-        }
-        // graceOffset = 1234; // test
-        break;
-    // case NoteType.dragUnison:
-    //   noteNumber = 21; // wrong, but don't have a drag recorded yet by SLOT
-    //   break;
-      case NoteType.dragRight:
-        noteNumber = 72; // temp until find out soundfont problem
-        if (voice == Voice.unison) {
-          noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
-        }
-        break;
-      case NoteType.dragLeft:
-        noteNumber = 72;
-        if (voice == Voice.unison) {
-          noteNumber = 31;// wrong, but don't have a drag recorded yet by SLOT
-        }
-        break;
-      case NoteType.tenorRight:
-        noteNumber = 16;
-        break;
-      case NoteType.tenorLeft:
-        noteNumber = 16;
-        break;
-      case NoteType.bassRight:
-        noteNumber = 10; // temp until find out soundfont problem
-        break;
-      case NoteType.bassLeft:
-        noteNumber = 10;
-        break;
-    // case NoteType.rollUnison:
-    //   noteNumber = 23; // this one is looped.  This is called RollSlot
-    //   break;
-      case NoteType.buzzRight:
-        noteNumber = 63;
-        if (loopBuzzes) {
-          noteNumber = 67; // this one is looped but not quick enough?
-        }
-        if (voice == Voice.unison) {
-          noteNumber = 23;
-        }
-        break;
-      case NoteType.buzzLeft:
-      // If loop, add 4 to be 77
-        noteNumber = 73;
-        if (loopBuzzes) {
-          noteNumber = 77; // this one is looped, but not quick enough????
-        }
-        if (voice == Voice.unison) {
-          noteNumber = 33;
-        }
-        break;
-    // Later add SLOT Tuzzes, they have lots in the recording
-      case NoteType.tuzzLeft:
-        noteNumber = 74;
-        if (voice == Voice.unison) {
-          noteNumber = 34;// wrong
-        }
-        break;
-      case NoteType.tuzzRight:
-        noteNumber = 64;
-        if (voice == Voice.unison) {
-          noteNumber = 24;// wrong
-        }
-        break;
-      case NoteType.ruff2Left:
-        noteNumber = 75;
-        break;
-      case NoteType.ruff2Right:
-        noteNumber = 65;
-        break;
-      case NoteType.ruff3Left:
-        noteNumber = 76;
-        break;
-      case NoteType.ruff3Right:
-        noteNumber = 66;
-        break;
-      case NoteType.roll:
-        noteNumber = 40;
-        if (voice == Voice.unison) {
-          noteNumber = 37;// wrong
-        }
-        break;
-      case NoteType.met: // new
-        noteNumber = 1;
-        break;
-      case NoteType.rest:
-        noteNumber = 99; // see if this helps stop blowups when writing
-        break;
-      default:
-        log.fine('noteOnNoteOff, What the heck was that note? $note.type');
-    }
 
-    // FIX THIS LATER WHEN SOUND FONT HAS SOFT/MED/LOUD RECORDINGS.
-    if (soundFontHasSoftMediumLoudRecordings) {
-      //
-      // This is new, to take advantage of the 3 different volume levels in the recordings, which were separated by 10 note numbers.
-      //
-      if (note.velocity < 50) {
-        log.finer('Note velocity is ${note.velocity}, so switched to quiet recording.');
-        noteNumber -= 10;
-      }
-      else if (note.velocity > 100) {
-        log.finer('Note velocity is ${note.velocity}, so switched to loud recording.');
-        noteNumber += 10;
-      }
-      else {
-        log.finer('Note velocity is ${note.velocity}, so did not switch recording.');
-      }
-    }
 
-    if (usePadSoundFont) {
-      noteNumber -= 20;
-    }
     //
     // Here it is.  Here's where the note will go into a list of midi events.
     // deltaTime has been 0, but may need to adjust for roundoffs, or perhaps for gracenotes preceding beat?
@@ -692,9 +592,9 @@ class Midi {
     //
     var noteOnEvent = NoteOnEvent();
     noteOnEvent.type = 'noteOn';
-    noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?
+    noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?????????????????????????????????????????
     // noteOnEvent.deltaTime = graceOffset; // Can you do a negative amount, and add the rest on the off note?
-    noteOnEvent.noteNumber = noteNumber;
+    noteOnEvent.noteNumber = note.noteNumber; // this was determined above by all that code
     noteOnEvent.velocity = note.velocity;
     // noteOnEvent.channel = channel;
     noteOnEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
@@ -702,9 +602,16 @@ class Midi {
 
     var noteOffEvent = NoteOffEvent();
     noteOffEvent.type = 'noteOff';
+
+    // noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
+    // // var diff = note.postNoteShift + note.preNoteShift;
+    // noteOffEvent.deltaTime += note.noteOffDeltaTimeShift; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
+    print('ticksPerBeat: $ticksPerBeat, and tempo has nothing to do with this?'); // always 10080
     noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
-    // noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round() - graceOffset; // keep track of roundoff?
-    noteOffEvent.noteNumber = noteNumber;
+    print('deltaTime before shift: ${noteOffEvent.deltaTime}');
+    noteOffEvent.deltaTime += note.noteOffDeltaTimeShift; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
+    print('deltaTime after shift: ${noteOffEvent.deltaTime}');
+    noteOffEvent.noteNumber = note.noteNumber;
     // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
     noteOffEvent.velocity = 0; // shouldn't this just be 0?
     // noteOffEvent.channel = channel;
@@ -730,7 +637,7 @@ class Midi {
 
     log.finest('noteOnNoteOff, Created note events for noteName ${snareLangNoteNameValue}, '
         'deltaTime ${noteOffEvent.deltaTime} (${noteTicksAsDouble}), velocity: ${note.velocity}, '
-        'number: ${noteNumber}, cumulative roundoff ticks: $cumulativeRoundoffTicks');
+        'number: ${note.noteNumber}, cumulative roundoff ticks: $cumulativeRoundoffTicks');
     return diffTicksAsDouble; // kinda strange
   }
 }

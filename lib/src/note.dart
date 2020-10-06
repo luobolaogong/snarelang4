@@ -88,9 +88,15 @@ class Note {
   NoteType noteType = NoteType.tapRight;  // correct here?
   int velocity; // Perhaps this will go into MidiNote or something, new
   Dynamic dynamic; // gets a value during first pass through the score list
+  int noteNumber; // new 10/4/2020
+  // int preNoteShift; // how much we need to slide this note left
+  // int postNoteShift; // how much we need to add to this note to compensate.  Usually same as preNoteShift, but could be adjusted by next note
+  int noteOffDeltaTimeShift = 0;
   //int midiNoteNumber; // experiment 9/20/2020  This would be the midi soundfont number, related to NoteType
   Note() {
     duration = NoteDuration();
+    // preNoteShift = 0; // ???
+    // postNoteShift = 0;  // why is this nec?
   }
 
   String toString() {
@@ -166,6 +172,166 @@ class Note {
         log.info('What was that note type?  $noteType');
         break;
     }
+  }
+
+
+
+  void setNoteNumber(Voice voice, bool loopBuzzes, bool usePadSoundFont) {
+    // if (noteType == NoteType.rest) {
+    //   velocity = 0; // new, nec?
+    // }
+
+
+    // Maybe this should be put into Note, even though it's a MIDI thing.
+    //var noteNumber;
+    switch (noteType) {
+      case NoteType.tapRight:
+        noteNumber = 60;
+        if (voice == Voice.unison) { // get rid of this voice stuff and just make the unison its own noteType
+          noteNumber = 20;
+        }
+        break;
+    // case NoteType.tapUnison:
+    //   noteNumber = 20;
+    //   break;
+      case NoteType.tapLeft:
+        noteNumber = 70;
+        if (voice == Voice.unison) {
+          noteNumber = 30;
+        }
+        break;
+    // case NoteType.flamUnison:
+    //   noteNumber = 21;
+    //   break;
+      case NoteType.flamRight:
+        noteNumber = 61;
+        if (voice == Voice.unison) {
+          noteNumber = 21;
+        }
+        // test.  A positive number pushes the flam back so it's late.  But a neg number isn't allowed,
+        // so seems that the previous note's duration has to be shortened.  But what if a flam is the first
+        // note of a score?  Nothing before it to shave off.  Can the sound font compensate for this?????
+        // graceOffset = 1234;
+        break;
+      case NoteType.flamLeft:
+        noteNumber = 71;
+        if (voice == Voice.unison) {
+          noteNumber = 31;
+        }
+        // graceOffset = 1234; // test
+        break;
+    // case NoteType.dragUnison:
+    //   noteNumber = 21; // wrong, but don't have a drag recorded yet by SLOT
+    //   break;
+      case NoteType.dragRight:
+        noteNumber = 72; // temp until find out soundfont problem
+        if (voice == Voice.unison) {
+          noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
+        }
+        break;
+      case NoteType.dragLeft:
+        noteNumber = 72;
+        if (voice == Voice.unison) {
+          noteNumber = 31;// wrong, but don't have a drag recorded yet by SLOT
+        }
+        break;
+      case NoteType.tenorRight:
+        noteNumber = 16;
+        break;
+      case NoteType.tenorLeft:
+        noteNumber = 16;
+        break;
+      case NoteType.bassRight:
+        noteNumber = 10; // temp until find out soundfont problem
+        break;
+      case NoteType.bassLeft:
+        noteNumber = 10;
+        break;
+    // case NoteType.rollUnison:
+    //   noteNumber = 23; // this one is looped.  This is called RollSlot
+    //   break;
+      case NoteType.buzzRight:
+        noteNumber = 63;
+        if (loopBuzzes) {
+          noteNumber = 67; // this one is looped but not quick enough?
+        }
+        if (voice == Voice.unison) {
+          noteNumber = 23;
+        }
+        break;
+      case NoteType.buzzLeft:
+      // If loop, add 4 to be 77
+        noteNumber = 73;
+        if (loopBuzzes) {
+          noteNumber = 77; // this one is looped, but not quick enough????
+        }
+        if (voice == Voice.unison) {
+          noteNumber = 33;
+        }
+        break;
+    // Later add SLOT Tuzzes, they have lots in the recording
+      case NoteType.tuzzLeft:
+        noteNumber = 74;
+        if (voice == Voice.unison) {
+          noteNumber = 34;// wrong
+        }
+        break;
+      case NoteType.tuzzRight:
+        noteNumber = 64;
+        if (voice == Voice.unison) {
+          noteNumber = 24;// wrong
+        }
+        break;
+      case NoteType.ruff2Left:
+        noteNumber = 75;
+        break;
+      case NoteType.ruff2Right:
+        noteNumber = 65;
+        break;
+      case NoteType.ruff3Left:
+        noteNumber = 76;
+        break;
+      case NoteType.ruff3Right:
+        noteNumber = 66;
+        break;
+      case NoteType.roll:
+        noteNumber = 40;
+        if (voice == Voice.unison) {
+          noteNumber = 37;// wrong
+        }
+        break;
+      case NoteType.met: // new
+        noteNumber = 1;
+        break;
+      case NoteType.rest:
+        noteNumber = 99; // see if this helps stop blowups when writing
+        break;
+      default:
+        log.fine('noteOnNoteOff, What the heck was that note? $noteType');
+    }
+
+    // FIX THIS LATER WHEN SOUND FONT HAS SOFT/MED/LOUD RECORDINGS.
+    if (soundFontHasSoftMediumLoudRecordings) {
+      //
+      // This is new, to take advantage of the 3 different volume levels in the recordings, which were separated by 10 note numbers.
+      //
+      if (velocity < 50) {
+        log.finer('Note velocity is ${velocity}, so switched to quiet recording.');
+        noteNumber -= 10;
+      }
+      else if (velocity > 100) {
+        log.finer('Note velocity is ${velocity}, so switched to loud recording.');
+        noteNumber += 10;
+      }
+      else {
+        log.finer('Note velocity is ${velocity}, so did not switch recording.');
+      }
+    }
+
+    if (usePadSoundFont) {
+      noteNumber -= 20;
+    }
+    return;
   }
 
 //  int durationToTicks(int ticksPerBeat, Duration snareLangNoteNameValue) {

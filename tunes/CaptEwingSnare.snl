@@ -20,12 +20,9 @@
 /tempo 70    // Target 70.  Recording is around 68-70
 
 
-
-
 // Wait for met to establish tempo
 8r . . .
 4r . . .
-
 // "To the right, quick march"
 4r . . .
 
@@ -90,7 +87,7 @@ _24t /fff /mf . . /cresc  _40t 20Z .  8T /fff /mf 12T 24t
 /mp /cresc 24Z . . . . .  8T /fff /mf 24T 12t
 
 // Line 5
-/fff /mf /cresc _40T 20z . _40t 20Z .  24t . . 8F /fff /mf
+/fff /mp /cresc _40T 20z . _40t 20Z .  24t . . 8F /fff /mf
 /mp /cresc 24Z . . . . .  _40T 20z 20z 24Z . _24t
 _40t 20Z . 24z . 24t  12T /fff /mf 24t 12F >30t
 30T . . . /cresc  _40t 20Z . 8t  24Z . 24t
