@@ -281,7 +281,7 @@ class Midi {
     trackNameEvent.text = 'TrackZero';
     trackNameEvent.deltaTime = 0;
     trackZeroEventsList.add(trackNameEvent);
-    print('added track name event to track zero: ${trackNameEvent.text}');
+    log.finer('Added track name event to track zero: ${trackNameEvent.text}');
 
     // Add file creation meta data, like the program that created the midi file.
     var textEvent = TextEvent();
@@ -387,7 +387,7 @@ class Midi {
         //   print('In addMidiEventsToTracks and got a Staff element, and is either same as current, or this track is empty, so doing nothing with it and skipping it.');
         //   continue;
         // }
-        log.fine('New Staff element ${element.id}');
+        log.finer('New Staff element ${element.id}');
         // do something here to change the patch or channel or something so the soundfont can be accessed correctly?
         if (element.id == StaffId.pad) {
           usePadSoundFont = true;
@@ -413,7 +413,7 @@ class Midi {
           trackNameEvent.text = staffIdToString(element.id); // ????????????????????????????????????????????????????????????????????????????????????????????????
           trackNameEvent.deltaTime = 0;  // time since the previous event?
           trackEventsList.add(trackNameEvent);
-          print('added track name events: ${trackNameEvent.text}');
+          log.finer('Added track name: ${trackNameEvent.text}');
           if (trackNameEvent.text == staffIdToString(StaffId.unison)) { // THIS IS A TOTAL HACK.  Clear up this Staff/Track and Voice stuff.  Prob remove Voice, and make Unison an instrument
             currentVoice = Voice.unison;
           }
@@ -606,11 +606,8 @@ class Midi {
     // noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
     // // var diff = note.postNoteShift + note.preNoteShift;
     // noteOffEvent.deltaTime += note.noteOffDeltaTimeShift; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
-    print('ticksPerBeat: $ticksPerBeat, and tempo has nothing to do with this?'); // always 10080
     noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
-    print('deltaTime before shift: ${noteOffEvent.deltaTime}');
     noteOffEvent.deltaTime += note.noteOffDeltaTimeShift; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
-    print('deltaTime after shift: ${noteOffEvent.deltaTime}');
     noteOffEvent.noteNumber = note.noteNumber;
     // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
     noteOffEvent.velocity = 0; // shouldn't this just be 0?

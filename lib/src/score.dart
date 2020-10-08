@@ -496,7 +496,7 @@ class Score {
   /// Special condition for first note.  Maybe not last note.
   ///
   void adjustForGraceNotes() {
-    log.info("In adjustForGraceNotes");
+    log.fine("In adjustForGraceNotes");
     var graceNotesDuration = 0; // Actually, the units are wrong.  This should be a percentage thing, I think.  Changes based on tempo.  For slow tempos the number is too high.  For fast tempos, too low.
     var noteOffDeltaTimeShift = 0;
 
@@ -514,7 +514,7 @@ class Score {
     log.finest('In top of Score.adjustForGraceNotes and just set "previousNote" to be some default value');
     for (var element in elements) {
       if (element is Tempo) {
-        log.info('In adjustForGraceNotes(), tempo is $element');
+        log.finest('In adjustForGraceNotes(), tempo is $element');
         tempoBpm = element.bpm;
         continue;
       }
@@ -571,7 +571,7 @@ class Score {
         continue;
       }
       else {
-        log.fine('Score.adjustForGraceNotes() whatever this element is ($element), it is not important for adjusting durations due to gracenotes.');
+        log.finest('Score.adjustForGraceNotes() whatever this element is ($element), it is not important for adjusting durations due to gracenotes.');
         continue;
       }
 

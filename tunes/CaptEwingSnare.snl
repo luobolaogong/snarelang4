@@ -80,7 +80,7 @@ _24t /fff /mf . . /cresc  _40t 20Z .  8T /fff /mf 12T 24t
 8F /fff /mf 12r 24t  /mp /cresc 24Z . . 8t /fff /mf
 8F /mp /cresc 24Z . .  8F /fff /mf 12T 24t
 
-// repeat of line 2:
+// repeat of line 2
 /mp /cresc 24Z . . 8t /fff /mf  8F 12T 24t
 /mp /cresc 24Z . . . . . 8T /fff /mf .
 12F 24t 24T . ^24T  12t 24F 12t 24t

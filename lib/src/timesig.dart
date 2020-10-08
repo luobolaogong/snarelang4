@@ -30,6 +30,6 @@ Parser timeSigParser = ( // what about whitespace?
   var timeSig = TimeSig();
   timeSig.numerator = value[1];
   timeSig.denominator = value[3];
-  log.info('Leaving TimeSigParser returning value $timeSig');
+  log.fine('Leaving TimeSigParser returning value $timeSig');
   return timeSig; // this element eventually goes into a list of other elements that make up a score
 });

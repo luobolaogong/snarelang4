@@ -111,7 +111,7 @@ class TempoRamp {
 class Tempo {
   NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good
   int bpm = 84; // initialize?  Wow, it's set elsewhere isn't it?  Where do this best, if at all?
-
+// change the above to a double, because sometimes recordings are not exact integers
   String toString() {
     return 'Tempo: bpm: $bpm, $noteDuration';
   }

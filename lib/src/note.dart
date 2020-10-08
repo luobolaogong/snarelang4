@@ -8,6 +8,7 @@ enum NoteArticulation {
 }
 
 class NoteDuration { // change this to Duration if possible, which conflicts, I think with something
+  // Maybe should change the following to doubles?????
   int firstNumber; // initialize????
   int secondNumber;
 //  int firstNumber = 4; // initialize????
