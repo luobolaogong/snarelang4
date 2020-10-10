@@ -6,6 +6,8 @@ import 'package:logging/logging.dart';
 import 'package:petitparser/petitparser.dart';
 import 'package:snarelang4/snarelang4.dart';
 
+/// Rename this project to RhythmAnalyst.  This isn't just about a language, and
+/// not just about snare drumming.
 ///
 /// Take a look at WebAudioFont  https://github.com/surikov/webaudiofont
 /// which is a JavaScript thing so that you can play midi in a web page.
@@ -34,7 +36,6 @@ const inFilesList = 'input';
 const outMidiFilesPath = 'midi';
 const commandLineLogLevel = 'loglevel';
 const help = 'help';
-//const commandLineMetronome = 'met';
 const commandLineContinuousSustainedLoopedBuzzes = 'loopbuzzes'; // seems not to work.  Forget until fix soundFont for Roll
 const commandLineUsePadSoundFont = 'pad';
 
@@ -44,8 +45,6 @@ void main(List<String> arguments) {
   print('Staring snl ...');
   var usePadSoundFont = false;
   var loopBuzzes = false; // this is not working currently with "roll" R
-  //var staff = Staff(); // test
-  //staff.id = StaffId.snare; // test
   //
   // Set up logging.  Does this somehow apply to all files?
   //
@@ -125,6 +124,10 @@ void main(List<String> arguments) {
   List<String> piecesOfMusic = [...argResults[inFilesList]]; // can't change to var.  Why?
 
   // var score = doThePhases(piecesOfMusic, overrideDynamic, overrideTimeSig, overrideTempo);
+  //
+  // There are different phases that the transformation takes.
+  // To make this method shorter, I separated out those phases from this method.
+  // Rename this later, and restructure it.
   var score = doThePhases(piecesOfMusic);
 
 
@@ -160,9 +163,7 @@ void main(List<String> arguments) {
   overrideStaff ??= defaultStaff;
 
 
-
   // Now do some Midi stuff
-
 
   // Create Midi header
   var midi = Midi(); // I guess "midi" is already defined elsewhere
@@ -177,18 +178,6 @@ void main(List<String> arguments) {
   // but what happened to the processing phases before that?
   //
   midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, usePadSoundFont, loopBuzzes, overrideStaff);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   // Add the header and tracks list into a MidiFile, and write it
@@ -243,10 +232,6 @@ Score doThePhases(List<String> piecesOfMusic) {
   defaultFirstNoteProperties.dynamic = Dynamic.f; // Not sure how important this is, or if it's wrong.  Wrong value?  Should have global values somewhere for these defaults;
 
 
-
-
-
-
   // Phase 2:
   // Apply shorthands to the list, meaning fill in the blanks that are in the raw list, including Dynamics.
   //
@@ -264,32 +249,10 @@ Score doThePhases(List<String> piecesOfMusic) {
   // Apply tempo ramps
   // later
 
+  // Phase 5:
+  // Do grace notes
   score.adjustForGraceNotes(); // maybe do this similar to how applyShorthands is done
 
-  // // This doesn't look like a phase.  Looks like just setting up some "override" values
-  // var firstTimeSigInScore = score.scanForFirstTimeSig();
-  // var firstTempoInScore = score.scanForFirstTempo();
-  // // One or the other or both those objects may be null, if not specified in the file.  But if either are specified, then we should use them to create the first
-  // // track's time sig and/or tempo
-  // if (firstTimeSigInScore != null) {
-  //   overrideTimeSig = firstTimeSigInScore;
-  // }
-  // if (firstTempoInScore != null) {
-  //   overrideTempo = firstTempoInScore;
-  // }
-  //
-  // // Watch out, this is pretty much duplicate code in another place, and it's probably wrong here, 'cause slightly different
-  // // High chance this is faulty code in this area.
-  // if (overrideTempo.noteDuration.firstNumber == null || overrideTempo.noteDuration.secondNumber == null) {
-  //   if (overrideTimeSig.denominator == 8 && overrideTimeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-  //     overrideTempo.noteDuration.firstNumber = 8;
-  //     overrideTempo.noteDuration.secondNumber = 3;
-  //   }
-  //   else {
-  //     overrideTempo.noteDuration.firstNumber ??= overrideTimeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-  //     overrideTempo.noteDuration.secondNumber ??= 1;
-  //   }
-  // }
   return score;
 }
 

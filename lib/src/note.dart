@@ -64,24 +64,6 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   rest,
   previousNoteDurationOrType
 }
-// enum NoteType { // I think I can change this to "Type", because I don't think it's a keyword, but maybe it is
-//   rightTap,
-//   leftTap,
-//   rightFlam,
-//   leftFlam,
-//   rightDrag,
-//   leftDrag,
-//   rightBuzz,
-//   leftBuzz,
-//   leftTuzz,
-//   rightTuzz,
-//   leftRuff2,
-//   rightRuff2,
-//   leftRuff3,
-//   rightRuff3,
-//   rest,
-//   previousNoteDurationOrType
-// }
 
 class Note {
   NoteArticulation articulation;

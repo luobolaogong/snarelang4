@@ -402,16 +402,6 @@ class Score {
   }
 
 
-
-
-//  void applyDynamics() {
-//    Dynamic currentDynamic;
-//    for (var element in elements) {
-//      print('looking at $element to apply dynamics');
-//    }
-//    return;
-//  }
-
   // These two are new.  We want to know the first tempo and time signature that is specified in the score.
   // There may not be either value, but if there is we want to set them for the midi file header, I think.
   // Not sure it's required though for the header.  Check on that.  Also, don't need to return it if it's
@@ -556,18 +546,10 @@ class Score {
             break;
           default: // a note without gracenotes, or a rest
             graceNotesDuration = 0;
-            // previousNote.postNoteShift -= graceNotesDuration;
-            // note.preNoteShift = -graceNotesDuration;
-            // note.postNoteShift = graceNotesDuration;
-            //previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
             break;
 
         }
-        // previousNote.postNoteShift -= shiftNoteMilliseconds;
-        // note.preNoteShift -= shiftNoteMilliseconds;
-        // note.postNoteShift += shiftNoteMilliseconds;
-        // previousNote = note; // probably wrong.  Just want to work with pointers
         continue;
       }
       else {
@@ -575,28 +557,6 @@ class Score {
         continue;
       }
 
-//       if (element.noteType == NoteType.previousNoteDurationOrType) {
-//         element.duration = previousNote.duration;
-//         //element.dynamic = previousNote.dynamic;
-//         element.noteType = previousNote.noteType;
-//         //element.swapHands(); // check that nothing stupid happens if element is a rest or dynamic or something else
-//       }
-//       else {
-// //        element.duration ??= previousNote.duration;
-//         element.duration.firstNumber ??= previousNote.duration.firstNumber; // new
-//         element.duration.secondNumber ??= previousNote.duration.secondNumber;
-//         //element.dynamic ??= previousNote.dynamic;
-//         if (element.noteType == null) {
-//           element.noteType = previousNote.noteType;
-//           //element.swapHands();
-//         }
-//       }
-//       //previousNote = element; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
-//       previousNote.dynamic = element.dynamic;
-// //      previousNote.velocity = element.velocity; // unnec?
-//       //previousNote.articulation = element.articulation;
-//       previousNote.duration = element.duration;
-//       previousNote.noteType = element.noteType;
     }
     log.info('Leaving adjustForGraceNotes');
     return;
@@ -608,8 +568,6 @@ class Score {
 ///
 /// ScoreParser
 ///
-//Parser scoreParser = ((tempoParser | dynamicParser | timeSigParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-// Parser scoreParser = ((timeSigParser | tempoParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
 Parser scoreParser = ((commentParser | staffParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
   log.finer('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();

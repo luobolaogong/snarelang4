@@ -334,9 +334,6 @@ class Midi {
   }
 
 
-
-
-
   /// Add lists of events to tracks, and add the tracks to the list of midiTracks passed in.
   /// For now, only one track is worked on at a time.  A new track is created when one of the elements
   /// is a Staff element.  There would be a new track for each instrument, or ensemble.  Snare, snareUnison,
