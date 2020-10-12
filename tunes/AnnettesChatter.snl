@@ -4,14 +4,76 @@
 
 /staff snare
 /time 12/8
-/tempo 120    // don't know
+/tempo 120    // don't know, 120 seems about right
 
-8:3t . . .   // same as 4t in 4/4
-16:3t . . . . . . .  // same as 8t in 4/4
+8:3T . . .   // same as 4t in 4/4
+^8T . .    ^8T . .    ^8T . .    ^8T . .
+
+
 
 // Line 1
-32:3T 32:3z . .  8t . >8D    16T . . .   >8T >8t . .
->8F 8t .   >8f 8T >8f    16t . . . >8T  >8t . .
+32:3T 32:3z . .  8t . ^8D    16T . . .   ^8T ^8t . .
+^8F 8t .   ^8f 8T ^8f    16t . . . ^8T  ^8t . .
+//8F 8t ^16T 16t 16t 16T 16T ^16t    ^16T 16t 16t 16T 16T ^16t  ^8T ^8t . .  // 16 is a sextuplet
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quntuplet in 6/8
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+// Line 2
+8F 8t 8F   16T 16T 16t 16t ^8T   ^8t  24T 24t 24t  8T  ^8t . .
+8T 8f 8T 8f 8T 8f 16T . . . ^8T ^8t . .
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quntuplet in 6/8
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+
+//Line 3
+^8T . .   ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
+16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+// Repeat Line 3
+^8T . .   12z . .  ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
+16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+// Line 4
+8T 8f >8T  8t 8F >8t   8T 8f 8T  8D 16T . . .
+>8T . 16T . . 16T  >8t >8T . 16T 16T 8t  >8F 8t 8t
+8T 8F . 8t 8F .  8T 8f 8T  8F 8T .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+// Line 5
+8T 8f >8T  8t 8F >8t  8T 8f 8T   8T 16T . . .
+>8T .  >16T . . 16T   8t >8T   8t  24T 24t 24t 8T  8t . .
+8F 8t .  8t 8F 8t  8T 8f 8T  >8t . .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+// Line 6
+>16T . . . . .   ^12t 12z .    ^12t 12z .    16T . >8T  8t . .
+^8F  24t 24T 24T  8t  4F 12F 12z .  16t . 16t 16t   >8T . .
+^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+// Repeat Line 6
+>16T . . . . .   ^12t 12z .    ^12t 12z .    16T . >8T  8t . .
+^8F  24t 24T 24T  8t  4F 12F 12z .  16t . 16t 16t   >8T . .
+^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+
+// Is this the start of a new tune?
+// Line 7
+32:3T 32:3z . .  4t 24T 24t 24t   4T  8t   16T 16z 4T
+32:3T 32:3z . .  4t 24T 24t 24t   4T  8t   16T 16z 4T
+32:3T 32:3z . .  4t 24T 24t 24t   4T  8t   16T 16z 4T
+32:3T 32:3z . .  4t 24T 24t 24t   4T  8t   16T 16z 4T
 
 
 
@@ -19,6 +81,74 @@
 
 
 
+
+
+
+
+
+
+
+
+16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+
+
+^12t . .    ^12t . .    ^12t . .    ^12t . .    ^12t . .    ^12t . .
+^12t 12z .    ^12t 12z .    ^12t 12z .    ^12t 12z .    ^12t 12z .    ^12t 12z .  // 5 stroke rolls at quarter note trips
+^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z . // pretty close to correct, 5 stroke tuzz rolls at quarter note triplets
+^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z . // pretty close to correct, 5 stroke tuzz rolls at quarter note triplets
+
+16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+
+^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z .    ^20t 10z . // pretty close to correct, 5 stroke tuzz rolls at quarter note triplets
+
+
+
+
+16Z . >8T       16Z . >8T       16Z . >8T       16Z . >8T       16Z . >8T       16Z . >8T
+
+
+
+^16t 16Z . .    ^16t 16Z . .     ^16t . . .       ^8T . .    ^16t 16Z . .     ^16t 16Z . .   16t . . .   ^8T . .
+
+^16t 16Z . .    ^16t 16Z . .     ^16t . . .    ^16t 16Z . .     ^16t 16Z . .   16t . . .   // quart note triplets  tap rolls but not tuzzes
+
+
+
+
+^16t 16Z . .    ^16t 16Z . .     ^16t 16Z . .     ^16t 16Z . .    ^16t 16Z . .     ^16t 16Z . .   // quart note triplets  7 stroke tap rolls but not tuzzes
+
+^16t 16Z .    ^16T 16z .     ^16t 16Z .    ^16T 16z .     ^16t 16Z .    ^16T 16z .  ^16t 16Z .    ^16T 16z .   // eighth note
+
+
+
+16Z . >8T       16z . ^8t 16Z . . .   >16t . . . . .    8T . .
+
+16Z . >8T       16z . ^8t    16Z .  >16t . . . . .    8T . . .
+
+
+>12T . .    >12T . .    >12T . .    >12T . .    >12T . .    >12T . .
+
+
+// line 3 bar 3
+16Z . ^8T       16z . ^8t         16Z . ^8T      16z .   16t . . .     ^8T . .
+
+40:3t 20:3t 20:3t    40:3t 20:3t 20:3t    40:3t 20:3t 20:3t    40:3t 20:3t 20:3t  // hey these are every beat, not
+16Z .     40:3t 20:3z 20:3Z    40:3t 20:3z 20:3Z    40:3t 20:3z 20:3Z    8T . .
+
+
+
+16Z . 8T  16z . 8t    16Z . 8T  16z . 16t . . . 8T . .
+
+16Z . 8T  16z . 8t    16Z . 8T  16z . 8t    16Z . 8T . .
+16Z . 8T  16z . 8t    16Z . 8T  16z . 16t . . . 8T . .
+
+
+
+
+16T . 8T  16T . 8T  16T . 8T  16T . 8T  16T . 8T . .
+16T . 8T  16T . 8T  16T . 8T  16T . 8T  16T . 8T . .
+16Z . 8T  16z . 8t    16Z . 8T  16z . 8t    16Z . 8T . .
+16Z . 8T  16z . 8t    16Z . 8T  16z . 8t    16Z . 8T . .
 
 
 8:3t . . .   // same as 4t in 4/4
@@ -34,9 +164,6 @@
 16t . . . . . 8:3t   16t . . . . . 8:3t      // same as 24t
 
 8:3t . . .   // same as 4t in 4/4
-//10t . . .   8:3t     10t . . .   8:3t   // too slow, and 12 is too fast
-//11t . . .   8:3t     11t . . .   8:3t   // too slow, and 12 is too fast
-//11t . . .   8:3t     11t . . .   8:3t   // a hair too fast
 32:3t . . .   8:3t    32:3t . . .   8:3t
 32:3t . . .   8:3t    32:3t . . .   8:3t
 
@@ -44,26 +171,45 @@
 
 
 16t . . . 8t . . .
-16t . . . 8t . . .
 14t . . . 8t . .     . . .      . . .
 14t . . . 8t . . . . . . . .
-14t . . . 8t . . . . . . . .
-14t . . . 8t . . . . . . . .
-14t . . . 8t . . . . . . . .
-14t . . . 8t . . . . . . . .
-14t . . . 8t . . . . . . . .
-14t . . . 8t . . . . . . . .
-14t . . . 8t . . . . . . . .
-12t . . . . . . . . . . . 6T .
-12t . . . . . . . . . . . 6T .
 12t . . . . . . . . . . . 6T .
 12t 12z . . 12t 12z . . 12t 12z. . 6T .
 12t 12z . .               12t 12z . . 12t 12z. . 6T .
 24t 12z 12z 12z 24z       12t 12z . . 12t 12z. . 6T .
-24t 12z 12z 12z 24z       12t 12z . . 12t 12z. . 6T .
 28t 14z 14z 14z    28t 14z 14z 14z    28t 14z 14z 14z      6T .
-28t 14z 14z 14z    28t 14z 14z 14z    28t 14z 14z 14z      6T .
-28t 14z 14z 14z    28t 14z 14z 14z    28t 14z 14z 14z      6T .
+
+
+^40:3t 20:3Z .  ^40:3t 20:3Z .  ^40:3t 20:3Z .  ^40:3t 20:3Z .
+^40:3t 20:3Z .  ^40:3t 20:3Z .  ^40:3t 20:3Z .  ^40:3t 20:3Z .
+
+^8T . .    ^8T . .    ^8T . .    ^8T . .
+4T . .                . . .
+
+^12T . .   ^12T . .   ^12T . .      ^12T . .   ^12T . .   ^12T . .
+^12T 12Z .   ^12T 12Z .   ^12T 12Z .   ^12T 12Z .   ^12T 12Z .   ^12T 12Z .
+
+
+^8T . .   12t . .  . . .        16t . 16t 16t     16T 16T 16t 16t  ^8T
+
+^8T . .   12z . .  ^12t 12Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+
+^8T . .   12z . .  ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+
+^8T . .   12z . .  ^12t 12Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+
+
+^8T . .   12t . .  . . .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+
+
+^8T . .   4t .    16t . 16t 16t     16T 16T 16t 16t  ^8T
+^8T . .   4t . .     16T 16T 16t 16t  ^8T
+
+^40:3T . . . .    ^40:3T . . . .    ^40:3T . . . .    ^40:3T . . . .
+
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quntuplet in 6/8
+8F 8t ^16T 16t 16t 16T 16T ^16t    ^16T 16t 16t 16T 16T ^16t  ^8T ^8t . .
+
 
 
 /staff met
@@ -90,3 +236,4 @@
 8:3M . . .    . . . .    . . . .    . . . .
 8:3M . . .    . . . .    . . . .    . . . .
 8:3M . . .    . . . .    . . . .    . . . .
+

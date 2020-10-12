@@ -7,12 +7,12 @@
 
 // Set the beat
 /mf
-8M . . .
-4M . . .
+//8M . . .
+//4M . . .
 
 /mf
 // "To the right, quick march"
-4M . . .
+//4M . . .
 
 // Roll off
 4M . . . . . . .
