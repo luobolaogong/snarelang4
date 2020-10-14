@@ -9,15 +9,15 @@ enum NoteArticulation {
 
 class NoteDuration { // change this to Duration if possible, which conflicts, I think with something
   // Maybe should change the following to doubles?????
-  int firstNumber; // initialize????
+  int firstNumber; // initialize????      Perhaps set to 4, and other to 1 ??????
   int secondNumber;
-//  int firstNumber = 4; // initialize????
-//  int secondNumber = 1;
+ // int firstNumber = 4; // initialize????
+ // int secondNumber = 1;
 
 //  num firstNumber; // should be an int?
 //  num secondNumber;
 
-  NoteDuration();
+//  NoteDuration(); // what?  Specifying an empty constructor?  Why?
 //  NoteDuration(this.firstNumber, this.secondNumber);
 
 

@@ -1,0 +1,69 @@
+// Annette's Chatter
+// 6/8 Jig
+// J. Reid Maxwell
+
+/marker Annette's Chatter
+// /staff snare  // this causes a new staff/track which we don't want if we string pieces together
+/time 12/8
+/tempo 136    // recording: 136
+
+
+// Line 1
+32:3T 32:3z . .  8t . ^8D    16T . . .   ^8T ^8t . .
+^8F 8t .   ^8f 8T ^8f    16t . . . ^8T  ^8t . .
+//8F 8t ^16T 16t 16t 16T 16T ^16t    ^16T 16t 16t 16T 16T ^16t  ^8T ^8t . .  // 16 is a sextuplet
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quntuplet in 6/8
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+// Line 2
+8F 8t 8F   16T 16T 16t 16t ^8T   ^8t  24T 24t 24t  8T  ^8t . .
+8T 8f 8T 8f 8T 8f 16T . . . ^8T ^8t . .
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quntuplet in 6/8
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+/marker Pt2
+//Line 3
+^8T . .   ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
+16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+// Repeat Line 3
+^8T . .   12z . .  ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
+16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+/marker Pt3
+// Line 4
+8T 8f >8T  8t 8F >8t   8T 8f 8T  8D 16T . . .
+>8T . 16T . . 16T  >8t >8T . 16T 16T 8t  >8F 8t 8t
+8T 8F . 8t 8F .  8T 8f 8T  8F 8T .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+// Line 5
+8T 8f >8T  8t 8F >8t  8T 8f 8T   8T 16T . . .
+>8T .  >16T . . 16T   8t >8T   8t  24T 24t 24t 8T  8t . .
+8F 8t .  8t 8F 8t  8T 8f 8T  >8t . .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+/marker Pt4
+// Line 6
+>16T . . . . .   ^12t 12z .    ^12t 12z .    16T . >8T  8t . .
+^8F  24t 24T 24T  8t  4F 12F 12z .  16t . 16t 16t   >8T . .
+^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+
+// Repeat Line 6
+>16T . . . . .   ^12t 12z .    ^12t 12z .    16T . >8T  8t . .
+^8F  24t 24T 24T  8t  4F 12F 12z .  16t . 16t 16t   >8T . .
+^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8:3f
+
+
+
+

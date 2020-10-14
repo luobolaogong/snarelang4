@@ -57,7 +57,8 @@ class Score {
       log.info('Loading file $filePath');
       var inputFile = File(filePath);
       if (!inputFile.existsSync()) {
-        log.warning('File does not exist at "${inputFile.path}"');
+        log.severe('File does not exist at "${inputFile.path}", exiting...');
+        exit(42);
         continue;
       }
       var fileContents = inputFile.readAsStringSync(); // per line better?
@@ -111,7 +112,7 @@ class Score {
   /// This also sets the dynamic field, but not velocities.
   ///
 //  void applyShorthands() {
-  void applyShorthands(Note defaultNote) {
+  void applyShorthands(Note defaultNote) {   // this defaultNote is strange.  Represents the first note?????
     // bad logic.  Off by one stuff:
 //    var previousNote = defaultNote;
     //Tempo latestTempo;
@@ -439,6 +440,24 @@ class Score {
     }
     return null;
   }
+  
+  void fixIncompleteTempos(List elements, TimeSig defaultInitialTimeSig, Tempo defaultInitialTempo) {
+    var mostRecentTimeSig = TimeSig();
+    mostRecentTimeSig.numerator = defaultInitialTimeSig.numerator;
+    mostRecentTimeSig.denominator = defaultInitialTimeSig.denominator;
+    for (var element in elements) {
+      if (element is TimeSig) {
+        mostRecentTimeSig.numerator = element.numerator;
+        mostRecentTimeSig.denominator = element.denominator;
+        continue;
+      }
+      if (element is Tempo) {
+        Tempo.fillInTempoDuration(element, mostRecentTimeSig);
+        continue;
+      }
+    }
+    
+  }
 
   /// This comment is also in midi.dart.  So change/summarize it there.
   ///
@@ -568,7 +587,7 @@ class Score {
 ///
 /// ScoreParser
 ///
-Parser scoreParser = ((commentParser | staffParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+Parser scoreParser = ((commentParser | markerParser | textParser | staffParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
   log.finer('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {

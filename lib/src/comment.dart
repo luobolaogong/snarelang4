@@ -19,7 +19,7 @@ class Comment {
 Parser commentParser = (
     string('//') & pattern('\n\r').neg().star() & pattern('\n\r').optional()
 ).flatten().trim().map((value) {
-  log.finest('\nIn commentParser and value is -->$value<--');
+  log.finest('In commentParser and value is -->$value<--');
   var comment = Comment();
   comment.comment = value.trim();
   log.finest('Leaving CommentParser returning -->$comment<--');

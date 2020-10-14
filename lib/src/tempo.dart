@@ -109,13 +109,28 @@ class TempoRamp {
 }
 
 class Tempo {
-  NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good
+  NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good.  But if not specified, as in '/tempo 84' do we set duration???????
   int bpm = 84; // initialize?  Wow, it's set elsewhere isn't it?  Where do this best, if at all?
 // change the above to a double, because sometimes recordings are not exact integers
   String toString() {
     return 'Tempo: bpm: $bpm, $noteDuration';
   }
-
+  
+  // static Tempo watchOutDuplicateCode(Tempo overrideTempo, TimeSig overrideTimeSig) {
+  static fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
+    if (modifyThisTempo.noteDuration.firstNumber == null || modifyThisTempo.noteDuration.secondNumber == null) {
+      if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+        modifyThisTempo.noteDuration.firstNumber = 8;
+        modifyThisTempo.noteDuration.secondNumber = 3;
+      }
+      else {
+        modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+        modifyThisTempo.noteDuration.secondNumber ??= 1;
+      }
+    }
+    //return modifyThisTempo;
+    return;
+  }
 }
 
 /// I think we're not going to allow for accel or deaccel
@@ -156,7 +171,16 @@ Parser tempoParser = ( // what about whitespace?
     NoteDuration noteDuration = value[1][0]; // NoteDurationParser returns an object
     tempo.noteDuration = noteDuration;
   }
-  tempo.bpm = value[2];
-  //log.info('Leaving tempoParser returning value $tempo');
+  // else {
+  //   print('hey, watch out for tempos that do not have noteDuration values for firstNumber etc.'); // this is fixed later as a phase
+  // }
+  // else { // new.  Probably should not be done here.  Need timesig info to fill this in if NoteDuration is null
+  //   tempo.noteDuration.firstNumber = 4; // this is for 1/4, 2/4, 3/4, 4/4, 5/4 ...   Not 6/8, 9/8, 12/8, etc.  Depends on timeSig.
+  //   tempo.noteDuration.secondNumber = 1;
+  // }
+  tempo.bpm = value[2];    // hey, what if we have '/tempo 84', shouldn't we set the duration to be something?
+  log.finer('Leaving tempoParser returning value $tempo which may need to be augmented later if Duration.firstNumber and secondNumber are null');
   return tempo; // This goes into the list of elements that make up a score, which we process one by one later.
 });
+
+

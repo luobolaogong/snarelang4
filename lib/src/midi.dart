@@ -7,7 +7,7 @@ bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sou
 ///
 /// The Dart midi library, which is basically a rewrite of a JavaScript library:
 /// https://pub.dev/documentation/dart_midi/latest/midi/midi-library.html
-///
+/// https://www.mixagesoftware.com/en/midikit/help/HTML/meta_events.html
 /// A midi spec: http://www.cs.cmu.edu/~music/cmsip/readings/Standard-MIDI-file-format-updated.pdf
 /// is based on https://github.com/gasman/jasmid, with no API documentation.
 ///
@@ -216,40 +216,79 @@ class Midi {
   }
 
 
+  // // What?  This isn't being called at all either?  Oh yeah, right.  This loops to create a track.  Okay, get rid of it.
+  // List<MidiEvent> createMidiEventsMetronomeTrack(int nBarsMetronome, Tempo tempo, Note note) {
+  //   var channel = 1; // ??????????????????????????  What's a channel?
+  //   // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+  //   var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber); // is this right???????
+  //   //var randomGenerator = Random();
+  //   var metronomeTrackEventsList = <MidiEvent>[];
+  //   var totalNotes = nBarsMetronome * 4; // wrong, assumes 4/4, not 6/8
+  //   for (var metBeatCtr = 0; metBeatCtr < totalNotes; metBeatCtr++) {
+  //     //channel = randomGenerator.nextInt(4); // test to see if this does anything
+  //     var noteOnEvent = NoteOnEvent();
+  //     noteOnEvent.type = 'noteOn';
+  //     noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???
+  //     noteOnEvent.noteNumber = 60; // wrong, right is a right tap.  Let's have something special
+  //     noteOnEvent.velocity = note.velocity;
+  //     noteOnEvent.channel = channel;
+  //     metronomeTrackEventsList.add(noteOnEvent);
+  //     log.fine('createMidiEventsMetronomeTrack() added noteOnEvent $noteOnEvent to metronomeTrackEventsList');
+  //
+  //     var noteOffEvent = NoteOffEvent();
+  //     noteOffEvent.type = 'noteOff';
+  //     noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
+  //     noteOffEvent.noteNumber = 60;
+  //     // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
+  //     noteOffEvent.velocity = 0; // shouldn't this just be 0?
+  //     noteOffEvent.channel = channel;
+  //
+  //     metronomeTrackEventsList.add(noteOffEvent);
+  //     log.fine('createMidiEventsMetronomeTrack() added noteOffEvent $noteOffEvent to metronomeTrackEventsList');
+  //
+  //   }
+  //   return metronomeTrackEventsList;
+  // }
 
-  List<MidiEvent> createMidiEventsMetronomeTrack(int nBarsMetronome, Tempo tempo, Note note) {
-    var channel = 1; // ??????????????????????????  What's a channel?
-    // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
-    var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber); // is this right???????
-    //var randomGenerator = Random();
-    var metronomeTrackEventsList = <MidiEvent>[];
-    var totalNotes = nBarsMetronome * 4; // wrong, assumes 4/4, not 6/8
-    for (var metBeatCtr = 0; metBeatCtr < totalNotes; metBeatCtr++) {
-      //channel = randomGenerator.nextInt(4); // test to see if this does anything
-      var noteOnEvent = NoteOnEvent();
-      noteOnEvent.type = 'noteOn';
-      noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???
-      noteOnEvent.noteNumber = 60; // wrong, right is a right tap.  Let's have something special
-      noteOnEvent.velocity = note.velocity;
-      noteOnEvent.channel = channel;
-      metronomeTrackEventsList.add(noteOnEvent);
 
-      var noteOffEvent = NoteOffEvent();
-      noteOffEvent.type = 'noteOff';
-      noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
-      noteOffEvent.noteNumber = 60;
-      // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
-      noteOffEvent.velocity = 0; // shouldn't this just be 0?
-      noteOffEvent.channel = channel;
-
-      metronomeTrackEventsList.add(noteOffEvent);
-
+  // Maybe will try to do the full track all at once, and not just the initial timesig and tempo, and filling in the rest later.  Thus the entire scoreElements
+  List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) {
+    var timingTrackZeroMidiEventList = <MidiEvent>[];
+    // Could immediately add the overrideTimeSig and overrideTempo, I suppose.  But if the first non-comment event is a timesig or tempo, could just do those
+    addTimeSigChangeToTrackEventsList(overrideTimeSig, timingTrackZeroMidiEventList);
+    addTempoChangeToTrackEventsList(overrideTempo, timingTrackZeroMidiEventList);
+    for (var element in scoreElements) { // is this right?
+      print('element: $element');
+      if (element is TimeSig) {
+        addTimeSigChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
+        continue;
+      }
+      if (element is Tempo) {
+        addTempoChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
+        continue;
+      }
+      if (element is Note) {
+        print('got a note, so do we just put in rests into this timing track?');
+        print('Note duration: ${element.duration}');
+        var restNote = Note();
+        restNote.articulation = element.articulation; // prob unnec
+        restNote.duration.firstNumber = element.duration.firstNumber;
+        restNote.duration.secondNumber = element.duration.secondNumber;
+        restNote.noteType = NoteType.rest;
+        restNote.velocity = 0;
+        restNote.dynamic = Dynamic.p; // what do you put for rest?
+        //restNote.noteNumber = 0; // what's the note number for a rest?  0?  99?  Gets assigned later.
+        restNote.noteOffDeltaTimeShift = 0;  // right?  This accounts for gracenotes, right?  Don't bother.
+        addNoteOnOffToTrackEventsList(restNote, timingTrackZeroMidiEventList, false, false, Voice.solo); // what about voice?  Can ignore with null?
+        continue;
+      }
+      print('what was that element? $element');  // what if /staff?  Messes things up?
     }
-    return metronomeTrackEventsList;
+    return timingTrackZeroMidiEventList;
   }
 
 
-
+  // Wow, currently not calling this at all.  I guess most of the time it isn't needed?  But maybe necessary if there are timesig or tempo changes
   // DOUBT WE NEED ALL THESE PARAMS
   // List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic) {
   List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo) {
@@ -259,25 +298,9 @@ class Midi {
     //
     var trackZeroEventsList = <MidiEvent>[];
 
-    // Watch out, this is duplicate code in another place
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! This probably does nothing, because we're not monitoring for tempos or timesigs as parse through file or scan it previous to this point
-    if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
-      if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-        tempo.noteDuration.firstNumber = 8;
-        tempo.noteDuration.secondNumber = 3;
-      }
-      else {
-        tempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-        tempo.noteDuration.secondNumber ??= 1;
-      }
-    }
-
-
+    Tempo.fillInTempoDuration(tempo, timeSig);
     // Add a track name for track zero, which maybe will be called TempoMap if it's used that way
     var trackNameEvent = TrackNameEvent();
-    // trackNameEvent.text = 'Snare'; // strangely puts this in the header, under the prop "name"
-    // trackNameEvent.text = staff.id.toString(); // no, not for trackZero
-    // trackNameEvent.text = 'TempoMap'; // just a guess.  Used for anything?
     trackNameEvent.text = 'TrackZero';
     trackNameEvent.deltaTime = 0;
     trackZeroEventsList.add(trackNameEvent);
@@ -305,31 +328,8 @@ class Midi {
 
     //var noteChannel = 0; // Is this essentially a "tempo track", or a "control track"?
 
-    // Watch out, this is duplicate code in another place
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
-      if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-        tempo.noteDuration.firstNumber = 8;
-        tempo.noteDuration.secondNumber = 3;
-      }
-      else {
-        tempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-        tempo.noteDuration.secondNumber ??= 1;
-      }
-    }
-
-    // addTempoChangeToTrackEventsList(tempo, noteChannel, trackZeroEventsList);
+    Tempo.fillInTempoDuration(tempo, timeSig);
     addTempoChangeToTrackEventsList(tempo, trackZeroEventsList); // a bit strange.  Have to convert tempo to midi.  Can't just add tempo to track without converting
-
-
-    // Put metronome here?
-
-    // Do tempo ramps here?
-
-
-    //listOfTrackEventsLists.add(trackZeroEventList); // Can we add to this track 0 later, to add metronome or tempo ramps?
-    // var trackEventsList = doSpecialFirstTrack(timeSig, tempo); // do we really need this?  Maybe so if score doesn't do tempo or timeSig
-    // listOfTrackEventsLists.add(trackEventsList);
     return trackZeroEventsList;
   }
 
@@ -401,6 +401,7 @@ class Midi {
           var endOfTrackEvent = EndOfTrackEvent(); // this is new
           endOfTrackEvent.deltaTime = 0;
           trackEventsList.add(endOfTrackEvent); // sure???????
+          log.fine('addMidiEventsToTrack() added endOfTrackEvent $endOfTrackEvent to trackEventsList');
 
           midiTracks.add(trackEventsList);
           trackEventsList = <MidiEvent>[]; // start a new one
@@ -434,36 +435,41 @@ class Midi {
         continue;
       }
       if (element is Tempo) {
-        var tempo = element as Tempo;
-        // Fix tempos that didn't specify a note duration.  Usually should be 4:1 (for 2/4, 3/4, 4/4, 5/4, 6/4, 7/4, ...),
-        // but could be 2:1 (for 2/2, 3/2, 4/2, 5/2, ...), 8:1 (for 1/8, 2/8, 4/8, 5/8, 7/8, ...) unless 6/8, 9/8, 12/8 time, then it's 8:3.
-        // So, if tempo not specified, as in '/tempo 84' then look at time signature.
-        // Use its denominator as the tempo.noteDuration.firstNumber.
-        // But if denominator is 8 and numerator is multiple of 3, then set the tempo.noteDuration to be 8:3.
-        //
-        // WATCH OUT, DUPLICATE CODE
-        if (tempo.noteDuration.firstNumber == null || tempo.noteDuration.secondNumber == null) { // something's wrong, gotta fix it
-          if (overrideTimeSig.denominator == 8 && overrideTimeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-            tempo.noteDuration.firstNumber = 8;
-            tempo.noteDuration.secondNumber = 3;
-          }
-          else {
-            tempo.noteDuration.firstNumber ??= overrideTimeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-            tempo.noteDuration.secondNumber ??= 1;
-          }
-        }
+        // For a test, output the tempo value as text in the track at the tempo change.
+        var textEvent = TextEvent();
+        textEvent.text = 'Tempo ${element.bpm} bpm';
+        trackEventsList.add(textEvent);
+        // var markerEvent = MarkerEvent();
+        // markerEvent.text = 'Tempo ${element.bpm}';
+        // trackEventsList.add(markerEvent);
 
-        // addTempoChangeToTrackEventsList(tempo, noteChannel, snareTrackEventsList);
-        addTempoChangeToTrackEventsList(tempo, trackEventsList);
+        var tempo = element as Tempo;
+        Tempo.fillInTempoDuration(tempo, overrideTimeSig); // check on this.  If already has duration, what happens?
+
+        addTempoChangeToTrackEventsList(tempo, trackEventsList); // also add to trackzero?
         continue;
       }
       if (element is TimeSig) { // THIS IS WRONG.  SHOULD BE 2/2 for that tune in 2/2  not 2/4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
         // addTimeSigChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
-        addTimeSigChangeToTrackEventsList(element, trackEventsList);
+        addTimeSigChangeToTrackEventsList(element, trackEventsList); // also add to trackzero?
         continue;
       }
       if (element is Comment) {
         log.finer('Not putting comment into track event list: ${element.comment}');
+        continue;
+      }
+      if (element is Text) {
+        var textEvent = TextEvent();
+        textEvent.deltaTime = 0; // nec?  Ignored?
+        textEvent.text = element.text;
+        trackEventsList.add(textEvent);
+        continue;
+      }
+      if (element is Marker) {
+        var markerEvent = MarkerEvent();
+        markerEvent.deltaTime = 0; // nec?  Ignored?
+        markerEvent.text = element.text;
+        trackEventsList.add(markerEvent);
         continue;
       }
       log.finer('have something else not putting into the track: ${element.runtimeType}, $element');
@@ -483,18 +489,21 @@ class Midi {
   }
 
 
-
+  // Maybe we want to add these events to trackzero too?  And if so, and if trackzero is only supposed to contain timesig and tempo events,
+  // then I need to keep a running total of times as events go into other tracks so as to put in the right timing info??????
+  // No, there's no timing info in this kind of event, or in a tempo event, it seems.  So to space them out there has to be rests, I guess.
   // void addTimeSigChangeToTrackEventsList(TimeSig timeSig, int channel, List<MidiEvent> trackEventsList) {
   void addTimeSigChangeToTrackEventsList(TimeSig timeSig, List<MidiEvent> trackEventsList) {
     var timeSignatureEvent = TimeSignatureEvent();
     timeSignatureEvent.type = 'timeSignature';
     timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects sound or tempo????
     timeSignatureEvent.denominator = timeSig.denominator;
-    timeSignatureEvent.metronome = 18; // for module synchronization
+    timeSignatureEvent.metronome = 18; // for module synchronization  What?
     timeSignatureEvent.thirtyseconds = 8; // Perhaps for notation purposes
-    trackEventsList.add(timeSignatureEvent);
+    trackEventsList.add(timeSignatureEvent);  // Maybe can't do subsequent timesig changes without putting it into trackZero???
   }
 
+  // Add this info to track zero too?
   // Prior to calling this, tempo should have a note duration in it
   // void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
   /// trackEventsList could be track zero or other
@@ -554,6 +563,7 @@ class Midi {
   ///
   /// Clean this up later.  It's too long for one thing.
   ///
+  /// And should we add rest notes to track zero so that we know where to do the timesig and tempo changes?
   // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
   double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) { // add staff?
     // var graceOffset = 0;
@@ -561,13 +571,8 @@ class Midi {
       log.severe('note should not have a null duration.');
     }
 
-
-
-
     // Determine the noteNumber for the note.  The noteNumber determines what soundFont sample to play
     note.setNoteNumber(voice, loopBuzzes, usePadSoundFont);
-
-
 
       // // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
     var snareLangNoteNameValue = note.duration.firstNumber / note.duration.secondNumber; // is this right???????
@@ -596,6 +601,7 @@ class Midi {
     // noteOnEvent.channel = channel;
     noteOnEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
     trackEventsList.add(noteOnEvent);
+    log.fine('addNoteOnOffToTrackEventsList() added endOnEvent $noteOnEvent to trackEventsList');
 
     var noteOffEvent = NoteOffEvent();
     noteOffEvent.type = 'noteOff';
@@ -612,6 +618,7 @@ class Midi {
     noteOffEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
 
     trackEventsList.add(noteOffEvent);
+    log.fine('addNoteOnOffToTrackEventsList() added endOffvent $noteOffEvent to trackEventsList');
 
     // By rounding, what fraction of a tick are we adding or subtracting to the set of notes?
     // If the number of ticks for this note should be 53.33333, but it gets rounded down to 53
@@ -636,3 +643,85 @@ class Midi {
   }
 }
 
+/// Following comes from http://www.ccarh.org/courses/253/handout/smf/
+/// A standard MIDI file is composed of "chunks". It starts with a header chunk and is followed by one or more track chunks.
+/// The header chunk contains data that pertains to the overall file. Each track chunk defines a logical track.
+//
+//
+//    SMF = <header_chunk> + <track_chunk> [+ <track_chunk> ...]
+// A chunk always has three components, similar to Microsoft RIFF files (the only difference is that SMF files are big-endian,
+// while RIFF files are usually little-endian). The three parts to each chunk are:
+//
+// The track ID string which is four charcters long. For example, header chunk IDs are "MThd", and Track chunk IDs are "MTrk".
+// next is a four-byte unsigned value that specifies the number of bytes in the data section of the track (part 3).
+// finally comes the data section of the chunk. The size of the data is specified in the length field which follows the chunk ID (part 2).
+// Header Chunk
+// The header chunk consists of a literal string denoting the header, a length indicator, the format of the MIDI file,
+// the number of tracks in the file, and a timing value specifying delta time units. Numbers larger than one byte are placed most significant byte first.
+//
+//    header_chunk = "MThd" + <header_length> + <format> + <n> + <division>
+//
+// "MThd" 4 bytes
+// the literal string MThd, or in hexadecimal notation: 0x4d546864. These four characters at the start of the MIDI file
+// indicate that this is a MIDI file.
+// <header_length> 4 bytes
+// length of the header chunk (always 6 bytes long--the size of the next three fields which are considered the header chunk).
+// <format> 2 bytes
+// 0 = single track file format
+// 1 = multiple track file format
+// 2 = multiple song file format (i.e., a series of type 0 files)
+// <n> 2 bytes
+// number of track chunks that follow the header chunk
+// <division> 2 bytes
+// unit of time for delta timing. If the value is positive, then it represents the units per beat. For example, +96 would mean
+// 96 ticks per beat. If the value is negative, delta times are in SMPTE compatible units.
+// Track Chunk
+// A track chunk consists of a literal identifier string, a length indicator specifying the size of the track, and actual event
+// data making up the track.
+//
+//    track_chunk = "MTrk" + <length> + <track_event> [+ <track_event> ...]
+//
+// "MTrk" 4 bytes
+// the literal string MTrk. This marks the beginning of a track.
+// <length> 4 bytes
+// the number of bytes in the track chunk following this number.
+// <track_event>
+// a sequenced track event.
+// Track Event
+// A track event consists of a delta time since the last event, and one of three types of events.
+//
+//    track_event = <v_time> + <midi_event> | <meta_event> | <sysex_event>
+//
+// <v_time>
+// a variable length value specifying the elapsed time (delta time) from the previous event to this event.
+// <midi_event>
+// any MIDI channel message such as note-on or note-off. Running status is used in the same manner as it is used between MIDI devices.
+// <meta_event>
+// an SMF meta event.
+// <sysex_event>
+// an SMF system exclusive event.
+// Meta Event
+// Meta events are non-MIDI data of various sorts consisting of a fixed prefix, type indicator, a length field, and actual event data..
+//
+//    meta_event = 0xFF + <meta_type> + <v_length> + <event_data_bytes>
+//
+// <meta_type> 1 byte
+// meta event types:
+// Type	Event	Type	Event
+// 0x00	Sequence number	0x20	MIDI channel prefix assignment
+// 0x01	Text event	0x2F	End of track
+// 0x02	Copyright notice	0x51	Tempo setting
+// 0x03	Sequence or track name	0x54	SMPTE offset
+// 0x04	Instrument name	0x58	Time signature
+// 0x05	Lyric text	0x59	Key signature
+// 0x06	Marker text	0x7F	Sequencer specific event
+// 0x07	Cue point
+// <v_length>
+// length of meta event data expressed as a variable length value.
+// <event_data_bytes>
+// the actual event data.
+// System Exclusive Event
+// A system exclusive event can take one of two forms:
+// sysex_event = 0xF0 + <data_bytes> 0xF7 or sysex_event = 0xF7 + <data_bytes> 0xF7
+//
+// In the first case, the resultant MIDI data stream would include the 0xF0. In the second case the 0xF0 is omitted.

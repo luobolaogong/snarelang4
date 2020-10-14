@@ -1,0 +1,27 @@
+// Max Rayne Salute thing
+// Mostly by Alex Duthart
+// Tempos will be steady, but they will change
+// so it's not so difficult in the hard parts.
+
+
+
+/staff snare
+
+/tempo 120
+
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+
+/tempo 100
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+
+/tempo 80
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .
+>8F 16t . >8f 16T . 8F 8f 16F 16t . .

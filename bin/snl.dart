@@ -64,8 +64,8 @@ void main(List<String> arguments) {
   // var defaultTempo = 84;
   var defaultDynamic = Dynamic.mf;
   var defaultTempo = Tempo(); // constructor does create the NoteDuratino part.
-  defaultTempo.noteDuration.firstNumber = 4;
-  defaultTempo.noteDuration.secondNumber = 1;
+  defaultTempo.noteDuration.firstNumber = 4; // put this in the constructor for NoteDuration??????????????????????????????
+  defaultTempo.noteDuration.secondNumber = 1; // Seems things work if I initialize here rather than in NoteDuration.  Dunno why.
 
   var defaultStaff = Staff(); // helpful?
   defaultStaff.id = StaffId.snare;
@@ -147,16 +147,17 @@ void main(List<String> arguments) {
 
   // Watch out, this is pretty much duplicate code in another place, and it's probably wrong here, 'cause slightly different
   // High chance this is faulty code in this area.
-  if (overrideTempo.noteDuration.firstNumber == null || overrideTempo.noteDuration.secondNumber == null) {
-    if (overrideTimeSig.denominator == 8 && overrideTimeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-      overrideTempo.noteDuration.firstNumber = 8;
-      overrideTempo.noteDuration.secondNumber = 3;
-    }
-    else {
-      overrideTempo.noteDuration.firstNumber ??= overrideTimeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-      overrideTempo.noteDuration.secondNumber ??= 1;
-    }
-  }
+  Tempo.fillInTempoDuration(overrideTempo, overrideTimeSig);
+  // if (overrideTempo.noteDuration.firstNumber == null || overrideTempo.noteDuration.secondNumber == null) {
+  //   if (overrideTimeSig.denominator == 8 && overrideTimeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+  //     overrideTempo.noteDuration.firstNumber = 8;
+  //     overrideTempo.noteDuration.secondNumber = 3;
+  //   }
+  //   else {
+  //     overrideTempo.noteDuration.firstNumber ??= overrideTimeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+  //     overrideTempo.noteDuration.secondNumber ??= 1;
+  //   }
+  // }
   overrideTimeSig ??= defaultTimeSig;
   overrideTempo ??= defaultTempo;
   overrideDynamic ??= defaultDynamic;
@@ -173,6 +174,10 @@ void main(List<String> arguments) {
 
   // Create Midi tracks.
   var midiTracks = <List<MidiEvent>>[];
+
+  // What?  We really don't need to do this?  Makes no difference?
+  // var timingTrackZero = midi.createTimingTrackZero(score.elements, overrideTimeSig, overrideTempo);
+  // midiTracks.add(timingTrackZero);
 
   // We do want to add the events to the tracks before sending the tracks to the MidiFile/Writer,
   // but what happened to the processing phases before that?
@@ -222,6 +227,21 @@ Score doThePhases(List<String> piecesOfMusic) {
   Score score = result.value;
 
 
+  // Do we want to fix Tempo elements to make sure Duration FirstNumber and secondNumber are not null?
+  // And that's based on the timesig.
+  log.finer('Making sure ll timesigs have duration values');
+  var defaultInitialTimeSig = TimeSig();
+  defaultInitialTimeSig.numerator = 4;
+  defaultInitialTimeSig.denominator = 4;
+  var defaultInitialTempo = Tempo();
+  defaultInitialTempo.noteDuration.firstNumber = 4;
+  defaultInitialTempo.noteDuration.secondNumber = 1;
+  defaultInitialTempo.bpm = 84; // check this.  Should be a default set elsewhere, perhaps when Tempo is instantiated.
+  score.fixIncompleteTempos(score.elements, defaultInitialTimeSig, defaultInitialTempo);
+
+
+
+  // Kinda strange to have this here.  Just to handle shorthand phase?  For noteType?
   // At this point we have a list of elements that comprise the score, but haven't kept track of the first
   // timesig or tempo if they were in there.  So for now create defaults for these:
   var defaultFirstNoteProperties = Note();
