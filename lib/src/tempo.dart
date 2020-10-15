@@ -111,11 +111,17 @@ class TempoRamp {
 class Tempo {
   NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good.  But if not specified, as in '/tempo 84' do we set duration???????
   int bpm = 84; // initialize?  Wow, it's set elsewhere isn't it?  Where do this best, if at all?
+  num scalar = 1; // new
 // change the above to a double, because sometimes recordings are not exact integers
   String toString() {
     return 'Tempo: bpm: $bpm, $noteDuration';
   }
-  
+  static void scaleThis(Tempo tempo, num scalar) {
+    //tempo.bpm += (scalar / 100).floor(); // not right, right?
+    log.fine('tempo was ${tempo.bpm}');
+    tempo.bpm += (tempo.bpm * scalar / 100).floor();
+    log.fine('tempo is now ${tempo.bpm}');
+  }
   // static Tempo watchOutDuplicateCode(Tempo overrideTempo, TimeSig overrideTimeSig) {
   static fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
     if (modifyThisTempo.noteDuration.firstNumber == null || modifyThisTempo.noteDuration.secondNumber == null) {

@@ -6,10 +6,10 @@
 /marker Jimmy Rollo
 
 // /staff snare   // causes new track if string together
-/time 2/4     // Not sure, shold be 2/2 ???
-/tempo 120    // recording 137
+/time 2/4     // Not sure, should be 2/2 ???
+/tempo 137    // recording 137
 
-4T . . .
+//4T . . .
 
 // Line 1
 ^16T 16z . .    6T 36T 36t 36t    >6T 12t   24T 24z >6T
@@ -23,13 +23,13 @@
 >6T 12f    >30T 15z .    >30t 15Z .    >18T >18t 18Z     6t 12t
 24T . . . . .    12T 24T .    >30T 15z .     >18t >36T 12z     6T 12t
 
-// Line 2
+/marker Line 2
 6F  24t 24t   24T 24T 24t 24t ^12T     ^12t 36T 36T 36t 12T  >12t . .
 12T 24T . . .    >30T 15z .    >30t 15Z .   24T . . .  16T 16z . .      // why does this sound wrong?
 24T . . . >12T 12t 12F .   24T . . .  >12T   >6T 12t
 24T . . . . .    12T 24T .    >30T 15z .     >18t >36T 12z    4t
 
-// Repeat Line 2
+/marker Rpt L2
 6F  24t 24t   24T 24T 24t 24t ^12T     ^12t 36T 36T 36t 12T  >12t . .
 12T 24T . . .    >30T 15z .    >30t 15Z .   24T . . .  16T 16z . .
 24T . . . >12T 12t 12F .   24T . . .  >12T   >6T 12t
@@ -39,27 +39,27 @@
 
 
 // new tune?
-/tempo 120   // recording 138
+//tempo 120   // recording 138
 /marker NewTune?
-// Line 3
+/marker L3 (new tune?)
 16Z . . .   18T 18T 18t >12T   12t . >12f   12T 36t 36T 36T  12t
 >12T 12f 12F   24T . . .  >12T  >12t 24T 24T 24t 24t  16T 16z . .
 6T 20t 20t 20T 20T 20t  >12T 20t 20t 20T 20T >20t 12T 12t 12t
 6F 12t   >30T 15z .    >30t 15Z .   24T . . .   4t
 
-// Repeat Line 3
+/marker Rpt L3
 16Z . . .   18T 18T 18t >12T   12t . >12f   12T 36t 36T 36T  12t
 >12T 12f 12F   24T . . .  >12T  >12t 24T 24T 24t 24t  16T 16z . .
 6T 20t 20t 20T 20T 20t  >12T 20t 20t 20T 20T >20t 12T 12t 12t
 6F 12t   >30T 15z .    >30t 15Z .   24T . . .   6T 12t
 
-// Line 4
+/marker L4
 >24T . . . . .   >24T . 24t 24t   >30T 15z .     >18t  >36t  12z    16t 16Z . .
 >24T . . . . .   6T 20D   20T . . .  12T  12t . .
 >12 36t 36T 36T  >12t  36T 36t 36t   >12T >12t  12T 36t 36T 36T   12t  12T 12t 12t
 6F 12t   >30T 15z .    >30t 15Z .   24T . . .   6T 12t
 
-// Repeat Line 4
+/marker Rpt L4
 >24T . . . . .   >24T . 24t 24t   >30T 15z .     >18t  >36t  12z    16t 16Z . .
 >24T . . . . .   6T 20D   20T . . .  12T  12t . .
 >12 36t 36T 36T  >12t  36T 36t 36t   >12T >12t  12T 36t 36T 36T   12t  12T 12t 12t
@@ -68,14 +68,14 @@
 
 
 
-/staff met
-1r
-4M . . .  . . . .   . . . .   . . . .
-4M . . .  . . . .   . . . .   . . . .
-4M . . .  . . . .   . . . .   . . . .
-4M . . .  . . . .   . . . .   . . . .
+//staff met
+//4M . . .
+//4M . . .  . . . .   . . . .   . . . .
+//4M . . .  . . . .   . . . .   . . . .
+//4M . . .  . . . .   . . . .   . . . .
+//4M . . .  . . . .   . . . .   . . . .
 
-4M . . .  . . . .   . . . .   . . . .
-4M . . .  . . . .   . . . .   . . . .
-4M . . .  . . . .   . . . .   . . . .
-4M . . .  . . . .   . . . .   . . . .
+//4M . . .  . . . .   . . . .   . . . .
+//4M . . .  . . . .   . . . .   . . . .
+//4M . . .  . . . .   . . . .   . . . .
+//4M . . .  . . . .   . . . .   . . . .

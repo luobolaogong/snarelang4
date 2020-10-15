@@ -252,11 +252,12 @@ class Midi {
 
 
   // Maybe will try to do the full track all at once, and not just the initial timesig and tempo, and filling in the rest later.  Thus the entire scoreElements
-  List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) {
+  // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) { // check on "override" tempo.  Default tempo?
+  List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
     var timingTrackZeroMidiEventList = <MidiEvent>[];
     // Could immediately add the overrideTimeSig and overrideTempo, I suppose.  But if the first non-comment event is a timesig or tempo, could just do those
     addTimeSigChangeToTrackEventsList(overrideTimeSig, timingTrackZeroMidiEventList);
-    addTempoChangeToTrackEventsList(overrideTempo, timingTrackZeroMidiEventList);
+    addTempoChangeToTrackEventsList(tempo, timingTrackZeroMidiEventList);
     for (var element in scoreElements) { // is this right?
       print('element: $element');
       if (element is TimeSig) {
@@ -346,7 +347,7 @@ class Midi {
   /// The midiTracks list already has a trackZero list, which contains timeSig, and Tempo, and is supposed to
   /// be able to hold a tempoMap.
   ///
-  List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, overrideStaff) {
+  List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, num tempoScalar, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, overrideStaff) {
     log.fine('In Midi.createMidiEventsTracksList()');
     //var currentStaff = overrideStaff; // this is strange.  We've got an element that could be a Staff, and we've got a passed in Staff
 
@@ -386,7 +387,7 @@ class Midi {
         // }
         log.finer('New Staff element ${element.id}');
         // do something here to change the patch or channel or something so the soundfont can be accessed correctly?
-        if (element.id == StaffId.pad) {
+        if (element.id == StaffId.pad) { // this is kinda silly.  Pad should be an instrument
           usePadSoundFont = true;
         }
         else {
@@ -435,15 +436,13 @@ class Midi {
         continue;
       }
       if (element is Tempo) {
+        var tempo = element as Tempo; // don't have to do this, but wanna
         // For a test, output the tempo value as text in the track at the tempo change.
-        var textEvent = TextEvent();
-        textEvent.text = 'Tempo ${element.bpm} bpm';
-        trackEventsList.add(textEvent);
+        Tempo.scaleThis(tempo, tempoScalar);
         // var markerEvent = MarkerEvent();
         // markerEvent.text = 'Tempo ${element.bpm}';
         // trackEventsList.add(markerEvent);
 
-        var tempo = element as Tempo;
         Tempo.fillInTempoDuration(tempo, overrideTimeSig); // check on this.  If already has duration, what happens?
 
         addTempoChangeToTrackEventsList(tempo, trackEventsList); // also add to trackzero?
@@ -508,6 +507,10 @@ class Midi {
   // void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
   /// trackEventsList could be track zero or other
   void addTempoChangeToTrackEventsList(Tempo tempo, List<MidiEvent> trackEventsList) {
+    //print('tempo bpm was ${tempo.bpm}');
+    //tempo.bpm = (tempo.bpm + tempo.bpm * tempo.scalar / 100).floor();
+    //tempo.bpm += (tempo.bpm * tempo.scalar / 100).floor();
+    //print('tempo bpm is now ${tempo.bpm}');
     var setTempoEvent = SetTempoEvent();
     setTempoEvent.type = 'setTempo';
     var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.

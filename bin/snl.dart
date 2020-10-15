@@ -28,7 +28,7 @@ import 'package:snarelang4/snarelang4.dart';
 /// result, and maybe I needed to tell it too about the sound font.  Probably only need to do it on qsynth.
 /// Shouldn't need both.  Like VLC doesn't need qsynth.
 ///
-const commandLineTempo = 'tempo'; // change to commandLineTempoIndexName
+const commandLineTempoScale = 'tempo'; // change to commandLineTempoIndexName
 const commandLineStaff = 'staff';
 const commandLineDynamic = 'dynamic';
 const commandLineTimeSig = 'time';
@@ -75,7 +75,8 @@ void main(List<String> arguments) {
   defaultTimeSig.numerator = 4;
   defaultTimeSig.denominator = 4;
 
-  Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
+//  Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
+  num tempoScalar;
   TimeSig overrideTimeSig; // deliberately null
   Dynamic overrideDynamic; // deliberately null.  Right?
   Staff overrideStaff; // need?
@@ -85,17 +86,22 @@ void main(List<String> arguments) {
   //
   final argResults = parseCommandLineArgs(arguments);
 
-  if (argResults[commandLineTempo] != null) {
-    overrideTempo = parseTempo(argResults[commandLineTempo]); // expect either '104' (quarter note assumed) or '8:3=104'
+  if (argResults[commandLineTempoScale] != null) { // should perhaps be a scaling factor.  default maybe at 84 if not specified in score
+    // tempoScale = parseTempo(argResults[commandLineTempoScale]); // expect either '104' (quarter note assumed) or '8:3=104'
+    tempoScalar = num.parse(argResults[commandLineTempoScale]);
+    // overrideTempo = parseTempo(argResults[commandLineTempoScale]); // expect either '104' (quarter note assumed) or '8:3=104'
+    print('defaultTempo.bpm is ${defaultTempo.bpm}');
+    Tempo.scaleThis(defaultTempo, tempoScalar);
   }
+
   if (argResults[commandLineStaff] != null) {
     overrideStaff = parseStaff(argResults[commandLineStaff]);
   }
-  if (argResults[commandLineDynamic] != null) {
+  if (argResults[commandLineDynamic] != null) { // this should be a scaling factor.  The default should be mf  but we may want to scale all dynamics by some value/scalar
     String dynamicString = argResults[commandLineDynamic];
     overrideDynamic = stringToDynamic(dynamicString); // dislike global functions/methods.  Does this update the param??????????????
   }
-  if (argResults[commandLineTimeSig] != null) {
+  if (argResults[commandLineTimeSig] != null) { // this is strange.  Prob should remove.  Should be specified in score.  Default should be 4/4 or 2/4.
     String sig = argResults[commandLineTimeSig]; // expecting num/denom
     List sigParts = sig.split('/');
     overrideTimeSig = TimeSig();
@@ -106,18 +112,18 @@ void main(List<String> arguments) {
   //   nBarsMetronome = int.parse(argResults[commandLineMetronome]);
   // }
 
-  if (argResults[commandLineContinuousSustainedLoopedBuzzes]) {
+  if (argResults[commandLineContinuousSustainedLoopedBuzzes]) { // how valuable is this?
     print('Hmmmm, got this flag for looping buzzes');
     loopBuzzes = true; // where does this get tied in?  Doesn't seem to work
   }
   //var something = argResults[commandLineUsePadSoundFont];
-  if (argResults[commandLineUsePadSoundFont]) {
+  if (argResults[commandLineUsePadSoundFont]) {  // of questionable value.  Pad is an instrument now.  Specify it, rather than override.
     print('Want to use pad, eh?');
     usePadSoundFont = true;
   }
 
   overrideDynamic ??= defaultDynamic; // check check check check check.  And does this update the param coming in?
-  overrideTempo ??= defaultTempo; // scan score first?
+//  overrideTempo ??= defaultTempo; // scan score first?
   overrideStaff ??= defaultStaff;
   overrideTimeSig ??= defaultTimeSig; // scan score first?
 
@@ -141,25 +147,17 @@ void main(List<String> arguments) {
   if (firstTimeSigInScore != null) {
     overrideTimeSig = firstTimeSigInScore;
   }
-  if (firstTempoInScore != null) {
-    overrideTempo = firstTempoInScore;
-  }
+  // if (firstTempoInScore != null) {
+  //   overrideTempo = firstTempoInScore;
+  // }
 
   // Watch out, this is pretty much duplicate code in another place, and it's probably wrong here, 'cause slightly different
   // High chance this is faulty code in this area.
-  Tempo.fillInTempoDuration(overrideTempo, overrideTimeSig);
-  // if (overrideTempo.noteDuration.firstNumber == null || overrideTempo.noteDuration.secondNumber == null) {
-  //   if (overrideTimeSig.denominator == 8 && overrideTimeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-  //     overrideTempo.noteDuration.firstNumber = 8;
-  //     overrideTempo.noteDuration.secondNumber = 3;
-  //   }
-  //   else {
-  //     overrideTempo.noteDuration.firstNumber ??= overrideTimeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-  //     overrideTempo.noteDuration.secondNumber ??= 1;
-  //   }
-  // }
+
+  // Tempo.fillInTempoDuration(overrideTempo, overrideTimeSig);
+
   overrideTimeSig ??= defaultTimeSig;
-  overrideTempo ??= defaultTempo;
+  // overrideTempo ??= defaultTempo;
   overrideDynamic ??= defaultDynamic;
   overrideStaff ??= defaultStaff;
 
@@ -182,7 +180,8 @@ void main(List<String> arguments) {
   // We do want to add the events to the tracks before sending the tracks to the MidiFile/Writer,
   // but what happened to the processing phases before that?
   //
-  midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, usePadSoundFont, loopBuzzes, overrideStaff);
+  midi.addMidiEventsToTracks(midiTracks, score.elements, tempoScalar, overrideTimeSig, usePadSoundFont, loopBuzzes, overrideStaff);
+  // midi.addMidiEventsToTracks(midiTracks, score.elements, overrideTimeSig, usePadSoundFont, loopBuzzes, overrideStaff);
 
 
   // Add the header and tracks list into a MidiFile, and write it
@@ -281,26 +280,27 @@ Score doThePhases(List<String> piecesOfMusic) {
 
 
 // expect either '104' (quarter note assumed) or '8:3=104'
-Tempo parseTempo(String noteTempoString) {
-  var tempo = Tempo();
-  // var parts = tempoString.split(r'[:=]');
-  var noteTempoParts = noteTempoString.split('=');
-  if (noteTempoParts.length == 1) {
-    tempo.bpm = int.parse(noteTempoParts[0]);
-    tempo.noteDuration.firstNumber = 4;
-    tempo.noteDuration.secondNumber = 1;
-  }
-  else if (noteTempoParts.length == 2) {
-    var noteParts = noteTempoParts[0].split(':');
-    tempo.noteDuration.firstNumber = int.parse(noteParts[0]);
-    tempo.noteDuration.secondNumber = int.parse(noteParts[1]);
-    tempo.bpm = int.parse(noteTempoParts[1]); // wrong of course
-  }
-  else {
-    print('Failed to parse tempo correctly: -->$noteTempoString<--');
-  }
-  return tempo;
-}
+// Probably won't use this in the future
+// Tempo parseTempo(String noteTempoString) {
+//   var tempo = Tempo();
+//   // var parts = tempoString.split(r'[:=]');
+//   var noteTempoParts = noteTempoString.split('=');
+//   if (noteTempoParts.length == 1) {
+//     tempo.bpm = int.parse(noteTempoParts[0]);
+//     tempo.noteDuration.firstNumber = 4;
+//     tempo.noteDuration.secondNumber = 1;
+//   }
+//   else if (noteTempoParts.length == 2) {
+//     var noteParts = noteTempoParts[0].split(':');
+//     tempo.noteDuration.firstNumber = int.parse(noteParts[0]);
+//     tempo.noteDuration.secondNumber = int.parse(noteParts[1]);
+//     tempo.bpm = int.parse(noteTempoParts[1]); // wrong of course
+//   }
+//   else {
+//     print('Failed to parse tempo correctly: -->$noteTempoString<--');
+//   }
+//   return tempo;
+// }
 
 Staff parseStaff(String staffString) {
   var staff = Staff();
@@ -335,11 +335,12 @@ ArgResults parseCommandLineArgs(List<String> arguments) {
         help:
         'Set the first staff name.  Defaults to snare',
         valueHelp: '--staff bass')
-    ..addOption(commandLineTempo,
+    ..addOption(commandLineTempoScale,
         abbr: 't',
         help:
-        'tempo override in bpm, assuming quarter note is a beat',
-        valueHelp: 'bpmValue')
+        // 'tempo override in bpm, assuming quarter note is a beat',
+        'tempo scalar percentage',
+        valueHelp: '-t -10')
     ..addOption(commandLineDynamic,
         abbr: 'd',
         allowed: ['ppp', 'pp', 'p', 'mp', 'mf', 'f', 'ff', 'fff'],
