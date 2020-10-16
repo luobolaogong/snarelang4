@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added tempo scale for command line, removed set tempo on command line.  Rough.">
-      <change afterPath="$PROJECT_DIR$/tunes/JaneCampbellSnare.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="About to change all 36th note ruffs to 3 stroke ruffs in John Walsh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tunes/JohnWalshsWalkSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/JohnWalshsWalkSnare.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +67,7 @@
       <method v="2" />
     </configuration>
     <configuration name="snl" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=tunes/JohnWalshsWalkSnare.snl,tunes/AnnettesChatterSnare.snl,tunes/JimmyRolloSnare.snl,tunes/JaneCampbellSnare.snl -o midifiles/Maxwell.mid -l INFO -t 0" />
+      <option name="arguments" value="--input=tunes/JohnWalshsWalkSnare.snl,tunes/AnnettesChatterSnare.snl,tunes/JimmyRolloSnare.snl,tunes/JaneCampbellSnare.snl,tunes/JohnWalshsWalkMet.snl,tunes/AnnettesChatterMet.snl,tunes/JimmyRolloMet.snl -o midifiles/Maxwell.mid -l INFO -t 0" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -141,7 +139,7 @@
       <workItem from="1602536114491" duration="13602000" />
       <workItem from="1602616222824" duration="30319000" />
       <workItem from="1602710480179" duration="12838000" />
-      <workItem from="1602783823292" duration="7477000" />
+      <workItem from="1602783823292" duration="11481000" />
     </task>
     <task id="LOCAL-00001" summary="End of day.  Reorganized and working on static dynamics.">
       <created>1598082786459</created>
@@ -409,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602743377346</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="About to change all 36th note ruffs to 3 stroke ruffs in John Walsh">
+      <created>1602807138511</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1602807138511</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +433,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Renamed ramps to dynamicRamps to get ready for tempoRamps" />
     <MESSAGE value="Maybe tempo ramping is too hard to do at this time.  ending the day." />
     <MESSAGE value="Moving toward adding tracks." />
     <MESSAGE value="Created the SNL file for Captain Lachlan McPhail of Tiree.snl" />
@@ -453,17 +457,18 @@
     <MESSAGE value="Added more to Annette's Chatter." />
     <MESSAGE value="Worked on Jimmy Rollo and also added Marker and Text although Text doesn't show up." />
     <MESSAGE value="Added tempo scale for command line, removed set tempo on command line.  Rough." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tempo scale for command line, removed set tempo on command line.  Rough." />
+    <MESSAGE value="About to change all 36th note ruffs to 3 stroke ruffs in John Walsh" />
+    <option name="LAST_COMMIT_MESSAGE" value="About to change all 36th note ruffs to 3 stroke ruffs in John Walsh" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="951" y="985" width="2839" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602804198516">
+    <state x="951" y="985" width="2839" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602810328808">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="951" y="985" width="2839" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1602804198516" />
+    <state x="951" y="985" width="2839" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1602810328808" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602378066157">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -492,22 +497,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2394" y="768" width="401" height="577" key="Github.UntrackedFilesDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1598049414726" />
-    <state width="2768" height="504" key="GridCell.Tab.0.bottom" timestamp="1602806712556">
+    <state width="2768" height="504" key="GridCell.Tab.0.bottom" timestamp="1602810093008">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2768" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1602806712556" />
-    <state width="2768" height="504" key="GridCell.Tab.0.center" timestamp="1602806712555">
+    <state width="2768" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1602810093008" />
+    <state width="2768" height="504" key="GridCell.Tab.0.center" timestamp="1602810093007">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2768" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1602806712555" />
-    <state width="2768" height="504" key="GridCell.Tab.0.left" timestamp="1602806712555">
+    <state width="2768" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1602810093007" />
+    <state width="2768" height="504" key="GridCell.Tab.0.left" timestamp="1602810093007">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2768" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1602806712555" />
-    <state width="2768" height="504" key="GridCell.Tab.0.right" timestamp="1602806712555">
+    <state width="2768" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1602810093007" />
+    <state width="2768" height="504" key="GridCell.Tab.0.right" timestamp="1602810093008">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2768" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1602806712555" />
+    <state width="2768" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1602810093008" />
     <state x="1507" y="709" key="SettingsEditor" timestamp="1600648695311">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

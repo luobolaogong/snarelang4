@@ -7,37 +7,11 @@
 
 // --input=tunes/JohnWalshsWalkSnare.snl,tunes/AnnettesChatterSnare.snl,tunes/JimmyRolloSnare.snl,tunes/JaneCampbellSnare.snl,tunes/JohnWalshsWalkMet.snl,tunes/AnnettesChatterMet.snl,tunes/JimmyRolloMet.snl -o midifiles/Maxwell.mid -l INFO -t -25
 
+
 /marker John Walsh's Walk
 /staff snare
 /time 2/4   // maybe 4/4?
 /tempo 98 // 98 on recording
-
-
-// Line 6 bar 2
-4T . . .
-24Z . _24T _8t 12v >30t . . . >30t
-24Z . _24T _8t 12v >30t . . . >30t
-24Z . _24T _8t 12v >30t . . . >30t
-24Z . _24T _8t 12v >30t . . . >30t
-24Z . _24T _12t 72T . . 12T >30t . . . >30t
-24Z . _24T _12t 72T . . 12T >30t . . . >30t
-24Z . _24T _12t 72T . . 12T >30t . . . >30t
-24Z . _24T _12t 72T . . 12T >30t . . . >30t
-
-
->8T 12v >30t . . . >30t >12T 48t 48t
->8T 12v >30t . . . >30t >12T 48t 48t
->8T 12v >30t . . . >30t >12T 48t 48t
->8T 12v >30t . . . >30t >12T 48t 48t
->12T 72t 72T 72T 12t >30t . . . >30t >12T 48t 48t
->12T 72t 72T 72T 12t >30t . . . >30t >12T 48t 48t
->12T 72t 72T 72T 12t >30t . . . >30t >12T 48t 48t
->12T 72t 72T 72T 12t >30t . . . >30t >12T 48t 48t
-
-
-
-
-
 
 
 
@@ -49,34 +23,34 @@
 
 /marker Part 1
 // Line 1
-24Z . _24T _12t 72T . . 12T >30t . . . >30t
+24Z . _24T _8t 12V >30t . . . >30t
 ^8T 24Z . .  12t 24t _12F 24t
 12T >24f 12T 24t 12T 30D 30T . . .
 ^16T 32t 32t 32T . . .   ^48T 48:3z 24t  32t . . ^32t
 
 /marker Line 2
-^12T 24T ^12F 72T . .  >12T ^30t  30T . . _30t
+^12T 24T ^8F 12v ^30t  30T . . _30t
 ^40T 20z . 12t >24F 12t >24f 12T 24t
 ^12F 48t 48t 24T . .  12t >24F 12t ^24f
-_40T 20z . _12t 24T   24z . . _12T 24t
+>40T 20z . _12t 24T   24z . . _12T 24t
 
 /marker Repeat Line 1
-24Z . _24T _12t 72T . . 12T >30t . . . >30t
+24Z . _24T _8t 12V >30t . . . >30t
 ^8T 24Z . .  12t 24t _12F 24t
 12T >24f 12T 24t 12T 30D 30T . . .
 ^16T 32t 32t 32T . . .   ^48T 48:3z 24t  32t . . ^32t
 
 // Repeat Line 2
-^12T 24T ^12F 72T . .  >12T ^30t  30T . . _30t
+^12T 24T ^8F 12v ^30t  30T . . _30t
 ^40T 20z . 12t >24F 12t >24f 12T 24t
 ^12F 48t 48t 24T . .  12t >24F 12t ^24f
-_40T 20z . _12t 24T   24z . . _12T 24t
+>40T 20z . _12t 24T   24z . . _12T 24t
 
 /marker Part 2
 // Line 3
 12T _24f _40T 20z . 12t _24f 12T _24f
 _40T 20z .  40t 20Z >20t   32t . . >32t  ^16T  32t 32t
-32T . . . ^12T 72T 72t 72t  >12T ^30t . . . ^30t
+32T . . . ^8T 12V ^30t . . . ^30t
 32T . . ^32t  ^12T   48Z . 12t  ^24t 32T . . >32t
 
 // Line4, (first ending)
@@ -88,11 +62,11 @@ _40T 20z .  40t 20Z >20t   32t . . >32t  ^16T  32t 32t
 // Repeat Line 3
 12T _24f _40T 20z . 12t _24f 12T _24f
 _40T 20z .  40t 20Z >20t   32t . . >32t  ^16T  32t 32t
-32T . . . ^12T 72T 72t 72t  >12T ^30t . . . ^30t
+32T . . . ^8T 12V ^30t . . . ^30t
 32T . . ^32t  ^12T   48Z . 12t  ^24t 32T . . >32t
 
 // Line 5, (second ending, almost line 2)
->12T 24T >12F 72T . .  >12T >30D  30T . . .
+>12T 24T >8F 12v >30F  30T . . .
 ^40T 20z . 12t >24F 12t ^24f 12T 24t
 ^12F 48t 48t 24T . .  12t >24F 12t 24f
 >40T 20z . >12t 24T   24z . . _12T 24t
@@ -102,26 +76,26 @@ _40T 20z .  40t 20Z >20t   32t . . >32t  ^16T  32t 32t
 // Line 6
 32T . . _32t  12T _24f  12T >24F 12t _24f
 //>12T 72t 72T 72T 12t >30t . . . >30t >12T 48t 48t
->8T 12v >30t . . . >30t >12T 48t 48t  // experiment with 3-stroke ruff
+>8T 12v >30t . . . >30t >12T 48t 48t
 32T . . _32t  >12T _24f  12T 30F 30T . . .
 >32T . . . _16T 32T . . .  >16D 32T . . .
 
 // Line 7
 32T . . >32t ^12T 24F  12T  >24F  12t >24f
 // >12T 72t 72T 72T 12t ^30t . . . >30t >12T 24t
->8T 12t ^30t . . . >30t >12T 24t   // experiment with 3-stroke ruff
+>8T 12v ^30t . . . >30t >12T 24t
 ^12F 48t 48t 24T . .  12t >24F 12t 24f
 >40T 20z . _12t 24T   24z . . _12T 24t
 
 // Repeat Line 6
 32T . . _32t  12T _24f  12T >24F 12t _24f
->12T 72t 72T 72T 12t >30t . . . >30t >12T 48t 48t
+>8T 12v >30t . . . >30t >12T 48t 48t
 32T . . _32t  >12T _24f  12T 30F 30T . . .
 >32T . . . _16T 32T . . .  >16D 32T . . .
 
 // Repeat Line 7
 32T . . >32t ^12T 24F  12T  >24F  12t >24f
->12T 72t 72T 72T 12t ^30t . . . >30t >12T 24t
+>8T 12v ^30t . . . >30t >12T 24t
 ^12F 48t 48t 24T . .  12t >24F 12t 24f
 >40T 20z . _12t 24T   24z . . _12T 24t
 
@@ -132,7 +106,7 @@ _40T 20z .  40t 20Z >20t   32t . . >32t  ^16T  32t 32t
 24Z . _40T 20z . >30t . . . _30T >40T 20z 20t
 32T . . >32t      >40T 20z 20T    >36t 18z     >30t . . . >30t
 ^12T 24t 12T _30D 30T . . .  >12T 24t
-^40T 20z . 32z . _32T . . . . _30t >40T 20z .
+^40T 20z . 32z . >32T . . . . >30t >40T 20z .
 
 // Line 9
 >12T 24t 12F 24t 12T >30F 30t . . .
@@ -144,7 +118,8 @@ _40T 20z .  40t 20Z >20t   32t . . >32t  ^16T  32t 32t
 24Z . _40T 20z . >30t . . . _30T >40T 20z 20t
 32T . . >32t      >40T 20z 20T    >36t 18z     >30t . . . >30t
 ^12T 24t 12T _30D 30T . . .  >12T 24t
-^40T 20z . 32z . _32T . . . . _30t >40T 20z .
+^40T 20z . 32z . >32T . . . . >30t >40T 20z .
+
 
 // Line 10
 12T 24t 24F 24T >24t  ^12T 24t 24F 24T _24t
