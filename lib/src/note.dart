@@ -41,6 +41,8 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   flamRight,
   flamLeft,
   flamUnison,
+  openDragRight, // not a 2-stroke ruff, and not a dead drag.  No recording yet
+  openDragLeft,
   dragRight,
   dragLeft,
   dragUnison,
@@ -49,7 +51,7 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   tuzzLeft,
   tuzzRight,
   tuzzUnison,
-  ruff2Left,
+  ruff2Left, // how often do these show up?  Prob almost never.  Instead, an "open drag"
   ruff2Right,
   ruff2Unison,
   ruff3Left,

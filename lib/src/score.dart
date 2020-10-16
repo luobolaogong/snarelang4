@@ -42,6 +42,8 @@ class Score {
   List elements = [];
   TimeSig firstTimeSig;
   Tempo firstTempo;
+  num tempoScalar = 1; // new
+  //Tempo latestTempo; // new
   Staff firstStaff;
 
   String toString() {
@@ -138,6 +140,7 @@ class Score {
       }
       if (element is Tempo) {
         log.finer('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
+        //latestTempo = element; // new!!!!!
         continue;
       }
       if (element is Staff) {
@@ -505,7 +508,8 @@ class Score {
   /// increase the current note's NoteOff deltaTime the same amount.  Then advance.
   /// Special condition for first note.  Maybe not last note.
   ///
-  void adjustForGraceNotes() {
+  // void adjustForGraceNotes() {
+  void adjustForGraceNotes(num tempoScalar) {
     log.fine("In adjustForGraceNotes");
     var graceNotesDuration = 0; // Actually, the units are wrong.  This should be a percentage thing, I think.  Changes based on tempo.  For slow tempos the number is too high.  For fast tempos, too low.
     var noteOffDeltaTimeShift = 0;
@@ -519,13 +523,15 @@ class Score {
     // previousNote.postNoteShift = 0;
     previousNote.noteOffDeltaTimeShift = 0;
 
-    var tempoBpm = 84; // default?
+    var tempoBpm = 84; // default? ////// what??????????????????????????????????????
 
     log.finest('In top of Score.adjustForGraceNotes and just set "previousNote" to be some default value');
     for (var element in elements) {
       if (element is Tempo) {
         log.finest('In adjustForGraceNotes(), tempo is $element');
-        tempoBpm = element.bpm;
+        //tempoBpm = element.bpm; // but not adjusted for tempo scalar
+        tempoBpm += (element.bpm * tempoScalar / 100).floor();
+
         continue;
       }
       else if (element is Note) {
@@ -559,8 +565,8 @@ class Score {
           case NoteType.ruff3Left:
           case NoteType.ruff3Right:
           case NoteType.ruff3Unison:
-            graceNotesDuration = (1900 / (100 / tempoBpm)).round();
-            previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
+            graceNotesDuration = (1900 / (100 / tempoBpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            previousNote.noteOffDeltaTimeShift -= graceNotesDuration; // at slow tempos coming in too late
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
             break;

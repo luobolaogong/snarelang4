@@ -1,0 +1,80 @@
+// Reid Maxwell's Book "Taking No Shortcuts"
+// Page 27  Straight version
+
+/time 2/4
+/tempo 84
+
+/staff snare
+
+
+/marker P27
+2r
+
+
+/marker A-27
+16r 32t 32t  32T . . .  4T       16r 32T 32T  32t . . .   4t
+16r 32t 32t  32T . . .  4T       16r 32T 32T  32t . . .   4t
+
+16r 32f 32t  32T . . .  4T       16r 32F 32T  32t . . .   4t
+16r 32f 32t  32T . . .  4T       16r 32F 32T  32t . . .   4t
+
+
+/marker B-27
+16r 32t 32t  32T 32T 32t  32T   4T       16r 32T 32T  32t 32t 32T 32t  4T
+16r 32t 32t  32T 32T 32t  32T   4T       16r 32T 32T  32t 32t 32T 32t  4T
+
+16r 32f 32t  32T 32T 32t 32T    4t       16r 32F 32T 32t 32t 32T 32t   4T
+16r 32f 32t  32T 32T 32t 32T    4t       16r 32F 32T 32t 32t 32T 32t   4T
+
+
+/marker C-27
+8r 24V 24t .  4t     8r 24v 24T .  4T
+8r 24V 24t .  4t     8r 24v 24T .  4T
+
+8r 12v  >24T   24t 48T 48T >24t   >8T       8r 12V >24t  24T 48t 48t  >24T  >8t // as written
+8r 12v  >24T   24t 48T 48T >24t   >8T       8r 12V >24t  24T 48t 48t  >24T  >8t // as written
+
+
+/marker D-27
+16F 32t 32t  32T . . .   >16T 32t 32t 32T . . .    32:3T 32F  32:3t  32f  32T . . .  8T
+16F 32t 32t  32T . . .   >16T 32t 32t 32T . . .    32:3T 32F  32:3t  32f  32T . . .  8T
+
+24Z . .  16t 32T 32T   32t . . .  32:3t 64Z .        32:3T 32t  24Z . . 4t
+24Z . .  16t 32T 32T   32t . . .  32:3t 64Z .        32:3T 32t  24Z . . 4t
+
+
+/marker E-27
+16T 32t 32t  32T 32T 32t 32T   >12t 24f 12T 24F    16t 32T 32T  32t 32t 32T 32t  >4T
+16T 32t 32t  32T 32T 32t 32T   >12t 24f 12T 24F    16t 32T 32T  32t 32t 32T 32t  >4T
+
+24Z . 24T  16t 32T 32T   32t 32t 32T 32t  16T 32t 32t        32T 32T 32t 32T  12t 24t  24Z . . 8t
+24Z . 24T  16t 32T 32T   32t 32t 32T 32t  16T 32t 32t        32T 32T 32t 32T  12t 24t  24Z . . 8t
+
+
+/marker F-27
+8T 12v  >24T   24t 48T 48T ^30t   30T . . .       >8T  12v  24t   24Z . . 8t
+8T 12v  >24T   24t 48T 48T ^30t   30T . . .       >8T  12v  24t   24Z . . 8t
+
+12V  >30t . . . .    8T  12v  >32T 32t    32T 32t  30D 30T . . .    >40T 20z .   8T
+12V  >30t . . . .    8T  12v  >32T 32t    32T 32t  30D 30T . . .    >40T 20z .   8T
+
+
+/marker E-27
+
+
+
+
+
+
+
+
+/staff met
+/pp
+
+^8M 8M ^8M 8M
+^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
+^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
+^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
+^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
+^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
+^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M

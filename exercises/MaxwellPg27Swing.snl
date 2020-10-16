@@ -1,0 +1,80 @@
+// Reid Maxwell's Book "Taking No Shortcuts"
+// Page 27  in swing mode
+
+/time 2/4
+/tempo 84
+
+/staff snare
+
+
+/marker P27
+2r
+
+
+/marker A-27
+12r 36t 36t 36T . . .  4T       12r 36T 36T  36t . . .   4t
+12r 36t 36t 36T . . .  4T       12r 36T 36T  36t . . .   4t
+
+12r 36f 36t  36T . . .  4T       12r 36F 36T  36t . . .   4t
+12r 36f 36t  36T . . .  4T       12r 36F 36T  36t . . .   4t
+
+
+/marker B-27
+12r 36t 36t  36T 36T 36t  36T   4T       12r 36T 36T  36t 36t 36T 36t  4T
+12r 36t 36t  36T 36T 36t  36T   4T       12r 36T 36T  36t 36t 36T 36t  4T
+
+12r 36f 36t  36T 36T 36t 36T    4t       12r 36F 36T 36t 36t 36T 36t   4T
+12r 36f 36t  36T 36T 36t 36T    4t       12r 36F 36T 36t 36t 36T 36t   4T
+
+
+/marker C-27  how do you do this in swing?
+8r 24V 24t .  4t     8r 24v 24T .  4T
+8r 24V 24t .  4t     8r 24v 24T .  4T
+
+8r 12v  >24T   24t 48T 48T >24t   >8T       8r 12V  >24t   24T 48t 48t ^24T   >8t    // still too rigid but okay
+8r 12v  >24T   24t 48T 48T >24t   >8T       8r 12V  >24t   24T 48t 48t ^24T   >8t    // still too rigid but okay
+//8r 12v  >24T  12t >24y   >8T       8r 12V  >24t   12T >24y   >8t // not too bad if the interpretation is an open drag
+
+
+
+/marker D-27
+12F 36t 36t  36T . . .   >12T 36t 36t 36T . . .    12T 24F  12t  30f  30T . . .  8T
+12F 36t 36t  36T . . .   >12T 36t 36t 36T . . .    12T 24F  12t  30f  30T . . .  8T
+
+24Z . .  12t 36T 36T   36t . . .  24t 24Z .        12T 24t  24Z . . 4t
+24Z . .  12t 36T 36T   36t . . .  24t 24Z .        12T 24t  24Z . . 4t
+
+
+/marker E-27
+12T 36t 36t  36T 36T 36t 36T   >12t 24f 12T 24F    12t 36T 36T  36t 36t 36T 36t  >4T
+12T 36t 36t  36T 36T 36t 36T   >12t 24f 12T 24F    12t 36T 36T  36t 36t 36T 36t  >4T
+
+24Z . 24T  12t 36T 36T   36t 36t 36T 36t  12T 36t 36t        36T 36T 36t 36T  12t 24t  24Z . . 8t
+24Z . 24T  12t 36T 36T   36t 36t 36T 36t  12T 36t 36t        36T 36T 36t 36T  12t 24t  24Z . . 8t
+
+
+/marker F-27
+8T 12v  >24T   24t 48T 48T ^30t   30T . . .       >8T  12v  24t   24Z . . 8t
+8T 12v  >24T   24t 48T 48T ^30t   30T . . .       >8T  12v  24t   24Z . . 8t
+
+12V  >30t . . . .    8T  12v  >32T 32t    32T 32t  30D 30T . . .    >40T 20z .   8T
+12V  >30t . . . .    8T  12v  >32T 32t    32T 32t  30D 30T . . .    >40T 20z .   8T
+
+
+/staff met    // should have two tones for metronome
+
+/pp
+
+^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M
+^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M      ^12M 24M ^12M 24M ^12M 24M ^12M 24M    ^12M 24M ^12M 24M ^12M 24M ^12M 24M

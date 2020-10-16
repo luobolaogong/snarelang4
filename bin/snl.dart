@@ -28,7 +28,9 @@ import 'package:snarelang4/snarelang4.dart';
 /// result, and maybe I needed to tell it too about the sound font.  Probably only need to do it on qsynth.
 /// Shouldn't need both.  Like VLC doesn't need qsynth.
 ///
-const commandLineTempoScale = 'tempo'; // change to commandLineTempoIndexName
+// Actually, shoulda kept Tempo and not replace it by TempoScale.  Want both.  If score has no tempo marking, let command line specify
+const commandLineTempoScale = 'tempo'; // change to commandLineTempoScalar
+
 const commandLineStaff = 'staff';
 const commandLineDynamic = 'dynamic';
 const commandLineTimeSig = 'time';
@@ -134,7 +136,8 @@ void main(List<String> arguments) {
   // There are different phases that the transformation takes.
   // To make this method shorter, I separated out those phases from this method.
   // Rename this later, and restructure it.
-  var score = doThePhases(piecesOfMusic);
+  var score = doThePhases(piecesOfMusic, tempoScalar); // Maybe use tempoScalar to handle gracenote calculations
+  // var score = doThePhases(piecesOfMusic);
 
 
 
@@ -206,7 +209,7 @@ void main(List<String> arguments) {
 //     Probably should work on trackZero and move all tempos to it somehow and go off of it.
 
 // Score doThePhases(List<String> piecesOfMusic, Dynamic overrideDynamic, TimeSig overrideTimeSig, Tempo overrideTempo) {
-Score doThePhases(List<String> piecesOfMusic) {
+Score doThePhases(List<String> piecesOfMusic, num tempoScalar) {
   //
   // Phase 1: load and parse the score, returning the Score, which contains a list of all elements, as PetitParser parses and creates them
   //
@@ -236,6 +239,7 @@ Score doThePhases(List<String> piecesOfMusic) {
   defaultInitialTempo.noteDuration.firstNumber = 4;
   defaultInitialTempo.noteDuration.secondNumber = 1;
   defaultInitialTempo.bpm = 84; // check this.  Should be a default set elsewhere, perhaps when Tempo is instantiated.
+  Tempo.scaleThis(defaultInitialTempo, tempoScalar); // new 10/18/2020
   score.fixIncompleteTempos(score.elements, defaultInitialTimeSig, defaultInitialTempo);
 
 
@@ -270,7 +274,8 @@ Score doThePhases(List<String> piecesOfMusic) {
 
   // Phase 5:
   // Do grace notes
-  score.adjustForGraceNotes(); // maybe do this similar to how applyShorthands is done
+  // score.adjustForGraceNotes(); // maybe do this similar to how applyShorthands is done
+  score.adjustForGraceNotes(tempoScalar); // maybe do this similar to how applyShorthands is done
 
   return score;
 }
