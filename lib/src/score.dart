@@ -344,7 +344,7 @@ class Score {
           note.velocity += 32;
           break;
         case NoteArticulation.marcato: // '^'
-          note.velocity += 48;
+          note.velocity += 60;
           break;
       }
 
@@ -371,6 +371,7 @@ class Score {
           break;
         case NoteType.ruff3Left:
         case NoteType.ruff3Right:
+        note.velocity += 20; // recorded too softly
           break;
         case NoteType.tenorLeft:
         case NoteType.tenorRight:
