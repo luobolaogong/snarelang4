@@ -109,13 +109,20 @@ class TempoRamp {
 }
 
 class Tempo {
+  static const DefaultBpm = 84;
   NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good.  But if not specified, as in '/tempo 84' do we set duration???????
-  int bpm = 84; // initialize?  Wow, it's set elsewhere isn't it?  Where do this best, if at all?
+  int bpm = Tempo.DefaultBpm; // It's right above
   num scalar = 1; // new
 // change the above to a double, because sometimes recordings are not exact integers
+
+
+
   String toString() {
     return 'Tempo: bpm: $bpm, $noteDuration';
   }
+
+
+
   static void scaleThis(Tempo tempo, num scalar) {
     //tempo.bpm += (scalar / 100).floor(); // not right, right?
     log.fine('tempo was ${tempo.bpm}');

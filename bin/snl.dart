@@ -29,7 +29,8 @@ import 'package:snarelang4/snarelang4.dart';
 /// Shouldn't need both.  Like VLC doesn't need qsynth.
 ///
 // Actually, shoulda kept Tempo and not replace it by TempoScale.  Want both.  If score has no tempo marking, let command line specify
-const commandLineTempoScale = 'tempo'; // change to commandLineTempoScalar
+const commandLineTempo = 'tempo';
+const commandLineTempoScalar = 'temposcalar';
 
 const commandLineStaff = 'staff';
 const commandLineDynamic = 'dynamic';
@@ -47,6 +48,7 @@ void main(List<String> arguments) {
   print('Staring snl ...');
   var usePadSoundFont = false;
   var loopBuzzes = false; // this is not working currently with "roll" R
+  //num commandLineTempoBpm;
   //
   // Set up logging.  Does this somehow apply to all files?
   //
@@ -70,14 +72,15 @@ void main(List<String> arguments) {
   defaultTempo.noteDuration.secondNumber = 1; // Seems things work if I initialize here rather than in NoteDuration.  Dunno why.
 
   var defaultStaff = Staff(); // helpful?
-  defaultStaff.id = StaffId.snare;
+  defaultStaff.id = StaffId.snare; // why not initialize to snare in constructor?
 
-  defaultTempo.bpm = 84;
+  // defaultTempo.bpm = 84;
+  defaultTempo.bpm = Tempo.DefaultBpm;
   var defaultTimeSig = TimeSig();
   defaultTimeSig.numerator = 4;
   defaultTimeSig.denominator = 4;
 
-//  Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
+  Tempo overrideTempo; // deliberately null.  Perhaps change name to commandLineTempo, and change other to commandLineTempoIndexName
   num tempoScalar;
   TimeSig overrideTimeSig; // deliberately null
   Dynamic overrideDynamic; // deliberately null.  Right?
@@ -88,11 +91,44 @@ void main(List<String> arguments) {
   //
   final argResults = parseCommandLineArgs(arguments);
 
-  if (argResults[commandLineTempoScale] != null) { // should perhaps be a scaling factor.  default maybe at 84 if not specified in score
-    // tempoScale = parseTempo(argResults[commandLineTempoScale]); // expect either '104' (quarter note assumed) or '8:3=104'
-    tempoScalar = num.parse(argResults[commandLineTempoScale]);
-    // overrideTempo = parseTempo(argResults[commandLineTempoScale]); // expect either '104' (quarter note assumed) or '8:3=104'
-    print('defaultTempo.bpm is ${defaultTempo.bpm}');
+
+// gosh, we've got overrideTempo, defaultTempo, commandLineTempo.  Override is probably a bad name.
+
+  // Here's the deal, Midi needs a tempo at the start, or it will use a default of 120.
+  // A tempo can be specified on the command line, or in the score.  A default value is stored in Tempo.DefaultBpm.
+  // A tempo can be scaled by a TempoScalar, specified  on the command line.
+
+  // The tempo in a score is most important, but the /tempo in the score may not come at the first of the score.
+  // We need to put one at the head of the elements list if there's not one at the start of the score.
+  // Probably no harm in inserting a timeSig and a tempo at the first of the elements list, even if right after
+  // that we get them from the score.
+  //
+  // So, the first thing to do is check on the command line.  If no tempo specified, then use the default and put
+  // it at the head of the elements.  Hmmmmmm, what about the MidiHeader?  No.  Doesn't hold tempo.  If not specified,
+  // then put the default tempo in the element list at the start.
+  //
+  // I think the concept of "override" for a tempo is silly, because it would mean overriding the score, and won't
+  // do that.
+  //
+
+  // hey what happened to my tempo command line thing?  I want to get it back
+  if (argResults[commandLineTempo] != null) {
+    overrideTempo = parseTempo(argResults[commandLineTempo]); // expect either '104' (quarter note assumed) or '8:3=104'
+    print('hey, because of command line, overrideTempo is now $overrideTempo');
+  }
+
+  if (overrideTempo != null) { // new but probably elsehwere too
+    defaultTempo = overrideTempo;
+    print('set defaultTempo to $defaultTempo');
+  }
+
+
+  // if (argResults[commandLineTempo] != null) { // useful if nothing specified in the score, but user wants an initial tempo
+  //   commandLineTempoBpm = num.parse(argResults[commandLineTempo]); // maybe should scale it at this point with tempoScalar
+  // }
+
+  if (argResults[commandLineTempoScalar] != null) { // should perhaps be a scaling factor.  default maybe at 84 if not specified in score
+    tempoScalar = num.parse(argResults[commandLineTempoScalar]);
     Tempo.scaleThis(defaultTempo, tempoScalar);
   }
 
@@ -123,9 +159,10 @@ void main(List<String> arguments) {
     print('Want to use pad, eh?');
     usePadSoundFont = true;
   }
-
+// WHAT?????? did this below too!!!
   overrideDynamic ??= defaultDynamic; // check check check check check.  And does this update the param coming in?
-//  overrideTempo ??= defaultTempo; // scan score first?
+  overrideTempo ??= defaultTempo; // scan score first?
+  print('maybe updated overrideTempo to be $overrideTempo');
   overrideStaff ??= defaultStaff;
   overrideTimeSig ??= defaultTimeSig; // scan score first?
 
@@ -136,7 +173,7 @@ void main(List<String> arguments) {
   // There are different phases that the transformation takes.
   // To make this method shorter, I separated out those phases from this method.
   // Rename this later, and restructure it.
-  var score = doThePhases(piecesOfMusic, tempoScalar); // Maybe use tempoScalar to handle gracenote calculations
+  var score = doThePhases(piecesOfMusic, overrideTempo, tempoScalar); // Maybe use tempoScalar to handle gracenote calculations
   // var score = doThePhases(piecesOfMusic);
 
 
@@ -145,22 +182,27 @@ void main(List<String> arguments) {
   // This sets up "override" values, before calling addMidiEventsToTracks, but not sure why.
   var firstTimeSigInScore = score.scanForFirstTimeSig();
   var firstTempoInScore = score.scanForFirstTempo();
+  if (firstTempoInScore != null) {
+    print('I guess there was a tempo in the score.  First one is $firstTempoInScore');
+  }
   // One or the other or both those objects may be null, if not specified in the file.  But if either are specified, then we should use them to create the first
   // track's time sig and/or tempo
   if (firstTimeSigInScore != null) {
     overrideTimeSig = firstTimeSigInScore;
   }
-  // if (firstTempoInScore != null) {
-  //   overrideTempo = firstTempoInScore;
-  // }
+  if (firstTempoInScore != null) {
+    overrideTempo = firstTempoInScore;
+    print('ho, because firstTempoInScore is not null, overrideTempo is now $overrideTempo');
+  }
 
   // Watch out, this is pretty much duplicate code in another place, and it's probably wrong here, 'cause slightly different
   // High chance this is faulty code in this area.
 
   // Tempo.fillInTempoDuration(overrideTempo, overrideTimeSig);
-
+// WHAT???  Just did this above.
   overrideTimeSig ??= defaultTimeSig;
-  // overrideTempo ??= defaultTempo;
+  overrideTempo ??= defaultTempo;
+  print('overrideTempo just got the value of defaultTempo if it wasn not null or whatever so it is now $overrideTempo');
   overrideDynamic ??= defaultDynamic;
   overrideStaff ??= defaultStaff;
 
@@ -209,7 +251,8 @@ void main(List<String> arguments) {
 //     Probably should work on trackZero and move all tempos to it somehow and go off of it.
 
 // Score doThePhases(List<String> piecesOfMusic, Dynamic overrideDynamic, TimeSig overrideTimeSig, Tempo overrideTempo) {
-Score doThePhases(List<String> piecesOfMusic, num tempoScalar) {
+Score doThePhases(List<String> piecesOfMusic, Tempo overrideTempo, num tempoScalar) {
+  print('In doThePhases, and overrideTempo coming in is $overrideTempo');
   //
   // Phase 1: load and parse the score, returning the Score, which contains a list of all elements, as PetitParser parses and creates them
   //
@@ -238,8 +281,14 @@ Score doThePhases(List<String> piecesOfMusic, num tempoScalar) {
   var defaultInitialTempo = Tempo();
   defaultInitialTempo.noteDuration.firstNumber = 4;
   defaultInitialTempo.noteDuration.secondNumber = 1;
-  defaultInitialTempo.bpm = 84; // check this.  Should be a default set elsewhere, perhaps when Tempo is instantiated.
+  defaultInitialTempo.bpm = Tempo.DefaultBpm; // check this.  Should be a default set elsewhere, perhaps when Tempo is instantiated.
+  print('doThePhases(), just set defaultInitialTempo.bpm to be ${defaultInitialTempo.bpm}');
+  if (commandLineTempo != null) {
+    defaultInitialTempo.bpm = overrideTempo.bpm;
+    print('just set defaultInitialTempo.bpm to be the overideTempo.bpm, which is ${overrideTempo.bpm}');
+  }
   Tempo.scaleThis(defaultInitialTempo, tempoScalar); // new 10/18/2020
+  print('just scaled defaultInitialTempo to be $defaultInitialTempo');
   score.fixIncompleteTempos(score.elements, defaultInitialTimeSig, defaultInitialTempo);
 
 
@@ -272,10 +321,15 @@ Score doThePhases(List<String> piecesOfMusic, num tempoScalar) {
   // Apply tempo ramps
   // later
 
+  // What if there's no /tempo given in a file and no -t value specified on command line?  We still need
+  // to put a tempoEvent in the midi output
+
+
   // Phase 5:
   // Do grace notes
   // score.adjustForGraceNotes(); // maybe do this similar to how applyShorthands is done
-  score.adjustForGraceNotes(tempoScalar); // maybe do this similar to how applyShorthands is done
+  // score.adjustForGraceNotes(commandLineTempoBpm, tempoScalar); // maybe do this similar to how applyShorthands is done
+  score.adjustForGraceNotes(defaultInitialTempo, tempoScalar); // maybe do this similar to how applyShorthands is done
 
   return score;
 }
@@ -286,26 +340,27 @@ Score doThePhases(List<String> piecesOfMusic, num tempoScalar) {
 
 // expect either '104' (quarter note assumed) or '8:3=104'
 // Probably won't use this in the future
-// Tempo parseTempo(String noteTempoString) {
-//   var tempo = Tempo();
-//   // var parts = tempoString.split(r'[:=]');
-//   var noteTempoParts = noteTempoString.split('=');
-//   if (noteTempoParts.length == 1) {
-//     tempo.bpm = int.parse(noteTempoParts[0]);
-//     tempo.noteDuration.firstNumber = 4;
-//     tempo.noteDuration.secondNumber = 1;
-//   }
-//   else if (noteTempoParts.length == 2) {
-//     var noteParts = noteTempoParts[0].split(':');
-//     tempo.noteDuration.firstNumber = int.parse(noteParts[0]);
-//     tempo.noteDuration.secondNumber = int.parse(noteParts[1]);
-//     tempo.bpm = int.parse(noteTempoParts[1]); // wrong of course
-//   }
-//   else {
-//     print('Failed to parse tempo correctly: -->$noteTempoString<--');
-//   }
-//   return tempo;
-// }
+Tempo parseTempo(String noteTempoString) {
+  var tempo = Tempo();
+  // var parts = tempoString.split(r'[:=]');
+  var noteTempoParts = noteTempoString.split('=');
+  if (noteTempoParts.length == 1) {
+    tempo.bpm = int.parse(noteTempoParts[0]);
+    tempo.noteDuration.firstNumber = 4;
+    tempo.noteDuration.secondNumber = 1;
+  }
+  else if (noteTempoParts.length == 2) {
+    var noteParts = noteTempoParts[0].split(':');
+    tempo.noteDuration.firstNumber = int.parse(noteParts[0]);
+    tempo.noteDuration.secondNumber = int.parse(noteParts[1]);
+    tempo.bpm = int.parse(noteTempoParts[1]); // wrong of course
+  }
+  else {
+    print('Failed to parse tempo correctly: -->$noteTempoString<--');
+  }
+  print("parseTempo is returning tempo: $tempo");
+  return tempo;
+}
 
 Staff parseStaff(String staffString) {
   var staff = Staff();
@@ -340,12 +395,19 @@ ArgResults parseCommandLineArgs(List<String> arguments) {
         help:
         'Set the first staff name.  Defaults to snare',
         valueHelp: '--staff bass')
-    ..addOption(commandLineTempoScale,
-        abbr: 't',
+    ..addOption(commandLineTempoScalar,
+        // abbr: 't',
+        abbr: 'S', // change later.  One letter, right?  Can't use s
         help:
         // 'tempo override in bpm, assuming quarter note is a beat',
         'tempo scalar percentage',
-        valueHelp: '-t -10')
+        valueHelp: '-S -10')
+        // valueHelp: '-t -10')
+    ..addOption(commandLineTempo,
+        abbr: 't',
+        help:
+        'tempo if none specified in score (<num> or <dur>=<num>)',
+        valueHelp: '-t 64  or -t 8:3=84')
     ..addOption(commandLineDynamic,
         abbr: 'd',
         allowed: ['ppp', 'pp', 'p', 'mp', 'mf', 'f', 'ff', 'fff'],

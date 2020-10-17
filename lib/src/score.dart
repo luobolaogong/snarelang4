@@ -509,8 +509,8 @@ class Score {
   /// Special condition for first note.  Maybe not last note.
   ///
   // void adjustForGraceNotes() {
-  void adjustForGraceNotes(num tempoScalar) {
-    log.fine("In adjustForGraceNotes");
+  void adjustForGraceNotes(Tempo defaultInitialTempo, num tempoScalar) {
+    print('In adjustForGraceNotes and defaultInitialTempo is $defaultInitialTempo');
     var graceNotesDuration = 0; // Actually, the units are wrong.  This should be a percentage thing, I think.  Changes based on tempo.  For slow tempos the number is too high.  For fast tempos, too low.
     var noteOffDeltaTimeShift = 0;
 
@@ -523,8 +523,9 @@ class Score {
     // previousNote.postNoteShift = 0;
     previousNote.noteOffDeltaTimeShift = 0;
 
-    var tempoBpm = 84; // default? ////// what??????????????????????????????????????
-
+    // var tempoBpm = Tempo.DefaultBpm; // default? ////// what??????????????????????????????????????
+    var tempoBpm = defaultInitialTempo.bpm; // default? ////// what??????????????????????????????????????
+    print('gunna use defaultInitialTempo that was passed in to figure out gracenotes: $defaultInitialTempo');
     log.finest('In top of Score.adjustForGraceNotes and just set "previousNote" to be some default value');
     for (var element in elements) {
       if (element is Tempo) {
@@ -628,6 +629,7 @@ enum StaffId {
 }
 
 class Staff {
+  // Why not initialize?
   StaffId id; // the default should be snare.  How do you do that?
 
   String toString() {

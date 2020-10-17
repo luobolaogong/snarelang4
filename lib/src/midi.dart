@@ -507,7 +507,7 @@ class Midi {
   // void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
   /// trackEventsList could be track zero or other
   void addTempoChangeToTrackEventsList(Tempo tempo, List<MidiEvent> trackEventsList) {
-    //print('tempo bpm was ${tempo.bpm}');
+    print('tempo bpm was ${tempo.bpm}');
     //tempo.bpm = (tempo.bpm + tempo.bpm * tempo.scalar / 100).floor();
     //tempo.bpm += (tempo.bpm * tempo.scalar / 100).floor();
     //print('tempo bpm is now ${tempo.bpm}');
@@ -515,6 +515,7 @@ class Midi {
     setTempoEvent.type = 'setTempo';
     var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+    print('for the setTempoEvent we have microsecondsPerBeat: ${setTempoEvent.microsecondsPerBeat}');
     log.finer('Adding tempo change event to some track events list, possibly track zero, but any track events list');
     trackEventsList.add(setTempoEvent);
   }
