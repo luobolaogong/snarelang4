@@ -347,7 +347,8 @@ class Midi {
   /// The midiTracks list already has a trackZero list, which contains timeSig, and Tempo, and is supposed to
   /// be able to hold a tempoMap.
   ///
-  List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, num tempoScalar, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, overrideStaff) {
+  // List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, num tempoScalar, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, overrideStaff) {
+  List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, commandLine) {
     log.fine('In Midi.createMidiEventsTracksList()');
     //var currentStaff = overrideStaff; // this is strange.  We've got an element that could be a Staff, and we've got a passed in Staff
 
@@ -361,20 +362,37 @@ class Midi {
     //var noteChannel = 0; // what for?
     var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
 
-    // what the crud?  a trackNameEvent before any elements are read???  Where did that come from?  From default value looks like.
-    // Does this mean we want to be ready to add a track name at the start of a track if there wasn't such a name and we're gunna put something else in?
-    if (overrideStaff != null) { // ?????  what good does this do?  Maybe if there's no track designation given in the score we use this one as the first element of a new track?
-      var trackNameEvent = TrackNameEvent();
-      trackNameEvent.text = staffIdToString(overrideStaff.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
-      trackNameEvent.deltaTime = 0;
-      //trackEventsList.add(trackNameEvent); // missing this line causes "imported MIDI" to be track name???????????????????
-      if (overrideStaff.id == StaffId.pad) { // total shot in the dark
-        usePadSoundFont = true;
-      }
-      else {
-        usePadSoundFont = false;
-      }
-    }
+    // I might have trouble here.  I've been working with this CommandLine stuff which is only what a user may specify
+    // on the command line when starting the app.  What happens when there's a /staff bass   in the score?
+    // After that we can't keep using commandLine.staff, right?
+
+
+
+
+    var usePadSoundFont = commandLine.usePadSoundFont;
+    var loopBuzzes = commandLine.loopBuzzes; // silly.  just use commandLine.loopBuzzes, right?
+
+    // // what the crud?  a trackNameEvent before any elements are read???  Where did that come from?  From default value looks like.
+    // // Does this mean we want to be ready to add a track name at the start of a track if there wasn't such a name and we're gunna put something else in?
+    // if (commandLine.staff != null) { // ?????  what good does this do?  Maybe if there's no track designation given in the score we use this one as the first element of a new track?
+    //   var trackNameEvent = TrackNameEvent();
+    //   trackNameEvent.text = staffIdToString(commandLine.staff.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
+    //   trackNameEvent.deltaTime = 0;
+    //   //trackEventsList.add(trackNameEvent); // missing this line causes "imported MIDI" to be track name???????????????????
+    //   if (commandLine.staff.id == StaffId.pad) { // total shot in the dark
+    //     usePadSoundFont = true;
+    //   }
+    //   else {
+    //     usePadSoundFont = false;
+    //   }
+    // }
+
+
+    var trackNameEvent = TrackNameEvent();
+    trackNameEvent.text = staffIdToString(commandLine.staff.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
+    trackNameEvent.deltaTime = 0;
+
+
 
     // Go through the elements, seeing what each one is, and add it to the current track if right kind of element.
     // Of course this is not yet written to midi.
@@ -438,12 +456,13 @@ class Midi {
       if (element is Tempo) {
         var tempo = element as Tempo; // don't have to do this, but wanna
         // For a test, output the tempo value as text in the track at the tempo change.
-        Tempo.scaleThis(tempo, tempoScalar);
+        // Tempo.scaleThis(tempo, tempoScalar);
+        // tempo = Tempo.scaleThis(tempo, tempoScalar);     // removing this.  The tempo has already been scaled I hope
         // var markerEvent = MarkerEvent();
         // markerEvent.text = 'Tempo ${element.bpm}';
         // trackEventsList.add(markerEvent);
 
-        Tempo.fillInTempoDuration(tempo, overrideTimeSig); // check on this.  If already has duration, what happens?
+        //Tempo.fillInTempoDuration(tempo, overrideTimeSig); // check on this.  If already has duration, what happens?
 
         addTempoChangeToTrackEventsList(tempo, trackEventsList); // also add to trackzero?
         continue;
@@ -507,15 +526,17 @@ class Midi {
   // void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
   /// trackEventsList could be track zero or other
   void addTempoChangeToTrackEventsList(Tempo tempo, List<MidiEvent> trackEventsList) {
-    print('tempo bpm was ${tempo.bpm}');
+    print('addTempoChangeToTrackEventsList(), tempo bpm was ${tempo.bpm}');
     //tempo.bpm = (tempo.bpm + tempo.bpm * tempo.scalar / 100).floor();
     //tempo.bpm += (tempo.bpm * tempo.scalar / 100).floor();
     //print('tempo bpm is now ${tempo.bpm}');
     var setTempoEvent = SetTempoEvent();
     setTempoEvent.type = 'setTempo';
+    // I think this next line is to account for tempos based on nonquarter notes, like 6/8 time.
     var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
-    setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
-    print('for the setTempoEvent we have microsecondsPerBeat: ${setTempoEvent.microsecondsPerBeat}');
+    print('addTempoChangeToTrackEventsList(), useThisTempo: $useThisTempo');
+    setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   I think should be round, and maybe a float?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+    print('addTempoChangeToTrackEventsList(), for the setTempoEvent we have microsecondsPerBeat: ${setTempoEvent.microsecondsPerBeat}');
     log.finer('Adding tempo change event to some track events list, possibly track zero, but any track events list');
     trackEventsList.add(setTempoEvent);
   }
@@ -605,7 +626,7 @@ class Midi {
     // noteOnEvent.channel = channel;
     noteOnEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
     trackEventsList.add(noteOnEvent);
-    log.fine('addNoteOnOffToTrackEventsList() added endOnEvent $noteOnEvent to trackEventsList');
+    log.finest('addNoteOnOffToTrackEventsList() added endOnEvent $noteOnEvent to trackEventsList');
 
     var noteOffEvent = NoteOffEvent();
     noteOffEvent.type = 'noteOff';
@@ -622,7 +643,7 @@ class Midi {
     noteOffEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
 
     trackEventsList.add(noteOffEvent);
-    log.fine('addNoteOnOffToTrackEventsList() added endOffvent $noteOffEvent to trackEventsList');
+    log.finest('addNoteOnOffToTrackEventsList() added endOffvent $noteOffEvent to trackEventsList');
 
     // By rounding, what fraction of a tick are we adding or subtracting to the set of notes?
     // If the number of ticks for this note should be 53.33333, but it gets rounded down to 53

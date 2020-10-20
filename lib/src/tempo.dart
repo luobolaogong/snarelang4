@@ -112,7 +112,7 @@ class Tempo {
   static const DefaultBpm = 84;
   NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good.  But if not specified, as in '/tempo 84' do we set duration???????
   int bpm = Tempo.DefaultBpm; // It's right above
-  num scalar = 1; // new
+//  num scalar = 1; // new  What the crap?  Every tempo has a scalar?  Then should also have bool scalarUsed
 // change the above to a double, because sometimes recordings are not exact integers
 
 
@@ -122,23 +122,36 @@ class Tempo {
   }
 
 
-
-  static void scaleThis(Tempo tempo, num scalar) {
-    //tempo.bpm += (scalar / 100).floor(); // not right, right?
-    log.fine('tempo was ${tempo.bpm}');
-    tempo.bpm += (tempo.bpm * scalar / 100).floor();
-    log.fine('tempo is now ${tempo.bpm}');
+  // Maybe should change this so it doesn't change the Tempo passed in, and returns a new Tempo object
+  static Tempo scaleThis(Tempo tempo, num scalar) {
+    log.fine('scaleThis(), tempo passed in is $tempo, and scalar is $scalar');
+    var newTempo = Tempo();
+    newTempo.noteDuration.firstNumber = tempo.noteDuration.firstNumber;
+    newTempo.noteDuration.secondNumber = tempo.noteDuration.secondNumber;
+    // newTempo.bpm += (tempo.bpm * scalar / 100).floor();
+    newTempo.bpm = tempo.bpm + (tempo.bpm * scalar / 100).floor();
+    log.fine('scaleThis(), tempo is now $newTempo');
+    return newTempo;
   }
+  // // Maybe should change this so it doesn't change the Tempo passed in, and returns a new Tempo object
+  // static void scaleThis(Tempo tempo, num scalar) {
+  //   //tempo.bpm += (scalar / 100).floor(); // not right, right?
+  //   log.fine('tempo was ${tempo.bpm}');
+  //   tempo.bpm += (tempo.bpm * scalar / 100).floor();
+  //   log.fine('tempo is now ${tempo.bpm}');
+  // }
   // static Tempo watchOutDuplicateCode(Tempo overrideTempo, TimeSig overrideTimeSig) {
-  static fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
+  static void fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
     if (modifyThisTempo.noteDuration.firstNumber == null || modifyThisTempo.noteDuration.secondNumber == null) {
       if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
         modifyThisTempo.noteDuration.firstNumber = 8;
         modifyThisTempo.noteDuration.secondNumber = 3;
+        print('ever happen?????  maven!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
       }
       else {
         modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
         modifyThisTempo.noteDuration.secondNumber ??= 1;
+        print('ever maven happens?????????????????????????????????????????????????????????????????????????????????????????????');
       }
     }
     //return modifyThisTempo;

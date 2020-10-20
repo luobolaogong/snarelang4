@@ -50,7 +50,7 @@ class Score {
     return 'Score: ${elements.toString()}'; // could do a forEach and collect each element into a string with \n between each
   }
 
-  static Result loadAndParse(List<String> scoresPaths) {
+  static Result loadAndParse(List<String> scoresPaths, CommandLine commandLine) {
     //
     // First load the raw score files
     //
@@ -93,11 +93,27 @@ class Score {
     // Just report the result in the log
     if (result.isSuccess) {
       Score score = result.value;
+
+      // // Don't think we should do this here, but needs to be done before do gracenotes.
+      // print('DO THIS HERE????????   Adding  a few elements at the start, like timesig and tempo, just in case notes start too soon?');
+      // //var initialTempo = Tempo();
+      // //var tempo = Tempo.scaleThis(initialTempo, scalar)
+      // //var initialTimeSig = TimeSig();
+      // //score.elements.insert(0, initialTempo);
+      // //score.elements.insert(0, initialTimeSig);
+      // var scaledTempo = Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar);
+      // score.elements.insert(0, scaledTempo);
+      // score.elements.insert(0, commandLine.timeSig);
+      // print('Added elements $scaledTempo, initialTimeSig');
+
+
+
+
       log.finer('parse succeeded.  This many elements: ${score.elements.length}\n'); // wrong
       for (var element in score.elements) {
         log.finest('\tAfter score raw parse, element list has this: $element');
       }
-      log.fine('Done with first pass -- loaded raw notes, no shorthands yet.\n');
+      log.fine('Done with loadAndParse / first pass -- loaded raw notes, no shorthands yet.\n');
     }
     else {
       log.finer('Score parse failed.  Parse message: ${result.message}');
@@ -444,24 +460,43 @@ class Score {
     }
     return null;
   }
-  
-  void fixIncompleteTempos(List elements, TimeSig defaultInitialTimeSig, Tempo defaultInitialTempo) {
-    var mostRecentTimeSig = TimeSig();
-    mostRecentTimeSig.numerator = defaultInitialTimeSig.numerator;
-    mostRecentTimeSig.denominator = defaultInitialTimeSig.denominator;
+
+  // // Is this still needed?  Was it because tempos didn't have durations???????  Now they do????
+  // void fixIncompleteTempos(List elements, TimeSig defaultInitialTimeSig, Tempo defaultInitialTempo) {
+  //   log.finer('In fixIncompleteTempos(), but maybe dont need to any more');
+  //   var mostRecentTimeSig = TimeSig();
+  //   mostRecentTimeSig.numerator = defaultInitialTimeSig.numerator;
+  //   mostRecentTimeSig.denominator = defaultInitialTimeSig.denominator;
+  //   for (var element in elements) {
+  //     if (element is TimeSig) {
+  //       mostRecentTimeSig.numerator = element.numerator;
+  //       mostRecentTimeSig.denominator = element.denominator;
+  //       continue;
+  //     }
+  //     if (element is Tempo) {
+  //       Tempo.fillInTempoDuration(element, mostRecentTimeSig);
+  //       continue;
+  //     }
+  //   }
+  //   log.finer('Leavingt fixIncompleteTempos(), but maybe dont need to any more');
+  // }
+
+
+  void scaleTempos(CommandLine commandLine) {
+    //Tempo newTempo;
     for (var element in elements) {
-      if (element is TimeSig) {
-        mostRecentTimeSig.numerator = element.numerator;
-        mostRecentTimeSig.denominator = element.denominator;
-        continue;
-      }
       if (element is Tempo) {
-        Tempo.fillInTempoDuration(element, mostRecentTimeSig);
-        continue;
+        var tempo = element as Tempo;
+        //print('scaleTempos(), element is currently: $tempo and scalar is ${commandLine.tempoScalar}');
+        tempo = Tempo.scaleThis(tempo, commandLine.tempoScalar);
+        element.bpm = tempo.bpm; // this is awkward
+        //print('scaleTempos(), now element is $tempo');
       }
     }
-    
   }
+
+
+
 
   /// This comment is also in midi.dart.  So change/summarize it there.
   ///
@@ -509,30 +544,31 @@ class Score {
   /// Special condition for first note.  Maybe not last note.
   ///
   // void adjustForGraceNotes() {
-  void adjustForGraceNotes(Tempo defaultInitialTempo, num tempoScalar) {
-    print('In adjustForGraceNotes and defaultInitialTempo is $defaultInitialTempo');
+  // void adjustForGraceNotes(Tempo initialTempo, num tempoScalar) {
+  void adjustForGraceNotes(CommandLine commandLine) {
+
+    print('In adjustForGraceNotes.');
+
     var graceNotesDuration = 0; // Actually, the units are wrong.  This should be a percentage thing, I think.  Changes based on tempo.  For slow tempos the number is too high.  For fast tempos, too low.
     var noteOffDeltaTimeShift = 0;
 
     // just a wild stab to handle first note case in list
     var previousNote = Note();
-    previousNote.duration = NoteDuration();
-    previousNote.duration.firstNumber = 4; // nec?
-    previousNote.duration.secondNumber = 1; // nec?
-    // previousNote.preNoteShift = 0;
-    // previousNote.postNoteShift = 0;
     previousNote.noteOffDeltaTimeShift = 0;
 
-    // var tempoBpm = Tempo.DefaultBpm; // default? ////// what??????????????????????????????????????
-    var tempoBpm = defaultInitialTempo.bpm; // default? ////// what??????????????????????????????????????
-    print('gunna use defaultInitialTempo that was passed in to figure out gracenotes: $defaultInitialTempo');
-    log.finest('In top of Score.adjustForGraceNotes and just set "previousNote" to be some default value');
+    // Tempo mostRecentScaledTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
+    Tempo mostRecentTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
     for (var element in elements) {
       if (element is Tempo) {
-        log.finest('In adjustForGraceNotes(), tempo is $element');
+        //log.finest('In adjustForGraceNotes(), tempo is $element and looks like we will scale it just to keep track of the most recent tempo, but not changing it in the list');
         //tempoBpm = element.bpm; // but not adjusted for tempo scalar
-        tempoBpm += (element.bpm * tempoScalar / 100).floor();
-
+        // mostRecentTempoBpm += (element.bpm * tempoScalar / 100).floor(); // OH MY.  Right???????????
+        //mostRecentScaledTempo = Tempo.scaleThis(element, tempoScalar);
+        //print('adjustForGraceNotes(), got a tempo element $element and just scaled it by ${commandLine.tempoScalar} and so mostRecentScaledTempo is $mostRecentTempo');
+        //print('I kinda think this is an okay time to modify this Tempo element in the list.  Why wait until midi???????????????????????????????????????????????????????????????????  Okay do it now.');
+        //element = mostRecentScaledTempo; // Could this possibly work?  We're playing with pointers
+        //mostRecentTempoBpm = mostRecentScaledTempo.bpm;
+        mostRecentTempo = element;
         continue;
       }
       else if (element is Note) {
@@ -542,7 +578,7 @@ class Score {
           case NoteType.flamLeft:
           case NoteType.flamRight:
           case NoteType.flamUnison:
-            graceNotesDuration = (180 / (100 / tempoBpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+            graceNotesDuration = (180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -550,7 +586,7 @@ class Score {
           case NoteType.dragLeft:
           case NoteType.dragRight:
           case NoteType.dragUnison:
-            graceNotesDuration = (250 / (100 / tempoBpm)).round();
+            graceNotesDuration = (250 / (100 / mostRecentTempo.bpm)).round();
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -558,7 +594,7 @@ class Score {
           case NoteType.ruff2Left:
           case NoteType.ruff2Right:
           case NoteType.ruff2Unison:
-            graceNotesDuration = (1400 / (100 / tempoBpm)).round();
+            graceNotesDuration = (1400 / (100 / mostRecentTempo.bpm)).round();
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -566,7 +602,7 @@ class Score {
           case NoteType.ruff3Left:
           case NoteType.ruff3Right:
           case NoteType.ruff3Unison:
-            graceNotesDuration = (1900 / (100 / tempoBpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            graceNotesDuration = (1900 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration; // at slow tempos coming in too late
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -585,7 +621,7 @@ class Score {
       }
 
     }
-    log.info('Leaving adjustForGraceNotes');
+    log.info('Leaving adjustForGraceNotes(), and updated notes to have delta time shifts to account for gracenotes.');
     return;
 
   }
@@ -631,6 +667,8 @@ enum StaffId {
 class Staff {
   // Why not initialize?
   StaffId id; // the default should be snare.  How do you do that?
+  // Maybe this will be expanded to include more than just StaffId, otherwise just an enum
+  // and not a class will do, right?  I mean, why doesn't Dynamic do it this way?
 
   String toString() {
     return 'Staff: id: $id';

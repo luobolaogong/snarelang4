@@ -8,12 +8,14 @@ enum NoteArticulation {
 }
 
 class NoteDuration { // change this to Duration if possible, which conflicts, I think with something
+  static final DefaultFirstNumber = 4;
+  static final DefaultSecondNumber = 1;
   // Maybe should change the following to doubles?????
   // Don't know why we don't initialize here.
-  int firstNumber; // initialize????      Perhaps set to 4, and other to 1 ??????
-  int secondNumber;
- // int firstNumber = 4; // initialize????
- // int secondNumber = 1;
+  //int firstNumber; // initialize????      Perhaps set to 4, and other to 1 ??????
+  //int secondNumber;
+  int firstNumber = 4; // initialize????  // trying again 10/16/20
+  int secondNumber = 1;
 
 //  num firstNumber; // should be an int?
 //  num secondNumber;

@@ -13,6 +13,7 @@ export 'src/note.dart';
 export 'src/score.dart';
 export 'src/tempo.dart';
 export 'src/timesig.dart';
+export 'src/commandline.dart';
 
 // TODO: Export any libraries intended for clients of this package.
 //import 'package:petitparser/petitparser.dart';

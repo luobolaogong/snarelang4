@@ -2,7 +2,11 @@
 // Page 27  in swing mode
 
 /time 2/4
-/tempo 84
+//tempo 84
+/tempo 2
+/tempo 3
+/tempo 75
+/tempo 50
 
 /staff snare
 

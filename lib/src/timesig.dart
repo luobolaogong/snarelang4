@@ -9,8 +9,12 @@ import '../snarelang4.dart';
 
 
 class TimeSig {
-  int numerator;
-  int denominator;
+  static final DefaultNumerator = 4;
+  static final DefaultDenominator = 4;
+  int numerator = 4; // new 10/16
+  int denominator = 4;
+  // int numerator;
+  // int denominator;
 
   String toString() {
     return 'TimeSig: $numerator/$denominator';
