@@ -1,0 +1,88 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, The Essentials"
+// Page 51 played straight, as written
+
+/time 4/4
+//tempo 84
+
+/staff snare
+
+
+/marker Section 11
+2r
+
+
+/marker A) Dev Groups of 5 to 6
+8T 32T . . .  4T   32:3T  >32t  . . . .   4T
+8t 32t . . .  4t   32:3t  >32T  . . . .   >4t
+
+8T 32T . . .  4T   32:3T  >32t  . . . .   4T
+8t 32t . . .  4t   32:3t  >32T  . . . .   >4t
+
+
+/marker B) Tap onto groups of 6
+32:3T >32t . . . . >4T   32:3r  >32t  . . . .   >4T
+32:3T >32t . . . . >4T   32:3r  >32t  . . . .   >4T
+
+32:3T >32t . . . . >4T   32:3r  >32t  . . . .   >4T
+32:3T >32t . . . . >4T   32:3r  >32t  . . . .   >4T
+
+
+32:3t >32T . . . . >4t   32:3r  >32T  . . . .   >4t
+32:3t >32T . . . . >4t   32:3r  >32T  . . . .   >4t
+
+32:3t >32T . . . . >4t   32:3r  >32T  . . . .   >4t
+32:3t >32T . . . . >4t   32:3r  >32T  . . . .   >4t
+
+
+/marker C)
+>32:3T 32t 32:3T >32t  . . . .  >8T   >32:3t 32T 32:3t >32T  . . . .  >8t
+32T . . . >32:3T >32t  . . . .  >8T   32t . . . >32:3t >32T  . . . .  >8t
+
+>32:3T 32t 32:3T >32t  . . . .  >8T   >32:3t 32T 32:3t >32T  . . . .  >8t
+32T . . . >32:3T >32t  . . . .  >8T   32t . . . >32:3t >32T  . . . .  >8t
+
+
+
+/marker D)
+32T . . .  >32:3T >32t   . . . >. . . . >.  >4T 4r
+32t . . .  >32:3t >32T   . . . >. . . . >.  >4t 4r
+
+32T . . .  >32:3T >32t   . . . >. . . . >.  >4T 4r
+32t . . .  >32:3t >32T   . . . >. . . . >.  >4t 4r
+
+
+/marker E)
+>24T . >. 32t . . >.  >4t  >24t . >. 32T . . >. >4T
+>24T . >.  32t . . >. >24t . >. 32T . . >.  >24T . >. 32t . . >. >4t
+
+>24T . >. 32t . . >.  >4t  >24t . >. 32T . . >. >4T
+>24T . >.  32t . . >. >24t . >. 32T . . >.  >24T . >. 32t . . >. >4t
+
+
+/marker F)
+>32:3T 32t 32:3T >32t  32T . . >. . . . >.   >24T . >. 32t . . >.  >4t
+>32:3t 32T 32:3t >32T  32t . . >. . . . >.   >24t . >. 32T . . >.  >4T
+
+>32:3T 32t 32:3T >32t  32T . . >. . . . >.   >24T . >. 32t . . >.  >4t
+>32:3t 32T 32:3t >32T  32t . . >. . . . >.   >24t . >. 32T . . >.  >4T
+
+
+
+
+/staff met    // should have two tones for metronome
+
+/pp
+
+8M . . .
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8r
+
+
+
+

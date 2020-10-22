@@ -111,7 +111,8 @@ class TempoRamp {
 class Tempo {
   static const DefaultBpm = 84;
   NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good.  But if not specified, as in '/tempo 84' do we set duration???????
-  int bpm = Tempo.DefaultBpm; // It's right above
+  // int bpm = Tempo.DefaultBpm; // It's right above
+  num bpm = Tempo.DefaultBpm; // It's right above
 //  num scalar = 1; // new  What the crap?  Every tempo has a scalar?  Then should also have bool scalarUsed
 // change the above to a double, because sometimes recordings are not exact integers
 
@@ -129,7 +130,8 @@ class Tempo {
     newTempo.noteDuration.firstNumber = tempo.noteDuration.firstNumber;
     newTempo.noteDuration.secondNumber = tempo.noteDuration.secondNumber;
     // newTempo.bpm += (tempo.bpm * scalar / 100).floor();
-    newTempo.bpm = tempo.bpm + (tempo.bpm * scalar / 100).floor();
+    // newTempo.bpm = tempo.bpm + (tempo.bpm * scalar / 100).floor();
+    newTempo.bpm = tempo.bpm + (tempo.bpm * scalar / 100).round();
     log.fine('scaleThis(), tempo is now $newTempo');
     return newTempo;
   }

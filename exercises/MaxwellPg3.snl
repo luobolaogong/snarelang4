@@ -1,0 +1,102 @@
+// Reid Maxwell's Book "Taking No Shortcuts"
+// Page 2 - The Paradiddle
+
+/time 2/4
+//tempo 84
+
+/staff snare
+
+
+/marker P2
+2r
+
+
+/marker The Paradiddle
+8T 8t 8T 8T
+8t 8T 8t 8t
+8T 8t 8T 8T
+8t 8T 8t 8t
+
+16T 16t 16T 16T  16t 16T 16t 16t
+16T 16t 16T 16T  16t 16T 16t 16t
+16T 16t 16T 16T  16t 16T 16t 16t
+16T 16t 16T 16T  16t 16T 16t 16t
+
+/marker Paradiddle With Accent on 1st stroke
+>16T 16t 16T 16T  >16t 16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+
+>16T 16t 16T 16T  >16t 16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+
+/marker Paradiddle With Accent on 2nd stroke
+16T >16t 16T 16T  16t >16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+
+16T >16t 16T 16T  16t >16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+
+/marker Paradiddle with Accent on Both 1st & 2nd strokes
+>16T 16t 16T 16T  >16t 16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+
+>16T 16t 16T 16T  >16t 16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+16T >16t 16T 16T  16t >16T 16t 16t
+
+/marker More Paradiddles & More Accents
+>16T 16t 16T 16T  16t >16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+16T >16t 16T 16T  >16t 16T 16t 16t
+16T >16t 16T 16T  4t
+
+>16T 16t 16T 16T  16t >16T 16t 16t
+>16T 16t 16T 16T  >16t 16T 16t 16t
+16T >16t 16T 16T  >16t 16T 16t 16t
+16T >16t 16T 16T  >4t
+
+>16T 16t 16T 16T  >16t 16T 16t 16t
+>16T 16t 16T 16T  16t 16t 16T 16t
+>16T 16t 16T 16T  16t >16T 16t 16t
+>16T 16t 16T 16T  >4t
+
+>16T 16t 16T 16T  >16t 16T 16t 16t
+>16T 16t 16T 16T  16t 16t 16T 16t
+>16T 16t 16T 16T  16t >16T 16t 16t
+>16T 16t 16T 16T  >4t
+
+
+/staff met
+
+/p
+
+8M . . .
+
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .

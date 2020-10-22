@@ -2,7 +2,7 @@
 // Page 27  Straight version
 
 /time 2/4
-/tempo 100
+//tempo 84
 
 /staff snare
 
@@ -59,11 +59,6 @@
 12V  >30t . . . .    8T  12v  >32T 32t    32T 32t  30D 30T . . .    >40T 20z .   8T
 
 
-/marker E-27
-
-
-
-
 
 
 
@@ -71,10 +66,10 @@
 /staff met
 /pp
 
-^8M 8M ^8M 8M
-^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
-^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
-^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
-^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
-^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
-^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M      ^8M 8M ^8M 8M ^8M 8M ^8M 8M    ^8M 8M ^8M 8M ^8M 8M ^8M 8M
+>8M 8M >8M 8M
+>8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M      >8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M
+>8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M      >8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M
+>8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M      >8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M
+>8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M      >8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M
+>8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M      >8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M
+>8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M      >8M 8M >8M 8M >8M 8M >8M 8M    >8M 8M >8M 8M >8M 8M >8M 8M

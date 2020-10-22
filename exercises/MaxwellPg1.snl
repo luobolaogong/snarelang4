@@ -1,0 +1,109 @@
+// Reid Maxwell's Book "Taking No Shortcuts"
+
+// Default tempo is 84bpm because that seemed to be a reasonable tempo for advanced players,
+// but of course the Midi files can be played at any tempo and gradually brought up to speed with practice.
+// Also the Midi files have markers in them so the student can jump to the exercise referenced in the book.
+// Of course to do this you need the midi files and a midi player.
+// Page 27 is the last page in the handout. It and others are probably meant to be played swung,
+// but at slow tempos they might be played straight.  Therefore I have two versions for that page.
+// (The swing interpretations are mine and I don't know for sure how Reid would play some of those figures.)
+
+// Page 1 - Singles / Stick Control
+
+/time 2/4
+//tempo 84
+
+/staff snare
+
+
+/marker P1
+2r
+
+
+/marker Singles
+4T .
+4T .
+8T . . .
+8T . . .
+16T . . . . . . .
+16T . . . . . . .
+32T . . . . . . . . . . . . . . .
+32T . . . . . . . . . . . 8T
+
+/marker Stick Control A-1
+8T 8T 8T 8T
+8T 8T 8T 8T
+8t 8t 8t 8t
+8t 8t 8t 8t
+16T 16T 16T 16T 16T 16T 16T 16T
+16t 16t 16t 16t 16t 16t 16t 16t
+16T 16T 16T 16T 16T 16T 16T 16T
+16t 16t 16t 16t 16t 16t 16t 16t
+
+/marker B-1
+16T 16T 16T 16T 16t 16t 16t 16t
+16T 16T 16T 16T 16t 16t 16t 16t
+16T 16T 16T 16T 16t 16t 16t 16t
+16T 16T 16T 16T 16t 16t 16t 16t
+
+16T 16T 16T 16T 16t 16t 16t 16t
+16T 16T 16T 16T 16t 16t 16t 16t
+16T 16T 16T 16T 16t 16t 16t 16t
+16T 16T 16T 16T 16t 16t 16t 16t
+
+16T 16T 16T 16T 4T
+16t 16t 16t 16t 4t
+16T 16T 16T 16T 4T
+16t 16t 16t 16t 4t
+
+16T 16T 16T 16T 4T
+16t 16t 16t 16t 4t
+16T 16T 16T 16T 4T
+16t 16t 16t 16t 4t
+
+/marker C-1
+8T . 16T 16T 16T 16T
+8t . 16t 16t 16t 16t
+8T . 16T 16T 16T 16T
+8t . 16t 16t 16t 16t
+
+8T . 16T 16T 16T 16T
+8t . 16t 16t 16t 16t
+8T . 16T 16T 16T 16T
+8t . 16t 16t 16t 16t
+
+16T . . . 16T 16T 16T 16T
+16t . . . 16t 16t 16t 16t
+16T . . . 16T 16T 16T 16T
+16t . . . 16t 16t 16t 16t
+
+16T . . . 16T 16T 16T 16T
+16t . . . 16t 16t 16t 16t
+16T . . . 16T 16T 16T 16T
+16t . . . 16t 16t 16t 16t
+
+
+
+/staff met
+
+/p
+
+8M . . .
+
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+
+

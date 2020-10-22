@@ -248,7 +248,6 @@ void main(List<String> arguments) {
   var score = doThePhases(commandLine.inputFilesList, commandLine); // Maybe use tempoScalar to handle gracenote calculations
   // var score = doThePhases(piecesOfMusic);
 
-  print('okay, looks like done with doThePhases.  back in main().  Next big thing is to do midi, which means run through the element list again and write elements to midi.');
 
 
 //   var firstTimeSigInScore = score.scanForFirstTimeSig();
@@ -339,7 +338,7 @@ void main(List<String> arguments) {
 // Score doThePhases(List<String> piecesOfMusic, Tempo tempo, num tempoScalar, CommandLine commandLine) {
 Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   // print('In doThePhases, and overrideTempo coming in is $overrideTempo');
-  print('In doThePhases, and tempo coming in is $commandLine.tempo');
+  log.fine('In doThePhases, and tempo coming in is $commandLine.tempo');
   //
   // Phase 1: load and parse the score, returning the Score, which contains a list of all elements, as PetitParser parses and creates them
   //
@@ -403,7 +402,7 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
 
 
   // Don't think we should do this here, but needs to be done before do gracenotes.
-  print('doThePhases(), adding  a few elements at the start, like timesig and tempo, before adjusting for grace notes.');
+  log.finer('doThePhases(), adding  a few elements at the start, like timesig and tempo, before adjusting for grace notes.');
   //print('doThePases(), tempo to use for adding a couple events at the start, is ${commandLine.tempo} which WILL be scaled next.');
   // var scaledTempo = Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar);
   // print('scaled it and now we have $scaledTempo to be used just for that tempo at the start.');
@@ -411,10 +410,10 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   // score.elements.insert(0, commandLine.timeSig);
   // print('Added elements ${commandLine.timeSig}, ${scaledTempo} to head of list of elements.');
 
-  print('doThePases(), tempo to use for adding a couple events at the start, is ${commandLine.tempo} which WILL NOT be scaled next.');
+  log.finest('doThePhases(), tempo to use for adding a couple events at the start, is ${commandLine.tempo} which WILL NOT be scaled next.');
   score.elements.insert(0, commandLine.tempo); // yes in this order
   score.elements.insert(0, commandLine.timeSig);
-  print('Added elements ${commandLine.timeSig}, ${commandLine.tempo} to head of list of elements.');
+  log.finer('Added elements ${commandLine.timeSig}, ${commandLine.tempo} to head of list of elements.');
 
 
 // Actually should have a separate phase that only adjusts all Tempo elements by the scalar.  Then do the grace notes.
@@ -445,8 +444,10 @@ Tempo parseTempo(String noteTempoString) {
   var noteTempoParts = noteTempoString.split('=');
   if (noteTempoParts.length == 1) {
     tempo.bpm = int.parse(noteTempoParts[0]);
-    tempo.noteDuration.firstNumber = 4;
-    tempo.noteDuration.secondNumber = 1;
+    // tempo.noteDuration.firstNumber = 4; // already done in constructor????????
+    // tempo.noteDuration.secondNumber = 1;
+    // tempo.noteDuration.firstNumber = NoteDuration.DefaultFirstNumber;
+    // tempo.noteDuration.secondNumber = NoteDuration.DefaultSecondNumber;
   }
   else if (noteTempoParts.length == 2) {
     var noteParts = noteTempoParts[0].split(':');

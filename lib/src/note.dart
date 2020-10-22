@@ -10,13 +10,14 @@ enum NoteArticulation {
 class NoteDuration { // change this to Duration if possible, which conflicts, I think with something
   static final DefaultFirstNumber = 4;
   static final DefaultSecondNumber = 1;
-  // Maybe should change the following to doubles?????
-  // Don't know why we don't initialize here.
-  //int firstNumber; // initialize????      Perhaps set to 4, and other to 1 ??????
-  //int secondNumber;
-  int firstNumber = 4; // initialize????  // trying again 10/16/20
-  int secondNumber = 1;
+  // Maybe should change the following to doubles even though I wanted a ratio of two whole numbers?
+  int firstNumber; // initialize????  // trying again 10/16/20
+  int secondNumber;
 
+  NoteDuration() {
+    firstNumber = DefaultFirstNumber;
+    secondNumber = DefaultSecondNumber;
+  }
 //  num firstNumber; // should be an int?
 //  num secondNumber;
 
@@ -31,7 +32,8 @@ class NoteDuration { // change this to Duration if possible, which conflicts, I 
 
 int beatFractionToTicks(num beatFraction) {
   //int ticksPerBeat = 10080
-  var durationInTicks = (Midi.ticksPerBeat * beatFraction).floor(); // why not .round()?
+  // var durationInTicks = (Midi.ticksPerBeat * beatFraction).floor(); // why not .round()?
+  var durationInTicks = (Midi.ticksPerBeat * beatFraction).round();
 //  var durationInTicks = (4 * Midi.ticksPerBeat * secondNumber / firstNumber).floor(); // why not .round()?
   return durationInTicks;
 }

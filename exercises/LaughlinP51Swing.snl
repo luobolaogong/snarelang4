@@ -1,0 +1,84 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, The Essentials"
+// Page 51 played swung, not as written
+
+/time 4/4
+//tempo 84
+
+/staff snare
+
+
+
+
+/marker Section 11
+2r
+
+
+/marker A) Dev Groups of 5 to 6
+12T 30r 30T . . .    4T   12T  >30t  . . . .   4T
+12t 30r 30t . . .    4t   12t  >30T  . . . .   4t
+
+12T 30r 30T . . .    4T   12T  >30t  . . . .   4T
+12t 30r 30t . . .    4t   12t  >30T  . . . .   4t
+
+
+/marker B) Tap onto groups of 6
+12T >30t . . . . >4T   12r  >30t  . . . .   >4T
+12T >30t . . . . >4T   12r  >30t  . . . .   >4T
+
+12T >30t . . . . >4T   12r  >30t  . . . .   >4T
+12T >30t . . . . >4T   12r  >30t  . . . .   >4T
+
+
+12t >30T . . . . >4t   12r  >30T  . . . .   >4t
+12t >30T . . . . >4t   12r  >30T  . . . .   >4t
+
+12t >30T . . . . >4t   12r  >30T  . . . .   >4t
+12t >30T . . . . >4t   12r  >30T  . . . .   >4t
+
+
+/marker C)
+>12T 24t   12T >30t  . . . .  >8T   >12t 24T   12t >30T  . . . .  >8t
+32T . . . >12T >30t  . . . .  >8T   32t . . . >12t >30T  . . . .  >8t
+
+>12T 24t   12T >30t  . . . .  >8T   >12t 24T   12t >30T  . . . .  >8t
+32T . . . >12T >30t  . . . .  >8T   32t . . . >12t >30T  . . . .  >8t
+
+
+/marker D)
+32T . . .  >12T >32t   . . . >. . . . >.  >4T 96r 4r
+32t . . .  >12t >32T   . . . >. . . . >.  >4t 96r 4r
+
+32T . . .  >12T >32t   . . . >. . . . >.  >4T 96r 4r
+32t . . .  >12t >32T   . . . >. . . . >.  >4t 96r 4r
+
+
+/marker E)
+>24T . >30T . . . >.  >4t  >24t . >30t . . . >. >4T
+>24T . >30T . . . >. >24t . >30T . . . >.  >24T . >30T . . . >. >4t
+
+>24T . >30T . . . >.  >4t  >24t . >30t . . . >. >4T
+>24T . >30T . . . >. >24t . >30T . . . >.  >24T . >30T . . . >. >4t
+
+
+/marker F)
+>12T 24t 12T >32t  32T . . >. . . . >.   >24T 24t >30T . . . >.  >4t 96r
+>12t 24T 12t >32T  32t . . >. . . . >.   >24t 24T >30t . . . >.  >4T 96r
+
+>12T 24t 12T >32t  32T . . >. . . . >.   >24T 24t >30T . . . >.  >4t 96r
+>12t 24T 12t >32T  32t . . >. . . . >.   >24t 24T >30t . . . >.  >4T 96r
+
+
+
+
+
+/staff met    // should have two tones for metronome
+
+/pp
+8M . . .
+_12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M
+_12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M
+_12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M
+_12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M
+_12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M
+_12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M
+_12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _12M 24M _12M 24M  _8M  8r

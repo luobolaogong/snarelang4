@@ -547,7 +547,7 @@ class Score {
   // void adjustForGraceNotes(Tempo initialTempo, num tempoScalar) {
   void adjustForGraceNotes(CommandLine commandLine) {
 
-    print('In adjustForGraceNotes.');
+    log.fine('In adjustForGraceNotes.');
 
     var graceNotesDuration = 0; // Actually, the units are wrong.  This should be a percentage thing, I think.  Changes based on tempo.  For slow tempos the number is too high.  For fast tempos, too low.
     var noteOffDeltaTimeShift = 0;
@@ -621,7 +621,7 @@ class Score {
       }
 
     }
-    log.info('Leaving adjustForGraceNotes(), and updated notes to have delta time shifts to account for gracenotes.');
+    log.fine('Leaving adjustForGraceNotes(), and updated notes to have delta time shifts to account for gracenotes.');
     return;
 
   }

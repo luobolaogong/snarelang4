@@ -207,7 +207,7 @@ class Midi {
   MidiHeader createMidiHeader() {
     // Construct a header with values for name, and whatever else
     // var midiHeaderOut = MidiHeader(ticksPerBeat: Midi.ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
-    print('hey watch that numTracks thing in header (default 2), and also format (default 1).');
+    log.finest('hey watch that numTracks thing in header (default 2), and also format (default 1).');
     // var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:3); // puts this in header with prop "ppq"  What would 2 do?
     // Format of 1 seems the only value that works.  See midi spec somewhere about this.
     // numTracks doesn't seem to matter???
@@ -526,7 +526,7 @@ class Midi {
   // void addTempoChangeToTrackEventsList(Tempo tempo, int channel, List<MidiEvent> trackEventsList) {
   /// trackEventsList could be track zero or other
   void addTempoChangeToTrackEventsList(Tempo tempo, List<MidiEvent> trackEventsList) {
-    print('addTempoChangeToTrackEventsList(), tempo bpm was ${tempo.bpm}');
+    //print('addTempoChangeToTrackEventsList(), tempo bpm was ${tempo.bpm}');
     //tempo.bpm = (tempo.bpm + tempo.bpm * tempo.scalar / 100).floor();
     //tempo.bpm += (tempo.bpm * tempo.scalar / 100).floor();
     //print('tempo bpm is now ${tempo.bpm}');
@@ -534,9 +534,10 @@ class Midi {
     setTempoEvent.type = 'setTempo';
     // I think this next line is to account for tempos based on nonquarter notes, like 6/8 time.
     var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
-    print('addTempoChangeToTrackEventsList(), useThisTempo: $useThisTempo');
-    setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   I think should be round, and maybe a float?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
-    print('addTempoChangeToTrackEventsList(), for the setTempoEvent we have microsecondsPerBeat: ${setTempoEvent.microsecondsPerBeat}');
+    //print('addTempoChangeToTrackEventsList(), useThisTempo: $useThisTempo');
+    // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   I think should be round, and maybe a float?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+    setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).round(); // how does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+    //print('addTempoChangeToTrackEventsList(), for the setTempoEvent we have microsecondsPerBeat: ${setTempoEvent.microsecondsPerBeat}');
     log.finer('Adding tempo change event to some track events list, possibly track zero, but any track events list');
     trackEventsList.add(setTempoEvent);
   }
@@ -657,7 +658,7 @@ class Midi {
     // wish I had 9th and 18th notes, which are triplets in triplets, so this is worth working on in
     // the future.
     //
-    var noteTicksAsDouble = 4 * ticksPerBeat / snareLangNoteNameValue;
+    num noteTicksAsDouble = 4 * ticksPerBeat / snareLangNoteNameValue;
     var diffTicksAsDouble = noteTicksAsDouble - noteOffEvent.deltaTime;
     cumulativeRoundoffTicks += diffTicksAsDouble;
 

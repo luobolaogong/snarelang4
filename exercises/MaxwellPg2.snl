@@ -1,0 +1,89 @@
+// Reid Maxwell's Book "Taking No Shortcuts"
+// Page 2 - The Roll
+
+/time 2/4
+//tempo 84
+
+/staff snare
+
+
+/marker P2
+2r
+
+
+/marker The Roll
+4T 4T
+4t 4t
+4T 4T
+4t 4t
+
+8T 8T 8t 8t
+8T 8T 8t 8t
+8T 8T 8t 8t
+8T 8T 8t 8t
+
+16T 16T 16t 16t 16T 16T 16t 16t
+16T 16T 16t 16t 16T 16T 16t 16t
+16T 16T 16t 16t 16T 16T 16t 16t
+16T 16T 16t 16t 16T 16T 16t 16t
+
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+
+16Z . . .  . . . .  16Z . . .  . . . .  16Z . . .  . . . .  16Z . . .  . . . .
+16Z . . .  . . . .  16Z . . .  . . . .  16Z . . .  . . . .  16Z . . .  . . . .
+
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t 32T 32T 32t 32t
+
+16T 16T 16t 16t 16T 16T 16t 16t
+16T 16T 16t 16t 16T 16T 16t 16t
+16T 16T 16t 16t 16T 16T 16t 16t
+16T 16T 16t 16t 16T 16T 16t 16t
+
+8T 8T 8t 8t
+8T 8T 8t 8t
+8T 8T 8t 8t
+8T 8T 8t 8t
+
+4T 4T
+4t 4t
+4T 4T
+4t 4t
+
+
+/staff met
+
+/p
+
+8M . . .
+
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+4M . . . . . . .
+
+
