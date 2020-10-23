@@ -19,21 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="A lot of reorganizing CommandLine stuff and overrides, etc.  Probably several errors&#10;that will popup later.">
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinP51.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinP51Swing.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinP52.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/MaxwellPg1.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/MaxwellPg2.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/MaxwellPg3.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added two exercises from James Laughlin.">
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinP52Swing.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/MaxwellPg27.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/MaxwellPg27.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/MaxwellPg27Swing.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/MaxwellPg27Swing.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/tempo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/tempo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinP51.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinP51.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinP51Swing.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinP51Swing.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinP52.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinP52.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +148,8 @@
       <workItem from="1603066259706" duration="4445000" />
       <workItem from="1603132418053" duration="21300000" />
       <workItem from="1603214711072" duration="12731000" />
-      <workItem from="1603317072419" duration="12350000" />
+      <workItem from="1603317072419" duration="15985000" />
+      <workItem from="1603389165656" duration="5876000" />
     </task>
     <task id="LOCAL-00001" summary="End of day.  Reorganized and working on static dynamics.">
       <created>1598082786459</created>
@@ -460,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603180353618</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Added two exercises from James Laughlin.">
+      <created>1603346428744</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1603346428744</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +478,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Pretty wobbly code right now, but it produces multi tracks using /staff" />
     <MESSAGE value="Some fixes to Tiree." />
     <MESSAGE value="Added metronome, and starting into bass." />
     <MESSAGE value="Bass and unison snare added.  It's a hack.  Nobody should look at this bad code." />
@@ -504,17 +502,18 @@
     <MESSAGE value="Finished MaxwellPg27 swing and straight." />
     <MESSAGE value="Trying to clean up tempo stuff (override, defalt, commandLine, ...)  So,&#10;checkpointing what I have because it maybe works." />
     <MESSAGE value="A lot of reorganizing CommandLine stuff and overrides, etc.  Probably several errors&#10;that will popup later." />
-    <option name="LAST_COMMIT_MESSAGE" value="A lot of reorganizing CommandLine stuff and overrides, etc.  Probably several errors&#10;that will popup later." />
+    <MESSAGE value="Added two exercises from James Laughlin." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added two exercises from James Laughlin." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="829" y="1010" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603346355644">
+    <state x="829" y="1010" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603402008387">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="829" y="1010" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1603346355644" />
+    <state x="829" y="1010" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1603402008387" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602378066157">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -543,22 +542,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2394" y="768" width="401" height="577" key="Github.UntrackedFilesDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1598049414726" />
-    <state width="2863" height="504" key="GridCell.Tab.0.bottom" timestamp="1603346339123">
+    <state width="2863" height="504" key="GridCell.Tab.0.bottom" timestamp="1603402010268">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2863" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1603346339123" />
-    <state width="2863" height="504" key="GridCell.Tab.0.center" timestamp="1603346339122">
+    <state width="2863" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1603402010268" />
+    <state width="2863" height="504" key="GridCell.Tab.0.center" timestamp="1603402010267">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2863" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1603346339122" />
-    <state width="2863" height="504" key="GridCell.Tab.0.left" timestamp="1603346339122">
+    <state width="2863" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1603402010267" />
+    <state width="2863" height="504" key="GridCell.Tab.0.left" timestamp="1603402010267">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2863" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1603346339122" />
-    <state width="2863" height="504" key="GridCell.Tab.0.right" timestamp="1603346339122">
+    <state width="2863" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1603402010267" />
+    <state width="2863" height="504" key="GridCell.Tab.0.right" timestamp="1603402010267">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2863" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1603346339122" />
+    <state width="2863" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1603402010267" />
     <state x="1507" y="709" key="SettingsEditor" timestamp="1600648695311">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

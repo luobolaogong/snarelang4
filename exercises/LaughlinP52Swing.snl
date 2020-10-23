@@ -1,0 +1,80 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, The Essentials"
+// Page 52 played swung/relaxed, NOT as written
+
+/time 4/4
+//tempo 84
+
+/staff snare
+
+
+/marker Section Twelve (Swung)
+// "Embellishments and Singles Combined : Advanced"
+1r
+
+
+/marker Flam Five
+12T  >30f  30T . . .   >4T    12r >30f 30T . . .  >4T
+12t  >30F  30t . . .   >4t    12r >30F 30t . . .  >4t
+
+12T  >30f  30T . . .   >4T    12r >30f 30T . . .  >4T
+12t  >30F  30t . . .   >4t    12r >30F 30t . . .  >4t
+
+
+
+/marker Drag Five
+12T  >30D  30T . . .   >4T    12r >30D 30T . . .  >4T
+12t  >30d  30t . . .   >4t    12r >30d 30t . . .  >4t
+
+12T  >30D  30T . . .   >4T    12r >30D 30T . . .  >4T
+12t  >30d  30t . . .   >4t    12r >30d 30t . . .  >4t
+
+
+
+
+/marker A)
+>12F 24t 12F 30f 30T . . . 12T 24t  12F 30f 30T . . .  >4T
+>12f 24T 12f 30F 30t . . . 12t 24T  12f 30F 30t . . .  >4t
+
+>12F 24t 12F 30f 30T . . . 12T 24t  12F 30f 30T . . .  >4T
+>12f 24T 12f 30F 30t . . . 12t 24T  12f 30F 30t . . .  >4t
+
+/marker B)
+>12F 24t 12D 30D 30T . . . 12T 24t  12D 30D 30T . . .  >4T
+>12f 24T 12d 30d 30t . . . 12t 24T  12d 30d 30t . . .  >4t
+
+>12F 24t 12D 30D 30T . . . 12T 24t  12D 30D 30T . . .  >4T
+>12f 24T 12d 30d 30t . . . 12t 24T  12d 30d 30t . . .  >4t
+
+/marker C)
+>12F 24t 12D >24T  12t 30D 30T . . .  >4T 4r
+>12f 24T 12d >24t  12T 30d 30t . . .  >4t 4r
+
+>12F 24t 12D >24T  12t 30D 30T . . .  >4T 4r
+>12f 24T 12d >24t  12T 30d 30t . . .  >4t 4r
+
+
+/marker D)
+28T . >28F  28t . . .  >4t   28t . >28f  28T . . .  >4T
+28T . >28D  28T . . .  >4T   28t . >28f  28t . . .  >4t
+
+28T . >28F  28t . . .  >4t   28t . >28f  28T . . .  >4T
+28T . >28D  28T . . .  >4T   28t . >28f  28t . . .  >4t
+
+
+
+/staff met    // should have two tones for metronome
+
+/pp
+
+>8M . >. . >12M 24M >12M 24M >12M 24M 4M
+
+_12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M
+_12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M
+_12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M
+_12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M
+_12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M  _12M 24M 12M 24M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+
+
+

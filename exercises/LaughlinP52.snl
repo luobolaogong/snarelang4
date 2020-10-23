@@ -1,73 +1,63 @@
 // "James Laughlin's Guide to Pipe Band Drumming, Volume One, The Essentials"
 // Page 52 played straight, as written
 
-THIS IS NOT DONE.  SIMPLY COPIED FROM PAGE 51.
-
 /time 4/4
 //tempo 84
 
 /staff snare
 
 
-/marker Section 11
-2r
+/marker Section Twelve
+1r
 
 
-/marker A
-8T 32T . . .  4T   32:3T  >32t  . . . .   4T
-8t 32t . . .  4t   32:3t  >32T  . . . .   >4t
+/marker Flam Five
+32:3T  >32f  32T . . .   >4T    32:3r >32f 32T . . .  >4T
+32:3t  >32F  32t . . .   >4t    32:3r >32F 32t . . .  >4t
 
-8T 32T . . .  4T   32:3T  >32t  . . . .   4T
-8t 32t . . .  4t   32:3t  >32T  . . . .   >4t
-
-
-/marker B
-32:3T >32t . . . . >4T   32:3r  >32t  . . . .   >4T
-32:3T >32t . . . . >4T   32:3r  >32t  . . . .   >4T
-
-32:3T >32t . . . . >4T   32:3r  >32t  . . . .   >4T
-32:3T >32t . . . . >4T   32:3r  >32t  . . . .   >4T
-
-
-32:3t >32T . . . . >4t   32:3r  >32T  . . . .   >4t
-32:3t >32T . . . . >4t   32:3r  >32T  . . . .   >4t
-
-32:3t >32T . . . . >4t   32:3r  >32T  . . . .   >4t
-32:3t >32T . . . . >4t   32:3r  >32T  . . . .   >4t
-
-
-/marker C
->32:3T 32t 32:3T >32t  . . . .  >8T   >32:3t 32T 32:3t >32T  . . . .  >8t
-32T . . . >32:3T >32t  . . . .  >8T   32t . . . >32:3t >32T  . . . .  >8t
-
->32:3T 32t 32:3T >32t  . . . .  >8T   >32:3t 32T 32:3t >32T  . . . .  >8t
-32T . . . >32:3T >32t  . . . .  >8T   32t . . . >32:3t >32T  . . . .  >8t
+32:3T  >32f  32T . . .   >4T    32:3r >32f 32T . . .  >4T
+32:3t  >32F  32t . . .   >4t    32:3r >32F 32t . . .  >4t
 
 
 
-/marker D
-32T . . .  >32:3T >32t   . . . >. . . . >.  >4T 4r
-32t . . .  >32:3t >32T   . . . >. . . . >.  >4t 4r
+/marker Drag Five
+32:3T  >32D  32T . . .   >4T    32:3r >32D 32T . . .  >4T
+32:3t  >32d  32t . . .   >4t    32:3r >32d 32t . . .  >4t
 
-32T . . .  >32:3T >32t   . . . >. . . . >.  >4T 4r
-32t . . .  >32:3t >32T   . . . >. . . . >.  >4t 4r
-
-
-/marker E
->24T . >. 32t . . >.  >4t  >24t . >. 32T . . >. >4T
->24T . >.  32t . . >. >24t . >. 32T . . >.  >24T . >. 32t . . >. >4t
-
->24T . >. 32t . . >.  >4t  >24t . >. 32T . . >. >4T
->24T . >.  32t . . >. >24t . >. 32T . . >.  >24T . >. 32t . . >. >4t
+32:3T  >32D  32T . . .   >4T    32:3r >32D 32T . . .  >4T
+32:3t  >32d  32t . . .   >4t    32:3r >32d 32t . . .  >4t
 
 
-/marker F
->32:3T 32t 32:3T >32t  32T . . >. . . . >.   >24T . >. 32t . . >.  >4t
->32:3t 32T 32:3t >32T  32t . . >. . . . >.   >24t . >. 32T . . >.  >4T
 
->32:3T 32t 32:3T >32t  32T . . >. . . . >.   >24T . >. 32t . . >.  >4t
->32:3t 32T 32:3t >32T  32t . . >. . . . >.   >24t . >. 32T . . >.  >4T
 
+/marker A)
+>32:3F 32t 32:3F 32f 32T . . . 32:3T 32t  32:3F 32f 32T . . .  >4T
+>32:3f 32T 32:3f 32F 32t . . . 32:3t 32T  32:3f 32F 32t . . .  >4t
+
+>32:3F 32t 32:3F 32f 32T . . . 32:3T 32t  32:3F 32f 32T . . .  >4T
+>32:3f 32T 32:3f 32F 32t . . . 32:3t 32T  32:3f 32F 32t . . .  >4t
+
+/marker B)
+>32:3F 32t 32:3D 32D 32T . . . 32:3T 32t  32:3D 32D 32T . . .  >4T
+>32:3f 32T 32:3d 32d 32t . . . 32:3t 32T  32:3d 32d 32t . . .  >4t
+
+>32:3F 32t 32:3D 32D 32T . . . 32:3T 32t  32:3D 32D 32T . . .  >4T
+>32:3f 32T 32:3d 32d 32t . . . 32:3t 32T  32:3d 32d 32t . . .  >4t
+
+/marker C)
+>32:3F 32t 32:3D >32T  32:3t 32D 32T . . .  >4T 4r
+>32:3f 32T 32:3d >32t  32:3T 32d 32t . . .  >4t 4r
+
+>32:3F 32t 32:3D >32T  32:3t 32D 32T . . .  >4T 4r
+>32:3f 32T 32:3d >32t  32:3T 32d 32t . . .  >4t 4r
+
+
+/marker D)
+24T . >24F  32t . . .  >4t   24t . >24f  32T . . .  >4T
+24T . >24D  32T . . .  >4T   24t . >24f  32t . . .  >4t
+
+24T . >24F  32t . . .  >4t   24t . >24f  32T . . .  >4T
+24T . >24D  32T . . .  >4T   24t . >24f  32t . . .  >4t
 
 
 
@@ -75,15 +65,14 @@ THIS IS NOT DONE.  SIMPLY COPIED FROM PAGE 51.
 
 /pp
 
-8M . . .
+>8M . >. . >. >. >. >.
 
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
-_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
-_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8r
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
 
 
 
