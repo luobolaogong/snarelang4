@@ -18,6 +18,15 @@ final log = Logger('Dynamic');
 /// just ignore all dynamicRamps until hit the next Dynamic marker.  If there isn't
 /// one, then the DynamicRamp marker doesn't get its full value, and we should ignore
 /// it when determining velocities.  So, just ignore DynamicRamps that don't have a slope.
+///
+/// 10/24/2020 Adding default dynamic, because some scores don't specify any dynamics
+/// but have crescendos in the score, expecting the player to know what dynamic ranges
+/// work in the environment.  When not specified, the default has been mf, but the
+/// user can specify a starting dynamic on the command line to overwrite the default.
+/// As a shorthand, in the score I could create a new dynamic marker, like '/dd' to
+/// mean "return to the default dynamic, whatever that is".  This is not the most
+/// recent dynamic.  It's the default value, which would be /mf if the user didn't
+/// overwrite it.
 class DynamicRamp {
   Dynamic startDynamic; // perhaps should store as velocity?
   Dynamic endDynamic;
@@ -31,6 +40,8 @@ class DynamicRamp {
   }
 }
 
+// Probably should change this to be a class, then can add other things like
+// default dynamic
 enum Dynamic {
   ppp,
   pp,
@@ -39,7 +50,8 @@ enum Dynamic {
   mf,
   f,
   ff,
-  fff
+  fff,
+  dd
 //  dim,
 //  decresc,
 //  cresc,

@@ -378,6 +378,7 @@ class Score {
         case NoteType.dragLeft:
         case NoteType.dragRight:
           //note.velocity += 10; // commented out because of a video I saw which says it softens the note
+          note.velocity -= 10; // trying this 10/24/2020  Sounds kinda okay
           break;
         case NoteType.buzzLeft:
         case NoteType.buzzRight:

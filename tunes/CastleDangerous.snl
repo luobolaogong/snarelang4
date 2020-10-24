@@ -1,0 +1,36 @@
+// Castle Dangerous
+// James Laughlin
+// Copyright 2012
+// March
+/time 3/4
+/tempo 76
+
+/staff snare
+
+/marker Castle Dangerous
+4:3r
+
+/mf
+
+/marker Line 1
+>24:5F 24t 24Z . . . . .  8T >.
+24Z . . 8t  /cresc 24Z . . . . .  _40T 20z . 24z . .
+>8T /fff /mf /cresc 24T . .  8f 12D >24T  12t 30D 30T . . . /ff
+_40T 20z . 8t 24T . 24F 24T . 24F >4f /mf
+
+/marker Line2
+
+
+
+/staff met    // should have two tones for metronome
+
+/pp
+^8M . >8M . >8M .
+>8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
+>8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
+>8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
+>8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
+>8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
+>8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
+>8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
+>8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
