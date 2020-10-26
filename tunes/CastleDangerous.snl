@@ -5,10 +5,24 @@
 /time 3/4
 /tempo 76
 
-/staff snare
+/track snare
+
+8T . . .
+/p
+/cresc 8T . . . /defdyn
+8T . . .
+
+
+
+
 
 /marker Castle Dangerous
 4:3r
+
+// HEY, I still wanna work in the /defdyn which means set the dynamic to
+// the default dynamic, whatever that is, whether set on command line, or
+// just the standard default.
+
 
 /mf
 
@@ -22,15 +36,15 @@ _40T 20z . 8t 24T . 24F 24T . 24F >4f /mf
 
 
 
-/staff met    // should have two tones for metronome
+/track met    // should have two tones for metronome
 
 /pp
 ^8M . >8M . >8M .
->8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
->8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
->8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
->8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
->8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
->8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
->8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
->8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .   >8M . _8M . _8M .
+>8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
+>8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
+>8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
+>8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
+>8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
+>8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
+>8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
+>8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .

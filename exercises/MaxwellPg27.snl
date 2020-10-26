@@ -4,7 +4,7 @@
 /time 2/4
 //tempo 84
 
-/staff snare
+/track snare
 
 
 /marker P27
@@ -63,7 +63,7 @@
 
 
 
-/staff met
+/track met
 /pp
 
 >8M 8M >8M 8M

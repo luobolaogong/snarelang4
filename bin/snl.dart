@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'dart:math';
 import 'package:args/args.dart';
 import 'package:dart_midi/dart_midi.dart';
 import 'package:logging/logging.dart';
@@ -28,7 +28,17 @@ import 'package:snarelang4/snarelang4.dart';
 /// result, and maybe I needed to tell it too about the sound font.  Probably only need to do it on qsynth.
 /// Shouldn't need both.  Like VLC doesn't need qsynth.
 ///
+num velocityRamp(int ctr) {
+  return 2.3 * pow(ctr, 2) + 5;
+}
 void main(List<String> arguments) {
+  for (var ctr = 0; ctr < 8; ctr++) {
+    print('${ctr+1} : ${velocityRamp(ctr)}');
+  }
+
+
+
+
   print('Staring snl ...');
   // var usePadSoundFont = false;
   // var loopBuzzes = false; // this is not working currently with "roll" R
@@ -88,7 +98,7 @@ void main(List<String> arguments) {
 //     Probably should work on trackZero and move all tempos to it somehow and go off of it.
 
 Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
-  log.fine('In doThePhases, and tempo coming in is $commandLine.tempo');
+  log.fine('In doThePhases, and tempo coming in from commandLine tempo is ${commandLine.tempo} and dynamic is ${commandLine.dynamic}');
   //
   // Phase 1: load and parse the score, returning the Score, which contains a list of all elements, as PetitParser parses and creates them
   //
@@ -110,17 +120,18 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   // Kinda strange to have this here.  Just to handle shorthand phase?  For noteType?
   // At this point we have a list of elements that comprise the score, but haven't kept track of the first
   // timesig or tempo if they were in there.  So for now create defaults for these:
-  var defaultFirstNoteProperties = Note();
-  defaultFirstNoteProperties.duration.firstNumber = 4;
-  defaultFirstNoteProperties.duration.secondNumber = 1;
-  defaultFirstNoteProperties.noteType = NoteType.tapLeft; // ???
-  defaultFirstNoteProperties.dynamic = Dynamic.f; // Not sure how important this is, or if it's wrong.  Wrong value?  Should have global values somewhere for these defaults;
-
+  // var defaultFirstNoteProperties = Note();
+  // defaultFirstNoteProperties.duration.firstNumber = 4;
+  // defaultFirstNoteProperties.duration.secondNumber = 1;
+  // defaultFirstNoteProperties.noteType = NoteType.tapLeft; // ???
+  // defaultFirstNoteProperties.dynamic = Dynamic.f; // Not sure how important this is, or if it's wrong.  Wrong value?  Should have global values somewhere for these defaults;
+  // print('HEY, I DISLIKE THIS THING OF CREATING A DEFAULT FIRST NOTE');
 
   // Phase 2:
   // Apply shorthands to the list, meaning fill in the blanks that are in the raw list, including Dynamics.
   //
-  score.applyShorthands(defaultFirstNoteProperties);
+  // score.applyShorthands(defaultFirstNoteProperties); // strange way to do things.  Fix this later.  Shouldn't be creating the default here and using it there.
+  score.applyShorthands(commandLine); // strange way to do things.  Fix this later.  Shouldn't be creating the default here and using it there.
   for (var element in score.elements) {
     log.finer('After shorthand phase: $element');
   }

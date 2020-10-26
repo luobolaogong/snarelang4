@@ -4,7 +4,7 @@
 /time 4/4
 //tempo 84
 
-/staff snare
+/track snare
 
 /marker Section Eleven
 1r
@@ -88,7 +88,7 @@
 
 
 
-/staff met    // should have two tones for metronome
+/track met    // should have two tones for metronome
 
 /pp
 >8M . >. . >12M 24M >12M 24M >12M 24M 4M

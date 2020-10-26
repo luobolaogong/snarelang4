@@ -35,13 +35,14 @@ class DynamicRamp {
   int totalTicksStartToEnd;
   num slope;
 
+  @override
   String toString() {
     return 'DynamicRamp: startDynamic: $startDynamic, endDynamic: $endDynamic, startVelocity: $startVelocity, endVelocity: $endVelocity, totalTicksStartToEnd: $totalTicksStartToEnd, Slope: $slope';
   }
 }
 
 // Probably should change this to be a class, then can add other things like
-// default dynamic
+// default dynamic.  Maybe, maybe not.  be careful
 enum Dynamic {
   ppp,
   pp,
@@ -51,7 +52,7 @@ enum Dynamic {
   f,
   ff,
   fff,
-  dd
+  defdyn
 //  dim,
 //  decresc,
 //  cresc,
@@ -80,30 +81,67 @@ enum Dynamic {
 int dynamicToVelocity(Dynamic dynamic) {
   var velocity = 0;
   switch (dynamic) {
+    // do we want a linear ramp up, or should it be more curved?  Maybe exponential?
+    // ppp and pp and even p are about as quiet as you can get.  Very little difference.
+    // but mf, f, ff, fff are big differences.  So, yes, I think exponential.
+    // There are 8 levels, and the softest seems barely audible at 5.  So we want to go
+    // to close to the max at fff, but still leave room for accents.  But accents
+    // probably mean different amounts of increase depending on what level you're at.
+    // If you're at a lowlevel, accents mean more than if you're at a high level.
+    // So accents really should not be a constant numerical addition.
+    // And there are 3 accent levels currently at: +16, +32, +60
+    // The accent levels seem too high.  A regular accent at mf might jump it to ff,
+    // right?  Maybe from p to f,
+    // Anyway, accents should be calculated based on dynamic level, not a constant.
+    // y = 1.75 * x^2 + 5
     case Dynamic.ppp:
-      velocity = 6; // start at 10?  5?
+      velocity = 5; // start at 10?  5?
       break;
     case Dynamic.pp:
-      velocity = 22;
+      velocity = 7;
       break;
     case Dynamic.p:
-      velocity = 38;
+      velocity = 14;
       break;
     case Dynamic.mp:
-      velocity = 54;
+      velocity = 26;
       break;
     case Dynamic.mf:
-      velocity = 70;
+      velocity = 42;
       break;
     case Dynamic.f:
-      velocity = 86;
+      velocity = 62;
       break;
     case Dynamic.ff:
-      velocity = 102;
+      velocity = 88;
       break;
     case Dynamic.fff:
-      velocity = 117;
+      velocity = 118;
       break;
+    // case Dynamic.ppp:
+    //   velocity = 6; // start at 10?  5?
+    //   break;
+    // case Dynamic.pp:
+    //   velocity = 22;
+    //   break;
+    // case Dynamic.p:
+    //   velocity = 38;
+    //   break;
+    // case Dynamic.mp:
+    //   velocity = 54;
+    //   break;
+    // case Dynamic.mf:
+    //   velocity = 70;
+    //   break;
+    // case Dynamic.f:
+    //   velocity = 86;
+    //   break;
+    // case Dynamic.ff:
+    //   velocity = 102;
+    //   break;
+    // case Dynamic.fff:
+    //   velocity = 117;
+    //   break;
 //    case Dynamic.ramp:
 //      break;
 //    case Dynamic.ppp:
@@ -227,14 +265,15 @@ Parser dynamicParser = (
     string('/p') |
     string('/fff') |
     string('/ff') |
-    string('/f')
+    string('/f') |
+    string('/defdyn')
 //    string('\\>') |
 //    string('\\<') |
 //    string('\\dim') |
 //    string('\\decresc') |
 //    string('\\cresc')
 ).trim().map((value) { // trim?  Yes!  Makes a difference
-  //log.info('\nIn Dynamicparser');
+  log.finest('In Dynamicparser');
   Dynamic dynamic;
   switch (value) {
     case '/ppp':
@@ -260,6 +299,9 @@ Parser dynamicParser = (
       break;
     case '/fff':
       dynamic =  Dynamic.fff;
+      break;
+    case '/defdyn':
+      dynamic =  Dynamic.defdyn;
       break;
 //    case '\\>':
 //    case '\\<':

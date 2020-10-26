@@ -3,7 +3,7 @@
 // J. Reid Maxwell
 
 /marker Annette's Chatter
-// /staff snare  // this causes a new staff/track which we don't want if we string pieces together
+// /track snare  // this causes a new track/track which we don't want if we string pieces together
 /time 12/8
 /tempo 136    // recording: 136
 

@@ -15,6 +15,7 @@ class NoteDuration { // change this to Duration if possible, which conflicts, I 
   int secondNumber;
 
   NoteDuration() {
+    //print('in NoteDuration() constructor and will set firstNumber and secondNumber');
     firstNumber = DefaultFirstNumber;
     secondNumber = DefaultSecondNumber;
   }
@@ -75,18 +76,21 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
 class Note {
   NoteArticulation articulation;
   NoteDuration duration; // prob should have constructor construct one of these.  Of course.  also "SnareLangNoteNameValue".  can be used to calculate ticks, right?  noteTicks = (4 * ticksPerBeat) / SnareLangNoteNameValue
-  NoteType noteType = NoteType.tapRight;  // correct here?
-  int velocity; // Perhaps this will go into MidiNote or something, new
-  Dynamic dynamic; // gets a value during first pass through the score list
-  int noteNumber; // new 10/4/2020
-  // int preNoteShift; // how much we need to slide this note left
-  // int postNoteShift; // how much we need to add to this note to compensate.  Usually same as preNoteShift, but could be adjusted by next note
-  int noteOffDeltaTimeShift = 0;
+  NoteType noteType;
+  int velocity;
+  Dynamic dynamic;
+  int noteNumber;
+  int noteOffDeltaTimeShift;
   //int midiNoteNumber; // experiment 9/20/2020  This would be the midi soundfont number, related to NoteType
   Note() {
+    //print('in Note() constructor');
     duration = NoteDuration();
-    // preNoteShift = 0; // ???
-    // postNoteShift = 0;  // why is this nec?
+    articulation = null; // just for now
+    noteType = NoteType.tapRight;  // correct here?  Maybe make this null too?
+    velocity = 0;
+    //dynamic = Dynamic.mf; What if we leave this null so that a value can be assigned later according to command line value, or something else?
+    noteNumber = 0; // for now, new 10/4/2020
+    noteOffDeltaTimeShift = 0;
   }
 
   String toString() {
@@ -339,7 +343,7 @@ Parser articulationParser = (
     char('_') |
     char('-')    // get rid of this one
 ).trim().map((value) { // trim()?
-  //log.info('\nIn Articulationparser');
+  log.finest('In Articulationparser');
   NoteArticulation articulation;
   switch (value) {
     case '_':
@@ -364,7 +368,7 @@ Parser articulationParser = (
 /// WholeNumberParser
 ///
 Parser wholeNumberParser = digit().plus().flatten().trim().map((value) { // not sure need sideeffect true
-  //log.info('\nIn WholeNumberparser');
+  log.finest('In WholeNumberparser');
   final theWholeNumber = int.parse(value);
   //log.info('Leaving WholeNumberparser returning theWholeNumber $theWholeNumber');
   return theWholeNumber;
@@ -375,7 +379,8 @@ Parser wholeNumberParser = digit().plus().flatten().trim().map((value) { // not 
 ///
 
 Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberParser).optional()).map((value) { // trim?
-  //log.info('\nIn DurationParser');
+  log.finest('In DurationParser');
+  //print('in durationParser.');
   var duration = NoteDuration();
   duration.firstNumber = value[0];
   if (value[1] != null) { // prob unnec
@@ -392,7 +397,7 @@ Parser durationParser = (wholeNumberParser & (char(':').trim() & wholeNumberPars
 /// TypeParser
 ///
 Parser typeParser = pattern('TtFfDdZzXxYyVvRMNnBbr.').trim().map((value) { // trim?
-  //log.info('\nIn TypeParser');
+  log.finest('In TypeParser');
   NoteType noteType;
   switch (value) {
     case 'T':
@@ -483,7 +488,7 @@ Parser noteParser = (
     (durationParser) |
     (typeParser)
 ).trim().map((valuesOrValue) { // trim?
-  //log.info('\nIn NoteParser');
+  log.finest('In NoteParser');
   var note = Note();
 
   if (valuesOrValue == null) {  //

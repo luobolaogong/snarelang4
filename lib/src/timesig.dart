@@ -30,7 +30,7 @@ Parser timeSigParser = ( // what about whitespace?
     string('/time').trim() & wholeNumberParser.trim() & char('/').trim() & wholeNumberParser
 
 ).trim().map((value) {
-  //log.info('\nIn timeSigParser and value is -->$value<--');
+  log.finest('In timeSigParser');
   var timeSig = TimeSig();
   timeSig.numerator = value[1];
   timeSig.denominator = value[3];

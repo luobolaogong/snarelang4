@@ -13,7 +13,7 @@
 // make a stereo image work in a sound font.  I know you can set the balance for each mono recording,
 // but how do you make a stereo image with one track?
 
-/staff unison
+/track unison
 
 /time 2/2
 /tempo 2=72

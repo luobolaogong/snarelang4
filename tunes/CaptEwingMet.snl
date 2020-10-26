@@ -1,7 +1,7 @@
 // Captain Norman Orr Ewing
 // Metronome only
 
-/staff metronome
+/track metronome
 /time 2/4 // yes both of these lines can be here and in snare score
 /tempo 70    // not sure
 

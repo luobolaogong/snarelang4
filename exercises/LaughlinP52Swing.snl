@@ -4,7 +4,7 @@
 /time 4/4
 //tempo 84
 
-/staff snare
+/track snare
 
 
 /marker Section Twelve (Swung)
@@ -62,7 +62,7 @@
 
 
 
-/staff met    // should have two tones for metronome
+/track met    // should have two tones for metronome
 
 /pp
 

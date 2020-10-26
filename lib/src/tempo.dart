@@ -110,12 +110,17 @@ class TempoRamp {
 
 class Tempo {
   static const DefaultBpm = 84;
-  NoteDuration noteDuration = NoteDuration(); // oh, we do create the NoteDuration.  Good.  But if not specified, as in '/tempo 84' do we set duration???????
+  NoteDuration noteDuration;
   // int bpm = Tempo.DefaultBpm; // It's right above
-  num bpm = Tempo.DefaultBpm; // It's right above
+  num bpm; // It's right above
 //  num scalar = 1; // new  What the crap?  Every tempo has a scalar?  Then should also have bool scalarUsed
 // change the above to a double, because sometimes recordings are not exact integers
 
+  Tempo() {
+    //print('in Tempo() constructor');
+    noteDuration = NoteDuration();
+    bpm = Tempo.DefaultBpm;
+  }
 
 
   String toString() {
@@ -193,7 +198,7 @@ Parser tempoParser = ( // what about whitespace?
 //Parser tempoParser = ( // what about whitespace?
 //    string('\\tempo').trim() & durationParser.trim() & char('=').trim() & wholeNumberParser
 ).trim().map((value) {
-  //log.info('\nIn TempoParser and value is -->$value<--');
+  log.finest('In TempoParser and value is -->$value<--');
   var tempo = Tempo();
   if (value[1] != null) {
     NoteDuration noteDuration = value[1][0]; // NoteDurationParser returns an object
@@ -207,7 +212,7 @@ Parser tempoParser = ( // what about whitespace?
   //   tempo.noteDuration.secondNumber = 1;
   // }
   tempo.bpm = value[2];    // hey, what if we have '/tempo 84', shouldn't we set the duration to be something?
-  log.finer('Leaving tempoParser returning value $tempo which may need to be augmented later if Duration.firstNumber and secondNumber are null');
+  log.finest('Leaving tempoParser returning value $tempo which may need to be augmented later if Duration.firstNumber and secondNumber are null');
   return tempo; // This goes into the list of elements that make up a score, which we process one by one later.
 });
 

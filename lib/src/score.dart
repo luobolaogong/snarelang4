@@ -19,14 +19,14 @@ import 'package:logging/logging.dart';
 /// will get applied, which are a product of the absolute and dynamicRampd dynamics
 /// and note type.
 ///
-/// Actually, a Score is perhaps made up of multiple "staves", or "staffs".  All the
-/// staffs/staves are called a system, I think.
-/// So, a score could be composed of a snare staff and a tenor staff, and a bass staff,
+/// Actually, a Score is perhaps made up of multiple "staves", or "tracks".  All the
+/// tracks/staves are called a system, I think.
+/// So, a score could be composed of a snare track and a tenor track, and a bass track,
 /// and each is played simultaneously for a score.  The tempo and tempo changes will be
 /// for the set of parallel staves.
 ///
 /// So, to support this, I think SNL should allow for a new designation word, like
-/// "staff n", or "stave n", or "stave all" and maybe "staff end".  I suppose "n" could
+/// "track n", or "stave n", or "stave all" and maybe "track end".  I suppose "n" could
 /// be the name of the stave.  A stave would correspond to a track, perhaps.  I don't
 /// know what a channel is yet in this Dart library.  If you change the channel number
 /// does it change the track?  I don't think so.  I think channel is perhaps the "transport"
@@ -44,15 +44,18 @@ class Score {
   Tempo firstTempo;
   num tempoScalar = 1; // new
   //Tempo latestTempo; // new
-  Staff firstStaff;
+  Track firstTrack;
 
   String toString() {
     return 'Score: ${elements.toString()}'; // could do a forEach and collect each element into a string with \n between each
   }
 
   static Result loadAndParse(List<String> scoresPaths, CommandLine commandLine) {
+    print('loadAndParse(), commandLine dynamic is ${commandLine.dynamic}');
     //
-    // First load the raw score files
+    // First load the raw score files, one at a time and check for errors and report to help pinpoint syntax error.
+    // Also, I guess put it all together so can parse the string?
+    // I may have screwed this up while editing.
     //
     var scoresStringBuffer = StringBuffer();
     for (var filePath in scoresPaths) {
@@ -71,6 +74,7 @@ class Score {
       //
       // Do an initial parse for validity, exiting if failure, and throw away result no matter what.
       //
+      print('\t\tGunna do an initial parse just to check if its a legal file.');
       var result = scoreParser.parse(fileContents);
       if (result.isFailure) {
         log.severe('Failed to parse $filePath. Message: ${result.message}');
@@ -79,7 +83,7 @@ class Score {
         log.severe('Should be around this character: ${result.buffer[result.position]}');
         return result; // yeah I know the parent function will report too.  Fix later.
       }
-      scoresStringBuffer.write(fileContents);
+      scoresStringBuffer.write(fileContents); // what the crap?  Why write this?  I thought we were only checking.
     }
     if (scoresStringBuffer.isEmpty) {
       log.severe('There is nothing to parse.  Exiting...');
@@ -89,8 +93,18 @@ class Score {
     // Parse the score's text elements, notes and other stuff.  The intermediate parse results like Tempo and TimeSig
     // are in the list that is result.value, and processed later.
     //
+    print('\t\there comes the real parse now, since we have a legal file.  I dislike this double thing.');
     var result = scoreParser.parse(scoresStringBuffer.toString());
     // Just report the result in the log
+
+
+    // Okay, we just parse all the files, and all the notes have all the fields, whether they were specified in the score or default values
+    // So, how can you set a value with a command line value like the dynamic if the note already has a value which may be a default value?
+    // Maybe constructors should not have default values set for some fields, like dynamic???
+    // SO STOP HERE UNTIL I FIGURE THIS OUT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
     if (result.isSuccess) {
       Score score = result.value;
 
@@ -109,7 +123,7 @@ class Score {
 
 
 
-      log.finer('parse succeeded.  This many elements: ${score.elements.length}\n'); // wrong
+      log.finer('parse succeeded.  This many elements: ${score.elements.length}'); // wrong
       for (var element in score.elements) {
         log.finest('\tAfter score raw parse, element list has this: $element');
       }
@@ -130,22 +144,36 @@ class Score {
   /// This also sets the dynamic field, but not velocities.
   ///
 //  void applyShorthands() {
-  void applyShorthands(Note defaultNote) {   // this defaultNote is strange.  Represents the first note?????
+//   void applyShorthands(Note defaultNote) {   // this defaultNote is strange.  Represents the first note?????
+  void applyShorthands(CommandLine commandLine) {   // this defaultNote is strange.  Represents the first note?????
     // bad logic.  Off by one stuff:
 //    var previousNote = defaultNote;
     //Tempo latestTempo;
     log.fine('In applyShorthands');
     var previousNote = Note();
-    previousNote.dynamic = defaultNote.dynamic; // unnec
-    previousNote.velocity = defaultNote.velocity; // unnec
-    previousNote.articulation = defaultNote.articulation;
-    previousNote.duration = defaultNote.duration;
-    previousNote.noteType = defaultNote.noteType;
-    log.finest('In top of Score.applyShorthands and just set "previousNote" to be the defaultNote passed in, which is $defaultNote');
+    // I don't like the way this is done to account for a first note situation.  Perhaps use a counter and special case for first note
+    previousNote.dynamic = commandLine.dynamic; // unnec
+    //previousNote.velocity = defaultNote.velocity; // unnec
+    //previousNote.articulation = defaultNote.articulation;
+    //previousNote.duration = defaultNote.duration;
+    //previousNote.noteType = defaultNote.noteType;
+    // previousNote.dynamic = defaultNote.dynamic; // unnec
+    // previousNote.velocity = defaultNote.velocity; // unnec
+    // previousNote.articulation = defaultNote.articulation;
+    // previousNote.duration = defaultNote.duration;
+    // previousNote.noteType = defaultNote.noteType;
+    // log.finest('In top of Score.applyShorthands and just set "previousNote" to be the defaultNote passed in, which is $defaultNote');
+    print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!gunna get some null pointer things, because I commented the above stuff.');
     for (var element in elements) {
       //log.finest('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
 //      if (element is Dynamic) { // new
       if (element is Dynamic) { // new
+        if (element == Dynamic.defdyn) {
+          print('stop here');
+          element = commandLine.dynamic; // See if this is right.
+          print('\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!just changed dynamic from defdyn to $element  But maybe did this too late.  Need to do it before ramps.');
+          print('did it actually change the element to the new dynamic value?');
+        }
         log.finest('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a dynamicRamp, I am marking previousNote s dynamic to be same, and skipping');
         previousNote.dynamic = element;
         continue;
@@ -159,8 +187,8 @@ class Score {
         //latestTempo = element; // new!!!!!
         continue;
       }
-      if (element is Staff) {
-        log.finer('Score.applyShorthands(), Not applying shorthand to Staff element.  Skipping it for now.');
+      if (element is Track) {
+        log.finer('Score.applyShorthands(), Not applying shorthand to Track element.  Skipping it for now.');
         continue;
       }
       if (element is TempoRamp) {
@@ -175,7 +203,8 @@ class Score {
         log.finer('Score.applyShorthands(), What is this element, which will be skipped for now?: ${element.runtimeType}');
         continue;
       }
-      //
+      var note = element as Note; // new
+      // So this next stuff assumes element is a Note, and it could be a rest
       // This section is risky. This could contain bad logic:
       //
       // Usually to repeat a previous note we just have '.' by itself, but we could have
@@ -183,30 +212,32 @@ class Score {
       // '.T' to mean same duration as previous note, but make this one a right tap, or
       // '>.' to mean same note as before, but accented this time.
       //
-      if (element.noteType == NoteType.previousNoteDurationOrType) {
-        element.duration = previousNote.duration;
-        element.dynamic = previousNote.dynamic;
-        element.noteType = previousNote.noteType;
-        element.swapHands(); // check that nothing stupid happens if element is a rest or dynamic or something else
-        log.finest('In Score.applyShorthands(), and since note was just a dot, just set element to have previousNote props, so element is now ${element}.');
+      if (note.noteType == NoteType.previousNoteDurationOrType) { // I think this means "." dot.  Why not just call it "dot"?
+        note.duration = previousNote.duration;
+        note.dynamic = previousNote.dynamic;
+        note.noteType = previousNote.noteType;
+        note.swapHands(); // check that nothing stupid happens if note is a rest or dynamic or something else
+        log.finest('In Score.applyShorthands(), and since note was just a dot, just set note to have previousNote props, so note is now ${note}.');
       }
       else {
-//        element.duration ??= previousNote.duration;
-        element.duration.firstNumber ??= previousNote.duration.firstNumber; // new
-        element.duration.secondNumber ??= previousNote.duration.secondNumber;
-        element.dynamic ??= previousNote.dynamic;
-        if (element.noteType == null) {
-          element.noteType = previousNote.noteType;
-          element.swapHands();
+//        note.duration ??= previousNote.duration;
+        note.duration.firstNumber ??= previousNote.duration.firstNumber; // new
+        note.duration.secondNumber ??= previousNote.duration.secondNumber;
+        if (note.noteType == null) {
+          note.noteType = previousNote.noteType;
+          note.swapHands();
         }
-        log.finest('In Score.applyShorthands(), and note was not just a dot, but wanted to make sure did the shorthand fill in, so now element is ${element}.');
+        if (note.noteType != NoteType.rest) { // new 10/24/2020
+          note.dynamic ??= previousNote.dynamic;
+        }
+        log.finest('In Score.applyShorthands(), and note was not just a dot, but wanted to make sure did the shorthand fill in, so now note is ${note}.');
       }
-      //previousNote = element; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
-      previousNote.dynamic = element.dynamic;
-      previousNote.velocity = element.velocity; // unnec?
-      previousNote.articulation = element.articulation;
-      previousNote.duration = element.duration;
-      previousNote.noteType = element.noteType;
+      //previousNote = note; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
+      previousNote.dynamic = note.dynamic;
+      previousNote.velocity = note.velocity; // unnec?
+      previousNote.articulation = note.articulation;
+      previousNote.duration = note.duration;
+      previousNote.noteType = note.noteType;
 
       log.finest('bottom of loop Score.applyShorthands(), just updated previousNote to point to be this ${previousNote}.');
     }
@@ -354,19 +385,31 @@ class Score {
       if (!(element is Note)) {
         continue;
       }
+      if (element.noteType == NoteType.rest) {
+        continue;
+      }
       var note = element as Note;
+      // this should be a function of current velocity, not a constant increase.
+      // Less as you get louder
+      // Fix this later!
       switch (note.articulation) {
         case NoteArticulation.tenuto: // '_'
-          note.velocity += 16;
+          // note.velocity += 16;
+          note.velocity += 6;
           break;
         case NoteArticulation.accent: // '>'
-          note.velocity += 32;
+          // note.velocity += 32;
+          note.velocity += 12;
           break;
         case NoteArticulation.marcato: // '^'
-          note.velocity += 60;
+          // note.velocity += 60;
+          note.velocity += 20;
           break;
       }
 
+      // This section is questionable.  Should flams be accented normally?
+      // I don't think so.  This section maybe could be used to adjust for
+      // bad sound font recordings, but only as a hack.  Fix the recordings.
       switch (note.noteType) {
         case NoteType.tapLeft:
         case NoteType.tapRight:
@@ -407,6 +450,7 @@ class Score {
           // note.velocity -= 40;
           break;
         case NoteType.rest:
+          print('hey man we got a rest.  Why should there be a velocity for it?');
           break;
         default:
           log.warning('What the heck was that note? $note.type');
@@ -451,13 +495,13 @@ class Score {
     return null;
   }
 
-  Staff scanForFirstStaff() {
+  Track scanForFirstTrack() {
     for (var element in elements) {
-      if (!(element is Staff)) {
+      if (!(element is Track)) {
         continue;
       }
-      firstStaff = element;
-      return firstStaff;
+      firstTrack = element;
+      return firstTrack;
     }
     return null;
   }
@@ -632,8 +676,8 @@ class Score {
 ///
 /// ScoreParser
 ///
-Parser scoreParser = ((commentParser | markerParser | textParser | staffParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
-  log.finer('In Scoreparser, will now add values from parse result list to score.elements');
+Parser scoreParser = ((commentParser | markerParser | textParser | trackParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+  log.finest('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {
     for (var value in values) {
@@ -650,12 +694,12 @@ Parser scoreParser = ((commentParser | markerParser | textParser | staffParser |
   return score;
 });
 
-
-/// I think the idea here is to be able to insert the keywords '/staff snare' or
-/// '/staff tenor', ... and that staff continues on as the only staff being written
-/// to, until either the end of the score, or there's another /staff designation.
-/// So, it's 'staff <name>'
-enum StaffId {
+// Maybe change track to "track"
+/// I think the idea here is to be able to insert the keywords '/track snare' or
+/// '/track tenor', ... and that track continues on as the only track being written
+/// to, until either the end of the score, or there's another /track designation.
+/// So, it's 'track <name>'
+enum TrackId {
   snare,
   unison, // snareEnsemble
   pad,
@@ -665,81 +709,80 @@ enum StaffId {
   pipes
 }
 
-class Staff {
+class Track {
   // Why not initialize?
-  StaffId id; // the default should be snare.  How do you do that?
-  // Maybe this will be expanded to include more than just StaffId, otherwise just an enum
+  TrackId id; // the default should be snare.  How do you do that?
+  // Maybe this will be expanded to include more than just TrackId, otherwise just an enum
   // and not a class will do, right?  I mean, why doesn't Dynamic do it this way?
 
   String toString() {
-    return 'Staff: id: $id';
+    return 'Track: id: $id';
   }
 }
 
 ///
-/// staffParser
+/// trackParser
 ///
-final staffId = (letter() & word().star()).flatten();
-Parser staffParser = (
-    string('/staff').trim() & staffId).trim().map((value) {
-  log.fine('In staffParser and value is -->$value<--');
-  var staff = Staff();
-  staff.id = staffStringToId(value[1]);
-  log.fine('Leaving staffParser returning value $staff');
-  return staff;
+final trackId = (letter() & word().star()).flatten();
+Parser trackParser = ((string('/track')|(string('/staff'))).trim() & trackId).trim().map((value) {
+  log.finest('In trackParser and value is -->$value<--');
+  var track = Track();
+  track.id = trackStringToId(value[1]);
+  log.fine('Leaving trackParser returning value $track');
+  return track;
 });
 
-StaffId staffStringToId(String staffString) {
-  StaffId staffId;
-  switch (staffString) {
+TrackId trackStringToId(String trackString) {
+  TrackId trackId;
+  switch (trackString) {
     case 'snare':
-      staffId = StaffId.snare;
+      trackId = TrackId.snare;
       break;
     case 'unison':
-      staffId = StaffId.unison;
+      trackId = TrackId.unison;
       break;
     case 'pad':
-      staffId = StaffId.pad;
+      trackId = TrackId.pad;
       break;
     case 'tenor':
-      staffId = StaffId.tenor;
+      trackId = TrackId.tenor;
       break;
     case 'bass':
-      staffId = StaffId.bass;
+      trackId = TrackId.bass;
       break;
     case 'met':
     case 'metronome':
-      staffId = StaffId.met;
+      trackId = TrackId.met;
       break;
     case 'pipes':
-      staffId = StaffId.pipes;
+      trackId = TrackId.pipes;
       break;
     default:
-      log.severe('Bad staff identifier: $staffString');
-      staffId = StaffId.snare;
+      log.severe('Bad track identifier: $trackString');
+      trackId = TrackId.snare;
       break;
   }
-  return staffId;
+  return trackId;
 }
 
-String staffIdToString(StaffId id) {
+String trackIdToString(TrackId id) {
   switch (id) {
-    case StaffId.snare:
+    case TrackId.snare:
       return 'snare';
-    case StaffId.unison:
+    case TrackId.unison:
       return 'unison';
-    case StaffId.pad:
+    case TrackId.pad:
       return 'pad';
-    case StaffId.tenor:
+    case TrackId.tenor:
       return 'tenor';
-    case StaffId.bass:
+    case TrackId.bass:
       return 'bass';
-    case StaffId.met:
+    case TrackId.met:
       return 'met';
-    case StaffId.pipes:
+    case TrackId.pipes:
       return 'pipes';
     default:
-      log.severe('Bad staff id: $id');
+      log.severe('Bad track id: $id');
       return null;
   }
 }

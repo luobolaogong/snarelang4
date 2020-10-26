@@ -1,7 +1,7 @@
 // Scotland The Brave
 // Metronome only
 
-/staff metronome
+/track metronome
 /time 4/4 // yes both of these lines can be here and in snare score
 /tempo 80    // not sure
 

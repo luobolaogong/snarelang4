@@ -18,9 +18,9 @@ class CommandLine {
 
   Tempo _tempo;
   num _tempoScalar;
-  Staff _staff;
+  Track _track;
   Dynamic _dynamic;
-  TimeSig _TimeSig;
+  TimeSig _timeSig;
   bool _loopBuzzes = false;
   bool _usePadSoundFont = false;
   List<String> _inputFilesList; // want list of Strings, or list of Files?
@@ -32,19 +32,35 @@ class CommandLine {
   static final loopBuzzesMapIndex = 'loopbuzzes'; // seems not to work.  Forget until fix soundFont for Roll
   static final inputFileListMapIndex = 'input'; // -i  --input
   static final outputMidiFilePathMapIndex = 'midiout'; // -o --output  --outmidi
-  static final staffMapIndex = 'staff'; // -s --staff --stave --part --instrument
+  static final trackMapIndex = 'track'; // -s --track --stave --part --instrument
   static final tempoMapIndex = 'tempo'; // -t, --tempo
   static final tempoScalarMapIndex = 'temposcalar'; // -S? --ts --temposcalar
   static final timeSigMapIndex = 'timesig'; // --timesig --sig
   static final usePadSoundFontMapIndex = 'usepad'; // --pad
 
+  // CommandLine() {
+  //   print('in CommandLine constructor');
+  // }
+
+  // String toString() {
+    // print('fat bastard');
+    // print('inputFilesList: ${_inputFilesList}');
+    // print('outputMidiFile: $_outputMidiFile');
+    // print('tempo: $_tempo');
+    // print('tempoScalar: $_tempoScalar');
+    // print('track: $_track');
+    // print('dynamic: $_dynamic');
+    // print('timeSig: $_timeSig');
+    // print('loopBuzzes: $_loopBuzzes');
+    // print('usePadSoundFont: $_usePadSoundFont');
+  // }
 
   // Not used yet.
   // Map<String,dynamic> get map {
   //   return {
   //     'tempo': _tempo,
   //     'tempoScalar': _tempoScalar,
-  //     'Staff': _Staff,
+  //     'Track': _Track,
   //     'Dynamic': _Dynamic,
   //     'TimeSig': _TimeSig,
   //     'loopBuzzes': _loopBuzzes,
@@ -64,14 +80,14 @@ class CommandLine {
   num get tempoScalar {
     return _tempoScalar;
   }
-  Staff get staff {
-    return _staff;
+  Track get track {
+    return _track;
   }
   Dynamic get dynamic {
     return _dynamic;
   }
   TimeSig get timeSig {
-    return _TimeSig;
+    return _timeSig;
   }
   bool get loopBuzzes {
     return _loopBuzzes;
@@ -129,7 +145,7 @@ class CommandLine {
       exitCode = 0;
       exit(exitCode);
     }
-    //print('staff thing: ${argResults['staff']}'); // this prints out whatever is the default value in the parser creator
+    //print('track thing: ${argResults['track']}'); // this prints out whatever is the default value in the parser creator
 
     // Set the log level.  Guess this is special and should do it first.
     if (argResults[logLevelMapIndex] != null) {
@@ -169,7 +185,7 @@ class CommandLine {
       }
     }
 
-    storeTheResultValues(); // Staff constructor not yet called until get into this method
+    storeTheResultValues(); // Track constructor not yet called until get into this method
 
     return argResults;
   }
@@ -192,19 +208,21 @@ class CommandLine {
       _tempoScalar = num.parse(argResults[CommandLine.tempoScalarMapIndex]);
     }
 
-    if (argResults[CommandLine.staffMapIndex] != null) {
-      _staff = parseStaff(argResults[CommandLine.staffMapIndex]);
+    if (argResults[CommandLine.trackMapIndex] != null) {
+      _track = parseTrack(argResults[CommandLine.trackMapIndex]);
     }
     if (argResults[CommandLine.dynamicMapIndex] != null) {
       String dynamicString = argResults[CommandLine.dynamicMapIndex];
       _dynamic = stringToDynamic(dynamicString);
+      print('storeTheResultValues(), just set _dynamic to $_dynamic because either something was set on command line, or it wasnt and we just have the default value, but in any case, its set.');
+
     }
     if (argResults[CommandLine.timeSigMapIndex] != null) {
       String sig = argResults[CommandLine.timeSigMapIndex];
       List sigParts = sig.split('/');
-      _TimeSig = TimeSig();
-      _TimeSig.numerator = int.parse(sigParts[0]);
-      _TimeSig.denominator = int.parse(sigParts[1]);
+      _timeSig = TimeSig();
+      _timeSig.numerator = int.parse(sigParts[0]);
+      _timeSig.denominator = int.parse(sigParts[1]);
     }
 
     if (argResults[CommandLine.loopBuzzesMapIndex]) { // how valuable is this?
@@ -258,7 +276,7 @@ class CommandLine {
 
       ..addOption(CommandLine.dynamicMapIndex,
           abbr: 'd',
-          defaultsTo: 'mf', // works???????
+          defaultsTo: 'mf', // works???????   Hey, this is important
           allowed: ['ppp', 'pp', 'p', 'mp', 'mf', 'f', 'ff', 'fff'],
           help:
           'initial dynamic, using values like mf or f or ff, etc',
@@ -273,7 +291,7 @@ class CommandLine {
           'Set the log level.  This is a hidden optionl',
           valueHelp: 'WARNING')
 
-      ..addOption(CommandLine.staffMapIndex, // prob should also allow --stave and --track
+      ..addOption(CommandLine.trackMapIndex, // prob should also allow --stave and --track
           allowed: ['snare', 'snareUnison', 'tenor', 'bass', 'metronome', 'met', 'pipes'],
           defaultsTo: 'snare', // I think this is the reason we get a value!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 without a constructor
           help:
@@ -322,6 +340,7 @@ class CommandLine {
 
 
   Tempo parseTempo(String noteTempoString) {
+    //print('In parseTempo()');
     var tempo = Tempo();
     // var parts = tempoString.split(r'[:=]');
     var noteTempoParts = noteTempoString.split('=');
@@ -343,10 +362,10 @@ class CommandLine {
     return tempo;
   }
 
-  Staff parseStaff(String staffString) {
-    var staff = Staff();
-    staff.id = staffStringToId(staffString);
-    return staff;
+  Track parseTrack(String trackString) {
+    var track = Track();
+    track.id = trackStringToId(trackString);
+    return track;
   }
 
 

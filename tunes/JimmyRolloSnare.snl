@@ -5,7 +5,7 @@
 
 /marker Jimmy Rollo
 
-// /staff snare   // causes new track if string together
+// /track snare   // causes new track if string together
 /time 2/4     // Not sure, should be 2/2 ???
 /tempo 137    // recording 137
 
@@ -68,7 +68,7 @@
 
 
 
-//staff met
+//track met
 //4M . . .
 //4M . . .  . . . .   . . . .   . . . .
 //4M . . .  . . . .   . . . .   . . . .

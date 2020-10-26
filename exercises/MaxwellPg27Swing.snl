@@ -4,7 +4,7 @@
 /time 2/4
 //tempo 84
 
-/staff snare
+/track snare
 
 
 /marker P27 (Swing)
@@ -61,7 +61,7 @@
 12V  >30t . . . .    8T  12v  >32T 32t    32T 32t  30D 30T . . .    >40T 20z .   8T
 
 
-/staff met    // should have two tones for metronome
+/track met    // should have two tones for metronome
 
 /pp
 
