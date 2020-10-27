@@ -95,34 +95,8 @@ class Score {
     //
     print('\t\there comes the real parse now, since we have a legal file.  I dislike this double thing.');
     var result = scoreParser.parse(scoresStringBuffer.toString());
-    // Just report the result in the log
-
-
-    // Okay, we just parse all the files, and all the notes have all the fields, whether they were specified in the score or default values
-    // So, how can you set a value with a command line value like the dynamic if the note already has a value which may be a default value?
-    // Maybe constructors should not have default values set for some fields, like dynamic???
-    // SO STOP HERE UNTIL I FIGURE THIS OUT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
     if (result.isSuccess) {
       Score score = result.value;
-
-      // // Don't think we should do this here, but needs to be done before do gracenotes.
-      // print('DO THIS HERE????????   Adding  a few elements at the start, like timesig and tempo, just in case notes start too soon?');
-      // //var initialTempo = Tempo();
-      // //var tempo = Tempo.scaleThis(initialTempo, scalar)
-      // //var initialTimeSig = TimeSig();
-      // //score.elements.insert(0, initialTempo);
-      // //score.elements.insert(0, initialTimeSig);
-      // var scaledTempo = Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar);
-      // score.elements.insert(0, scaledTempo);
-      // score.elements.insert(0, commandLine.timeSig);
-      // print('Added elements $scaledTempo, initialTimeSig');
-
-
-
-
       log.finer('parse succeeded.  This many elements: ${score.elements.length}'); // wrong
       for (var element in score.elements) {
         log.finest('\tAfter score raw parse, element list has this: $element');
@@ -138,114 +112,153 @@ class Score {
 
   ///
   /// Apply shorthands, meaning that missing properties of duration and type for a text note get filled in from the previous
-  /// note.  This would include notes specified by ".", which means use previous note's duration and type.  This will be
-  /// expanded to volume/velocity later.
+  /// note.  This would include notes specified by ".", which means use previous note's duration and type.
   /// Also, when the note type is not specified, swap hand order from the previous note.
   /// This also sets the dynamic field, but not velocities.
-  ///
-//  void applyShorthands() {
-//   void applyShorthands(Note defaultNote) {   // this defaultNote is strange.  Represents the first note?????
-  void applyShorthands(CommandLine commandLine) {   // this defaultNote is strange.  Represents the first note?????
-    // bad logic.  Off by one stuff:
-//    var previousNote = defaultNote;
-    //Tempo latestTempo;
-    log.fine('In applyShorthands');
+  /// Also, if there's a /dd (default dynamic), it is replaced by the default dynamic value.
+  void applyShorthands(CommandLine commandLine) {
+    log.fine('In applyShorthands, AND THIS IS PROBABLY WHERE THERE IS A PROBLEM WITH DYNAMICS NOT WORKING RIGHT!!!!!!!!!!!!!!!!!!!!!!11');
     var previousNote = Note();
     // I don't like the way this is done to account for a first note situation.  Perhaps use a counter and special case for first note
-    previousNote.dynamic = commandLine.dynamic; // unnec
-    //previousNote.velocity = defaultNote.velocity; // unnec
-    //previousNote.articulation = defaultNote.articulation;
-    //previousNote.duration = defaultNote.duration;
-    //previousNote.noteType = defaultNote.noteType;
-    // previousNote.dynamic = defaultNote.dynamic; // unnec
-    // previousNote.velocity = defaultNote.velocity; // unnec
-    // previousNote.articulation = defaultNote.articulation;
-    // previousNote.duration = defaultNote.duration;
-    // previousNote.noteType = defaultNote.noteType;
-    // log.finest('In top of Score.applyShorthands and just set "previousNote" to be the defaultNote passed in, which is $defaultNote');
-    print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!gunna get some null pointer things, because I commented the above stuff.');
-    for (var element in elements) {
-      //log.finest('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
-//      if (element is Dynamic) { // new
-      if (element is Dynamic) { // new
-        if (element == Dynamic.defdyn) {
+    previousNote.dynamic = commandLine.dynamic; // unnec???
+    print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!may get some null pointer things, because I commented the above stuff.');
+    for (var elementIndex = 0; elementIndex < elements.length; elementIndex++) {
+      if (elements[elementIndex] is Dynamic) { // new
+        if (elements[elementIndex] == Dynamic.dd) {
           print('stop here');
-          element = commandLine.dynamic; // See if this is right.
-          print('\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!just changed dynamic from defdyn to $element  But maybe did this too late.  Need to do it before ramps.');
+          elements[elementIndex] = commandLine.dynamic;
+          print('\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!just changed dynamic from dd to ${elements[elementIndex]}  But maybe did this too late.  Need to do it before ramps.');
           print('did it actually change the element to the new dynamic value?');
         }
-        log.finest('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a dynamicRamp, I am marking previousNote s dynamic to be same, and skipping');
-        previousNote.dynamic = element;
+        log.finer('In Score.applyShorthands(), and because element is ${elements[elementIndex].runtimeType} and not a dynamicRamp, I am marking previousNote s dynamic to be same, and skipping');
+        previousNote.dynamic = elements[elementIndex];
         continue;
       }
-      if (element is DynamicRamp) {
-        log.finest('Score.applyShorthands(), and element is a DynamicRamp so skipping it.');
-        continue;
-      }
-      if (element is Tempo) {
-        log.finer('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
-        //latestTempo = element; // new!!!!!
-        continue;
-      }
-      if (element is Track) {
-        log.finer('Score.applyShorthands(), Not applying shorthand to Track element.  Skipping it for now.');
-        continue;
-      }
-      if (element is TempoRamp) {
-        log.finest('Score.applyShorthands(), and element is a TempoRamp so skipping it.');
-        continue;
-      }
-      if (element is TimeSig) {
-        log.finer('Score.applyShorthands(), Not applying shorthand to TimeSig element.  Skipping it for now.');
-        continue;
-      }
-      if (!(element is Note)) {
-        log.finer('Score.applyShorthands(), What is this element, which will be skipped for now?: ${element.runtimeType}');
-        continue;
-      }
-      var note = element as Note; // new
-      // So this next stuff assumes element is a Note, and it could be a rest
-      // This section is risky. This could contain bad logic:
-      //
-      // Usually to repeat a previous note we just have '.' by itself, but we could have
-      // '4.' to mean quarter note, but same note type as before, or
-      // '.T' to mean same duration as previous note, but make this one a right tap, or
-      // '>.' to mean same note as before, but accented this time.
-      //
-      if (note.noteType == NoteType.previousNoteDurationOrType) { // I think this means "." dot.  Why not just call it "dot"?
-        note.duration = previousNote.duration;
-        note.dynamic = previousNote.dynamic;
-        note.noteType = previousNote.noteType;
-        note.swapHands(); // check that nothing stupid happens if note is a rest or dynamic or something else
-        log.finest('In Score.applyShorthands(), and since note was just a dot, just set note to have previousNote props, so note is now ${note}.');
-      }
-      else {
-//        note.duration ??= previousNote.duration;
-        note.duration.firstNumber ??= previousNote.duration.firstNumber; // new
-        note.duration.secondNumber ??= previousNote.duration.secondNumber;
-        if (note.noteType == null) {
+      if (elements[elementIndex] is Note) {
+        var note = elements[elementIndex] as Note; // new
+        // So this next stuff assumes element is a Note, and it could be a rest
+        // This section is risky. This could contain bad logic:
+        //
+        // Usually to repeat a previous note we just have '.' by itself, but we could have
+        // '4.' to mean quarter note, but same note type as before, or
+        // '.T' to mean same duration as previous note, but make this one a right tap, or
+        // '>.' to mean same note as before, but accented this time.
+        //
+        if (note.noteType == NoteType.previousNoteDurationOrType) { // I think this means "." dot.  Why not just call it "dot"?
+          note.duration = previousNote.duration;
           note.noteType = previousNote.noteType;
-          note.swapHands();
+          note.dynamic = previousNote.dynamic;
+          note.swapHands(); // check that nothing stupid happens if note is a rest or dynamic or something else
+          log.finest('In Score.applyShorthands(), and since note was just a dot, just set note to have previousNote props, so note is now ${note}.');
         }
-        if (note.noteType != NoteType.rest) { // new 10/24/2020
-          note.dynamic ??= previousNote.dynamic;
+        else {
+//        note.duration ??= previousNote.duration;
+          note.duration.firstNumber ??= previousNote.duration.firstNumber; // new
+          note.duration.secondNumber ??= previousNote.duration.secondNumber;
+          if (note.noteType == null) { // does this ever happen?
+            note.noteType = previousNote.noteType;
+            note.swapHands();
+          }
+          note.dynamic ??= previousNote.dynamic; // Even if this is a rest I think we might have to do this to make "previous" work.  Yup.
+          // if (note.noteType != NoteType.rest) { // new 10/24/2020.  No, I think we have to have dynamic for a rest so that "previous" works.
+          //   note.dynamic ??= previousNote.dynamic; // only if note.dynamic is null.  Not same as above.
+          // }
+          log.finest('In Score.applyShorthands(), and note was not just a dot, but wanted to make sure did the shorthand fill in, so now note is ${note}.');
         }
-        log.finest('In Score.applyShorthands(), and note was not just a dot, but wanted to make sure did the shorthand fill in, so now note is ${note}.');
-      }
-      //previousNote = note; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
-      previousNote.dynamic = note.dynamic;
-      previousNote.velocity = note.velocity; // unnec?
-      previousNote.articulation = note.articulation;
-      previousNote.duration = note.duration;
-      previousNote.noteType = note.noteType;
+        //previousNote = note; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
+        previousNote.dynamic = note.dynamic; // redundant or not?
+        previousNote.velocity = note.velocity; // unnec?
+        previousNote.articulation = note.articulation;
+        previousNote.duration = note.duration;
+        previousNote.noteType = note.noteType;
 
-      log.finest('bottom of loop Score.applyShorthands(), just updated previousNote to point to be this ${previousNote}.');
-    }
-    log.finer('leaving Score.applyShorthands()\n');
+        log.finest('bottom of loop Score.applyShorthands(), just updated previousNote to point to be this ${previousNote}.');
+      }
+//     print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!gunna get some null pointer things, because I commented the above stuff.');
+//     for (var element in elements) {
+//       //log.finest('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
+// //      if (element is Dynamic) { // new
+//       if (element is Dynamic) { // new
+//         if (element == Dynamic.dd) {
+//           print('stop here');
+//           element = commandLine.dynamic; // See if this is right.  No!  It did not change what's in the list! Why?
+//           element = Dynamic.ppp; // test  This also doesn't change what's in the loop
+//           print('\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!just changed dynamic from dd to $element  But maybe did this too late.  Need to do it before ramps.');
+//           print('did it actually change the element to the new dynamic value?');
+//         }
+//         log.finest('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a dynamicRamp, I am marking previousNote s dynamic to be same, and skipping');
+//         previousNote.dynamic = element;
+//         continue;
+//       }
+//       if (element is DynamicRamp) {
+//         log.finest('Score.applyShorthands(), and element is a DynamicRamp so skipping it.');
+//         continue;
+//       }
+//       if (element is Tempo) {
+//         log.finer('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
+//         //latestTempo = element; // new!!!!!
+//         continue;
+//       }
+//       if (element is Track) {
+//         log.finer('Score.applyShorthands(), Not applying shorthand to Track element.  Skipping it for now.');
+//         continue;
+//       }
+//       if (element is TempoRamp) {
+//         log.finest('Score.applyShorthands(), and element is a TempoRamp so skipping it.');
+//         continue;
+//       }
+//       if (element is TimeSig) {
+//         log.finer('Score.applyShorthands(), Not applying shorthand to TimeSig element.  Skipping it for now.');
+//         continue;
+//       }
+//       if (!(element is Note)) {
+//         log.finer('Score.applyShorthands(), What is this element, which will be skipped for now?: ${element.runtimeType}');
+//         continue;
+//       } // so everything after this is a Note, right?
+//       var note = element as Note; // new
+//       // So this next stuff assumes element is a Note, and it could be a rest
+//       // This section is risky. This could contain bad logic:
+//       //
+//       // Usually to repeat a previous note we just have '.' by itself, but we could have
+//       // '4.' to mean quarter note, but same note type as before, or
+//       // '.T' to mean same duration as previous note, but make this one a right tap, or
+//       // '>.' to mean same note as before, but accented this time.
+//       //
+//       if (note.noteType == NoteType.previousNoteDurationOrType) { // I think this means "." dot.  Why not just call it "dot"?
+//         note.duration = previousNote.duration;
+//         note.dynamic = previousNote.dynamic;
+//         note.noteType = previousNote.noteType;
+//         note.swapHands(); // check that nothing stupid happens if note is a rest or dynamic or something else
+//         log.finest('In Score.applyShorthands(), and since note was just a dot, just set note to have previousNote props, so note is now ${note}.');
+//       }
+//       else {
+// //        note.duration ??= previousNote.duration;
+//         note.duration.firstNumber ??= previousNote.duration.firstNumber; // new
+//         note.duration.secondNumber ??= previousNote.duration.secondNumber;
+//         if (note.noteType == null) { // does this ever happen?
+//           note.noteType = previousNote.noteType;
+//           note.swapHands();
+//         }
+//         if (note.noteType != NoteType.rest) { // new 10/24/2020
+//           note.dynamic ??= previousNote.dynamic;
+//         }
+//         log.finest('In Score.applyShorthands(), and note was not just a dot, but wanted to make sure did the shorthand fill in, so now note is ${note}.');
+//       }
+//       //previousNote = note; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
+//       previousNote.dynamic = note.dynamic;
+//       previousNote.velocity = note.velocity; // unnec?
+//       previousNote.articulation = note.articulation;
+//       previousNote.duration = note.duration;
+//       previousNote.noteType = note.noteType;
+//
+//       log.finest('bottom of loop Score.applyShorthands(), just updated previousNote to point to be this ${previousNote}.');
+     }
+    log.finest('leaving Score.applyShorthands()\n');
     return;
   }
 
   // This is a big one.  Maybe break it up?
+  // Looks like several phases to this.
   void applyDynamics() {
     log.fine('In Score.applyDynamics()');
     // For each note in the list set the velocity field based on the dynamic field, which is strange, because why not do it initially?
@@ -260,6 +273,7 @@ class Score {
       element.velocity = dynamicToVelocity(element.dynamic);
     }
 
+    print('gunna start looking for dynamic ramp markers and set their values');
     // Scan the elements list for dynamicRamp markers, and set their properties
     print('');
     log.finest('Score.applyDynamics(), Starting search for dynamicRamps and setting their values.  THIS MAY BE WRONG NOW THAT I''M APPLYING DYNAMICS DURING SHORTHAND PHASE');
@@ -312,10 +326,10 @@ class Score {
       }
       log.finest('Score.applyDynamics(), Doing dynamicRamps... found other kine element: ${element.runtimeType} and ignoring.');
     }
-    log.finest('Score.applyDynamics(), Done finding and setting dynamicRamp values for entire score.\n');
+    log.finer('Score.applyDynamics(), Done finding and setting dynamicRamp values for entire score.\n');
 
 
-    log.finest('Score.applyDynamics(), starting to adjust dynamicRamped notes...');
+    log.finer('Score.applyDynamics(), starting to adjust dynamicRamped notes...');
     // Adjust dynamicRamp note velocities based solely on their dynamicRamp and position in dynamicRamp, not articulations or type.
     // Each note already has a velocity.
     inDynamicRamp = false;
@@ -378,7 +392,7 @@ class Score {
       }
     }
 
-    log.fine('Adjusting note velocities by articulation...');
+    log.finer('Adjusting note velocities by articulation...');
 
     // Adjust note velocity based on articulation and type, and clamp.
     for (var element in elements) {
@@ -526,18 +540,19 @@ class Score {
   //   log.finer('Leavingt fixIncompleteTempos(), but maybe dont need to any more');
   // }
 
-
+  // check that this does what I think it is supposed to do
   void scaleTempos(CommandLine commandLine) {
     //Tempo newTempo;
-    for (var element in elements) {
+    for (var element in elements) { // better check to see that element in elements really changes.
       if (element is Tempo) {
         var tempo = element as Tempo;
         //print('scaleTempos(), element is currently: $tempo and scalar is ${commandLine.tempoScalar}');
-        tempo = Tempo.scaleThis(tempo, commandLine.tempoScalar);
+        tempo = Tempo.scaleThis(tempo, commandLine.tempoScalar); // WHY CALL  THIS IF scalar is 0?
         element.bpm = tempo.bpm; // this is awkward
         //print('scaleTempos(), now element is $tempo');
       }
     }
+    print('Hey,check the list to see if things actually did change.');
   }
 
 
@@ -666,7 +681,7 @@ class Score {
       }
 
     }
-    log.fine('Leaving adjustForGraceNotes(), and updated notes to have delta time shifts to account for gracenotes.');
+    log.finest('Leaving adjustForGraceNotes(), and updated notes to have delta time shifts to account for gracenotes.');
     return;
 
   }
@@ -728,7 +743,7 @@ Parser trackParser = ((string('/track')|(string('/staff'))).trim() & trackId).tr
   log.finest('In trackParser and value is -->$value<--');
   var track = Track();
   track.id = trackStringToId(value[1]);
-  log.fine('Leaving trackParser returning value $track');
+  log.finest('Leaving trackParser returning value $track');
   return track;
 });
 

@@ -7,44 +7,80 @@
 
 /track snare
 
-8T . . .
-/p
-/cresc 8T . . . /defdyn
-8T . . .
-
-
-
-
+//mf  // assuming this dynamic as default /dd
 
 /marker Castle Dangerous
 4:3r
 
-// HEY, I still wanna work in the /defdyn which means set the dynamic to
+// HEY, I still wanna work in the /dd which means set the dynamic to
 // the default dynamic, whatever that is, whether set on command line, or
 // just the standard default.
 
+//okay we got a problem here, first dynamic if comes from command line isn't working
 
-/mf
+//f  // we'll assume this is the default, and it's passed in.
+// Maybe in future we should do this: /dd=mf in the score.
+// And maybe dynamics should be more "relative", as in "/+2" or "/-1" for relative dynamic levels
+// rather than absolute levels like /ff  because it all depends on the default dynamic
 
 /marker Line 1
->24:5F 24t 24Z . . . . .  8T >.
-24Z . . 8t  /cresc 24Z . . . . .  _40T 20z . 24z . .
->8T /fff /mf /cresc 24T . .  8f 12D >24T  12t 30D 30T . . . /ff
-_40T 20z . 8t 24T . 24F 24T . 24F >4f /mf
+/dd >24:5F 24t /cresc 24Z . . . . .  8T /f >.
+/dd 24Z . . 8t  /cresc 24Z . . . . .  >40T  20z . 24z . .
+>8T /ff 24T . .  8f 12D >24T  12t 30D 30T . . .
+>40T 20z . 8t 24T . 24F 24T . 24F >4f
 
 /marker Line2
+/dd >24F 24t . 12t 24t   8F >12f 24T 12t >24T 12t 24t
+12F 24f >8F /cresc 24Z . . . . . 4T /ff
+/f /cresc >40T 20z .  24t . .   >40T 20z . >40t 20Z .  24Z . ^40T 20z . >30t /ff
+30T . . . >8T  >4f /dd /cresc 24Z . . . . . /ff
 
+/marker Line3
+/dd >24:5F 24t /cresc 24Z . . . . .  8T /f .
+/dd 24Z . . 8t  /cresc 24Z . . . . .  >40T 20z . 24z . .
+>8T /ff 24T . .  8f 12D >24T  12t 30D 30T . . .
+>40T 20z . 8t 24T . 24F 24T . 24F >4f
+
+/marker Line4
+/dd >24F 24t . 12t 24t   8F >12f 24T 12t >24T 12t 24t
+12F 24f >8F /cresc 24Z . . . . . 4T /ff
+/f >40T 20z .  24t . .   >40T 20z . >40t 20Z .  24Z . ^40T 20z . >30t
+30T . . . >8T  /cresc 24Z . . . . .  4T /ff
+
+/marker Line5
+/dd /cresc 24Z . . . . 24t  >40T 20z . 24z . .   >40T 20z .  >40t 20Z .
+32T . . .  >8T /ff /f 40t 20z . 32T . . .  >4T    // 28th notes don't sound quite right
+/f >8F 24T . .  8f  12D >24T   12t  30D 30T . . .
+>40T 20z . 8t 24T . 24F 24T . 24F >4f
+
+/marker Line6
+/dd /cresc 24Z . . . . 24t   >40T 20z . 24z . . >40T 20z . >40t 20Z .
+32T . . . >8T /ff /dd /cresc 24Z . . . . .  4T /ff /dd
+/f >40T 20z .  24t . .   >40T 20z . >40t 20Z .  24Z . ^40T 20z . >30t
+30T . . . >8T >4f  24Z . . 24t . .
+
+/marker Line7
+>24:5F 24t /cresc 24Z . . . . .  >40T 20z . >40t 20Z .
+32T . . .  >8T /ff /f 40t 20z . 32T . . .  >4T    // 28th notes don't sound quite right
+>8F 24T . .  8f  12D >24T   12t  30D 30T . . .
+>40T 20z . 8t 24T . 24F 24T . 24F >4f
+
+/marker Line8
+/dd /cresc 24Z . . . . 24t   >40T 20z . 24z . . >40T 20z . >40t 20Z .
+32T . . . >8T /ff /dd /cresc 24Z . . . . .  /ff 4T
+/f /cresc >40T 20z .  24t . .   >40T 20z . >40t 20Z .  24Z . ^40T 20z . >30t
+30T . . . >8T 24Z . . . . . _4T /ff
 
 
 /track met    // should have two tones for metronome
 
-/pp
+/mp
 ^8M . >8M . >8M .
->8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
->8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
->8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
->8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
->8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
->8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
->8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
->8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .   >8M . _8M . . .
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M

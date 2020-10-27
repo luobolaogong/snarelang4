@@ -100,10 +100,10 @@ void main(List<String> arguments) {
 Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   log.fine('In doThePhases, and tempo coming in from commandLine tempo is ${commandLine.tempo} and dynamic is ${commandLine.dynamic}');
   //
-  // Phase 1: load and parse the score, returning the Score, which contains a list of all elements, as PetitParser parses and creates them
+  // Phase 1: load and parse the score, returning the Score, which contains a list of all elements, as PetitParser parses and creates them.
+  // There is no processing of the elements put into the list.
   //
-  var result = Score.loadAndParse(piecesOfMusic, commandLine); // hey, this probably parsed at least one tempo and one timesig
-  // Result result = Score.load(piecesOfMusic);
+  var result = Score.loadAndParse(piecesOfMusic, commandLine);
 
   if (result.isFailure) {
     log.severe('Failed to parse the scores. Message: ${result.message}');
@@ -115,23 +115,11 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   // Since parsing succeeded, we should have the Score element in the result value
   Score score = result.value;
 
-
-
-  // Kinda strange to have this here.  Just to handle shorthand phase?  For noteType?
-  // At this point we have a list of elements that comprise the score, but haven't kept track of the first
-  // timesig or tempo if they were in there.  So for now create defaults for these:
-  // var defaultFirstNoteProperties = Note();
-  // defaultFirstNoteProperties.duration.firstNumber = 4;
-  // defaultFirstNoteProperties.duration.secondNumber = 1;
-  // defaultFirstNoteProperties.noteType = NoteType.tapLeft; // ???
-  // defaultFirstNoteProperties.dynamic = Dynamic.f; // Not sure how important this is, or if it's wrong.  Wrong value?  Should have global values somewhere for these defaults;
-  // print('HEY, I DISLIKE THIS THING OF CREATING A DEFAULT FIRST NOTE');
-
+  //
   // Phase 2:
   // Apply shorthands to the list, meaning fill in the blanks that are in the raw list, including Dynamics.
-  //
-  // score.applyShorthands(defaultFirstNoteProperties); // strange way to do things.  Fix this later.  Shouldn't be creating the default here and using it there.
-  score.applyShorthands(commandLine); // strange way to do things.  Fix this later.  Shouldn't be creating the default here and using it there.
+  // And this would include replacing default dynamics (/dd) with the default dynamic value set on commandline or whatever the default is.
+  score.applyShorthands(commandLine);
   for (var element in score.elements) {
     log.finer('After shorthand phase: $element');
   }

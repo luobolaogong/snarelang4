@@ -134,8 +134,6 @@ class Tempo {
     var newTempo = Tempo();
     newTempo.noteDuration.firstNumber = tempo.noteDuration.firstNumber;
     newTempo.noteDuration.secondNumber = tempo.noteDuration.secondNumber;
-    // newTempo.bpm += (tempo.bpm * scalar / 100).floor();
-    // newTempo.bpm = tempo.bpm + (tempo.bpm * scalar / 100).floor();
     newTempo.bpm = tempo.bpm + (tempo.bpm * scalar / 100).round();
     log.fine('scaleThis(), tempo is now $newTempo');
     return newTempo;

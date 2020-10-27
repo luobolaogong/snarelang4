@@ -52,7 +52,7 @@ enum Dynamic {
   f,
   ff,
   fff,
-  defdyn
+  dd
 //  dim,
 //  decresc,
 //  cresc,
@@ -204,6 +204,7 @@ Dynamic stringToDynamic(dynamicString) {
 // something's wrong here.  Looks strange.
 // Also, put in own file?  Maybe, although it's a kind of dynamic marking.
 // But still, it's kinda a pseudo element.
+// All of these tokens map down into a single DynamicRamp object, but all its fields are null
 Parser dynamicRampParser = (
     string('/>') |
     string('/<') |
@@ -211,7 +212,7 @@ Parser dynamicRampParser = (
     string('/decresc') |
     string('/cresc')
 ).trim().map((value) {
-  log.finest('In dynamicRampParser');
+  log.finest('In dynamicRampParser, and the value was $value');
   DynamicRamp dynamicRamp;
   switch (value) {
     case '/>':
@@ -222,7 +223,7 @@ Parser dynamicRampParser = (
       dynamicRamp =  DynamicRamp();
       break;
   }
-  log.finest('Leaving dynamicRampParser returning value $dynamicRamp');
+  log.finest('Leaving dynamicRampParser returning a DynamicRamp object $dynamicRamp');
   return dynamicRamp;
 });
 //Parser dynamicRampParser = (
@@ -266,7 +267,7 @@ Parser dynamicParser = (
     string('/fff') |
     string('/ff') |
     string('/f') |
-    string('/defdyn')
+    string('/dd')
 //    string('\\>') |
 //    string('\\<') |
 //    string('\\dim') |
@@ -300,8 +301,8 @@ Parser dynamicParser = (
     case '/fff':
       dynamic =  Dynamic.fff;
       break;
-    case '/defdyn':
-      dynamic =  Dynamic.defdyn;
+    case '/dd':
+      dynamic =  Dynamic.dd;
       break;
 //    case '\\>':
 //    case '\\<':
