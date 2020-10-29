@@ -28,12 +28,44 @@ import 'package:snarelang4/snarelang4.dart';
 /// result, and maybe I needed to tell it too about the sound font.  Probably only need to do it on qsynth.
 /// Shouldn't need both.  Like VLC doesn't need qsynth.
 ///
-num velocityRamp(int ctr) {
-  return 2.3 * pow(ctr, 2) + 5;
-}
+// num velocityRamp(int ctr) { // ramp is bad name
+//   // return 2.3 * pow(ctr, 2) + 5;
+//   // return  16 * (4.0 * sin(((pi / 2) * ctr - 6.3)/4.0) + 4.0);
+//   return  20 * (3.0 * sin(((pi / 2) * ctr - 6.3)/4.0) + 3.0);
+// }
 void main(List<String> arguments) {
-  for (var ctr = 0; ctr < 8; ctr++) {
-    print('${ctr+1} : ${velocityRamp(ctr)}');
+  print('Here are the dynamics that will be used:');
+  print('Parabolic1');
+  for (var ctr = 0; ctr < 9; ctr++) {
+    // print('${ctr} : ${velocityRamp(ctr)}');
+    print('${ctr+1} : ${(1.7 * ctr * ctr + 5).round()}');
+  }
+  for (var dynamic in Dynamic.values) {
+    // print('${ctr} : ${velocityRamp(ctr)}');
+    print('${dynamic} : ${(1.7 * dynamic.index * dynamic.index + 5).round()}');
+  }
+  print('Parabolic2');
+  for (var ctr = 1; ctr < 9; ctr++) {
+    // print('${ctr} : ${velocityRamp(ctr)}');
+    print('${ctr} : ${(10 * 0.19 * ctr * ctr).round()}');
+  }
+  for (var dynamic in Dynamic.values) {
+    // print('${ctr} : ${velocityRamp(ctr)}');
+    print('${dynamic} : ${(10 * 0.19 * (dynamic.index + 1) * (dynamic.index + 1)).round()}');
+  }
+  print('Sinusoidal:');
+  for (var ctr = 0; ctr < 9; ctr++) {
+    print('${ctr} : ${(20 * (3.0 * sin(((pi / 2) * ctr - 6.3)/4.0) + 3.0)).round()}');
+  }
+  for (var dynamic in Dynamic.values) {
+    print('${dynamic} : ${(20 * (3.0 * sin(((pi / 2) * (dynamic.index+1) - 6.3)/4.0) + 3.0)).round()}');
+  }
+  print('Linear:');
+  for (var ctr = 0; ctr < 9; ctr++) {
+    print('${ctr} : ${(20 * (3.0 * sin(((pi / 2) * ctr - 6.3)/4.0) + 3.0)).round()}');
+  }
+  for (var dynamic in Dynamic.values) {
+    print('${dynamic} : ${(20 * (3.0 * sin(((pi / 2) * (dynamic.index+1) - 6.3)/4.0) + 3.0)).round()}');
   }
 
 

@@ -473,7 +473,7 @@ class Midi {
         continue;
       }
       if (element is Comment) {
-        log.finer('Not putting comment into track event list: ${element.comment}');
+        log.finest('Not putting comment into track event list: ${element.comment}');
         continue;
       }
       if (element is Text) {
@@ -490,7 +490,7 @@ class Midi {
         trackEventsList.add(markerEvent);
         continue;
       }
-      log.finer('have something else not putting into the track: ${element.runtimeType}, $element');
+      log.finest('have something else not putting into the track: ${element.runtimeType}, $element');
     } // end of list of events to add to snare track
 
     if (trackEventsList.isEmpty) {  // right here?????

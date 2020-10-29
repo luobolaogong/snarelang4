@@ -121,14 +121,10 @@ class Score {
     var previousNote = Note();
     // I don't like the way this is done to account for a first note situation.  Perhaps use a counter and special case for first note
     previousNote.dynamic = commandLine.dynamic; // unnec???
-    print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!may get some null pointer things, because I commented the above stuff.');
     for (var elementIndex = 0; elementIndex < elements.length; elementIndex++) {
       if (elements[elementIndex] is Dynamic) { // new
         if (elements[elementIndex] == Dynamic.dd) {
-          print('stop here');
           elements[elementIndex] = commandLine.dynamic;
-          print('\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!just changed dynamic from dd to ${elements[elementIndex]}  But maybe did this too late.  Need to do it before ramps.');
-          print('did it actually change the element to the new dynamic value?');
         }
         log.finer('In Score.applyShorthands(), and because element is ${elements[elementIndex].runtimeType} and not a dynamicRamp, I am marking previousNote s dynamic to be same, and skipping');
         previousNote.dynamic = elements[elementIndex];
@@ -174,84 +170,6 @@ class Score {
 
         log.finest('bottom of loop Score.applyShorthands(), just updated previousNote to point to be this ${previousNote}.');
       }
-//     print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!gunna get some null pointer things, because I commented the above stuff.');
-//     for (var element in elements) {
-//       //log.finest('In Score.applyShorthands(), and element is type ${element.runtimeType} ==> $element');
-// //      if (element is Dynamic) { // new
-//       if (element is Dynamic) { // new
-//         if (element == Dynamic.dd) {
-//           print('stop here');
-//           element = commandLine.dynamic; // See if this is right.  No!  It did not change what's in the list! Why?
-//           element = Dynamic.ppp; // test  This also doesn't change what's in the loop
-//           print('\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!just changed dynamic from dd to $element  But maybe did this too late.  Need to do it before ramps.');
-//           print('did it actually change the element to the new dynamic value?');
-//         }
-//         log.finest('In Score.applyShorthands(), and because element is ${element.runtimeType} and not a dynamicRamp, I am marking previousNote s dynamic to be same, and skipping');
-//         previousNote.dynamic = element;
-//         continue;
-//       }
-//       if (element is DynamicRamp) {
-//         log.finest('Score.applyShorthands(), and element is a DynamicRamp so skipping it.');
-//         continue;
-//       }
-//       if (element is Tempo) {
-//         log.finer('Score.applyShorthands(), Not applying shorthand to Tempo element.  Skipping it for now.');
-//         //latestTempo = element; // new!!!!!
-//         continue;
-//       }
-//       if (element is Track) {
-//         log.finer('Score.applyShorthands(), Not applying shorthand to Track element.  Skipping it for now.');
-//         continue;
-//       }
-//       if (element is TempoRamp) {
-//         log.finest('Score.applyShorthands(), and element is a TempoRamp so skipping it.');
-//         continue;
-//       }
-//       if (element is TimeSig) {
-//         log.finer('Score.applyShorthands(), Not applying shorthand to TimeSig element.  Skipping it for now.');
-//         continue;
-//       }
-//       if (!(element is Note)) {
-//         log.finer('Score.applyShorthands(), What is this element, which will be skipped for now?: ${element.runtimeType}');
-//         continue;
-//       } // so everything after this is a Note, right?
-//       var note = element as Note; // new
-//       // So this next stuff assumes element is a Note, and it could be a rest
-//       // This section is risky. This could contain bad logic:
-//       //
-//       // Usually to repeat a previous note we just have '.' by itself, but we could have
-//       // '4.' to mean quarter note, but same note type as before, or
-//       // '.T' to mean same duration as previous note, but make this one a right tap, or
-//       // '>.' to mean same note as before, but accented this time.
-//       //
-//       if (note.noteType == NoteType.previousNoteDurationOrType) { // I think this means "." dot.  Why not just call it "dot"?
-//         note.duration = previousNote.duration;
-//         note.dynamic = previousNote.dynamic;
-//         note.noteType = previousNote.noteType;
-//         note.swapHands(); // check that nothing stupid happens if note is a rest or dynamic or something else
-//         log.finest('In Score.applyShorthands(), and since note was just a dot, just set note to have previousNote props, so note is now ${note}.');
-//       }
-//       else {
-// //        note.duration ??= previousNote.duration;
-//         note.duration.firstNumber ??= previousNote.duration.firstNumber; // new
-//         note.duration.secondNumber ??= previousNote.duration.secondNumber;
-//         if (note.noteType == null) { // does this ever happen?
-//           note.noteType = previousNote.noteType;
-//           note.swapHands();
-//         }
-//         if (note.noteType != NoteType.rest) { // new 10/24/2020
-//           note.dynamic ??= previousNote.dynamic;
-//         }
-//         log.finest('In Score.applyShorthands(), and note was not just a dot, but wanted to make sure did the shorthand fill in, so now note is ${note}.');
-//       }
-//       //previousNote = note; // No.  Do a copy, not a reference.       watch for previousNoteDurationOrType
-//       previousNote.dynamic = note.dynamic;
-//       previousNote.velocity = note.velocity; // unnec?
-//       previousNote.articulation = note.articulation;
-//       previousNote.duration = note.duration;
-//       previousNote.noteType = note.noteType;
-//
-//       log.finest('bottom of loop Score.applyShorthands(), just updated previousNote to point to be this ${previousNote}.');
      }
     log.finest('leaving Score.applyShorthands()\n');
     return;
@@ -273,14 +191,13 @@ class Score {
       element.velocity = dynamicToVelocity(element.dynamic);
     }
 
-    print('gunna start looking for dynamic ramp markers and set their values');
+    log.finest('gunna start looking for dynamic ramp markers and set their values');
     // Scan the elements list for dynamicRamp markers, and set their properties
     print('');
     log.finest('Score.applyDynamics(), Starting search for dynamicRamps and setting their values.  THIS MAY BE WRONG NOW THAT I''M APPLYING DYNAMICS DURING SHORTHAND PHASE');
     DynamicRamp currentDynamicRamp;
     Dynamic mostRecentDynamic;
     num accumulatedDurationAsFraction = 0;
-    //double currentDynamicRampDurationInTicks;
     var inDynamicRamp = false;
     for (var element in elements) {
 
@@ -394,7 +311,8 @@ class Score {
 
     log.finer('Adjusting note velocities by articulation...');
 
-    // Adjust note velocity based on articulation and type, and clamp.
+    // Adjust note velocity based on articulation and type, and then clamp.
+    // No, adjust note velocity based on dynamic and articulation together, and then clamp if nec.
     for (var element in elements) {
       if (!(element is Note)) {
         continue;
@@ -406,19 +324,30 @@ class Score {
       // this should be a function of current velocity, not a constant increase.
       // Less as you get louder
       // Fix this later!
-      switch (note.articulation) {
-        case NoteArticulation.tenuto: // '_'
-          // note.velocity += 16;
-          note.velocity += 6;
-          break;
-        case NoteArticulation.accent: // '>'
-          // note.velocity += 32;
-          note.velocity += 12;
-          break;
-        case NoteArticulation.marcato: // '^'
-          // note.velocity += 60;
-          note.velocity += 20;
-          break;
+      // Wonder why this isn't in the dynamic.dart file
+      // switch (note.articulation) {
+      //   case NoteArticulation.tenuto: // '_'
+      //     // note.velocity += 16;
+      //     // note.velocity += 6;
+      //     // note.velocity += 5;
+      //   note.velocity = adjustVelocityByDynamicAndArticulation(note);
+      //     break;
+      //   case NoteArticulation.accent: // '>'
+      //     // note.velocity += 32;
+      //     // note.velocity += 12;
+      //     note.velocity += 15;
+      //     break;
+      //   case NoteArticulation.marcato: // '^'
+      //     // note.velocity += 60;
+      //     // note.velocity += 20;
+      //     note.velocity += 30;
+      //     break;
+      // }
+      if (note.articulation != null) {
+        //print('Hey watchit, because we already did note ramp calculations to set velocities, so the following should account for velocities, not dynamics.');
+        print('\t\tthis note has an articulation (${note.articulation}), and dynamic (${note.dynamic}), and it has current velocity of ${note.velocity}');
+        note.velocity = adjustVelocityByDynamicAndArticulation(note);
+        print('\t\tNow it has current velocity of ${note.velocity}');
       }
 
       // This section is questionable.  Should flams be accented normally?
@@ -430,7 +359,8 @@ class Score {
           break;
         case NoteType.flamLeft:
         case NoteType.flamRight:
-          note.velocity += 16;
+          // note.velocity += 16;
+          note.velocity += 6;
           break;
         case NoteType.dragLeft:
         case NoteType.dragRight:
@@ -552,9 +482,116 @@ class Score {
         //print('scaleTempos(), now element is $tempo');
       }
     }
-    print('Hey,check the list to see if things actually did change.');
   }
 
+  // At this time the note should have a dynamic and an articulation.
+  // There are many ways to do this.  This will probably be quick/dirty way.
+  // Note that because we already did note ramp calculations to set velocities, these supplemental velocity boosts might be off.')
+  num adjustVelocityByDynamicAndArticulation(Note note) {
+    //print('\t\tHEY HEY HEY HERE COMES AN ADJUSTMENT BY ARTICULATION BASED ON CURRENT DYNAMIC!');
+    num newVelocity;
+    switch (note.dynamic) {
+      case Dynamic.ppp:
+        if (note.articulation == NoteArticulation.tenuto) {
+          return note.velocity + 14;
+        }
+        if (note.articulation == NoteArticulation.accent) {
+          return note.velocity + 24;
+        }
+        if (note.articulation == NoteArticulation.marcato) {
+          return note.velocity + 34;
+        }
+        print('what happened?');
+        break;
+      case Dynamic.pp:
+        if (note.articulation == NoteArticulation.tenuto) {
+          return note.velocity + 20;
+        }
+        if (note.articulation == NoteArticulation.accent) {
+          return note.velocity + 32;
+        }
+        if (note.articulation == NoteArticulation.marcato) {
+          return note.velocity + 44;
+        }
+        print('what happened?');
+        break;
+      case Dynamic.p:
+        if (note.articulation == NoteArticulation.tenuto) {
+          return note.velocity + 25;
+        }
+        if (note.articulation == NoteArticulation.accent) {
+          return note.velocity + 36;
+        }
+        if (note.articulation == NoteArticulation.marcato) {
+          return note.velocity + 48;
+        }
+        print('what happened?');
+        break;
+      case Dynamic.mp:
+        if (note.articulation == NoteArticulation.tenuto) {
+          return note.velocity + 24;
+        }
+        if (note.articulation == NoteArticulation.accent) {
+          return note.velocity + 34;
+        }
+        if (note.articulation == NoteArticulation.marcato) {
+          return note.velocity + 44;
+        }
+        print('what happened?');
+        break;
+      case Dynamic.mf:
+        if (note.articulation == NoteArticulation.tenuto) {
+          return note.velocity + 16;
+        }
+        if (note.articulation == NoteArticulation.accent) {
+          return note.velocity + 26;
+        }
+        if (note.articulation == NoteArticulation.marcato) {
+          return note.velocity + 36;
+        }
+        print('what happened?');
+        break;
+      case Dynamic.f:
+        if (note.articulation == NoteArticulation.tenuto) {
+          return note.velocity + 8;
+        }
+        if (note.articulation == NoteArticulation.accent) {
+          return note.velocity + 14;
+        }
+        if (note.articulation == NoteArticulation.marcato) {
+          return note.velocity + 18;
+        }
+        print('what happened?');
+        break;
+      case Dynamic.ff:
+        if (note.articulation == NoteArticulation.tenuto) {
+          return note.velocity + 1;
+        }
+        if (note.articulation == NoteArticulation.accent) {
+          return note.velocity + 3;
+        }
+        if (note.articulation == NoteArticulation.marcato) {
+          return note.velocity + 5;
+        }
+        print('what happened?');
+        break;
+      case Dynamic.fff: // if fff is at 127 then these numbers will just get clipped:
+        if (note.articulation == NoteArticulation.tenuto) {
+          return note.velocity + 1;
+        }
+        if (note.articulation == NoteArticulation.accent) {
+          return note.velocity + 3;
+        }
+        if (note.articulation == NoteArticulation.marcato) {
+          return note.velocity + 5;
+        }
+        print('what happened?');
+        break;
+      default:
+        print('uh oh');
+    }
+    return newVelocity;
+  }
 
 
 

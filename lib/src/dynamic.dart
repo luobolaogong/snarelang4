@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:petitparser/petitparser.dart';
 import 'package:logging/logging.dart';
 
@@ -53,10 +54,6 @@ enum Dynamic {
   ff,
   fff,
   dd
-//  dim,
-//  decresc,
-//  cresc,
-//  dynamicRamp
 }
 
 // Are these velocity numbers from 0 to 127?  Assume so.
@@ -78,103 +75,134 @@ enum Dynamic {
 // A flam is maybe an increase of 6, a drag increases by 10 (of course with a note cap of 127).
 // Grace notes are recorded with their principle notes, so there are no separate grace notes.  If there were, they'd be
 // at an absolute level of about 10 (for 2/3 stroke ruffs and maybe flams, but not drags)
+// int dynamicToVelocity(Dynamic dynamic) {
+//   var velocity = 0;
+//   switch (dynamic) {
+//     // do we want a linear ramp up, or should it be more curved?  Maybe exponential?
+//     // ppp and pp and even p are about as quiet as you can get.  Very little difference.
+//     // but mf, f, ff, fff are big differences.  So, yes, I think exponential.
+//     // There are 8 levels, and the softest seems barely audible at 5.  So we want to go
+//     // to close to the max at fff, but still leave room for accents.  But accents
+//     // probably mean different amounts of increase depending on what level you're at.
+//     // If you're at a lowlevel, accents mean more than if you're at a high level.
+//     // So accents really should not be a constant numerical addition.
+//     // And there are 3 accent levels currently at: +16, +32, +60
+//     // The accent levels seem too high.  A regular accent at mf might jump it to ff,
+//     // right?  Maybe from p to f,
+//     // Anyway, accents should be calculated based on dynamic level, not a constant.
+//     // y = 1.75 * x^2 + 5
+//     // Actually a different curve would be better, more of a sine wave.  Possibly something like
+//     // 16 * (4.0 * sin(((pi / 2) * ctr - 6.3)/4.0) + 4.0)   where x is ppp through fff in equal units.
+//     // Or maybe   20 * (3.0 * sin(((pi / 2) * ctr - 6.3)/4.0) + 3.0)    (a=3, h=6.3 b=4, k=3)
+//     // Or maybe I'm wrong and it should be a parabola.  Yeah, I think that's probably better.  Change back later
+//     // Modified from https://www.desmos.com/calculator/w9jrdpvsmk with a=4, h=6.3, b=4, k=4
+//     case Dynamic.ppp:
+//       velocity = 4; // start at 10?  5?
+//       break;
+//     case Dynamic.pp:
+//       // velocity = 7;
+//       velocity = 10;
+//       break;
+//     case Dynamic.p:
+//       // velocity = 14;
+//       velocity = 28;
+//       break;
+//     case Dynamic.mp:
+//       // velocity = 26;
+//       velocity = 54;
+//       break;
+//     case Dynamic.mf:
+//       // velocity = 42;
+//       velocity = 78;
+//       break;
+//     case Dynamic.f:
+//       // velocity = 62;
+//       // velocity = 66;
+//       velocity = 98;
+//       break;
+//     case Dynamic.ff:
+//       // velocity = 92;
+//       velocity = 112;
+//       break;
+//     case Dynamic.fff:
+//       // velocity = 118;
+//       velocity = 118; // is 128 legal?
+//       break;
+//     // case Dynamic.ppp:
+//     //   velocity = 6; // start at 10?  5?
+//     //   break;
+//     // case Dynamic.pp:
+//     //   velocity = 22;
+//     //   break;
+//     // case Dynamic.p:
+//     //   velocity = 38;
+//     //   break;
+//     // case Dynamic.mp:
+//     //   velocity = 54;
+//     //   break;
+//     // case Dynamic.mf:
+//     //   velocity = 70;
+//     //   break;
+//     // case Dynamic.f:
+//     //   velocity = 86;
+//     //   break;
+//     // case Dynamic.ff:
+//     //   velocity = 102;
+//     //   break;
+//     // case Dynamic.fff:
+//     //   velocity = 117;
+//     //   break;
+// //    case Dynamic.ramp:
+// //      break;
+// //    case Dynamic.ppp:
+// //      velocity = 16; // start at 10?  5?
+// //      break;
+// //    case Dynamic.pp:
+// //      velocity = 32;
+// //      break;
+// //    case Dynamic.p:
+// //      velocity = 48;
+// //      break;
+// //    case Dynamic.mp:
+// //      velocity = 64;
+// //      break;
+// //    case Dynamic.mf:
+// //      velocity = 80;
+// //      break;
+// //    case Dynamic.f:
+// //      velocity = 96;
+// //      break;
+// //    case Dynamic.ff:
+// //      velocity = 112;
+// //      break;
+// //    case Dynamic.fff:
+// //      velocity = 127; // no room for accents?
+// //      break;
+// //    case Dynamic.ramp:
+// //      break;
+//     default:
+//       log.info('What kine dynamic was that? $dynamic');
+//       break;
+//   }
+//   return velocity;
+// }
+
+// Let's maybe just use the parabolic equation
+// velocity = 1.7 * dynamic^2 + 5
 int dynamicToVelocity(Dynamic dynamic) {
-  var velocity = 0;
-  switch (dynamic) {
-    // do we want a linear ramp up, or should it be more curved?  Maybe exponential?
-    // ppp and pp and even p are about as quiet as you can get.  Very little difference.
-    // but mf, f, ff, fff are big differences.  So, yes, I think exponential.
-    // There are 8 levels, and the softest seems barely audible at 5.  So we want to go
-    // to close to the max at fff, but still leave room for accents.  But accents
-    // probably mean different amounts of increase depending on what level you're at.
-    // If you're at a lowlevel, accents mean more than if you're at a high level.
-    // So accents really should not be a constant numerical addition.
-    // And there are 3 accent levels currently at: +16, +32, +60
-    // The accent levels seem too high.  A regular accent at mf might jump it to ff,
-    // right?  Maybe from p to f,
-    // Anyway, accents should be calculated based on dynamic level, not a constant.
-    // y = 1.75 * x^2 + 5
-    case Dynamic.ppp:
-      velocity = 5; // start at 10?  5?
-      break;
-    case Dynamic.pp:
-      velocity = 7;
-      break;
-    case Dynamic.p:
-      velocity = 14;
-      break;
-    case Dynamic.mp:
-      velocity = 26;
-      break;
-    case Dynamic.mf:
-      velocity = 42;
-      break;
-    case Dynamic.f:
-      velocity = 62;
-      break;
-    case Dynamic.ff:
-      velocity = 88;
-      break;
-    case Dynamic.fff:
-      velocity = 118;
-      break;
-    // case Dynamic.ppp:
-    //   velocity = 6; // start at 10?  5?
-    //   break;
-    // case Dynamic.pp:
-    //   velocity = 22;
-    //   break;
-    // case Dynamic.p:
-    //   velocity = 38;
-    //   break;
-    // case Dynamic.mp:
-    //   velocity = 54;
-    //   break;
-    // case Dynamic.mf:
-    //   velocity = 70;
-    //   break;
-    // case Dynamic.f:
-    //   velocity = 86;
-    //   break;
-    // case Dynamic.ff:
-    //   velocity = 102;
-    //   break;
-    // case Dynamic.fff:
-    //   velocity = 117;
-    //   break;
-//    case Dynamic.ramp:
-//      break;
-//    case Dynamic.ppp:
-//      velocity = 16; // start at 10?  5?
-//      break;
-//    case Dynamic.pp:
-//      velocity = 32;
-//      break;
-//    case Dynamic.p:
-//      velocity = 48;
-//      break;
-//    case Dynamic.mp:
-//      velocity = 64;
-//      break;
-//    case Dynamic.mf:
-//      velocity = 80;
-//      break;
-//    case Dynamic.f:
-//      velocity = 96;
-//      break;
-//    case Dynamic.ff:
-//      velocity = 112;
-//      break;
-//    case Dynamic.fff:
-//      velocity = 127; // no room for accents?
-//      break;
-//    case Dynamic.ramp:
-//      break;
-    default:
-      log.info('What kine dynamic was that? $dynamic');
-      break;
+  if (dynamic == Dynamic.dd) {
+    print('stop here, do we want to use a Dynamic.dd for a value to convert?');
   }
-  return velocity;
+  print('Parabolic2');
+  num newVelocity = (10 * 0.19 * (dynamic.index + 1) * (dynamic.index + 1)).round();
+  print('\t\t\t\tHey, dynamic $dynamic, with index ${dynamic.index} gets a velocity of ${newVelocity}');
+  return newVelocity;
+
+  // Parabolic1:
+  // num newVelocity = (20 * (3.0 * sin(((pi / 2) * (dynamic.index+1) - 6.3)/4.0) + 3.0)).round();
+  // print('\t\t\t\tHey, dynamic $dynamic, with index ${dynamic.index} gets a velocity of ${newVelocity}');
+  // return newVelocity;
+  // //return (1.7 * dynamic.index * dynamic.index + 5).round();
 }
 
 Dynamic stringToDynamic(dynamicString) {
@@ -226,34 +254,6 @@ Parser dynamicRampParser = (
   log.finest('Leaving dynamicRampParser returning a DynamicRamp object $dynamicRamp');
   return dynamicRamp;
 });
-//Parser dynamicRampParser = (
-//    string('\\>') |
-//    string('\\<') |
-//    string('\\dim') |
-//    string('\\decresc') |
-//    string('\\cresc')
-//).trim().map((value) {
-//  log.fine('In RampParser');
-//  Ramp dynamicRamp;
-//  switch (value) {
-//    case '\\>':
-//    case '\\<':
-//    case '\\cresc':
-//    case '\\dim':
-//    case '\\decresc':
-//      dynamicRamp =  Ramp();
-//      break;
-//  }
-//  log.fine('Leaving RampParser returning value $dynamicRamp');
-//  return dynamicRamp;
-//});
-
-/////
-///// DynamicOrRampParser
-/////
-//Parser dynamicOrRampParser = (dynamicParser | dynamicRampParser).trim().map((value){
-//
-//});
 
 ///
 /// DynamicParser
@@ -268,11 +268,6 @@ Parser dynamicParser = (
     string('/ff') |
     string('/f') |
     string('/dd')
-//    string('\\>') |
-//    string('\\<') |
-//    string('\\dim') |
-//    string('\\decresc') |
-//    string('\\cresc')
 ).trim().map((value) { // trim?  Yes!  Makes a difference
   log.finest('In Dynamicparser');
   Dynamic dynamic;
@@ -304,14 +299,6 @@ Parser dynamicParser = (
     case '/dd':
       dynamic =  Dynamic.dd;
       break;
-//    case '\\>':
-//    case '\\<':
-//    case '\\cresc':
-//    case '\\dim':
-//    case '\\decresc':
-////      dynamic =  Ramp;
-//      dynamic =  Dynamic.ramp;
-//      break;
   }
   //log.info('Leaving DynamicParser returning value $dynamic');
   return dynamic;
