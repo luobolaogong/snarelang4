@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 import 'package:petitparser/petitparser.dart';
 import '../snarelang4.dart';
 import 'package:logging/logging.dart';
@@ -489,6 +490,26 @@ class Score {
   // Note that because we already did note ramp calculations to set velocities, these supplemental velocity boosts might be off.')
   num adjustVelocityByDynamicAndArticulation(Note note) {
     //print('\t\tHEY HEY HEY HERE COMES AN ADJUSTMENT BY ARTICULATION BASED ON CURRENT DYNAMIC!');
+    // Figure this out later.  Make a function that adds the right amount, or recalculates the velocity.
+    //     print('\t\t\t\tnote dynamic: ${note.dynamic}, which has index of ${note.dynamic.index}');
+    //     print('\t\t\t\tand that has a dynamic value of ${dynamicToVelocity(note.dynamic)}');
+    //     print('\t\t\t\twhich is this percentage of the loudest/127: ${dynamicToVelocity(note.dynamic) * 100 / 127}');
+    //     num newVelocity = 0;
+    //     num whatever;
+    // switch (note.articulation) {
+    //   case NoteArticulation.tenuto:
+    //     var whatever = note.dynamic.index + 1;
+    //     newVelocity = dynamicToVelocity(Dynamic.values[whatever]);
+    //     break;
+    //   case NoteArticulation.accent:
+    //     var whatever = max(note.dynamic.index + 2, Dynamic.values.length);
+    //     newVelocity = dynamicToVelocity(Dynamic.values[whatever]);
+    //     break;
+    //   case NoteArticulation.tenuto:
+    //     var whatever = note.dynamic.index + 1;
+    //     newVelocity = dynamicToVelocity(Dynamic.values[whatever]);
+    //     break;
+    // }
     num newVelocity;
     switch (note.dynamic) {
       case Dynamic.ppp:

@@ -178,127 +178,149 @@ class Note {
 
     // Maybe this should be put into Note, even though it's a MIDI thing.
     //var noteNumber;
+    // This stuff should be in a table, and be a mapping
     switch (noteType) {
       case NoteType.tapRight:
-        noteNumber = 60;
-        if (voice == Voice.unison) { // get rid of this voice stuff and just make the unison its own noteType
-          noteNumber = 20;
-        }
+        // noteNumber = 60;
+        noteNumber = 127;
+        // if (voice == Voice.unison) { // get rid of this voice stuff and just make the unison its own noteType
+        //   noteNumber = 20;
+        // }
         break;
     // case NoteType.tapUnison:
     //   noteNumber = 20;
     //   break;
       case NoteType.tapLeft:
-        noteNumber = 70;
-        if (voice == Voice.unison) {
-          noteNumber = 30;
-        }
+        noteNumber = 126;
+        // noteNumber = 70;
+        // if (voice == Voice.unison) {
+        //   noteNumber = 30;
+        // }
         break;
     // case NoteType.flamUnison:
     //   noteNumber = 21;
     //   break;
       case NoteType.flamRight:
-        noteNumber = 61;
-        if (voice == Voice.unison) {
-          noteNumber = 21;
-        }
+        noteNumber = 125;
+        // noteNumber = 61;
+        // if (voice == Voice.unison) {
+        //   noteNumber = 21;
+        // }
         // test.  A positive number pushes the flam back so it's late.  But a neg number isn't allowed,
         // so seems that the previous note's duration has to be shortened.  But what if a flam is the first
         // note of a score?  Nothing before it to shave off.  Can the sound font compensate for this?????
         // graceOffset = 1234;
         break;
       case NoteType.flamLeft:
-        noteNumber = 71;
-        if (voice == Voice.unison) {
-          noteNumber = 31;
-        }
+        noteNumber = 124;
+        // noteNumber = 71;
+        // if (voice == Voice.unison) {
+        //   noteNumber = 31;
+        // }
         // graceOffset = 1234; // test
         break;
     // case NoteType.dragUnison:
     //   noteNumber = 21; // wrong, but don't have a drag recorded yet by SLOT
     //   break;
       case NoteType.dragRight:
-        noteNumber = 72; // temp until find out soundfont problem
-        if (voice == Voice.unison) {
-          noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
-        }
+        noteNumber = 123;
+        // noteNumber = 72; // temp until find out soundfont problem
+        // if (voice == Voice.unison) {
+        //   noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
+        // }
         break;
       case NoteType.dragLeft:
-        noteNumber = 72;
-        if (voice == Voice.unison) {
-          noteNumber = 31;// wrong, but don't have a drag recorded yet by SLOT
-        }
+        noteNumber = 122;
+        // noteNumber = 72;
+        // if (voice == Voice.unison) {
+        //   noteNumber = 31;// wrong, but don't have a drag recorded yet by SLOT
+        // }
         break;
       case NoteType.tenorRight:
-        noteNumber = 16;
+        noteNumber = 109;
+        // noteNumber = 16;
         break;
       case NoteType.tenorLeft:
-        noteNumber = 16;
+        noteNumber = 108;
+        // noteNumber = 16;
         break;
       case NoteType.bassRight:
-        noteNumber = 10; // temp until find out soundfont problem
+        noteNumber = 111; // temp until find out soundfont problem
+        // noteNumber = 10; // temp until find out soundfont problem
         break;
       case NoteType.bassLeft:
-        noteNumber = 10;
+        noteNumber = 110;
+        // noteNumber = 10;
         break;
     // case NoteType.rollUnison:
     //   noteNumber = 23; // this one is looped.  This is called RollSlot
     //   break;
       case NoteType.buzzRight:
-        noteNumber = 63;
-        if (loopBuzzes) {
-          noteNumber = 67; // this one is looped but not quick enough?
-        }
-        if (voice == Voice.unison) {
-          noteNumber = 23;
-        }
+        noteNumber = 121;
+        // noteNumber = 63;
+        // if (loopBuzzes) {
+        //   noteNumber = 67; // this one is looped but not quick enough?
+        // }
+        // if (voice == Voice.unison) {
+        //   noteNumber = 23;
+        // }
         break;
       case NoteType.buzzLeft:
       // If loop, add 4 to be 77
-        noteNumber = 73;
-        if (loopBuzzes) {
-          noteNumber = 77; // this one is looped, but not quick enough????
-        }
-        if (voice == Voice.unison) {
-          noteNumber = 33;
-        }
+        noteNumber = 120;
+        // noteNumber = 73;
+        // if (loopBuzzes) {
+        //   noteNumber = 77; // this one is looped, but not quick enough????
+        // }
+        // if (voice == Voice.unison) {
+        //   noteNumber = 33;
+        // }
         break;
     // Later add SLOT Tuzzes, they have lots in the recording
-      case NoteType.tuzzLeft:
-        noteNumber = 74;
-        if (voice == Voice.unison) {
-          noteNumber = 34;// wrong
-        }
-        break;
       case NoteType.tuzzRight:
-        noteNumber = 64;
-        if (voice == Voice.unison) {
-          noteNumber = 24;// wrong
-        }
+        noteNumber = 119;
+        // noteNumber = 64;
+        // if (voice == Voice.unison) {
+        //   noteNumber = 24;// wrong
+        // }
         break;
-      case NoteType.ruff2Left:
-        noteNumber = 75;
+      case NoteType.tuzzLeft:
+        noteNumber = 118;
+        // noteNumber = 74;
+        // if (voice == Voice.unison) {
+        //   noteNumber = 34;// wrong
+        // }
         break;
       case NoteType.ruff2Right:
-        noteNumber = 65;
+        noteNumber = 117;
+        // noteNumber = 65;
         break;
-      case NoteType.ruff3Left:
-        noteNumber = 76;
+      case NoteType.ruff2Left:
+        noteNumber = 116;
+        // noteNumber = 75;
         break;
       case NoteType.ruff3Right:
-        noteNumber = 66;
+        noteNumber = 115;
+        // noteNumber = 66;
+        break;
+      case NoteType.ruff3Left:
+        noteNumber = 114;
+        // noteNumber = 76;
         break;
       case NoteType.roll:
-        noteNumber = 40;
-        if (voice == Voice.unison) {
-          noteNumber = 37;// wrong
-        }
+        noteNumber = 113;
+        // noteNumber = 40;
+        // if (voice == Voice.unison) {
+        //   noteNumber = 37;// wrong
+        // }
         break;
       case NoteType.met: // new
-        noteNumber = 1;
+        // noteNumber = 1;
+        noteNumber = 112;
         break;
       case NoteType.rest:
-        noteNumber = 99; // see if this helps stop blowups when writing
+        // noteNumber = 99; // see if this helps stop blowups when writing
+        noteNumber = 0;
         break;
       default:
         log.fine('noteOnNoteOff, What the heck was that note? $noteType');
