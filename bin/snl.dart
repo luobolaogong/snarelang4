@@ -101,7 +101,7 @@ void main(List<String> arguments) {
   // Create Midi tracks.
   var midiTracks = <List<MidiEvent>>[];
 
-  // What?  We really don't need to do this?  Makes no difference?
+  // // What?  We really don't need to do this?  Makes no difference?
   // var timingTrackZero = midi.createTimingTrackZero(score.elements, overrideTimeSig, overrideTempo);
   // midiTracks.add(timingTrackZero);
 
@@ -169,7 +169,14 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   // to put a tempoEvent in the midi output
   log.finer('doThePhases(), adding  a few elements at the start, like timesig and tempo, before adjusting for grace notes.');
   log.finest('doThePhases(), tempo to use for adding a couple events at the start, is ${commandLine.tempo} which WILL NOT be scaled next.');
-  score.elements.insert(0, commandLine.tempo); // yes in this order
+
+  // Maybe should keep trackof initial timeSig and tempo, from command line or first in the file.  Really, it should be at the head of the file
+  // to know how to do notes.  and every time you hit a /tempo mark, use the latest /timesig value, not the one from the command line.
+  // Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig); // just a test.  There's no guarantee commandLine.timeSig or tempo will have values that represent what's in the file
+
+  score.correctTripletTempos(commandLine);
+  // maybe don't need to do the following two lines if correct tempos above, but probably do
+  score.elements.insert(0, commandLine.tempo); // yes in this order     I dislike writing a tempo and timeSig if another pair are coming right after it.
   score.elements.insert(0, commandLine.timeSig);
   log.finer('Added elements ${commandLine.timeSig}, ${commandLine.tempo} to head of list of elements.');
 

@@ -16,8 +16,8 @@ class NoteDuration { // change this to Duration if possible, which conflicts, I 
 
   NoteDuration() {
     //print('in NoteDuration() constructor and will set firstNumber and secondNumber');
-    firstNumber = DefaultFirstNumber;
-    secondNumber = DefaultSecondNumber;
+    // firstNumber = DefaultFirstNumber; // removing the setting of default values for now, because seems cleaner to use null, and not assume anything 11/4/2020
+    // secondNumber = DefaultSecondNumber;
   }
 //  num firstNumber; // should be an int?
 //  num secondNumber;
@@ -159,6 +159,7 @@ class Note {
       case NoteType.roll:
         break;
       case NoteType.met:
+        //noteType = NoteType.met;
         break;
       case NoteType.rest:
         break;

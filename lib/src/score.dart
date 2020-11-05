@@ -175,7 +175,21 @@ class Score {
     log.finest('leaving Score.applyShorthands()\n');
     return;
   }
-
+  void correctTripletTempos(CommandLine commandLine) {
+    latestTimeSig = commandLine.timeSig;
+    for (var element in elements) {
+      if (element is Tempo) {
+        Tempo.fillInTempoDuration(element, latestTimeSig); // Yes, I know latestTimeSig is a global, just a test.  There's no guarantee commandLine.timeSig or tempo will have values that represent what's in the file
+        continue;
+      }
+      if (element is TimeSig) {
+        latestTimeSig = element; // latestTimeSig is a global defined in timesig.dart file
+        continue;
+      }
+      continue;
+    }
+    return;
+  }
   // This is a big one.  Maybe break it up?
   // Looks like several phases to this.
   void applyDynamics() {

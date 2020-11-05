@@ -223,6 +223,9 @@ class CommandLine {
       _timeSig = TimeSig();
       _timeSig.numerator = int.parse(sigParts[0]);
       _timeSig.denominator = int.parse(sigParts[1]);
+      Tempo.fillInTempoDuration(_tempo, _timeSig);
+      // _tempo.noteDuration.firstNumber ??= NoteDuration.DefaultFirstNumber;
+      // _tempo.noteDuration.secondNumber ??= NoteDuration.DefaultSecondNumber;
     }
 
     if (argResults[CommandLine.loopBuzzesMapIndex]) { // how valuable is this?
@@ -358,7 +361,7 @@ class CommandLine {
     else {
       print('Failed to parse tempo correctly: -->$noteTempoString<--');
     }
-    //print('parseTempo is returning tempo: $tempo');
+    //print('parseTempo is returning tempo: $tempo');  check to insure duration f and s are not null here????
     return tempo;
   }
 

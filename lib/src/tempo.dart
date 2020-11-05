@@ -147,16 +147,15 @@ class Tempo {
   // }
   // static Tempo watchOutDuplicateCode(Tempo overrideTempo, TimeSig overrideTimeSig) {
   static void fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
+    log.finest('fillInTempoDuration(), gunna make sure tempo noteDureation first and second have values');
     if (modifyThisTempo.noteDuration.firstNumber == null || modifyThisTempo.noteDuration.secondNumber == null) {
       if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
         modifyThisTempo.noteDuration.firstNumber = 8;
-        modifyThisTempo.noteDuration.secondNumber = 3;
-        print('ever happen?????  maven!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+        modifyThisTempo.noteDuration.secondNumber = 3;  // the beat for 6/8, 9/8, 12/8, 3/8 is a dotted quarter, which is 8:3
       }
       else {
         modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
         modifyThisTempo.noteDuration.secondNumber ??= 1;
-        print('ever maven happens?????????????????????????????????????????????????????????????????????????????????????????????');
       }
     }
     //return modifyThisTempo;

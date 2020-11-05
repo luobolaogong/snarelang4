@@ -7,6 +7,7 @@ import '../snarelang4.dart';
 /// Midi requires numerator and denominator metronome (18) and thirtyseconds (8)
 ///
 
+TimeSig latestTimeSig; // used in score.dart
 
 class TimeSig {
   static final DefaultNumerator = 4;

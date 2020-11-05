@@ -250,7 +250,7 @@ class Midi {
   //   return metronomeTrackEventsList;
   // }
 
-
+  // this is also not called
   // Maybe will try to do the full track all at once, and not just the initial timesig and tempo, and filling in the rest later.  Thus the entire scoreElements
   // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) { // check on "override" tempo.  Default tempo?
   List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
@@ -464,7 +464,7 @@ class Midi {
 
         //Tempo.fillInTempoDuration(tempo, overrideTimeSig); // check on this.  If already has duration, what happens?
 
-        addTempoChangeToTrackEventsList(tempo, trackEventsList); // also add to trackzero?
+        addTempoChangeToTrackEventsList(tempo, trackEventsList); // also add to trackzero?   hey, hey, hey, hey, tempo can have a duration first/second of null!!!!!!
         continue;
       }
       if (element is TimeSig) { // THIS IS WRONG.  SHOULD BE 2/2 for that tune in 2/2  not 2/4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
