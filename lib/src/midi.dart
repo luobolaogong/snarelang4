@@ -253,10 +253,17 @@ class Midi {
   // this is also not called
   // Maybe will try to do the full track all at once, and not just the initial timesig and tempo, and filling in the rest later.  Thus the entire scoreElements
   // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) { // check on "override" tempo.  Default tempo?
-  List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
+  // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
+  List<MidiEvent> createTimingTrackZero(List scoreElements, CommandLine commandLine) { // no we don't want command line values, because they default to 4/4 84
+    print('\n\t\tcreateTimingTrackZero(), and commandLine timeSig: ${commandLine.timeSig}, tempo: ${commandLine.tempo}, tempo scalar: ${commandLine.tempoScalar}');
+    print('\t\tSo, tempo should be scaled to be: ${Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar)}');
+    print('\t\tBut if 3/8 time, then tempo should be ${Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig)}');
+    var timeSig = commandLine.timeSig;
+    var tempo = commandLine.tempo;
+
     var timingTrackZeroMidiEventList = <MidiEvent>[];
     // Could immediately add the overrideTimeSig and overrideTempo, I suppose.  But if the first non-comment event is a timesig or tempo, could just do those
-    addTimeSigChangeToTrackEventsList(overrideTimeSig, timingTrackZeroMidiEventList);
+    addTimeSigChangeToTrackEventsList(timeSig, timingTrackZeroMidiEventList);
     addTempoChangeToTrackEventsList(tempo, timingTrackZeroMidiEventList);
     for (var element in scoreElements) { // is this right?
       print('element: $element');

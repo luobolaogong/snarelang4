@@ -1,0 +1,89 @@
+// Hawai'i Aloha
+// Lorenzo Lyons
+
+// "Slow Air in 4/4", but written "cut time"
+/time 4/4
+/tempo 2=70
+/track tenor
+/mf
+
+
+
+// Met count in
+1r
+
+// Drums Roll off
+2N . 1N
+2N . 1N
+
+/marker L1
+1r 1r 1r 1r
+
+/marker L2B5
+1r 1r 1r 1r
+
+/marker L3B9
+1r 1r 1r 1r
+
+/marker L4B13
+1r 1r 1r 1r
+
+
+
+
+/marker L5B17
+1r
+1r
+12:5N 12n 4N .
+2N 4N .
+
+/marker L6B21
+1N
+2r 4N .
+1N
+1r
+
+
+/marker L7
+//p /cresc 12N . . . . .  . . . . . . /f
+//decresc 12N . . . . .  . . . . . . /p
+/ppp /cresc 16N . . .   . . . .   . . . .   . . . .      /f
+   /decresc 16N . . .   . . . .   . . . .   . . . .     /p
+1N /mf
+1r
+
+/marker L8
+1r . . .
+
+
+
+
+/marker L5B17Rpt
+1r
+1r
+12:5N 12n 4N .
+2N 4N .
+
+/marker L6B21Rpt
+1N
+2r 4N .
+1N
+1r
+
+
+/marker L7Rpt
+//p /cresc 12N . . . . .  . . . . . . /f
+//decresc 12N . . . . .  . . . . . . /p
+/ppp /cresc 16N . . .   . . . .   . . . .   . . . .      /f
+   /decresc 16N . . .   . . . .   . . . .   . . . .     /p
+
+1N /mf
+1r
+
+/marker L8Rpt
+1r . . .
+
+/marker L8RptRpt
+1r . . .
+
+

@@ -257,6 +257,13 @@ Parser dynamicRampParser = (
 
 ///
 /// DynamicParser
+/// /dd means use the default dynamic, which is the one from the command line.  But
+/// this is a problem when a file has more than one /track per file, or multiple tracks on a
+/// command line, because snare and bass tracks may have been recorded at different volumes.  So
+/// maybe allow a "definition", as in "/dd=ff" whereafter "/dd" would mean "/ff".
+/// I should probably do something like that.  But also dynamics should probably also
+/// be relative, as in /+1 or /-2 or something like that, so that it all depends on
+/// what you start with.  Maybe do this stuff later.
 ///
 Parser dynamicParser = (
     string('/mf') |

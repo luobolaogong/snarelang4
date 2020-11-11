@@ -1,0 +1,88 @@
+// Hawai'i Aloha
+// Lorenzo Lyons
+
+// "Slow Air in 4/4", but written "cut time"
+// Markers taken from pipe score
+/time 4/4
+/tempo 2=70
+/track bass
+/mf
+
+
+// Met count in
+1r
+
+// Drums Roll off
+2B . 1B
+2B . 1B
+
+/mf
+
+/marker L1
+1r 1r 1r 1r
+
+/marker L2B5
+1r 1r 1r 1r
+
+/marker L3B9
+1r 1r 1r 1r
+
+/marker L4B13
+1r 1r 1r   2r 4B .
+
+
+/marker L5B17
+1B
+1r
+1r
+2r 4B .
+
+/marker L6B21
+1B
+1r
+1r
+2r 4B .
+
+/marker L7B25
+//pp /cresc 12B . . . . .  . . . . . . /mf
+//decresc 12B . . . . .  . . . . . . /pp
+/ppp /cresc 16B . . .   . . . .   . . . .   . . . .      /mf
+   /decresc 16B . . .   . . . .   . . . .   . . . .     /ppp
+1B
+1r
+
+/marker L8B29
+/mf
+1r 1r 1r
+2r 4B .
+
+
+
+/marker L5B17Rpt
+1B
+1r
+1r
+2r 4B .
+
+/marker L6B21Rpt
+1B
+1r
+1r
+2r 4B .
+
+/marker L7B25Rpt
+//pp /cresc 12B . . . . .  . . . . . . /mf
+//decresc 12B . . . . .  . . . . . . /pp
+/ppp /cresc 16B . . .   . . . .   . . . .   . . . .      /mf
+   /decresc 16B . . .   . . . .   . . . .   . . . .     /ppp
+1B
+1r
+
+/marker L8B29Rpt
+/mf
+1r 1r 1r
+2r 2r
+
+/marker L8B29RptRpt
+1r 1r 1r 1r
+

@@ -16,6 +16,7 @@
 // teachable.
 
 /track snare
+/dd=ff
 /time 2/4 // these two lines can be in other files too, but must match
 /tempo 70    // Target 70.  Recording is around 68-70
 
@@ -26,111 +27,111 @@
 // "To the right, quick march"
 //4r . . .
 
-/mf
+/f
 
 // Roll off
-/cresc 24Z . . . . .   . . . . . . 2T /fff /mf
-/cresc 24Z . . . . .   . . . . . . 4T /fff /mf   8r 12T 24t
+/cresc 24Z . . . . .   . . . . . . 2T /fff /dd
+/cresc 24Z . . . . .   . . . . . . 4T /fff /dd   8r 12T 24t
 
 
 
 /f
 // Line 1
-/mp /cresc 24Z . . 8t /fff /f  8F 12T 24t
-/mp /cresc 24Z . . . . . 8T /fff /mf .
+/mp /cresc 24Z . . 8t /fff /dd  8F 12T 24t
+/mp /cresc 24Z . . . . . 8T /fff /dd .
 /mp /cresc 24Z . . . . _24t  _40T 20z . _40t 20Z .
-_24t /fff /mf . . /cresc  _40t 20Z .  8T /fff /mf 12T 24t
+_24t /fff /dd . . /cresc  _40t 20Z .  8T /fff /dd 12T 24t
 
 // Line 2
-/mp /cresc 24Z . . 8t  /fff /mf 8F 12T 24t
-/mp /cresc 24Z . . . . . 8T /fff /mf .
+/mp /cresc 24Z . . 8t  /fff /dd 8F 12T 24t
+/mp /cresc 24Z . . . . . 8T /fff /dd .
 12F 24t 24T . ^24T  12t 24F 12t 24t
-/mp /cresc 24Z . . . . .  8T /fff /mf 12T 24t
+/mp /cresc 24Z . . . . .  8T /fff /dd 12T 24t
 
 
 // Repeat of Line 1
-/mp /cresc 24Z . . 8t  /fff /mf 8F 12T 24t
-/mp /cresc 24Z . . . . . 8T /fff /mf .
+/mp /cresc 24Z . . 8t  /fff /dd 8F 12T 24t
+/mp /cresc 24Z . . . . . 8T /fff /dd .
 /mp /cresc 24Z . . . . 24t  _40T 20z . _40t 20Z .
-_24t /fff /mf . . /cresc  _40t 20Z .  8T /fff /mf 12T 24t
+_24t /fff /dd . . /cresc  _40t 20Z .  8T /fff /dd 12T 24t
 
 // Repeat of Line 2
-/mp /cresc 24Z . . 8t /fff /mf  8F 12T 24t
-/mp /cresc 24Z . . . . . 8T /fff /mf .
+/mp /cresc 24Z . . 8t /fff /dd  8F 12T 24t
+/mp /cresc 24Z . . . . . 8T /fff /dd .
 12F 24t 24T . ^24T  12t 24F 12t 24t
-/mp /cresc 24Z . . . . .  8T /fff /mf 24T 12t
+/mp /cresc 24Z . . . . .  8T /fff /dd 24T 12t
 
 
 // Line 3
 12F 24t 12t >30t . . . . >8T
-/mp /cresc 24Z . . 8t  /fff /mf /cresc 24Z . . 24t . .
-8F /fff /mf  12r 24t  /mp /cresc 24Z . . 8t /fff /mf
+/mp /cresc 24Z . . 8t  /fff /dd /cresc 24Z . . 24t . .
+8F /fff /dd  12r 24t  /mp /cresc 24Z . . 8t /fff /dd
 8F /mp /cresc 24Z . .  _40t 20Z . 32T . . .
 
 // Line 4
->12T /fff /mf 24t 12T >30t . . . . >12T >32t
+>12T /fff /dd 24t 12T >30t . . . . >12T >32t
 /cresc 32t . . >32t . . . >32t  >8T /ff 96r 8t     // changed the 24 to a 32 to avoid gap, and had to add 96r
 12F 24 t 24t . >24T  12t 24F 12t 24t
-/mp /cresc 24Z . . . . . 8T /fff /mf 24T 12t
+/mp /cresc 24Z . . . . . 8T /fff /dd 24T 12t
 
 
 // Repeat of line 3
 12F 24t 12t >30t . . . . >8T
 /mp /cresc 24Z . . 8t  /fff /mp /cresc 24Z . . 24t . .
-8F /fff /mf 12r 24t  /mp /cresc 24Z . . 8t /fff /mf
-8F /mp /cresc 24Z . .  8F /fff /mf 12T 24t
+8F /fff /dd 12r 24t  /mp /cresc 24Z . . 8t /fff /dd
+8F /mp /cresc 24Z . .  8F /fff /dd 12T 24t
 
 // repeat of line 2
-/mp /cresc 24Z . . 8t /fff /mf  8F 12T 24t
-/mp /cresc 24Z . . . . . 8T /fff /mf .
+/mp /cresc 24Z . . 8t /fff /dd  8F 12T 24t
+/mp /cresc 24Z . . . . . 8T /fff /dd .
 12F 24t 24T . ^24T  12t 24F 12t 24t
-/mp /cresc 24Z . . . . .  8T /fff /mf 24T 12t
+/mp /cresc 24Z . . . . .  8T /fff /dd 24T 12t
 
 // Line 5
-/fff /mp /cresc _40T 20z . _40t 20Z .  24t . . 8F /fff /mf
+/fff /mp /cresc _40T 20z . _40t 20Z .  24t . . 8F /fff /dd
 /mp /cresc 24Z . . . . .  _40T 20z 20z 24Z . _24t
-_40t 20Z . 24z . 24t  12T /fff /mf 24t 12F >30t
+_40t 20Z . 24z . 24t  12T /fff /dd 24t 12F >30t
 30T . . . /cresc  _40t 20Z . 8t  24Z . 24t
 
 // Line 6
-_40T 20z . _40t 20Z .  24t . . 8F /fff /mf
-/mp /cresc 24Z . . . . . 8T /fff /mf .
+_40T 20z . _40t 20Z .  24t . . 8F /fff /dd
+/mp /cresc 24Z . . . . . 8T /fff /dd .
 12F 24t . . ^24T  12t 24F 12t 24t
 /mp /cresc 24Z . . . . . 8T /fff /mp /cresc 24Z . 24T
 
 // repeat line 5
-_40T 20z . _40t 20Z .  24t . . 8F /fff /mf
+_40T 20z . _40t 20Z .  24t . . 8F /fff /dd
 /mp /cresc 24Z . . . . .  _40T 20z . 24z . 24t
-_40T 20z . 24z . 24t  12T /fff /mf 24t 12F >30t
+_40T 20z . 24z . 24t  12T /fff /dd 24t 12F >30t
 30T . . . /cresc  _40t 20Z . 8t  /fff /mp /cresc 24Z . 24t
 
 // Repeat of Line 6
-_40T 20z . _40t 20Z .  24t . . 8F /fff /mf
-/mp /cresc 24Z . . . . . 8T /fff /mf .
+_40T 20z . _40t 20Z .  24t . . 8F /fff /dd
+/mp /cresc 24Z . . . . . 8T /fff /dd .
 12F 24t . . ^24T  12t 24F 12t 24t
-/mp /cresc 24Z . . . . . 8T /fff /mf 32t . . .
+/mp /cresc 24Z . . . . . 8T /fff /dd 32t . . .
 
 // Line 7
-/cresc  _40t 20Z . 8t /fff /mf  24T . . 8f
+/cresc  _40t 20Z . 8t /fff /dd  24T . . 8f
 4F /mp /cresc 24Z . . . . 24t
-_40T 20z . 24z . >24t  12T 24t 12F >30t /fff /mf
+_40T 20z . 24z . >24t  12T 24t 12F >30t /fff /dd
 30T . . . >12T 24t /mp /cresc 24Z . . 24t . .
 
 // Line 8
-12F /fff /mf /cresc >32t . . . >32t . . . . >8T /fff 96r
-/mp /cresc 24Z . . . . . 24T . . 8f /fff /mf
+12F /fff /dd /cresc >32t . . . >32t . . . . >8T /fff 96r
+/mp /cresc 24Z . . . . . 24T . . 8f /fff /dd
 12F 24t . . ^24T  12t 24F 12t 24t
-/mp /cresc 24Z . . . . . 8T /fff /mf 32T . . .
+/mp /cresc 24Z . . . . . 8T /fff /dd 32T . . .
 
 // Repeat of Line 7
-/cresc  _40t 20Z . 8t /fff /mf  24T . . 8f
+/cresc  _40t 20Z . 8t /fff /dd  24T . . 8f
 4F /mp /cresc 24Z . . . . 24t
-_40T 20z . 24z . >24t  12T /fff /mf 24t 12F >30t
+_40T 20z . 24z . >24t  12T /fff /dd 24t 12F >30t
 30T . . . >12T 24t /mp /cresc 24Z . . 24t . .
 
 // Repeat of Line 8
-12F /fff /mf /cresc >32t . . . >32t . . . . >8T /fff  96r
-/mp /cresc 24Z . . . . . 24T  . . 8f /fff /mf
+12F /fff /dd /cresc >32t . . . >32t . . . . >8T /fff  96r
+/mp /cresc 24Z . . . . . 24T  . . 8f /fff /dd
 12F 24t . . ^24T  12t 24F 12t 24t
 /mp /cresc 24Z . . . . . 8T /fff 8r
 

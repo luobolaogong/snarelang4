@@ -1,0 +1,89 @@
+// Hawai'i Aloha
+// Lorenzo Lyons
+
+// "Slow Air in 4/4", but written "cut time"
+/time 4/4
+/tempo 2=70
+/track snare
+/ff
+
+
+
+
+// Met count in
+1r
+
+// Drums Roll off
+//f /cresc 12Z . . . . .    . . . . . .  2T /fff 2r /ff
+//f /cresc 12Z . . . . .    . . . . . .  2T /fff 2r /ff
+/f /cresc 36Z . .  . . .  . . .    . . .  . . .  . . .    36Z . .  . . .  . . .    . . .  . . .  . . .    2T /fff 2r /ff
+/f /cresc 36Z . .  . . .  . . .    . . .  . . .  . . .    36Z . .  . . .  . . .    . . .  . . .  . . .    2T /fff 2r /ff
+
+// markers will follow pipes score
+/marker L1
+1r 1r 1r 1r
+
+/marker L2
+1r 1r 1r 1r
+
+/marker L3
+1r 1r 1r 1r
+
+/marker L4
+1r 1r 1r
+/mp /cresc 12Z . .  . . .   >20T 10z .  >20t 10Z .
+
+
+/marker L5
+>4T /fff /ff 4r 2r
+1r
+/mp /cresc 12Z . .  . . 12t  20T 10z 10Z  20t 10Z 10z
+20T 10z 10Z  12z . 12t  16T . . .   >4T
+
+/marker L6
+4F /fff /ff 4r 2r
+4r 6r 12t 12T . . 4f
+/mp /cresc 12Z . .  . . . /fff /decresc 12Z . .  . . . /mp
+/ff 4T 6r 12t 4F .
+
+/marker L7
+//mp /cresc 12Z . .  . . .   . . .  . . . /fff
+//decresc 12Z . .  . . .   . . .  . . . /mp
+/mp /cresc 36Z . .  . . .  . . .    . . .  . . .  . . .    36Z . .  . . .  . . .    . . .  . . .  . . .     /fff
+  /decresc 36Z . .  . . .  . . .    . . .  . . .  . . .    36Z . .  . . .  . . .    . . .  . . .  . . .     /mp
+4T 4r 2r
+1r
+
+/marker L8
+/ff
+1r 1r 1r  12Z . .   . . .  /mp /cresc >20T 10z . >20t 10Z .
+
+
+/marker L5Rpt
+>4T /fff /ff 4r 2r
+1r
+/mp /cresc 12Z . .  . . 12t  20T 10z 10Z  20t 10Z 10z
+20T 10z 10Z  12z . 12t  16T . . .   >4T
+
+
+
+
+
+/marker L3Rpt
+4F /fff /ff 4r 2r
+4r 6r 12t 12T . . 4f
+/mp /cresc 12Z . .  . . .  /fff 12Z . .  . . . /mp
+/mf 4T 6r 12t 4F .
+
+/marker L4Rpt
+//mp /cresc 12Z . . . . .  . . . . . . /fff
+//decresc 12Z . . . . .  . . . . . . /mp
+/pp /cresc 36Z . .  . . .  . . .    . . .  . . .  . . .  36Z . .  . . .  . . .    . . .  . . .  . . .  /mf
+ /decresc  36Z . .  . . .  . . .    . . .  . . .  . . .  36Z . .  . . .  . . .    . . .  . . .  . . .  /pp
+4T 4r 2r
+1r
+
+// ralantando
+/marker L5Rpt
+1r 1r 1r  1r
+

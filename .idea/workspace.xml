@@ -19,17 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Again, don't remember.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Tried fixing tempos when timesigs are 3,6,9,12/8">
+      <change afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaBass.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaMet.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaSnare.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaTenor.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/dynamic.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/dynamic.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/tempo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/tempo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/timesig.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/timesig.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tunes/BanjoBreakdown.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BanjoBreakdown.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CaptEwingBass.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CaptEwingBass.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CaptEwingSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CaptEwingSnare.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CaptEwingTenor.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CaptEwingTenor.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +78,7 @@
       <method v="2" />
     </configuration>
     <configuration name="snl" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=tunes/BanjoBreakdown.snl -o midifiles/BanjoBreakdownSnare.mid -d f -l ALL" />
+      <option name="arguments" value="--input=tunes/HawaiiAlohaMet.snl,tunes/HawaiiAlohaSnare.snl,tunes/HawaiiAlohaBass.snl,tunes/HawaiiAlohaTenor.snl -o midifiles/HawaiiAlohaDrums.mid -l ALL" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -173,14 +176,13 @@
       <workItem from="1604268349424" duration="7545000" />
       <workItem from="1604339687685" duration="5779000" />
       <workItem from="1604423139622" duration="10225000" />
-      <workItem from="1604512460824" duration="11246000" />
-    </task>
-    <task id="LOCAL-00001" summary="End of day.  Reorganized and working on static dynamics.">
-      <created>1598082786459</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1598082786459</updated>
+      <workItem from="1604512460824" duration="13772000" />
+      <workItem from="1604597661262" duration="6398000" />
+      <workItem from="1604684422102" duration="599000" />
+      <workItem from="1604949992022" duration="8980000" />
+      <workItem from="1605028554810" duration="11537000" />
+      <workItem from="1605054028403" duration="1242000" />
+      <workItem from="1605113458725" duration="5529000" />
     </task>
     <task id="LOCAL-00002" summary="Seems to work with static dynamics.  Ramps next.">
       <created>1598140905065</created>
@@ -518,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604530370970</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Tried fixing tempos when timesigs are 3,6,9,12/8">
+      <created>1604558221590</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1604558221590</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +546,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added dynamics to snare part to Captain Ewing tune." />
     <MESSAGE value="Played around with Tuzz timing.  In one way it sounds better, but&#10;doesn't teach correctly." />
     <MESSAGE value="Improved tenor parts to not have as many rests/muffles." />
     <MESSAGE value="Started looking at Tiree to fix it." />
@@ -562,17 +570,18 @@
     <MESSAGE value="Looks like dynamics are working now with the /dd thing, and 1st cut of Castle Dangerous." />
     <MESSAGE value="Don't remember what I did." />
     <MESSAGE value="Again, don't remember." />
-    <option name="LAST_COMMIT_MESSAGE" value="Again, don't remember." />
+    <MESSAGE value="Tried fixing tempos when timesigs are 3,6,9,12/8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried fixing tempos when timesigs are 3,6,9,12/8" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="829" y="1010" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604558025051">
+    <state x="1455" y="579" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605118900365">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="829" y="1010" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1604558025051" />
+    <state x="1455" y="579" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1605118900365" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604456887876">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -601,38 +610,38 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2394" y="768" width="401" height="577" key="Github.UntrackedFilesDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1598049414726" />
-    <state width="2863" height="504" key="GridCell.Tab.0.bottom" timestamp="1604557997048">
+    <state width="2293" height="504" key="GridCell.Tab.0.bottom" timestamp="1605119911931">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2863" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1604557997048" />
-    <state width="2863" height="504" key="GridCell.Tab.0.center" timestamp="1604557997048">
+    <state width="2293" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1605119911931" />
+    <state width="2293" height="504" key="GridCell.Tab.0.center" timestamp="1605119911931">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2863" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1604557997048" />
-    <state width="2863" height="504" key="GridCell.Tab.0.left" timestamp="1604557997047">
+    <state width="2293" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1605119911931" />
+    <state width="2293" height="504" key="GridCell.Tab.0.left" timestamp="1605119911931">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2863" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1604557997047" />
-    <state width="2863" height="504" key="GridCell.Tab.0.right" timestamp="1604557997048">
+    <state width="2293" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1605119911931" />
+    <state width="2293" height="504" key="GridCell.Tab.0.right" timestamp="1605119911931">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2863" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1604557997048" />
-    <state width="1609" height="747" key="GridCell.Tab.1.bottom" timestamp="1604557916139">
+    <state width="2293" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1605119911931" />
+    <state width="1609" height="747" key="GridCell.Tab.1.bottom" timestamp="1604655020213">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1609" height="747" key="GridCell.Tab.1.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1604557916139" />
-    <state width="1609" height="747" key="GridCell.Tab.1.center" timestamp="1604557916139">
+    <state width="1609" height="747" key="GridCell.Tab.1.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1604655020213" />
+    <state width="1609" height="747" key="GridCell.Tab.1.center" timestamp="1604655020212">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1609" height="747" key="GridCell.Tab.1.center/0.0.3840.2120@0.0.3840.2120" timestamp="1604557916139" />
-    <state width="1609" height="747" key="GridCell.Tab.1.left" timestamp="1604557916138">
+    <state width="1609" height="747" key="GridCell.Tab.1.center/0.0.3840.2120@0.0.3840.2120" timestamp="1604655020212" />
+    <state width="1609" height="747" key="GridCell.Tab.1.left" timestamp="1604655020224">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1609" height="747" key="GridCell.Tab.1.left/0.0.3840.2120@0.0.3840.2120" timestamp="1604557916138" />
-    <state width="1609" height="747" key="GridCell.Tab.1.right" timestamp="1604557916139">
+    <state width="1609" height="747" key="GridCell.Tab.1.left/0.0.3840.2120@0.0.3840.2120" timestamp="1604655020224" />
+    <state width="1609" height="747" key="GridCell.Tab.1.right" timestamp="1604655020213">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1609" height="747" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1604557916139" />
+    <state width="1609" height="747" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1604655020213" />
     <state width="1609" height="747" key="GridCell.Tab.2.bottom" timestamp="1604556202789">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -669,10 +678,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1374" y="809" width="904" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.3840.2120@0.0.3840.2120" timestamp="1603600976917" />
-    <state x="2231" y="1151" width="1609" height="771" key="dock-window-1" timestamp="1604552359168">
+    <state x="2231" y="1349" width="1609" height="771" key="dock-window-1" timestamp="1604599167869">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2231" y="1151" width="1609" height="771" key="dock-window-1/0.0.3840.2120@0.0.3840.2120" timestamp="1604552359168" />
+    <state x="2231" y="1349" width="1609" height="771" key="dock-window-1/0.0.3840.2120@0.0.3840.2120" timestamp="1604599167869" />
     <state x="1850" y="1074" width="1609" height="771" key="dock-window-10" timestamp="1604557936075">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -681,10 +690,14 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1850" y="1074" width="1609" height="771" key="dock-window-11/0.0.3840.2120@0.0.3840.2120" timestamp="1604557936075" />
-    <state x="2231" y="1151" width="1609" height="771" key="dock-window-2" timestamp="1604552359168">
+    <state x="1850" y="1074" width="1609" height="771" key="dock-window-12" timestamp="1604559571349">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2231" y="1151" width="1609" height="771" key="dock-window-2/0.0.3840.2120@0.0.3840.2120" timestamp="1604552359168" />
+    <state x="1850" y="1074" width="1609" height="771" key="dock-window-12/0.0.3840.2120@0.0.3840.2120" timestamp="1604559571349" />
+    <state x="2231" y="1349" width="1609" height="771" key="dock-window-2" timestamp="1604599612655">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="2231" y="1349" width="1609" height="771" key="dock-window-2/0.0.3840.2120@0.0.3840.2120" timestamp="1604599612655" />
     <state x="2231" y="1151" width="1609" height="771" key="dock-window-3" timestamp="1604552783267">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -713,264 +726,13 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1850" y="1074" width="1609" height="771" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1604557936076" />
-    <state x="944" y="914" width="1442" height="592" key="find.popup" timestamp="1604556633893">
+    <state x="944" y="914" width="1442" height="592" key="find.popup" timestamp="1604642416681">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="944" y="914" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1604556633893" />
+    <state x="944" y="914" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1604642416681" />
     <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup" timestamp="1603325506387">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1603325506387" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/dynamic.dart</url>
-          <line>227</line>
-          <option name="timeStamp" value="559" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/dynamic.dart</url>
-          <line>184</line>
-          <option name="timeStamp" value="560" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>414</line>
-          <option name="timeStamp" value="563" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>412</line>
-          <option name="timeStamp" value="572" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>46</line>
-          <option name="timeStamp" value="591" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>54</line>
-          <option name="timeStamp" value="592" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>50</line>
-          <option name="timeStamp" value="594" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>47</line>
-          <option name="timeStamp" value="597" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>41</line>
-          <option name="timeStamp" value="598" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
-          <line>183</line>
-          <option name="timeStamp" value="628" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
-          <line>188</line>
-          <option name="timeStamp" value="629" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
-          <line>190</line>
-          <option name="timeStamp" value="630" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
-          <line>178</line>
-          <option name="timeStamp" value="644" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>536</line>
-          <option name="timeStamp" value="684" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>533</line>
-          <option name="timeStamp" value="685" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>530</line>
-          <option name="timeStamp" value="686" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>539</line>
-          <option name="timeStamp" value="687" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>578</line>
-          <option name="timeStamp" value="688" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>581</line>
-          <option name="timeStamp" value="689" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>584</line>
-          <option name="timeStamp" value="690" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
-          <line>33</line>
-          <option name="timeStamp" value="700" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/dynamic.dart</url>
-          <line>203</line>
-          <option name="timeStamp" value="701" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/dynamic.dart</url>
-          <line>193</line>
-          <option name="timeStamp" value="706" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/tempo.dart</url>
-          <line>150</line>
-          <option name="timeStamp" value="710" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>301</line>
-          <option name="timeStamp" value="711" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>331</line>
-          <option name="timeStamp" value="712" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>514</line>
-          <option name="timeStamp" value="713" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
-          <line>110</line>
-          <option name="timeStamp" value="714" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
-          <line>174</line>
-          <option name="timeStamp" value="715" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>178</line>
-          <option name="timeStamp" value="716" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>181</line>
-          <option name="timeStamp" value="717" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>182</line>
-          <option name="timeStamp" value="718" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>185</line>
-          <option name="timeStamp" value="719" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>186</line>
-          <option name="timeStamp" value="720" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>190</line>
-          <option name="timeStamp" value="721" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
-          <line>176</line>
-          <option name="timeStamp" value="722" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/tempo.dart</url>
-          <line>151</line>
-          <option name="timeStamp" value="723" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/tempo.dart</url>
-          <line>161</line>
-          <option name="timeStamp" value="726" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>535</line>
-          <option name="timeStamp" value="727" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>466</line>
-          <option name="timeStamp" value="728" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/tempo.dart</url>
-          <line>156</line>
-          <option name="timeStamp" value="729" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>495</line>
-          <option name="timeStamp" value="730" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>223</line>
-          <option name="timeStamp" value="731" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>224</line>
-          <option name="timeStamp" value="732" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>203</line>
-          <option name="timeStamp" value="733" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>349</line>
-          <option name="timeStamp" value="734" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>358</line>
-          <option name="timeStamp" value="735" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>364</line>
-          <option name="timeStamp" value="736" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
-          <line>225</line>
-          <option name="timeStamp" value="737" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

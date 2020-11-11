@@ -102,7 +102,7 @@ void main(List<String> arguments) {
   var midiTracks = <List<MidiEvent>>[];
 
   // // What?  We really don't need to do this?  Makes no difference?
-  // var timingTrackZero = midi.createTimingTrackZero(score.elements, overrideTimeSig, overrideTempo);
+  // var timingTrackZero = midi.createTimingTrackZero(score.elements, commandLine);
   // midiTracks.add(timingTrackZero);
 
   // We do want to add the events to the tracks before sending the tracks to the MidiFile/Writer,
