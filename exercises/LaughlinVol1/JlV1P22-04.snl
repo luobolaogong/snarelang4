@@ -1,0 +1,64 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 22, audio recording track 04
+
+/time 4/4
+/tempo 60
+
+/track snare
+/f
+
+/marker Singles with Accents
+1r
+
+// James plays the dotted 16th, 32nds as "12 24"
+/marker L1 Right
+^16T . . .  ^16T . . .  ^16T . . .  ^16T . . .
+^16T . . .  ^16T . . .  ^16T . . .  ^16T . . .
+
+/marker L1 Rpt
+^16T . . .  ^16T . . .  ^16T . . .  ^16T . . .
+^16T . . .  ^16T . . .  ^16T . . .  ^16T . . .
+
+/marker L2 Left
+^16t . . .  ^16t . . .  ^16t . . .  ^16t . . .
+^16t . . .  ^16t . . .  ^16t . . .  ^16t . . .
+
+/marker L2 Rpt
+^16t . . .  ^16t . . .  ^16t . . .  ^16t . . .
+^16t . . .  ^16t . . .  ^16t . . .  ^16t . . .
+
+/marker L3 Dot/Cut Right lead
+^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t
+^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t
+
+/marker L3 Rpt
+^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t
+^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t
+
+
+/marker L4 Dot/Cut Left lead
+^12t 24T 12t 24T  ^12t 24T 12t 24T  ^12t 24T 12t 24T  ^12t 24T 12t 24T
+^12t 24T 12t 24T  ^12t 24T 12t 24T  ^12t 24T 12t 24T  ^12t 24T 12t 24T
+
+/marker L4 Rpt
+^12t 24T 12t 24T  ^12t 24T 12t 24T  ^12t 24T 12t 24T  ^12t 24T 12t 24T
+^12t 24T 12t 24T  ^12t 24T 12t 24T  ^12t 24T 12t 24T  ^12t 24T 12t 24T
+
+/track met
+
+/pp
+
+^8M . ^. . ^. ^. ^. ^.
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+
+

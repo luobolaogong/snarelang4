@@ -1,0 +1,106 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 28, audio recording track 10
+// James' accents are really big compared to the other notes.  Prob should change volume
+// because "^" isn't a big enough accent.  Or reprogram it to be louder
+
+/time 4/4
+/tempo 69
+
+/track snare
+/channel 1
+/mf
+
+/marker Sect4 Paradiddle dot/cut
+1r
+
+/marker A
+^12T 24t 12T 24T  ^12t 24T 12t 24t  ^12T 24t 12T 24T  ^12t 24T 12t 24t
+^12T 24t 12T 24T  ^12t 24T 12t 24t  ^12T 24t 12T 24T  ^12t 24T 12t 24t
+
+/marker A Rpt
+^12T 24t 12T 24T  ^12t 24T 12t 24t  ^12T 24t 12T 24T  ^12t 24T 12t 24t
+^12T 24t 12T 24T  ^12t 24T 12t 24t  ^12T 24t 12T 24T  ^12t 24T 12t 24t
+
+1r
+
+/marker B
+12T ^24t 12T 24T  12t ^24T 12t 24t  12T ^24t 12T 24T  12t ^24T 12t 24t
+12T ^24t 12T 24T  12t ^24T 12t 24t  12T ^24t 12T 24T  12t ^24T 12t 24t
+
+/marker B Rpt
+12T ^24t 12T 24T  12t ^24T 12t 24t  12T ^24t 12T 24T  12t ^24T 12t 24t
+12T ^24t 12T 24T  12t ^24T 12t 24t  12T ^24t 12T 24T  12t ^24T 12t 24t
+
+1r
+
+/marker C
+12T 24t ^12T 24T  12t 24T ^12t 24t  12T 24t ^12T 24T  12t 24T ^12t 24t
+12T 24t ^12T 24T  12t 24T ^12t 24t  12T 24t ^12T 24T  12t 24T ^12t 24t
+
+/marker C Rpt
+12T 24t ^12T 24T  12t 24T ^12t 24t  12T 24t ^12T 24T  12t 24T ^12t 24t
+12T 24t ^12T 24T  12t 24T ^12t 24t  12T 24t ^12T 24T  12t 24T ^12t 24t
+
+1r
+
+/marker D
+12T 24t 12T ^24T  12t 24T 12t ^24t  12T 24t 12T ^24T  12t 24T 12t ^24t
+12T 24t 12T ^24T  12t 24T 12t ^24t  12T 24t 12T ^24T  12t 24T 12t ^24t
+
+/marker D Rpt
+12T 24t 12T ^24T  12t 24T 12t ^24t  12T 24t 12T ^24T  12t 24T 12t ^24t
+12T 24t 12T ^24T  12t 24T 12t ^24t  12T 24t 12T ^24T  12t 24T 12t ^24t
+
+1r
+
+/marker E
+^12T 24t 12T 24T  ^12t 24T 12t 24t  12T ^24t 12T 24T  12t ^24T 12t 24t
+12T 24t ^12T 24T  12t 24T ^12t 24t  12T 24t 12T ^24T  12t 24T 12t ^24t
+
+/marker E Rpt
+^12T 24t 12T 24T  ^12t 24T 12t 24t  12T ^24t 12T 24T  12t ^24T 12t 24t
+12T 24t ^12T 24T  12t 24T ^12t 24t  12T 24t 12T ^24T  12t 24T 12t ^24t
+
+
+
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^12M 24M ^12M 24M  ^8M ^.
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^12M 24M ^12M 24M  ^8M ^.
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^12M 24M ^12M 24M  ^8M ^.
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^12M 24M ^12M 24M  ^8M ^.
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^12M 24M ^12M 24M  ^8M ^.
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

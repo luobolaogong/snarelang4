@@ -46,13 +46,14 @@ class Score {
   num tempoScalar = 1; // new
   //Tempo latestTempo; // new
   Track firstTrack;
+  Channel firstChannel; // not sure at all, just copying what I did with Track
 
   String toString() {
     return 'Score: ${elements.toString()}'; // could do a forEach and collect each element into a string with \n between each
   }
 
   static Result loadAndParse(List<String> scoresPaths, CommandLine commandLine) {
-    print('loadAndParse(), commandLine dynamic is ${commandLine.dynamic}');
+    log.finest('loadAndParse(), commandLine dynamic is ${commandLine.dynamic}');
     //
     // First load the raw score files, one at a time and check for errors and report to help pinpoint syntax error.
     // Also, I guess put it all together so can parse the string?
@@ -75,7 +76,7 @@ class Score {
       //
       // Do an initial parse for validity, exiting if failure, and throw away result no matter what.
       //
-      print('\t\tGunna do an initial parse just to check if its a legal file.');
+      log.finest('\t\tGunna do an initial parse just to check if its a legal file.');
       var result = scoreParser.parse(fileContents);
       if (result.isFailure) {
         log.severe('Failed to parse $filePath. Message: ${result.message}');
@@ -94,7 +95,7 @@ class Score {
     // Parse the score's text elements, notes and other stuff.  The intermediate parse results like Tempo and TimeSig
     // are in the list that is result.value, and processed later.
     //
-    print('\t\there comes the real parse now, since we have a legal file.  I dislike this double thing.');
+    log.finest('\t\there comes the real parse now, since we have a legal file.  I dislike this double thing.');
     var result = scoreParser.parse(scoresStringBuffer.toString());
     if (result.isSuccess) {
       Score score = result.value;
@@ -360,9 +361,9 @@ class Score {
       // }
       if (note.articulation != null) {
         //print('Hey watchit, because we already did note ramp calculations to set velocities, so the following should account for velocities, not dynamics.');
-        print('\t\tthis note has an articulation (${note.articulation}), and dynamic (${note.dynamic}), and it has current velocity of ${note.velocity}');
+        log.finest('\t\tthis note has an articulation (${note.articulation}), and dynamic (${note.dynamic}), and it has current velocity of ${note.velocity}');
         note.velocity = adjustVelocityByDynamicAndArticulation(note);
-        print('\t\tNow it has current velocity of ${note.velocity}');
+        log.finest('\t\tNow it has current velocity of ${note.velocity}');
       }
 
       // This section is questionable.  Should flams be accented normally?
@@ -397,11 +398,11 @@ class Score {
           break;
         case NoteType.tenorLeft:
         case NoteType.tenorRight:
-          note.velocity += 20;
+          note.velocity += 0; // was 20
           break;
         case NoteType.bassLeft:
         case NoteType.bassRight:
-          note.velocity += 40;
+          note.velocity += 0; // was 40
           break;
         case NoteType.roll:
           break;
@@ -464,6 +465,16 @@ class Score {
     }
     return null;
   }
+  Channel scanForFirstChannel() {
+    for (var element in elements) {
+      if (!(element is Channel)) {
+        continue;
+      }
+      firstChannel = element;
+      return firstChannel;
+    }
+    return null;
+  }
 
   // // Is this still needed?  Was it because tempos didn't have durations???????  Now they do????
   // void fixIncompleteTempos(List elements, TimeSig defaultInitialTimeSig, Tempo defaultInitialTempo) {
@@ -492,9 +503,10 @@ class Score {
       if (element is Tempo) {
         var tempo = element as Tempo;
         //print('scaleTempos(), element is currently: $tempo and scalar is ${commandLine.tempoScalar}');
-        tempo = Tempo.scaleThis(tempo, commandLine.tempoScalar); // WHY CALL  THIS IF scalar is 0?
+        tempo = Tempo.scaleThis(tempo, commandLine.tempoScalar); // WHY CALL  THIS IF scalar won't change anything? like 1.0
         element.bpm = tempo.bpm; // this is awkward
-        //print('scaleTempos(), now element is $tempo');
+        print('scaleTempos(), now element is $element');
+        print('really????');
       }
     }
   }
@@ -534,7 +546,7 @@ class Score {
           return note.velocity + 24;
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 34;
+          return note.velocity + 44;
         }
         print('what happened?');
         break;
@@ -594,7 +606,7 @@ class Score {
           return note.velocity + 14;
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 18;
+          return note.velocity + 24; // was 18
         }
         print('what happened?');
         break;
@@ -763,7 +775,7 @@ class Score {
 ///
 /// ScoreParser
 ///
-Parser scoreParser = ((commentParser | markerParser | textParser | trackParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+Parser scoreParser = ((commentParser | markerParser | textParser | trackParser | channelParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
   log.finest('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {
@@ -873,3 +885,39 @@ String trackIdToString(TrackId id) {
       return null;
   }
 }
+
+//import '../snarelang4.dart';
+/// I think the idea here is to be able to insert the keywords '/channel <num>' or
+/// '/chan <num>' or '/program <num>', or '/prog <num>' and that channel
+/// continues on as the only channel being written
+/// to, until either the end of the score, or there's another /channel designation.
+/// The default number is 0.
+class Channel {
+  static const DefaultChannelNumber = 0;
+  int number; // the default should be 0.
+
+  Channel() {
+    number = DefaultChannelNumber;
+  }
+
+  @override
+  String toString() {
+    return 'Channel: num: $number';
+  }
+}
+
+
+
+///
+/// channelParser
+///
+Parser channelParser = (
+    (string('/channel') | string('/chan') | string('/program')).trim()
+    & wholeNumberParser.trim()).trim().map((value) {
+  log.finest('In channelParser and value is -->$value<--');
+  var channel = Channel();
+  channel.number = value[1];
+  log.finest('Leaving channelParser returning value $channel');
+  return channel;
+});
+

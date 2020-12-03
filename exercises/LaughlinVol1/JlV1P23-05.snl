@@ -1,0 +1,98 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 23, audio recording track 05
+
+/time 4/4
+/tempo 60
+
+/track snare
+/mf
+
+/marker Singles with Accents Cont
+1r
+
+// James plays accents really loud
+/marker L1 Groups of 8
+^32T . . . . . . .  ^32T . . . . . . .  ^32T . . . . . . .  ^32T . . . . . . .
+^32T . . . . . . .  ^32T . . . . . . .  ^32T . . . . . . .  ^32T . . . . . . .
+
+/marker L1 Rpt
+^32T . . . . . . .  ^32T . . . . . . .  ^32T . . . . . . .  ^32T . . . . . . .
+^32T . . . . . . .  ^32T . . . . . . .  ^32T . . . . . . .  ^32T . . . . . . .
+
+
+/marker L2 Left
+^32t . . . . . . .  ^32t . . . . . . .  ^32t . . . . . . .  ^32t . . . . . . .
+^32t . . . . . . .  ^32t . . . . . . .  ^32t . . . . . . .  ^32t . . . . . . .
+
+/marker L2 Rpt
+^32t . . . . . . .  ^32t . . . . . . .  ^32t . . . . . . .  ^32t . . . . . . .
+^32t . . . . . . .  ^32t . . . . . . .  ^32t . . . . . . .  ^32t . . . . . . .
+
+/marker 4 & 8 grps
+1r
+
+/marker L3
+^32T . . .  ^32T . . .  ^32T . . . . . . .  ^32T . . . ^32T . . . ^4T
+^32t . . .  ^32t . . .  ^32t . . . . . . .  ^32t . . . ^32t . . . ^4t
+
+/marker L3 Rpt
+^32T . . .  ^32T . . .  ^32T . . . . . . .  ^32T . . . ^32T . . . ^4T
+^32t . . .  ^32t . . .  ^32t . . . . . . .  ^32t . . . ^32t . . . ^4t
+
+/marker L4
+^32T . . . . . . .  ^32T . . . . . . .   ^32T . . .   ^32T . . .  ^4T
+^32t . . . . . . .  ^32t . . . . . . .   ^32t . . .   ^32t . . .  ^4t
+
+/marker L4 Rpt
+^32T . . . . . . .  ^32T . . . . . . .   ^32T . . .   ^32T . . .  ^4T
+^32t . . . . . . .  ^32t . . . . . . .   ^32t . . .   ^32t . . .  ^4t
+
+/marker Accnt UpBt
+1r
+
+/marker L5
+^8T ^32t . . .  ^32t . . . ^8t   ^8T ^32t . . .  ^32t . . . ^8t
+^8t ^32T . . .  ^32T . . . ^8T   ^8t ^32T . . .  ^32T . . . ^8T
+
+/marker L5 Rpt
+^8T ^32t . . .  ^32t . . . ^8t   ^8T ^32t . . .  ^32t . . . ^8t
+^8t ^32T . . .  ^32T . . . ^8T   ^8t ^32T . . .  ^32T . . . ^8T
+
+/marker L6
+32T . . .  ^32T . . .   . . . .  ^32T . . .   . . . .  ^32T . . .  ^4T
+32t . . .  ^32t . . .   . . . .  ^32t . . .   . . . .  ^32t . . .  ^4t
+
+/marker L6 Rpt
+32T . . .  ^32T . . .   . . . .  ^32T . . .   . . . .  ^32T . . .  ^4T
+32t . . .  ^32t . . .   . . . .  ^32t . . .   . . . .  ^32t . . .  ^4t
+
+
+
+
+/track met
+
+/pp
+
+^8M . ^. . ^. ^. ^. ^.
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+^8M . ^. . ^. ^. ^. ^.
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+^8M . ^. . ^. ^. ^. ^.
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+
+

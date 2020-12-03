@@ -1,0 +1,60 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 30, audio recording track 12
+
+/time 4/4
+/tempo 58
+
+/track snare
+/channel 1
+/f
+
+/marker 5StrkRll
+1r
+
+/marker A
+16T . ^8T 16t . ^8t  32T T t t ^8T  32t t T T ^8t
+16Z . ^8T  16z . ^8t  16Z . ^8T  16z . ^8t
+
+/marker A Rpt
+16T . ^8T 16t . ^8t  32T T t t ^8T  32t t T T ^8t
+16Z . ^8T  16z . ^8t  16Z . ^8T  16z . ^8t
+
+1r
+
+/marker B
+32Z . 16T t t  T T t t  32Z . 16T t t  T T t t
+32Z . 16T t 32Z . 16T t T t  32Z . 16T t t ^4T
+32z . 16t T T  t t T T  32z . 16t T T  t t T T
+32z . 16t T 32z . 16t T t T  32z . 16t T T ^4t
+
+/marker B Rpt
+32Z . 16T t t  T T t t  32Z . 16T t t  T T t t
+32Z . 16T t 32Z . 16T t T t  32Z . 16T t t ^4T
+32z . 16t T T  t t T T  32z . 16t T T  t t T T
+32z . 16t T 32z . 16t T t T  32z . 16t T T ^4t
+
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^8M . ^16M . 8M ^16M . ^8M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^8M . ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

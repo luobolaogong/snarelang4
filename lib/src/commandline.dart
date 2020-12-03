@@ -16,9 +16,10 @@ class CommandLine {
   ArgParser argParser;
   ArgResults argResults;
 
-  Tempo _tempo;
+  Tempo _tempo; // should create an object here, but without bpm?
   num _tempoScalar;
   Track _track;
+  Channel _channel;
   Dynamic _dynamic;
   TimeSig _timeSig;
   bool _loopBuzzes = false;
@@ -33,6 +34,7 @@ class CommandLine {
   static final inputFileListMapIndex = 'input'; // -i  --input
   static final outputMidiFilePathMapIndex = 'midiout'; // -o --output  --outmidi
   static final trackMapIndex = 'track'; // -s --track --stave --part --instrument
+  static final channelMapIndex = 'channel'; // -c --channel --chan --program
   static final tempoMapIndex = 'tempo'; // -t, --tempo
   static final tempoScalarMapIndex = 'temposcalar'; // -S? --ts --temposcalar
   static final timeSigMapIndex = 'timesig'; // --timesig --sig
@@ -82,6 +84,9 @@ class CommandLine {
   }
   Track get track {
     return _track;
+  }
+  Channel get channel {
+    return _channel;
   }
   Dynamic get dynamic {
     return _dynamic;
@@ -181,7 +186,7 @@ class CommandLine {
           Logger.root.level = Level.OFF;
           break;
         default:
-          Logger.root.level = Level.OFF;
+          Logger.root.level = Level.INFO;
       }
     }
 
@@ -203,6 +208,7 @@ class CommandLine {
     if (argResults[CommandLine.tempoMapIndex] != null) {
       _tempo = parseTempo(argResults[CommandLine.tempoMapIndex]); // expect either '104' (quarter note assumed) or '8:3=104'
     }
+    _tempo ??= Tempo(); // new 11/25/2020  Why wasn't this done before now?
 
     if (argResults[CommandLine.tempoScalarMapIndex] != null) {
       _tempoScalar = num.parse(argResults[CommandLine.tempoScalarMapIndex]);
@@ -214,16 +220,15 @@ class CommandLine {
     if (argResults[CommandLine.dynamicMapIndex] != null) {
       String dynamicString = argResults[CommandLine.dynamicMapIndex];
       _dynamic = stringToDynamic(dynamicString);
-      print('storeTheResultValues(), just set _dynamic to $_dynamic because either something was set on command line, or it wasnt and we just have the default value, but in any case, its set.');
-
+      log.finest('storeTheResultValues(), just set _dynamic to $_dynamic because either something was set on command line, or it wasnt and we just have the default value, but in any case, its set.');
     }
     if (argResults[CommandLine.timeSigMapIndex] != null) {
-      String sig = argResults[CommandLine.timeSigMapIndex];
+      String sig = argResults[CommandLine.timeSigMapIndex]; // prob default, right?  Don't really want to do it so simply.  What if sig specified before any notes in score?
       List sigParts = sig.split('/');
       _timeSig = TimeSig();
       _timeSig.numerator = int.parse(sigParts[0]);
       _timeSig.denominator = int.parse(sigParts[1]);
-      Tempo.fillInTempoDuration(_tempo, _timeSig);
+      Tempo.fillInTempoDuration(_tempo, _timeSig); // _tempo shouldn't be null.  And why does this return num?
       // _tempo.noteDuration.firstNumber ??= NoteDuration.DefaultFirstNumber;
       // _tempo.noteDuration.secondNumber ??= NoteDuration.DefaultSecondNumber;
     }
@@ -263,7 +268,7 @@ class CommandLine {
 
       ..addOption(CommandLine.tempoMapIndex,
           abbr: 't',
-          defaultsTo: '84', // is this smart?????????  Does it work?
+          defaultsTo: '84', // is this smart?????????  Does it work?  Removing 11/25/2020, must account for nulls elsewhere prob
           help:
           'tempo if none specified in score (eg 64  or  8:3=84)',
           valueHelp: 'bpm or beatDuration=bpm')
@@ -271,10 +276,12 @@ class CommandLine {
       ..addOption(CommandLine.tempoScalarMapIndex,
           // abbr: 't',
           abbr: 'S', // change later.  One letter, right?  Can't use s
-          defaultsTo: '0', // string okay here?
+          // defaultsTo: '0', // string okay here?
+          defaultsTo: '1.0', // string okay here?
           help:
           // 'tempo override in bpm, assuming quarter note is a beat',
-          'tempo scalar percentage.  eg: "-10" for 10% slower',
+          //'tempo scalar percentage.  eg: "-10" for 10% slower',
+          'tempo scalar fraction.  eg: "0.90" for 10% slower',
           valueHelp: 'percent')
 
       ..addOption(CommandLine.dynamicMapIndex,
@@ -289,7 +296,8 @@ class CommandLine {
           hide: true,
           abbr: 'l',
           allowed: ['ALL', 'FINEST', 'FINER', 'FINE', 'CONFIG', 'INFO', 'WARNING', 'SEVERE', 'SHOUT', 'OFF'],
-          defaultsTo: 'OFF',
+          //defaultsTo: 'OFF',
+          defaultsTo: 'INFO',
           help:
           'Set the log level.  This is a hidden optionl',
           valueHelp: 'WARNING')

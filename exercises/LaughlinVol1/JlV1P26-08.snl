@@ -1,0 +1,109 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 26, audio recording track 08
+// James' accents are really big compared to the other notes.  Prob should change volume
+// because "^" isn't a big enough accent.  Or reprogram it to be louder
+
+/time 12/8
+/tempo 92
+
+/track snare
+/channel 1
+/mf
+
+/marker Acct Trip Cont
+8:12r
+/marker Acct2ndNote
+8T ^. .   8t ^. .   8T ^. .   8t ^. .
+8T ^. .   8t ^. .   8T ^. .   8t ^. .
+
+/marker Rpt
+8T ^. .   8t ^. .   8T ^. .   8t ^. .
+8T ^. .   8t ^. .   8T ^. .   8t ^. .
+
+/marker Acct3rdNote
+8:12r
+
+8T . ^.   8t . ^.   8T . ^.   8t . ^.
+8T . ^.   8t . ^.   8T . ^.   8t . ^.
+
+/marker Rpt
+8T . ^.   8t . ^.   8T . ^.   8t . ^.
+8T . ^.   8t . ^.   8T . ^.   8t . ^.
+
+
+/marker Combo 1,2,3
+8:12r
+/marker ExA
+^8T . .   ^8t . .   ^8T . .   ^8t . .
+8T ^. .   8t ^. .   8T ^. .   8t ^. .
+8T . ^.   8t . ^.   8T . ^.   8t . ^.
+^8T . .   ^8t . .   ^8:3T   8:3r
+
+/marker ExA Rpt
+^8T . .   ^8t . .   ^8T . .   ^8t . .
+8T ^. .   8t ^. .   8T ^. .   8t ^. .
+8T . ^.   8t . ^.   8T . ^.   8t . ^.
+^8T . .   ^8t . .   ^8:3T   8:3r
+
+
+/marker ExB
+8:12r
+
+^8T . . ^8t . .   8T . ^. 8t . ^.
+^8T . . ^8t . .   8T ^. . 8t ^. .
+^8T . ^. 8t . ^.   ^8T . ^. 8t . ^.
+^8T . .   ^8t . .   ^8:3T   8:3r
+
+/marker ExB Rpt
+^8T . . ^8t . .   8T . ^. 8t . ^.
+^8T . . ^8t . .   8T ^. . 8t ^. .
+^8T . ^. 8t . ^.   ^8T . ^. 8t . ^.
+^8T . .   ^8t . .   ^8:3T   8:3r
+
+
+
+
+
+/track met
+/channel 2
+
+/mp
+
+>8:3M >8:3M >8M 8M 8M >8:3M
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+>8:3M >8:3M >8M 8M 8M >8:3M
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+^8:3M ^8:3M ^8M ^8M ^8M ^8:3M
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+^8:3M ^8:3M ^8M ^8M ^8M ^8:3M
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . 8:3r
+

@@ -1,0 +1,107 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 34, audio recording track 16
+
+/time 4/4
+/tempo 62
+
+/track snare
+/channel 1
+/f
+
+/marker 13StrkRll
+1r
+
+/marker A
+/f 24Z . . . . . 8T . /cresc 24Z . . . . . ^4T /fff
+/f 24z . . . . . 8t . /fff /decresc 24z . . . . . 4t /f
+/marker A Rpt
+/f 24Z . . . . . 8T . /cresc 24Z . . . . . ^4T /fff
+/f 24z . . . . . 8t . /fff /decresc 24z . . . . . 4t /f
+
+1r
+
+/marker B
+24Z . . . . . >8T  24Z . . . . . >8T >4T
+24z . . . . . >8t  24z . . . . . >8t >4t
+/marker B Rpt
+24Z . . . . . >8T  24Z . . . . . >8T >4T
+24z . . . . . >8t  24z . . . . . >8t >4t
+
+1r
+
+/marker C
+24Z . . . . . 12T 24t 12T 24T 24z . . . . . 4t
+24z . . . . . 12t 24T 12t 24t 24Z . . . . . 4T
+/marker C Rpt
+24Z . . . . . 12T 24t 12T 24T 24z . . . . . 4t
+24z . . . . . 12t 24T 12t 24t 24Z . . . . . 4T
+
+1r
+
+/marker D
+/f ^24:5T 24t  24Z . . 8t /cresc 24Z . . . . . ^4T /fff
+/f ^12T 24t 12T 24T 12t ^24T 12t 24t /cresc 24Z . . . . . ^4T /fff
+
+/marker D Rpt
+/f ^24:5T 24t  24Z . . 8t /cresc 24Z . . . . . ^4T /fff
+/f ^12T 24t 12T 24T 12t ^24T 12t 24t /cresc 24Z . . . . . ^4T /fff
+
+1r
+
+/marker IntroRll
+/f 24T . . . . . . . . . . . ^4T 4r
+/f 24T . . . . . . . . . . . ^4T 4r
+/f 24Z . . . . . . . . . . . ^4T 4r
+/f 24Z . . . . . . . . . . . ^4T 4r
+
+/marker RptIntroRll
+/f 24T . . . . . . . . . . . ^4T 4r
+/f 24T . . . . . . . . . . . ^4T 4r
+/f 24Z . . . . . . . . . . . ^4T 4r
+/f 24Z . . . . . . . . . . . ^4T 4r
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

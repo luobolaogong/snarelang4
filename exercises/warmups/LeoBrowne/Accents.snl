@@ -1,0 +1,291 @@
+// Leo Browne was my first and only teacher of snare drum technique.
+// I believe he learned the style of his day, and we did use the Buddy Rich book for rudiments.
+// But his technique was based on a few different exercises.
+// This accent is about accents.  Should be called Alternating Accents Singles or something.
+
+/track snare
+// Careful of tempos when have different channels?
+/channel 1
+/time  8/4
+/tempo 120
+
+/marker Accents
+4r 4r
+/marker R8
+^16T . . . . . . .
+^16T . . . . . . .
+^16T . . . . . . .
+^16T . . . . . . .
+^16T . . . . . . .
+^16T . . . . . . .
+^16T . . . . . . .
+^16T . . . . . . .
+^4T 4r
+/marker L8
+^16t . . . . . . .
+^16t . . . . . . .
+^16t . . . . . . .
+^16t . . . . . . .
+^16t . . . . . . .
+^16t . . . . . . .
+^16t . . . . . . .
+^16t . . . . . . .
+^4t 4r
+
+/time 7/4
+/marker R7
+^16T . . . . . .
+^16t . . . . . .
+^16T . . . . . .
+^16t . . . . . .
+^16T . . . . . .
+^16t . . . . . .
+^16T . . . . . .
+^16t . . . . . .
+/time 8/4
+^4T 4r
+/time 7/4
+/marker L7
+^16t . . . . . .
+^16T . . . . . .
+^16t . . . . . .
+^16T . . . . . .
+^16t . . . . . .
+^16T . . . . . .
+^16t . . . . . .
+^16T . . . . . .
+/time 8/4
+^4t 4r
+
+/time 6/4
+/marker R6
+^16T . . . . .
+^16T . . . . .
+^16T . . . . .
+^16T . . . . .
+^16T . . . . .
+^16T . . . . .
+^16T . . . . .
+^16T . . . . .
+/time 8/4
+^4T 4r
+/time 6/4
+/marker L6
+^16t . . . . .
+^16t . . . . .
+^16t . . . . .
+^16t . . . . .
+^16t . . . . .
+^16t . . . . .
+^16t . . . . .
+^16t . . . . .
+/time 8/4
+^4t 4r
+
+/time 5/4
+/marker R5
+^16T . . . .
+^16t . . . .
+^16T . . . .
+^16t . . . .
+^16T . . . .
+^16t . . . .
+^16T . . . .
+^16t . . . .
+/time 8/4
+^4T 4r
+/time 5/4
+/marker L5
+^16t . . . .
+^16T . . . .
+^16t . . . .
+^16T . . . .
+^16t . . . .
+^16T . . . .
+^16t . . . .
+^16T . . . .
+/time 8/4
+^4t 4r
+
+/time 7/4
+/marker R4
+^16T . . .
+^16T . . .
+^16T . . .
+^16T . . .
+^16T . . .
+^16T . . .
+^16T . . .
+^16T . . .
+/time 8/4
+^4T 4r
+/time 4/4
+/marker L4
+^16t . . .
+^16t . . .
+^16t . . .
+^16t . . .
+^16t . . .
+^16t . . .
+^16t . . .
+^16t . . .
+/time 8/4
+^4t 4r
+
+/time 3/4
+/marker R3
+^16T . .
+^16t . .
+^16T . .
+^16t . .
+^16T . .
+^16t . .
+^16T . .
+^16t . .
+/time 8/4
+^4T 4r
+/time 3/4
+/marker L3
+^16t . .
+^16T . .
+^16t . .
+^16T . .
+^16t . .
+^16T . .
+^16t . .
+^16T . .
+/time 8/4
+^4t 4r
+
+/time 2/4
+/marker R2
+^16T .
+^16T .
+^16T .
+^16T .
+^16T .
+^16T .
+^16T .
+^16T .
+/time 8/4
+^4T 4r
+/time 2/4
+/marker L2
+^16t .
+^16t .
+^16t .
+^16t .
+^16t .
+^16t .
+^16t .
+^16t .
+/time 8/4
+^4t 4r
+
+/time 1/4
+/marker R2
+^16T
+^16t
+^16T
+^16t
+^16T
+^16t
+^16T
+^16t
+/time 8/4
+^4T 4r
+/time 1/4
+/marker L2
+^16t
+^16T
+^16t
+^16T
+^16t
+^16T
+^16t
+^16T
+/time 8/4
+^4t 4r
+
+
+
+
+
+
+/track met
+/channel 2
+/mp
+
+/time  8/4
+//tempo 120
+
+^8M ^8M ^16M ^16M ^8M
+4M . . .   . . . .   . . . .   . . . .
+^8M ^8M ^16M ^16M ^8M
+4M . . .   . . . .   . . . .   . . . .
+
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 7/4
+4M . . .   . . . .   . . . .   . .
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 7/4
+4M . . .   . . . .   . . . .   . .
+
+/time  8/4
+^8M ^8M ^16M ^16M ^8M
+/time 6/4
+4M . . .   . . . .   . . . .
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 6/4
+4M . . .   . . . .   . . . .
+
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 5/4
+4M . . .   . . . .   . .
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 5/4
+4M . . .   . . . .   . .
+
+/time  8/4
+^8M ^8M ^16M ^16M ^8M
+/time 4/4
+4M . . .   . . . .
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 4/4
+4M . . .   . . . .
+
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 3/4
+4M . . .   . .
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 3/4
+4M . . .   . .
+
+/time  8/4
+^8M ^8M ^16M ^16M ^8M
+/time 2/4
+4M . . .
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 2/4
+4M . . .
+
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 1/4
+4M .
+/time 8/4
+^8M ^8M ^16M ^16M ^8M
+/time 1/4
+4M .
+
+1M
+

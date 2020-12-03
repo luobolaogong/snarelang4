@@ -6,15 +6,19 @@
 /time 4/4
 /tempo 2=70
 /track bass
-/mf
+/channel 5
+/mp
+
 
 
 // Met count in
 1r
 
 // Drums Roll off
+/mf
 2B . 1B
 2B . 1B
+
 
 /mf
 
@@ -28,25 +32,23 @@
 1r 1r 1r 1r
 
 /marker L4B13
-1r 1r 1r   2r 4B .
+1r 1r 1r   2r /mp 4B /mf 4B
 
 
 /marker L5B17
-1B
+/f 1B
 1r
 1r
-2r 4B .
+2r /mp 4B /mf .
 
 /marker L6B21
-1B
+/f 1B
 1r
 1r
-2r 4B .
+2r /mp 4B /mf .
 
 /marker L7B25
-//pp /cresc 12B . . . . .  . . . . . . /mf
-//decresc 12B . . . . .  . . . . . . /pp
-/ppp /cresc 16B . . .   . . . .   . . . .   . . . .      /mf
+/ppp /cresc 16B . . .   . . . .   . . . .   . . . .      /f
    /decresc 16B . . .   . . . .   . . . .   . . . .     /ppp
 1B
 1r
@@ -54,26 +56,24 @@
 /marker L8B29
 /mf
 1r 1r 1r
-2r 4B .
+2r /mp 4B /mf .
 
 
 
 /marker L5B17Rpt
-1B
+/f 1B
 1r
 1r
-2r 4B .
+2r /mp 4B /mf .
 
 /marker L6B21Rpt
-1B
+/f 1B
 1r
 1r
-2r 4B .
+2r /mp 4B /mf .
 
 /marker L7B25Rpt
-//pp /cresc 12B . . . . .  . . . . . . /mf
-//decresc 12B . . . . .  . . . . . . /pp
-/ppp /cresc 16B . . .   . . . .   . . . .   . . . .      /mf
+/ppp /cresc 16B . . .   . . . .   . . . .   . . . .      /f
    /decresc 16B . . .   . . . .   . . . .   . . . .     /ppp
 1B
 1r

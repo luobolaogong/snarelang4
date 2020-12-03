@@ -5,6 +5,7 @@
 // This is the bass part.
 
 /track bass
+/channel 3
 /time 4/4
 /tempo 80
 

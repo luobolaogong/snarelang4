@@ -1,0 +1,69 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 29, audio recording track 11
+
+/time 4/4
+/tempo 69
+
+/track snare
+/channel 1
+/f
+
+/marker Sect5 Buzzes/Rolls
+1r
+
+/marker A
+4Z . . .
+8Z . . . . . . .
+16Z . . .  . . . .  . . . .  . . . .
+24Z . . . . .  . . . . . .  . . . . . .  . . . . . .
+
+/marker A Rpt
+4Z . . .
+8Z . . . . . . .
+16Z . . .  . . . .  . . . .  . . . .
+24Z . . . . .  . . . . . .  . . . . . .  . . . . . .
+
+1r
+
+/marker B
+24T . . . . .  . . . . . .  . . . . . .  . . . . . .
+24Z . . . . .  . . . . . .  . . . . . .  . . . . . .
+24Z . . . . .  . . . . . .  . . . . . .  . . . . . .
+24Z . . . . .  . . . . . .  . . . . . .  ^4T
+
+/marker B Rpt
+24T . . . . .  . . . . . .  . . . . . .  . . . . . .
+24Z . . . . .  . . . . . .  . . . . . .  . . . . . .
+24Z . . . . .  . . . . . .  . . . . . .  . . . . . .
+24Z . . . . .  . . . . . .  . . . . . .  ^4T
+
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^24M . . . . .   ^8M ^.
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^24M . . . . .   ^8M ^.
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

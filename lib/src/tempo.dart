@@ -109,7 +109,7 @@ class TempoRamp {
 }
 
 class Tempo {
-  static const DefaultBpm = 84;
+  static const DefaultBpm = 84; // whadya do if the score doesn't specify a tempo?  Need a default, but don't want to create one if one is given before first notes?????
   NoteDuration noteDuration;
   // int bpm = Tempo.DefaultBpm; // It's right above
   num bpm; // It's right above
@@ -119,7 +119,7 @@ class Tempo {
   Tempo() {
     //print('in Tempo() constructor');
     noteDuration = NoteDuration();
-    bpm = Tempo.DefaultBpm;
+    // bpm = Tempo.DefaultBpm; // removed 11/25/2020 as a test
   }
 
 
@@ -129,12 +129,15 @@ class Tempo {
 
 
   // Maybe should change this so it doesn't change the Tempo passed in, and returns a new Tempo object
+  // Maybe should change scalar to be a fraction rather than percentage.  Default would be 1.0,
+  // twice as fast would be 2.0.  Half as fast would be 0.5.  Same as YouTube.
   static Tempo scaleThis(Tempo tempo, num scalar) {
     log.fine('scaleThis(), tempo passed in is $tempo, and scalar is $scalar');
     var newTempo = Tempo();
     newTempo.noteDuration.firstNumber = tempo.noteDuration.firstNumber;
     newTempo.noteDuration.secondNumber = tempo.noteDuration.secondNumber;
-    newTempo.bpm = tempo.bpm + (tempo.bpm * scalar / 100).round();
+    // newTempo.bpm = tempo.bpm + (tempo.bpm * scalar / 100).round();
+    newTempo.bpm = (tempo.bpm * scalar).round();
     log.fine('scaleThis(), tempo is now $newTempo');
     return newTempo;
   }
@@ -159,7 +162,7 @@ class Tempo {
       }
     }
     //return modifyThisTempo;
-    return modifyThisTempo.bpm;
+    return modifyThisTempo.bpm; // what if null?
   }
 }
 

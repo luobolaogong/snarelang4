@@ -1,0 +1,125 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 27, audio recording track 09
+// James' accents are really big compared to the other notes.  Prob should change volume
+// because "^" isn't a big enough accent.  Or reprogram it to be louder
+
+/time 4/4
+/tempo 69
+
+/track snare
+/channel 1
+/mf
+
+/marker Sect4 Paradiddle
+1r
+
+/marker A
+16T . T T  16t . t t  16T . T T  16t . t t
+16T . T T  16t . t t  16T . T T  16t . t t
+
+/marker A Rpt
+16T . T T  16t . t t  16T . T T  16t . t t
+16T . T T  16t . t t  16T . T T  16t . t t
+
+1r
+
+/marker B
+^16T . T T  ^16t . t t  ^16T . T T  ^16t . t t
+^16T . T T  ^16t . t t  ^16T . T T  ^16t . t t
+
+/marker B Rpt
+^16T . T T  ^16t . t t  ^16T . T T  ^16t . t t
+^16T . T T  ^16t . t t  ^16T . T T  ^16t . t t
+
+1r
+
+/marker C
+16T ^. T T  16t ^. t t  16T ^. T T  16t ^. t t
+16T ^. T T  16t ^. t t  16T ^. T T  16t ^. t t
+
+/marker C Rpt
+16T ^. T T  16t ^. t t  16T ^. T T  16t ^. t t
+16T ^. T T  16t ^. t t  16T ^. T T  16t ^. t t
+
+1r
+
+/marker D
+16T . ^T T  16t . ^t t  16T . ^T T  16t . ^t t
+16T . ^T T  16t . ^t t  16T . ^T T  16t . ^t t
+
+/marker D Rpt
+16T . ^T T  16t . ^t t  16T . ^T T  16t . ^t t
+16T . ^T T  16t . ^t t  16T . ^T T  16t . ^t t
+
+1r
+
+/marker E
+16T . T ^T  16t . t ^t  16T . T ^T  16t . t ^t
+16T . T ^T  16t . t ^t  16T . T ^T  16t . t ^t
+
+/marker E Rpt
+16T . T ^T  16t . t ^t  16T . T ^T  16t . t ^t
+16T . T ^T  16t . t ^t  16T . T ^T  16t . t ^t
+
+1r
+
+/marker F
+^16T . T T  ^16t . t t  16T ^. T T  16t ^. t t
+16T . ^T T  16t . ^t t  16T . T ^T  16t . t ^t
+
+/marker F Rpt
+^16T . T T  ^16t . t t  16T ^. T T  16t ^. t t
+16T . ^T T  16t . ^t t  16T . T ^T  16t . t ^t
+
+
+
+
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^16M . . . ^8M .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^16M . . . ^8M .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^16M . . . ^8M .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^16M . . . ^8M .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^16M . . . ^8M .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^16M . . . ^8M .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+

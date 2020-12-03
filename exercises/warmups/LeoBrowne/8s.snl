@@ -1,0 +1,385 @@
+// Leo Browne was my first and only teacher of snare drum technique.
+// I believe he learned the style of his day, and we did use the Buddy Rich book for rudiments.
+// But his technique was based on a few different exercises.
+
+/track snare
+/channel 1
+/time  8/4
+/tempo 240
+
+/marker  8's
+4r 4r 4r 4r 4r 4r 4r 4r
+/marker Rght
+/p /cresc  4T T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t t /fff
+
+/marker 7's
+4r 4r 4r 4r 4r 4r 4r 4r
+/time 7/4
+/marker Rght
+/p /cresc  4T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t t /fff
+
+/marker 6's
+4r 4r 4r 4r 4r 4r 4r 4r
+/time 6/4
+/marker Rght
+/p /cresc  4T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t t /fff
+
+/marker 5's
+4r 4r 4r 4r 4r 4r 4r 4r
+/time 5/4
+/marker Rght
+/p /cresc  4T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t /fff
+/marker Rght
+/p /cresc  4T T T T T /fff
+/marker Lft
+/p /cresc  4t t t t t /fff
+
+/marker 4's
+4r 4r 4r 4r 4r 4r 4r 4r
+/time 4/4
+/marker Rght
+/p /cresc  4T T T T /fff
+/marker Lft
+/p /cresc  4t t t t /fff
+/marker Rght
+/p /cresc  4T T T T /fff
+/marker Lft
+/p /cresc  4t t t t /fff
+/marker Rght
+/p /cresc  4T T T T /fff
+/marker Lft
+/p /cresc  4t t t t /fff
+/marker Rght
+/p /cresc  4T T T T /fff
+/marker Lft
+/p /cresc  4t t t t /fff
+/marker Rght
+/p /cresc  4T T T T /fff
+/marker Lft
+/p /cresc  4t t t t /fff
+/marker Rght
+/p /cresc  4T T T T /fff
+/marker Lft
+/p /cresc  4t t t t /fff
+/marker Rght
+/p /cresc  4T T T T /fff
+/marker Lft
+/p /cresc  4t t t t /fff
+/marker Rght
+/p /cresc  4T T T T /fff
+/marker Lft
+/p /cresc  4t t t t /fff
+
+/marker 3's
+4r 4r 4r 4r 4r 4r 4r 4r
+/time 3/4
+/marker Rght
+/p /cresc  4T T T /fff
+/marker Lft
+/p /cresc  4t t t /fff
+/marker Rght
+/p /cresc  4T T T /fff
+/marker Lft
+/p /cresc  4t t t /fff
+/marker Rght
+/p /cresc  4T T T /fff
+/marker Lft
+/p /cresc  4t t t /fff
+/marker Rght
+/p /cresc  4T T T /fff
+/marker Lft
+/p /cresc  4t t t /fff
+/marker Rght
+/p /cresc  4T T T /fff
+/marker Lft
+/p /cresc  4t t t /fff
+/marker Rght
+/p /cresc  4T T T /fff
+/marker Lft
+/p /cresc  4t t t /fff
+/marker Rght
+/p /cresc  4T T T /fff
+/marker Lft
+/p /cresc  4t t t /fff
+/marker Rght
+/p /cresc  4T T T /fff
+/marker Lft
+/p /cresc  4t t t /fff
+
+/marker 2's
+4r 4r 4r 4r 4r 4r 4r 4r
+/time 2/4
+/marker Rght
+/p /cresc  4T T /fff
+/marker Lft
+/p /cresc  4t t /fff
+/marker Rght
+/p /cresc  4T T /fff
+/marker Lft
+/p /cresc  4t t /fff
+/marker Rght
+/p /cresc  4T T /fff
+/marker Lft
+/p /cresc  4t t /fff
+/marker Rght
+/p /cresc  4T T /fff
+/marker Lft
+/p /cresc  4t t /fff
+/marker Rght
+/p /cresc  4T T /fff
+/marker Lft
+/p /cresc  4t t /fff
+/marker Rght
+/p /cresc  4T T /fff
+/marker Lft
+/p /cresc  4t t /fff
+/marker Rght
+/p /cresc  4T T /fff
+/marker Lft
+/p /cresc  4t t /fff
+/marker Rght
+/p /cresc  4T T /fff
+/marker Lft
+/p /cresc  4t t /fff
+
+
+
+
+
+
+/track met
+/channel 2
+/mp
+/time  4/4
+
+^2M ^2M ^4M ^4M ^2M
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+/time  7/4
+^2M ^2M ^4M ^4M ^2M
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+
+/time  6/4
+^2M ^2M ^4M ^4M ^2M
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+
+/time  5/4
+^2M ^2M ^4M ^4M ^2M
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+
+
+/time  4/4
+^2M ^2M ^4M ^4M ^2M
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+
+
+/time  3/4
+^2M ^2M ^4M ^4M ^2M
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+ 2M . . .
+ 2M . . .
+
+
+/time  2/4
+^2M ^2M ^4M ^4M ^2M
+
+ 2M . . .
+ 2M . . .
+ 2M . . .
+ 2M . . .
+
+

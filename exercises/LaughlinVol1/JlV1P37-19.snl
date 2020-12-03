@@ -1,0 +1,118 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 37, audio recording track 19
+// "Plop" flams continued
+
+/time 4/4
+/tempo 63
+
+/track snare
+/channel 1
+/f
+
+/marker Flams Cont
+1r
+/marker B
+4F . 8r 8F 8r 8f
+4F . 8r 8F 8r 8f
+8F . . . 8r 8f . .
+4F . 8F . 4F
+/marker B Rpt
+4F . 8r 8F 8r 8f
+4F . 8r 8F 8r 8f
+8F . . . 8r 8f . .
+4F . 8F . 4F
+
+1r
+/marker C
+24:5F 24f 24:5F 24f  8F . 4F
+24:5f 24F 24:5f 24F  8f . 4f
+/marker C Rpt
+24:5F 24f 24:5F 24f  8F . 4F
+24:5f 24F 24:5f 24F  8f . 4f
+
+1r
+/marker Flam Dbl
+8F T f t F T f t
+16F T f t F T f t  F T f t F T f t
+/marker FlDbl Rpt
+8F T f t F T f t
+16F T f t F T f t  F T f t F T f t
+
+1r
+
+/marker Fl Dbl Dot/Cut
+24:5F 24T 24:5f 24t 24:5F 24T 24:5f 24t
+12F 24T 12f 24t 12F 24T 12f 24t  12F 24T 12f 24t 12F 24T 12f 24t
+/marker FlDbl D/C Rpt
+24:5F 24T 24:5f 24t 24:5F 24T 24:5f 24t
+12F 24T 12f 24t 12F 24T 12f 24t  12F 24T 12f 24t 12F 24T 12f 24t
+
+1r
+/marker TapFlam
+8T F t f T F t f
+16T F t f T F t f  16T F t f T F t f
+/marker TapFlam Rpt
+8T F t f T F t f
+16T F t f T F t f  16T F t f T F t f
+
+1r
+/marker TapFlamD/C
+24:5T 24F 24:5t 24f 24:5T 24F 24:5t 24f
+12T 24F 12t 24f 12T 24F 12t 24f  12T 24F 12t 24f 12T 24F 12t 24f
+/marker TapFlamD/C Rpt
+24:5T 24F 24:5t 24f 24:5T 24F 24:5t 24f
+12T 24F 12t 24f 12T 24F 12t 24f  12T 24F 12t 24f 12T 24F 12t 24f
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+

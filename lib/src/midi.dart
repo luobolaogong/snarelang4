@@ -254,7 +254,7 @@ class Midi {
   // Maybe will try to do the full track all at once, and not just the initial timesig and tempo, and filling in the rest later.  Thus the entire scoreElements
   // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) { // check on "override" tempo.  Default tempo?
   // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
-  List<MidiEvent> createTimingTrackZero(List scoreElements, CommandLine commandLine) { // no we don't want command line values, because they default to 4/4 84
+  List<MidiEvent> createTimingTrackZero(List scoreElements, Channel channel, CommandLine commandLine) { // no we don't want command line values, because they default to 4/4 84
     print('\n\t\tcreateTimingTrackZero(), and commandLine timeSig: ${commandLine.timeSig}, tempo: ${commandLine.tempo}, tempo scalar: ${commandLine.tempoScalar}');
     print('\t\tSo, tempo should be scaled to be: ${Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar)}');
     print('\t\tBut if 3/8 time, then tempo should be ${Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig)}');
@@ -287,7 +287,7 @@ class Midi {
         restNote.dynamic = Dynamic.p; // what do you put for rest?
         //restNote.noteNumber = 0; // what's the note number for a rest?  0?  99?  Gets assigned later.
         restNote.noteOffDeltaTimeShift = 0;  // right?  This accounts for gracenotes, right?  Don't bother.
-        addNoteOnOffToTrackEventsList(restNote, timingTrackZeroMidiEventList, false, false, Voice.solo); // what about voice?  Can ignore with null?
+        addNoteOnOffToTrackEventsList(restNote, channel.number, timingTrackZeroMidiEventList, false, false, Voice.solo); // what about voice?  Can ignore with null?
         continue;
       }
       print('what was that element? $element');  // what if /track?  Messes things up?
@@ -357,53 +357,24 @@ class Midi {
   // List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, num tempoScalar, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, overrideTrack) {
   List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, commandLine) {
     log.fine('In Midi.createMidiEventsTracksList()');
-    //var currentTrack = overrideTrack; // this is strange.  We've got an element that could be a Track, and we've got a passed in Track
-
-//    var midiTracks = <List<MidiEvent>>[];
-
-    //
-    // Start a track to be added to the midiTracks list
-    //
     var trackEventsList = <MidiEvent>[];
 
-    //var noteChannel = 0; // what for?
+    var noteChannel = Channel.DefaultChannelNumber;
     var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
-
-    // I might have trouble here.  I've been working with this CommandLine stuff which is only what a user may specify
-    // on the command line when starting the app.  What happens when there's a /track bass   in the score?
-    // After that we can't keep using commandLine.track, right?
-
-
-
-
     var usePadSoundFont = commandLine.usePadSoundFont;
     var loopBuzzes = commandLine.loopBuzzes; // silly.  just use commandLine.loopBuzzes, right?
-
-    // // what the crud?  a trackNameEvent before any elements are read???  Where did that come from?  From default value looks like.
-    // // Does this mean we want to be ready to add a track name at the start of a track if there wasn't such a name and we're gunna put something else in?
-    // if (commandLine.track != null) { // ?????  what good does this do?  Maybe if there's no track designation given in the score we use this one as the first element of a new track?
-    //   var trackNameEvent = TrackNameEvent();
-    //   trackNameEvent.text = trackIdToString(commandLine.track.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
-    //   trackNameEvent.deltaTime = 0;
-    //   //trackEventsList.add(trackNameEvent); // missing this line causes "imported MIDI" to be track name???????????????????
-    //   if (commandLine.track.id == TrackId.pad) { // total shot in the dark
-    //     usePadSoundFont = true;
-    //   }
-    //   else {
-    //     usePadSoundFont = false;
-    //   }
-    // }
-
-
     var trackNameEvent = TrackNameEvent();
     trackNameEvent.text = trackIdToString(commandLine.track.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
     trackNameEvent.deltaTime = 0;
 
-
-
     // Go through the elements, seeing what each one is, and add it to the current track if right kind of element.
     // Of course this is not yet written to midi.
     for (var element in elements) {
+      if (element is Channel) {
+        noteChannel = element.number;
+        // what, no continue;?
+        continue; // new
+      }
       if (element is Track) { // I do not trust the logic in this section.  Revisit later.  Does this mean that we'd better have a Track command at the start of a score?????????????  Bad idea/dependency
         // // if (track.id == currentTrack.id || midiTracks.isEmpty) {
         // if (midiTracks.isEmpty) {
@@ -457,7 +428,7 @@ class Midi {
         // And can't assume the previous element in the list was a note!  Could be a dynamic element, or tempo, etc.
         //
         // addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
-        addNoteOnOffToTrackEventsList(element, trackEventsList, usePadSoundFont, loopBuzzes, currentVoice); // add track param?  // return value unused
+        addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList, usePadSoundFont, loopBuzzes, currentVoice); // add track param?  // return value unused
         continue;
       }
       if (element is Tempo) {
@@ -470,7 +441,7 @@ class Midi {
         // trackEventsList.add(markerEvent);
 
         //Tempo.fillInTempoDuration(tempo, overrideTimeSig); // check on this.  If already has duration, what happens?
-
+        // first one can be bpm==null, right?
         addTempoChangeToTrackEventsList(tempo, trackEventsList); // also add to trackzero?   hey, hey, hey, hey, tempo can have a duration first/second of null!!!!!!
         continue;
       }
@@ -541,11 +512,15 @@ class Midi {
     setTempoEvent.type = 'setTempo';
     // I think this next line is to account for tempos based on nonquarter notes, like 6/8 time.
     var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
+    if (useThisTempo > 248 || useThisTempo < 10) {
+      log.warning('I think MIDI has a hard time with tempos greater than around 300 and seems to max out around 250, but slowly approaches that limit???');
+    }
     //print('addTempoChangeToTrackEventsList(), useThisTempo: $useThisTempo');
     // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   I think should be round, and maybe a float?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+    log.finest('gunna do calculation for setTempoEvent for microsecondsPerBeat. Tempo in: $tempo, mspb: $microsecondsPerMinute,  useThisTempo: $useThisTempo  divided: ${microsecondsPerMinute / useThisTempo}  and rounded: ${(microsecondsPerMinute / useThisTempo).round()}');
     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).round(); // how does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
     //print('addTempoChangeToTrackEventsList(), for the setTempoEvent we have microsecondsPerBeat: ${setTempoEvent.microsecondsPerBeat}');
-    log.finer('Adding tempo change event to some track events list, possibly track zero, but any track events list');
+    log.fine('Adding tempo change event (${useThisTempo}bpm, ${setTempoEvent.microsecondsPerBeat/1000000} Sec/beat)to some track events list, possibly track zero???, but any track events list');
     trackEventsList.add(setTempoEvent);
   }
 
@@ -598,7 +573,7 @@ class Midi {
   ///
   /// And should we add rest notes to track zero so that we know where to do the timesig and tempo changes?
   // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
-  double addNoteOnOffToTrackEventsList(Note note, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) { // add track?
+  double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) { // add track?
     // var graceOffset = 0;
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
@@ -631,8 +606,7 @@ class Midi {
     // noteOnEvent.deltaTime = graceOffset; // Can you do a negative amount, and add the rest on the off note?
     noteOnEvent.noteNumber = note.noteNumber; // this was determined above by all that code
     noteOnEvent.velocity = note.velocity;
-    // noteOnEvent.channel = channel;
-    noteOnEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
+    noteOnEvent.channel = channelNumber;
     trackEventsList.add(noteOnEvent);
     log.finest('addNoteOnOffToTrackEventsList() added endOnEvent $noteOnEvent to trackEventsList');
 
@@ -647,8 +621,7 @@ class Midi {
     noteOffEvent.noteNumber = note.noteNumber;
     // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
     noteOffEvent.velocity = 0; // shouldn't this just be 0?
-    // noteOffEvent.channel = channel;
-    noteOffEvent.channel = 0; // dumb question: What's a channel?  Will I ever need to use it?
+    noteOffEvent.channel = channelNumber;
 
     trackEventsList.add(noteOffEvent);
     log.finest('addNoteOnOffToTrackEventsList() added endOffvent $noteOffEvent to trackEventsList');
@@ -671,7 +644,8 @@ class Midi {
 
     log.finest('noteOnNoteOff, Created note events for noteNameValue ${snareLangNoteNameValue}, '
         'deltaTime ${noteOffEvent.deltaTime} (${noteTicksAsDouble}), velocity: ${note.velocity}, '
-        'number: ${note.noteNumber}, cumulative roundoff ticks: $cumulativeRoundoffTicks');
+        'number: ${note.noteNumber}, channel: $channelNumber, cumulative roundoff ticks: $cumulativeRoundoffTicks');
+
     return diffTicksAsDouble; // kinda strange
   }
 }

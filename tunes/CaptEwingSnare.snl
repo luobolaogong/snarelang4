@@ -16,7 +16,9 @@
 // teachable.
 
 /track snare
-/dd=ff
+/channel 1
+//dd=ff // doesn't work.  I guess you get the value from the command line?
+//dd ff
 /time 2/4 // these two lines can be in other files too, but must match
 /tempo 70    // Target 70.  Recording is around 68-70
 

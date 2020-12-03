@@ -1,0 +1,121 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 25, audio recording track 07
+// James accents the start of many of the triplets, though not written
+// and his accents are really big compared to the other notes.
+
+/time 12/8
+/tempo 92
+
+/track snare
+/channel 1
+/f
+
+/marker Sect3 Elem Trips
+8:12r
+/marker ExA
+8T . .   8t . .   8T . .   8t . .
+8T . .   8t . .   8T . .   8t . .
+8T . .   8t . .   8T . .   8t . .
+8T . .   8t . .   8T . .   8t . .
+
+/marker ExA Rpt
+8T . .   8t . .   8T . .   8t . .
+8T . .   8t . .   8T . .   8t . .
+8T . .   8t . .   8T . .   8t . .
+8T . .   8t . .   8T . .   8t . .
+
+
+/marker Acc Trips
+8:12r
+
+/marker ExB
+^8T . . ^8t . .   ^8T . . ^8t . .
+^8T . . ^8t . .   ^8T . . ^8t . .
+^8T . . ^8t . .   ^8T . . ^8t . .
+^8T . . ^8t . .   ^8T . . ^8t . .
+
+/marker ExB Rpt
+^8T . . ^8t . .   ^8T . . ^8t . .
+^8T . . ^8t . .   ^8T . . ^8t . .
+^8T . . ^8t . .   ^8T . . ^8t . .
+^8T . . ^8t . .   ^8T . . ^8t . .
+
+
+/marker Dev Trip Phrase
+8:12r
+
+/marker ExC
+^8T . . ^8t . . ^8:3T 8:3r
+^8T . . ^8t . . ^8:3T 8:3r
+^8T . . ^8t . . ^8T . . ^8t . .
+^8T . . ^8t . . ^8:3T 8:3r
+
+^8t . . ^8T . . ^8:3t 8:3r
+^8t . . ^8T . . ^8:3t 8:3r
+^8t . . ^8T . . ^8t . . ^8T . .
+^8t . . ^8T . . ^8:3t 8:3r
+
+/marker ExC Rpt
+^8T . . ^8t . . ^8:3T 8:3r
+^8T . . ^8t . . ^8:3T 8:3r
+^8T . . ^8t . . ^8T . . ^8t . .
+^8T . . ^8t . . ^8:3T 8:3r
+
+^8t . . ^8T . . ^8:3t 8:3r
+^8t . . ^8T . . ^8:3t 8:3r
+^8t . . ^8T . . ^8t . . ^8T . .
+^8t . . ^8T . . ^8:3t 8:3r
+
+
+
+/track met
+/channel 2
+
+/mp
+
+>8:3M >8:3M >8M 8M 8M >8:3M
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+^8:3M ^8:3M ^8M ^8M ^8M ^8:3M
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+^8:3M ^8:3M ^8M ^8M ^8M ^8:3M
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . .
+
+8:3M . . .
+8:3M . . .
+8:3M . . .
+8:3M . . 8:3r
+

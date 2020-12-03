@@ -1,0 +1,46 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 36, audio recording track 18
+// This is section 6, and starting into embellishments.  Flams here.
+// He plays his flams WAY open.  A "plop" sound.  I'd estimate it's about 0.06seconds
+// between grace and principle.  I've not measured.  I'll have to record a new
+// flam.  And there's no way he can play flams that open at 16th note speed
+// above 120.  Therefore, I'd bet he tightens them up as he goes faster.
+
+/time 4/4
+/tempo 62
+
+/track snare
+/channel 1
+/f
+
+/marker The Flam
+1r
+
+
+
+/marker A
+4F . . .
+8F . . . . . . .
+4F . 8F . . .
+4F . 8F . 4F
+/marker A Rpt
+4F . . .
+8F . . . . . . .
+4F . 8F . . .
+4F . 8F . 4F
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .

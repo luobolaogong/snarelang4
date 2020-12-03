@@ -1,0 +1,242 @@
+// Leo Browne was my first and only teacher of snare drum technique back in 1965.
+//
+// This MIDI exercise tries to capture his intro to the flam where he used an
+// approximate timing of the grace note based on the sound sequence
+// "fa lam e & uh  fa lam e & uh".  The timing ratio of "fa" to "lam" is
+// basically 4 to 1.  That is, "fa" would be a 64th note, and "lam", "e", and
+// "&" would be 16th notes, (and "uh" would be a dotted 32nd.)
+//
+// Of course, the faster you played the phrase, the tighter the flam became.  But flams
+// should always be played with the same timing for the grace notes no matter the tempo.
+// Therefore, at what tempo would 64th note durations sound right for a flam gracenote
+// duration based on his "fa lam e & uh" model"?  Or in other words, what should be the
+// standard grace note duration in seconds?
+
+// If you played a set of quarter note flams at a tempo of 60bpm, (one second per flam) the duration
+// of the grace note would be 1/8th of a second, or 0.125 seconds.  If you played them at 120bpm
+// the duration of a grace note for a flam would be 1/16th of a second, or 0.0625 seconds.
+// But that flam's gracenote still sounds too "open" to me.  At a tempo of 132bpm
+// with 32nd notes sounds about right to me, and that duration is 0.02841 seconds.
+
+// But grace note durations and relative dynamic volumes differ by genre/style/situaton.
+// Rock drummers play really open flams with nearly equal dynamic volumes of the two notes.
+// DCI drummers play really tight flams, with a large difference in dynamic volume of the two notes.
+// Pipe band snare drummers seem to play in between these extremes.  Their flams sound
+// like "plop", rather than "flam".
+
+// How do you notate a flam in "snl"?  You use "F" and "f" for right and left flams.
+// One 4/4 bar of 16th note alternating flams at any tempo would be:
+// 16F . . . . . . . . . . . . . . .
+// MIDI plays a flam recording at each 16th note duration (and shifted so that the
+// principle note is played where a tap would be played, and the grace note is just before it.)
+//
+// But if you had to enter a flam as two taps, as in a single grace note followed by a principle note,
+// you'd first need to specify the tempo and then you'd decide the correct subdivision.
+
+// The following is a gradual speed up of flams where the grace note is set to be a 64th note.
+// It starts at 30bpm and goes up to 170bpm in increments of 1bpm, and both a right and left
+// 8th note flams are played at each tempo.  A metronome click signals each 10bpm increment.  So, the first
+// metronome click is at 30, and the second at 40, etc. up to stopping at 170.  There's an initial "count off"
+// of 1 beat before the simulated "fa lams" start.
+
+// My opinion is that the best sounding flams are at around 140bpm which is a grace note
+// duration of 0.026786 seconds
+// To calculate the duration of a 64th note for a particular bpm it's this:
+// duration = 60 / bpm / 16
+// My measurements using Audacity yield a duration of 0.0266 seconds at 140bpm, which is not too bad.
+
+// By the way, MIDI doesn't appear to allow tempos past around 250bpm.
+
+// So, at what tempo do YOU think simulated flams sound right?
+
+/track snare
+/channel 1
+/time  1/4
+/tempo 30
+// tempo of 250 appears to be the fastest it can go, limited by MIDI, I think
+//lam          e           &           ah      fa
+//^64T . . >. ^64T . . >. ^64T . . >. ^64T . . >.
+//^64T . . >. ^64T . . >. ^64T . . >. ^64T . . >.
+
+4r
+
+/tempo 30 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 31 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 32 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 33 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 34 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 35 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 36 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 37 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 38 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 39 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 40 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 41 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 42 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 43 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 44 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 45 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 46 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 47 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 48 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 49 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 50 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 51 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 52 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 53 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 54 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 55 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 56 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 57 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 58 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 59 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 60 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 61 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 62 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 63 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 64 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 65 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 66 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 67 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 68 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 69 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 70 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 71 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 72 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 73 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 74 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 75 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 76 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 77 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 78 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 79 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 80 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 81 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 82 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 83 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 84 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 85 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 86 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 87 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 88 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 89 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 90 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 91 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 92 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 93 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 94 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 95 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 96 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 97 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 98 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 99 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 100 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 101 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 102 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 103 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 104 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 105 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 106 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 107 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 108 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 109 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 110 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 111 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 112 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 113 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 114 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 115 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 116 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 117 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 118 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 119 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 120 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 121 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 122 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 123 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 124 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 125 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 126 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 127 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 128 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 129 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 130 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 131 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 132 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 133 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 134 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 135 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 136 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 137 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 138 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 139 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 140 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 141 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 142 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 143 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 144 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 145 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 146 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 147 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 148 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 149 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 150 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 151 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 152 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 153 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 154 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 155 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 156 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 157 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 158 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 159 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 160 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 161 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 162 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 163 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 164 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 165 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 166 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 167 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 168 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/tempo 169 /fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 1T
+
+
+/track met
+/channel 3
+/mf
+//4M . . .
+16M . 32M . 16M
+
+
+// 30bpm
+1M 4r
+// 40bpm
+1M 4r
+// 50bpm
+1M 4r
+// 60bpm
+1M 4r
+// 70bpm
+1M 4r
+// 80bpm
+1M 4r
+// 90bpm
+1M 4r
+// 100bpm
+1M 4r
+// 110bpm
+1M 4r
+// 120bpm
+1M 4r
+// 130bpm
+1M 4r
+// 140bpm
+1M 4r
+// 150bpm
+1M 4r
+// 160bpm
+1M 4r
+// 170bpm
+1M 4r

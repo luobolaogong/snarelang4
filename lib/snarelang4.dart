@@ -11,6 +11,7 @@ export 'src/voice.dart';
 export 'src/midi.dart';
 export 'src/note.dart';
 export 'src/score.dart';
+//export 'src/track.dart';
 export 'src/tempo.dart';
 export 'src/timesig.dart';
 export 'src/commandline.dart';

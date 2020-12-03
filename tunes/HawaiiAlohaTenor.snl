@@ -5,7 +5,8 @@
 /time 4/4
 /tempo 2=70
 /track tenor
-/mf
+/channel 4
+/mp
 
 
 
@@ -15,6 +16,7 @@
 // Drums Roll off
 2N . 1N
 2N . 1N
+
 
 /marker L1
 1r 1r 1r 1r

@@ -1,0 +1,46 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, The Essentials"
+// Page 19, audio recording 01
+
+/time 4/4
+/tempo 60
+
+/track snare
+/ff
+
+/marker Sect1 Single alternating Strokes
+1r
+
+// James puts a slight accent on the beats in his recording
+/marker Hand2Hand
+_4T _. _. _.   _. _. _. _.
+_8T . . .   _. . . .   _. . . .   _. . . .
+_16T . . .  _. . . .   _. . . .   _. . . .    _. . . .   _. . . .   _. . . .    _. . . .
+_32T . . .  . . . .   _. . . .   . . . .    _. . . .   . . . .   _. . . .    . . . .
+_32T . . .  . . . .   _. . . .   . . . .    _. . . .   . . . .   _. . . .    . . . .
+
+/marker Repeat
+_4T _. _. _.   _. _. _. _.
+_8T . . .   _. . . .   _. . . .   _. . . .
+_16T . . .  _. . . .   _. . . .   _. . . .    _. . . .   _. . . .   _. . . .    _. . . .
+_32T . . .  . . . .   _. . . .   . . . .    _. . . .   . . . .   _. . . .    . . . .
+_32T . . .  . . . .   _. . . .   . . . .    _. . . .   . . . .   _. . . .    . . . .
+
+
+/track met
+
+/pp
+
+>8M . >. . >. >. >. >.
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+
+

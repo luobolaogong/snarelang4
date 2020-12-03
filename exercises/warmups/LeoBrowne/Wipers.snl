@@ -1,0 +1,72 @@
+// Leo Browne was my first and only teacher of snare drum technique.
+// I believe he learned the style of his day, and we did use the Buddy Rich book for rudiments.
+// But his technique was based on a few different exercises.
+// This one explores different but equal dynamics between hands.  It's a strange one
+
+/track snare
+// Careful of tempos when have different channels?
+/channel 1
+/time  8/4
+/tempo 84
+
+/marker Accents
+4r 4r
+/marker RLeadOn
+/fff /decresc 8T T T T T T T T /ppp
+/ppp /cresc 8T T T T T T T T /fff
+/fff /decresc 8T T T T T T T T /ppp
+/ppp /cresc 8T T T T T T T T /fff
+/fff /decresc 8T T T T T T T T /ppp
+/ppp /cresc 8T T T T T T T T /fff
+/fff /decresc 8T T T T T T T T /ppp
+/ppp /cresc 8T T T T T T T T /fff
+2T
+
+/marker LLeadOn
+/fff /decresc 8t t t t t t t t /ppp
+/ppp /cresc 8t t t t t t t t /fff
+/fff /decresc 8t t t t t t t t /ppp
+/ppp /cresc 8t t t t t t t t /fff
+/fff /decresc 8t t t t t t t t /ppp
+/ppp /cresc 8t t t t t t t t /fff
+/fff /decresc 8t t t t t t t t /ppp
+/ppp /cresc 8t t t t t t t t /fff
+2T
+
+
+/track snare
+/channel 2
+4r 4r
+/marker LFollowOff
+/ppp /cresc 16r 8t t t t t t t t /fff
+/fff /decresc 8t t t t t t t t /ppp
+/ppp /cresc 8t t t t t t t t /fff
+/fff /decresc 8t t t t t t t t /ppp
+/ppp /cresc 8t t t t t t t t /fff
+/fff /decresc 8t t t t t t t t /ppp
+/ppp /cresc 8t t t t t t t t /fff
+/fff /decresc 8t t t t t t t 16t /ppp
+2r
+
+/marker RFollowOff
+/ppp /cresc 16r 8T T T T T T T T /fff
+/fff /decresc 8T T T T T T T T /ppp
+/ppp /cresc 8T T T T T T T T /fff
+/fff /decresc 8T T T T T T T T /ppp
+/ppp /cresc 8T T T T T T T T /fff
+/fff /decresc 8T T T T T T T T /ppp
+/ppp /cresc 8T T T T T T T T /fff
+/fff /decresc 8T T T T T T T 16T /ppp
+2r
+
+
+/track met
+/channel 3
+/mp
+
+^8M ^8M ^16M ^16M ^8M
+4M . . . . . . .   . . . . . . . .  . . . . . . . .  . . . . . . . .
+^8M ^8M ^16M ^16M ^8M
+4M . . . . . . .   . . . . . . . .  . . . . . . . .  . . . . . . . .
+
+

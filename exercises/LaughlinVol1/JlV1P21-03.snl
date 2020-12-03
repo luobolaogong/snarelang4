@@ -1,0 +1,65 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 21, audio recording 03
+
+/time 4/4
+/tempo 54
+
+/track snare
+/ff
+
+/marker Single Stroke Dev Alt and non-alt
+1r
+
+// James amazingly plays dotted eighths 16ths as "24:5 24"
+// and dotted 16th 32nd as "12 24"
+/marker L1 Alternating
+8T . . . . . . .
+24:5T 24t  24:5T 24t  24:5T 24t  24:5T 24t
+/marker L2 Alternating
+16T . . .   . . . .   . . . .   . . . .
+12T 24t 12T 24t   12T 24t 12T 24t   12T 24t 12T 24t   12T 24t 12T 24t
+
+/marker Repeat 2 lines
+8T . . . . . . .
+24:5T 24t  24:5T 24t  24:5T 24t  24:5T 24t
+16T . . .   . . . .   . . . .   . . . .
+12T 24t 12T 24t   12T 24t 12T 24t   12T 24t 12T 24t   12T 24t 12T 24t
+
+/marker L3 Right
+8T 8T 8T 8T  24:5T 24T  24:5T 24T
+/marker Left
+8t 8t 8t 8t  24:5t 24t  24:5t 24t
+/marker L4 Right
+16T T T T  T T T T   12T 24T  12T 24T  12T 24T  12T 24T
+/marker Left
+16T T T T  T T T T   12T 24T  12T 24T  12T 24T  12T 24T
+
+/marker Repeat 2 lines
+8T 8T 8T 8T  24:5T 24T  24:5T 24T
+/marker Left Repeat
+8t 8t 8t 8t  24:5t 24t  24:5t 24t
+/marker Right
+16T T T T T T T T   12T 24T  12T 24T  12T 24T  12T 24T
+/marker Left
+16T T T T T T T T   12T 24T  12T 24T  12T 24T  12T 24T
+
+
+
+/track met
+
+/pp
+
+>8M . >. . >. >. >. >.
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+
+

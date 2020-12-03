@@ -1,0 +1,94 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 24, audio recording track 06
+// James plays buzz rolls with triplet pulse
+
+/time 4/4
+// Something's wrong with my timing?  My clock is slow compared to my phone metronome.
+// 57 is closer to 56 than 56 is.  Fix this later
+/tempo 57
+
+/track snare
+/channel 1
+/ff
+
+/marker Ex A
+1r
+
+/marker L1
+16T T t t  T T t t  T T t t  T T t t
+16T T t t  T T t t  T T t t  T T t t
+/marker L2
+16T T t t  T T t t  T T t t  T T t t
+16T T t t  T T t t  T T t t  T T t t
+
+/marker L1 Rpt
+16T T t t  T T t t  T T t t  T T t t
+16T T t t  T T t t  T T t t  T T t t
+/marker L2 Rpt
+16T T t t  T T t t  T T t t  T T t t
+16T T t t  T T t t  T T t t  T T t t
+
+
+/marker Ex B
+1r
+
+/marker L3
+8T T t t T T t t
+16T T t t  T T t t  T T t t  T T t t
+
+/marker L4
+32T T t t  T T t t  T T t t  T T t t  T T t t  T T t t  T T t t  T T t t
+24Z . . . . .  . . . . . .  . . . . . .  . . . . . .
+
+/marker L5
+8T T t t T T t t
+16T T t t  T T t t  T T t t  T T t t
+
+/marker L6
+32T T t t  T T t t  T T t t  T T t t  T T t t  T T t t  T T t t  T T t t
+24Z . . . . .  . . . . . .  . . . . . .  ^4T
+
+/marker L3 Rpt
+8T T t t T T t t
+16T T t t  T T t t  T T t t  T T t t
+
+/marker L4 Rpt
+32T T t t  T T t t  T T t t  T T t t  T T t t  T T t t  T T t t  T T t t
+24Z . . . . .  . . . . . .  . . . . . .  . . . . . .
+
+/marker L5 Rpt
+8T T t t T T t t
+16T T t t  T T t t  T T t t  T T t t
+
+/marker L6 Rpt
+32T T t t  T T t t  T T t t  T T t t  T T t t  T T t t  T T t t  T T t t
+24Z . . . . .  . . . . . .  . . . . . .  ^4T
+
+
+
+/track met
+/channel 2
+
+/pp
+
+^8M . ^. . ^. ^. ^. ^.
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+^8M . ^. . ^. ^. ^. ^.
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
+_8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+
+

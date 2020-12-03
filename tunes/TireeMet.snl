@@ -2,20 +2,18 @@
 // Metronome only
 
 /track met
+/channel 4
 
 /time 2/2
 /tempo 2=72
 
-/ff
-// Get attention and set the beat
-2M . . . 1M . . .
-// By the right, quick march
-1M . . .
-
+/f
+^2M ^2M ^4M ^4M ^2M
 // Roll off
-2M . . . . . . .
+2M 2M 4M . . .
+2M 2M 4M . . .
 
-/pp
+/mf
 // Line 1
 2M . . . . . . .
 

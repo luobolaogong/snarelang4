@@ -1,0 +1,117 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 32, audio recording track 14
+
+/time 4/4
+/tempo 62
+
+/track snare
+/channel 1
+/f
+
+/marker 7StrkRll cont
+1r
+
+/marker D
+^8T 12t 24t ^4T 24Z . . >12t 24t ^4T
+^8T 24t . . ^4T 24Z . . 24t . . ^4T
+^8t 12T 24T ^4t 24z . . >12T 24T ^4t
+^8t 24T . . ^4t 24z . . 24T . . ^4t
+
+/marker D Rpt
+^8T 12t 24t ^4T 24Z . . >12t 24t ^4T
+^8T 24t . . ^4T 24Z . . 24t . . ^4T
+^8t 12T 24T ^4t 24z . . >12T 24T ^4t
+^8t 24T . . ^4t 24z . . 24T . . ^4t
+
+1r
+
+/marker E
+12t 24t >8T ^4t  _12t 24t 24Z . . ^4t
+12t 24t >8t ^4T  _12T 24T 24z . . ^4T
+24t . . >8T ^4t 24t . . 24Z . . ^4t
+24T . . >8t ^4T 24T . . 24z . . ^4T
+
+/marker E Rpt
+12t 24t >8T ^4t  _12t 24t 24Z . . ^4t
+12t 24t >8t ^4T  _12T 24T 24z . . ^4T
+24t . . >8T ^4t 24t . . 24Z . . ^4t
+24T . . >8t ^4T 24T . . 24z . . ^4T
+
+
+1r
+
+/marker F
+24Z . . 24t . . 24Z . . >8t  _12T 24t 24Z . . ^4t
+24z . . 24T . . 24z . . >8T  _12t 24T 24z . . ^4T
+
+/marker F Rpt
+24Z . . 24t . . 24Z . . >8t  _12T 24t 24Z . . ^4t
+24z . . 24T . . 24z . . >8T  _12t 24T 24z . . ^4T
+
+1r
+
+/marker G
+^24:5T 24t 24Z . . >8t  ^8T 24Z . . ^4t
+^24:5t 24T 24z . . >8T  ^8t 24z . . ^4T
+
+/marker G Rpt
+^24:5T 24t 24Z . . >8t  ^8T 24Z . . ^4t
+^24:5t 24T 24z . . >8T  ^8t 24z . . ^4T
+
+
+1r
+
+/marker H
+^8T 24Z . . >24:5t 24t  24Z . . 24t . . ^4T
+^8t 24z . . >24:5T 24T  24z . . 24T . . ^4t
+/marker H Rpt
+^8T 24Z . . >24:5t 24t  24Z . . 24t . . ^4T
+^8t 24z . . >24:5T 24T  24z . . 24T . . ^4t
+
+
+
+/track met
+/channel 2
+/mp
+
+^8M 24M . . ^4M  ^12M 24M 12M 24M 4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M 24M . . ^4M  ^12M 24M 12M 24M 4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M 24M . . ^4M  ^12M 24M 12M 24M 4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M 24M . . ^4M  ^12M 24M 12M 24M 4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M 24M . . ^4M  ^12M 24M 12M 24M 4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .

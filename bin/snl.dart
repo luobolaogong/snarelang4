@@ -78,7 +78,7 @@ void main(List<String> arguments) {
   // Set up logging.  Does this somehow apply to all files?
   //
   // Logger.root.level = Level.ALL; // get this from the command line, as a secret setting
-  Logger.root.level = Level.WARNING; // get this from the command line, as a secret setting
+  Logger.root.level = Level.INFO; // get this from the command line, as a secret setting
   Logger.root.onRecord.listen((record) {
     print('${record.level.name}: ${record.time}: ${record.message}');
   });
@@ -89,6 +89,8 @@ void main(List<String> arguments) {
   //
   var commandLine = CommandLine();
   var argResults = commandLine.parseCommandLineArgs(arguments);
+
+  log.fine('Files to be processed: ${commandLine.inputFilesList}');
 
   var score = doThePhases(commandLine.inputFilesList, commandLine); // Maybe use tempoScalar to handle gracenote calculations
 
@@ -181,7 +183,9 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   log.finer('Added elements ${commandLine.timeSig}, ${commandLine.tempo} to head of list of elements.');
 
 // Actually should have a separate phase that only adjusts all Tempo elements by the scalar.  Then do the grace notes.
-  score.scaleTempos(commandLine);
+  if (commandLine.tempoScalar != 1.0) { // new 11/25/2020
+    score.scaleTempos(commandLine);
+  }
 
 
   // Phase 5:
