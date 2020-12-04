@@ -1,0 +1,150 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 38, audio recording track 20
+// Two Bar phrases develop flam execution
+//
+// Exercise H shows that James plays flams tighter when in faster passages!!!!!
+//
+// I ought to write tenor and bass parts and "chips" to these exercises
+// And string them all together as a very long exercise, played at
+// a percentage faster
+
+/time 4/4
+/tempo 72
+
+/track snare
+/channel 1
+/f
+
+/marker 2Bar flam phrases
+1r
+/marker A
+16F T f t 8F 16f t F T 8f  ^16T . T T
+16f t F T 8f 16F T f t 8F  ^16t . t t
+/marker ARpt
+16F T f t 8F 16f t F T 8f  ^16T . T T
+16f t F T 8f 16F T f t 8F  ^16t . t t
+
+
+1r
+/marker B
+16T F t f 8T 16t f T F 8t ^16T . T T
+16t f T F 8t 16T F t f 8T ^16t . t t
+/marker BRpt
+16T F t f 8T 16t f T F 8t ^16T . T T
+16t f T F 8t 16T F t f 8T ^16t . t t
+
+
+1r
+/marker C
+16T F t f ^T . T T t f T F ^t . t t
+12T 24F 12t 24f ^12T 24t 12T 24T 12t 24f 12T 24F ^12t 24T 12t 24t
+/marker CRpt
+16T F t f ^T . T T t f T F ^t . t t
+12T 24F 12t 24f ^12T 24t 12T 24T 12t 24f 12T 24F ^12t 24T 12t 24t
+
+1r
+/marker D
+8F T f t T F t f
+16T F t f ^T . T T t f T F ^4T
+/marker DRpt
+8F T f t T F t f
+16T F t f ^T . T T t f T F ^4T
+
+
+1r
+/marker E
+8F t f T F t f T
+16F t f T ^F t T T  f T F t ^f T t t
+/marker ERpt
+8F t f T F t f T
+16F t f T ^F t T T  f T F t ^f T t t
+
+
+1r
+/marker F
+16F t f T t t ^F t  T T f t ^F t T T
+16t T F t T T ^f T  t t F T ^f T t t
+/marker FRpt
+16F t f T t t ^F t  T T f t ^F t T T
+16t T F t T T ^f T  t t F T ^f T t t
+
+
+1r
+/marker G
+8F F f f 16F F t f ^T . T T
+8f f F F 16f f t F ^t . t t
+/marker GRpt
+8F F f f 16F F t f ^T . T T
+8f f F F 16f f t F ^t . t t
+
+
+1r
+/marker H
+^16F t F ^f T f ^8F  ^16f T f ^F t F ^8f
+^12F 24t 12F ^24f  12t 24f ^8F  ^12f 24t 12f ^24F 12 t 24F ^8f
+/marker HRpt
+^16F t F ^f T f ^8F  ^16f T f ^F t F ^8f
+^12F 24t 12F ^24f  12t 24f ^8F  ^12f 24t 12f ^24F 12 t 24F ^8f
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+

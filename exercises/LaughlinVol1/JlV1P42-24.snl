@@ -1,0 +1,90 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 41, audio recording track 23
+// Section Seven Paradiddle: Advanced continued
+
+/time 4/4
+/tempo 72
+
+/track snare
+/channel 1
+/f
+
+/marker Sect7 PdleAdv
+
+1r
+/marker F
+^16T t T T ^t T t t  ^32T t T T ^t T t t  ^16T t T T
+^16t T t t ^T t T T  ^32t T t t ^T t T T  ^16t T t t
+^16T t T T ^t T t t 32t . . . ^T t T T  ^16t T t t
+32T . . . ^T . T T   t . . . ^t T t t   T t T t ^T t T T   ^16t T t t
+/marker FRpt
+^16T t T T ^t T t t  ^32T t T T ^t T t t  ^16T t T T
+^16t T t t ^T t T T  ^32t T t t ^T t T T  ^16t T t t
+^16T t T T ^t T t t 32t . . . ^T t T T  ^16t T t t
+32T . . . ^T . T T   t . . . ^t T t t   T t T t ^T t T T   ^16t T t t
+
+1r
+/marker G
+^12T 24t 12T 24T  ^12t 24T 12t 24t  ^32T t T T ^t T t t  ^12T 24t 12T 24T
+12t ^24T 12t 24t  ^12T 24t 12T 24T  ^32t T t t ^T t T T  ^12t 24T 12t 24t
+^12F 24t 12T 24T  12t ^24T 12t 24t  ^32F t T T ^t T t t  ^12T 24t 12T 24T
+^12f 24T 12t 24t  8F ^12f 24t 12t 24t ^8F ^4F
+/marker GRpt
+^12T 24t 12T 24T  ^12t 24T 12t 24t  ^32T t T T ^t T t t  ^12T 24t 12T 24T
+12t ^24T 12t 24t  ^12T 24t 12T 24T  ^32t T t t ^T t T T  ^12t 24T 12t 24t
+^12F 24t 12T 24T  12t ^24T 12t 24t  ^32F t T T ^t T t t  ^12T 24t 12T 24T
+^12f 24T 12t 24t  8F ^12f 24t 12t 24t ^8F ^4F
+
+1r
+/marker H
+^32T t T T  ^t T t t  ^T t ^T t ^T t T T   ^t T t t  ^T t T T  ^t T ^t T ^t T t t
+^32T t T T  ^t T t t  ^T t ^T t T T  ^t T ^t T t t ^T t T T ^4t
+^32t T t t  ^T t T T  ^t T ^t T ^t T t t   ^T t T T  ^t T t t  ^T t ^T t ^T t T T
+^32t T t t  ^T t T T  ^t T ^t T t t  ^T t ^T t T T ^t T t t ^4T
+/marker HRpt
+^32T t T T  ^t T t t  ^T t ^T t ^T t T T   ^t T t t  ^T t T T  ^t T ^t T ^t T t t
+^32T t T T  ^t T t t  ^T t ^T t T T  ^t T ^t T t t ^T t T T ^4t
+^32t T t t  ^T t T T  ^t T ^t T ^t T t t   ^T t T T  ^t T t t  ^T t ^T t ^T t T T
+^32t T t t  ^T t T T  ^t T ^t T t t  ^T t ^T t T T ^t T t t ^4T
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

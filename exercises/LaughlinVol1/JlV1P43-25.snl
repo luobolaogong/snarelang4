@@ -1,0 +1,103 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 43, audio recording track 25
+// Section Eight -  Triplets: Advanced
+
+/time 4/4
+/tempo 56
+
+/track snare
+/channel 1
+/f
+
+/marker Acctd Trip Combos
+
+1r
+/marker A
+^24T . . . . .   . . . . . .   ^. . . . . .   . . . . . ^.
+^24T . . ^. . .   . . ^.  . . ^.  ^. . . . . .  ^. . .  ^. . .
+/marker ARpt
+^24T . . . . .   . . . . . .   ^. . . . . .   . . . . . ^.
+^24T . . ^. . .   . . ^.  . . ^.  ^. . . . . .  ^. . .  ^. . .
+
+1r
+/marker B
+^24T . . ^. . .  . . ^. . . ^.  . . ^. . . ^.  . . ^. . . ^.
+^24T . . ^. . .  . ^. . . ^. .   ^. . . ^. . .  . ^. . . ^. .
+/marker BRpt
+^24T . . ^. . .  . . ^. . . ^.  . . ^. . . ^.  . . ^. . . ^.
+^24T . . ^. . .  . ^. . . ^. .   ^. . . ^. . .  . ^. . . ^. .
+
+1r
+/marker C
+^24T . . ^. . .  ^12T ^24t . . ^.  . . ^. . . ^. ^4t
+^24t . . ^. . .  ^12t ^24T . . ^.  . . ^. . . ^. ^4T
+/marker CRpt
+^24T . . ^. . .  ^12T ^24t . . ^.  . . ^. . . ^. ^4t
+^24t . . ^. . .  ^12t ^24T . . ^.  . . ^. . . ^. ^4T
+
+/marker FlamTrips
+1r
+/marker A
+^24F t T f T t   ^F t T f T t   ^F t T f T t   ^F t T f T t
+^24F t T f T t   ^F t T f T t   ^F t T f T t   ^F t T f T t
+/marker ARpt
+^24F t T f T t   ^F t T f T t   ^F t T f T t   ^F t T f T t
+^24F t T f T t   ^F t T f T t   ^F t T f T t   ^F t T f T t
+
+1r
+/marker B
+24T ^f T t ^F t    T ^f T t ^F t    T ^f T t ^F t    T ^f T t ^F t
+24T ^f T t ^F t    T ^f T t ^F t    T ^f T t ^F t    T ^f T t ^F t
+/marker BRpt
+24T ^f T t ^F t    T ^f T t ^F t    T ^f T t ^F t    T ^f T t ^F t
+24T ^f T t ^F t    T ^f T t ^F t    T ^f T t ^F t    T ^f T t ^F t
+
+1r
+/marker C
+24T t ^F t T ^f    T t ^F t T ^f    T t ^F t T ^f    T t ^F t T ^f
+24T t ^F t T ^f    T t ^F t T ^f    T t ^F t T ^f    T t ^F t T ^f
+/marker CRpt
+24T t ^F t T ^f    T t ^F t T ^f    T t ^F t T ^f    T t ^F t T ^f
+24T t ^F t T ^f    T t ^F t T ^f    T t ^F t T ^f    T t ^F t T ^f
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

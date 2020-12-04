@@ -1,0 +1,134 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 44, audio recording track 26
+// Section Eight -  Triplets: Advanced part 2
+
+/time 4/4
+/tempo 53
+
+/track snare
+/channel 1
+/f
+
+/marker Flam SwssTrips
+
+1r
+/marker A
+24F T t F T t   F T t F T t   F T t F T t   ^4F
+24f t T f t T   f t T f t T   f t T f t T   ^4f
+/marker ARpt
+24F T t F T t   F T t F T t   F T t F T t   ^4F
+24f t T f t T   f t T f t T   f t T f t T   ^4f
+
+1r
+/marker B
+24F T t F T t  12F 24t 12T 24T  24f t T f t T  ^4f
+12F 24t 12T 24T  12f ^24T 12t 24t  24F T t F T t ^4F
+/marker BRpt
+24F T t F T t  12F 24t 12T 24T  24f t T f t T  ^4f
+12F 24t 12T 24T  12f ^24T 12t 24t  24F T t F T t ^4F
+
+/marker Inverted
+1r
+/marker A
+24T . F T t F   T t F T t F  T t F T t F  ^4f
+24t . f t T f   t T f t T f  t T f t T t  ^4F
+/marker ARpt
+24T . F T t F   T t F T t F  T t F T t F  ^4f
+24t . f t T f   t T f t T f  t T f t T t  ^4F
+
+1r
+/marker B
+24T t F T t F ^4f  24t T f t T f  ^4F
+24T t F T t F ^4f   24t T f t T f  ^4F
+/marker BRpt
+24T t F T t F ^4f  24t T f t T f  ^4F
+24T t F T t F ^4f   24t T f t T f  ^4F
+
+1r
+/marker C
+/f ^12F 24t . . .  ^12f 24t ^12F 24t   /mp /cresc 24T . F T t F ^4f /fff
+/f ^12f 24T . . .  ^12F 24T ^12f 24T   /mp /cresc 24t . f t T f ^4f /fff
+/marker CRpt
+/f ^12F 24t . . .  ^12f 24t ^12F 24t   /mp /cresc 24T . F T t F ^4f /fff
+/f ^12f 24T . . .  ^12F 24T ^12f 24T   /mp /cresc 24t . f t T f ^4f /fff
+
+
+/marker DrgTrips
+1r
+/marker A
+24D t T d T t   D t T d T t   D t T d T t   D t T d T t
+24D t T d T t   D t T d T t   D t T d T t   D t T d T t
+/marker ARpt
+24D t T d T t   D t T d T t   D t T d T t   D t T d T t
+24D t T d T t   D t T d T t   D t T d T t   D t T d T t
+
+1r
+/marker B
+24T d T t D t   T d T t D t   T d T t D t   T d T t D t
+24T d T t D t   T d T t D t   T d T t D t   T d T t D t
+/marker BRpt
+24T d T t D t   T d T t D t   T d T t D t   T d T t D t
+24T d T t D t   T d T t D t   T d T t D t   T d T t D t
+
+1r
+/marker C
+24T t D t T d   T t D t T d   T t D t T d   T t D t T d
+24T t D t T d   T t D t T d   T t D t T d   T t D t T d
+/marker CRpt
+24T t D t T d   T t D t T d   T t D t T d   T t D t T d
+24T t D t T d   T t D t T d   T t D t T d   T t D t T d
+
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

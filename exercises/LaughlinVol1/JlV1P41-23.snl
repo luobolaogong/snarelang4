@@ -1,0 +1,125 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 41, audio recording track 23
+// Section Seven Paradiddle: Advanced, Drags and Flams with paradiddles
+
+/time 4/4
+/tempo 72
+
+/track snare
+/channel 1
+/f
+
+/marker Sect7 PdleAdv
+
+1r
+/marker A
+_16F t T T  _f T t t  _F t T T  _f T t t
+16T _f T T  t _F t t  T _f T T  t _F t t
+16T t F T  t T f t  T t F T  t T f t
+16T . T _F  t T t _f  T t T _F  t T t _f
+/marker ARpt
+_16F t T T  _f T t t  _F t T T  _f T t t
+16T _f T T  t _F t t  T _f T T  t _F t t
+16T t F T  t T f t  T t F T  t T f t
+16T . T _F  t T t _f  T t T _F  t T t _f
+
+1r
+/marker B
+^12F 24t 12T 24T  ^12f 24T 12t 24t  ^12F 24t 12T 24T  ^12f 24T 12t 24t
+12T ^24f 12T 24T  12t ^24F 12t 24t  12T ^24f 12T 24T  12t ^24F 12t 24t
+12T 24t _12F 24T  12t 24T _12f 24t  12T 24t _12F 24T  12t 24T _12f 24t
+12T 24t 12T ^24F  12t 24T 12t ^24f  12T 24t 12T ^24F  12t 24T 12t ^24f
+/marker BRpt
+^12F 24t 12T 24T  ^12f 24T 12t 24t  ^12F 24t 12T 24T  ^12f 24T 12t 24t
+12T ^24f 12T 24T  12t ^24F 12t 24t  12T ^24f 12T 24T  12t ^24F 12t 24t
+12T 24t _12F 24T  12t 24T _12f 24t  12T 24t _12F 24T  12t 24T _12f 24t
+12T 24t 12T ^24F  12t 24T 12t ^24f  12T 24t 12T ^24F  12t 24T 12t ^24f
+
+1r
+/marker C
+>12D 24t 12T 24T  >12d 24T 12t 24t  >12D 24t 12T 24T  >12d 24T 12t 24t
+12T >24d 12T 24T  12t >24D 12t 24t  12T >24d 12T 24T  12t >24D 12t 24t
+12T 24t _12D 24T  12t 24T _12d 24t  12T 24t _12D 24T  12t 24T _12d 24t
+12T 24t 12T >24D  12t 24T 12t >24d  12T 24t 12T >24D  12t 24T 12t >24d
+
+/marker CRpt
+>12D 24t 12T 24T  >12d 24T 12t 24t  >12D 24t 12T 24T  >12d 24T 12t 24t
+12T >24d 12T 24T  12t >24D 12t 24t  12T >24d 12T 24T  12t >24D 12t 24t
+12T 24t _12D 24T  12t 24T _12d 24t  12T 24t _12D 24T  12t 24T _12d 24t
+12T 24t 12T >24D  12t 24T 12t >24d  12T 24t 12T >24D  12t 24T 12t >24d
+
+1r
+/marker D
+^12F 24t 12D 24T  ^12f 24T 12d 24t  ^12F 24t 12D ^24T  12t 24t ^8F
+^12f 24T 12d 24t  ^12F 24t 12D 24T  ^12f 24T 12d ^24t  12T 24T ^8f
+/marker DRpt
+^12F 24t 12D 24T  ^12f 24T 12d 24t  ^12F 24t 12D ^24T  12t 24t ^8F
+^12f 24T 12d 24t  ^12F 24t 12D 24T  ^12f 24T 12d ^24t  12T 24T ^8f
+
+1r
+/marker E
+^16F t D T  ^f T d t  ^F t D ^T  t t ^8F
+^16f T d t  ^F t D T  ^f T d ^t  T T ^8f
+/marker ERpt
+^16F t D T  ^f T d t  ^F t D ^T  t t ^8F
+^16f T d t  ^F t D T  ^f T d ^t  T T ^8f
+
+
+
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+

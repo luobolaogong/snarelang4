@@ -1,0 +1,148 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 45, audio recording track 27
+// Section Eight -  Triplets: Advanced part 3
+
+/time 4/4
+/tempo 53
+
+/track snare
+/channel 1
+/f
+
+/marker Drag SwssTrips
+
+1r
+/marker A
+24D T t D T t   D T t D T t   D T t D T t   ^4D
+24d t T d t T   d t T d t T   d t T d t T   ^4d
+/marker ARpt
+24D T t D T t   D T t D T t   D T t D T t   ^4D
+24d t T d t T   d t T d t T   d t T d t T   ^4d
+
+1r
+/marker B
+24D T t D T t  12D 24t 12T 24T  24d t T d t T  ^4d
+24d t T d t T  12d 24T 12t 24t  24D T t D T t  ^4D
+/marker BRpt
+24D T t D T t  12D 24t 12T 24T  24d t T d t T  ^4d
+24d t T d t T  12d 24T 12t 24t  24D T t D T t  ^4D
+
+/marker Inverted
+1r
+/marker A
+24T . D T t D   T t D T t D  T t D T t D  ^4T
+24t . d t T d   t T d t T d  t T d t T d  ^4t
+/marker ARpt
+24T . D T t D   T t D T t D  T t D T t D  ^4T
+24t . d t T d   t T d t T d  t T d t T d  ^4t
+
+1r
+/marker B
+24T t D T t D ^4T  24t T d t T d  ^4t
+24T t D T t D ^4T  24t T d t T d  ^4t
+/marker BRpt
+24T t D T t D ^4T  24t T d t T d  ^4t
+24T t D T t D ^4T  24t T d t T d  ^4t
+
+/time 6/8
+/tempo 104
+
+/marker TripComboFlmDrg
+2:3r
+/marker A
+8F t F t T f
+8T . F f T t
+8F t F f T f
+8t . F 8:3f
+/marker ARpt
+8F t F t T f
+8T . F f T t
+8F t F f T f
+8t . F 8:3f
+
+2:3r
+/marker B
+^8F t D T t ^F
+8t F ^T t T t
+8T f ^F t F ^f
+8T f t ^8:3F
+/marker BRpt
+^8F t D T t ^F
+8t F ^T t T t
+8T f ^F t F ^f
+8T f t ^8:3F
+
+2:3r
+/marker C
+8D T t D T t
+8T ^f T ^f T t
+^8F t D T t D
+8T t F ^8:3f
+/marker CRpt
+8D T t D T t
+8T ^f T ^f T t
+^8F t D T t D
+8T t F ^8:3f
+
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^24M . . ^. . . ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// time change
+
+^8:3M ^. ^8M . .  ^8:3M
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+
+^8:3M ^. ^8M . .  ^8:3M
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+
+^8:3M ^. ^8M . .  ^8:3M
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+8:3M .
+
