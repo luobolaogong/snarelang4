@@ -1,0 +1,90 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 46, audio recording track 28
+// Section Nine -  Rolls: Advanced
+
+/time 4/4
+/tempo 66
+
+/track snare
+/channel 1
+/f
+
+/marker Rolls Adv
+
+1r
+/marker 4StrkRll
+16T . 8T  16t . 8t  24T t t 8T  24t T T 8t
+24T 12z 8T  24t 12Z 8t  24T 12z 8T  24t 12Z 8t
+/marker 4StrkRllRpt
+16T . 8T  16t . 8t  24T t t 8T  24t T T 8t
+24T 12z 8T  24t 12Z 8t  24T 12z 8T  24t 12Z 8t
+
+
+1r
+/marker A
+16T T t t  48T 24z 16T  48t 24Z 16t  16T T t t  48T 24z 16T  48t 24Z 16t
+16T T 48t 24Z 16t  16T T t t  48T 24z 16T  16t t 4T
+/marker ARpt
+16T T t t  48T 24z 16T  48t 24Z 16t  16T T t t  48T 24z 16T  48t 24Z 16t
+16T T 48t 24Z 16t  16T T t t  48T 24z 16T  16t t 4T
+
+1r
+/marker B
+36T 18z 24T  36t 18Z 24t  ^12T 24t 12T 24T  36t 18Z 24t  36T 18z 24T  ^12t 24T 12t 24t
+36T 18z 24T  12t 24t  ^12F 24t  36T 18z 24  36t 18Z 24  12T 24T  ^4f
+/marker BRpt
+36T 18z 24T  36t 18Z 24t  ^12T 24t 12T 24T  36t 18Z 24t  36T 18z 24T  ^12t 24T 12t 24t
+36T 18z 24T  12t 24t  ^12F 24t  36T 18z 24  36t 18Z 24  12T 24T  ^4f
+
+1r
+/marker C
+16T T t t  48T 24z 16T  16t t   T T  48t 24Z 16t   48T 24z 16T  16t t
+48T 24z 16T   48t 24Z 16t   48T 24z 16T  16t t    48T 24z 16T  48t 24Z 16t  ^4T
+/marker CRpt
+16T T t t  48T 24z 16T  16t t   T T  48t 24Z 16t   48T 24z 16T  16t t
+48T 24z 16T   48t 24Z 16t   48T 24z 16T  16t t    48T 24z 16T  48t 24Z 16t  ^4T
+
+1r
+/marker D
+^16F t  48T 24z 16T   48t 24Z 16t  16T f   48T 24z 16T   48t 24Z 16t  ^16T t T T
+^16f T  48t 24Z 16t   48T 24z 16T  16t F   48t 24Z 16t   48T 24z 16T  ^16t T t t
+/marker DRpt
+^16F t  48T 24z 16T   48t 24Z 16t  16T f   48T 24z 16T   48t 24Z 16t  ^16T t T T
+^16f T  48t 24Z 16t   48T 24z 16T  16t F   48t 24Z 16t   48T 24z 16T  ^16t T t t
+
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . ^. ^. ^4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^. ^. ^. .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^12M 24M ^12M 24M ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^. ^. ^. .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^. ^. ^. .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

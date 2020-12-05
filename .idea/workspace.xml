@@ -19,15 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Updates to snl files and creations of more exercises.">
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P38-20.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P39-21.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P40-22.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P41-23.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P42-24.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P43-25.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P44-26.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P45-27.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added more JL exercises.">
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P46-28.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P47-29.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P48-30.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P49-31.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P50-32.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +67,7 @@
   </component>
   <component name="RunManager" selected="Dart Command Line App.Exercises">
     <configuration name="Exercises" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=exercises/LaughlinVol1/JlV1P45-27.snl -o midifiles/JlV1P45-27.mid -l INFO" />
+      <option name="arguments" value="--input=exercises/LaughlinVol1/JlV1P50-32.snl -o midifiles/JlV1P50-32.mid -l INFO" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -196,14 +193,8 @@
       <workItem from="1606864740243" duration="6477000" />
       <workItem from="1606932421909" duration="749000" />
       <workItem from="1606973997047" duration="3609000" />
-      <workItem from="1607021156024" duration="22197000" />
-    </task>
-    <task id="LOCAL-00004" summary="Ready to next start into ramp dynamics.  So, temp checkin.">
-      <created>1598207812423</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1598207812423</updated>
+      <workItem from="1607021156024" duration="23927000" />
+      <workItem from="1607103325099" duration="20952000" />
     </task>
     <task id="LOCAL-00005" summary="Ramping dynamics, getting closer.  Logic and math need fixing, but I heard it kinda work.">
       <created>1598346999073</created>
@@ -541,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606978335266</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Added more JL exercises.">
+      <created>1607062168477</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1607062168478</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +558,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Started looking at Tiree to fix it." />
     <MESSAGE value="Updated snare part toCaptEwing to add some crescendos, soften &#10;initial rolls, and fix 1st/2nd endings." />
     <MESSAGE value="Scotland the Brave snare and chips added." />
     <MESSAGE value="Scotland the Brave, tenor, bass, and metronome added." />
@@ -585,17 +582,18 @@
     <MESSAGE value="Tried fixing tempos when timesigs are 3,6,9,12/8" />
     <MESSAGE value="Do not remember all I changed." />
     <MESSAGE value="Updates to snl files and creations of more exercises." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates to snl files and creations of more exercises." />
+    <MESSAGE value="Added more JL exercises." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more JL exercises." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607060382170">
+    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607130122987">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607060382170" />
+    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607130122987" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606864892593">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -616,22 +614,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1600648661173" />
-    <state width="2290" height="504" key="GridCell.Tab.0.bottom" timestamp="1607061698882">
+    <state width="2290" height="504" key="GridCell.Tab.0.bottom" timestamp="1607132120751">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1607061698882" />
-    <state width="2290" height="504" key="GridCell.Tab.0.center" timestamp="1607061698882">
+    <state width="2290" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1607132120751" />
+    <state width="2290" height="504" key="GridCell.Tab.0.center" timestamp="1607132120751">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1607061698882" />
-    <state width="2290" height="504" key="GridCell.Tab.0.left" timestamp="1607061698882">
+    <state width="2290" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1607132120751" />
+    <state width="2290" height="504" key="GridCell.Tab.0.left" timestamp="1607132120751">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1607061698882" />
-    <state width="2290" height="504" key="GridCell.Tab.0.right" timestamp="1607061698882">
+    <state width="2290" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1607132120751" />
+    <state width="2290" height="504" key="GridCell.Tab.0.right" timestamp="1607132120751">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1607061698882" />
+    <state width="2290" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1607132120751" />
     <state x="3042" y="1235" width="2810" height="753" key="GridCell.Tab.1.bottom" timestamp="1606372101059">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -668,10 +666,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1507" y="709" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1603743054671" />
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1606978346152">
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1607062186919">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1606978346152" />
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1607062186919" />
     <state width="1140" height="1014" key="XDebugger.FullValuePopup" timestamp="1598495962053">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

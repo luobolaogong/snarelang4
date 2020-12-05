@@ -1,0 +1,90 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 47, audio recording track 29
+// Section Nine -  Rolls: Advanced Cont, 6 Stroke Roll
+// Wow, he totally opens it up.  It's not
+// as written.  Plus, he accents the tap in the roll
+// contrary to what he wrote on previous page
+
+/time 4/4
+/tempo 66
+
+/track snare
+/channel 1
+/f
+
+
+1r
+/marker 6StrkRll
+24T . . _8t  24t . . _8T   ^40T t t T T _8t  ^40t T T t t _8T
+_40T 20z . _8t  _40t 20Z . _8T  _40T 20z . _8t  _40t 20Z . _8T
+/marker 6StrkRllRpt
+24T . . _8t  24t . . _8T   ^40T t t T T _8t  ^40t T T t t _8T
+_40T 20z . _8t  _40t 20Z . _8T  _40T 20z . _8t  _40t 20Z . _8T
+
+/marker ExDev 6StrkRll
+1r
+/marker A
+>40T 20z . 8t  ^12F 24t 12T 24T  >40t 20Z . 8T  ^12f 24T 12t 24t
+>40T 20z . 12t 24t  ^12F 24t 12T 24T  >40t 20Z . 12T 24T ^4f
+/marker ARpt
+>40T 20z . 8t  ^12F 24t 12T 24T  >40t 20Z . 8T  ^12f 24T 12t 24t
+>40T 20z . 12t 24t  ^12F 24t 12T 24T  >40t 20Z . 12T 24T ^4f
+
+1r
+/marker B
+^8F >40t 20Z . ^12T 24t 12T 24T  ^8f >40T 20z .  ^4t
+^8f >40T 20z . ^12t 24T 12t 24t  ^8F >40t 20Z .  ^4T
+/marker BRpt
+^8F >40t 20Z . ^12T 24t 12T 24T  ^8f >40T 20z .  ^4t
+^8f >40T 20z . ^12t 24T 12t 24t  ^8F >40t 20Z .  ^4T
+
+1r
+/marker C
+>40T 20z . 16t t  >40T 20z . 16t t  >40T 20z . 16t t  ^4F
+>40t 20Z . 16T T  >40t 20Z . 16T T  >40t 20Z . 16T T  ^4f
+/marker CRpt
+>40T 20z . 16t t  >40T 20z . 16t t  >40T 20z . 16t t  ^4F
+>40t 20Z . 16T T  >40t 20Z . 16T T  >40t 20Z . 16T T  ^4f
+
+1r
+/marker D
+>40T 20z . 12t 24t  >40T 20z . 12t 24t  >40T 20z . 12t 24t  ^4F
+>40t 20Z . 12T 24T  >40t 20Z . 12T 24T  >40t 20Z . 12T 24T  ^4f
+/marker DRpt
+>40T 20z . 12t 24t  >40T 20z . 12t 24t  >40T 20z . 12t 24t  ^4F
+>40t 20Z . 12T 24T  >40t 20Z . 12T 24T  >40t 20Z . 12T 24T  ^4f
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . ^. ^. ^4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^12M 24M ^12M 24M ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^12M 24M ^12M 24M ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M 16M . ^8M 16M . ^8M . ^8M 16M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^12M 24M ^12M 24M ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

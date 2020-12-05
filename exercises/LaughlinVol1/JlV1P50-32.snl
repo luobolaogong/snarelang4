@@ -1,0 +1,134 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 50, audio recording track 32
+// Section Ten -  Continuous Roll Movements, 12 Stroke Roll
+
+/time 4/4
+/tempo 66
+
+/track snare
+/channel 1
+/f
+
+
+1r
+/marker R12StrkRllContinuous
+24T . . . . .   . . . . . .    . . . . . .  ^4T
+>44T t t T T t t T T t t   >T t t T T t t T T t t   >T t t T T t t T T t t   >T t t T T t t T T t t
+>44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .
+>44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .  >4T
+/marker R12StrkRllContinuousRpt
+24T . . . . .   . . . . . .    . . . . . .  ^4T
+>44T t t T T t t T T t t   >T t t T T t t T T t t   >T t t T T t t T T t t   >T t t T T t t T T t t
+>44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .
+>44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .  >4T
+
+1r
+/marker L12StrkRllContinuous
+24t . . . . .   . . . . . .    . . . . . .  ^4t
+>44t T T t t T T t t T T   >t T T t t T T t t T T   >t T T t t T T t t T T   >t T T t t T T t t T T
+>44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .
+>44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .  >4t
+/marker L12StrkRllContinuousRpt
+24t . . . . .   . . . . . .    . . . . . .  ^4t
+>44t T T t t T T t t T T   >t T T t t T T t t T T   >t T T t t T T t t T T   >t T T t t T T t t T T
+>44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .
+>44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .  >4t
+
+1r
+/marker ARight
+>44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .
+>40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .
+>44T 22z . . . .  >44T 22z . . . .  >40T 20z .  >40t 20Z .  >44T 22z . . . .
+>40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  ^4T
+/marker ARightRpt
+>44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .  >44T 22z . . . .
+>40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .
+>44T 22z . . . .  >44T 22z . . . .  >40T 20z .  >40t 20Z .  >44T 22z . . . .
+>40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  ^4T
+
+1r
+/marker ALeft
+>44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .
+>40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .
+>44t 22Z . . . .  >44t 22Z . . . .  >40t 20Z .  >40T 20z .  >44t 22Z . . . .
+>40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  ^4t
+/marker ALeftRpt
+>44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .  >44t 22Z . . . .
+>40t 20Z .  >40t 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .
+>44t 22Z . . . .  >44t 22Z . . . .  >40t 20Z .  >40T 20z .  >44t 22Z . . . .
+>40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  >40t 20Z .  >40T 20z .  ^4t
+
+
+1r
+/marker B
+>40T 20z . 24t . .  >40T 20z . 24t . .  >40T 20z .   >40t 20Z .  >44T 22z . . . .
+>40T 20z . >40t 20Z . >40T 20z .  24t . . >40T 20z . >40t 20Z .  ^4T
+>40t 20Z . 24T . .  >40t 20Z . 24T . .  >40t 20Z .   >40T 20z .  >44t 22Z . . . .
+>40t 20Z . >40T 20z . >40t 20Z .  24T . . >40t 20Z . >40T 20z .  ^4t
+/marker BRpt
+>40T 20z . 24t . .  >40T 20z . 24t . .  >40T 20z .   >40t 20Z .  >44T 22z . . . .
+>40T 20z . >40t 20Z . >40T 20z .  24t . . >40T 20z . >40t 20Z .  ^4T
+>40t 20Z . 24T . .  >40t 20Z . 24T . .  >40t 20Z .   >40T 20z .  >44t 22Z . . . .
+>40t 20Z . >40T 20z . >40t 20Z .  24T . . >40t 20Z . >40T 20z .  ^4t
+
+
+/track met
+/channel 2
+/mp
+
+^4M ^. ^8M ^. ^4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+^4M ^. ^8M ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

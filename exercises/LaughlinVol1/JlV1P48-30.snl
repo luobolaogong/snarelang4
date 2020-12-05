@@ -1,0 +1,87 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 48, audio recording track 30.
+// Section Nine -  Rolls: Advanced Cont, 8 Stroke Roll
+// Wow, he totally opens it up.  It's not
+// as written.  Plus, he accents the tap in the roll
+// contrary to what he wrote on previous page
+
+/time 4/4
+/tempo 66
+
+/track snare
+/channel 1
+/f
+>16T z . . ^4T  >16t Z . . ^4t
+
+
+1r
+/marker 8StrkRll
+>16T . . . ^4T  >16t . . . ^4t
+>16T 32t t T T t t ^4T  >16t 32T T t t T T  ^4t
+>16T z . . ^4T  >16t Z . . ^4t
+>16T z . . ^4T  >16t Z . . ^4t
+/marker 8StrkRllRpt
+>16T . . . ^4T  >16t . . . ^4t
+>16T 32t t T T t t ^4T  >16t 32T T t t T T  ^4t
+>16T z . . ^4T  >16t Z . . ^4t
+>16T z . . ^4T  >16t Z . . ^4t
+
+1r
+/marker 10StrkRll
+24T . . . . .  ^4T   24t . . . . .  ^4t
+>216:5T t t T T t t T T ^24t ^4T  >216:5t T T t t T T t t ^24T ^4t
+^216:5T 216:10z . . . ^24t  ^4T   ^216:5t 216:10Z . . . ^24T ^4t
+^216:5T 216:10z . . . ^24t  ^4T   ^216:5t 216:10Z . . . ^24T ^4t
+/marker 10StrkRllRpt
+24T . . . . .  ^4T   24t . . . . .  ^4t
+>216:5T t t T T t t T T ^24t ^4T  >216:5t T T t t T T t t ^24T ^4t
+^216:5T 216:10z . . . ^24t  ^4T   ^216:5t 216:10Z . . . ^24T ^4t
+^216:5T 216:10z . . . ^24t  ^4T   ^216:5t 216:10Z . . . ^24T ^4t
+
+1r
+/marker 12StrkRll
+24T . . . . . >4T  24t . . . . .  >4t
+>44T t t T T  t t T T t t  ^4T   >44t T T t t T T t t T T  ^4t
+^44T 22z . . . . ^4T  ^44t 22Z . . . .  ^4t
+^44T 22z . . . . ^4T  ^44t 22Z . . . .  ^4t
+/marker 12StrkRllRpt
+24T . . . . . >4T  24t . . . . .  >4t
+>44T t t T T  t t T T t t  ^4T   >44t T T t t T T t t T T  ^4t
+^44T 22z . . . . ^4T  ^44t 22Z . . . .  ^4t
+^44T 22z . . . . ^4T  ^44t 22Z . . . .  ^4t
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . ^. ^. ^4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^. ^. ^4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^. ^. ^4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+

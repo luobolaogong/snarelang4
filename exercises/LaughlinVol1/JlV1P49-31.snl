@@ -1,0 +1,84 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 49, audio recording track 31
+// Section Ten -  Continuous Roll Movements, 6 Stroke Roll
+
+/time 4/4
+/tempo 66
+
+/track snare
+/channel 1
+/f
+
+
+1r
+/marker 6StrkRllContinuous
+24T . . . . . ^4t  24t . . . . . ^4T
+^40T t t T T  ^40t T T t t  ^4T   ^40t T T t t  ^40T t t T T  ^4T
+^40T 20z . ^40t 20Z . ^4T   ^40t 20Z .  ^40T 20z . ^4t
+^40T 20z . ^40t 20Z . ^4T   ^40t 20Z .  ^40T 20z . ^4t
+/marker 6StrkRllRpt
+24T . . . . . ^4t  24t . . . . . ^4T
+^40T t t T T  ^40t T T t t  ^4T   ^40t T T t t  ^40T t t T T  ^4T
+^40T 20z . ^40t 20Z . ^4T   ^40t 20Z .  ^40T 20z . ^4t
+^40T 20z . ^40t 20Z . ^4T   ^40t 20Z .  ^40T 20z . ^4t
+
+1r
+/marker A
+>40T 20z . >40t 20Z .  ^12T 24t 12T 24T       >40t 20Z . >40T 20z .   ^12t 24T 12t 24t
+/mp /cresc >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .   ^12T /fff /f 24t 12T 24T
+>40t 20Z . >40T 20z .  ^12t 24T 12t 24t       >40T 20z . >40t 20Z .   ^12T 24t 12T 24T
+/mp /cresc >40t 20Z . >40T 20z .  >40t 20Z . >40T 20z .  >40t 20Z . >40t 20Z .   ^12t /fff /f 24T 12t 24t
+/marker ARpt
+>40T 20z . >40t 20Z .  ^12T 24t 12T 24T       >40t 20Z . >40T 20z .   ^12t 24T 12t 24t
+/mp /cresc >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .   ^12T /fff /f 24t 12T 24T
+>40t 20Z . >40T 20z .  ^12t 24T 12t 24t       >40T 20z . >40t 20Z .   ^12T 24t 12T 24T
+/mp /cresc >40t 20Z . >40T 20z .  >40t 20Z . >40T 20z .  >40t 20Z . >40t 20Z .   ^12t /fff /f 24T 12t 24t
+
+1r
+/marker B
+>40T 20z . >40t 20Z .  ^16T . 8T   >40t 20Z . >40T 20z .  ^16t . 8t
+>40T 20z . >40t 20Z .  32T . . . ^8T  >40t 20Z . >40T 20z .  32t . . . ^8t
+8T >40t 20Z .  >40T 20z .  24t . .  ^4F 4r
+8f >40T 20z .  >40t 20Z .  24T . .  ^4f 4r
+/marker BRpt
+>40T 20z . >40t 20Z .  ^16T . 8T   >40t 20Z . >40T 20z .  ^16t . 8t
+>40T 20z . >40t 20Z .  32T . . . ^8T  >40t 20Z . >40T 20z .  32t . . . ^8t
+8T >40t 20Z .  >40T 20z .  24t . .  ^4F 4r
+8f >40T 20z .  >40t 20Z .  24T . .  ^4f 4r
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . ^. ^. ^4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^12M 24M ^12M 24M ^8M .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+^8M . ^. . ^. ^. ^4M
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
