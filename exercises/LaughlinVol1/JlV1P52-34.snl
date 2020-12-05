@@ -1,0 +1,104 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 51, audio recording track 33
+// Section Twelve -  Embellishments and Singles Combined: Advanced
+
+/time 4/4
+/tempo 63
+
+/track snare
+/channel 1
+/f
+
+1r
+/marker Flam5
+12T ^32f 32T . . _24t ^4T  12r ^32f 32T . . ^24t  ^4T
+12t ^32F 32t . . _24T ^4t  12r ^32F 32t . . ^24T  ^4t
+/marker Flam5Rpt
+12T ^32f 32T . . _24t ^4T  12r ^32f 32T . . ^24t  ^4T
+12t ^32F 32t . . _24T ^4t  12r ^32F 32t . . ^24T  ^4t
+
+1r
+/marker Drag5
+12T ^32D 32T . . 24t ^4T  12r ^32D 32T . . ^24t  ^4T
+12t ^32d 32t . . 24T ^4t  12r ^32d 32t . . ^24T  ^4t
+/marker Drag5Rpt
+12T ^32D 32T . . 24t ^4T  12r ^32D 32T . . ^24t  ^4T
+12t ^32d 32t . . 24T ^4t  12r ^32d 32t . . ^24T  ^4t
+
+/marker ExHelpDevDrg&flm
+1r
+/marker A
+^12F 24t 12F 32f 32T . . 24t 12T 24t 12F 32f 32t . . 24t ^4T
+^12f 24T 12f 32F 32t . . 24T 12t 24T 12f 32F 32T . . 24T ^4t
+/marker ARpt
+^12F 24t 12F 32f 32T . . 24t 12T 24t 12F 32f 32t . . 24t ^4T
+^12f 24T 12f 32F 32t . . 24T 12t 24T 12f 32F 32T . . 24T ^4t
+
+1r
+/marker B
+^12F 24t 12D 32D 32T . . 24t 12T 24t 12D 32D 32T . . 24t ^4T
+^12f 24T 12d 32d 32t . . 24T 12t 24T 12d 32d 32t . . 24T ^4t
+/marker BRpt
+^12F 24t 12D 32D 32T . . 24t 12T 24t 12D 32D 32T . . 24t ^4T
+^12f 24T 12d 32d 32t . . 24T 12t 24T 12d 32d 32t . . 24T ^4t
+
+
+1r
+/marker C
+^12F 24t 12D ^24T  12t 32D 32T . . 24t ^4T 4r
+^12f 24T 12d ^24t  12T 32d 32t . . 24T ^4t 4r
+/marker CRpt
+^12F 24t 12D ^24T  12t 32D 32T . . 24t ^4T 4r
+^12f 24T 12d ^24t  12T 32d 32t . . 24T ^4t 4r
+
+1r
+/marker D
+24T t ^32F 32t . . 24T ^4t  24t T ^32f 32T . . 24t ^4T
+24T t  32D 32T . . 24t ^4T  24t T  32d 32t . . 24T ^4t
+/marker DRpt
+24T t ^32F 32t . . 24T ^4t  24t T ^32f 32T . . 24t ^4T
+24T t  32D 32T . . 24t ^4T  24t T  32d 32t . . 24T ^4t
+
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _4M
+
+

@@ -1,0 +1,116 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 51, audio recording track 33
+// Section Eleven -  Single Strokes: Advanced
+
+/time 4/4
+/tempo 63
+
+/track snare
+/channel 1
+/f
+
+/marker SglStrksAdv
+1r
+/marker A
+^8T 32T . . . ^4T  12T ^32t . . . ^24t  ^4T
+^8t 32t . . . ^4t  12t ^32T . . . ^24T  ^4t
+/marker ARpt
+^8T 32T . . . ^4T  12T ^32t . . . ^24t  ^4T
+^8t 32t . . . ^4t  12t ^32T . . . ^24T  ^4t
+
+1r
+/marker B1
+12T ^32t . . . ^24t  ^4T  12r ^32t . . . ^24t  ^4T
+12T ^32t . . . ^24t  ^4T  12r ^32t . . . ^24t  ^4T
+/marker B1Rpt
+12T ^32t . . . ^24t  ^4T  12r ^32t . . . ^24t  ^4T
+12T ^32t . . . ^24t  ^4T  12r ^32t . . . ^24t  ^4T
+
+1r
+/marker B2
+12t ^32T . . . ^24T  ^4t  12r ^32T . . . ^24T  ^4t
+12t ^32T . . . ^24T  ^4t  12r ^32T . . . ^24T  ^4t
+/marker B2Rpt
+12t ^32T . . . ^24T  ^4t  12r ^32T . . . ^24T  ^4t
+12t ^32T . . . ^24T  ^4t  12r ^32T . . . ^24T  ^4t
+
+1r
+/marker C
+^12T 24t   12T ^32t . . . ^24t ^8T  ^12t 24T 12t ^32T . . . ^24T ^8t
+32T . . . ^12T ^32t . . . ^24t ^8T  32t . . .  ^12t ^32T . . . ^24T  ^8t
+/marker CRpt
+^12T 24t   12T ^32t . . . ^24t ^8T  ^12t 24T 12t ^32T . . . ^24T ^8t
+32T . . . ^12T ^32t . . . ^24t ^8T  32t . . .  ^12t ^32T . . . ^24T  ^8t
+
+1r
+/marker D
+32T . . . ^12T ^32t . . . ^. . . . ^24t ^4T 4r
+32t . . . ^12t ^32T . . . ^. . . . ^24T ^4t 4r
+/marker DRpt
+32T . . . ^12T ^32t . . . ^. . . . ^24t ^4T 4r
+32t . . . ^12t ^32T . . . ^. . . . ^24T ^4t 4r
+
+1r
+/marker E
+^24T t ^32T . . .  ^24T ^4t  ^24t T ^32t . . .  ^24t ^4T
+^24T t ^32T . . .  ^24T   ^24t T ^32t . . .  ^24t  ^24T t ^32T . . .  ^24T   ^4t
+/marker ERpt
+^24T t ^32T . . .  ^24T ^4t  ^24t T ^32t . . .  ^24t ^4T
+^24T t ^32T . . .  ^24T   ^24t T ^32t . . .  ^24t  ^24T t ^32T . . .  ^24T   ^4t
+
+1r
+/marker F
+^12T 24t 12T  ^32t . . . ^. . . .  ^24t  ^24T t  ^32T . . .  ^24T  ^4t
+^12t 24T 12t  ^32T . . . ^. . . .  ^24T  ^24t T  ^32t . . .  ^24t  ^4T
+/marker FRpt
+^12T 24t 12T  ^32t . . . ^. . . .  ^24t  ^24T t  ^32T . . .  ^24T  ^4t
+^12t 24T 12t  ^32T . . . ^. . . .  ^24T  ^24t T  ^32t . . .  ^24t  ^4T
+
+
+
+/track met
+/channel 2
+/mp
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+^8M . ^. . >12M ^24M  12M ^24M ^8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _4M
+
