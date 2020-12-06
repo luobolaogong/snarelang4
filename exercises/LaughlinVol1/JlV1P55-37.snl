@@ -1,0 +1,94 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 55, audio recording track 37
+// Section Twelve -  Advanced Embellishments Continued
+// The Four-Stroke Ruff
+
+// At 62bpm he plays the Four-Stroke Ruff as three 72nd notes.
+// Of course, based on that, as you speed up or slow down,
+// the grace notes will compress or expand.
+// But if you do them as my recording, they don't do that.
+// I'm using my recording.  His are more open than mine.
+// I think the openness goes away in real life when you're
+// playing more demanding scores.  Just like flams --
+// in a higher grade band flams are much tighter, I believe.
+// So, probably just consider James' method as a teaching
+// mechanism for this level of playing.
+
+/time 4/4
+/tempo 63
+
+/track snare
+/channel 1
+/f
+
+/marker 4StrkRff
+1r
+//marker L1
+/time 4/4
+24T t T 8t  24t T t 8T  24T t T _8t  24t T t _8T
+/time 8/4
+8r 24T t T >4t  8r 24t T t >4T  8r 24T t T >4t  8r 24t T t >4T
+/marker L1Rpt
+/time 4/4
+24T t T 8t  24t T t 8T  24T t T _8t  24t T t _8T
+/time 8/4
+8r 24T t T >4t  8r 24t T t >4T  8r 24T t T >4t  8r 24t T t >4T
+/time 4/4
+1r
+/marker L2
+4x X x X
+^8T x ^t X ^T x ^t X
+/marker L2Rpt
+4x X x X
+^8T x ^t X ^T x ^t X
+
+1r
+/marker L3
+^8T 12x ^32t . . .  ^24t  >8T   ^8t 12X ^32T . . .  ^24T  >8t
+^8T 12x ^32t . . .  ^24t  >8T   ^8t 12X ^32T . . .  ^24T  >8t
+/marker L3Rpt
+^8T 12x ^32t . . .  ^24t  >8T   ^8t 12X ^32T . . .  ^24T  >8t
+^8T 12x ^32t . . .  ^24t  >8T   ^8t 12X ^32T . . .  ^24T  >8t
+
+1r
+/marker L4
+^8T 12x ^32t . . . ^24t >8T  12x ^32t . . .  ^24t  ^4T
+^8t 12X ^32T . . . ^24T >8t  12X ^32T . . .  ^24T  ^4t
+/marker L4Rpt
+^8T 12x ^32t . . . ^24t >8T  12x ^32t . . .  ^24t  ^4T
+^8t 12X ^32T . . . ^24T >8t  12X ^32T . . .  ^24T  ^4t
+
+
+
+/track met
+/channel 2
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .

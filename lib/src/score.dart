@@ -386,9 +386,13 @@ class Score {
         case NoteType.buzzLeft:
         case NoteType.buzzRight:
           break;
-        case NoteType.tuzzLeft:
-        case NoteType.tuzzRight:
+        case NoteType.ruff3AltLeft:
+        case NoteType.ruff3AltRight:
+        note.velocity += 20; // recorded too softly
           break;
+        // case NoteType.tuzzLeft:
+        // case NoteType.tuzzRight:
+        //   break;
         case NoteType.ruff2Left:
         case NoteType.ruff2Right:
           break;
@@ -745,6 +749,8 @@ class Score {
             break;
           case NoteType.ruff3Left:
           case NoteType.ruff3Right:
+          case NoteType.ruff3AltLeft:
+          case NoteType.ruff3AltRight:
           case NoteType.ruff3Unison:
             // graceNotesDuration = (1900 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something

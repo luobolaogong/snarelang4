@@ -1,0 +1,65 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 58, audio recording track 39
+// Section Fourteen -  Drum Scores, Beginner March
+// James plays huge accents.  Hard to imagine he could play them louder.
+
+
+/time 4/4
+/tempo 68
+
+/track snare
+/channel 1
+/f
+
+/marker Beginner March
+1r
+/marker Part1
+/f
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
+/marker P1Rpt
+/f
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
+
+//marker Part2
+^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
+24Z . . . . . 8T t 24Z . . . . . 8T t
+^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
+^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
+//marker P2Rpt
+^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
+24Z . . . . . 8T t 24Z . . . . . 8T t
+^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
+^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
+
+
+
+/track met
+/channel 2
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _4M

@@ -1,0 +1,108 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 56, audio recording track 38
+// Section Thirteen -  Rests
+
+/time 4/4
+/tempo 80
+
+/track snare
+/channel 1
+/f
+/marker Rests
+1r
+//marker QRsts
+4T . . .
+4r T t t
+4T r T r
+4r r r T
+
+1r
+//marker 8thRsts
+4T t 8r T r t
+8T t r t r t T t
+8r T t T r T t T
+8r T r t r T 4t
+
+1r
+//marker 16Rsts
+8T t 16T t t t 8T t 16r t T t
+4T 16r t T t 4T t
+16T t r t 4T 16T t r t 4T
+4T t 16r t r t 4T
+
+1r
+//marker ComboRstsL1
+4T r T r
+8r T r t r T r t
+16r t T t r t T t r t T t 4T
+8T 16T t 8T t r t 4T
+
+1r
+// marker ComboL2
+4T r 8r 16r t 4T
+8T t 4r 8t T 4r
+16T t T r 4T 16T t T r 4T
+4T . . .
+
+1r
+// marker ComboL3
+4T t 8T t 16r t T t
+16T . . . 8T t 16r t r t 4T
+8r T r t 16T . . . 8r T
+8T . . . . . 4r
+
+1r
+// marker ComboL4
+16T 8r 16t 8r 8T 4r r
+16T 8r 16t 8r T 4r .
+16T 8r 16t 8r T t T t T
+16T 8r 16t 8r T 4t 4r
+
+/track met
+/channel 2
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _4M

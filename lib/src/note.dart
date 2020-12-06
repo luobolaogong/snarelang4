@@ -44,7 +44,7 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   tapRight,
   tapLeft,
   tapUnison,
-  flamRight,
+  flamRight, // in the future I'll have to record a much fatter flam to match how James plays them
   flamLeft,
   flamUnison,
   openDragRight, // not a 2-stroke ruff, and not a dead drag.  No recording yet
@@ -54,9 +54,11 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   dragUnison,
   buzzRight, // this can be looped
   buzzLeft, // this can be looped
-  tuzzLeft,
-  tuzzRight,
-  tuzzUnison,
+  ruff3AltLeft,
+  ruff3AltRight,
+  // tuzzLeft,
+  // tuzzRight,
+  // tuzzUnison,
   ruff2Left, // how often do these show up?  Prob almost never.  Instead, an "open drag"
   ruff2Right,
   ruff2Unison,
@@ -123,12 +125,18 @@ class Note {
       case NoteType.buzzLeft:
         noteType = NoteType.buzzRight;
         break;
-      case NoteType.tuzzRight:
-        noteType = NoteType.tuzzLeft;
+      case NoteType.ruff3AltRight:
+        noteType = NoteType.ruff3AltLeft;
         break;
-      case NoteType.tuzzLeft:
-        noteType = NoteType.tuzzRight;
+      case NoteType.ruff3AltLeft:
+        noteType = NoteType.ruff3AltRight;
         break;
+      // case NoteType.tuzzRight:
+      //   noteType = NoteType.tuzzLeft;
+      //   break;
+      // case NoteType.tuzzLeft:
+      //   noteType = NoteType.tuzzRight;
+      //   break;
       case NoteType.ruff2Right:
         noteType = NoteType.ruff2Left;
         break;
@@ -278,20 +286,26 @@ class Note {
         // }
         break;
     // Later add SLOT Tuzzes, they have lots in the recording
-      case NoteType.tuzzRight:
-        noteNumber = 119;
-        // noteNumber = 64;
-        // if (voice == Voice.unison) {
-        //   noteNumber = 24;// wrong
-        // }
+      case NoteType.ruff3AltRight:
+        noteNumber = 117; // wrong.  For now just copying the "swiss ruff" which doesn't alternate
         break;
-      case NoteType.tuzzLeft:
-        noteNumber = 118;
-        // noteNumber = 74;
-        // if (voice == Voice.unison) {
-        //   noteNumber = 34;// wrong
-        // }
+      case NoteType.ruff3AltLeft:
+        noteNumber = 116; // wrong, for now just copying the regular 3 stroke ruff
         break;
+      // case NoteType.tuzzRight:
+      //   noteNumber = 119;
+      //   // noteNumber = 64;
+      //   // if (voice == Voice.unison) {
+      //   //   noteNumber = 24;// wrong
+      //   // }
+      //   break;
+      // case NoteType.tuzzLeft:
+      //   noteNumber = 118;
+      //   // noteNumber = 74;
+      //   // if (voice == Voice.unison) {
+      //   //   noteNumber = 34;// wrong
+      //   // }
+      //   break;
       case NoteType.ruff2Right:
         noteNumber = 117;
         // noteNumber = 65;
@@ -448,11 +462,17 @@ Parser typeParser = pattern('TtFfDdZzXxYyVvRMNnBbr.').trim().map((value) { // tr
       noteType = NoteType.buzzLeft;
       break;
     case 'X':
-      noteType = NoteType.tuzzRight;
+      noteType = NoteType.ruff3AltRight;
       break;
     case 'x':
-      noteType = NoteType.tuzzLeft;
+      noteType = NoteType.ruff3AltLeft;
       break;
+    // case 'X': // The tuzz isn't being used any more, so it's being removed and replaced by alternating 3-stroke ruff
+    //   noteType = NoteType.tuzzRight;
+    //   break;
+    // case 'x':
+    //   noteType = NoteType.tuzzLeft;
+    //   break;
     case 'Y':
       noteType = NoteType.ruff2Right;
       break;
