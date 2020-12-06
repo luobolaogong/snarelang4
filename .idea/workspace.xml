@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="5 new JL exercises from first book.">
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P51-33.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P52-34.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="2 new JL exercises from first book.">
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P53-35.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P54-36.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P24-06.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P24-06.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,7 @@
   </component>
   <component name="RunManager" selected="Dart Command Line App.Exercises">
     <configuration name="Exercises" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=exercises/LaughlinVol1/JlV1P52-34.snl -o midifiles/JlV1P52-34.mid -l INFO" />
+      <option name="arguments" value="--input=exercises/LaughlinVol1/JlV1P54-36.snl -o midifiles/JlV1P54-36.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -191,14 +193,9 @@
       <workItem from="1606932421909" duration="749000" />
       <workItem from="1606973997047" duration="3609000" />
       <workItem from="1607021156024" duration="23927000" />
-      <workItem from="1607103325099" duration="26563000" />
-    </task>
-    <task id="LOCAL-00006" summary="Battle of Waterloo tune without dynamics.">
-      <created>1598399718134</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1598399718134</updated>
+      <workItem from="1607103325099" duration="27640000" />
+      <workItem from="1607148047166" duration="4884000" />
+      <workItem from="1607198641340" duration="11315000" />
     </task>
     <task id="LOCAL-00007" summary="Ramped dynamics seem to work okay, and also comments.">
       <created>1598420886523</created>
@@ -536,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607132329762</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="2 new JL exercises from first book.">
+      <created>1607138067535</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1607138067535</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +559,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Scotland the Brave snare and chips added." />
     <MESSAGE value="Scotland the Brave, tenor, bass, and metronome added." />
     <MESSAGE value="Getting ready to change stuff to support grace note delta times." />
     <MESSAGE value="Rough solution to the gracenote handling." />
@@ -580,25 +583,22 @@
     <MESSAGE value="Updates to snl files and creations of more exercises." />
     <MESSAGE value="Added more JL exercises." />
     <MESSAGE value="5 new JL exercises from first book." />
-    <option name="LAST_COMMIT_MESSAGE" value="5 new JL exercises from first book." />
+    <MESSAGE value="2 new JL exercises from first book." />
+    <option name="LAST_COMMIT_MESSAGE" value="2 new JL exercises from first book." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607137044828">
+    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607216309283">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607137044828" />
+    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607216309283" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606864892593">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.2120@0.0.3840.2120" timestamp="1606864892593" />
-    <state x="2332" y="864" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1598494360081">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2332" y="864" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1598494360081" />
     <state x="1698" y="824" width="624" height="516" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600644940359">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -611,22 +611,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1600648661173" />
-    <state width="2290" height="504" key="GridCell.Tab.0.bottom" timestamp="1607137211493">
+    <state width="2290" height="504" key="GridCell.Tab.0.bottom" timestamp="1607217646612">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1607137211493" />
-    <state width="2290" height="504" key="GridCell.Tab.0.center" timestamp="1607137211492">
+    <state width="2290" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1607217646612" />
+    <state width="2290" height="504" key="GridCell.Tab.0.center" timestamp="1607217646611">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1607137211492" />
-    <state width="2290" height="504" key="GridCell.Tab.0.left" timestamp="1607137211492">
+    <state width="2290" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1607217646611" />
+    <state width="2290" height="504" key="GridCell.Tab.0.left" timestamp="1607217646611">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1607137211492" />
-    <state width="2290" height="504" key="GridCell.Tab.0.right" timestamp="1607137211493">
+    <state width="2290" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1607217646611" />
+    <state width="2290" height="504" key="GridCell.Tab.0.right" timestamp="1607217646611">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1607137211493" />
+    <state width="2290" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1607217646611" />
     <state x="3042" y="1235" width="2810" height="753" key="GridCell.Tab.1.bottom" timestamp="1606372101059">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -663,14 +663,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1507" y="709" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1603743054671" />
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1607062186919">
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1607138085769">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1607062186919" />
-    <state width="1140" height="1014" key="XDebugger.FullValuePopup" timestamp="1598495962053">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="1140" height="1014" key="XDebugger.FullValuePopup/0.0.3840.2120@0.0.3840.2120" timestamp="1598495962053" />
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1607138085769" />
     <state x="1271" y="298" width="762" height="767" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602312254951">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -759,10 +755,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1030" y="1307" width="2810" height="777" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1606345678463" />
-    <state x="966" y="783" width="1442" height="592" key="find.popup" timestamp="1606974681106">
+    <state x="966" y="783" width="1442" height="592" key="find.popup" timestamp="1607214193042">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="966" y="783" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1606974681106" />
+    <state x="966" y="783" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1607214193042" />
     <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup" timestamp="1606339298035">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

@@ -1,0 +1,120 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 53, audio recording track 35
+// Section Twelve -  Advanced Embellishments Continued
+// The Ratamacue
+//
+// I disagree with his interpretation of "open drags", unless this is
+// just a teaching mechanism to slide into playing drags a constant way
+// in the future.
+//
+// He plays them mostly as 32nds at this tempo of 64bpm, but
+// in some cases he plays 48ths as when played with a ratamacue.
+//
+// So how would he play them at a slower tempo?
+// As 64ths?  There's no consistency.  Therefore, I think they should be played
+// as an absolute timing, no matter the tempo.
+
+/time 4/4
+/tempo 63
+
+/track snare
+/channel 1
+/f
+
+
+/marker Ratamacue
+4:3r 16:3r 32t t
+16:3T 32t t   16:3T 32t t   16:3T 32t t   16:3T 32T T
+16:3t 32T T   16:3t 32T T   16:3t 32T T   16:3t 32t t
+/marker RatRpt
+16:3T 32t t   16:3T 32t t   16:3T 32t t   16:3T 32T T
+16:3t 32T T   16:3t 32T T   16:3t 32T T   4t
+
+
+// He does crazy strange ratamacues here, and so I try to copy his style
+4r . 8r . . 12r
+/marker Ex1
+/mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t
+/mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t
+/marker Ex1Rpt
+/mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t
+/mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t   /mp 32t t T t /f >24T ^12t
+24r
+
+
+// /marker Ex1
+// 4:3r 24:5 48t t
+// 24T t >T ^12t 48t t   24T t >T ^12t 48t t   24T t >T ^12t 48t t   24T t >T ^12t 48t t
+// 24T t >T ^16:3t 32t t   24T t >T ^16:3t 32t t   24T t >T ^16:3t 32t t   24T t >T ^16:3t 32T T
+// 24t T >t ^16:3T 32T T   24t T >t ^16:3T 32T T   24t T >t ^16:3T 32T T   24t T >t ^16:3T 32t t
+// /marker Ex1Rpt
+// 24T t >T ^16:3t 32t t   24T t >T ^16:3t 32t t   24T t >T ^16:3t 32t t   24T t >T ^16:3t 32T T
+// 24t T >t ^16:3T 32T T   24t T >t ^16:3T 32T T   24t T >t ^16:3T 32T T   24t T >t ^8T
+
+
+1r
+/marker Ex2
+^16T 32t t ^16T 32t t 24T . . ^8t ^16T 32t t ^16T 32t t ^16T t T T
+^16t 32T T ^16t 32T T 24t . . ^8T ^16t 32T T ^16t 32T T ^16t T t t
+/marker Ex2Rpt
+^16T 32t t ^16T 32t t 24T . . ^8t ^16T 32t t ^16T 32t t ^16T t T T
+^16t 32T T ^16t 32T T 24t . . ^8T ^16t 32T T ^16t 32T T ^16t T t t
+
+
+1r
+/marker Ex3
+^16T 32t t  24T . .  ^4f   ^16t  32T T  24t . .  ^8F 16r 32t t
+24T . . ^16f  32T T  24t . .  ^16F 32t t  24T . ^T  12t  24t  ^4F
+/marker Ex3Rpt
+^16T 32t t  24T . .  ^4f   ^16t  32T T  24t . .  ^8F 16r 32t t
+24T . . ^16f  32T T  24t . .  ^16F  32t t  24T . ^T  12t  24t  ^4F
+
+
+1r
+/marker Ex4
+^16T 32t t ^16T 32t t  32T . . .  ^8T   ^16t 32T T 16t 32T T  32t . . . ^8t
+^16T 32t t  32T . . .   ^16T t T T   ^16t 32T T  32t . . .  ^16t T t t
+/marker Ex4Rpt
+^16T 32t t ^16T 32t t  32T . . .  ^8T   ^16t 32T T 16t 32T T  32t . . . ^8t
+^16T 32t t  32T . . .   ^16T t T T   ^16t 32T T  32t . . .  ^16t T t t
+
+
+
+
+/track met
+/channel 2
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .

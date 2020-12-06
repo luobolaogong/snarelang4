@@ -1,0 +1,100 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 54, audio recording track 36
+// Section Twelve -  Advanced Embellishments Continued
+// The Swiss Ruff
+// At 62bpm he plays the Swiss Ruff as three 72nd notes.
+// Of course, based on that, as you speed up or slow down,
+// the grace notes will compress or expand.
+// But if you do them as my recording, they don't do that.
+// The second line would simply be:
+// 4v V v V ^T v ^t V
+// rather than
+// /f ^24:5t /mp 72T t t  /f ^24:5T /mp 72t T T   /f ^24:5t /mp 72T t t  /f ^4T
+// /f ^24:5T /mp 72t T T  /f ^4t   ^24:5t /mp 72T t t /f ^24:5T /mp 72t T T
+// So, rather than futz around with all those calculations, I'll do it the
+// simple way, which is not how I did open drags, by the way, because James
+// plays them so differently depending on the tempo and what surrounds the
+// open drags.  His are more open than mine
+
+/time 4/4
+/tempo 63
+
+/track snare
+/channel 1
+/f
+
+1r
+//marker SwssRffL1
+24T t t _8T  24t T T _8t  24T t t >8T  24t T T ^8t
+8r 24T t t >4T  8r 24t T T ^4T
+/marker SwssRffL1Rpt
+24T t t _8T  24t T T _8t  24T t t >8T  24t T T ^8t
+8r 24T t t >4T  8r 24t T T ^4T
+
+// Old way, to simulate 3-stroke "Swiss" ruffs
+// 4r . . 24:5r
+// /marker SwssRffL2
+// /mp 72t T T
+// /f ^24:5t /mp 72T t t  /f ^24:5T /mp 72t T T   /f ^24:5t /mp 72T t t  /f ^4T
+// /f ^24:5T /mp 72t T T  /f ^4t   ^24:5t /mp 72T t t /f ^24:5T /mp 72t T T
+// /marker SwssRffL2Rpt
+// /f ^24:5t /mp 72T t t  /f ^24:5T /mp 72t T T   /f ^24:5t /mp 72T t t  /f ^4T
+// /f ^24:5T /mp 72t T T  /f ^4t   ^24:5t /mp 72T t t /f ^4T
+
+// Easy way
+1r
+/marker SwssRffL2
+4v V v V
+^T v ^t V
+/marker SwssRffL2Rpt
+4v V v V
+^T v ^t V
+
+1r
+/marker Ex1
+^8T 12v ^32t . . .  ^24t  >8T   ^8T 12v ^32t . . .  ^24t  ^8T
+^8t 12V ^32T . . .  ^24T  >8t   ^8T 12V ^32T . . .  ^24T  ^8t
+/marker Ex1Rpt
+^8T 12v ^32t . . .  ^24t  >8T   ^8T 12v ^32t . . .  ^24t  ^8T
+^8t 12V ^32T . . .  ^24T  >8t   ^8T 12V ^32T . . .  ^24T  ^8t
+
+1r
+/marker Ex2
+^8T 12v ^32t . . . ^24t >8T  12v ^32t . . .  ^24t  ^4T
+^8t 12V ^32T . . . ^24T >8t  12V ^32T . . .  ^24T  ^4t
+/marker Ex2Rpt
+^8T 12v ^32t . . . ^24t >8T  12v ^32t . . .  ^24t  ^4T
+^8t 12V ^32T . . . ^24T >8t  12V ^32T . . .  ^24T  ^4t
+
+
+
+/track met
+/channel 2
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .

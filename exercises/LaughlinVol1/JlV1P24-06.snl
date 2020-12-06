@@ -3,8 +3,7 @@
 // James plays buzz rolls with triplet pulse
 
 /time 4/4
-// Something's wrong with my timing?  My clock is slow compared to my phone metronome.
-// 57 is closer to 56 than 56 is.  Fix this later
+
 /tempo 57
 
 /track snare
