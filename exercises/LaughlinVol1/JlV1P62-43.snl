@@ -1,0 +1,151 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 62, audio recording track 43
+// Section Fourteen -  Drum Scores, Massed Band Setting in 6/8
+// He wrote some bars wrong.  3rd bar of lines 6, 4, 6, & 8.
+
+
+/time 6/8
+/tempo 72
+
+/track snare
+/channel 1
+/f
+
+/marker MassdBnd 6/8
+2:3r
+/marker P1L1
+^4F 24Z . . 4t 24z . .
+^16:3T 16t  8F  12Z . . 8t
+^16:3F 16t 8T /cresc 16Z . . . . .
+16:3T /fff /f 16t 8T ^4f 8t
+
+/marker P1L2
+^4F 24Z . . 4t 24z . .
+^16:3T 16t  8F  12Z . . 8t
+//^16:3F 16t 24Z . . 12t . _. ^8F
+^16:3F 16t 24Z . .   16t . _. ^16:3F
+16:3t 32Z . 8T  ^4F 8t
+
+/marker P1L1Rpt
+^4F 24Z . . 4t 24z . .
+^16:3T 16t  8F  12Z . . 8t
+^16:3F 16t 8T /cresc 16Z . . . . .
+16:3T /fff /f 16t 8T ^4f 8t
+
+/marker P1L2Rpt
+^4F 24Z . . 4t 24z . .
+^16:3T 16t  8F  12Z . . 8t
+^16:3F 16t 24Z . .   16t . _. ^16:3F
+16:3t 32Z . 8T  ^4F 8t
+
+
+/marker P2L3
+16:3T 16t ^8F  16:3t 16T ^8f
+16T . . . ^8T ^16:3f 16T 8t
+^16:3F 16t 8T /cresc 16Z . . . . .
+16:3T /fff /f 16t 8T ^4f 8t
+
+/marker P2L4
+16:3T 16t ^8F  16:3t 16T ^8f
+16T . . . ^8T ^16:3f 16T 8t
+^16:3F 16t 24Z . .   16t . _. ^16:3F
+16:3t 32Z . 8T  ^4F 8t
+
+/marker P2L3Rpt
+16:3T 16t ^8F  16:3t 16T ^8f
+16T . . . ^8T ^16:3f 16T 8t
+^16:3F 16t 8T /cresc 16Z . . . . .
+16:3T /fff /f 16t 8T ^4f 8t
+
+/marker P2L4Rpt
+16:3T 16t ^8F  16:3t 16T ^8f
+16T . . . ^8T ^16:3f 16T 8t
+^16:3F 16t 24Z . .   16t . _. ^16:3F
+16:3t 32Z . 8T  ^4F 8t
+
+
+/marker P3L5
+32:3Z . 16T 8t   32:3Z . 16T 8t
+16:3t 32Z . 8T  32:3Z . 16T 8t
+^16:3F 16t 8T 16Z . . . . .
+^16:3T 16t 8T ^4f  8t
+
+/marker P3L6
+32:3Z . 16T 8t   32:3Z . 16T 8t
+16:3t 32Z . 8T  32:3Z . 16T 8t
+^16:3F 16t 24Z . .   16t . _. ^16:3F
+16:3t 32Z . 8T  ^4F 8t
+
+/marker P3L5Rpt
+32:3Z . 16T 8t   32:3Z . 16T 8t
+16:3t 32Z . 8T  32:3Z . 16T 8t
+^16:3F 16t 8T 16Z . . . . .
+^16:3T 16t 8T ^4f  8t
+
+/marker P3L6Rpt
+32:3Z . 16T 8t   32:3Z . 16T 8t
+16:3t 32Z . 8T  32:3Z . 16T 8t
+^16:3F 16t 24Z . .   16t . _. ^16:3F
+16:3t 32Z . 8T  ^4F 8t
+
+
+/marker P4L7
+/mf /cresc 16Z . . . . .   . . . . . .
+^16:3T  /fff /f 16t 8T ^16:3f 32Z . 8T
+^16:3F 16t 8T /cresc 16Z . . . . .
+16:3T /fff /f 16t 8T ^4f 8t
+
+
+/marker P4L8
+/mf /cresc 16Z . . . . .   . . . . . .
+^16:3T  /fff /f 16t 8T ^16:3f 32Z . 8T
+^16:3F 16t 24Z . .   16t . _. ^16:3F
+16:3t 32Z . 8T  ^4F 8t
+
+/marker P4L7Rpt
+/mf /cresc 16Z . . . . .   . . . . . .
+^16:3T  /fff /f 16t 8T ^16:3f 32Z . 8T
+^16:3F 16t 8T /cresc 16Z . . . . .
+16:3T /fff /f 16t 8T ^4f 8t
+
+/marker P4L8Rpt
+/mf /cresc 16Z . . . . .   . . . . . .
+^16:3T  /fff /f 16t 8T ^16:3f 32Z . 8T
+^16:3F 16t 24Z . .   16t . _. ^16:3F
+16:3t 32Z . 8T  ^8:3F
+
+
+
+
+/track met
+/channel 2
+/p
+^8:3M ^8M . .  ^16:3M 16M 8M  ^8:3M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+
+
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+
+
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+
+
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M
+_4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _4M 8M    _4M 8M  _8:3M
+
+

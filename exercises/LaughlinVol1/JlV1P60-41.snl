@@ -1,0 +1,145 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 60, audio recording track 41
+// Section Fourteen -  Drum Scores, Massed Band Setting in 2/4
+
+
+
+/time 4/4
+/tempo 69
+
+/track snare
+/channel 1
+/f
+
+/marker MassdBnd 2/4
+4:3r 8r 24Z . .
+/marker P1L1
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /ff /f 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker P1L2
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /ff /f 8r 24Z . .
+
+/marker P1L1Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /ff /f 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker P1L2Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /ff /f 8r 12T 24t
+
+/marker P2L3
+^40T 20z .  40t 20Z . ^12T 24t 12T 24t
+^40T 20z .  40t 20Z . 8T t
+/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+12T 24t ^8F ^f /f 12T 24t
+
+/marker P2L4
+^40T 20z .  40t 20Z . ^12T 24t 12T 24t
+^40T 20z .  40t 20Z . 8T 24Z . .
+^4t /cresc 24Z . . . . .
+^4T /ff 8r 12T 24t
+
+/marker P2L3Rpt
+^40T 20z .  40t 20Z . ^12T 24t 12T 24t
+^40T 20z .  40t 20Z . 8T t
+/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+12T 24t ^8F ^f /f 12T 24t
+
+/marker P2L4Rpt
+^40T 20z .  40t 20Z . ^12T 24t 12T 24t
+^40T 20z .  40t 20Z . 8T 24Z . .
+^4t /cresc 24Z . . . . .
+^4T /fff /f 8r 12T 24t
+
+/marker P3L5
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F t
+^8F ^f  ^12F 24t 12T 24f
+12T 24t ^8F  ^f 12T 24t
+
+/marker P3L6
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+4T /fff /f 8r 12T 24t
+
+/marker Pt3L5Rpt
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F t
+^8F ^f  ^12F 24t 12T 24f
+12T 24t ^8F  ^f 12T 24t
+
+/marker Pt3L6Rpt
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+4T /fff /f 8r 12T 24t
+
+/marker P4L7
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F t
+^8F ^f ^12F 24t 12T 24f
+12T 24t ^8F ^f 12T 24t
+
+/marker P4L8
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+^4T /fff /f 8r 12T 24t
+
+/marker P4L7Rpt
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F t
+^8F ^f ^12F 24t 12T 24f
+12T 24t ^8F ^f 12T 24t
+
+/marker P4L8Rpt
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+^4T /fff /f 4r
+
+
+
+/track met
+/channel 2
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+
+
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+
+
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+
+
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
+_8M . _8M .    _8M . _8M .    _8M . _8M .    _2M

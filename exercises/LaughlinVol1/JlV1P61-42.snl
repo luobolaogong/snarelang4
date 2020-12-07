@@ -1,0 +1,85 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 61, audio recording track 42
+// Section Fourteen -  Drum Scores, Massed Band Setting in 3/4
+
+
+
+/time 3/4
+/tempo 69
+
+/track snare
+/channel 1
+/f
+
+/marker MassdBnd 3/4
+4:3r
+/marker P1
+^8F 24Z . . >8t /cresc 24Z . . . . . ^8T /fff /f
+^8f 24Z . . 24t . . 8F  12f ^24T 12t 24t
+^8F 24Z . . >8t /cresc 24Z . . . . . ^8T /fff /f
+^4F /cresc 24Z . . . . .  ^4T /fff /f
+
+/marker P1Rpt
+^8F 24Z . . >8t /cresc 24Z . . . . . ^8T /fff /f
+^8f 24Z . . 24t . . 8F  12f ^24T 12t 24t
+^8F 24Z . . >8t /cresc 24Z . . . . . ^8T /fff /f
+^4F /cresc 24Z . . . . .  ^4T /fff /f
+
+
+/marker P2
+^8F 24Z . . 8t ^8F 12T ^24:3f 24t
+^8F 24Z . . 24t . . 8F 12f ^24T 12t 24t
+^8F 24Z . . 8t ^8F 12T ^24:3f 24t
+^4F /cresc 24Z . . . . .  ^4T /fff /f
+
+/marker P2Rpt
+^8F 24Z . . 8t ^8F 12T ^24:3f 24t
+^8F 24Z . . 24t . . 8F 12f ^24T 12t 24t
+^8F 24Z . . 8t ^8F 12T ^24:3f 24t
+^4F /cresc 24Z . . . . .  ^4T /fff /f
+
+
+/marker P3
+^8F 24Z . . 8t ^8F 24Z . . 8t
+^8F 24Z . . 24t . . 8F 12f ^24T 12t 24t
+^8F 24Z . . 8t ^8F 24Z . . 8t
+^4F /cresc 24Z . . . . .  ^4T /fff /f
+
+/marker P3Rpt
+^8F 24Z . . 8t ^8F 24Z . . 8t
+^8F 24Z . . 24t . . 8F 12f ^24T 12t 24t
+^8F 24Z . . 8t ^8F 24Z . . 8t
+^4T /cresc 24Z . . . . .  ^4T /fff /f
+
+
+/marker P4
+^8F 24Z . . 8t ^12F 24t 12T ^32t . . . ^24t
+^8F 24Z . . 24t . . 8F 12f ^24T 12t 24t
+^8F 24Z . . 8t ^12F 24t 12T ^32t . . . ^24t
+^4T /cresc 24Z . . . . .  ^4T /fff /f
+
+/marker P4Rpt
+^8F 24Z . . 8t ^12F 24t 12T ^32t . . . ^24t
+^8F 24Z . . 24t . . 8F 12f ^24T 12t 24t
+^8F 24Z . . 8t ^12F 24t 12T ^32t . . . ^24t
+^4T /cresc 24Z . . . . .  ^4T /fff /f
+
+
+
+/track met
+/channel 2
+/p
+^4M ^8M . ^4M
+/pp
+
+_8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .
+_8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .
+
+_8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .
+_8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .
+
+_8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .
+_8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .
+
+_8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .
+_8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _8M .    _8M . _8M . _4M
