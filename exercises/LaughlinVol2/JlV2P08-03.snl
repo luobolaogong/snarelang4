@@ -1,0 +1,116 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 8, audio recording track 3
+// Rhythm 2/4 Round with 16th Note Rests
+
+// James doesn't write most of the accents he plays, and he is inconsistent
+// in where he places accents.  That means to copy him I have to listen to his
+// recordings and place the accents, which I get tired of doing.  He likes
+// to end with a big bang, for example, but it's never written.
+
+/time 2/4
+/tempo 80
+
+/track snare
+/channel 1
+/f
+
+/marker Rhythm 2/4 D&C
+2r
+/marker L1
+16T . . . . . . .
+16T . . . ^4T
+16r t T t r t T t
+16r t T t ^4T
+
+/marker L2
+16r t T t _8T .
+16r t T t _8T .
+16r t T t T t T t
+16r t T t >4T
+
+/marker L3
+16T . . . . . . .
+16T . . . >4T
+>16T r T t >T r T t
+>16T r T t >4T
+
+/marker L4
+8T 16T . 4r
+8T 16T . 4r
+8T 16T . 8r t
+8T . >4T
+
+/marker L5
+16T . . . . . . .
+16T . . . >4T
+16T . r t T t r t
+16T . r t >4T
+
+/marker L6
+16T t r t >8T r
+16T t r t >8T r
+16T . r t T t r t
+16T . r t >4T
+
+/marker L7
+16T . . . . . . .
+16T . . . >4T
+16T . . r T t t r
+16T . . r >8T r
+
+/marker L8
+16T . . r 4r
+16T . . r 4r
+16T . . r T . . r
+16T . . r /fff ^8T r
+
+
+
+/track met
+/channel 2
+/p
+^8M 16M . ^8M 8M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _4M
+
+
+

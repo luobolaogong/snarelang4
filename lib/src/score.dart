@@ -510,8 +510,7 @@ class Score {
         //print('scaleTempos(), element is currently: $tempo and scalar is ${commandLine.tempoScalar}');
         tempo = Tempo.scaleThis(tempo, commandLine.tempoScalar); // WHY CALL  THIS IF scalar won't change anything? like 1.0
         element.bpm = tempo.bpm; // this is awkward
-        print('scaleTempos(), now element is $element');
-        print('really????');
+        log.fine('scaleTempos(), now element is $element');
       }
     }
   }
@@ -587,7 +586,7 @@ class Score {
           return note.velocity + 34;
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 44;
+          return note.velocity + 50; // was 44, james plays loud
         }
         print('what happened?');
         break;
@@ -599,43 +598,43 @@ class Score {
           return note.velocity + 26;
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 36;
+          return note.velocity + 50; // was 36
         }
         print('what happened?');
         break;
       case Dynamic.f:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 8;
+          return note.velocity + 12; // was 8
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 14;
+          return note.velocity + 20; // was 14
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 24; // was 18
+          return note.velocity + 30; // was 18,24
         }
         print('what happened?');
         break;
       case Dynamic.ff:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 1;
+          return note.velocity + 3; // was 1
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 3;
+          return note.velocity + 5; // was 3
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 5;
+          return note.velocity + 10; // was 5 clips?
         }
         print('what happened?');
         break;
       case Dynamic.fff: // if fff is at 127 then these numbers will just get clipped:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 1;
+          return note.velocity + 3; // was 1
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 3;
+          return note.velocity + 5; // was 3
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 5;
+          return note.velocity + 8; // was 5, clips for sure, right?
         }
         print('what happened?');
         break;

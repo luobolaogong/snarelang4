@@ -27,6 +27,7 @@
 ^16t . . .  ^16t . . .  ^16t . . .  ^16t . . .
 ^16t . . .  ^16t . . .  ^16t . . .  ^16t . . .
 
+1r
 /marker L3 Dot/Cut Right lead
 ^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t
 ^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t  ^12T 24t 12T 24t
@@ -48,12 +49,14 @@
 
 /pp
 
-^8M . ^. . ^. ^. ^. ^.
+^8M . ^. . ^. ^. ^. .
 
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _4M
+
+^8M . ^. . ^12M 24M 12M 24M ^8M .
 
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M
 _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M  _8M 8M

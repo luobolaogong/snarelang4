@@ -1,0 +1,112 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 9, audio recording track 4
+// Rhythm 2/4 Dot and Cut with 16th Note Rests
+
+
+/time 2/4
+/tempo 80
+
+/track snare
+/channel 1
+/f
+
+/marker Rhythm 2/4 D&C w16r
+2r
+/marker L1
+_12T 24t 12T 24t _12T 24t 12T 24t
+_12T 24t 12T 24t >4T
+12r 24t 12T 24t 12r 24t 12T 24t
+12r 24t 12T 24t >4T
+
+/marker L2
+12r 24t 12T 24t  24:5T 24t   // mistake in notation this bar and next
+12r 24t 12T 24t  24:5T 24t
+12r 24t 12T 24t  12T 24t 12T 24t
+12r 24t 12T 24t >4T
+
+/marker L3
+_12T 24t 12T 24t _12T 24t 12T 24t
+_12T 24t 12T 24t >4T
+_12T 24r 12T 24t _12T 24r 12T 24t
+_12T 24r 12T 24t >4T
+
+/marker L4
+8T 12T 24t 4r
+8T 12T 24t 4r
+8T 12T 24t 8r t
+8T . >4T
+
+/marker L5
+_12T 24t 12T 24t _12T 24t 12T 24t
+_12T 24t 12T 24t >4T
+12T 24t 12r 24t 12T 24t 12r 24t
+12T 24t 12r 24t >4T
+
+/marker L6
+>12T 24t 12r >24t >8T r
+>12T 24t 12r >24t >8T r
+>12T 24t 12r 24t  >12T 24t 12r 24t
+>12T 24t 12r 24t ^4T
+
+/marker L7
+_12T 24t 12T 24t _12T 24t 12T 24t
+_12T 24t 12T 24t >4T
+12T 24t >12T 24r  12T 24t >12T 24r
+12T 24t >12T 24r >8T 8r
+
+/marker L8
+12T 24t >12T 24r  4r
+12T 24t >12T 24r  4r
+_12T 24t >12T 24r  _12T 24t >12T 24r
+_12T 24t >12T 24r /fff ^8T r
+
+
+
+/track met
+/channel 2
+/p
+^12M 24M ^12M 24 ^8M 8M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _4M
+
+
+

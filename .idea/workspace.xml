@@ -19,12 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Last two exercise pages plus 1st score.">
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P59-40.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P60-41.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P61-42.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P62-43.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added last 4 pages of the book.">
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P06-01.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P07-02.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P08-03.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P09-04.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P10-05.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P11-06.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P12-07.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P13-08.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P22-04.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P22-04.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P48-30.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P48-30.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P62-43.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P62-43.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +74,7 @@
   </component>
   <component name="RunManager" selected="Dart Command Line App.Exercises">
     <configuration name="Exercises" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=exercises/LaughlinVol1/JlV1P62-43.snl -o midifiles/JlV1P62-43.mid -S 1.0" />
+      <option name="arguments" value="--input=exercises/LaughlinVol2/JlV2P13-08.snl -o midifiles/JlV2P13-08.mid -S 1.5" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -198,14 +205,9 @@
       <workItem from="1607148047166" duration="4884000" />
       <workItem from="1607198641340" duration="19453000" />
       <workItem from="1607233720482" duration="2123000" />
-      <workItem from="1607276370054" duration="20195000" />
-    </task>
-    <task id="LOCAL-00009" summary="Added quick and dirty metronome as a simple snare tap.">
-      <created>1598590318812</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1598590318813</updated>
+      <workItem from="1607276370054" duration="22436000" />
+      <workItem from="1607403245875" duration="677000" />
+      <workItem from="1607463257471" duration="16892000" />
     </task>
     <task id="LOCAL-00010" summary="End of day.  Not much change.  Seems can adjust to 6/8 time with dotted quarter as met beat.">
       <created>1598768745119</created>
@@ -543,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607229376394</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Added last 4 pages of the book.">
+      <created>1607316634826</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1607316634826</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +571,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Getting ready to change stuff to support grace note delta times." />
     <MESSAGE value="Rough solution to the gracenote handling." />
     <MESSAGE value="First cut at John Walsh's Walk." />
     <MESSAGE value="Just starting into Annette's Chatter.  &#10;Did cosmetic cleanup in other files.&#10;Nobody should look at this code because it's junk." />
@@ -587,17 +595,18 @@
     <MESSAGE value="5 new JL exercises from first book." />
     <MESSAGE value="2 new JL exercises from first book." />
     <MESSAGE value="Last two exercise pages plus 1st score." />
-    <option name="LAST_COMMIT_MESSAGE" value="Last two exercise pages plus 1st score." />
+    <MESSAGE value="Added last 4 pages of the book." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added last 4 pages of the book." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607315932910">
+    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607493433504">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607315932910" />
+    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607493433504" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606864892593">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -614,22 +623,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1600648661173" />
-    <state width="2290" height="504" key="GridCell.Tab.0.bottom" timestamp="1607315935666">
+    <state width="2290" height="504" key="GridCell.Tab.0.bottom" timestamp="1607493637125">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1607315935666" />
-    <state width="2290" height="504" key="GridCell.Tab.0.center" timestamp="1607315935666">
+    <state width="2290" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1607493637125" />
+    <state width="2290" height="504" key="GridCell.Tab.0.center" timestamp="1607493637124">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1607315935666" />
-    <state width="2290" height="504" key="GridCell.Tab.0.left" timestamp="1607315935665">
+    <state width="2290" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1607493637124" />
+    <state width="2290" height="504" key="GridCell.Tab.0.left" timestamp="1607493637124">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1607315935665" />
-    <state width="2290" height="504" key="GridCell.Tab.0.right" timestamp="1607315935666">
+    <state width="2290" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1607493637124" />
+    <state width="2290" height="504" key="GridCell.Tab.0.right" timestamp="1607493637124">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1607315935666" />
+    <state width="2290" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1607493637124" />
     <state x="3042" y="1235" width="2810" height="753" key="GridCell.Tab.1.bottom" timestamp="1606372101059">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -666,10 +675,14 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1507" y="709" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1603743054671" />
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1607229393332">
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1607316643652">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1607229393332" />
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1607316643652" />
+    <state x="1629" y="248" width="2111" height="1702" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607464929371">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1629" y="248" width="2111" height="1702" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607464929371" />
     <state x="1271" y="298" width="762" height="767" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602312254951">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -758,10 +771,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1030" y="1307" width="2810" height="777" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1606345678463" />
-    <state x="966" y="783" width="1442" height="592" key="find.popup" timestamp="1607280679159">
+    <state x="966" y="783" width="1442" height="592" key="find.popup" timestamp="1607470544603">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="966" y="783" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1607280679159" />
+    <state x="966" y="783" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1607470544603" />
     <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup" timestamp="1606339298035">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -794,11 +807,6 @@
           <url>file://$PROJECT_DIR$/lib/src/tempo.dart</url>
           <line>141</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>513</line>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>

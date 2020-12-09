@@ -1,0 +1,110 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 10, audio recording track 5
+// Rhythm 3/4 Round
+
+
+/time 3/4
+/tempo 80
+
+/track snare
+/channel 1
+/f
+
+/marker Rhythm 3/4 Round
+4:3r
+
+/marker L1
+4T . .
+4t . .
+8T . . . . .
+>24:5T 24t  >24:5T 24t  >24:5T 24t
+
+/marker L2
+_12T 24t 12T 24t   _12T 24t 12T 24t   _12T 24t 12T 24t
+_12T 24t 12T 24t   _12T 24t 12T 24t   _8T _t
+_12T 24t 12T 24t   _12T 24t 12T 24t   _12T 24t 12T 24t
+_8T . . . ^. r
+
+/marker L3
+8T r r t T t
+_12T 24t 12T 24t _12T 24t >8T r ^t
+>24:5T 24t  _12T 24t ^12T 24t 8r ^t
+_12T 24t 12T 24t _8T _. _12T 24t 12T 24t
+
+/marker L4
+_12T 24t >8T _12T 24t >8T >4T
+_12t 24T >8t _12t 24T >8t >8t _t
+8r 12T 24t >4T 8r 12T 24t
+8r 12T 24t _8T _. >4T
+
+/marker L5
+>12T 24t 12r 24t ^4T 12T 24t 12r 24t
+>8T . . . 4T
+12T 24t 12r 24t 12T 24t 12r 24t 12T 24t 12r 24t
+8T . . . 4T
+
+/marker L6
+_12T 24t 12T 24t _12T 24t 12r _24t >4T
+_12t 24T 12t 24T _12t 24T 12r _24T >4t
+_12T 24t 12T 24t _12T 24t 8r _12T 24t 12r 24t
+_12T 24t 12T 24t _8T >. ^4T
+
+/marker L7
+12r 24t 12T 24t 12r 24t 12T 24t 8T .
+12r 24t 12T 24t  12r 24t 12T 24t 12T 24t 12r 24t
+_12T 24t 12T 24t _12T 24t 12T 24t _8T _.
+_12T 24t 12T 24t _12T 24t 12T _24t ^4T
+
+/marker L8
+>24:5T 24t  >24:5T 24t  >24:5T 24t
+>8T . . . . .
+_12T 24t 12T 24t _8T _12T 24t 12T 24t _8T
+_12t 24T 12t 24T _8t >. /ff ^4t
+
+
+/track met
+/channel 2
+/p
+^4M ^12M 24M 12M 24M ^4M
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _4M
+

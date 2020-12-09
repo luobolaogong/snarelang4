@@ -1,0 +1,112 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 7, audio recording track 2
+// Rhythm 2/4 Dot and Cut
+
+
+/time 2/4
+/tempo 80
+
+/track snare
+/channel 1
+/f
+
+/marker Rhythm 2/4 D&C
+2r
+/marker L1
+4T .
+8T r t r
+8r T r t
+8T r 4t
+
+/marker L2
+8T . . .
+8T . . .
+_4T 8T .
+8T . _4T
+
+/marker L3
+8T . . .
+^24:5T _24t ^24:5T _24t
+^8T . . .
+^24:5T _24t ^24:5T _24t
+
+/marker L4
+16T . . . . . . .
+12T 24t 12T 24t 12T 24t 12T 24t
+8T 12T 24t  8T 12T 24t
+8T . 4T
+
+/marker L5
+12T 24t >8T  12t 24T >8t
+8r 12T 24t >8T r
+8r 12t 24T >8t r
+8T . >4T
+
+/marker L6
+12T 24t >16T r 12t 24T >16t r
+16r r 12T 24t >8T r
+16r r 12t 24T >8t r
+8T . >4T
+
+/marker L7
+12T 24t 12T 24t ^8T r
+12T 24t 12T >24t 8r r
+24T 12t 24T 12t 4T
+24T 12t 24T 12t 4r
+
+/marker L8
+12T 24t 12T 24t 8r 12T 24t
+12T 24t 8T 4t
+24T 12t 24T 12t 8T .
+8T . /fff ^4T
+
+
+
+/track met
+/channel 2
+/p
+^12M 24M ^12M 24 ^8M 8M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _4M
+
+
+

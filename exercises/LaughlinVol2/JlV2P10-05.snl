@@ -1,0 +1,110 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 10, audio recording track 5
+// Rhythm 3/4 Round
+
+
+/time 3/4
+/tempo 80
+
+/track snare
+/channel 1
+/f
+
+/marker Rhythm 3/4 Round
+4:3r
+
+/marker L1
+4T . .
+8T r t r t r
+8T . . . . .
+8T . . . . .
+
+/marker L2
+8r T r t r T
+8t . >. r T .
+>4T 2t
+8T . 4T .
+
+/marker L3
+4T 16T . . . 4T
+16T . . . 4T 8r t
+8T . 4T r
+16T . 8T 16t . 8t 4T  // he screwed it, dropping last quarter note
+
+/marker L4
+16T . . . . . . .  8T .
+8T 16T . 8T 16T . 8T .
+16T . 8T 8t 16T . 8T .
+8T r t r T r
+
+/marker L5
+16T . 8r 16T t 8r 8T .
+16T . 8r 16T t 8r 8T .
+8r 16T . 8r 16T . 8T .
+8r 16T . 8r 16T t 8T .
+
+/marker L6
+16T . . . 32T . . . . . . . 16T . . .
+8T t 16T . 8T 32T . . . . . . . // he screwed this too
+8T . t T r t
+8T t 4T .
+
+/marker L7
+16T . r t T t 8T 16T . . .
+16T . 8r 16T . . . 16T r T t
+4T . 16r t T t
+16r t T t r t T t 8T .
+
+/marker L8
+4T . 8T .
+4T . r
+16T . 8T >8t 16T . . . . .
+32T . . . . . . . /ff ^8T r 4r
+
+
+/track met
+/channel 2
+/p
+^4M ^8M . ^4M
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . 8M 8r 4r
+
