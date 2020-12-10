@@ -1,0 +1,222 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 15, audio recording track 10
+// Irregular Groups
+
+
+/time 2/4
+/tempo 76
+
+/track snare
+/channel 1
+/f
+
+/marker Irregular Groups
+2r
+/marker P1L1
+8T . . .
+>12T . . >. . .
+8T . . .
+>12T . . >. . .
+
+/marker P1L2
+>8T . >12T . .
+>8t . >12t . .
+8T . . .
+>12T . . >4t   // he made a mistake
+
+/marker P1L1Rpt
+8T . . .
+>12T . . >. . .
+8T . . .
+>12T . . >. . .
+
+/marker P1L2Rpt
+>8T . >12T . .
+>8t . >12t . .
+8T . . .
+>12T . . >4t
+
+
+/marker P2L3
+/time 2/4
+8T . . .
+>16T . . . >. . . .
+>24T . . _. . . _. . . _. . .
+>8T >. >4T
+
+/marker P2L4
+8T . . .
+>16T . . . >. . . .
+>24T . . _. . . _. . . _. . .
+>8T >. >4T
+
+/marker P2L3Rpt
+8T . . .
+>16T . . . >. . . .
+>24T . . _. . . _. . . _. . .
+>8T >. >4T
+
+/marker P2L4Rpt
+8T . . .
+>16T . . . >. . . .
+>24T . . _. . . _. . . _. . .
+>8T >. >4T
+
+
+
+/marker P3L5
+/time 6/8
+/tempo 76
+>8T . . >. . .
+>16:3T >. >. >.
+>8T . . >. . .
+>16:3T >. >. >.
+
+/marker P3L6
+>16:3T >. >. >.
+>8T . . >16:3T .
+>8t . . >16:3t .
+>8T . . ^8:3t
+
+/marker P3L5Rpt
+>8T . . >. . .
+>16:3T >. >. >.
+>8T . . >. . .
+>16:3T >. >. >.
+
+/marker P3L6Rpt
+>16:3T >. >. >.
+>8T . . >16:3T .
+>8t . . >16:3t .
+>8T . . ^8:3t
+
+
+/marker P4L7
+/time 6/8
+/tempo 76
+/f
+8T . . . . .
+/time 2/4
+/tempo 76
+_12T . . _. . .
+_8T . . .
+/time 6/8
+/tempo 76
+_16:3T . . .
+
+/marker P4L8
+/time 6/8
+/tempo 76
+_8T . . _16:3t .
+_8t . . _. . .
+/time 2/4
+/tempo 76
+_8t . . .
+_24t . . _. . . /ff ^4t
+
+// he forgot the repeat marker, and didn't record a repeat
+/marker P4L7Rpt
+/time 6/8
+/tempo 76
+/f
+_8T . . _. . .
+/time 2/4
+/tempo 76
+_12T . . _. . .
+_8T . . .
+/time 6/8
+/tempo 76
+_16:3T . . .
+
+/marker P4L8Rpt
+/time 6/8
+/tempo 76
+_8T . . _16:3t .
+_8t . . _. . .
+/time 2/4
+/tempo 76
+8t . . .
+_24t . . _. . . /ff ^4t
+
+
+
+/track met
+/channel 2
+/p
+^4M .
+
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+
+
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+_4M .
+
+
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+_8:3M .
+
+
+_8:3M .
+_4M .
+_4M .
+_8:3M .
+_8:3M .
+_8:3M .
+_4M .
+_4M .
+
+_8:3M .
+_4M .
+_4M .
+_8:3M .
+_8:3M .
+_8:3M .
+_4M .
+_4M .

@@ -1,0 +1,112 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 18, audio recording track 13
+// Subdividing Notes 2
+
+// James throws in accents where he thinks they'll sound good, but is inconsistent
+// in placing them.  So now I get it, that it really doesn't matter much.  Playing
+// how you feel at the time is more important, as long as it's musical.
+
+// I also noticed that when he plays sextuplet singles with accents on first, that he
+// has extra space between them, as if he speeds them up slightly to give that gap.
+
+/time 6/8
+/tempo 104
+
+/track snare
+/channel 1
+/f
+
+/marker Subdiv Nts 2
+8:3r 8:3r
+
+/marker Pt1L1
+^8T . . ^. . .
+_16T . . . . . _. . . . . .
+^8T . . ^. . .
+16T T t t T T  t t T T t t
+
+/marker Pt1L2
+^8T . . ^. . .
+16T . . . . . . . . . . .
+^8T . . ^. . .
+16T T t t T T  t t T T t t
+
+/marker Pt1L1Rpt
+^8T . . ^. . .
+_16T . . . . . _. . . . . .
+^8T . . ^. . .
+16T T t t T T  t t T T t t
+
+/marker Pt1L2Rpt
+^8T . . ^. . .
+_16T . . . . . _. . . . . .
+^8T . . ^. . .
+16T T t t T T  t t T T t t
+
+
+/marker Pt2L3
+^8T . . ^. . .
+_16T T 8t . _16t t 8T .
+^8T . . ^. . .
+^8T 16t t 8T t 16T T 8t
+
+/marker Pt2L4
+^8T . . ^. . .
+8T . 16T T 8t . 16t t
+^8T . . ^. . .
+16T T t t T T ^8:3t
+
+/marker Pt2L3Rpt
+^8T . . ^. . .
+_16T T 8t . _16t t 8T .
+^8T . . ^. . .
+^8T 16t t 8T t 16T T 8t
+
+/marker Pt2L4Rpt
+^8T . . ^. . .
+8T . 16T T 8t . 16t t
+^8T . . ^. . .
+16T T t t T T ^8:3t
+
+
+
+/marker Pt3L5
+>8F t T >f T t
+_16F T 8t .  _16f t 8T .
+>8T f T >t F t
+8T 16f t 8T t 16F T 8t
+
+/marker Pt3L6
+8T . f t T f
+8T . 16F T 8t . 16F t
+^8T . . f T t
+16F T t t T T ^8:3t
+
+/marker Pt3L5Rpt
+>8F t T >f T t
+_16F T 8t .  _16f t 8T .
+>8T f T >t F t
+8T 16f t 8T t 16F T 8t
+
+/marker Pt3L6Rpt
+8T . f t T f
+8T . 16F T 8t . 16F t
+^8T . . f T t
+16F T t t T T ^8:3t
+
+
+
+/track met
+/channel 2
+/p
+^8:3M ^8:3M
+
+_8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .
+_8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .
+
+_8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .
+_8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .
+
+_8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .
+_8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .  _8:3M .

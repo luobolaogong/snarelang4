@@ -1,0 +1,190 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 16, audio recording track 11
+// Accents and Rests
+// His recording stops a couple of times to explain how these exercises can be combined.
+// I think it's unnecessary.  He's trying to teach correct note durations, and this MIDI
+// stuff is all about durations.  So I don't do that.
+
+/time 2/4
+/tempo 76
+
+/track snare
+/channel 1
+/f
+
+/marker Accents & Rests
+2r
+/marker L1
+^16T . . . ^. . . .
+16T ^. . . . ^. . .
+16T . ^. . . . ^. .
+16T . . ^. . . . ^.
+/marker L1Rpt
+^16T . . . ^. . . .
+16T ^. . . . ^. . .
+16T . ^. . . . ^. .
+16T . . ^. . . . ^.
+
+/marker L2
+16r t T t r t T t
+16T r T t T r T t
+16T t r t T t r t
+16T t T r t T t r
+
+/marker L2Rpt
+16r t T t r t T t
+16T r T t T r T t
+16T t r t T t r t
+16T t T r t T t r
+
+/marker L3
+^12T 24t 12T 24t  ^12T 24t 12T 24t
+12T ^24t 12T 24t  12T ^24t 12T 24t
+12T 24t ^12T 24t  12T 24t ^12T 24t
+12T 24t 12T ^24t  12T 24t 12T ^24t
+/marker L3Rpt
+^12T 24t 12T 24t  ^12T 24t 12T 24t
+12T ^24t 12T 24t  12T ^24t 12T 24t
+12T 24t ^12T 24t  12T 24t ^12T 24t
+12T 24t 12T ^24t  12T 24t 12T ^24t
+
+/marker L4
+12r 24t 12T 24t  12r 24t 12T 24t
+12t 24r 12T 24t  12T 24r 12T 24t
+12T 24t 12r 24t  12T 24t 12r 24t
+12T 24t 12T 24r  12t 24T 12t 24r
+/marker L4Rpt
+12r 24t 12T 24t  12r 24t 12T 24t
+12t 24r 12T 24t  12T 24r 12T 24t
+12T 24t 12r 24t  12T 24t 12r 24t
+12T 24t 12T 24r  12t 24T 12t 24r
+
+/time 6/8
+/tempo 76
+/marker L5
+^8T . . ^. . .
+8T ^. . . ^. .
+8T . ^. . . ^.
+^8:3T ^.
+/marker L5Rpt
+^8T . . ^. . .
+8T ^. . . ^. .
+8T . ^. . . ^.
+^8:3T ^.
+
+/marker L6
+8r t T r T t
+^8T r T ^t r t
+^8T t r ^T t r
+^8:3T ^.
+
+/marker L6Rpt
+8r t T r T t
+^8T r T ^t r t
+^8T t r ^T t r
+^8:3T ^.
+
+/marker L7
+^16:3T 16t 8T  ^16:3t 16T 8t
+16:3T ^16t 8T  16:3t ^16T 8t
+16:3T 16t ^8T  16:3t 16T ^8t
+^8:3T ^.
+/marker L7Rpt
+^16:3T 16t 8T  ^16:3t 16T 8t
+16:3T ^16t 8T  16:3t ^16T 8t
+16:3T 16t ^8T  16:3t 16T ^8t
+^8:3T ^.
+
+/marker L8
+16:3r 16t 8T  16:3r 16T 8t
+16:3T 16r 8T  16:3t 16r 8t
+16:3T 16t 8r  16:3t 16T 8r  // he plays this wrong
+^8:3T ^.
+
+/marker L8Rpt
+16:3r 16t 8T  16:3r 16T 8t
+16:3T 16r 8T  16:3t 16r 8t
+16:3T 16t 8r  16:3t 16T 8r
+^8:3T ^.
+
+
+
+
+/track met
+/channel 2
+/p
+^8M . ^4M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8M
+_4M 8M _4M 8r
+

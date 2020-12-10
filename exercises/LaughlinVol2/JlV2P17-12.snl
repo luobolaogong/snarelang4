@@ -1,0 +1,177 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 17, audio recording track 12
+// Subdividing Notes 1
+
+// James plays these exercises in different sequences, and he doesn't finish
+// the page.  He does bar 1 and bar 5 of part 1, doubling each bar.
+// Then 2 & 6, 3 & 7, and 4 & 8.  Then he does the same thing with part 2.
+// And then he says to play the rest of the page similarly.  Well, if that's
+// what he wanted, why didn't he just change the page?  Seems he realized his
+// exercise as written wasn't very good.
+//
+// This MIDI page plays the page as written.  Except that he accents the flams
+// and so therefore so does this this MIDI file.  He also accents the first of
+// 16th notes on the beat a lot of the time.  He's inconsistent in this.  And
+// there are no repeat marks for parts 3 and 4.  I'll just assume that's what he wanted.
+//
+// And his flams are very open.  There's just no way he can play flams that open
+// when the tempo speeds up or you cram more notes in the space before the flam.
+//
+// Midi can be used very well to handle working on subdivisions, because you can
+// change the tempo as you get better, and you can loop.
+
+/time 2/4
+/tempo 66
+
+/track snare
+/channel 1
+/f
+
+/marker Subdiv Nts 1
+2r
+
+/marker P1L1
+^16T . . . ^. . . .
+^16T . . . ^. . . .
+^16T . . . ^. . . .
+^16T . . . ^. . . .
+
+/marker P1L2
+_32T T 16t . .  _32T T 16t . .
+16T _32t t 16T .  16T _32t t 16T .
+16T . _32T T 16t  16T . _32T T 16t
+16T . . 32t t  16T . . 32t t
+
+/marker P1L1Rpt
+^16T . . . ^. . . .
+^16T . . . ^. . . .
+^16T . . . ^. . . .
+^16T . . . ^. . . .
+
+/marker P1L2Rpt
+_32T T 16t . .  _32T T 16t . .
+16T _32t t 16T .  16T _32t t 16T .
+16T . _32T T 16t  16T . _32T T 16t
+16T . . 32t t  16T . . 32t t
+
+2r
+
+/marker P2L3
+^16F t . . ^F t . .
+16T ^f T .  T ^f T .
+16T . ^F t  16T . ^F t
+16T . . ^f  16T . . ^f
+
+/marker P2L4
+_32F T 16t . .  _32F T 16t . .
+16T _32f t 16T .  16T _32f t 16T .
+16T . _32F T 16t  16T . _32F T 16t
+16T . . 32f t  16T . . 32f t
+
+/marker P2L3Rpt
+^16F t . . ^F t . .
+16T ^f T .  T ^f T .
+16T . ^F t  16T . ^F t
+16T . . ^f  16T . . ^f
+
+/marker P2L4Rpt
+_32F T 16t . .  _32F T 16t . .
+16T _32f t 16T .  16T _32f t 16T .
+16T . _32F T 16t  16T . _32F T 16t
+16T . . 32f t  16T . . 32f t
+
+
+2r
+
+/marker P3L5
+_24T . . _. . . >4T
+_24T . . _. . . >4T
+_24T . . _. . . >4T
+_24T . . _. . . >4T
+
+/marker P3L6
+_48T T 24t . _48t t 24T . >4T
+24T _48t t 24T 24t _48T T 24t  >4T
+24T . _48T T  24t . _48t t  >4T
+_24T . . _. . . >4T
+
+2r
+
+/marker P4L7
+_24T . . _. . . 48T T t t 24T  48t t T T 24t
+_24T . . _. . . 48T T t t T T t t T T t t
+_24T . . _. . . 48T T t t 24T  48t t T T 24t
+_24T . . _. . . 48T T t t T T t t T T t t
+
+/marker P4L8
+_24T . . _. . . 48T T t t 24T  48t t T T 24t
+_24T . . _. . . 48T T t t T T t t T T t t
+_24T . . _. . . 48T T t t 24T  48t t T T 24t
+_24T . . . . . ^4T
+
+/track met
+/channel 2
+/p
+^8M . ^4M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+^8M . ^4M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+^8M . ^4M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+^8M . ^4M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _4M
+

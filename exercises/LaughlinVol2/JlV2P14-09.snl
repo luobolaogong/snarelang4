@@ -1,0 +1,147 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 1: Rhythm Development
+// Page 14, audio recording track 9
+// Rhythm 6/8 Dot and Cut (March Time)
+
+
+/time 6/8
+/tempo 72
+
+/track snare
+/channel 1
+/f
+
+/marker Rhythm 6/8 D&C
+8:3r .
+/marker L1
+8:3T .
+>16:3T 16t 8T  >16:3t 16T 8t
+8:3T .
+>16:3T 16t 8T  >16:3t 16T 8t
+
+/marker L2
+4T 8t 4T 8t
+>16:3T 16t 8T
+>16:3T 16t 8T 4t 8T
+>16:3t 16T 8t 4T 8t
+
+/marker L3
+>16:3T 16t 8T  >16:3t 16T 8t
+16:3r 16t 8T  16:3r 16T 8t
+>16:3T 16t 8T  >16:3t 16T 8t
+16:3r 16t 8T  16:3r 16T 8t
+/marker L3Rpt
+>16:3T 16t 8T  >16:3t 16T 8t
+16:3r 16t 8T  16:3r 16T 8t
+>16:3T 16t 8T  >16:3t 16T 8t
+16:3r 16t 8T  16:3r 16T 8t
+
+/marker L4
+>16:3T 16t 8T  >16:3r 16T 8t
+>16:3T 16t 8T  >16:3r 16T 8t
+>16:3T 16t 8T  >16:3t 16T 8t
+16:3r 16t 8T  16:3r 16T 8t
+/marker L4Rpt
+>16:3T 16t 8T  >16:3r 16T 8t
+>16:3T 16t 8T  >16:3r 16T 8t
+>16:3T 16t 8T  >16:3t 16T 8t
+16:3r 16t 8T  16:3r 16T 8t
+
+/marker L5
+>16T 16:3t 8T  >16t 16:3T 8t
+>16:3T 16t 8T  >16:3t 16T 8t
+>16T 16:3t 8T  >16t 16:3T 8t
+>16:3T 16t 8T  >16:3t 16T 8t
+/marker L5Rpt
+>16T 16:3t 8T  >16t 16:3T 8t
+>16:3T 16t 8T  >16:3t 16T 8t
+>16T 16:3t 8T  >16t 16:3T 8t
+>16:3T 16t 8T  >16:3t 16T 8t
+
+/marker L6
+>16T 16:3t 8r  >16t 16:3T 8r
+>16T 16:3t 8T  >16t 16:3T 8t
+>16T 16:3t 8r  >16t 16:3T 8r
+>16T 16:3t 8T  >16t 16:3T 8t
+/marker L6Rpt
+>16T 16:3t 8r  >16t 16:3T 8r
+>16T 16:3t 8T  >16t 16:3T 8t
+>16T 16:3t 8r  >16t 16:3T 8r
+>16T 16:3t 8T  >16t 16:3T 8t
+
+/marker L7
+>16T 16:3t 8r  >16:3t 16T 8t
+>16T 16:3t 8r  >16:3t 16T 8t
+>16:3T 16t 8T  >16t 16:3T 8T
+>16:3T 16t 8T  >16t 16:3T 8T
+
+/marker L8
+4T 8t 4T 8t
+16T 16:3t 8T  16:3t 16T 8t
+4T 8t 4T 8t
+16:3T 16t 8T 8:3t
+
+/track met
+/channel 2
+/p
+^8M . . ^8:3M
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8M . .  _8M . .
+_8:3M 8:3r
