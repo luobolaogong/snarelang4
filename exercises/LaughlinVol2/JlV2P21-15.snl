@@ -1,0 +1,130 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 2: Phrase Building
+// Page 21, audio recording track 15
+// Phrase Workouts 2/4 March 2
+
+
+
+/time 2/4
+/tempo 76
+
+/track snare
+/channel 1
+/mf
+
+/marker Phrase Wrkouts 2/4 March 2
+2r
+/marker W1
+// Traditional way
+// ^24T z . . . _t  ^8T >24t Z .
+// ^24T z . t T t ^8F r
+
+// More advanced:
+// ^40T 20z . 24z . _t  ^8T >40t 20Z .
+// ^40T 20z . 24t . . ^8F r
+
+// Most advanced:
+^216:5T 216:10z . . . >24t  ^8T >40T 20z .
+^40T 20z . 24t . . ^8F r
+
+/marker W2
+^216:5T 216:10z . . . >24t  >40T 20z . >40t 20Z .
+24T . >. 12t 24t ^8F r
+
+/marker W3
+>40T 20z . >40t 20Z .  ^216:5T 216:10z . . . >24t
+^40T 20z . >8t ^F r
+
+/marker W4
+// he made writing mistake at end of this one
+^216:5T 216:10z . . . >40t 20Z . 24T  ^216:5t 216:10Z .
+216:10Z . >40T 20z . >24t ^8T r
+
+/marker W5
+>40T 20z . 12t  >40T 20z . >32t . . . >24t
+^12T 24t 24Z . . ^8t r
+
+/marker W6
+>36T 18z ^24T t T f  >36t 18Z ^24t T t F
+>36T 18z ^32T . . . >24T ^8t r
+
+/marker W7
+^12F 24t 24Z . 24T  _36t 18Z ^24t 12T 24F
+_36t 18Z ^32T . . . >24t ^8T r
+
+/marker W8
+>40T 20z . >36t 18Z >24t  >40T 20z . >36t 18Z >24t
+>40T 20z . >36t 18Z >24t  ^8T r
+
+/marker W9
+>40T 20z . >36t 18Z >24t  >40t 20Z . >36T 18z >24T
+>40T 20z .  32t . . .  ^8t r
+
+/marker W10
+>40t 20Z . >36T 18z >24T   >40T 20z . >36t 18Z >24t
+>40t 20Z .  32T . . .  ^8T r
+
+/marker W11
+>40T 20z . 24t T t >40T 20z . >40t 20Z .
+24T . 32D T . . >24t  ^8T r
+
+/marker W12
+^36T 18z _24T  >36t 18Z ^40t 20z . ^40T 20Z . 24t
+/cresc ^48T 48z 24T T ^48t 48Z 24t t  ^8T /fff /mf r
+
+/marker W13
+^36T 18z _24T  >36t 18Z ^40t 20z . 24T  ^48t 48Z 24t t
+^4T r
+
+/marker W14
+8F 24Z . . 40t 20Z . 32T . . .
+^8T 24Z . . >4t
+
+/marker W15
+^12F 24t 12D ^24T  12t 32D T . . 24t
+^8T 24Z . . 4t
+
+/marker W16
+^12F 24t 16D ^32T . . .  16D 32T . . .
+^8T 24Z . . ^4t
+
+/track met
+/channel 2
+/p
+^8M . ^4M
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _8M .
+_8M . _4M

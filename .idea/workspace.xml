@@ -19,13 +19,46 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Starting into Volume 2.">
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P14-09.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P15-10.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P16-11.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P17-12.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P18-13.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Starting into Chapter 2 of Vol 2.">
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P20-14.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P21-15.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/LeoBrowne/LeoFlamsWithTempoTrack.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P22-04.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P22-04.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P25-07.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P25-07.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P29-11.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P29-11.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P30-12.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P30-12.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P31-13.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P31-13.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P32-14.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P32-14.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P33-15.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P33-15.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P34-16.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P34-16.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P35-17.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P35-17.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P36-18.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P36-18.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P37-19.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P37-19.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P38-20.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P38-20.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P39-21.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P39-21.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P40-22.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P40-22.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P41-23.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P41-23.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P42-24.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P42-24.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P44-26.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P44-26.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P45-27.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P45-27.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P46-28.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P46-28.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P47-29.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P47-29.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P48-30.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P48-30.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P49-31.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P49-31.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P50-32.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P50-32.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P51-33.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P51-33.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P52-34.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P52-34.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P53-35.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P53-35.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P56-38.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P56-38.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P59-40.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P59-40.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P60-41.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P60-41.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P14-09.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P14-09.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P15-10.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P15-10.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P16-11.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P16-11.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P17-12.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P17-12.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +90,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/exercises/warmups/LeoBrowne" />
       <recent name="$PROJECT_DIR$/tunes" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bin" />
-    </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.Exercises">
-    <configuration name="Exercises" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=exercises/LaughlinVol2/JlV2P18-13.snl -o midifiles/JlV2P18-13.mid -S 1.5" />
+  <component name="RunManager" selected="Dart Command Line App.Experiments">
+    <configuration name="Experiments" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="--input=exercises/LaughlinVol2/JlV2P21-15.snl -o midifiles/JlV2P21-15.mid -S 1.0" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -81,7 +114,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Dart Command Line App.Exercises" />
+      <item itemvalue="Dart Command Line App.Experiments" />
       <item itemvalue="Dart Command Line App.SnareLang4Example" />
       <item itemvalue="Dart Test.SnareLang4Test" />
     </list>
@@ -201,14 +234,9 @@
       <workItem from="1607276370054" duration="22436000" />
       <workItem from="1607403245875" duration="677000" />
       <workItem from="1607463257471" duration="17394000" />
-      <workItem from="1607535929482" duration="18835000" />
-    </task>
-    <task id="LOCAL-00011" summary="Broke out some of the command line processing.">
-      <created>1599720618034</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1599720618034</updated>
+      <workItem from="1607535929482" duration="20800000" />
+      <workItem from="1607580085644" duration="4890000" />
+      <workItem from="1607625099172" duration="17992000" />
     </task>
     <task id="LOCAL-00012" summary="Minor changes.  Flag to change to a drum pad sound font.">
       <created>1600069996861</created>
@@ -546,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607494127153</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Starting into Chapter 2 of Vol 2.">
+      <created>1607573548443</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1607573548444</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +600,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First cut at John Walsh's Walk." />
     <MESSAGE value="Just starting into Annette's Chatter.  &#10;Did cosmetic cleanup in other files.&#10;Nobody should look at this code because it's junk." />
     <MESSAGE value="Added more to Annette's Chatter." />
     <MESSAGE value="Worked on Jimmy Rollo and also added Marker and Text although Text doesn't show up." />
@@ -590,21 +624,26 @@
     <MESSAGE value="Last two exercise pages plus 1st score." />
     <MESSAGE value="Added last 4 pages of the book." />
     <MESSAGE value="Starting into Volume 2." />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting into Volume 2." />
+    <MESSAGE value="Starting into Chapter 2 of Vol 2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting into Chapter 2 of Vol 2." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607572116911">
+    <state x="2118" y="920" width="1456" height="852" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607646560598">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2118" y="920" width="1456" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607572116911" />
+    <state x="2118" y="920" width="1456" height="852" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607646560598" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606864892593">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.2120@0.0.3840.2120" timestamp="1606864892593" />
+    <state x="2578" y="1139" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1607634808874">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="2578" y="1139" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607634808874" />
     <state x="1698" y="824" width="624" height="516" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600644940359">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -617,22 +656,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1600648661173" />
-    <state width="2290" height="504" key="GridCell.Tab.0.bottom" timestamp="1607572235410">
+    <state width="1663" height="504" key="GridCell.Tab.0.bottom" timestamp="1607669797269">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1607572235410" />
-    <state width="2290" height="504" key="GridCell.Tab.0.center" timestamp="1607572235409">
+    <state width="1663" height="504" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1607669797269" />
+    <state width="1663" height="504" key="GridCell.Tab.0.center" timestamp="1607669797267">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1607572235409" />
-    <state width="2290" height="504" key="GridCell.Tab.0.left" timestamp="1607572235408">
+    <state width="1663" height="504" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1607669797267" />
+    <state width="1663" height="504" key="GridCell.Tab.0.left" timestamp="1607669797267">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1607572235408" />
-    <state width="2290" height="504" key="GridCell.Tab.0.right" timestamp="1607572235409">
+    <state width="1663" height="504" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1607669797267" />
+    <state width="1663" height="504" key="GridCell.Tab.0.right" timestamp="1607669797268">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2290" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1607572235409" />
+    <state width="1663" height="504" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1607669797268" />
     <state x="3042" y="1235" width="2810" height="753" key="GridCell.Tab.1.bottom" timestamp="1606372101059">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -669,10 +708,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1507" y="709" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1603743054671" />
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1607316643652">
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1607573563707">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1607316643652" />
+    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1607573563707" />
     <state x="1629" y="248" width="2111" height="1702" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607464929371">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -765,10 +804,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1030" y="1307" width="2810" height="777" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1606345678463" />
-    <state x="966" y="783" width="1442" height="592" key="find.popup" timestamp="1607470544603">
+    <state x="966" y="783" width="1442" height="592" key="find.popup" timestamp="1607626178101">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="966" y="783" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1607470544603" />
+    <state x="966" y="783" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1607626178101" />
     <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup" timestamp="1606339298035">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

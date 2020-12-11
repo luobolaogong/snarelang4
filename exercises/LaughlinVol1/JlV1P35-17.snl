@@ -6,7 +6,7 @@
 
 /track snare
 /channel 1
-/f
+/mf
 
 /marker Combo 5,7,9,13 StrkRlls
 2r
@@ -91,14 +91,14 @@
 
 /marker F
 ^12F 48Z . 12T 24t  24Z . >24T ^12t 24t
-/cresc 24Z . . . . . ^4T /fff /f
+/cresc 24Z . . . . . ^4T /fff /mf
 ^12F 48Z . 12T 24t  24Z . >24T ^12t 24t
-/cresc 24Z . . . . . ^4T  /fff /f
+/cresc 24Z . . . . . ^4T  /fff /mf
 
 ^12t 48z . 12t 24T  24z . >24t ^12T 24T
-/cresc 24z . . . . . ^4t /fff /f
+/cresc 24z . . . . . ^4t /fff /mf
 ^12t 48z . 12t 24T  24z . >24t ^12T 24T
-/cresc 24z . . . . . ^4t /fff /f
+/cresc 24z . . . . . ^4t /fff /mf
 
 
 /track met

@@ -9,19 +9,19 @@
 
 /track snare
 /channel 1
-/f
+/mf
 
 /marker Massd Bnd 4/4
 1r
 /marker Part1
-/f
+/mf
 ^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
 ^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker P1Rpt
-/f
+/mf
 ^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
 ^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
@@ -40,28 +40,28 @@
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 //marker Pt3
-/f
+/mf
 ^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
 ^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 //marker Pt3Rpt
-/f
+/mf
 ^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
 ^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 //marker Pt4
-/f
+/mf
 ^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
 ^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 //marker Pt4Rpt
-/f
+/mf
 ^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
 ^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t

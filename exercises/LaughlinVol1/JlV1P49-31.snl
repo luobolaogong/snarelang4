@@ -7,7 +7,7 @@
 
 /track snare
 /channel 1
-/f
+/mf
 
 
 1r
@@ -25,14 +25,14 @@
 1r
 /marker A
 >40T 20z . >40t 20Z .  ^12T 24t 12T 24T       >40t 20Z . >40T 20z .   ^12t 24T 12t 24t
-/mp /cresc >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .   ^12T /fff /f 24t 12T 24T
+/mp /cresc >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .   ^12T /fff /mf 24t 12T 24T
 >40t 20Z . >40T 20z .  ^12t 24T 12t 24t       >40T 20z . >40t 20Z .   ^12T 24t 12T 24T
-/mp /cresc >40t 20Z . >40T 20z .  >40t 20Z . >40T 20z .  >40t 20Z . >40t 20Z .   ^12t /fff /f 24T 12t 24t
+/mp /cresc >40t 20Z . >40T 20z .  >40t 20Z . >40T 20z .  >40t 20Z . >40t 20Z .   ^12t /fff /mf 24T 12t 24t
 /marker ARpt
 >40T 20z . >40t 20Z .  ^12T 24t 12T 24T       >40t 20Z . >40T 20z .   ^12t 24T 12t 24t
-/mp /cresc >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .   ^12T /fff /f 24t 12T 24T
+/mp /cresc >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .  >40T 20z . >40t 20Z .   ^12T /fff /mf 24t 12T 24T
 >40t 20Z . >40T 20z .  ^12t 24T 12t 24t       >40T 20z . >40t 20Z .   ^12T 24t 12T 24T
-/mp /cresc >40t 20Z . >40T 20z .  >40t 20Z . >40T 20z .  >40t 20Z . >40t 20Z .   ^12t /fff /f 24T 12t 24t
+/mp /cresc >40t 20Z . >40T 20z .  >40t 20Z . >40T 20z .  >40t 20Z . >40t 20Z .   ^12t /fff /mf 24T 12t 24t
 
 1r
 /marker B

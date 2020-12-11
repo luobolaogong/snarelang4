@@ -1,0 +1,314 @@
+// Leo Browne was my first and only teacher of snare drum technique back in 1965.
+//
+// This MIDI exercise tries to capture his intro to the flam where he used an
+// approximate timing of the grace note based on the sound sequence
+// "fa lam e & uh  fa lam e & uh".  The timing ratio of "fa" to "lam" is
+// basically 4 to 1.  That is, "fa" would be a 64th note, and "lam", "e", and
+// "&" would be 16th notes, (and "uh" would be a dotted 32nd.)
+//
+// Of course, the faster you played the phrase, the tighter the flam became.  But flams
+// should always be played with the same timing for the grace notes no matter the tempo.
+// Therefore, at what tempo would 64th note durations sound right for a flam gracenote
+// duration based on his "fa lam e & uh" model"?  Or in other words, what should be the
+// standard grace note duration in seconds?
+
+// If you played a set of quarter note flams at a tempo of 60bpm, (one second per flam) the duration
+// of the grace note would be 1/8th of a second, or 0.125 seconds.  If you played them at 120bpm
+// the duration of a grace note for a flam would be 1/16th of a second, or 0.0625 seconds.
+// But that flam's gracenote still sounds too "open" to me.  At a tempo of 132bpm
+// with 32nd notes sounds about right to me, and that duration is 0.02841 seconds.
+
+// But grace note durations and relative dynamic volumes differ by genre/style/situaton.
+// Rock drummers play really open flams with nearly equal dynamic volumes of the two notes.
+// DCI drummers play really tight flams, with a large difference in dynamic volume of the two notes.
+// Pipe band snare drummers seem to play in between these extremes.  Their flams sound
+// like "plop", rather than "flam".
+
+// How do you notate a flam in "snl"?  You use "F" and "f" for right and left flams.
+// One 4/4 bar of 16th note alternating flams at any tempo would be:
+// 16F . . . . . . . . . . . . . . .
+// MIDI plays a flam recording at each 16th note duration (and shifted so that the
+// principle note is played where a tap would be played, and the grace note is just before it.)
+//
+// But if you had to enter a flam as two taps, as in a single grace note followed by a principle note,
+// you'd first need to specify the tempo and then you'd decide the correct subdivision.
+
+// The following is a gradual speed up of flams where the grace note is set to be a 64th note.
+// It starts at 30bpm and goes up to 170bpm in increments of 1bpm, and both a right and left
+// 8th note flams are played at each tempo.  A metronome click signals each 10bpm increment.  So, the first
+// metronome click is at 30, and the second at 40, etc. up to stopping at 170.
+
+// My opinion is that the best sounding flams are at around 140bpm which is a grace note
+// duration of 0.026786 seconds
+// To calculate the duration of a 64th note for a particular bpm it's this:
+// duration = 60 / bpm / 16
+// My measurements using Audacity yield a duration of 0.0266 seconds at 140bpm, which is not too bad.
+
+// By the way, MIDI doesn't appear to allow tempos past around 250bpm.
+
+// So, at what tempo do YOU think simulated flams sound right?
+
+/track snare
+/channel 1
+/time  1/4
+/tempo 30
+// tempo of 250 appears to be the fastest it can go, limited by MIDI, I think
+//lam          e           &           ah      fa
+//^64T . . >. ^64T . . >. ^64T . . >. ^64T . . >.
+//^64T . . >. ^64T . . >. ^64T . . >. ^64T . . >.
+
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+/fff 64:3T /mf 64T /fff 64:3t /mf 64t
+
+/fff 1T
+
+/track tempo
+/channel 2
+16r /tempo 30
+16r /tempo 31
+16r /tempo 32
+16r /tempo 33
+16r /tempo 34
+16r /tempo 35
+16r /tempo 36
+16r /tempo 37
+16r /tempo 38
+16r /tempo 39
+16r /tempo 40
+16r /tempo 41
+16r /tempo 42
+16r /tempo 43
+16r /tempo 44
+16r /tempo 45
+16r /tempo 46
+16r /tempo 47
+16r /tempo 48
+16r /tempo 49
+16r /tempo 50
+16r /tempo 51
+16r /tempo 52
+16r /tempo 53
+16r /tempo 54
+16r /tempo 55
+16r /tempo 56
+16r /tempo 57
+16r /tempo 58
+16r /tempo 59
+16r /tempo 60
+16r /tempo 61
+16r /tempo 62
+16r /tempo 63
+16r /tempo 64
+16r /tempo 65
+16r /tempo 66
+16r /tempo 67
+16r /tempo 68
+16r /tempo 69
+16r /tempo 70
+16r /tempo 71
+16r /tempo 72
+16r /tempo 73
+16r /tempo 74
+16r /tempo 75
+16r /tempo 76
+16r /tempo 77
+16r /tempo 78
+16r /tempo 79
+16r /tempo 80
+16r /tempo 81
+16r /tempo 82
+16r /tempo 83
+16r /tempo 84
+16r /tempo 85
+16r /tempo 86
+16r /tempo 87
+16r /tempo 88
+16r /tempo 89
+16r /tempo 90
+16r /tempo 91
+16r /tempo 92
+16r /tempo 93
+16r /tempo 94
+16r /tempo 95
+16r /tempo 96
+16r /tempo 97
+16r /tempo 98
+16r /tempo 99
+16r /tempo 100
+16r /tempo 101
+16r /tempo 102
+16r /tempo 103
+16r /tempo 104
+16r /tempo 105
+16r /tempo 106
+16r /tempo 107
+16r /tempo 108
+16r /tempo 109
+16r /tempo 110
+16r /tempo 111
+16r /tempo 112
+16r /tempo 113
+16r /tempo 114
+16r /tempo 115
+16r /tempo 116
+16r /tempo 117
+16r /tempo 118
+16r /tempo 119
+16r /tempo 120
+16r /tempo 121
+16r /tempo 122
+16r /tempo 123
+16r /tempo 124
+16r /tempo 125
+16r /tempo 126
+16r /tempo 127
+16r /tempo 128
+16r /tempo 129
+16r /tempo 130
+16r /tempo 131
+16r /tempo 132
+16r /tempo 133
+16r /tempo 134
+16r /tempo 135
+16r /tempo 136
+16r /tempo 137
+16r /tempo 138
+16r /tempo 139
+16r /tempo 140
+16r /tempo 141
+16r /tempo 142
+16r /tempo 143
+16r /tempo 144
+16r /tempo 145
+16r /tempo 146
+16r /tempo 147
+16r /tempo 148
+16r /tempo 149
+16r /tempo 150
+16r /tempo 151
+16r /tempo 152
+16r /tempo 153
+16r /tempo 154
+16r /tempo 155
+16r /tempo 156
+16r /tempo 157
+16r /tempo 158
+16r /tempo 159
+16r /tempo 160
+16r /tempo 161
+16r /tempo 162
+16r /tempo 163
+16r /tempo 164
+16r /tempo 165
+16r /tempo 166
+16r /tempo 167
+16r /tempo 168
+16r /tempo 169
+16r /tempo 170
+
+
+
+
+/track met
+/channel 3
+/mf
+
+// 30bpm
+2M 8r
+// 40bpm
+2M 8r
+// 50bpm
+2M 8r
+// 60bpm
+2M 8r
+// 70bpm
+2M 8r
+// 80bpm
+2M 8r
+// 90bpm
+2M 8r
+// 100bpm
+2M 8r
+// 110bpm
+2M 8r
+// 120bpm
+2M 8r
+// 130bpm
+2M 8r
+// 140bpm
+2M 8r
+// 150bpm
+2M 8r
+// 160bpm
+2M 8r
+// 170bpm
+2M 8r

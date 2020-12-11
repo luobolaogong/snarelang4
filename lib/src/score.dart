@@ -812,6 +812,7 @@ enum TrackId {
   tenor, // possibly pitch based notes rather than having tenor1, tenor2, ...
   bass,
   met,
+  tempo,
   pipes
 }
 
@@ -860,6 +861,9 @@ TrackId trackStringToId(String trackString) {
     case 'metronome':
       trackId = TrackId.met;
       break;
+    case 'tempo':
+      trackId = TrackId.tempo;
+      break;
     case 'pipes':
       trackId = TrackId.pipes;
       break;
@@ -885,6 +889,8 @@ String trackIdToString(TrackId id) {
       return 'bass';
     case TrackId.met:
       return 'met';
+    case TrackId.tempo:
+      return 'tempo';
     case TrackId.pipes:
       return 'pipes';
     default:

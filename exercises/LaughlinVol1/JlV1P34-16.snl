@@ -6,17 +6,17 @@
 
 /track snare
 /channel 1
-/f
+/mf
 
 /marker 13StrkRll
 1r
 
 /marker A
-/f 24Z . . . . . 8T . /cresc 24Z . . . . . ^4T /fff
-/f 24z . . . . . 8t . /fff /decresc 24z . . . . . 4t /f
+/mf 24Z . . . . . 8T . /cresc 24Z . . . . . ^4T /fff
+/mf 24z . . . . . 8t . /fff /decresc 24z . . . . . 4t /mf
 /marker A Rpt
-/f 24Z . . . . . 8T . /cresc 24Z . . . . . ^4T /fff
-/f 24z . . . . . 8t . /fff /decresc 24z . . . . . 4t /f
+/mf 24Z . . . . . 8T . /cresc 24Z . . . . . ^4T /fff
+/mf 24z . . . . . 8t . /fff /decresc 24z . . . . . 4t /mf
 
 1r
 
@@ -39,26 +39,26 @@
 1r
 
 /marker D
-/f ^24:5T 24t  24Z . . 8t /cresc 24Z . . . . . ^4T /fff
-/f ^12T 24t 12T 24T 12t ^24T 12t 24t /cresc 24Z . . . . . ^4T /fff
+/mf ^24:5T 24t  24Z . . 8t /cresc 24Z . . . . . ^4T /fff
+/mf ^12T 24t 12T 24T 12t ^24T 12t 24t /cresc 24Z . . . . . ^4T /fff
 
 /marker D Rpt
-/f ^24:5T 24t  24Z . . 8t /cresc 24Z . . . . . ^4T /fff
-/f ^12T 24t 12T 24T 12t ^24T 12t 24t /cresc 24Z . . . . . ^4T /fff
+/mf ^24:5T 24t  24Z . . 8t /cresc 24Z . . . . . ^4T /fff
+/mf ^12T 24t 12T 24T 12t ^24T 12t 24t /cresc 24Z . . . . . ^4T /fff
 
 1r
 
 /marker IntroRll
-/f 24T . . . . . . . . . . . ^4T 4r
-/f 24T . . . . . . . . . . . ^4T 4r
-/f 24Z . . . . . . . . . . . ^4T 4r
-/f 24Z . . . . . . . . . . . ^4T 4r
+/mf 24T . . . . . . . . . . . ^4T 4r
+/mf 24T . . . . . . . . . . . ^4T 4r
+/mf 24Z . . . . . . . . . . . ^4T 4r
+/mf 24Z . . . . . . . . . . . ^4T 4r
 
 /marker RptIntroRll
-/f 24T . . . . . . . . . . . ^4T 4r
-/f 24T . . . . . . . . . . . ^4T 4r
-/f 24Z . . . . . . . . . . . ^4T 4r
-/f 24Z . . . . . . . . . . . ^4T 4r
+/mf 24T . . . . . . . . . . . ^4T 4r
+/mf 24T . . . . . . . . . . . ^4T 4r
+/mf 24Z . . . . . . . . . . . ^4T 4r
+/mf 24Z . . . . . . . . . . . ^4T 4r
 
 
 /track met

@@ -7,7 +7,7 @@
 
 /track snare
 /channel 1
-/f
+/mf
 
 /marker Flam SwssTrips
 
@@ -46,11 +46,11 @@
 
 1r
 /marker C
-/f ^12F 24t . . .  ^12f 24t ^12F 24t   /mp /cresc 24T . F T t F ^4f /fff
-/f ^12f 24T . . .  ^12F 24T ^12f 24T   /mp /cresc 24t . f t T f ^4f /fff
+/mf ^12F 24t . . .  ^12f 24t ^12F 24t   /mp /cresc 24T . F T t F ^4f /fff
+/mf ^12f 24T . . .  ^12F 24T ^12f 24T   /mp /cresc 24t . f t T f ^4f /fff
 /marker CRpt
-/f ^12F 24t . . .  ^12f 24t ^12F 24t   /mp /cresc 24T . F T t F ^4f /fff
-/f ^12f 24T . . .  ^12F 24T ^12f 24T   /mp /cresc 24t . f t T f ^4f /fff
+/mf ^12F 24t . . .  ^12f 24t ^12F 24t   /mp /cresc 24T . F T t F ^4f /fff
+/mf ^12f 24T . . .  ^12F 24T ^12f 24T   /mp /cresc 24t . f t T f ^4f /fff
 
 
 /marker DrgTrips
