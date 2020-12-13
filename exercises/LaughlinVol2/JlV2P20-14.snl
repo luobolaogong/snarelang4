@@ -2,18 +2,19 @@
 // Chapter 2: Phrase Building
 // Page 20, audio recording track 14
 // Phrase Workouts 2/4 March 1
+// Essentially same as JlV2P23-17, 2/2 Reel Dot/Cut 1
 
-
-
-/time 2/4
-/tempo 76
 
 /track snare
 /channel 1
 /mf
 
+
+/time 2/4
+/tempo 76
 /marker Phrase Wrkouts 2/4 March 1
 2r
+
 /marker W1
 ^12T 24t 12T ^24t 12T 24t ^8T
 ^12T 24t 12T ^24t 12T 24t ^8T
@@ -56,7 +57,7 @@
 
 /marker W11
 8F 32F T t T 16t 32F T 24t . .
-^12F 24t 24Z . . 8t r
+^12F 24t 24Z . . ^8t r
 
 /marker W12
 ^12T 24t 12T ^32t . . . >. . . . >24t
@@ -78,6 +79,8 @@
 /marker W16
 ^32F t T T 12t 24F   >24t 24Z ^32t . . . >24t
 ^8T 24Z . . ^8t r
+
+
 /track met
 /channel 2
 /p

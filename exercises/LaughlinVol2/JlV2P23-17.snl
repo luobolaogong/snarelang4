@@ -1,0 +1,138 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 2: Phrase Building
+// Page 23, audio recording track 17
+// Phrase Workouts 2/2 Reel Dot and Cut 1
+// Essentially same as JlV2P20-14, 2/4 March 1
+
+
+/track snare
+/channel 1
+/mf
+
+/time 2/2
+/tempo 76
+
+/marker Phrase Wrkouts 2/2 Reel D/C1
+1r
+
+/marker W1
+^6T 12t 6T ^12t 6T 12t ^4T
+^6T 12t 6T ^12t 6T 12t ^4T
+
+/marker W2
+^6T 12t 6T ^16t . . . >12t  ^6T 12t
+6T ^16t . . . >12t ^4T .
+
+/marker W3
+^6F 12t 6F ^16f 16T . . >12t  ^6T ^12F
+6t ^16f 16T . . >12t ^4T .
+
+/marker W4
+^6F 12t 6D 16d 16T . . >12t ^6T 12t
+6D 16d 16T . . >12t ^4T .
+
+/marker W5
+12Z . T 6t 24Z . 6T 12t 12Z . 12T
+6t 24Z . 6T 12t ^2F
+
+/marker W6
+12Z . T 6t 24Z . 16T . . . 12Z . 12T
+6t 24Z . 16T . . . ^2T
+
+/marker W7
+^6F 24z . 12t . . ^6T 24z . 6t
+^16T . . . ^. . . . >12T ^4t 4r
+
+/marker W8
+40T 10z . 12t . ^16t . . . >12t ^6T ^12F
+6t 16D T . . >12t ^4T .
+
+/marker W9
+^4T 6v ^16t . . . >12t ^4T
+6v ^16t . . . >12t ^4T r
+
+/marker W10
+^6t 12t 6F ^16f 16T . . 12t ^4T
+12D t ^T 4t ^4v r
+
+/marker W11
+4F 16F T t T 8t 16F T 12t . .
+^6F 12t 12Z . . ^4t r
+
+/marker W12
+^6T 12t 6T ^16t . . . >. . . . >12t
+^12T t ^16T . . . ^12T ^2t
+
+/marker W13
+// this one, like many others, are written wrong, but it's played like this:
+^6T 24Z 24z 6T   ^16t 16T 16t 16T   ^12t 12T 12t >16T 16t
+16T 16t >16D     16T 16t 16T >12t ^4T 4r
+
+/marker W14
+^6F 12t . . . ^6f 12t ^6F 12t
+/cresc 12T . F T t >F ^4f /fff /mf r
+
+/marker W15
+6v ^12T 6t 12t 4F 6v ^12T
+12t . >16 . . . _12 ^4T r
+
+/marker W16
+^16F t T T 6t 12F   >12t 12Z ^16t . . . >12t
+^4T 12Z . . ^4t r
+
+
+
+/track met
+/channel 2
+/p
+
+^4M . ^2M
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _2M
+

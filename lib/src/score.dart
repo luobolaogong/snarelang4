@@ -544,97 +544,97 @@ class Score {
     switch (note.dynamic) {
       case Dynamic.ppp:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 14;
+          return note.velocity + 24; // was 14
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 24;
+          return note.velocity + 34; // was 24
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 44;
+          return note.velocity + 54; // was 44
         }
         print('what happened?');
         break;
       case Dynamic.pp:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 20;
+          return note.velocity + 28; // was 20
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 32;
+          return note.velocity + 40; // was 32
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 44;
+          return note.velocity + 52; // was 44
         }
         print('what happened?');
         break;
       case Dynamic.p:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 25;
+          return note.velocity + 31; // was 25
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 36;
+          return note.velocity + 42; // was 36
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 48;
+          return note.velocity + 54; // was 48
         }
         print('what happened?');
         break;
       case Dynamic.mp:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 24;
+          return note.velocity + 28; // was 24
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 34;
+          return note.velocity + 38; // was 34
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 50; // was 44, james plays loud
+          return note.velocity + 54; // was 50 // was 44, james plays loud
         }
         print('what happened?');
         break;
       case Dynamic.mf:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 16;
+          return note.velocity + 18; // was 16
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 26;
+          return note.velocity + 28; // was 26
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 50; // was 36
+          return note.velocity + 52; // was 50 // was 36
         }
         print('what happened?');
         break;
       case Dynamic.f:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 12; // was 8
+          return note.velocity + 14; // was 12// was 8
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 20; // was 14
+          return note.velocity + 22; // was 20 // was 14
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 30; // was 18,24
+          return note.velocity + 32; // was 30 // was 18,24
         }
         print('what happened?');
         break;
       case Dynamic.ff:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 3; // was 1
+          return note.velocity + 5; // was 3 // was 1
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 5; // was 3
+          return note.velocity + 7; // was 5 // was 3
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 10; // was 5 clips?
+          return note.velocity + 12; // was 10 // was 5 clips?
         }
         print('what happened?');
         break;
       case Dynamic.fff: // if fff is at 127 then these numbers will just get clipped:
         if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 3; // was 1
+          return note.velocity + 5; // was 3// was 1
         }
         if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 5; // was 3
+          return note.velocity + 7; // was 5 // was 3
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 8; // was 5, clips for sure, right?
+          return note.velocity + 10; // was 8 // was 5, clips for sure, right?
         }
         print('what happened?');
         break;
@@ -686,6 +686,17 @@ class Score {
   /// I set some values empirically.  They're based on a tempo of 100bpm.  They have to be scaled by the current tempo.
   /// I don't know how that affects time signature tempos like 3/8, 6/8, 9/8, where the beat is a dotted quarter.
   ///
+  /// Okay, just learned that 2/2 time the shift is off by a factor of 2.  Should be twice as much!!!!!!!!
+  /// I'd suspect things are off for 3/8, 6/8, 9/8, and even 2/8, 4/8, x/8 time too.  The numbers
+  /// below are based on x/4 time.  I don't even know what the formula is here.
+  ///
+  /// The formula is used to calculate the time shift amount in milliseconds or some other unit, and this is
+  /// used when setting on/off values in midi, which I'd think would NOT be based on tempo. Should be an
+  /// absolute value no matter what the tempo, I'd think.  But I don't know how this stuff is calculated
+  /// in midi.  So need to review.  But the time signature does matter.  That is, the beat.  If we're in
+  /// 2/4, 3/4, 4/4, x/4, it's been working okay.  Maybe even working in 6/8.  But in 2/2 it is off by a
+  /// factor of 2.  So, we've got a beat, and a tempo based on that beat.
+  ///
   /// So, basically you're looking at two notes at once: the current note and the previous note.
   /// If the current note has grace notes, reduce the previous note's NoteOff deltaTime, and
   /// increase the current note's NoteOff deltaTime the same amount.  Then advance.
@@ -703,10 +714,23 @@ class Score {
     // just a wild stab to handle first note case in list
     var previousNote = Note();
     previousNote.noteOffDeltaTimeShift = 0;
-
+    //
+    // Clean up this crap in non-prototype version
+    //
     // Tempo mostRecentScaledTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
     Tempo mostRecentTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
+    TimeSig mostRecentTimeSig; // assuming we'll hit one before we hit a note.
+    num scaleAdjustForNon44 = 1.0;
     for (var element in elements) {
+      if (element is TimeSig) {
+        mostRecentTimeSig = element;
+        if (mostRecentTimeSig.denominator == 2) { // total hack
+          scaleAdjustForNon44 = 2.0; // total hack
+        }
+        else {
+          scaleAdjustForNon44 = 1.0;
+        }
+      }
       if (element is Tempo) {
         //log.finest('In adjustForGraceNotes(), tempo is $element and looks like we will scale it just to keep track of the most recent tempo, but not changing it in the list');
         //tempoBpm = element.bpm; // but not adjusted for tempo scalar
@@ -726,7 +750,7 @@ class Score {
           case NoteType.flamLeft:
           case NoteType.flamRight:
           case NoteType.flamUnison:
-            graceNotesDuration = (180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+            graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -734,7 +758,7 @@ class Score {
           case NoteType.dragLeft:
           case NoteType.dragRight:
           case NoteType.dragUnison:
-            graceNotesDuration = (250 / (100 / mostRecentTempo.bpm)).round();
+            graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -742,7 +766,7 @@ class Score {
           case NoteType.ruff2Left:
           case NoteType.ruff2Right:
           case NoteType.ruff2Unison:
-            graceNotesDuration = (1400 / (100 / mostRecentTempo.bpm)).round();
+            graceNotesDuration = (scaleAdjustForNon44 * 1400 / (100 / mostRecentTempo.bpm)).round();
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -751,9 +775,10 @@ class Score {
           case NoteType.ruff3Right:
           case NoteType.ruff3AltLeft:
           case NoteType.ruff3AltRight:
-          case NoteType.ruff3Unison:
+          case NoteType.ruff3Unison: // hey I think these numbers are not right.  2/2 time is way off for this number
             // graceNotesDuration = (1900 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
-            graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            // graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            graceNotesDuration = (scaleAdjustForNon44 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration; // at slow tempos coming in too late
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
