@@ -176,18 +176,25 @@ class Score {
     log.finest('leaving Score.applyShorthands()\n');
     return;
   }
+
+  // This is a strange method.  Seems dependent upon elements in the list, and also it
+  // has a continue at the end of the for loop.  But also fillInTempoDuration is only for triplet tempos???
   void correctTripletTempos(CommandLine commandLine) {
     latestTimeSig = commandLine.timeSig;
     for (var element in elements) {
-      if (element is Tempo) {
-        Tempo.fillInTempoDuration(element, latestTimeSig); // Yes, I know latestTimeSig is a global, just a test.  There's no guarantee commandLine.timeSig or tempo will have values that represent what's in the file
-        continue;
-      }
       if (element is TimeSig) {
         latestTimeSig = element; // latestTimeSig is a global defined in timesig.dart file
         continue;
       }
-      continue;
+      if (element is Tempo) {
+        Tempo.fillInTempoDuration(element, latestTimeSig); // Yes, I know latestTimeSig is a global, just a test.  There's no guarantee commandLine.timeSig or tempo will have values that represent what's in the file
+        continue;
+      }
+      // if (element is TimeSig) {
+      //   latestTimeSig = element; // latestTimeSig is a global defined in timesig.dart file
+      //   continue;
+      // }
+      //continue; // what?
     }
     return;
   }
@@ -371,6 +378,8 @@ class Score {
       // bad sound font recordings, but only as a hack.  Fix the recordings.
       switch (note.noteType) {
         case NoteType.tapLeft:
+          note.velocity += 4; // This is a guess.  I think generally left is softer
+          break;
         case NoteType.tapRight:
           break;
         case NoteType.flamLeft:
@@ -382,10 +391,11 @@ class Score {
         case NoteType.dragRight:
           //note.velocity += 10; // commented out because of a video I saw which says it softens the note
           //note.velocity -= 10; // No, too soft according to how James Laughlin plays.  Plays it like a flam in volume
-          note.velocity += 10; // this is a bit softer than a flam due to the recording volume
+          note.velocity += 12; // this is a bit softer than a flam due to the recording volume
           break;
         case NoteType.buzzLeft:
         case NoteType.buzzRight:
+          note.velocity += 6; // new 12/13/2020
           break;
         case NoteType.ruff3AltLeft:
         case NoteType.ruff3AltRight:
@@ -719,18 +729,18 @@ class Score {
     //
     // Tempo mostRecentScaledTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
     Tempo mostRecentTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
-    TimeSig mostRecentTimeSig; // assuming we'll hit one before we hit a note.
-    num scaleAdjustForNon44 = 1.0;
+//    TimeSig mostRecentTimeSig; // assuming we'll hit one before we hit a note.
+//    num scaleAdjustForNon44 = 1.0;
     for (var element in elements) {
-      if (element is TimeSig) {
-        mostRecentTimeSig = element;
-        if (mostRecentTimeSig.denominator == 2) { // total hack
-          scaleAdjustForNon44 = 2.0; // total hack
-        }
-        else {
-          scaleAdjustForNon44 = 1.0;
-        }
-      }
+      // if (element is TimeSig) {
+      //   mostRecentTimeSig = element;
+      //   if (mostRecentTimeSig.denominator == 2) { // total hack
+      //     scaleAdjustForNon44 = 2.0; // total hack
+      //   }
+      //   else {
+      //     scaleAdjustForNon44 = 1.0;
+      //   }
+      // }
       if (element is Tempo) {
         //log.finest('In adjustForGraceNotes(), tempo is $element and looks like we will scale it just to keep track of the most recent tempo, but not changing it in the list');
         //tempoBpm = element.bpm; // but not adjusted for tempo scalar
@@ -744,13 +754,17 @@ class Score {
         continue;
       }
       else if (element is Note) {
+        //print('In Score.adjustForGraceNotes, and element is a note, and mostRecentTempo is ${mostRecentTempo}');
         var note = element as Note; // unnec cast, it says, but I want to
         // Bad logic, I'm sure:
         switch (note.noteType) {
           case NoteType.flamLeft:
           case NoteType.flamRight:
           case NoteType.flamUnison:
-            graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+            // graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+            graceNotesDuration = (180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+            print('graceNotesDuration for flam: $graceNotesDuration at $mostRecentTempo');
+            //graceNotesDuration = (mostRecentTempo.noteDuration.secondNumber / mostRecentTempo.noteDuration.firstNumber) * .008 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -758,7 +772,9 @@ class Score {
           case NoteType.dragLeft:
           case NoteType.dragRight:
           case NoteType.dragUnison:
-            graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
+            // graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
+            graceNotesDuration = (250 / (100 / mostRecentTempo.bpm)).round();
+            print('graceNotesDuration for drag: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -766,7 +782,8 @@ class Score {
           case NoteType.ruff2Left:
           case NoteType.ruff2Right:
           case NoteType.ruff2Unison:
-            graceNotesDuration = (scaleAdjustForNon44 * 1400 / (100 / mostRecentTempo.bpm)).round();
+            graceNotesDuration = (1400 / (100 / mostRecentTempo.bpm)).round();
+            print('graceNotesDuration for ruff2: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -775,10 +792,16 @@ class Score {
           case NoteType.ruff3Right:
           case NoteType.ruff3AltLeft:
           case NoteType.ruff3AltRight:
-          case NoteType.ruff3Unison: // hey I think these numbers are not right.  2/2 time is way off for this number
+          case NoteType.ruff3Unison: // hey I think these numbers are not right.
+            // A ruff3Right gracenotes duration is 0.1442s on the snare, and 0.1323s on a pad.  Average: 0.1382s.
+            // With the current formula, at 60bpm in 4/4 time, the number to use is 1290, it seems.  Hmmmmm, that's close
+            // At 120bpm the number is twice that (2580).  Seems to me we could use the actual milliseconds, assume it's at
+            // 60bpm 4/4 time.  If it's 2/2 time, then
             // graceNotesDuration = (1900 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             // graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
-            graceNotesDuration = (scaleAdjustForNon44 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            // graceNotesDuration = (scaleAdjustForNon44 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            print('graceNotesDuration for ruff3: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration; // at slow tempos coming in too late
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -887,7 +910,7 @@ TrackId trackStringToId(String trackString) {
       trackId = TrackId.met;
       break;
     case 'tempo':
-      trackId = TrackId.tempo;
+      trackId = TrackId.tempo; // hey what about trackzero?  Should use it instead?
       break;
     case 'pipes':
       trackId = TrackId.pipes;
@@ -914,7 +937,7 @@ String trackIdToString(TrackId id) {
       return 'bass';
     case TrackId.met:
       return 'met';
-    case TrackId.tempo:
+    case TrackId.tempo: // what about trackzero?
       return 'tempo';
     case TrackId.pipes:
       return 'pipes';

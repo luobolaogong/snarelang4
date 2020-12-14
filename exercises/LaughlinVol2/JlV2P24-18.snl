@@ -2,7 +2,7 @@
 // Chapter 2: Phrase Building
 // Page 24, audio recording track 18
 // Phrase Workouts 2/2 Reel Dot and Cut 2
-// Essentially same as JlV2P21-14, 2/4/ March 2 I think. check
+// Essentially same as JlV2P21-15, 2/4/ March 2 I think.
 
 
 /track snare
@@ -10,122 +10,114 @@
 /mf
 
 /time 2/2
-/tempo 76
-
-
-
-// TO DO:  CUT IN HALF THE FOLLOWING NUMBERS
-
-
-
-
+/tempo 2=76
 
 
 /marker Phrase Wrkouts 2/4 March 2
 2r
 
 /marker W1
-^216:5T 216:10z . . . >24t  ^8T >40T 20z .
-^40T 20z . 24t . . ^8F r
+^108:5T 108:10z . . . >12t  ^4T >20T 10z .
+^20T 10z . 12t . . ^4F r
 
 /marker W2
-^216:5T 216:10z . . . >24t  >40T 20z . >40t 20Z .
-24T . >. 12t 24t ^8F r
+^108:5T 108:10z . . . >12t  >20T 10z . >20t 10Z .
+12T . >. 6t 12t ^4F r
 
 /marker W3
->40T 20z . >40t 20Z .  ^216:5T 216:10z . . . >24t
-^40T 20z . >8t ^F r
+>20T 10z . >20t 10Z .  ^108:5T 108:10z . . . >12t
+^20T 10z . >4t ^F r
 
 /marker W4
 // he made writing mistake at end of this one
-^216:5T 216:10z . . . >40t 20Z . 24T  ^216:5t 216:10Z .
-216:10Z . >40T 20z . >24t ^8T r
+^108:5T 108:10z . . . >20t 10Z . 12T  ^108:5t 108:10Z .
+108:10Z . >20T 10z . >12t ^4T r
 
 /marker W5
->40T 20z . 12t  >40T 20z . >32t . . . >24t
-^12T 24t 24Z . . ^8t r
+>20T 10z . 6t  >20T 10z . >16t . . . >12t
+^6T 12t 12Z . . ^4t r
 
 /marker W6
->36T 18z ^24T t T f  >36t 18Z ^24t T t F
->36T 18z ^32T . . . >24T ^8t r
+>18T 9z ^12T t T f  >18t 9Z ^12t T t F
+>18T 9z ^16T . . . >12T ^4t r
 
 /marker W7
-^12F 24t 24Z . 24T  _36t 18Z ^24t 12T 24F
-_36t 18Z ^32T . . . >24t ^8T r
+^6F 12t 12Z . 12T  _18t 9Z ^12t 6T 12F
+_18t 9Z ^16T . . . >12t ^4T r
 
 /marker W8
->40T 20z . >36t 18Z >24t  >40T 20z . >36t 18Z >24t
->40T 20z . >36t 18Z >24t  ^8T r
+>20T 10z . >18t 9Z >12t  >20T 10z . >18t 9Z >12t
+>20T 10z . >18t 9Z >12t  ^4T r
 
 /marker W9
->40T 20z . >36t 18Z >24t  >40t 20Z . >36T 18z >24T
->40T 20z .  32t . . .  ^8t r
+>20T 10z . >18t 9Z >12t  >20t 10Z . >18T 9z >12T
+>20T 10z .  16t . . .  ^4t r
 
 /marker W10
->40t 20Z . >36T 18z >24T   >40T 20z . >36t 18Z >24t
->40t 20Z .  32T . . .  ^8T r
+>20t 10Z . >18T 9z >12T   >20T 10z . >18t 9Z >12t
+>20t 10Z .  16T . . .  ^4T r
 
 /marker W11
->40T 20z . 24t T t >40T 20z . >40t 20Z .
-24T . 32D T . . >24t  ^8T r
+>20T 10z . 12t T t >20T 10z . >20t 10Z .
+12T . 16D T . . >12t  ^4T r
 
 /marker W12
-^36T 18z _24T  >36t 18Z ^40t 20z . ^40T 20Z . 24t
-/cresc ^48T 48z 24T T ^48t 48Z 24t t  ^8T /fff /mf r
+^18T 9z _12T  >18t 9Z ^20t 10z . ^20T 10Z . 12t
+/cresc ^24T 24z 12T T ^24t 24Z 12t t  ^4T /fff /mf r
 
 /marker W13
-^36T 18z _24T  >36t 18Z ^40t 20z . 24T  ^48t 48Z 24t t
-^4T r
+^18T 9z _12T  >18t 9Z ^20t 10z . 12T ^24t 24Z 12t 12t
+^2T r
 
 /marker W14
-8F 24Z . . 40t 20Z . 32T . . .
-^8T 24Z . . >4t
+4F 12Z . . >20t 10Z . 16T . . .
+^4T 12Z . . >2t
 
 /marker W15
-^12F 24t 12D ^24T  12t 32D T . . 24t
-^8T 24Z . . 4t
+^6F 12t 6D ^12T  6t 16D T . . >12t
+^4T 12Z . . 2t
 
 /marker W16
-^12F 24t 16D ^32T . . .  16D 32T . . .
-^8T 24Z . . ^4t
+^6F 12t 6D ^16T . . .  16D 16T . . >12t
+^4T 12Z . . ^2t
 
 /track met
 /channel 2
 /p
-^8M . ^4M
+^4M . ^2M
 
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
 
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
 
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
 
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _8M .
-_8M . _4M
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _2M

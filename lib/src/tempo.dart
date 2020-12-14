@@ -149,6 +149,28 @@ class Tempo {
   //   log.fine('tempo is now ${tempo.bpm}');
   // }
   // static Tempo watchOutDuplicateCode(Tempo overrideTempo, TimeSig overrideTimeSig) {
+
+  // static num fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
+  //   log.finest('fillInTempoDuration(), gunna make sure tempo noteDureation first and second have values');
+  //   if (modifyThisTempo.noteDuration.firstNumber == null || modifyThisTempo.noteDuration.secondNumber == null) {
+  //     if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+  //       modifyThisTempo.noteDuration.firstNumber = 8;
+  //       modifyThisTempo.noteDuration.secondNumber = 3;  // the beat for 6/8, 9/8, 12/8, 3/8 is a dotted quarter, which is 8:3
+  //     }
+  //     else {
+  //       modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+  //       modifyThisTempo.noteDuration.secondNumber ??= 1;
+  //     }
+  //   }
+  //   //return modifyThisTempo;
+  //   return modifyThisTempo.bpm; // what if null?
+  // }
+
+  // I think maybe this will affect embellishment shift values, or durations.  Turns out that 2/2 time messes embellishments
+  // up.  Off by factor of 2.  Maybe other problems elsewhere too.  So this is an attempt to fix that here, rather than in score.dart.
+  // So, if the time sig's denominator is a 2 then need to adjust "internal" tempo, like we do for x/8 time.  But this is just a guess.
+  // I'm not sure how this function is being used, or sure about much with regard to timing and time sigs and midi durations.
+  // The thing is, in 2/2 time the tempo should be specified as "/time 2=76" and not like "/time = 76"
   static num fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
     log.finest('fillInTempoDuration(), gunna make sure tempo noteDureation first and second have values');
     if (modifyThisTempo.noteDuration.firstNumber == null || modifyThisTempo.noteDuration.secondNumber == null) {
@@ -158,11 +180,11 @@ class Tempo {
       }
       else {
         modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-        modifyThisTempo.noteDuration.secondNumber ??= 1;
+        modifyThisTempo.noteDuration.secondNumber ??= 1; // 4:1,
       }
     }
     //return modifyThisTempo;
-    return modifyThisTempo.bpm; // what if null?
+    return modifyThisTempo.bpm; // what if null?  What? this doesn't get modified, right?  Silly call
   }
 }
 

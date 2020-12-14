@@ -28,6 +28,11 @@ bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sou
 /// Or, there is 1 quarter note in 1/4 of a bar: 1:1/4, which is also "4:1", or just "4"
 /// A note that takes 2/5ths of a bar is 1:2/5 or "5:2".  No decimal values, like "2.5"
 ///
+/// In order to do midi events, you gotta understand timing.  That means understand things
+/// like ticks, beats, clocks, seconds, or whatever.  At the lowest level of the Dart
+/// library you have events, and those work off of timings.
+///
+///
 /// A "tick" is the resolution of a midi clock, and is used in midi note durations.
 ///
 /// I do not know how a midi clock is calibrated.
