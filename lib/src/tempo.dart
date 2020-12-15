@@ -178,6 +178,11 @@ class Tempo {
         modifyThisTempo.noteDuration.firstNumber = 8;
         modifyThisTempo.noteDuration.secondNumber = 3;  // the beat for 6/8, 9/8, 12/8, 3/8 is a dotted quarter, which is 8:3
       }
+      // I really doubt this next if
+      else if (timeSig.denominator == 2) { // This is just a wild hack guess
+        modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
+        modifyThisTempo.noteDuration.secondNumber ??= 1; // 4:1,
+      }
       else {
         modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
         modifyThisTempo.noteDuration.secondNumber ??= 1; // 4:1,

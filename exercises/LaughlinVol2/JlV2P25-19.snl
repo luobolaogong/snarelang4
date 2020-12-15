@@ -1,0 +1,101 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 2: Phrase Building
+// Page 25, audio recording track 19
+// Phrase Workouts 2/2 Reel Dot and Cut 3
+
+
+/track snare
+/channel 1
+/mf
+
+/time 2/2
+/tempo 2=76
+
+
+/marker Phrase Wrkouts 2/4 Reel Dot/Cut 3
+1r
+
+/marker W1
+^6T 12t 6T 12T  ^6f 16D 16T . . >12t
+4T ^6F 12t 6F >16f 16T . . >12t
+
+/marker W2
+^6T 12t 12Z . t  ^20t 10Z . 12T . >.
+6t ^12F 6t ^16f 16T . . >12t ^4T
+
+/marker W3
+// The 3 stroke fruff in 2nd line needs adjusting for 2/2
+// It's not getting pushed back near enough
+^6T 20t t T t T >12t  ^6T 20t t T t T >12t
+^4T >6v ^16T t T T >t T t T >12t
+
+/marker W4
+// the first part is supposed to be a ratamacue, but it's played almost all even
+// pretty close to as I've got it here
+^6T 16t 16t 16T 16t ^12T   6t 12t ^6F 12t
+12T . . ^6f 12t  6D 16D T t t >12t
+
+/marker W5
+
+/marker W6
+
+/marker W7
+
+/marker W8
+
+/marker W9
+
+/marker W10
+
+/marker W11
+
+/marker W12
+
+/marker W13
+
+/marker W14
+
+/marker W15
+
+/marker W16
+
+/track met
+/channel 2
+/p
+^2M ^2M
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _2M

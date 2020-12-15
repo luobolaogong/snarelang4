@@ -409,7 +409,7 @@ class Score {
           break;
         case NoteType.ruff3Left:
         case NoteType.ruff3Right:
-        note.velocity += 20; // recorded too softly
+        note.velocity += 15; // recorded too softly
           break;
         case NoteType.tenorLeft:
         case NoteType.tenorRight:
@@ -729,18 +729,27 @@ class Score {
     //
     // Tempo mostRecentScaledTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
     Tempo mostRecentTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
-//    TimeSig mostRecentTimeSig; // assuming we'll hit one before we hit a note.
-//    num scaleAdjustForNon44 = 1.0;
+    TimeSig mostRecentTimeSig; // assuming we'll hit one before we hit a note.
+    num scaleAdjustForNon44 = 1.0;
     for (var element in elements) {
-      // if (element is TimeSig) {
-      //   mostRecentTimeSig = element;
-      //   if (mostRecentTimeSig.denominator == 2) { // total hack
-      //     scaleAdjustForNon44 = 2.0; // total hack
-      //   }
-      //   else {
-      //     scaleAdjustForNon44 = 1.0;
-      //   }
-      // }
+      if (element is TimeSig) {
+        mostRecentTimeSig = element;
+        if (mostRecentTimeSig.denominator == 1) { // total hack
+          scaleAdjustForNon44 = 4.0; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 2) { // total hack
+          scaleAdjustForNon44 = 2.0; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 8 && mostRecentTimeSig.numerator % 3 != 0) { // total hack
+          scaleAdjustForNon44 = 0.5; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 16) { // total hack
+          scaleAdjustForNon44 = 0.25; // total hack
+        }
+        else {
+          scaleAdjustForNon44 = 1.0;
+        }
+      }
       if (element is Tempo) {
         //log.finest('In adjustForGraceNotes(), tempo is $element and looks like we will scale it just to keep track of the most recent tempo, but not changing it in the list');
         //tempoBpm = element.bpm; // but not adjusted for tempo scalar
@@ -762,7 +771,7 @@ class Score {
           case NoteType.flamRight:
           case NoteType.flamUnison:
             // graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
-            graceNotesDuration = (180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+            graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             print('graceNotesDuration for flam: $graceNotesDuration at $mostRecentTempo');
             //graceNotesDuration = (mostRecentTempo.noteDuration.secondNumber / mostRecentTempo.noteDuration.firstNumber) * .008 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
@@ -773,7 +782,7 @@ class Score {
           case NoteType.dragRight:
           case NoteType.dragUnison:
             // graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
-            graceNotesDuration = (250 / (100 / mostRecentTempo.bpm)).round();
+            graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
             print('graceNotesDuration for drag: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
@@ -782,7 +791,7 @@ class Score {
           case NoteType.ruff2Left:
           case NoteType.ruff2Right:
           case NoteType.ruff2Unison:
-            graceNotesDuration = (1400 / (100 / mostRecentTempo.bpm)).round();
+            graceNotesDuration = (scaleAdjustForNon44 * 1400 / (100 / mostRecentTempo.bpm)).round();
             print('graceNotesDuration for ruff2: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
@@ -799,8 +808,9 @@ class Score {
             // 60bpm 4/4 time.  If it's 2/2 time, then
             // graceNotesDuration = (1900 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             // graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
-            // graceNotesDuration = (scaleAdjustForNon44 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
-            graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            graceNotesDuration = (scaleAdjustForNon44 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            // graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
+            //graceNotesDuration = (2 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             print('graceNotesDuration for ruff3: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration; // at slow tempos coming in too late
             note.noteOffDeltaTimeShift += graceNotesDuration;

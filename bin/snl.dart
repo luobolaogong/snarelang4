@@ -176,7 +176,7 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   // to know how to do notes.  and every time you hit a /tempo mark, use the latest /timesig value, not the one from the command line.
   // Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig); // just a test.  There's no guarantee commandLine.timeSig or tempo will have values that represent what's in the file
 
-  score.correctTripletTempos(commandLine);
+  score.correctTripletTempos(commandLine); // if nec, right?
   // maybe don't need to do the following two lines if correct tempos above, but probably do
   score.elements.insert(0, commandLine.tempo); // yes in this order     I dislike writing a tempo and timeSig if another pair are coming right after it.
   score.elements.insert(0, commandLine.timeSig);

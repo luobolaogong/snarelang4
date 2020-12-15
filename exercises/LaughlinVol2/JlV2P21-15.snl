@@ -82,10 +82,10 @@ _36t 18Z ^32T . . . >24t ^8T r
 
 /marker W15
 ^12F 24t 12D ^24T  12t 32D T . . 24t
-^8T 24Z . . 4t
+^8T 24Z . . >4t
 
 /marker W16
-^12F 24t 16D ^32T . . .  16D 32T . . .
+^12F 24t 12D ^32T . . .  32D 32T . . >24t
 ^8T 24Z . . ^4t
 
 /track met
