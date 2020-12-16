@@ -262,7 +262,7 @@ class Midi {
   List<MidiEvent> createTimingTrackZero(List scoreElements, Channel channel, CommandLine commandLine) { // no we don't want command line values, because they default to 4/4 84
     print('\n\t\tcreateTimingTrackZero(), and commandLine timeSig: ${commandLine.timeSig}, tempo: ${commandLine.tempo}, tempo scalar: ${commandLine.tempoScalar}');
     print('\t\tSo, tempo should be scaled to be: ${Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar)}');
-    print('\t\tBut if 3/8 time, then tempo should be ${Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig)}');
+    //print('\t\t!!!!!!!!!!!!!!!!!!!!! WHAT????????????? But if 3/8 time, then tempo should be ${Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig)}');
     var timeSig = commandLine.timeSig;
     var tempo = commandLine.tempo;
 
@@ -437,13 +437,11 @@ class Midi {
         continue;
       }
       if (element is Tempo) {
+        // HEY THIS IS IMPORTANT!  IT'S WHAT SETS THE REAL PLAYBACK TEMPO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // HEY THIS IS IMPORTANT!  IT'S WHAT SETS THE REAL PLAYBACK TEMPO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // HEY THIS IS IMPORTANT!  IT'S WHAT SETS THE REAL PLAYBACK TEMPO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // HEY THIS IS IMPORTANT!  IT'S WHAT SETS THE REAL PLAYBACK TEMPO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         var tempo = element as Tempo; // don't have to do this, but wanna
-        // For a test, output the tempo value as text in the track at the tempo change.
-        // Tempo.scaleThis(tempo, tempoScalar);
-        // tempo = Tempo.scaleThis(tempo, tempoScalar);     // removing this.  The tempo has already been scaled I hope
-        // var markerEvent = MarkerEvent();
-        // markerEvent.text = 'Tempo ${element.bpm}';
-        // trackEventsList.add(markerEvent);
 
         //Tempo.fillInTempoDuration(tempo, overrideTimeSig); // check on this.  If already has duration, what happens?
         // first one can be bpm==null, right?
@@ -516,7 +514,19 @@ class Midi {
     var setTempoEvent = SetTempoEvent();
     setTempoEvent.type = 'setTempo';
     // I think this next line is to account for tempos based on nonquarter notes, like 6/8 time.
-    var useThisTempo = tempo.bpm / (tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber / 4); // this isn't really right.
+    //
+    // addMidiEventsToTrack is what called this method!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // The following formula is strange.  I don't understand it.  I think the 4 is because most midi stuff is
+    // based on a 4/4 bar.  But it seems to work.
+    // When noteDuration is 4:1 (a quarter note), then useThisTempo = bpm/(4/1/4) = bpm * 1
+    // And if noteDuration is 8:3, then useThisTempo = bpm/((8/3)/4) = bpm * 3/2
+    // If duration is 2:1 (a half note), then useThisTempo = bpm * ((2/1) / 4) = bpm * 0.5
+    num useThisTempo = tempo.bpm / ((tempo.noteDuration.firstNumber / tempo.noteDuration.secondNumber) / 4); // this isn't really right, is it????
+    //var useThisTempo = tempo.bpm * tempo.noteDuration.secondNumber; // experiment.  Above line was producing 144 from 96 for 6/8 time
+    //print('What the crap useThisTempo: $useThisTempo');
+    //
+    //
+    //
     if (useThisTempo > 248 || useThisTempo < 10) {
       log.warning('I think MIDI has a hard time with tempos greater than around 300 and seems to max out around 250, but slowly approaches that limit???');
     }
@@ -524,8 +534,10 @@ class Midi {
     // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // not round()?   I think should be round, and maybe a float?   How does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
     log.finest('gunna do calculation for setTempoEvent for microsecondsPerBeat. Tempo in: $tempo, mspb: $microsecondsPerMinute,  useThisTempo: $useThisTempo  divided: ${microsecondsPerMinute / useThisTempo}  and rounded: ${(microsecondsPerMinute / useThisTempo).round()}');
     setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).round(); // how does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
+    // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // how does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
     //print('addTempoChangeToTrackEventsList(), for the setTempoEvent we have microsecondsPerBeat: ${setTempoEvent.microsecondsPerBeat}');
     log.fine('Adding tempo change event (${useThisTempo}bpm, ${setTempoEvent.microsecondsPerBeat/1000000} Sec/beat)to some track events list, possibly track zero???, but any track events list');
+    print('Adding tempo change event (${useThisTempo}bpm, ${setTempoEvent.microsecondsPerBeat/1000000} Sec/beat)to some track events list, possibly track zero???, but any track events list');
     trackEventsList.add(setTempoEvent);
   }
 

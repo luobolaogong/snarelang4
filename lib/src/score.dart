@@ -740,6 +740,9 @@ class Score {
         else if (mostRecentTimeSig.denominator == 2) { // total hack
           scaleAdjustForNon44 = 2.0; // total hack
         }
+        else if (mostRecentTimeSig.denominator == 8 && mostRecentTimeSig.numerator % 3 == 0) { // total hack
+          scaleAdjustForNon44 = 1.5; // total hack, and a big guess
+        }
         else if (mostRecentTimeSig.denominator == 8 && mostRecentTimeSig.numerator % 3 != 0) { // total hack
           scaleAdjustForNon44 = 0.5; // total hack
         }

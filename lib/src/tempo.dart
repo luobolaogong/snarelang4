@@ -141,14 +141,6 @@ class Tempo {
     log.fine('scaleThis(), tempo is now $newTempo');
     return newTempo;
   }
-  // // Maybe should change this so it doesn't change the Tempo passed in, and returns a new Tempo object
-  // static void scaleThis(Tempo tempo, num scalar) {
-  //   //tempo.bpm += (scalar / 100).floor(); // not right, right?
-  //   log.fine('tempo was ${tempo.bpm}');
-  //   tempo.bpm += (tempo.bpm * scalar / 100).floor();
-  //   log.fine('tempo is now ${tempo.bpm}');
-  // }
-  // static Tempo watchOutDuplicateCode(Tempo overrideTempo, TimeSig overrideTimeSig) {
 
   // static num fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
   //   log.finest('fillInTempoDuration(), gunna make sure tempo noteDureation first and second have values');
@@ -166,30 +158,32 @@ class Tempo {
   //   return modifyThisTempo.bpm; // what if null?
   // }
 
-  // I think maybe this will affect embellishment shift values, or durations.  Turns out that 2/2 time messes embellishments
-  // up.  Off by factor of 2.  Maybe other problems elsewhere too.  So this is an attempt to fix that here, rather than in score.dart.
-  // So, if the time sig's denominator is a 2 then need to adjust "internal" tempo, like we do for x/8 time.  But this is just a guess.
-  // I'm not sure how this function is being used, or sure about much with regard to timing and time sigs and midi durations.
-  // The thing is, in 2/2 time the tempo should be specified as "/time 2=76" and not like "/time = 76"
-  static num fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
-    log.finest('fillInTempoDuration(), gunna make sure tempo noteDureation first and second have values');
-    if (modifyThisTempo.noteDuration.firstNumber == null || modifyThisTempo.noteDuration.secondNumber == null) {
-      if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-        modifyThisTempo.noteDuration.firstNumber = 8;
-        modifyThisTempo.noteDuration.secondNumber = 3;  // the beat for 6/8, 9/8, 12/8, 3/8 is a dotted quarter, which is 8:3
-      }
-      // I really doubt this next if
-      else if (timeSig.denominator == 2) { // This is just a wild hack guess
-        modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-        modifyThisTempo.noteDuration.secondNumber ??= 1; // 4:1,
-      }
-      else {
-        modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-        modifyThisTempo.noteDuration.secondNumber ??= 1; // 4:1,
-      }
+  // This is to fix a tempo object when it's not complete, that is has some null values for some reason.
+  // A tempo should have a "beat" designation.  Usually that's a quarter note.  Sometimes it's a half note.
+  // It could be an eighth note in the case of 5/8, or 7/8, or 2/8, or any (non-multiple of 3)/8.
+  // And in the case of 6/8, or 9/8, or 12/8 time, it's a dotted quarter!  And whatever that "beat" is, it
+  // is what the midi timing stuff assumes, I think.
+  //
+  // So, what should this method/function do other than set tempo beat/noteDuration values when they're null?
+  // Nothing, I don't think.
+  static void fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) { // what is this second param?  Who decides the value?
+    if (modifyThisTempo.noteDuration.firstNumber != null && modifyThisTempo.noteDuration.secondNumber != null) {
+      return;
     }
-    //return modifyThisTempo;
-    return modifyThisTempo.bpm; // what if null?  What? this doesn't get modified, right?  Silly call
+    // So, one or both of the "beat" numbers (tempo.noteDuration) is null, we need to fill it in.
+    // If timeSig is 4/4, 3/4, 2/4, 1/4, then first number is 4 and second is 1
+    // If timeSig is 4/2, 3/2, 2/2, 1/2, then first number is 2 and second is 1
+    // If timeSig is 8/8, 7/8, 5/8, 4/8, 2/8, 1/8, then first number is 8 and second is 1
+    // If timeSig is 12/8, 9/8, 6/8, 3/8, then first number is 8 and second is 3
+    //
+    if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
+      modifyThisTempo.noteDuration.firstNumber = 8;
+      modifyThisTempo.noteDuration.secondNumber = 3;  // the beat for 6/8, 9/8, 12/8, 3/8 is a dotted quarter, which is 8:3
+      return;
+    }
+    // otherwise
+    modifyThisTempo.noteDuration.firstNumber = timeSig.denominator;
+    modifyThisTempo.noteDuration.secondNumber = 1;
   }
 }
 

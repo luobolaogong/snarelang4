@@ -31,10 +31,10 @@ class NoteDuration { // change this to Duration if possible, which conflicts, I 
   }
 }
 
-int beatFractionToTicks(num beatFraction) {
+num beatFractionToTicks(num beatFraction) {
   //int ticksPerBeat = 10080
   // var durationInTicks = (Midi.ticksPerBeat * beatFraction).floor(); // why not .round()?
-  var durationInTicks = (Midi.ticksPerBeat * beatFraction).round();
+  num durationInTicks = (Midi.ticksPerBeat * beatFraction).round();
 //  var durationInTicks = (4 * Midi.ticksPerBeat * secondNumber / firstNumber).floor(); // why not .round()?
   return durationInTicks;
 }

@@ -9,7 +9,7 @@
 /mf
 
 /time 2/2
-/tempo 2=76
+/tempo 2=77
 
 
 /marker Phrase Wrkouts 2/4 Reel Dot/Cut 3
@@ -24,7 +24,7 @@
 6t ^12F 6t ^16f 16T . . >12t ^4T
 
 /marker W3
-// The 3 stroke fruff in 2nd line needs adjusting for 2/2
+// The 3 stroke ruff in 2nd line needs adjusting for 2/2
 // It's not getting pushed back near enough
 ^6T 20t t T t T >12t  ^6T 20t t T t T >12t
 ^4T >6v ^16T t T T >t T t T >12t
@@ -33,15 +33,29 @@
 // the first part is supposed to be a ratamacue, but it's played almost all even
 // pretty close to as I've got it here
 ^6T 16t 16t 16T 16t ^12T   6t 12t ^6F 12t
-12T . . ^6f 12t  6D 16D T t t >12t
+12T . . ^6f 12t  6D 16D T t T >12t
 
 /marker W5
+^6T 12t T t T ^6f 12t ^6F 12t
+12T t F ^f T t T t 16D T . . >12t
 
 /marker W6
+^4T ^6f 16T T t t ^12T 6t 12t
+^6F 16t t T T  ^12t  6T ^12f 6T 12t
 
 /marker W7
+^16T t T T  ^t T t t >12T t ^16T t T T ^12t
+^16T t T T  12t T ^t   T t     12D 16T t T >16t
 
 /marker W8
+// You know it would really freaking help if he either played it as written or wrote it as played,
+// and that whatever he played he played it accurately.  Hard to tell if he's making mistakes or
+// intends to play it that way.  And OBVIOUSLY the 12ths and 16ths are not played as written!!!!!!!
+// And he almost always accents the last 16th before an accent, but plays it as a 12th!!!!
+//^16:3T  16z    16Z 16t 16T >16t  16T . . >.   ^16:3T 16t
+^6T 12z   16Z 16t 16T >16t  16T . . >.   ^16:3T 16t
+^6T  12t  >6D >16T t T t 12D >4T
+
 
 /marker W9
 
