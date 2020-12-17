@@ -423,6 +423,7 @@ class Score {
           break;
         case NoteType.met:
           // note.velocity -= 40;
+          note.velocity -= 10;
           break;
         case NoteType.rest:
           print('hey man we got a rest.  Why should there be a velocity for it?');

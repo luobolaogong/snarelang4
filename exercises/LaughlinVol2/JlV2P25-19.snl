@@ -9,7 +9,7 @@
 /mf
 
 /time 2/2
-/tempo 2=77
+/tempo 2=76
 
 
 /marker Phrase Wrkouts 2/4 Reel Dot/Cut 3
@@ -50,28 +50,43 @@
 /marker W8
 // You know it would really freaking help if he either played it as written or wrote it as played,
 // and that whatever he played he played it accurately.  Hard to tell if he's making mistakes or
-// intends to play it that way.  And OBVIOUSLY the 12ths and 16ths are not played as written!!!!!!!
-// And he almost always accents the last 16th before an accent, but plays it as a 12th!!!!
-//^16:3T  16z    16Z 16t 16T >16t  16T . . >.   ^16:3T 16t
-^6T 12z   16Z 16t 16T >16t  16T . . >.   ^16:3T 16t
-^6T  12t  >6D >16T t T t 12D >4T
-
+// intends to play it that way.
+^6T 16z 16Z 16t 16T ^16t  16T 16t 16T >12t  ^6T 12t
+^6T  12t  >6D 16T t T t _12D >4T
 
 /marker W9
+12Z . T  6t  24Z . 6T 12t  12Z . T
+_18t 9Z ^12t 6T 12t ^16F t T T 12t . .
 
 /marker W10
+^4F ^6f 12T 6t >12F 6t >16f
+16T . . 12t  >6T ^16t . . .   ^16t . . . >12t
 
 /marker W11
+// This is a weird one because of the gaps to hit the upbeats
+^4T _6v >16T 16t 16T 16t  12D  18T 18t 18T 12t
+/cresc 16T 16t 16T 16t  ^6T /ff /mf ^12t  12T 12T ^12t  18T 18t 18T >12t
 
 /marker W12
+^6T 12t  16F 16T 16t 16T  _6t  12T  12f 12t ^12T
+12t 12T ^16t  16T 16t 16T >12t ^4T r
 
 /marker W13
+>108:5T 108:10z . . .  >20t 10Z . >12T    >108:5t 108:10Z .
+108:10Z .  >20T 10z . >12t   >24T 24z >12T >T   >24t 24Z >12t >t
 
 /marker W14
+^6T 20t t T t T 12t ^4T  _6v  20t t
+20T t T >12t   ^6T 12t  12T t F T t F
 
 /marker W15
+^4f ^4F 12Z . T 20T 10z .
+12T . 12D  _18T 9z >12T _18t 9Z ^12t 6T 12t
 
 /marker W16
+^6F 12t 16F 16T 16t 16T  12t 12T  18f 18t 18T 18t 18T 18t
+6T >12f 6T >12f ^4F 4r
+
 
 /track met
 /channel 2
