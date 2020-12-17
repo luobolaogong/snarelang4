@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="What a mess for JlV2P25-19 part 8.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="P25 vol 2 was a tough one.">
+      <change afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P25-19.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P25-19.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/MaxRayneDuthart.snl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,14 +64,14 @@
       <recent name="$PROJECT_DIR$/tunes" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.JlVol2">
-    <configuration name="Experiments" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=experiments/EmbellishmentTimings.snl -o midifiles/eba.mid -S 1.0" />
+  <component name="RunManager" selected="Dart Command Line App.DuthartRayne">
+    <configuration name="DuthartRayne" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare.snl -o midifiles/MaxRayneSnare.mid -S 1.25" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="JlVol2" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i exercises/LaughlinVol2/JlV2P25-19.snl -o midifiles/JlV2P25-19.mid" />
+    <configuration name="Experiments" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="--input=experiments/EmbellishmentTimings.snl -o midifiles/eba.mid -S 1.0" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -79,7 +81,7 @@
     </configuration>
     <list>
       <item itemvalue="Dart Command Line App.Experiments" />
-      <item itemvalue="Dart Command Line App.JlVol2" />
+      <item itemvalue="Dart Command Line App.DuthartRayne" />
       <item itemvalue="Dart Test.SnareLang4Test" />
     </list>
   </component>
@@ -205,14 +207,7 @@
       <workItem from="1607881279006" duration="18036000" />
       <workItem from="1607996593665" duration="6885000" />
       <workItem from="1608054224705" duration="22327000" />
-      <workItem from="1608143301670" duration="9969000" />
-    </task>
-    <task id="LOCAL-00017" summary="Created the SNL file for Captain Lachlan McPhail of Tiree.snl">
-      <created>1600849572914</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1600849572914</updated>
+      <workItem from="1608143301670" duration="23434000" />
     </task>
     <task id="LOCAL-00018" summary="End of day.  Not working.  In midst of adding new tracks when &#10;hit /staff snare or /staff tenor etc.">
       <created>1600933447416</created>
@@ -550,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608101018067</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="P25 vol 2 was a tough one.">
+      <created>1608165879803</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1608165879804</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +571,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added accents of different levels to John Walsh's Walk." />
     <MESSAGE value="Finished MaxwellPg27 swing and straight." />
     <MESSAGE value="Trying to clean up tempo stuff (override, defalt, commandLine, ...)  So,&#10;checkpointing what I have because it maybe works." />
     <MESSAGE value="A lot of reorganizing CommandLine stuff and overrides, etc.  Probably several errors&#10;that will popup later." />
@@ -594,17 +595,18 @@
     <MESSAGE value="Added one or two new workouts, started working on fixing embellishments, but not done." />
     <MESSAGE value="Hack embellishment durations." />
     <MESSAGE value="What a mess for JlV2P25-19 part 8." />
-    <option name="LAST_COMMIT_MESSAGE" value="What a mess for JlV2P25-19 part 8." />
+    <MESSAGE value="P25 vol 2 was a tough one." />
+    <option name="LAST_COMMIT_MESSAGE" value="P25 vol 2 was a tough one." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608070519915">
+    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608188597518">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1608070519915" />
+    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1608188597518" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606864892593">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -629,38 +631,38 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1600648661173" />
-    <state width="1652" height="457" key="GridCell.Tab.0.bottom" timestamp="1608165679598">
+    <state width="1652" height="457" key="GridCell.Tab.0.bottom" timestamp="1608193170649">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1652" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608165679598" />
-    <state width="1652" height="457" key="GridCell.Tab.0.center" timestamp="1608165679596">
+    <state width="1652" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608193170649" />
+    <state width="1652" height="457" key="GridCell.Tab.0.center" timestamp="1608193170648">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1652" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608165679596" />
-    <state width="1652" height="457" key="GridCell.Tab.0.left" timestamp="1608165679596">
+    <state width="1652" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608193170648" />
+    <state width="1652" height="457" key="GridCell.Tab.0.left" timestamp="1608193170648">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1652" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608165679596" />
-    <state width="1652" height="457" key="GridCell.Tab.0.right" timestamp="1608165679597">
+    <state width="1652" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608193170648" />
+    <state width="1652" height="457" key="GridCell.Tab.0.right" timestamp="1608193170649">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1652" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608165679597" />
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.bottom" timestamp="1608101377910">
+    <state width="1652" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608193170649" />
+    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.bottom" timestamp="1608184716272">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608101377910" />
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.center" timestamp="1608101377909">
+    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608184716272" />
+    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.center" timestamp="1608184716271">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608101377909" />
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.left" timestamp="1608101382283">
+    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608184716271" />
+    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.left" timestamp="1608184716271">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608101382283" />
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.right" timestamp="1608101377910">
+    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608184716271" />
+    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.right" timestamp="1608184716272">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608101377910" />
+    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608184716272" />
     <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.bottom" timestamp="1608101377574">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -697,10 +699,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1374" y="809" width="904" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.3840.2120@0.0.3840.2120" timestamp="1603600976917" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-1" timestamp="1608056802599">
+    <state x="1410" y="1868" width="1084" height="345" key="dock-window-1" timestamp="1608188570889">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-1/0.0.3840.2120@0.0.3840.2120" timestamp="1608056802599" />
+    <state x="1410" y="1868" width="1084" height="345" key="dock-window-1/0.0.3840.2120@0.0.3840.2120" timestamp="1608188570889" />
     <state x="169" y="191" width="1084" height="345" key="dock-window-10" timestamp="1608101382946">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -777,10 +779,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="133" y="1743" width="1084" height="345" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1608063234806" />
-    <state x="1045" y="1152" width="1442" height="592" key="find.popup" timestamp="1608165749896">
+    <state x="1045" y="1152" width="1442" height="592" key="find.popup" timestamp="1608189866782">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1045" y="1152" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1608165749896" />
+    <state x="1045" y="1152" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1608189866782" />
     <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup" timestamp="1606339298035">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

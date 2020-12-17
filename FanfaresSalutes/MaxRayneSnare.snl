@@ -1,0 +1,99 @@
+// "Salute To Max Rayne", A Fanfare by Alex Duthart
+// Score from Cantebury Cale Pipe Band
+// Tempos
+// Page 1 Lines 1-10: 88
+// Page 1 Lines 11-12 50
+// Page 2 Lines 1-11: 84
+// Page 2 Lines 12-16 115
+
+// Hey James.  I present the following MP3 to you.  It's also available to you in MIDI at https.....
+// The mp3 is played at the tempos you suggested in your FB group post.
+
+/track snare
+/channel 1
+/mf
+
+/time 4/4
+/tempo 88
+
+
+/marker P1 Max Rayne Salute
+1r
+
+/marker L1
+>8F 16t T >8F 16T t  >8F >.  >16F T t T
+16t T >f t T t >8F /cresc 16Z . . .  . . . .
+>8T /fff /mf >16t T >8F 16T t  >8F >.  >16F T t T
+16t _40F 20z . >16t      >40F 20z . >40t 20Z .  >4T r
+
+/marker L2
+32T . . . 16T >.  T T _f t   32T . . . 16T >.  T T _f t
+16T . _F T  t T _f t  T t _F T  T T T ^t
+32T . . . 16T >t  T T _f t  32T . . . 16T >t  T T _f t
+16T >8f 16t >8F 16T >f 16r 16t >8F  >f 32T . . .
+
+/marker L3
+16T >. T T f t T ^t T ^t T T f t 32T . . .
+16T ^t 32T . . .  16T ^t T T 8f ^F ^f 32T . . .
+16T ^t 32T . . . 8T f 32T . . . 16T ^t T T 8f
+32T . . . 16T ^t T T 8f ^4T r
+
+/marker L4
+>24F t T T t T  8t >24F t T T t T 8t >16F t T T
+>8f >F 16F t T T  t ^T t t 24T . ^T t T t
+>24F t T T t T  8t >24F t T T t T 8t >16F t T T
+>8f >F 16t >8F 16t >8f 16t >F r T >8f
+
+/marker L5
+ 8r 32T . . . . . . . ^8T 32 T . . . . . . . ^4T
+8r 32T . . . . . . . ^8T 32 T . . . . . . . ^4T
+8r 32T . . . . . . . ^8T 32 T . . . . . . . ^8T 32T . . .
+>32T . . . . . >T . . . . . ^8T >4f r
+
+/marker L6
+/mp /cresc_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t /ff
+
+/marker L7
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+_16F _f F >F   t T _f T   t _F t _F   _f T t t
+_16F t T _f  _F t _F t   T _f _F t   _F t T T
+16t _F t _F t _F _f T  t _F t _F >4f
+
+/marker L8
+/mf
+8v f _f F _F f _f F
+16F T f T  f t F t  F T f T  f t F t
+8F 16t T 8f f 16T t 8F  16F t T T
+16F T f T  f T t t F t F t  8F 32T . . .
+
+/marker L9
+16T ^t T T  f T f ^T  t ^T t t  F t F ^T
+16t ^T t t  F t F T  f T f T  4f
+16F t F f  T f T f  F t F t  F f T f
+16F t F f  T f T f  F t F t  4T
+
+/marker L10
+16F t F t  F f T f  F t F f  T f T f
+16F t F t  F f T f  F t F t  4F
+
+
+/track met
+/channel 2
+/p
+>4M >. >8M >. >4M
+/ppp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
