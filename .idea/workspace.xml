@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Started into Max Rayne.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="More progress on Rayne.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" afterDir="false" />
     </list>
@@ -53,17 +53,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/exercises/warmups/LeoBrowne" />
       <recent name="$PROJECT_DIR$/tunes" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
+    </key>
   </component>
   <component name="RunManager" selected="Dart Command Line App.DuthartRayne">
     <configuration name="DuthartRayne" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare.snl -o midifiles/MaxRayneSnare.mid -S 1.5" />
+      <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare.snl -o midifiles/MaxRayneSnare.mid -S 1.25" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -205,14 +205,8 @@
       <workItem from="1607996593665" duration="6885000" />
       <workItem from="1608054224705" duration="22327000" />
       <workItem from="1608143301670" duration="23455000" />
-      <workItem from="1608224057145" duration="22079000" />
-    </task>
-    <task id="LOCAL-00019" summary="Pretty wobbly code right now, but it produces multi tracks using /staff">
-      <created>1600997687108</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1600997687108</updated>
+      <workItem from="1608224057145" duration="22252000" />
+      <workItem from="1608315598292" duration="29209000" />
     </task>
     <task id="LOCAL-00020" summary="Some fixes to Tiree.">
       <created>1601009752278</created>
@@ -550,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608193361907</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="More progress on Rayne.">
+      <created>1608274065362</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1608274065362</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +570,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Trying to clean up tempo stuff (override, defalt, commandLine, ...)  So,&#10;checkpointing what I have because it maybe works." />
     <MESSAGE value="A lot of reorganizing CommandLine stuff and overrides, etc.  Probably several errors&#10;that will popup later." />
     <MESSAGE value="Added two exercises from James Laughlin." />
     <MESSAGE value="Will next delete a lot of commented-out code." />
@@ -594,17 +594,18 @@
     <MESSAGE value="What a mess for JlV2P25-19 part 8." />
     <MESSAGE value="P25 vol 2 was a tough one." />
     <MESSAGE value="Started into Max Rayne." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started into Max Rayne." />
+    <MESSAGE value="More progress on Rayne." />
+    <option name="LAST_COMMIT_MESSAGE" value="More progress on Rayne." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608269100918">
+    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608363184959">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1608269100918" />
+    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1608363184959" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606864892593">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -617,10 +618,6 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1698" y="824" width="624" height="516" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1600644940359" />
-    <state width="483" height="465" key="DebuggerActiveHint" timestamp="1599634890989">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="483" height="465" key="DebuggerActiveHint/0.0.3840.2120@0.0.3840.2120" timestamp="1599634890989" />
     <state x="1825" y="294" width="1484" height="1700" key="DiffContextDialog" timestamp="1607670241884">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -629,22 +626,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1600648661173" />
-    <state width="2241" height="457" key="GridCell.Tab.0.bottom" timestamp="1608273904972">
+    <state width="2241" height="457" key="GridCell.Tab.0.bottom" timestamp="1608363188923">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608273904972" />
-    <state width="2241" height="457" key="GridCell.Tab.0.center" timestamp="1608273904972">
+    <state width="2241" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608363188923" />
+    <state width="2241" height="457" key="GridCell.Tab.0.center" timestamp="1608363188923">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608273904972" />
-    <state width="2241" height="457" key="GridCell.Tab.0.left" timestamp="1608273904972">
+    <state width="2241" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608363188923" />
+    <state width="2241" height="457" key="GridCell.Tab.0.left" timestamp="1608363188923">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608273904972" />
-    <state width="2241" height="457" key="GridCell.Tab.0.right" timestamp="1608273904972">
+    <state width="2241" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608363188923" />
+    <state width="2241" height="457" key="GridCell.Tab.0.right" timestamp="1608363188923">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608273904972" />
+    <state width="2241" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608363188923" />
     <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.bottom" timestamp="1608193369197">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -777,10 +774,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="133" y="1743" width="1084" height="345" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1608063234806" />
-    <state x="1045" y="1152" width="1442" height="592" key="find.popup" timestamp="1608230881483">
+    <state x="1045" y="1152" width="1442" height="592" key="find.popup" timestamp="1608333741690">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1045" y="1152" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1608230881483" />
+    <state x="1045" y="1152" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1608333741690" />
     <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup" timestamp="1606339298035">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
