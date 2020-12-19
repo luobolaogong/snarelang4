@@ -1,0 +1,437 @@
+// "Salute To Max Rayne", A Fanfare by Alex Duthart
+// Tenor Score from Cantebury Cale Pipe Band
+// Tempos
+// Page 1 Lines 1-10: 88
+// Page 1 Lines 11-12 50
+// Page 2 Lines 1-11: 84
+// Page 2 Lines 12-16 115
+
+
+//https://sso.teachable.com/secure/723073/users/sign_up
+// https://www.pipebanddrumminginnercircle.com/courses/1105749/lectures/27469123
+
+/track tenor
+/channel 3
+/time 4/4
+/tempo 88
+/mp
+
+// Count in
+1r
+
+// P1L1
+4N n 8N n 4N
+1N
+4N . 8N . 4N
+16N 8n 16N 8n . 2N
+
+// P1L2
+8N . . . . . . .
+8N . . . 2N
+8N . . . . . . .
+16N 8n 16N 8n 16N 8n 16N 8n 4N
+
+// P1L3
+4N 8n 16N 8n 16:3N 4n
+4N . 8N . 4N
+4N 8N 8:5n
+16:3N . 8N 2n
+
+// P1L4
+4N 8n 4N 8n 4N
+8N . 4:3N
+4N 8n 4N 8n 4N
+8N . 16N 8n 16N 8n 16N 8n 16N 8n
+
+// P1L5
+4:3N 8r N
+4:3N 8r N
+4:3N 8r N
+16:3n . 8N 2n
+
+// P1L6
+8N . 16N 8n 16N 8n 16N 8n 16N 8n
+8N . 16N 8n 16N 8n 16N 8n 16N 8n
+
+// P1L7
+8N . 16N 8n 16N 8n 16N 8n 16N 8n
+8N . 16N 8n 16N 8n 16N 8n 16N 8n
+
+
+// P1L8
+8N . 16N 8n 16N 8n 16N 8n 16N 8n
+1r
+16:3N 16n 8N 16:3n 16N 8n 4N
+16N 8n .16N 16:3n 8N 16n 4N
+
+// P1L9
+1r 1r 1r 1r 1r 1r 1r 1r 1r
+// /time 3/4 starts here I think
+4:3r
+
+// 6/8 (in tenor score marked 3/8 time)
+// tempo 50
+8:3r
+
+// P1L10
+8:3r .  8:3r .
+24:5N 8N 24n 8N 8n 24N . .
+8n 8N 24n . . 8:3N
+
+// P2L1
+4N 8n 8:3N  24N . . 8n .
+8:3n 8N 12n 8N 24n 8N 8n 24N . .
+8n 8N 24n . . 8:3N
+
+// P2L2
+8N 24n . . 8N  8n 24N . . 8n
+8N 12n 8N 24n  8:3N
+12N 24n  12N 24n  12N 24n  8N . 24N . .
+8n . 24n . . 8:3N
+
+// P2L2Rpt
+8N 24n . . 8N  8n 24N . . 8n
+8N 12n 8N 24n  8:3N
+12N 24n  12N 24n  12N 24n   8N . 24N . .
+8n . 24n . .
+
+//time 2/4
+//tempo 22
+// set tempo
+4N
+// P2L3
+// first bar no accel
+2r
+
+//marker accel...
+// second bar start accel
+2r . . . .
+
+// done accel?
+2r .
+
+// backsticking starts here.
+2r . . .  // Line 2 in snare score???
+2r . . 4r 4N  // What's with that tenor note, just a marker for wheel down?
+
+2r . . .  // Line 4 snare score
+2r . . .  // Line 5 snare score
+
+// A break here.  one 2/4 bar
+2r
+
+// P2L6  Andnte (March) same as P2L6 in snare score
+2r
+16N . . 8n 16N 8n
+2N
+16N 8n 16N 4n
+
+// P2L7
+2N
+16N . . 8n 16N 8n
+16N . . 8n 16N 8n
+16N 8n 16N 4n
+
+// P2L8
+16N 16:3n 4N
+8N . 4N
+8N . . .
+8N . 4N
+
+// P2L8Rpt same as P2L9 in snare score
+16N 16:3n 4N
+8N . 4N
+8N . . .
+8N . 4N
+
+// P2L9
+4N 8N .
+8r N 4n
+8N . 4N
+8N . 4N
+
+// P2L9Rpt
+4N 8N .
+8r N 4n
+8N . 4N
+// 1/4 time
+8N .
+
+// 12/8 Allegro (Jig)
+// set new tempo , 1 bar 4 counts (?)
+4:3N .
+
+// play the 1 bar solo thing, same as snare score P2L12sf
+8:3r .
+
+// P2L10
+8:3N . . r
+8:3N . . r
+8:3N . . .
+8N . . . . . 4:3N
+
+// P2L10Rpt
+8:3N . . r
+8:3N . . r
+8:3N . . .
+8N . . . . . 4:3N
+
+// P2L11
+8N . . . . .  4:3N
+8N . . . . .  4:3N
+8:3N . . .
+8N . . . . .  4:3N
+
+// P2L11Rpt
+8N . . . . .  4:3N
+8N . . . . .  4:3N
+8:3N . . .
+8N . . . . .  4:3N
+
+// P3L1
+8:3N . . r
+8:3N . . r
+8:3N . . .
+8N . . . . .  4:3N
+
+// P3L1Rpt
+8:3N . . r
+8:3N . . r
+8:3N . . .
+8N . . . . .  4:3N
+
+// P3L2
+8N . . . . .  4:3N
+8N . . . . .  4:3N
+8:3N . . .
+8N . . . . .  4:3N
+
+// P2L2 w/2nd ending
+8N . . . . .  4:3N
+8N . . . . .  4:3N
+8:3N . r .
+8:3r . .  >4:3N
+
+
+
+
+// NEW TRACK -- BASS
+// NEW TRACK -- BASS
+// NEW TRACK -- BASS
+
+
+
+/track bass
+/channel 4
+/time 4/4
+/tempo 88
+/mf
+
+// Count in
+1r
+
+// P1L1
+4B B 8B B 4B
+1B
+4B . 8B . 4B
+16B 8B 16B 8B . 2B
+
+// P1L2
+8B . . . . . . .
+8B . . . 2B
+8B . . . . . . .
+16B 8B 16B 8B 16B 8B 16B 8B 4B
+
+// P1L3
+4B 8B 16B 8B 16:3B 4B
+4B . 8B . 4B
+4B 8B 8:5B
+16:3B . 8B 2B
+
+// P1L4
+4B 8B 4B 8B 4B
+8B . 4:3B
+4B 8B 4B 8B 4B
+8B . 16B 8B 16B 8B 16B 8B 16B 8B
+
+// P1L5
+4:3B 8r B
+4:3B 8r B
+4:3B 8r B
+16:3B . 8B 2B
+
+// P1L6
+8B . 16B 8B 16B 8B 16B 8B 16B 8B
+8B . 16B 8B 16B 8B 16B 8B 16B 8B
+
+// P1L7
+8B . 16B 8B 16B 8B 16B 8B 16B 8B
+8B . 16B 8B 16B 8B 16B 8B 16B 8B
+
+
+// P1L8
+8B . 16B 8B 16B 8B 16B 8B 16B 8B
+1r
+16:3B 16B 8B 16:3B 16B 8B 4B
+16B 8B .16B 16:3B 8B 16B 4B
+
+// P1L9
+1r 1r 1r 1r 1r 1r 1r 1r 1r
+// /time 3/4 starts here I thiBk
+4:3r
+
+// 6/8 (in tenor score marked 3/8 time)
+// tempo 50
+8:3r
+
+// P1L10
+8:3r .  8:3r .
+24:5B 8B 24B 8B 8B 24B . .
+8B 8B 24B . . 8:3B
+
+// P2L1
+4B 8B 8:3B  24B . . 8B .
+8:3B 8B 12B 8B 24B 8B 8B 24B . .
+8B 8B 24B . . 8:3B
+
+// P2L2
+8B 24B . . 8B  8B 24B . . 8B
+8B 12B 8B 24B  8:3B
+12B 24B  12B 24B  12B 24B  8B . 24B . .
+8B . 24B . . 8:3B
+
+// P2L2Rpt
+8B 24B . . 8B  8B 24B . . 8B
+8B 12B 8B 24B  8:3B
+12B 24B  12B 24B  12B 24B   8B . 24B . .
+8B . 24B . .
+
+//time 2/4
+//tempo 22
+// set tempo
+4B
+// first bar no accel
+2r
+
+//marker accel...
+// second bar start accel
+2r
+
+// third bar
+2r
+
+// fourth bar
+2r
+
+// repeat 1st bar
+2r
+
+// repeat 2nd bar
+2r
+
+/time 2/4  /tempo 84
+// Line 1 repeat 3rd bar
+2r
+// Line 1 repeat 4th bar
+2r
+
+// backsticking starts here. Line 2
+2r . . .
+2r . . .  // Line 3
+2r . . .  // Line 4      There's a single note around here somewhere
+2r . . .  // Line 5
+
+// A break here.  one 2/4 bar
+2r
+
+// P2L6  Andnte (March) same as P2L6 in snare score
+2r
+16B . . 8B 16B 8B
+2B
+16B 8B 16B 4B
+
+// P2L7
+2B
+16B . . 8B 16B 8B
+16B . . 8B 16B 8B
+16B 8B 16B 4B
+
+// P2L8
+16B 16:3B 4B
+8B . 4B
+8B . . .
+8B . 4B
+
+// P2L8Rpt same as P2L9 in snare score
+16B 16:3B 4B
+8B . 4B
+8B . . .
+8B . 4B
+
+// P2L9
+4B 8B .
+8r B 4B
+8B . 4B
+8B . 4B
+
+// P2L9Rpt
+4B 8B .
+8r B 4B
+8B . 4B
+// 1/4 time
+8B .
+
+// 12/8 Allegro (Jig)
+// set new tempo , 1 bar 4 counts (?)
+4:3B .
+
+// play the 1 bar solo thing, same as snare score P2L12sf
+8:3r .
+
+// P2L10
+8:3B . . r
+8:3B . . r
+8:3B . . .
+8B . . . . . 4:3B
+
+// P2L10Rpt
+8:3B . . r
+8:3B . . r
+8:3B . . .
+8B . . . . . 4:3B
+
+// P2L11
+8B . . . . .  4:3B
+8B . . . . .  4:3B
+8:3B . . .
+8B . . . . .  4:3B
+
+// P2L11Rpt
+8B . . . . .  4:3B
+8B . . . . .  4:3B
+8:3B . . .
+8B . . . . .  4:3B
+
+// P3L1
+8:3B . . r
+8:3B . . r
+8:3B . . .
+8B . . . . .  4:3B
+
+// P3L1Rpt
+8:3B . . r
+8:3B . . r
+8:3B . . .
+8B . . . . .  4:3B
+
+// P3L2
+8B . . . . .  4:3B
+8B . . . . .  4:3B
+8:3B . . .
+8B . . . . .  4:3B
+
+// P2L2 w/2nd ending
+8B . . . . .  4:3B
+8B . . . . .  4:3B
+8:3B . r .
+8:3r . .  >4:3B

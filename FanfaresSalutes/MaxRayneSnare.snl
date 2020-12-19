@@ -1,5 +1,5 @@
 // "Salute To Max Rayne", A Fanfare by Alex Duthart
-// Score from Cantebury Cale Pipe Band
+// Snare Score from Cantebury Cale Pipe Band
 // Tempos
 // Page 1 Lines 1-10: 88
 // Page 1 Lines 11-12 50
@@ -8,9 +8,8 @@
 
 
 //https://sso.teachable.com/secure/723073/users/sign_up
+// https://www.pipebanddrumminginnercircle.com/courses/1105749/lectures/27469123
 
-// Hey James.  I present the following MP3 to you.  It's also available to you in MIDI at https.....
-// The mp3 is played at the tempos you suggested in your FB group post.
 
 
 
@@ -439,25 +438,15 @@ _16F t T _f  _F t _F t   T _f _F t   _F t T T
 16T ^t T T  _f T _f ^T  t ^T t t  _F t _F ^T
 16t ^T t t  _F t _F T  _f T _f T  >4f
 16F t _F _f  T _f T _f  _F t _F t  _F _f T _f
-16F t _F _f  T _f T _f  _F t _F t  >4T
+16F t _F _f  T _f T _f  _F t _F t  >4F
 
 /marker P1L10
 16F t _F t  _F _f T _f  _F t _F _f  T _f T _f
-//16F t _F t  _F _f T _f  _F t _F t  >4F
-// 3/4 time starts here for setting tempo on last note of what would be 4/4
+// /time 3/4 starts here for setting tempo on last note of what would be 4/4
 16F t _F t   _F _f T _f   _F t _F t
 
 // 6/8 time starts here
 /marker P1L11
-//8:3T .   . .
-//16:3T.......
-//8T . .   . . .   . . .   . . .
-//16T . . . . .   ......   ......  ......
-//>24T........ >......... >......... >.........
-//>24T.. >... >... >... >... >... >... >... >... >... >... >...
-//>40T 20z .  >40t 20z .  >40T 20z .  >40t 20z .  >40T 20z .  >40t 20z .
-//>36T 18z >24T      >36t 18Z >24t     >36T 18z >24T      >36t 18Z >24t     >36T 18z >24T      >36t 18Z >24t
-
 >8:3F
 
 
@@ -546,16 +535,6 @@ _16F t T _f  _F t _F t   T _f _F t   _F t T T
 ^16F 32t t T T t t   T T t t T T t t
 ^16T ^240:7t T T t t ^24T  ^36t T T t t T T t t
 
-//^12T ^40t T T t t 24T  ^36t T T t t T T t t // too long gap
-//^16T ^40t T T t t ^16T   ^36t T T t t T T t t // little too short, I think, check
-
-//24T 48 24r 48t 24T 48r 24r 48r   24T 48 24r 48t 24T 48r 24r 48r
-//24T 48 24r 48t 24T 48r 24r 48r   ^36t T T t t T T t t
-//^16T ^40t T T t t ^16T   ^36t T T t t T T t t
-//>12T ^40t T T t t >24T     ^36t T T t t T T t t
-//>24T ^30t T T t t >24T     ^36t T T t t T T t t
-
-
 
 /marker P2L7
 ^16T 32t t T T t t   T T t t T T t t
@@ -564,14 +543,13 @@ _16F f _F >F  t T _f T
 16t _F t >F  ^4f
 
 /marker P2L8
-^16T ^32t . . . . >.  >t . . . . . . .  // as written, and seems close to what others play
-//^12T ^36T . . . . _t   >32t . . . . . . .
-^24t T T >t T T   ^16t >32T . . . . .
+^16T ^32t . . . . _.  >t . . . . . . _.  // as written, and seems close to what others play
+^24t T T >t T T   ^16t >32T . . . . _.
 ^24T t t _T t t   T T >t T T t
 ^24T t t _T t t   ^32T . . . . . . .
 
 /marker P2L9
-^16T ^32t . . . . .  >t . . . . . . .
+^16T ^32t . . . . _.  >t . . . . . . _.
 ^24t T T >t T T   ^16t >32T . . . . .
 ^24T t t _T t t   T T >t T T t
 ^24T t t _T t t   ^8T >32t . . .
@@ -588,7 +566,7 @@ _16F f _F >F  t T _f T
 _24T t t   ^T t t   _T t t      _32T . . .
 ^24T t t   _T t t   ^T t T      T t T
 // 1/4 time
-^24t T T >t T T
+^24t T T   >t T T
 
 
 
@@ -602,7 +580,6 @@ _24T t t   ^T t t   _T t t      _32T . . .
 //time 12/8
 //tempo 115
 // set new tempo, 1 bar 4 counts
-//^8:3t 8:3r . .
 ^8:3t 8:3r
 
 // play the 1 bar solo thing

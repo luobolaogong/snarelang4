@@ -135,7 +135,7 @@ class CommandLine {
       exit(exitCode);
     }
     if (argResults.rest.isNotEmpty) {
-      print('Ignoring command line arguments: -->${argResults.rest}<-- and aborting ...');
+      print('Command line arguments error: -->${argResults.rest}<-- Aborting ...');
       print('Usage:\n${parser.usage}');
       print(
           'Example: <thisProg> -p Tunes/BadgeOfScotland.snl,Tunes/RowanTree.snl,Tunes/ScotlandTheBraveSnare.snl --midi midifiles/BadgeSet.mid');
