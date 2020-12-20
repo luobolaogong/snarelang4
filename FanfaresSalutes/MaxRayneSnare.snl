@@ -419,13 +419,13 @@ _8M . _8M . _8M .
 /mp /cresc_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
 _16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
 _16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
-_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t /f /mf
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
 
 /marker P1L7
 _16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
 _16F _f _F >F   t T _f T   t _F t _F   _f T t t
 _16F t T _f  _F t _F t   T _f _F t   _F t T T
-16t _F t _F t _F _f T  t _F t _F >4f
+16t _F t _F t _F _f T  t _F t _F >4f /ff /mf
 
 /marker P1L8
 //8v _f _f _F _F _f _f _F
@@ -461,18 +461,18 @@ _16F t T _f  _F t _F t   T _f _F t   _F t T T
 /marker P1L11Rpt
 >40T 20z . 24z . .  >40T 20z .  >40t 20z .  24z . .  . . .
 >24T >. >.  >40t 20Z .   >40T 20z .   >40t 20z .  24z . .  . . .
->40T 20z .      >36t 18Z >24t     >36T 18z >24T    >40t 20Z .    >40T 20z .    >24t . .
+>40T 20z .      _36t 18Z >24t     _36T 18z >24T    >40t 20Z .    >40T 20z .    >24t . .
 >40T 20z . >40t 20Z .  >24T . .   >40t 20Z .  24z . .  . . .
 
 /marker P1L12
 >40T 20z . 24t . . >40t 20Z .   >40t 20Z . 24T . . >40T 20z .
->40T 20z .    >36t 18Z >24t     >36T 18z >24T   >40t 20Z .  24Z . .  . . .
->36T 18z >24T      >36t 18Z >24t     >36T 18z >24T     >40t 20Z .    >40T 20z .    >24t . .
+>40T 20z .    _36t 18Z >24t     _36T 18z >24T   >40t 20Z .  24Z . .  . . .
+_36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z .    >24t . .
 >40T 20z .    >40t 20Z .    >24T . .    >40t 20Z .  24z . .  . . .
 /marker P1L12Rpt
 >40T 20z . 24t . . >40t 20Z .   >40t 20Z . 24T . . >40T 20z .
->40T 20z .    >36t 18Z >24t     >36T 18z >24T   >40t 20Z .  24Z . .  . . .
->36T 18z >24T      >36t 18Z >24t     >36T 18z >24T     >40t 20Z .    >40T 20z .    >24t . .
+>40T 20z .    _36t 18Z >24t     _36T 18z >24T   >40t 20Z .  24Z . .  . . .
+_36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z .    >24t . .
 // time 3/8
 >40T 20z .    >40t 20Z .    >24T . .
 
@@ -533,7 +533,7 @@ _16F t T _f  _F t _F t   T _f _F t   _F t T T
 ^16T 32t t T T t t   T T t t T T t t
 ^16T t _F ^f   T _f ^F t
 ^16F 32t t T T t t   T T t t T T t t
-^16T ^240:7t T T t t ^24T  ^36t T T t t T T t t
+^16T ^240:7t T T t t ^24T  ^36t T T t t T T t t   // evil line
 
 
 /marker P2L7

@@ -19,11 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="First cut of Max Rayne salute done.">
-      <change afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneTenorBass.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added Tenor part for Max Rayne.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneTenorBass.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneTenorBass.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
   </component>
   <component name="RunManager" selected="Dart Command Line App.DuthartRayne">
     <configuration name="DuthartRayne" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneTenorBass.snl -o midifiles/MaxRayneSnare.mid -S 1.25" />
+      <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneTenorBass.snl -o midifiles/MaxRayneSnare.mid -S 1.5" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -209,14 +208,7 @@
       <workItem from="1608143301670" duration="23455000" />
       <workItem from="1608224057145" duration="22252000" />
       <workItem from="1608315598292" duration="30096000" />
-      <workItem from="1608402642720" duration="8979000" />
-    </task>
-    <task id="LOCAL-00021" summary="Added metronome, and starting into bass.">
-      <created>1601107333656</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1601107333656</updated>
+      <workItem from="1608402642720" duration="14660000" />
     </task>
     <task id="LOCAL-00022" summary="Bass and unison snare added.  It's a hack.  Nobody should look at this bad code.">
       <created>1601193915274</created>
@@ -554,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608365320160</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Added Tenor part for Max Rayne.">
+      <created>1608411727889</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1608411727890</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +572,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added two exercises from James Laughlin." />
     <MESSAGE value="Will next delete a lot of commented-out code." />
     <MESSAGE value="Starting to fix some of the errors I made previously.  Currently working on /defdyn.  Also, changed from staff to track." />
     <MESSAGE value="Looks like dynamics are working now with the /dd thing, and 1st cut of Castle Dangerous." />
@@ -598,17 +596,18 @@
     <MESSAGE value="Started into Max Rayne." />
     <MESSAGE value="More progress on Rayne." />
     <MESSAGE value="First cut of Max Rayne salute done." />
-    <option name="LAST_COMMIT_MESSAGE" value="First cut of Max Rayne salute done." />
+    <MESSAGE value="Added Tenor part for Max Rayne." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tenor part for Max Rayne." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608403908292">
+    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608411934222">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1608403908292" />
+    <state x="2118" y="920" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1608411934222" />
     <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606864892593">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -629,22 +628,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1600648661173" />
-    <state width="2241" height="457" key="GridCell.Tab.0.bottom" timestamp="1608411622570">
+    <state width="2241" height="457" key="GridCell.Tab.0.bottom" timestamp="1608426375972">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608411622570" />
-    <state width="2241" height="457" key="GridCell.Tab.0.center" timestamp="1608411622570">
+    <state width="2241" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608426375972" />
+    <state width="2241" height="457" key="GridCell.Tab.0.center" timestamp="1608426375971">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608411622570" />
-    <state width="2241" height="457" key="GridCell.Tab.0.left" timestamp="1608411622569">
+    <state width="2241" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608426375971" />
+    <state width="2241" height="457" key="GridCell.Tab.0.left" timestamp="1608426375971">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608411622569" />
-    <state width="2241" height="457" key="GridCell.Tab.0.right" timestamp="1608411622570">
+    <state width="2241" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608426375971" />
+    <state width="2241" height="457" key="GridCell.Tab.0.right" timestamp="1608426375971">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608411622570" />
+    <state width="2241" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608426375971" />
     <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.bottom" timestamp="1608193369197">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

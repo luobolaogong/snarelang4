@@ -50,6 +50,7 @@
 16:3n . 8N 2n
 
 // P1L6
+/cresc
 8N . 16N 8n 16N 8n 16N 8n 16N 8n
 8N . 16N 8n 16N 8n 16N 8n 16N 8n
 
@@ -62,7 +63,7 @@
 8N . 16N 8n 16N 8n 16N 8n 16N 8n
 1r
 16:3N 16n 8N 16:3n 16N 8n 4N
-16N 8n .16N 16:3n 8N 16n 4N
+16N 8n .16N 16:3n 8N 16n 4N /f /mp
 
 // P1L9
 1r 1r 1r 1r 1r 1r 1r 1r 1r
@@ -74,7 +75,8 @@
 8:3r
 
 // P1L10
-8:3r .  8:3r .
+8:3r .
+8:3r .
 24:5N 8N 24n 8N 8n 24N . .
 8n 8N 24n . . 8:3N
 
@@ -124,8 +126,8 @@
 2r
 16N . . 8n 16N 8n
 2N
-16N 8n 16N 4n
-
+//16N 8n 16N 4n      //evil line
+16N 240:35n 24N  4n
 // P2L7
 2N
 16N . . 8n 16N 8n
@@ -189,6 +191,7 @@
 8N . . . . .  4:3N
 
 // P3L1
+/mf
 8:3N . . r
 8:3N . . r
 8:3N . . .
@@ -210,7 +213,7 @@
 8N . . . . .  4:3N
 8N . . . . .  4:3N
 8:3N . r .
-8:3r . .  >4:3N
+8:3r . .  ^8:6N
 
 
 
@@ -218,6 +221,7 @@
 // NEW TRACK -- BASS
 // NEW TRACK -- BASS
 // NEW TRACK -- BASS
+
 
 
 
@@ -232,27 +236,27 @@
 
 // P1L1
 4B B 8B B 4B
-1B
+1r
 4B . 8B . 4B
-16B 8B 16B 8B . 2B
+1r
 
 // P1L2
-8B . . . . . . .
-8B . . . 2B
-8B . . . . . . .
+2B .
+2B r
+2B .
 16B 8B 16B 8B 16B 8B 16B 8B 4B
 
 // P1L3
-4B 8B 16B 8B 16:3B 4B
-4B . 8B . 4B
-4B 8B 8:5B
-16:3B . 8B 2B
+4B r r B
+4r B 8B . 4B
+4B 8r 8:5B
+16:3r . 8B 2B
 
 // P1L4
-4B 8B 4B 8B 4B
-8B . 4:3B
-4B 8B 4B 8B 4B
-8B . 16B 8B 16B 8B 16B 8B 16B 8B
+4B 8r 4B 8r 4r
+1r
+4B 8r 4B 8r 4r
+1r
 
 // P1L5
 4:3B 8r B
@@ -261,19 +265,22 @@
 16:3B . 8B 2B
 
 // P1L6
-8B . 16B 8B 16B 8B 16B 8B 16B 8B
-8B . 16B 8B 16B 8B 16B 8B 16B 8B
+/cresc
+8B . 4r 2r
+8B . 4r 2r
+
 
 // P1L7
-8B . 16B 8B 16B 8B 16B 8B 16B 8B
-8B . 16B 8B 16B 8B 16B 8B 16B 8B
+8B . 4r 2r
+8B . 4r 2r
 
 
 // P1L8
-8B . 16B 8B 16B 8B 16B 8B 16B 8B
+8B . 4r 2r
+1B
 1r
-16:3B 16B 8B 16:3B 16B 8B 4B
-16B 8B .16B 16:3B 8B 16B 4B
+1r
+/ff /mf
 
 // P1L9
 1r 1r 1r 1r 1r 1r 1r 1r 1r
@@ -285,26 +292,29 @@
 8:3r
 
 // P1L10
-8:3r .  8:3r .
-24:5B 8B 24B 8B 8B 24B . .
-8B 8B 24B . . 8:3B
+8:3r .
+8:3r .
+8:3B .
+8:3B .
+
 
 // P2L1
-4B 8B 8:3B  24B . . 8B .
-8:3B 8B 12B 8B 24B 8B 8B 24B . .
-8B 8B 24B . . 8:3B
+8:3B .
+8:3B .
+8:3B .
+8:3B .
 
 // P2L2
-8B 24B . . 8B  8B 24B . . 8B
-8B 12B 8B 24B  8:3B
-12B 24B  12B 24B  12B 24B  8B . 24B . .
-8B . 24B . . 8:3B
+8:3B .
+8:3B .
+8:3B .
+8:3B .
 
 // P2L2Rpt
-8B 24B . . 8B  8B 24B . . 8B
-8B 12B 8B 24B  8:3B
-12B 24B  12B 24B  12B 24B   8B . 24B . .
-8B . 24B . .
+8:3B .
+8:3B .
+8:3B .
+8:3B
 
 //time 2/4
 //tempo 22
@@ -338,7 +348,7 @@
 // backsticking starts here. Line 2
 2r . . .
 2r . . .  // Line 3
-2r . . .  // Line 4      There's a single note around here somewhere
+2r . . .  // Line 4
 2r . . .  // Line 5
 
 // A break here.  one 2/4 bar
@@ -346,13 +356,15 @@
 
 // P2L6  Andnte (March) same as P2L6 in snare score
 2r
-16B . . 8B 16B 8B
+//16B . . 8B 16B 8B
+16:3B . 8B
 2B
-16B 8B 16B 4B
+//16B 8B 16B 4B    // evil line
+16B 240:35B 24r  4B
 
 // P2L7
 2B
-16B . . 8B 16B 8B
+16:3B . 8B
 16B . . 8B 16B 8B
 16B 8B 16B 4B
 
@@ -413,6 +425,7 @@
 8B . . . . .  4:3B
 
 // P3L1
+/f
 8:3B . . r
 8:3B . . r
 8:3B . . .
@@ -434,4 +447,4 @@
 8B . . . . .  4:3B
 8B . . . . .  4:3B
 8:3B . r .
-8:3r . .  >4:3B
+8:3r . .  ^8:6B
