@@ -100,22 +100,16 @@
 //time 2/4
 //tempo 22
 // set tempo
-4N
+8N
 // P2L3
-// first bar no accel
-2r
 
 //marker accel...
-// second bar start accel
-2r . . . .
-
-// done accel?
-2r .
+// start accel
+2r . . . . . . .
 
 // backsticking starts here.
 2r . . .  // Line 2 in snare score???
-2r . . 4r 4N  // What's with that tenor note, just a marker for wheel down?
-
+2r . . 4r 4r  // Line 3 snare score What's with that tenor note, just a marker for wheel down?
 2r . . .  // Line 4 snare score
 2r . . .  // Line 5 snare score
 
@@ -126,8 +120,17 @@
 2r
 16N . . 8n 16N 8n
 2N
-//16N 8n 16N 4n      //evil line
-16N 240:35n 24N  4n
+//16N 8n 16N 4n      // as written
+//16N 48:7n 24N 4n    // as written, but changed to match snare as written
+//16N 240:35n 24N  4n  // 2nd attempt
+//20N 20:3n 20N 4n  // 3rd attempt
+//16N 64:9n 20N 4n // 4th attempt the best one
+//12N 264:35n  264:7N    4n // 5th attempt
+
+//12N 40:5n  24N    4n // 6th attempt
+//12N 36:5n  36N    4n
+16N 8n 16N 4n
+
 // P2L7
 2N
 16N . . 8n 16N 8n
@@ -135,13 +138,15 @@
 16N 8n 16N 4n
 
 // P2L8
-16N 16:3n 4N
+16N 16:3n 4N // as written
+//12N 6n 4N // as played maybe
 8N . 4N
 8N . . .
 8N . 4N
 
 // P2L8Rpt same as P2L9 in snare score
-16N 16:3n 4N
+16N 16:3n 4N // as written
+//12N 6n 4N // as played maybe
 8N . 4N
 8N . . .
 8N . 4N
@@ -161,7 +166,7 @@
 
 // 12/8 Allegro (Jig)
 // set new tempo , 1 bar 4 counts (?)
-4:3N .
+4:3N r
 
 // play the 1 bar solo thing, same as snare score P2L12sf
 8:3r .
@@ -213,7 +218,7 @@
 8N . . . . .  4:3N
 8N . . . . .  4:3N
 8:3N . r .
-8:3r . .  ^8:6N
+8:3r . .  8:3N
 
 
 
@@ -319,35 +324,15 @@
 //time 2/4
 //tempo 22
 // set tempo
-4B
-// first bar no accel
-2r
+8B
 
 //marker accel...
-// second bar start accel
-2r
+// start accel
+2r . . . . . . .
 
-// third bar
-2r
-
-// fourth bar
-2r
-
-// repeat 1st bar
-2r
-
-// repeat 2nd bar
-2r
-
-/time 2/4  /tempo 84
-// Line 1 repeat 3rd bar
-2r
-// Line 1 repeat 4th bar
-2r
-
-// backsticking starts here. Line 2
-2r . . .
-2r . . .  // Line 3
+// backsticking starts here.
+2r . . . // Line 2 in snare score???
+2r . . .  // Line 3 in snare score
 2r . . .  // Line 4
 2r . . .  // Line 5
 
@@ -356,11 +341,15 @@
 
 // P2L6  Andnte (March) same as P2L6 in snare score
 2r
-//16B . . 8B 16B 8B
 16:3B . 8B
 2B
-//16B 8B 16B 4B    // evil line
-16B 240:35B 24r  4B
+//16B 8B 16B 4B    // as written
+//16B 16:3B 4B      // as written, but changed to match snare as written
+//16B 240:35B 24r  4B // 2nd attempt
+//20B 5B 4B  // 3rd attempt
+//16B 16:3B 4B // 4th attempt, best one
+//12B 6B  4B // 5th, 6th, 7th, 8th attempt
+16B 16:3B 4B
 
 // P2L7
 2B
@@ -369,13 +358,15 @@
 16B 8B 16B 4B
 
 // P2L8
-16B 16:3B 4B
+16B 16:3B 4B // as written
+//12B 6B 4B // as played maybe
 8B . 4B
 8B . . .
 8B . 4B
 
 // P2L8Rpt same as P2L9 in snare score
-16B 16:3B 4B
+16B 16:3B 4B // as written
+//12B 6B 4B // as played maybe
 8B . 4B
 8B . . .
 8B . 4B
@@ -395,7 +386,7 @@
 
 // 12/8 Allegro (Jig)
 // set new tempo , 1 bar 4 counts (?)
-4:3B .
+4:3B r
 
 // play the 1 bar solo thing, same as snare score P2L12sf
 8:3r .
@@ -447,4 +438,4 @@
 8B . . . . .  4:3B
 8B . . . . .  4:3B
 8:3B . r .
-8:3r . .  ^8:6B
+8:3r . .  8:3B

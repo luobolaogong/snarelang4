@@ -95,12 +95,10 @@
 /time 2/4
 /tempo 22
 // set tempo
-4r
-// first bar no accel
-2r
-
+8r
+// P2L1 bar 1
 //marker accel...
-// second bar start accel
+// start accel
 /time 2/4  /tempo 23 24r
 /time 2/4  /tempo 24 24r
 /time 2/4  /tempo 25 24r
@@ -114,7 +112,7 @@
 /time 2/4  /tempo 34 24r
 /time 2/4  /tempo 35 24r
 
-// third bar
+// P2L1 bar 2 of accel
 /time 2/4  /tempo 36 24r
 /time 2/4  /tempo 37 24r
 /time 2/4  /tempo 38 24r
@@ -128,7 +126,7 @@
 /time 2/4  /tempo 46 24r
 /time 2/4  /tempo 47 24r
 
-// fourth bar
+// P2L1 bar 3 of accel
 /time 2/4  /tempo 48 24r
 /time 2/4  /tempo 49 24r
 /time 2/4  /tempo 50 24r
@@ -142,7 +140,7 @@
 /time 2/4  /tempo 58 24r
 /time 2/4  /tempo 59 24r
 
-// repeat 1st bar
+// P2L1 bar 4 of accel
 /time 2/4  /tempo 60 24r
 /time 2/4  /tempo 61 24r
 /time 2/4  /tempo 62 24r
@@ -156,7 +154,7 @@
 /time 2/4  /tempo 70 24r
 /time 2/4  /tempo 71 24r
 
-// repeat 2nd bar
+// P2L1 bar 5 of accel
 /time 2/4  /tempo 72 24r
 /time 2/4  /tempo 73 24r
 /time 2/4  /tempo 74 24r
@@ -171,27 +169,33 @@
 /time 2/4  /tempo 83 24r
 
 /time 2/4  /tempo 84
-// Line 1 repeat 3rd bar
-2r
-// Line 1 repeat 4th bar
-2r
+// P2L1 bars 6, 7, 8 steady tempo
+2r . .
 
-// backsticking starts here. Line 2
-2r . . .
-2r . . .  // Line 3
-2r . . .  // Line 4
-2r . . .  // Line 5
+// P2L2
+// backsticking starts here.
+2r . . .  // P2L2
+2r . . .  // P2L3
+2r . . .  // P2L4
+2r . . .  // P2L5
 
 // A break here.  one 2/4 bar
 2r
 
-2r . . .  // Line 6
-2r . . .  // Line 7
 
-2r . . .  // Line 8
-2r . . .  // Line 9
-2r . . .  // Line 10
-2r . .  // Line 11, 3 full bars
+
+
+
+2r . . .  // P2L6
+2r . . .  // P2L7
+
+2r . . .  // P2L8
+2r . . .  // P2L9
+2r . . .  // P2L10
+
+
+2r . .  // P2L11, 3 full bars
+
 4r // one count here, to get into the 12/8 with remainder
 
 // PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
@@ -201,7 +205,7 @@
 // I wonder if this should be 6/8.  Seems to be in half time
 /time 12/8
 /tempo 115
-// set new tempo, 1 bar 4 counts
+// set new tempo, 2 counts
 //8:3r . . .
 8:3r .
 
@@ -302,32 +306,39 @@ _8M . _8M . _8M .
 //time 2/4
 //tempo 22
 // set tempo
->24M . .  _. . .
-// first bar no accel
-2M
-// 2nd bar start accel
-. . .
+>24M . .
+
+// start accel
+2M . . .
 2M . . .
 
-// full tempo here
 // backsticking starts here
-2M . . .
-2M . . .
-2M . . .
-2M . . .
+2M . . . // P2L2
+2M . . . // P2L3
+2M . . . // P2L4
+2M . . . // P2L5
 
-// There may be a break here.  One 2/4 bar for now
->8M >. >. >.
+// A break here.  One 2/4 bar for now
 
-2M . . .
-2M . . .
+>8M >. >4M
 
-2M . . .
-2M . . .
-2M . . .
-2M . .    // Line 11, 3 full bars
-4M
-// There may be another break here.  To get into the 12/8
+
+
+
+
+
+
+2M . . .  // P2L6
+2M . . .  // P2L7
+
+2M . . .  // P2L8
+2M . . .  // P2L9
+2M . . .  // P2L10
+
+
+2M . .    // P2L11, 3 full bars
+
+4M // plus one beat to get into 12/8 with remainder
 
 
 // PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
@@ -425,7 +436,7 @@ _16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
 _16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
 _16F _f _F >F   t T _f T   t _F t _F   _f T t t
 _16F t T _f  _F t _F t   T _f _F t   _F t T T
-16t _F t _F t _F _f T  t _F t _F >4f /ff /mf
+16t _F t _F t _F _f T  t _F t _F >4f /ff /f
 
 /marker P1L8
 //8v _f _f _F _F _f _f _F
@@ -484,17 +495,18 @@ _36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z . 
 //time 2/4
 //tempo 22 accel
 // set tempo
-^4t
+^8t
 
 // Add drummers right to left at each bar.  No accel.
 /marker P2L1
-// first bar no accel
-^24T t t _T t t _T t t _T t t
+
 // start accel
 /marker accel ...
+^24T t t _T t t _T t t _T t t
 ^24T t t T t t T t t T t t
 ^24T t t T t t T t t T t t
 ^24T t t T t t T t t T t t
+
 /marker P2L1Rpt
 ^24T t t T t t T t t T t t
 ^24T t t T t t T t t T t t
@@ -526,15 +538,26 @@ _36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z . 
 ^24T t t _T t t  ^T t t _T t t
 24T T >t T T >t  T T ^t ^8T
 
-/marker P2L6
-// probably a break here.  Make it one 2/4 bar but pickup in it
+// A break here.  Make it one 2/4 bar but pickup in it
 4r 8r 32T T t t
 
+
+
+
+/marker P2L6
 ^16T 32t t T T t t   T T t t T T t t
 ^16T t _F ^f   T _f ^F t
 ^16F 32t t T T t t   T T t t T T t t
-^16T ^240:7t T T t t ^24T  ^36t T T t t T T t t   // evil line
+//^16T ^t 48T T t t ^24T    ^36t T T t t T T t t     // as written, of course wrong
+//^16T ^240:7t T T t t >24T  ^36t T T t t T T t t   // 2nd attempt, not bad
+//^20T ^20t 40T T t t >20T    ^20t 40T T t t T T t t // 3rd attempt, which makes sense to me, since it's based on 5lets
+//^16T ^64:3t 128:3T T t t >20T    ^20t  40T T t t T T t t  // 4th attempt, but this sounds more like they do it
+//^12T ^264:7t T T t t >T     ^t  T T t t    32T T t t  // 5th attempt
 
+//^12T ^40t T T t t >24T     ^36t  T T t t    T T t t  // 6th attempt
+//^12T ^36t T T t t >T     ^36t  T T t t    T T t t // 7th attempt
+//^12T ^36t T T t t >T     ^16T 128:3t T T t t >T  // 8th attempt
+^16T ^32t T T t t ^T          ^36t  T T t t    T T t t
 
 /marker P2L7
 ^16T 32t t T T t t   T T t t T T t t
@@ -544,12 +567,14 @@ _16F f _F >F  t T _f T
 
 /marker P2L8
 ^16T ^32t . . . . _.  >t . . . . . . _.  // as written, and seems close to what others play
+//^12T ^36t . . . . _.  >32t . . . . . . _.  // as played, maybe
 ^24t T T >t T T   ^16t >32T . . . . _.
 ^24T t t _T t t   T T >t T T t
 ^24T t t _T t t   ^32T . . . . . . .
 
 /marker P2L9
-^16T ^32t . . . . _.  >t . . . . . . _.
+^16T ^32t . . . . _.  >t . . . . . . _.  // as written
+//^12T ^36t . . . . >.   >32t . . . . . . _.  // as played maybe
 ^24t T T >t T T   ^16t >32T . . . . .
 ^24T t t _T t t   T T >t T T t
 ^24T t t _T t t   ^8T >32t . . .
@@ -565,11 +590,8 @@ _16F f _F >F  t T _f T
 ^24T t t   _T t t   _32T . . .    ^24T t t
 _24T t t   ^T t t   _T t t      _32T . . .
 ^24T t t   _T t t   ^T t T      T t T
-// 1/4 time
-^24t T T   >t T T
 
-
-
+^24t T T   >t T T  // one beat here, to get into 12/8 w/remainder
 
 
 // PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
@@ -589,7 +611,7 @@ _24T t t   ^T t t   _T t t      _32T . . .
 // which means he speeds notes up before that
 >16T . . . . .    >. . . . . _.   ^8:3T r
 
-/mp
+/mf
 /marker P2L12
 ^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
 ^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
@@ -614,7 +636,7 @@ _24T t t   ^T t t   _T t t      _32T . . .
 ^8T t _F >f T _f   >F t _F >f T _t     // last note should prob be a flam, but he plays it tap
 ^8F t _F >f T _f   ^8:3F r
 
-/f
+/ff
 /marker P2L12Rpt
 ^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
 ^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
