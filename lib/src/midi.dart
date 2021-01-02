@@ -260,8 +260,8 @@ class Midi {
   // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) { // check on "override" tempo.  Default tempo?
   // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
   List<MidiEvent> createTimingTrackZero(List scoreElements, Channel channel, CommandLine commandLine) { // no we don't want command line values, because they default to 4/4 84
-    print('\n\t\tcreateTimingTrackZero(), and commandLine timeSig: ${commandLine.timeSig}, tempo: ${commandLine.tempo}, tempo scalar: ${commandLine.tempoScalar}');
-    print('\t\tSo, tempo should be scaled to be: ${Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar)}');
+    log.fine('\n\t\tcreateTimingTrackZero(), and commandLine timeSig: ${commandLine.timeSig}, tempo: ${commandLine.tempo}, tempo scalar: ${commandLine.tempoScalar}');
+    log.fine('\t\tSo, tempo should be scaled to be: ${Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar)}');
     //print('\t\t!!!!!!!!!!!!!!!!!!!!! WHAT????????????? But if 3/8 time, then tempo should be ${Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig)}');
     var timeSig = commandLine.timeSig;
     var tempo = commandLine.tempo;
@@ -271,7 +271,7 @@ class Midi {
     addTimeSigChangeToTrackEventsList(timeSig, timingTrackZeroMidiEventList);
     addTempoChangeToTrackEventsList(tempo, timingTrackZeroMidiEventList);
     for (var element in scoreElements) { // is this right?
-      print('element: $element');
+      log.fine('element: $element');
       if (element is TimeSig) {
         addTimeSigChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
         continue;
@@ -281,8 +281,8 @@ class Midi {
         continue;
       }
       if (element is Note) {
-        print('got a note, so do we just put in rests into this timing track?');
-        print('Note duration: ${element.duration}');
+        log.warning('got a note, so do we just put in rests into this timing track?');
+        log.info('Note duration: ${element.duration}');
         var restNote = Note();
         restNote.articulation = element.articulation; // prob unnec
         restNote.duration.firstNumber = element.duration.firstNumber;
@@ -295,7 +295,7 @@ class Midi {
         addNoteOnOffToTrackEventsList(restNote, channel.number, timingTrackZeroMidiEventList, false, false, Voice.solo); // what about voice?  Can ignore with null?
         continue;
       }
-      print('what was that element? $element');  // what if /track?  Messes things up?
+      log.warning('what was that element? $element');  // what if /track?  Messes things up?
     }
     return timingTrackZeroMidiEventList;
   }
@@ -537,7 +537,6 @@ class Midi {
     // setTempoEvent.microsecondsPerBeat = (microsecondsPerMinute / useThisTempo).floor(); // how does this affect anything?  If no tempo is set in 2nd track, then this takes precedence?
     //print('addTempoChangeToTrackEventsList(), for the setTempoEvent we have microsecondsPerBeat: ${setTempoEvent.microsecondsPerBeat}');
     log.fine('Adding tempo change event (${useThisTempo}bpm, ${setTempoEvent.microsecondsPerBeat/1000000} Sec/beat)to some track events list, possibly track zero???, but any track events list');
-    print('Adding tempo change event (${useThisTempo}bpm, ${setTempoEvent.microsecondsPerBeat/1000000} Sec/beat)to some track events list, possibly track zero???, but any track events list');
     trackEventsList.add(setTempoEvent);
   }
 

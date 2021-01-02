@@ -2,7 +2,7 @@
 // Chapter 2: Phrase Building
 // Page 25, audio recording track 19
 // Phrase Workouts 2/2 Reel Dot and Cut 3
-
+// fluidsynth -q -a alsa -g 2.0 -T raw  -F - ~/Desktop/MySoundFonts/PipesAndDrums202011060735.sf2  MaxRayneDrums.mid | ffmpeg -f s32le -i - fromFluid2.mp3
 
 /track snare
 /channel 1
@@ -63,7 +63,7 @@ _18t 9Z ^12t 6T 12t ^16F t T T 12t . .
 16T . . 12t  >6T ^16t . . .   ^16t . . . >12t
 
 /marker W11
-// This is a weird one because of the gaps to hit the upbeats
+// This is a weird one because of the gaps to hit the upbeatsech
 ^4T _6v >16T 16t 16T 16t  12D  18T 18t 18T 12t
 /cresc 16T 16t 16T 16t  ^6T /ff /mf ^12t  12T 12T ^12t  18T 18t 18T >12t
 

@@ -24,6 +24,7 @@
 1N
 4N . 8N . 4N
 16N 8n 16N 8n . 2N
+//12N 8n 24N 8n . 2N  // if want swung, and we don't
 
 // P1L2
 8N . . . . . . .
@@ -129,7 +130,9 @@
 
 //12N 40:5n  24N    4n // 6th attempt
 //12N 36:5n  36N    4n
-16N 8n 16N 4n
+//16N 8n 16N 4n  // not too bad
+//16N 16:3n 24N 24:5n // prob what Alex wanted
+20N 20:3n 20N 4n
 
 // P2L7
 2N
@@ -349,7 +352,9 @@
 //20B 5B 4B  // 3rd attempt
 //16B 16:3B 4B // 4th attempt, best one
 //12B 6B  4B // 5th, 6th, 7th, 8th attempt
-16B 16:3B 4B
+//16B 16:3B 4B // not too bad
+//16B 16:3B 4B // probably what Alex really wanted, but they smoothed it out
+20B 5B  4B
 
 // P2L7
 2B

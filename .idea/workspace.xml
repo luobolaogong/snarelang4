@@ -19,10 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added Bass to Max Rayne.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Worked on the super evil idiom.  Close but not quite.">
+      <change afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P26-20.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneTenorBass.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneTenorBass.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P59-40.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol1/JlV1P59-40.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P14-09.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P14-09.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P23-17.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P23-17.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P25-19.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LaughlinVol2/JlV2P25-19.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,14 +72,24 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.DuthartRayne">
-    <configuration name="DuthartRayne" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneTenorBass.snl -o midifiles/MaxRayneSnareBassTenor20201221.mid -S 0.6" />
+  <component name="RunManager" selected="Dart Command Line App.JLVol1">
+    <configuration name="Experiments" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="--input=experiments/EmbellishmentTimings.snl -o midifiles/eba.mid -S 1.0" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="Experiments" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="--input=experiments/EmbellishmentTimings.snl -o midifiles/eba.mid -S 1.0" />
+    <configuration name="JLVol1" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/LaughlinVol1/JlV1P59-40.snl -o midifiles/JlV1P59-40.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JLVol2" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/LaughlinVol2/JlV2P26-20.snl -o midifiles/JlV2P26-20.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MaxRayne" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare.snl -o midifiles/MaxRayneSnare.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -79,7 +99,9 @@
     </configuration>
     <list>
       <item itemvalue="Dart Command Line App.Experiments" />
-      <item itemvalue="Dart Command Line App.DuthartRayne" />
+      <item itemvalue="Dart Command Line App.MaxRayne" />
+      <item itemvalue="Dart Command Line App.JLVol2" />
+      <item itemvalue="Dart Command Line App.JLVol1" />
       <item itemvalue="Dart Test.SnareLang4Test" />
     </list>
   </component>
@@ -211,14 +233,16 @@
       <workItem from="1608402642720" duration="25172000" />
       <workItem from="1608534249555" duration="1777000" />
       <workItem from="1608584727492" duration="7585000" />
-      <workItem from="1608627245096" duration="20540000" />
-    </task>
-    <task id="LOCAL-00023" summary="Added tenor and new tune Captain Norman Orr Ewing.">
-      <created>1601270058282</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1601270058282</updated>
+      <workItem from="1608627245096" duration="21995000" />
+      <workItem from="1608712532345" duration="825000" />
+      <workItem from="1608748649833" duration="2954000" />
+      <workItem from="1608923122166" duration="5330000" />
+      <workItem from="1608960568145" duration="2385000" />
+      <workItem from="1609107947343" duration="3841000" />
+      <workItem from="1609179169771" duration="3856000" />
+      <workItem from="1609374455551" duration="853000" />
+      <workItem from="1609530382774" duration="3914000" />
+      <workItem from="1609620628653" duration="296000" />
     </task>
     <task id="LOCAL-00024" summary="Forgot to add a couple new files.  Ewing.">
       <created>1601270119544</created>
@@ -556,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608426559703</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Worked on the super evil idiom.  Close but not quite.">
+      <created>1608707446432</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1608707446433</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +606,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Starting to fix some of the errors I made previously.  Currently working on /defdyn.  Also, changed from staff to track." />
     <MESSAGE value="Looks like dynamics are working now with the /dd thing, and 1st cut of Castle Dangerous." />
     <MESSAGE value="Don't remember what I did." />
     <MESSAGE value="Again, don't remember." />
@@ -600,193 +630,8 @@
     <MESSAGE value="First cut of Max Rayne salute done." />
     <MESSAGE value="Added Tenor part for Max Rayne." />
     <MESSAGE value="Added Bass to Max Rayne." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Bass to Max Rayne." />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1598" y="718" width="800" height="706" key="#Plugins" timestamp="1600645192988">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1598" y="718" width="800" height="706" key="#Plugins/0.0.3840.2120@0.0.3840.2120" timestamp="1600645192988" />
-    <state x="1723" y="878" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608707269149">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1723" y="878" width="1456" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1608707269149" />
-    <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606864892593">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1190" y="834" width="583" height="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.2120@0.0.3840.2120" timestamp="1606864892593" />
-    <state x="2578" y="1139" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1607911974722">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2578" y="1139" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607911974722" />
-    <state x="1698" y="824" width="624" height="516" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600644940359">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1698" y="824" width="624" height="516" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1600644940359" />
-    <state x="1825" y="294" width="1484" height="1700" key="DiffContextDialog" timestamp="1607670241884">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1825" y="294" width="1484" height="1700" key="DiffContextDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607670241884" />
-    <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl" timestamp="1600648661173">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1786" y="832" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1600648661173" />
-    <state width="2241" height="457" key="GridCell.Tab.0.bottom" timestamp="1608707212823">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608707212823" />
-    <state width="2241" height="457" key="GridCell.Tab.0.center" timestamp="1608707212823">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608707212823" />
-    <state width="2241" height="457" key="GridCell.Tab.0.left" timestamp="1608707212822">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608707212822" />
-    <state width="2241" height="457" key="GridCell.Tab.0.right" timestamp="1608707212823">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="2241" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608707212823" />
-    <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.bottom" timestamp="1608193369197">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608193369197" />
-    <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.center" timestamp="1608193369196">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608193369196" />
-    <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.left" timestamp="1608193369202">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608193369202" />
-    <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.right" timestamp="1608193369197">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1868" width="1084" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608193369197" />
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.bottom" timestamp="1608101377574">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1608101377574" />
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.center" timestamp="1608101377572">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.center/0.0.3840.2120@0.0.3840.2120" timestamp="1608101377572" />
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.left" timestamp="1608101377572">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.left/0.0.3840.2120@0.0.3840.2120" timestamp="1608101377572" />
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.right" timestamp="1608101377573">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="169" y="191" width="1084" height="321" key="GridCell.Tab.2.right/0.0.3840.2120@0.0.3840.2120" timestamp="1608101377573" />
-    <state x="1507" y="709" key="SettingsEditor" timestamp="1603743054671">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1507" y="709" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1603743054671" />
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1608426577871">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2045" y="815" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1608426577871" />
-    <state x="1629" y="248" width="2111" height="1702" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607464929371">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1629" y="248" width="2111" height="1702" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1607464929371" />
-    <state x="1271" y="298" width="762" height="767" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602312254951">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1271" y="298" width="762" height="767" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.3840.2120@0.0.3840.2120" timestamp="1602312254951" />
-    <state x="1374" y="809" width="904" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1603600976917">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1374" y="809" width="904" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.3840.2120@0.0.3840.2120" timestamp="1603600976917" />
-    <state x="1410" y="1868" width="1084" height="345" key="dock-window-1" timestamp="1608188570889">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1868" width="1084" height="345" key="dock-window-1/0.0.3840.2120@0.0.3840.2120" timestamp="1608188570889" />
-    <state x="169" y="191" width="1084" height="345" key="dock-window-10" timestamp="1608101382946">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="169" y="191" width="1084" height="345" key="dock-window-10/0.0.3840.2120@0.0.3840.2120" timestamp="1608101382946" />
-    <state x="1990" y="1250" width="2810" height="777" key="dock-window-11" timestamp="1606345678463">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1990" y="1250" width="2810" height="777" key="dock-window-11/0.0.3840.2120@0.0.3840.2120" timestamp="1606345678463" />
-    <state x="1803" y="1265" width="2810" height="777" key="dock-window-12" timestamp="1606346063558">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1803" y="1265" width="2810" height="777" key="dock-window-12/0.0.3840.2120@0.0.3840.2120" timestamp="1606346063558" />
-    <state x="2294" y="1212" width="2810" height="777" key="dock-window-13" timestamp="1606346620340">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2294" y="1212" width="2810" height="777" key="dock-window-13/0.0.3840.2120@0.0.3840.2120" timestamp="1606346620340" />
-    <state x="1292" y="1218" width="2810" height="777" key="dock-window-14" timestamp="1606348282421">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1292" y="1218" width="2810" height="777" key="dock-window-14/0.0.3840.2120@0.0.3840.2120" timestamp="1606348282421" />
-    <state x="2089" y="1238" width="2810" height="777" key="dock-window-15" timestamp="1606348594410">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2089" y="1238" width="2810" height="777" key="dock-window-15/0.0.3840.2120@0.0.3840.2120" timestamp="1606348594410" />
-    <state x="1977" y="1205" width="2810" height="777" key="dock-window-16" timestamp="1606348594411">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1977" y="1205" width="2810" height="777" key="dock-window-16/0.0.3840.2120@0.0.3840.2120" timestamp="1606348594411" />
-    <state x="782" y="1684" width="2810" height="777" key="dock-window-17" timestamp="1606349524386">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="782" y="1684" width="2810" height="777" key="dock-window-17/0.0.3840.2120@0.0.3840.2120" timestamp="1606349524386" />
-    <state x="2116" y="1253" width="1179" height="582" key="dock-window-18" timestamp="1606356112501">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2116" y="1253" width="1179" height="582" key="dock-window-18/0.0.3840.2120@0.0.3840.2120" timestamp="1606356112501" />
-    <state x="2099" y="1305" width="2810" height="777" key="dock-window-19" timestamp="1606367873514">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2099" y="1305" width="2810" height="777" key="dock-window-19/0.0.3840.2120@0.0.3840.2120" timestamp="1606367873514" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-2" timestamp="1608056802599">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-2/0.0.3840.2120@0.0.3840.2120" timestamp="1608056802599" />
-    <state x="3042" y="1235" width="2810" height="777" key="dock-window-20" timestamp="1606370648454">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="3042" y="1235" width="2810" height="777" key="dock-window-20/0.0.3840.2120@0.0.3840.2120" timestamp="1606370648454" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-3" timestamp="1608056802599">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-3/0.0.3840.2120@0.0.3840.2120" timestamp="1608056802599" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-4" timestamp="1608059331670">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-4/0.0.3840.2120@0.0.3840.2120" timestamp="1608059331670" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-5" timestamp="1608060611070">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-5/0.0.3840.2120@0.0.3840.2120" timestamp="1608060611070" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-6" timestamp="1608060993510">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-6/0.0.3840.2120@0.0.3840.2120" timestamp="1608060993510" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-7" timestamp="1608063234806">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-7/0.0.3840.2120@0.0.3840.2120" timestamp="1608063234806" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-8" timestamp="1608063234806">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-8/0.0.3840.2120@0.0.3840.2120" timestamp="1608063234806" />
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-9" timestamp="1608063234806">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="133" y="1743" width="1084" height="345" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1608063234806" />
-    <state x="1045" y="1152" width="1442" height="592" key="find.popup" timestamp="1608403967043">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1045" y="1152" width="1442" height="592" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1608403967043" />
-    <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup" timestamp="1606339298035">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2925" y="550" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1606339298035" />
+    <MESSAGE value="Worked on the super evil idiom.  Close but not quite." />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on the super evil idiom.  Close but not quite." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -818,7 +663,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>540</line>
+          <line>539</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">

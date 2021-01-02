@@ -367,7 +367,7 @@ class CommandLine {
       tempo.bpm = int.parse(noteTempoParts[1]); // wrong of course
     }
     else {
-      print('Failed to parse tempo correctly: -->$noteTempoString<--');
+      log.severe('Failed to parse tempo correctly: -->$noteTempoString<--');
     }
     //print('parseTempo is returning tempo: $tempo');  check to insure duration f and s are not null here????
     return tempo;

@@ -212,8 +212,8 @@ Tempo parseTempo(String noteTempoString) {
     tempo.bpm = int.parse(noteTempoParts[1]); // wrong of course
   }
   else {
-    print('Failed to parse tempo correctly: -->$noteTempoString<--');
+    log.severe('Failed to parse tempo correctly: -->$noteTempoString<--');
   }
-  print("parseTempo is returning tempo: $tempo");
+  //print("parseTempo is returning tempo: $tempo");
   return tempo;
 }

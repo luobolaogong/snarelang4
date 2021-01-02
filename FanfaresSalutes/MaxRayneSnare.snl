@@ -13,6 +13,302 @@
 
 
 
+// PAGE 1 Part 1 SNARE  4/4 TIME @ 88 BPM
+// PAGE 1 Part 1 SNARE  4/4 TIME @ 88 BPM
+// PAGE 1 Part 1 SNARE  4/4 TIME @ 88 BPM
+
+
+/track snare
+/channel 1
+/mf
+
+//time 4/4
+//tempo 88
+
+
+
+/marker P1 Max Rayne Salute
+// Count in
+1r
+
+/marker P1L1
+>8F 16t T >8F 16T t  >8F >.  >16F T t T
+16t T >f t T t >8F /cresc 16Z . . .  . . . .
+>8T /fff /mf >16t T >8F 16T t  >8F >.  >16F T t T
+16t _40F 20z . >16t      >40F 20z . >40t 20Z .  >4T r
+//12t _40F 20z . >24t      >40F 20z . >40t 20Z .  >4T r  // if want swung, and we don't
+
+/marker P1L2
+32T . . . 16T >.  T T _f t   32T . . . 16T >.  T T _f t
+16T . _F T  t T _f t  T t _F T  T T T >t
+32T . . . 16T >t  T T _f t  32T . . . 16T >t  T T _f t
+16T >8f 16t >8F 16T >f 16r 16t >8F  >f 32T . . .
+
+/marker P1L3
+16T >. T T _f t T ^t T ^t T T _f t 32T . . .
+16T ^t 32T . . .  16T ^t T T 8f ^F ^f 32T . . .
+16T ^t 32T . . . 8T _f 32T . . . 16T ^t T T 8f
+32T . . . 16T ^t T T 8f ^4F r
+
+/marker P1L4
+>24F t T T t T  8t >24F t T T t T 8t >16F t T T
+>8f >F 16F t T T  t ^T t t 24T . ^T t T t
+>24F t T T t T  8t >24F t T T t T 8t >16F t T T
+>8f >F 16t >8F 16t >8f 16t >F r T >8f
+
+/marker P1L5
+8r _32T . . . . . . . ^8T _32T . . . . . . . ^4T
+8r _32T . . . . . . . ^8T _32T . . . . . . . ^4T
+8r _32T . . . . . . . ^8T _32T . . . . . . . ^8T _32T . . .
+>32T . . . . . >T . . . . . ^8T >4f r
+
+/marker P1L6
+/mp /cresc_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+
+/marker P1L7
+_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
+_16F _f _F >F   t T _f T   t _F t _F   _f T t t
+_16F t T _f  _F t _F t   T _f _F t   _F t T T
+16t _F t _F t _F _f T  t _F t _F >4f /ff /f
+
+/marker P1L8
+//8v _f _f _F _F _f _f _F
+>8t _f _f _F _F _f _f _F
+16F T _f T  _f t _F t  _F T _f T  _f t _F t
+8F 16t T 8f _f 16T t 8F  16F t T T
+16F T _f T  _f T t t _F t _F t  8F 32T . . .
+
+/marker P1L9
+16T ^t T T  _f T _f ^T  t ^T t t  _F t _F ^T
+16t ^T t t  _F t _F T  _f T _f T  >4f
+16F t _F _f  T _f T _f  _F t _F t  _F _f T _f
+16F t _F _f  T _f T _f  _F t _F t  >4F
+
+/marker P1L10
+16F t _F t  _F _f T _f  _F t _F _f  T _f T _f
+// /time 3/4 starts here for setting tempo on last note of what would be 4/4
+16F t _F t   _F _f T _f   _F t _F t
+
+// 6/8 time starts here
+/marker P1L11
+>8:3F
+
+
+// PAGE 1 Part 2 SNARE  6/8 TIME @ 50 BPM
+// PAGE 1 Part 2 SNARE  6/8 TIME @ 50 BPM
+// PAGE 1 Part 2 SNARE  6/8 TIME @ 50 BPM
+
+>40T 20z . 24z . .  >40T 20z .  >40t 20z .  24z . .  . . .
+>24T >. >.  >40t 20Z .   >40T 20z .   >40t 20z .  24z . .  . . .
+>40T 20z .      >36t 18Z >24t     >36T 18z >24T    >40t 20Z .    >40T 20z .    >24t . .
+>40T 20z . >40t 20Z .  >24T . .   >40t 20Z .  24z . .  . . .
+/marker P1L11Rpt
+>40T 20z . 24z . .  >40T 20z .  >40t 20z .  24z . .  . . .
+>24T >. >.  >40t 20Z .   >40T 20z .   >40t 20z .  24z . .  . . .
+>40T 20z .      _36t 18Z >24t     _36T 18z >24T    >40t 20Z .    >40T 20z .    >24t . .
+>40T 20z . >40t 20Z .  >24T . .   >40t 20Z .  24z . .  . . .
+
+/marker P1L12
+>40T 20z . 24t . . >40t 20Z .   >40t 20Z . 24T . . >40T 20z .
+>40T 20z .    _36t 18Z >24t     _36T 18z >24T   >40t 20Z .  24Z . .  . . .
+_36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z .    >24t . .
+>40T 20z .    >40t 20Z .    >24T . .    >40t 20Z .  24z . .  . . .
+/marker P1L12Rpt
+>40T 20z . 24t . . >40t 20Z .   >40t 20Z . 24T . . >40T 20z .
+>40T 20z .    _36t 18Z >24t     _36T 18z >24T   >40t 20Z .  24Z . .  . . .
+_36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z .    >24t . .
+// time 3/8
+>40T 20z .    >40t 20Z .    >24T . .
+
+
+// PAGE 2 part 1 SNARE  2/4 TIME @ 84 BPM
+// PAGE 2 part 1 SNARE  2/4 TIME @ 84 BPM
+// PAGE 2 part 1 SNARE  2/4 TIME @ 84 BPM
+
+//time 2/4
+//tempo 22 accel
+// set tempo
+^8t
+
+// Add drummers right to left at each bar.  No accel.
+/marker P2L1
+
+// start accel
+/marker accel ...
+^24T t t _T t t _T t t _T t t
+^24T t t T t t T t t T t t
+^24T t t T t t T t t T t t
+^24T t t T t t T t t T t t
+
+/marker P2L1Rpt
+^24T t t T t t T t t T t t
+^24T t t T t t T t t T t t
+^24T t t T t t T t t T t t
+^24T t t ^T t t ^T t t ^T t t
+
+// backsticking starts here
+/marker P2L2
+^24T t t _T t t  T T >t T T >t
+^24T t t _T t t  ^T t t _T t t
+24T T >t T T ^t  T T >t T T >t
+^24T t t _T t t  ^8T 32T T t t
+
+/marker P2L3
+^24T t t _T t t  T T >t T T >t
+^24T t t _T t t  ^T t t >T t t
+24T T >t T T ^t  T T >t T T _t
+^24T t t _T t t  ^4T
+
+/marker P2L4
+^24T t t _T t t  T T >t T T >t
+^24T t t _T t t  >32T . . . . . . .
+^24T t t _T t t  ^T t t _T t t
+24T T >t T T ^t  T T >t T T >t
+
+/marker P2L5
+^24T t t _T t t  T T >t T T >t
+^24T t t _T t t  >32T . . . . . . .
+^24T t t _T t t  ^T t t _T t t
+24T T >t T T >t  T T ^t ^8T
+
+// A break here.  Make it one 2/4 bar but pickup in it
+4r 8r 32T T t t
+
+
+
+
+/marker P2L6
+// The fourth bar of this line is hard to decipher.  In the oldest recording of this
+// They DO NOT play it as written.  They play simple 16T . 32T T t t  16T . 32T T t t
+// They are not playing the same number of notes!!!!
+^16T 32t t T T t t   T T t t T T t t
+^16T t _F ^f   T _f ^F t
+^16F 32t t T T t t   T T t t T T t t
+//^16T ^t 48T T t t ^24T    ^36t T T t t T T t t     // as written, of course wrong
+//^16T ^240:7t T T t t >24T  ^36t T T t t T T t t   // 2nd attempt, not bad
+//^20T ^20t 40T T t t >20T    ^20t 40T T t t T T t t // 3rd attempt, which makes sense to me, since it's based on 5lets
+//^16T ^64:3t 128:3T T t t >20T    ^20t  40T T t t T T t t  // 4th attempt, but this sounds more like they do it
+//^12T ^264:7t T T t t >T     ^t  T T t t    32T T t t  // 5th attempt
+
+//^12T ^40t T T t t >24T     ^36t  T T t t    T T t t  // 6th attempt
+//^12T ^36t T T t t >T     ^36t  T T t t    T T t t // 7th attempt
+//^12T ^36t T T t t >T     ^16T 128:3t T T t t >T  // 8th attempt
+//^16T ^32t T T t t ^T          ^36t  T T t t    T T t t // not too bad
+//^16T ^t 32T T t t  ^24T ^24t  48T T t t T T t t // probaby what Alex wanted, but smoothed it out
+//^12T ^40t T T t t ^24T  ^20t 40T T t t T T t t // Would be closer to swing, but only at slower tempo
+^20T ^t 40T T t t ^20T  ^20t 40T T t t T T t t  // makes best mathematical sense
+
+/marker P2L7
+^16T 32t t T T t t   T T t t T T t t
+^16T t _F ^f T _f ^F t
+_16F f _F >F  t T _f T
+16t _F t >F  ^4f
+
+// Another weirdity from pipe band world.  They try to swing this playing a 24th
+// rather than 16th, but only at slower tempo.  And whatever. McWirther check it out
+/marker P2L8
+^16T ^32t . . . . _.  >t . . . . . . _.  // as written, and seems close to what others play
+//^12T ^36t . . . . _.  >32t . . . . . . _.  // as played, maybe
+^24t T T >t T T   ^16t >32T . . . . _.
+^24T t t _T t t   T T >t T T t
+^24T t t _T t t   ^32T . . . . . . .
+
+/marker P2L9
+^16T ^32t . . . . _.  >t . . . . . . _.  // as written
+//^12T ^36t . . . . >.   >32t . . . . . . _.  // as played maybe
+^24t T T >t T T   ^16t >32T . . . . .
+^24T t t _T t t   T T >t T T t
+^24T t t _T t t   ^8T >32t . . .
+
+/marker P2L10
+^24t T T   >t T T   _32t . . .  ^24t T T
+>24t T T   ^t T T   >t T T   _32t . . .
+^24t T T >t T T  ^t T t t T t
+^24T t t _T t t   ^8T  _32T . . .
+
+/marker P2L11
+// Three full bars plus one count, and next count is in next time
+^24T t t   _T t t   _32T . . .    ^24T t t
+_24T t t   ^T t t   _T t t      _32T . . .
+^24T t t   _T t t   ^T t T      T t T
+
+^24t T T   >t T T  // one beat here, to get into 12/8 w/remainder
+
+
+// PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
+// PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
+// PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
+
+// I wonder if this should be 6/8.  Seems to be in half time
+//time 12/8
+//tempo 115
+// set new tempo, 1 bar 4 counts
+^8:3t 8:3r
+
+// play the 1 bar solo thing
+/marker P2L12sf
+// incredibly James has a gap between the sextuplets.
+// Very common for him to put spaces in before an accent,
+// which means he speeds notes up before that
+>16T . . . . .    >. . . . . _.   ^8:3T r
+
+/mf
+/marker P2L12
+^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
+^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
+^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T   ^8t 16T T t t
+^8T t _F >f T _f ^8F 16t t T T t t T T t t
+
+/marker P2L13
+^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
+^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
+^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T   ^8t 16T T t t
+^8T t _F >f T _f ^8F 16t t T T t t T T t t
+
+/marker P2L14
+^8T t _F >f T _f   >F 16t t T T t t T T t t
+^8T t _F >f T _f   >F 16t t T T t t T T t t
+^8T t _F >f T _f   >F t _F >f T _f
+^8F t _F >f T _f    >F 16t t T T t t T T t t
+
+/marker P2L15
+^8T t _F >f T _f   >F 16t t T T t t T T t t
+^8T t _F >f T _f   >F 16t t T T t t T T t t
+^8T t _F >f T _f   >F t _F >f T _t     // last note should prob be a flam, but he plays it tap
+^8F t _F >f T _f   ^8:3F r
+
+/ff
+/marker P2L12Rpt
+^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
+^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
+^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T   ^8t 16T T t t
+^8T t F f T f ^8F 16t t T T t t T T t t
+
+/marker P2L13Rpt
+^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
+^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
+^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T   ^8t 16T T t t
+^8T t F f T f ^8F 16t t T T t t T T t t
+
+/marker P2L14Rpt
+^8T t _F >f T _f   >F 16t t T T t t T T t t
+^8T t _F >f T _f   >F 16t t T T t t T T t t
+^8T t _F >f T _f   >F t _F >f T _f
+^8F t _F >f T _f    >F 16t t T T t t T T t t
+
+
+
+/marker P2L16
+>8T t _F >f T f  >F 16t t T T t t T T t t
+>8T t _F >f T f  >F 16t t T T t t T T t t
+>8T t _F   ^f T t  >8F ^f T  t _F >f
+>8F t _F >f T >f  ^8:3F ^8:3v
+
+
+
 // PAGE 1 Part 1 TEMPO TRACK  4/4 TIME @ 88 BPM
 // PAGE 1 Part 1 TEMPO TRACK  4/4 TIME @ 88 BPM
 // PAGE 1 Part 1 TEMPO TRACK  4/4 TIME @ 88 BPM
@@ -377,290 +673,5 @@ _8M . _8M . _8M .
 
 
 
-
-
-
-// PAGE 1 Part 1 SNARE  4/4 TIME @ 88 BPM
-// PAGE 1 Part 1 SNARE  4/4 TIME @ 88 BPM
-// PAGE 1 Part 1 SNARE  4/4 TIME @ 88 BPM
-
-
-/track snare
-/channel 1
-/mf
-
-//time 4/4
-//tempo 88
-
-/marker P1 Max Rayne Salute
-// Count in
-1r
-
-/marker P1L1
->8F 16t T >8F 16T t  >8F >.  >16F T t T
-16t T >f t T t >8F /cresc 16Z . . .  . . . .
->8T /fff /mf >16t T >8F 16T t  >8F >.  >16F T t T
-16t _40F 20z . >16t      >40F 20z . >40t 20Z .  >4T r
-
-/marker P1L2
-32T . . . 16T >.  T T _f t   32T . . . 16T >.  T T _f t
-16T . _F T  t T _f t  T t _F T  T T T >t
-32T . . . 16T >t  T T _f t  32T . . . 16T >t  T T _f t
-16T >8f 16t >8F 16T >f 16r 16t >8F  >f 32T . . .
-
-/marker P1L3
-16T >. T T _f t T ^t T ^t T T _f t 32T . . .
-16T ^t 32T . . .  16T ^t T T 8f ^F ^f 32T . . .
-16T ^t 32T . . . 8T _f 32T . . . 16T ^t T T 8f
-32T . . . 16T ^t T T 8f ^4F r
-
-/marker P1L4
->24F t T T t T  8t >24F t T T t T 8t >16F t T T
->8f >F 16F t T T  t ^T t t 24T . ^T t T t
->24F t T T t T  8t >24F t T T t T 8t >16F t T T
->8f >F 16t >8F 16t >8f 16t >F r T >8f
-
-/marker P1L5
-8r _32T . . . . . . . ^8T _32T . . . . . . . ^4T
-8r _32T . . . . . . . ^8T _32T . . . . . . . ^4T
-8r _32T . . . . . . . ^8T _32T . . . . . . . ^8T _32T . . .
->32T . . . . . >T . . . . . ^8T >4f r
-
-/marker P1L6
-/mp /cresc_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
-_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
-_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
-_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
-
-/marker P1L7
-_16F t _F t  _F _f T _f  _F t _F _f  T _f _F t
-_16F _f _F >F   t T _f T   t _F t _F   _f T t t
-_16F t T _f  _F t _F t   T _f _F t   _F t T T
-16t _F t _F t _F _f T  t _F t _F >4f /ff /f
-
-/marker P1L8
-//8v _f _f _F _F _f _f _F
->8t _f _f _F _F _f _f _F
-16F T _f T  _f t _F t  _F T _f T  _f t _F t
-8F 16t T 8f _f 16T t 8F  16F t T T
-16F T _f T  _f T t t _F t _F t  8F 32T . . .
-
-/marker P1L9
-16T ^t T T  _f T _f ^T  t ^T t t  _F t _F ^T
-16t ^T t t  _F t _F T  _f T _f T  >4f
-16F t _F _f  T _f T _f  _F t _F t  _F _f T _f
-16F t _F _f  T _f T _f  _F t _F t  >4F
-
-/marker P1L10
-16F t _F t  _F _f T _f  _F t _F _f  T _f T _f
-// /time 3/4 starts here for setting tempo on last note of what would be 4/4
-16F t _F t   _F _f T _f   _F t _F t
-
-// 6/8 time starts here
-/marker P1L11
->8:3F
-
-
-// PAGE 1 Part 2 SNARE  6/8 TIME @ 50 BPM
-// PAGE 1 Part 2 SNARE  6/8 TIME @ 50 BPM
-// PAGE 1 Part 2 SNARE  6/8 TIME @ 50 BPM
-
->40T 20z . 24z . .  >40T 20z .  >40t 20z .  24z . .  . . .
->24T >. >.  >40t 20Z .   >40T 20z .   >40t 20z .  24z . .  . . .
->40T 20z .      >36t 18Z >24t     >36T 18z >24T    >40t 20Z .    >40T 20z .    >24t . .
->40T 20z . >40t 20Z .  >24T . .   >40t 20Z .  24z . .  . . .
-/marker P1L11Rpt
->40T 20z . 24z . .  >40T 20z .  >40t 20z .  24z . .  . . .
->24T >. >.  >40t 20Z .   >40T 20z .   >40t 20z .  24z . .  . . .
->40T 20z .      _36t 18Z >24t     _36T 18z >24T    >40t 20Z .    >40T 20z .    >24t . .
->40T 20z . >40t 20Z .  >24T . .   >40t 20Z .  24z . .  . . .
-
-/marker P1L12
->40T 20z . 24t . . >40t 20Z .   >40t 20Z . 24T . . >40T 20z .
->40T 20z .    _36t 18Z >24t     _36T 18z >24T   >40t 20Z .  24Z . .  . . .
-_36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z .    >24t . .
->40T 20z .    >40t 20Z .    >24T . .    >40t 20Z .  24z . .  . . .
-/marker P1L12Rpt
->40T 20z . 24t . . >40t 20Z .   >40t 20Z . 24T . . >40T 20z .
->40T 20z .    _36t 18Z >24t     _36T 18z >24T   >40t 20Z .  24Z . .  . . .
-_36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z .    >24t . .
-// time 3/8
->40T 20z .    >40t 20Z .    >24T . .
-
-
-// PAGE 2 part 1 SNARE  2/4 TIME @ 84 BPM
-// PAGE 2 part 1 SNARE  2/4 TIME @ 84 BPM
-// PAGE 2 part 1 SNARE  2/4 TIME @ 84 BPM
-
-//time 2/4
-//tempo 22 accel
-// set tempo
-^8t
-
-// Add drummers right to left at each bar.  No accel.
-/marker P2L1
-
-// start accel
-/marker accel ...
-^24T t t _T t t _T t t _T t t
-^24T t t T t t T t t T t t
-^24T t t T t t T t t T t t
-^24T t t T t t T t t T t t
-
-/marker P2L1Rpt
-^24T t t T t t T t t T t t
-^24T t t T t t T t t T t t
-^24T t t T t t T t t T t t
-^24T t t ^T t t ^T t t ^T t t
-
-// backsticking starts here
-/marker P2L2
-^24T t t _T t t  T T >t T T >t
-^24T t t _T t t  ^T t t _T t t
-24T T >t T T ^t  T T >t T T >t
-^24T t t _T t t  ^8T 32T T t t
-
-/marker P2L3
-^24T t t _T t t  T T >t T T >t
-^24T t t _T t t  ^T t t >T t t
-24T T >t T T ^t  T T >t T T _t
-^24T t t _T t t  ^4T
-
-/marker P2L4
-^24T t t _T t t  T T >t T T >t
-^24T t t _T t t  >32T . . . . . . .
-^24T t t _T t t  ^T t t _T t t
-24T T >t T T ^t  T T >t T T >t
-
-/marker P2L5
-^24T t t _T t t  T T >t T T >t
-^24T t t _T t t  >32T . . . . . . .
-^24T t t _T t t  ^T t t _T t t
-24T T >t T T >t  T T ^t ^8T
-
-// A break here.  Make it one 2/4 bar but pickup in it
-4r 8r 32T T t t
-
-
-
-
-/marker P2L6
-^16T 32t t T T t t   T T t t T T t t
-^16T t _F ^f   T _f ^F t
-^16F 32t t T T t t   T T t t T T t t
-//^16T ^t 48T T t t ^24T    ^36t T T t t T T t t     // as written, of course wrong
-//^16T ^240:7t T T t t >24T  ^36t T T t t T T t t   // 2nd attempt, not bad
-//^20T ^20t 40T T t t >20T    ^20t 40T T t t T T t t // 3rd attempt, which makes sense to me, since it's based on 5lets
-//^16T ^64:3t 128:3T T t t >20T    ^20t  40T T t t T T t t  // 4th attempt, but this sounds more like they do it
-//^12T ^264:7t T T t t >T     ^t  T T t t    32T T t t  // 5th attempt
-
-//^12T ^40t T T t t >24T     ^36t  T T t t    T T t t  // 6th attempt
-//^12T ^36t T T t t >T     ^36t  T T t t    T T t t // 7th attempt
-//^12T ^36t T T t t >T     ^16T 128:3t T T t t >T  // 8th attempt
-^16T ^32t T T t t ^T          ^36t  T T t t    T T t t
-
-/marker P2L7
-^16T 32t t T T t t   T T t t T T t t
-^16T t _F ^f T _f ^F t
-_16F f _F >F  t T _f T
-16t _F t >F  ^4f
-
-/marker P2L8
-^16T ^32t . . . . _.  >t . . . . . . _.  // as written, and seems close to what others play
-//^12T ^36t . . . . _.  >32t . . . . . . _.  // as played, maybe
-^24t T T >t T T   ^16t >32T . . . . _.
-^24T t t _T t t   T T >t T T t
-^24T t t _T t t   ^32T . . . . . . .
-
-/marker P2L9
-^16T ^32t . . . . _.  >t . . . . . . _.  // as written
-//^12T ^36t . . . . >.   >32t . . . . . . _.  // as played maybe
-^24t T T >t T T   ^16t >32T . . . . .
-^24T t t _T t t   T T >t T T t
-^24T t t _T t t   ^8T >32t . . .
-
-/marker P2L10
-^24t T T   >t T T   _32t . . .  ^24t T T
->24t T T   ^t T T   >t T T   _32t . . .
-^24t T T >t T T  ^t T t t T t
-^24T t t _T t t   ^8T  _32T . . .
-
-/marker P2L11
-// Three full bars plus one count, and next count is in next time
-^24T t t   _T t t   _32T . . .    ^24T t t
-_24T t t   ^T t t   _T t t      _32T . . .
-^24T t t   _T t t   ^T t T      T t T
-
-^24t T T   >t T T  // one beat here, to get into 12/8 w/remainder
-
-
-// PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
-// PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
-// PAGE 2  part 2 TEMPO  12/8 TIME @ 115 BPM
-
-// I wonder if this should be 6/8.  Seems to be in half time
-//time 12/8
-//tempo 115
-// set new tempo, 1 bar 4 counts
-^8:3t 8:3r
-
-// play the 1 bar solo thing
-/marker P2L12sf
-// incredibly James has a gap between the sextuplets.
-// Very common for him to put spaces in before an accent,
-// which means he speeds notes up before that
->16T . . . . .    >. . . . . _.   ^8:3T r
-
-/mf
-/marker P2L12
-^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
-^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
-^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T   ^8t 16T T t t
-^8T t _F >f T _f ^8F 16t t T T t t T T t t
-
-/marker P2L13
-^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
-^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T t t T T t t
-^8T 16t t T T    ^8t 16T T t t   ^8T 16t t T T   ^8t 16T T t t
-^8T t _F >f T _f ^8F 16t t T T t t T T t t
-
-/marker P2L14
-^8T t _F >f T _f   >F 16t t T T t t T T t t
-^8T t _F >f T _f   >F 16t t T T t t T T t t
-^8T t _F >f T _f   >F t _F >f T _f
-^8F t _F >f T _f    >F 16t t T T t t T T t t
-
-/marker P2L15
-^8T t _F >f T _f   >F 16t t T T t t T T t t
-^8T t _F >f T _f   >F 16t t T T t t T T t t
-^8T t _F >f T _f   >F t _F >f T _t     // last note should prob be a flam, but he plays it tap
-^8F t _F >f T _f   ^8:3F r
-
-/ff
-/marker P2L12Rpt
-^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
-^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
-^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T   ^8t 16T T t t
-^8T t F f T f ^8F 16t t T T t t T T t t
-
-/marker P2L13Rpt
-^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
-^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T t t T T t t
-^8T 16t t T T   ^8t 16T T t t   ^8T 16t t T T   ^8t 16T T t t
-^8T t F f T f ^8F 16t t T T t t T T t t
-
-/marker P2L14Rpt
-^8T t _F >f T _f   >F 16t t T T t t T T t t
-^8T t _F >f T _f   >F 16t t T T t t T T t t
-^8T t _F >f T _f   >F t _F >f T _f
-^8F t _F >f T _f    >F 16t t T T t t T T t t
-
-
-
-/marker P2L16
->8T t _F >f T f  >F 16t t T T t t T T t t
->8T t _F >f T f  >F 16t t T T t t T T t t
->8T t _F   ^f T t  >8F ^f T  t _F >f
->8F t _F >f T >f  ^8:3F ^8:3v
 
 

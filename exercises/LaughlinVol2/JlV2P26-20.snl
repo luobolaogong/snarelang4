@@ -1,0 +1,99 @@
+// "James Laughlin's Guide to Pipe Band Drumming, Volume Two, Advanced Rhythm, Technique and Phrase Building"
+// Chapter 2: Phrase Building
+// Page 26, audio recording track 20
+// Phrase Workouts 2/2 Reel Dot and Cut 4
+
+
+/track snare
+/channel 1
+/mf
+
+/time 2/2
+/tempo 2=76
+//time 4/4
+//tempo 152
+
+/marker Phrase Wrkouts 2/4 Reel Dot/Cut 4
+1r
+
+
+
+/marker W1
+^6F 12t 6T ^16T . . . 12t ^6T 12t
+6T ^16F T . . 12t ^4T 12z . .
+
+/marker W2
+^6T 12t 12Z . 12T >18t 9Z ^12t 12T 12t 12D
+>18T 9z ^12T >18t 9Z ^16t . . . ^12t 6T 12t
+
+/marker W3
+
+/marker W4
+
+/marker W5
+
+/marker W6
+
+/marker W7
+
+/marker W8
+
+/marker W9
+
+/marker W10
+
+/marker W11
+
+/marker W12
+^6T 20t t T T t 12T   ^6t 20T T t t T 12t
+^6T 12t F T ^16t . . . >16t . . . >12t
+
+/marker W13
+
+/marker W14
+
+/marker W15
+
+/marker W16
+
+
+/track met
+/channel 2
+/p
+^2M ^2M
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _2M

@@ -9,7 +9,7 @@
 
 /track snare
 /channel 1
-/mf
+/f
 
 /marker Rhythm 6/8 D&C
 8:3r .
@@ -21,9 +21,9 @@
 
 /marker L2
 4T 8t 4T 8t
->16:3T 16t 8T
+>16:3T 16t 8T 8:3t
 >16:3T 16t 8T 4t 8T
->16:3t 16T 8t 4T 8t
+>16:3t 16T 8t 8:3T
 
 /marker L3
 >16:3T 16t 8T  >16:3t 16T 8t
@@ -79,7 +79,7 @@
 4T 8t 4T 8t
 16T 16:3t 8T  16:3t 16T 8t
 4T 8t 4T 8t
-16:3T 16t 8T 8:3t
+16:3T 16t 8T ^8:3t
 
 /track met
 /channel 2

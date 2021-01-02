@@ -216,7 +216,7 @@ class Score {
 
     log.finest('gunna start looking for dynamic ramp markers and set their values');
     // Scan the elements list for dynamicRamp markers, and set their properties
-    print('');
+    log.finest('');
     log.finest('Score.applyDynamics(), Starting search for dynamicRamps and setting their values.  THIS MAY BE WRONG NOW THAT I''M APPLYING DYNAMICS DURING SHORTHAND PHASE');
     DynamicRamp currentDynamicRamp;
     Dynamic mostRecentDynamic;
@@ -317,7 +317,7 @@ class Score {
           var cumulativeTicksSinceDynamicRampStartNote = beatFractionToTicks(cumulativeDurationSinceDynamicRampStartNote);
           log.finest('\t\t\tcumulativeTicksSinceDynamicRampStartNote: $cumulativeTicksSinceDynamicRampStartNote and dynamicsDynamicRamp slope is ${currentDynamicRamp.slope}');
           if (currentDynamicRamp.slope == null) { // hack
-            print('Still in dynamic ramp, right?  Well, got a null at note element $elementCtr, Note duration: ${note.duration}');
+            log.warning('Still in dynamic ramp, right?  Well, got a null at note element $elementCtr, Note duration: ${note.duration}');
             log.severe('Error in dynamic ramp.  Not sure what to do.  Did we have a ramp start, and no ramp end?');
           }
           else {
@@ -426,7 +426,7 @@ class Score {
           note.velocity -= 10;
           break;
         case NoteType.rest:
-          print('hey man we got a rest.  Why should there be a velocity for it?');
+          log.warning('hey man we got a rest.  Why should there be a velocity for it?');
           break;
         default:
           log.warning('What the heck was that note? $note.type');
@@ -563,7 +563,7 @@ class Score {
         if (note.articulation == NoteArticulation.marcato) {
           return note.velocity + 54; // was 44
         }
-        print('what happened?');
+        log.warning('what happened?');
         break;
       case Dynamic.pp:
         if (note.articulation == NoteArticulation.tenuto) {
@@ -575,7 +575,7 @@ class Score {
         if (note.articulation == NoteArticulation.marcato) {
           return note.velocity + 52; // was 44
         }
-        print('what happened?');
+        log.warning('what happened?');
         break;
       case Dynamic.p:
         if (note.articulation == NoteArticulation.tenuto) {
@@ -587,7 +587,7 @@ class Score {
         if (note.articulation == NoteArticulation.marcato) {
           return note.velocity + 54; // was 48
         }
-        print('what happened?');
+        log.warning('what happened?');
         break;
       case Dynamic.mp:
         if (note.articulation == NoteArticulation.tenuto) {
@@ -599,7 +599,7 @@ class Score {
         if (note.articulation == NoteArticulation.marcato) {
           return note.velocity + 54; // was 50 // was 44, james plays loud
         }
-        print('what happened?');
+        log.warning('what happened?');
         break;
       case Dynamic.mf:
         if (note.articulation == NoteArticulation.tenuto) {
@@ -611,7 +611,7 @@ class Score {
         if (note.articulation == NoteArticulation.marcato) {
           return note.velocity + 52; // was 50 // was 36
         }
-        print('what happened?');
+        log.warning('what happened?');
         break;
       case Dynamic.f:
         if (note.articulation == NoteArticulation.tenuto) {
@@ -623,7 +623,7 @@ class Score {
         if (note.articulation == NoteArticulation.marcato) {
           return note.velocity + 32; // was 30 // was 18,24
         }
-        print('what happened?');
+        log.warning('what happened?');
         break;
       case Dynamic.ff:
         if (note.articulation == NoteArticulation.tenuto) {
@@ -635,7 +635,7 @@ class Score {
         if (note.articulation == NoteArticulation.marcato) {
           return note.velocity + 12; // was 10 // was 5 clips?
         }
-        print('what happened?');
+        log.warning('what happened?');
         break;
       case Dynamic.fff: // if fff is at 127 then these numbers will just get clipped:
         if (note.articulation == NoteArticulation.tenuto) {
@@ -647,10 +647,10 @@ class Score {
         if (note.articulation == NoteArticulation.marcato) {
           return note.velocity + 10; // was 8 // was 5, clips for sure, right?
         }
-        print('what happened?');
+        log.warning('what happened?');
         break;
       default:
-        print('uh oh');
+        log.warning('uh oh');
     }
     return newVelocity;
   }
@@ -776,7 +776,7 @@ class Score {
           case NoteType.flamUnison:
             // graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
-            print('graceNotesDuration for flam: $graceNotesDuration at $mostRecentTempo');
+            //print('graceNotesDuration for flam: $graceNotesDuration at $mostRecentTempo');
             //graceNotesDuration = (mostRecentTempo.noteDuration.secondNumber / mostRecentTempo.noteDuration.firstNumber) * .008 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
@@ -787,7 +787,7 @@ class Score {
           case NoteType.dragUnison:
             // graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
             graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
-            print('graceNotesDuration for drag: $graceNotesDuration at $mostRecentTempo');
+            //print('graceNotesDuration for drag: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -796,7 +796,7 @@ class Score {
           case NoteType.ruff2Right:
           case NoteType.ruff2Unison:
             graceNotesDuration = (scaleAdjustForNon44 * 1400 / (100 / mostRecentTempo.bpm)).round();
-            print('graceNotesDuration for ruff2: $graceNotesDuration at $mostRecentTempo');
+            //print('graceNotesDuration for ruff2: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
@@ -815,7 +815,7 @@ class Score {
             graceNotesDuration = (scaleAdjustForNon44 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             // graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             //graceNotesDuration = (2 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
-            print('graceNotesDuration for ruff3: $graceNotesDuration at $mostRecentTempo');
+            //print('graceNotesDuration for ruff3: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration; // at slow tempos coming in too late
             note.noteOffDeltaTimeShift += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
