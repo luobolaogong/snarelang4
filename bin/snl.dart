@@ -14,6 +14,9 @@ import 'package:snarelang4/snarelang4.dart';
 /// Also, study this: https://github.com/truj/midica
 /// which appears to be a Java app that has an interface but can be command line.
 ///
+/// For Midi info, might wanna check out the javax.sound.midi stuff.  It's possible
+/// that the Dart midi stuff comes from there.  No, probably javascript library.
+///
 /// This is good for doing new Dart things: https://dart.dev/codelabs/dart-cheatsheet
 ///
 /// TODO

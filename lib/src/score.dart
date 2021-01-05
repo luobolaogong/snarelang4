@@ -344,28 +344,6 @@ class Score {
         continue;
       }
       var note = element as Note;
-      // this should be a function of current velocity, not a constant increase.
-      // Less as you get louder
-      // Fix this later!
-      // Wonder why this isn't in the dynamic.dart file
-      // switch (note.articulation) {
-      //   case NoteArticulation.tenuto: // '_'
-      //     // note.velocity += 16;
-      //     // note.velocity += 6;
-      //     // note.velocity += 5;
-      //   note.velocity = adjustVelocityByDynamicAndArticulation(note);
-      //     break;
-      //   case NoteArticulation.accent: // '>'
-      //     // note.velocity += 32;
-      //     // note.velocity += 12;
-      //     note.velocity += 15;
-      //     break;
-      //   case NoteArticulation.marcato: // '^'
-      //     // note.velocity += 60;
-      //     // note.velocity += 20;
-      //     note.velocity += 30;
-      //     break;
-      // }
       if (note.articulation != null) {
         //print('Hey watchit, because we already did note ramp calculations to set velocities, so the following should account for velocities, not dynamics.');
         log.finest('\t\tthis note has an articulation (${note.articulation}), and dynamic (${note.dynamic}), and it has current velocity of ${note.velocity}');
@@ -773,7 +751,7 @@ class Score {
         switch (note.noteType) {
           case NoteType.flamLeft:
           case NoteType.flamRight:
-          case NoteType.flamUnison:
+          // case NoteType.flamUnison:
             // graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             //print('graceNotesDuration for flam: $graceNotesDuration at $mostRecentTempo');
@@ -784,7 +762,7 @@ class Score {
             break;
           case NoteType.dragLeft:
           case NoteType.dragRight:
-          case NoteType.dragUnison:
+          // case NoteType.dragUnison:
             // graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
             graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
             //print('graceNotesDuration for drag: $graceNotesDuration at $mostRecentTempo');
@@ -794,7 +772,7 @@ class Score {
             break;
           case NoteType.ruff2Left:
           case NoteType.ruff2Right:
-          case NoteType.ruff2Unison:
+          // case NoteType.ruff2Unison:
             graceNotesDuration = (scaleAdjustForNon44 * 1400 / (100 / mostRecentTempo.bpm)).round();
             //print('graceNotesDuration for ruff2: $graceNotesDuration at $mostRecentTempo');
             previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
@@ -805,7 +783,7 @@ class Score {
           case NoteType.ruff3Right:
           case NoteType.ruff3AltLeft:
           case NoteType.ruff3AltRight:
-          case NoteType.ruff3Unison: // hey I think these numbers are not right.
+          // case NoteType.ruff3Unison: // hey I think these numbers are not right.
             // A ruff3Right gracenotes duration is 0.1442s on the snare, and 0.1323s on a pad.  Average: 0.1382s.
             // With the current formula, at 60bpm in 4/4 time, the number to use is 1290, it seems.  Hmmmmm, that's close
             // At 120bpm the number is twice that (2580).  Seems to me we could use the actual milliseconds, assume it's at
@@ -869,7 +847,16 @@ Parser scoreParser = ((commentParser | markerParser | textParser | trackParser |
 /// So, it's 'track <name>'
 enum TrackId {
   snare,
-  unison, // snareEnsemble
+  snare1,
+  snare2,
+  snare3,
+  snare4,
+  snare5,
+  snare6,
+  snare7,
+  snare8,
+  snare9,
+  //unison, // snareEnsemble
   pad,
   tenor, // possibly pitch based notes rather than having tenor1, tenor2, ...
   bass,
@@ -883,21 +870,97 @@ class Track {
   TrackId id; // the default should be snare.  How do you do that?
   // Maybe this will be expanded to include more than just TrackId, otherwise just an enum
   // and not a class will do, right?  I mean, why doesn't Dynamic do it this way?
-
+  int delay; // new 1/4/2021  representing the number of milliseconds delay in the case where we have 9 snares in a line, and the listener is in the middle.
   String toString() {
-    return 'Track: id: $id';
+    return 'Track: id: $id, delay: $delay ms';
+  }
+  Track() {
+    id = TrackId.snare; // good idea????
+    delay = 0;
   }
 }
 
 ///
 /// trackParser
-///
-final trackId = (letter() & word().star()).flatten();
-Parser trackParser = ((string('/track')|(string('/staff'))).trim() & trackId).trim().map((value) {
+/// 2021, changing to "/track <name> [delay]"
+// I have failed to get Pettit Parser to parse a simple thing, so I'm giving up for now.
+// I just wanted it to parse "track snare3 250", where <snare3> was some string, and 250 was
+// and optional integer.  So it should have been like this:
+// "track <name> [delay]"
+// which should have been
+// string('/track') & word() & (digit().plus()).optional()
+// and then to handle white space, maybe throw in some .trim() functions:
+// string('/track').trim() & word().trim() & (digit().plus().trim()).optional()
+// and then map it
+// (string('/track').trim() & word().trim() & (digit().plus().trim()).optional()).map((value) { ... }
+
+
+
+
+
+// final trackId = (letter() & word().star()).flatten();
+// final trackDelay = (digit().star()).flatten();
+// // final intermediate = ((string('/track')|(string('/staff'))).trim() & trackId).trim();
+// // final intermediate = ((string('/track')|(string('/staff'))).trim() & trackId).trim();
+// final intermediate = (
+//     (((string('/track') | string('/staff')).trim()).seq(trackId)).seq(trackDelay.optional())
+// ).trim();
+// Parser trackParser = intermediate.map((value) {
+// //Parser trackParser = (((string('/track').or(string('/staff'))).seq(trackId).seq(trackDelay).optional())).map((value) {
+
+
+//final trackId = (letter() & word().star()).flatten();
+//Parser trackParser = ((string('/track')|(string('/staff'))).trim() & trackId).trim().map((value) {
+// Parser trackParser = (string('/track').trim() & word().plus().flatten() & (digit().plus().flatten().trim()).optional()).map((value) { // real close
+Parser trackParser = (    string('/track').trim()   &   word().plus().flatten()   &   digit().plus().flatten().trim().optional()     ).map((value) { // works, but maybe not best creates a null element.
+
+  //print('Maybe a Track object should also hold a time delay value so that the sound in the midi from snare1 takes longer to hit the ear than snare 5 which is in the middle');
+  print('In trackParser and value is -->$value<--');
   log.finest('In trackParser and value is -->$value<--');
   var track = Track();
   track.id = trackStringToId(value[1]);
+  print('hey value is $value and length is ${value.length}');
+  if (value.length > 2 && value[2] != null && int.parse(value[2]) != null) {
+    track.delay = int.parse(value[2]);
+    //print('hey in trackParser and track is $track');
+  }
+  else {
+    switch (track.id) {
+      case TrackId.snare1:
+        track.delay = 400;
+        break;
+      case TrackId.snare2:
+        track.delay = 300;
+        break;
+      case TrackId.snare3:
+        track.delay = 200;
+        break;
+      case TrackId.snare4:
+        track.delay = 100;
+        break;
+      case TrackId.snare5:
+      case TrackId.snare:
+        track.delay = 0;
+        break;
+      case TrackId.snare6:
+        track.delay = 110;
+        break;
+      case TrackId.snare7:
+        track.delay = 210;
+        break;
+      case TrackId.snare8:
+        track.delay = 310;
+        break;
+      case TrackId.snare9:
+        track.delay = 410;
+        break;
+      default:
+        log.info('Not setting any delay for this track.');
+        track.delay = 0; // unnecessary
+    }
+  }
   log.finest('Leaving trackParser returning value $track');
+  print('Leaving trackParser returning value $track');
   return track;
 });
 
@@ -907,8 +970,32 @@ TrackId trackStringToId(String trackString) {
     case 'snare':
       trackId = TrackId.snare;
       break;
-    case 'unison':
-      trackId = TrackId.unison;
+    case 'snare1':
+      trackId = TrackId.snare1;
+      break;
+    case 'snare2':
+      trackId = TrackId.snare2;
+      break;
+    case 'snare3':
+      trackId = TrackId.snare3;
+      break;
+    case 'snare4':
+      trackId = TrackId.snare4;
+      break;
+    case 'snare5':
+      trackId = TrackId.snare5;
+      break;
+    case 'snare6':
+      trackId = TrackId.snare6;
+      break;
+    case 'snare7':
+      trackId = TrackId.snare7;
+      break;
+    case 'snare8':
+      trackId = TrackId.snare8;
+      break;
+    case 'snare9':
+      trackId = TrackId.snare9;
       break;
     case 'pad':
       trackId = TrackId.pad;
@@ -941,8 +1028,26 @@ String trackIdToString(TrackId id) {
   switch (id) {
     case TrackId.snare:
       return 'snare';
-    case TrackId.unison:
-      return 'unison';
+    case TrackId.snare1:
+      return 'snare1';
+    case TrackId.snare2:
+      return 'snare2';
+    case TrackId.snare3:
+      return 'snare3';
+    case TrackId.snare4:
+      return 'snare4';
+    case TrackId.snare5:
+      return 'snare5';
+    case TrackId.snare6:
+      return 'snare6';
+    case TrackId.snare7:
+      return 'snare7';
+    case TrackId.snare8:
+      return 'snare8';
+    case TrackId.snare9:
+      return 'snare9';
+    // case TrackId.unison:
+    //   return 'unison';
     case TrackId.pad:
       return 'pad';
     case TrackId.tenor:

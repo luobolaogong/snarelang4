@@ -32,8 +32,6 @@ class NoteDuration { // change this to Duration if possible, which conflicts, I 
 }
 
 num beatFractionToTicks(num beatFraction) {
-  //int ticksPerBeat = 10080
-  // var durationInTicks = (Midi.ticksPerBeat * beatFraction).floor(); // why not .round()?
   num durationInTicks = (Midi.ticksPerBeat * beatFraction).round();
 //  var durationInTicks = (4 * Midi.ticksPerBeat * secondNumber / firstNumber).floor(); // why not .round()?
   return durationInTicks;
@@ -43,15 +41,15 @@ num beatFractionToTicks(num beatFraction) {
 enum NoteType { // I think I can change this to "Type", because I don't think it's a keyword, but maybe it is
   tapRight,
   tapLeft,
-  tapUnison,
+  //tapUnison,
   flamRight, // in the future I'll have to record a much fatter flam to match how James plays them
   flamLeft,
-  flamUnison,
+  //flamUnison,
   openDragRight, // not a 2-stroke ruff, and not a dead drag.  No recording yet
   openDragLeft,
   dragRight,
   dragLeft,
-  dragUnison,
+  //dragUnison,
   buzzRight, // this can be looped
   buzzLeft, // this can be looped
   ruff3AltLeft,
@@ -61,10 +59,10 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   // tuzzUnison,
   ruff2Left, // how often do these show up?  Prob almost never.  Instead, an "open drag"
   ruff2Right,
-  ruff2Unison,
+  //ruff2Unison,
   ruff3Left,
   ruff3Right,
-  ruff3Unison,
+  //ruff3Unison,
   roll, // prob need to add roll recordings for snare and pad.  Currently only have SLOT recording I think
   tenorLeft,
   tenorRight,
@@ -179,188 +177,137 @@ class Note {
 
 
 
-  void setNoteNumber(Voice voice, bool loopBuzzes, bool usePadSoundFont) {
-    // if (noteType == NoteType.rest) {
-    //   velocity = 0; // new, nec?
-    // }
-
+  // void setNoteNumber(Voice voice, bool loopBuzzes, bool usePadSoundFont, int snareNumber) {
+  void setNoteNumber(bool loopBuzzes, bool usePadSoundFont, int snareNumber) {
+    // Hey not all notes are snare notes, so handle snare notes differently here.
+    if (snareNumber == 0) {
+      snareNumber = 5;
+    }
 
     // Maybe this should be put into Note, even though it's a MIDI thing.
-    //var noteNumber;
     // This stuff should be in a table, and be a mapping
-    switch (noteType) {
+    switch (noteType) { // hey noteType, would know if this is a snare????  And where is noteType coming from anyway?
       case NoteType.tapRight:
-        // noteNumber = 60;
-        noteNumber = 127;
-        // if (voice == Voice.unison) { // get rid of this voice stuff and just make the unison its own noteType
-        //   noteNumber = 20;
-        // }
+        noteNumber = 7;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 127;
         break;
-    // case NoteType.tapUnison:
-    //   noteNumber = 20;
-    //   break;
       case NoteType.tapLeft:
-        noteNumber = 126;
-        // noteNumber = 70;
-        // if (voice == Voice.unison) {
-        //   noteNumber = 30;
-        // }
+        noteNumber = 1;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 126;
         break;
-    // case NoteType.flamUnison:
-    //   noteNumber = 21;
-    //   break;
       case NoteType.flamRight:
-        noteNumber = 125;
-        // noteNumber = 61;
-        // if (voice == Voice.unison) {
-        //   noteNumber = 21;
-        // }
-        // test.  A positive number pushes the flam back so it's late.  But a neg number isn't allowed,
-        // so seems that the previous note's duration has to be shortened.  But what if a flam is the first
-        // note of a score?  Nothing before it to shave off.  Can the sound font compensate for this?????
-        // graceOffset = 1234;
+        noteNumber = 8;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 125;
         break;
       case NoteType.flamLeft:
-        noteNumber = 124;
-        // noteNumber = 71;
-        // if (voice == Voice.unison) {
-        //   noteNumber = 31;
-        // }
-        // graceOffset = 1234; // test
+        noteNumber = 2;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 124;
         break;
-    // case NoteType.dragUnison:
-    //   noteNumber = 21; // wrong, but don't have a drag recorded yet by SLOT
-    //   break;
       case NoteType.dragRight:
-        noteNumber = 123;
-        // noteNumber = 72; // temp until find out soundfont problem
-        // if (voice == Voice.unison) {
-        //   noteNumber = 21;// wrong, but don't have a drag recorded yet by SLOT
-        // }
+        noteNumber = 9;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 123;
         break;
       case NoteType.dragLeft:
-        noteNumber = 122;
-        // noteNumber = 72;
-        // if (voice == Voice.unison) {
-        //   noteNumber = 31;// wrong, but don't have a drag recorded yet by SLOT
-        // }
+        noteNumber = 3;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 122;
         break;
-      case NoteType.tenorRight:
-        noteNumber = 109;
-        // noteNumber = 16;
-        break;
-      case NoteType.tenorLeft:
-        noteNumber = 108;
-        // noteNumber = 16;
-        break;
-      case NoteType.bassRight:
-        noteNumber = 111; // temp until find out soundfont problem
-        // noteNumber = 10; // temp until find out soundfont problem
-        break;
-      case NoteType.bassLeft:
-        noteNumber = 110;
-        // noteNumber = 10;
-        break;
-    // case NoteType.rollUnison:
-    //   noteNumber = 23; // this one is looped.  This is called RollSlot
-    //   break;
       case NoteType.buzzRight:
-        noteNumber = 121;
-        // noteNumber = 63;
-        // if (loopBuzzes) {
-        //   noteNumber = 67; // this one is looped but not quick enough?
-        // }
-        // if (voice == Voice.unison) {
-        //   noteNumber = 23;
-        // }
+        noteNumber = 10;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 121;
         break;
       case NoteType.buzzLeft:
-      // If loop, add 4 to be 77
-        noteNumber = 120;
-        // noteNumber = 73;
-        // if (loopBuzzes) {
-        //   noteNumber = 77; // this one is looped, but not quick enough????
-        // }
-        // if (voice == Voice.unison) {
-        //   noteNumber = 33;
-        // }
+        noteNumber = 4;
+        noteNumber += ((snareNumber - 1) * 12);
         break;
-    // Later add SLOT Tuzzes, they have lots in the recording
-      case NoteType.ruff3AltRight:
-        noteNumber = 117; // wrong.  For now just copying the "swiss ruff" which doesn't alternate
-        break;
-      case NoteType.ruff3AltLeft:
-        noteNumber = 116; // wrong, for now just copying the regular 3 stroke ruff
-        break;
-      // case NoteType.tuzzRight:
-      //   noteNumber = 119;
-      //   // noteNumber = 64;
-      //   // if (voice == Voice.unison) {
-      //   //   noteNumber = 24;// wrong
-      //   // }
+      // case NoteType.ruff3AltRight:
+      //   noteNumber = 117; // wrong.  For now just copying the "swiss ruff" which doesn't alternate
       //   break;
-      // case NoteType.tuzzLeft:
-      //   noteNumber = 118;
-      //   // noteNumber = 74;
-      //   // if (voice == Voice.unison) {
-      //   //   noteNumber = 34;// wrong
-      //   // }
+      // case NoteType.ruff3AltLeft:
+      //   noteNumber = 116; // wrong, for now just copying the regular 3 stroke ruff
       //   break;
       case NoteType.ruff2Right:
-        noteNumber = 117;
-        // noteNumber = 65;
+        noteNumber = 11;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 117;
         break;
       case NoteType.ruff2Left:
-        noteNumber = 116;
-        // noteNumber = 75;
+        noteNumber = 5;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 116;
         break;
       case NoteType.ruff3Right:
-        noteNumber = 115;
-        // noteNumber = 66;
+        noteNumber = 11;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 115;
         break;
       case NoteType.ruff3Left:
-        noteNumber = 114;
-        // noteNumber = 76;
+        noteNumber = 6;
+        noteNumber += ((snareNumber - 1) * 12);
+        // noteNumber = 114;
         break;
-      case NoteType.roll:
-        noteNumber = 113;
-        // noteNumber = 40;
-        // if (voice == Voice.unison) {
-        //   noteNumber = 37;// wrong
-        // }
+      // case NoteType.roll:
+      //   noteNumber = 113;
+      //   break;
+      case NoteType.tenorRight:
+        noteNumber = 122;
+        // noteNumber = 109;
+        break;
+      case NoteType.tenorLeft:
+        noteNumber = 121;
+        // noteNumber = 108;
+        break;
+      case NoteType.bassRight:
+        noteNumber = 124; // temp until find out soundfont problem
+        // noteNumber = 111; // temp until find out soundfont problem
+        break;
+      case NoteType.bassLeft:
+        noteNumber = 123;
+        // noteNumber = 110;
         break;
       case NoteType.met: // new
-        // noteNumber = 1;
-        noteNumber = 112;
+        // noteNumber = 112;
+        noteNumber = 126;
         break;
       case NoteType.rest:
-        // noteNumber = 99; // see if this helps stop blowups when writing
         noteNumber = 0;
         break;
       default:
         log.fine('noteOnNoteOff, What the heck was that note? $noteType');
     }
 
+    // Adjust the 'bank' or whatever by the snare number.  They're all 12 numbers away
+    // from the previous or next snare.  Snares 1 - 9.  5 is in the middle.
+    //noteNumber += ((snareNumber - 1) * 12); // but only if it's a snare, right?
+
+
     // FIX THIS LATER WHEN SOUND FONT HAS SOFT/MED/LOUD RECORDINGS.
-    if (soundFontHasSoftMediumLoudRecordings) {
-      //
-      // This is new, to take advantage of the 3 different volume levels in the recordings, which were separated by 10 note numbers.
-      //
-      if (velocity < 50) {
-        log.finer('Note velocity is ${velocity}, so switched to quiet recording.');
-        noteNumber -= 10;
-      }
-      else if (velocity > 100) {
-        log.finer('Note velocity is ${velocity}, so switched to loud recording.');
-        noteNumber += 10;
-      }
-      else {
-        log.finer('Note velocity is ${velocity}, so did not switch recording.');
-      }
-    }
+    // if (soundFontHasSoftMediumLoudRecordings) {
+    //   //
+    //   // This is new, to take advantage of the 3 different volume levels in the recordings, which were separated by 10 note numbers.
+    //   //
+    //   if (velocity < 50) {
+    //     log.finer('Note velocity is ${velocity}, so switched to quiet recording.');
+    //     noteNumber -= 10;
+    //   }
+    //   else if (velocity > 100) {
+    //     log.finer('Note velocity is ${velocity}, so switched to loud recording.');
+    //     noteNumber += 10;
+    //   }
+    //   else {
+    //     log.finer('Note velocity is ${velocity}, so did not switch recording.');
+    //   }
+    // }
 
     if (usePadSoundFont) {
-      noteNumber -= 20;
+      noteNumber += 108;
+      // noteNumber -= 20;
     }
     return;
   }
@@ -467,12 +414,6 @@ Parser typeParser = pattern('TtFfDdZzXxYyVvRMNnBbr.').trim().map((value) { // tr
     case 'x':
       noteType = NoteType.ruff3AltLeft;
       break;
-    // case 'X': // The tuzz isn't being used any more, so it's being removed and replaced by alternating 3-stroke ruff
-    //   noteType = NoteType.tuzzRight;
-    //   break;
-    // case 'x':
-    //   noteType = NoteType.tuzzLeft;
-    //   break;
     case 'Y':
       noteType = NoteType.ruff2Right;
       break;

@@ -10,6 +10,7 @@ bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sou
 /// https://www.mixagesoftware.com/en/midikit/help/HTML/meta_events.html
 /// A midi spec: http://www.cs.cmu.edu/~music/cmsip/readings/Standard-MIDI-file-format-updated.pdf
 /// is based on https://github.com/gasman/jasmid, with no API documentation.
+/// Might also wanna look at javax.sound.midi library.  https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/package-summary.html
 ///
 /// A converter of a midi file to JSON:
 /// https://tonejs.github.io/Midi/
@@ -255,96 +256,97 @@ class Midi {
   //   return metronomeTrackEventsList;
   // }
 
-  // this is also not called
-  // Maybe will try to do the full track all at once, and not just the initial timesig and tempo, and filling in the rest later.  Thus the entire scoreElements
-  // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) { // check on "override" tempo.  Default tempo?
-  // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
-  List<MidiEvent> createTimingTrackZero(List scoreElements, Channel channel, CommandLine commandLine) { // no we don't want command line values, because they default to 4/4 84
-    log.fine('\n\t\tcreateTimingTrackZero(), and commandLine timeSig: ${commandLine.timeSig}, tempo: ${commandLine.tempo}, tempo scalar: ${commandLine.tempoScalar}');
-    log.fine('\t\tSo, tempo should be scaled to be: ${Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar)}');
-    //print('\t\t!!!!!!!!!!!!!!!!!!!!! WHAT????????????? But if 3/8 time, then tempo should be ${Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig)}');
-    var timeSig = commandLine.timeSig;
-    var tempo = commandLine.tempo;
+  // // this is also not called
+  // // Maybe will try to do the full track all at once, and not just the initial timesig and tempo, and filling in the rest later.  Thus the entire scoreElements
+  // // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) { // check on "override" tempo.  Default tempo?
+  // // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
+  // List<MidiEvent> createTimingTrackZero(List scoreElements, Channel channel, CommandLine commandLine) { // no we don't want command line values, because they default to 4/4 84
+  //   log.fine('\n\t\tcreateTimingTrackZero(), and commandLine timeSig: ${commandLine.timeSig}, tempo: ${commandLine.tempo}, tempo scalar: ${commandLine.tempoScalar}');
+  //   log.fine('\t\tSo, tempo should be scaled to be: ${Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar)}');
+  //   //print('\t\t!!!!!!!!!!!!!!!!!!!!! WHAT????????????? But if 3/8 time, then tempo should be ${Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig)}');
+  //   var timeSig = commandLine.timeSig;
+  //   var tempo = commandLine.tempo;
+  //
+  //   var timingTrackZeroMidiEventList = <MidiEvent>[];
+  //   // Could immediately add the overrideTimeSig and overrideTempo, I suppose.  But if the first non-comment event is a timesig or tempo, could just do those
+  //   addTimeSigChangeToTrackEventsList(timeSig, timingTrackZeroMidiEventList);
+  //   addTempoChangeToTrackEventsList(tempo, timingTrackZeroMidiEventList);
+  //   for (var element in scoreElements) { // is this right?
+  //     log.fine('element: $element');
+  //     if (element is TimeSig) {
+  //       addTimeSigChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
+  //       continue;
+  //     }
+  //     if (element is Tempo) {
+  //       addTempoChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
+  //       continue;
+  //     }
+  //     if (element is Note) {
+  //       log.warning('got a note, so do we just put in rests into this timing track?');
+  //       log.info('Note duration: ${element.duration}');
+  //       var restNote = Note();
+  //       restNote.articulation = element.articulation; // prob unnec
+  //       restNote.duration.firstNumber = element.duration.firstNumber;
+  //       restNote.duration.secondNumber = element.duration.secondNumber;
+  //       restNote.noteType = NoteType.rest;
+  //       restNote.velocity = 0;
+  //       restNote.dynamic = Dynamic.p; // what do you put for rest?
+  //       //restNote.noteNumber = 0; // what's the note number for a rest?  0?  99?  Gets assigned later.
+  //       restNote.noteOffDeltaTimeShift = 0;  // right?  This accounts for gracenotes, right?  Don't bother.
+  //       // addNoteOnOffToTrackEventsList(restNote, channel.number, timingTrackZeroMidiEventList, false, false, Voice.solo); // what about voice?  Can ignore with null?
+  //       addNoteOnOffToTrackEventsList(restNote, channel.number, timingTrackZeroMidiEventList, false, false, snareNumber); // what about voice?  Can ignore with null?
+  //       continue;
+  //     }
+  //     log.warning('what was that element? $element');  // what if /track?  Messes things up?
+  //   }
+  //   return timingTrackZeroMidiEventList;
+  // }
 
-    var timingTrackZeroMidiEventList = <MidiEvent>[];
-    // Could immediately add the overrideTimeSig and overrideTempo, I suppose.  But if the first non-comment event is a timesig or tempo, could just do those
-    addTimeSigChangeToTrackEventsList(timeSig, timingTrackZeroMidiEventList);
-    addTempoChangeToTrackEventsList(tempo, timingTrackZeroMidiEventList);
-    for (var element in scoreElements) { // is this right?
-      log.fine('element: $element');
-      if (element is TimeSig) {
-        addTimeSigChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
-        continue;
-      }
-      if (element is Tempo) {
-        addTempoChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
-        continue;
-      }
-      if (element is Note) {
-        log.warning('got a note, so do we just put in rests into this timing track?');
-        log.info('Note duration: ${element.duration}');
-        var restNote = Note();
-        restNote.articulation = element.articulation; // prob unnec
-        restNote.duration.firstNumber = element.duration.firstNumber;
-        restNote.duration.secondNumber = element.duration.secondNumber;
-        restNote.noteType = NoteType.rest;
-        restNote.velocity = 0;
-        restNote.dynamic = Dynamic.p; // what do you put for rest?
-        //restNote.noteNumber = 0; // what's the note number for a rest?  0?  99?  Gets assigned later.
-        restNote.noteOffDeltaTimeShift = 0;  // right?  This accounts for gracenotes, right?  Don't bother.
-        addNoteOnOffToTrackEventsList(restNote, channel.number, timingTrackZeroMidiEventList, false, false, Voice.solo); // what about voice?  Can ignore with null?
-        continue;
-      }
-      log.warning('what was that element? $element');  // what if /track?  Messes things up?
-    }
-    return timingTrackZeroMidiEventList;
-  }
 
-
-  // Wow, currently not calling this at all.  I guess most of the time it isn't needed?  But maybe necessary if there are timesig or tempo changes
-  // DOUBT WE NEED ALL THESE PARAMS
-  // List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic) {
-  List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo) {
-    log.fine('In Midi.createTrackZeroMidiEventsList()');
-    //
-    // Do TrackZero
-    //
-    var trackZeroEventsList = <MidiEvent>[];
-
-    Tempo.fillInTempoDuration(tempo, timeSig);
-    // Add a track name for track zero, which maybe will be called TempoMap if it's used that way
-    var trackNameEvent = TrackNameEvent();
-    trackNameEvent.text = 'TrackZero';
-    trackNameEvent.deltaTime = 0;
-    trackZeroEventsList.add(trackNameEvent);
-    log.finer('Added track name event to track zero: ${trackNameEvent.text}');
-
-    // Add file creation meta data, like the program that created the midi file.
-    var textEvent = TextEvent();
-    textEvent.type = 'text';
-    textEvent.text = 'creator:';
-    trackZeroEventsList.add(textEvent);
-    textEvent = TextEvent();
-    textEvent.type = 'text';
-    textEvent.text = 'SnareLang'; // change name later, as we're not just doing snare, something unique saying "language", and ""any duration"
-    trackZeroEventsList.add(textEvent);
-
-    // Add a time signature event for this track, though this can happen anywhere, right?
-    // But I guess they need to have this before any notes.
-    var timeSignatureEvent = TimeSignatureEvent();
-    timeSignatureEvent.type = 'timeSignature';
-    timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects tempo????
-    timeSignatureEvent.denominator = timeSig.denominator;
-    timeSignatureEvent.metronome = 18; // for module synchronization
-    timeSignatureEvent.thirtyseconds = 8; // What used for?  Is this num 32nd's in a quarter, or in a beat?????????????????????????????????????????????????????
-    trackZeroEventsList.add(timeSignatureEvent);
-
-    //var noteChannel = 0; // Is this essentially a "tempo track", or a "control track"?
-
-    Tempo.fillInTempoDuration(tempo, timeSig);
-    addTempoChangeToTrackEventsList(tempo, trackZeroEventsList); // a bit strange.  Have to convert tempo to midi.  Can't just add tempo to track without converting
-    return trackZeroEventsList;
-  }
+  // // Wow, currently not calling this at all.  I guess most of the time it isn't needed?  But maybe necessary if there are timesig or tempo changes
+  // // DOUBT WE NEED ALL THESE PARAMS
+  // // List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic) {
+  // List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo) {
+  //   log.fine('In Midi.createTrackZeroMidiEventsList()');
+  //   //
+  //   // Do TrackZero
+  //   //
+  //   var trackZeroEventsList = <MidiEvent>[];
+  //
+  //   Tempo.fillInTempoDuration(tempo, timeSig);
+  //   // Add a track name for track zero, which maybe will be called TempoMap if it's used that way
+  //   var trackNameEvent = TrackNameEvent();
+  //   trackNameEvent.text = 'TrackZero';
+  //   trackNameEvent.deltaTime = 0;
+  //   trackZeroEventsList.add(trackNameEvent);
+  //   log.finer('Added track name event to track zero: ${trackNameEvent.text}');
+  //
+  //   // Add file creation meta data, like the program that created the midi file.
+  //   var textEvent = TextEvent();
+  //   textEvent.type = 'text';
+  //   textEvent.text = 'creator:';
+  //   trackZeroEventsList.add(textEvent);
+  //   textEvent = TextEvent();
+  //   textEvent.type = 'text';
+  //   textEvent.text = 'SnareLang'; // change name later, as we're not just doing snare, something unique saying "language", and ""any duration"
+  //   trackZeroEventsList.add(textEvent);
+  //
+  //   // Add a time signature event for this track, though this can happen anywhere, right?
+  //   // But I guess they need to have this before any notes.
+  //   var timeSignatureEvent = TimeSignatureEvent();
+  //   timeSignatureEvent.type = 'timeSignature';
+  //   timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects tempo????
+  //   timeSignatureEvent.denominator = timeSig.denominator;
+  //   timeSignatureEvent.metronome = 18; // for module synchronization
+  //   timeSignatureEvent.thirtyseconds = 8; // What used for?  Is this num 32nd's in a quarter, or in a beat?????????????????????????????????????????????????????
+  //   trackZeroEventsList.add(timeSignatureEvent);
+  //
+  //   //var noteChannel = 0; // Is this essentially a "tempo track", or a "control track"?
+  //
+  //   Tempo.fillInTempoDuration(tempo, timeSig);
+  //   addTempoChangeToTrackEventsList(tempo, trackZeroEventsList); // a bit strange.  Have to convert tempo to midi.  Can't just add tempo to track without converting
+  //   return trackZeroEventsList;
+  // }
 
 
   /// Add lists of events to tracks, and add the tracks to the list of midiTracks passed in.
@@ -370,7 +372,9 @@ class Midi {
     var loopBuzzes = commandLine.loopBuzzes; // silly.  just use commandLine.loopBuzzes, right?
     var trackNameEvent = TrackNameEvent();
     trackNameEvent.text = trackIdToString(commandLine.track.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
+    // print('Hey trackNameEvent.text is ${trackNameEvent.text}');
     trackNameEvent.deltaTime = 0;
+    var snareNumber;
 
     // Go through the elements, seeing what each one is, and add it to the current track if right kind of element.
     // Of course this is not yet written to midi.
@@ -387,12 +391,49 @@ class Midi {
         //   continue;
         // }
         log.finer('New Track element ${element.id}');
+        //print('New Track element ${element.id}');
         // do something here to change the patch or channel or something so the soundfont can be accessed correctly?
         if (element.id == TrackId.pad) { // this is kinda silly.  Pad should be an instrument
           usePadSoundFont = true;
         }
         else {
           usePadSoundFont = false;
+        }
+        // hack:
+        switch (element.id) {
+          case TrackId.snare:
+            snareNumber = 5;
+            break;
+          case TrackId.snare1:
+            snareNumber = 1;
+            break;
+          case TrackId.snare2:
+            snareNumber = 2;
+            break;
+          case TrackId.snare3:
+            snareNumber = 3;
+            break;
+          case TrackId.snare4:
+            snareNumber = 4;
+            break;
+          case TrackId.snare5:
+            snareNumber = 5;
+            break;
+          case TrackId.snare6:
+            snareNumber = 6;
+            break;
+          case TrackId.snare7:
+            snareNumber = 7;
+            break;
+          case TrackId.snare8:
+            snareNumber = 8;
+            break;
+          case TrackId.snare9:
+            snareNumber = 9;
+            break;
+          default:
+            print('Huh?  Whats this element.id?: ${element.id}');
+            break;
         }
         //
         // At this point we have a current track which may or may not have anything in it except maybe a track name event.
@@ -414,17 +455,17 @@ class Midi {
           trackNameEvent.deltaTime = 0;  // time since the previous event?
           trackEventsList.add(trackNameEvent);
           log.finer('Added track name: ${trackNameEvent.text}');
-          if (trackNameEvent.text == trackIdToString(TrackId.unison)) { // THIS IS A TOTAL HACK.  Clear up this Track/Track and Voice stuff.  Prob remove Voice, and make Unison an instrument
-            currentVoice = Voice.unison;
-          }
+          // if (trackNameEvent.text == trackIdToString(TrackId.unison)) { // THIS IS A TOTAL HACK.  Clear up this Track/Track and Voice stuff.  Prob remove Voice, and make Unison an instrument
+          //   currentVoice = Voice.unison;
+          // }
           //continue; // was here, moved down
         //}
         continue; // new here
       }
-      if (element is Voice) { // may get rid of Voice, since starting to develop tracks
-        currentVoice = element; // ????
-        continue; // new
-      }
+      // if (element is Voice) { // may get rid of Voice, since starting to develop tracks
+      //   currentVoice = element; // ????
+      //   continue; // new
+      // }
       if (element is Note) {
         // If the note is flam, drag, or ruff we should adjust placement of the note in the timeline so that the
         // principle part of the note is where it should go (and adjust after the note by the same difference.)
@@ -432,8 +473,8 @@ class Midi {
         // loop, probably, prior to this point, or maybe after.  And it's only for a snare staff/track.
         // And can't assume the previous element in the list was a note!  Could be a dynamic element, or tempo, etc.
         //
-        // addNoteOnOffToTrackEventsList(element, noteChannel, snareTrackEventsList, usePadSoundFont);
-        addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList, usePadSoundFont, loopBuzzes, currentVoice); // add track param?  // return value unused
+        // addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList, usePadSoundFont, loopBuzzes, currentVoice, snareNumber); // add track param?  // return value unused
+        addNoteOnOffToTrackEventsList(element, noteChannel, trackEventsList, usePadSoundFont, loopBuzzes, snareNumber); // the snare number is for the most recent track.  add track param?  // return value unused
         continue;
       }
       if (element is Tempo) {
@@ -588,15 +629,16 @@ class Midi {
   /// Clean this up later.  It's too long for one thing.
   ///
   /// And should we add rest notes to track zero so that we know where to do the timesig and tempo changes?
-  // double addNoteOnOffToTrackEventsList(Note note, int channel, List<MidiEvent> trackEventsList, bool usePadSoundFont) {
-  double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice) { // add track?
+  // double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice, int snareNumber) { // add track?
+  double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, snareNumber) { // add track?
     // var graceOffset = 0;
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
     }
 
     // Determine the noteNumber for the note.  The noteNumber determines what soundFont sample to play
-    note.setNoteNumber(voice, loopBuzzes, usePadSoundFont);
+    // note.setNoteNumber(voice, loopBuzzes, usePadSoundFont, snareNumber);
+    note.setNoteNumber(loopBuzzes, usePadSoundFont, snareNumber); // hey, maybe "note" knows what snare number it is, if it's a snare, right?  Prob.
 
       // // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
     var snareLangNoteNameValue = note.duration.firstNumber / note.duration.secondNumber; // is this right???????  A double?
