@@ -40,36 +40,6 @@ class CommandLine {
   static final timeSigMapIndex = 'timesig'; // --timesig --sig
   static final usePadSoundFontMapIndex = 'usepad'; // --pad
 
-  // CommandLine() {
-  //   print('in CommandLine constructor');
-  // }
-
-  // String toString() {
-    // print('fat bastard');
-    // print('inputFilesList: ${_inputFilesList}');
-    // print('outputMidiFile: $_outputMidiFile');
-    // print('tempo: $_tempo');
-    // print('tempoScalar: $_tempoScalar');
-    // print('track: $_track');
-    // print('dynamic: $_dynamic');
-    // print('timeSig: $_timeSig');
-    // print('loopBuzzes: $_loopBuzzes');
-    // print('usePadSoundFont: $_usePadSoundFont');
-  // }
-
-  // Not used yet.
-  // Map<String,dynamic> get map {
-  //   return {
-  //     'tempo': _tempo,
-  //     'tempoScalar': _tempoScalar,
-  //     'Track': _Track,
-  //     'Dynamic': _Dynamic,
-  //     'TimeSig': _TimeSig,
-  //     'loopBuzzes': _loopBuzzes,
-  //     'usePadSoundFont': _usePadSoundFont
-  //   };
-  // }
-
   List<String> get inputFilesList {
     return _inputFilesList;
   }

@@ -471,25 +471,6 @@ class Score {
     return null;
   }
 
-  // // Is this still needed?  Was it because tempos didn't have durations???????  Now they do????
-  // void fixIncompleteTempos(List elements, TimeSig defaultInitialTimeSig, Tempo defaultInitialTempo) {
-  //   log.finer('In fixIncompleteTempos(), but maybe dont need to any more');
-  //   var mostRecentTimeSig = TimeSig();
-  //   mostRecentTimeSig.numerator = defaultInitialTimeSig.numerator;
-  //   mostRecentTimeSig.denominator = defaultInitialTimeSig.denominator;
-  //   for (var element in elements) {
-  //     if (element is TimeSig) {
-  //       mostRecentTimeSig.numerator = element.numerator;
-  //       mostRecentTimeSig.denominator = element.denominator;
-  //       continue;
-  //     }
-  //     if (element is Tempo) {
-  //       Tempo.fillInTempoDuration(element, mostRecentTimeSig);
-  //       continue;
-  //     }
-  //   }
-  //   log.finer('Leavingt fixIncompleteTempos(), but maybe dont need to any more');
-  // }
 
   // check that this does what I think it is supposed to do
   void scaleTempos(CommandLine commandLine) {
@@ -696,11 +677,9 @@ class Score {
 
 
         // The random value 200 is found by trial and error.  If smaller it doesn't sound as much of a line, and flams/drags/ruffs stand out and if too big, it's muddled.  So this is a quick setting, and depends on other factors.
-        note.deltaTimeDelayForRandomSnareLine = (scaleAdjustForNon44 * random.nextInt(200) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
-        print('\t\trandomDelayForANote: $randomDelayForANote');
-        //previousNote.deltaTimeDelayForRandomSnareLine -= randomDelayForANote;
-        //note.deltaTimeDelayForRandomSnareLine += randomDelayForANote;
-        //print('\t\tBut now previousNote is ${previousNote.deltaTimeDelayForRandomSnareLine} and current note is ${note.deltaTimeDelayForRandomSnareLine}');
+        // note.deltaTimeDelayForRandomSnareLine = (scaleAdjustForNon44 * random.nextInt(200) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+        note.deltaTimeDelayForRandomSnareLine = (scaleAdjustForNon44 * random.nextInt(150) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+        //print('\t\trandomDelayForANote: $randomDelayForANote');
 
 
 
@@ -947,44 +926,16 @@ class Track {
   TrackId id; // the default should be snare.  How do you do that?
   // Maybe this will be expanded to include more than just TrackId, otherwise just an enum
   // and not a class will do, right?  I mean, why doesn't Dynamic do it this way?
-  int delay; // new 1/4/2021  representing the number of milliseconds delay in the case where we have 9 snares in a line, and the listener is in the middle.
+  //int delay; // new 1/4/2021  representing the number of milliseconds delay in the case where we have 9 snares in a line, and the listener is in the middle.
   String toString() {
-    return 'Track: id: $id, delay: $delay ms';
+    // return 'Track: id: $id, delay: $delay ms';
+    return 'Track: id: $id';
   }
   Track() {
     id = TrackId.snare; // good idea????
-    delay = 0;
+    //delay = 0;
   }
 }
-
-///
-/// trackParser
-/// 2021, changing to "/track <name> [delay]"    // update, prob won't use delay.  Will use random delays per note basis.
-// I have failed to get Pettit Parser to parse a simple thing, so I'm giving up for now.
-// I just wanted it to parse "track snare3 250", where <snare3> was some string, and 250 was
-// and optional integer.  So it should have been like this:
-// "track <name> [delay]"
-// which should have been
-// string('/track') & word() & (digit().plus()).optional()
-// and then to handle white space, maybe throw in some .trim() functions:
-// string('/track').trim() & word().trim() & (digit().plus().trim()).optional()
-// and then map it
-// (string('/track').trim() & word().trim() & (digit().plus().trim()).optional()).map((value) { ... }
-
-
-
-
-
-// final trackId = (letter() & word().star()).flatten();
-// final trackDelay = (digit().star()).flatten();
-// // final intermediate = ((string('/track')|(string('/staff'))).trim() & trackId).trim();
-// // final intermediate = ((string('/track')|(string('/staff'))).trim() & trackId).trim();
-// final intermediate = (
-//     (((string('/track') | string('/staff')).trim()).seq(trackId)).seq(trackDelay.optional())
-// ).trim();
-// Parser trackParser = intermediate.map((value) {
-// //Parser trackParser = (((string('/track').or(string('/staff'))).seq(trackId).seq(trackDelay).optional())).map((value) {
-
 
 //final trackId = (letter() & word().star()).flatten();
 //Parser trackParser = ((string('/track')|(string('/staff'))).trim() & trackId).trim().map((value) {
@@ -992,52 +943,13 @@ class Track {
 Parser trackParser = (    string('/track').trim()   &   word().plus().flatten()   &   digit().plus().flatten().trim().optional()     ).map((value) { // works, but maybe not best creates a null element.
 
   //print('Maybe a Track object should also hold a time delay value so that the sound in the midi from snare1 takes longer to hit the ear than snare 5 which is in the middle');
-  print('In trackParser and value is -->$value<--');
+  //print('In trackParser and value is -->$value<--');
   log.finest('In trackParser and value is -->$value<--');
   var track = Track();
   track.id = trackStringToId(value[1]);
-  print('hey value is $value and length is ${value.length}');
-  if (value.length > 2 && value[2] != null && int.parse(value[2]) != null) {
-    track.delay = int.parse(value[2]);
-    //print('hey in trackParser and track is $track');
-  }
-  else {
-    switch (track.id) {
-      case TrackId.snare1:
-        track.delay = 400;
-        break;
-      case TrackId.snare2:
-        track.delay = 300;
-        break;
-      case TrackId.snare3:
-        track.delay = 200;
-        break;
-      case TrackId.snare4:
-        track.delay = 100;
-        break;
-      case TrackId.snare5:
-      case TrackId.snare:
-        track.delay = 0;
-        break;
-      case TrackId.snare6:
-        track.delay = 110;
-        break;
-      case TrackId.snare7:
-        track.delay = 210;
-        break;
-      case TrackId.snare8:
-        track.delay = 310;
-        break;
-      case TrackId.snare9:
-        track.delay = 410;
-        break;
-      default:
-        log.info('Not setting any delay for this track.');
-        track.delay = 0; // unnecessary
-    }
-  }
+  //print('hey value is $value and length is ${value.length}');
   log.finest('Leaving trackParser returning value $track');
-  print('Leaving trackParser returning value $track but not gunna use that delay');
+  //print('Leaving trackParser returning value $track but not gunna use that delay');
   return track;
 });
 

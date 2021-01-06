@@ -142,22 +142,6 @@ class Tempo {
     return newTempo;
   }
 
-  // static num fillInTempoDuration(Tempo modifyThisTempo, TimeSig timeSig) {
-  //   log.finest('fillInTempoDuration(), gunna make sure tempo noteDureation first and second have values');
-  //   if (modifyThisTempo.noteDuration.firstNumber == null || modifyThisTempo.noteDuration.secondNumber == null) {
-  //     if (timeSig.denominator == 8 && timeSig.numerator % 3 == 0) { // if timesig is 6/8, or 9/8 or 12/8, or maybe even 3/8, then it should be 8:3
-  //       modifyThisTempo.noteDuration.firstNumber = 8;
-  //       modifyThisTempo.noteDuration.secondNumber = 3;  // the beat for 6/8, 9/8, 12/8, 3/8 is a dotted quarter, which is 8:3
-  //     }
-  //     else {
-  //       modifyThisTempo.noteDuration.firstNumber ??= timeSig.denominator; // If timeSig is anything other than 3/8, 6/8, 9/8, 12/8, ...
-  //       modifyThisTempo.noteDuration.secondNumber ??= 1;
-  //     }
-  //   }
-  //   //return modifyThisTempo;
-  //   return modifyThisTempo.bpm; // what if null?
-  // }
-
   // This is to fix a tempo object when it's not complete, that is has some null values for some reason.
   // A tempo should have a "beat" designation.  Usually that's a quarter note.  Sometimes it's a half note.
   // It could be an eighth note in the case of 5/8, or 7/8, or 2/8, or any (non-multiple of 3)/8.

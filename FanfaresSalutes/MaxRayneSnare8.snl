@@ -34,7 +34,8 @@
 
 /marker P1L1
 >8F 16t T >8F 16T t  >8F >.  >16F T t T
-16t T >f t T t >8F /cresc 16Z . . .  . . . .
+//16t T >f t T t >8F /cresc 16Z . . .  . . . .
+16t T >f t T t >8F /cresc 24Z . . . . .   . . . . . .
 >8T /fff /mf >16t T >8F 16T t  >8F >.  >16F T t T
 16t _40F 20z . >16t      >40F 20z . >40t 20Z .  >4T r
 //12t _40F 20z . >24t      >40F 20z . >40t 20Z .  >4T r  // if want swung, and we don't

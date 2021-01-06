@@ -222,133 +222,6 @@ class Midi {
   }
 
 
-  // // What?  This isn't being called at all either?  Oh yeah, right.  This loops to create a track.  Okay, get rid of it.
-  // List<MidiEvent> createMidiEventsMetronomeTrack(int nBarsMetronome, Tempo tempo, Note note) {
-  //   var channel = 1; // ??????????????????????????  What's a channel?
-  //   // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
-  //   var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber); // is this right???????
-  //   //var randomGenerator = Random();
-  //   var metronomeTrackEventsList = <MidiEvent>[];
-  //   var totalNotes = nBarsMetronome * 4; // wrong, assumes 4/4, not 6/8
-  //   for (var metBeatCtr = 0; metBeatCtr < totalNotes; metBeatCtr++) {
-  //     //channel = randomGenerator.nextInt(4); // test to see if this does anything
-  //     var noteOnEvent = NoteOnEvent();
-  //     noteOnEvent.type = 'noteOn';
-  //     noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???
-  //     noteOnEvent.noteNumber = 60; // wrong, right is a right tap.  Let's have something special
-  //     noteOnEvent.velocity = note.velocity;
-  //     noteOnEvent.channel = channel;
-  //     metronomeTrackEventsList.add(noteOnEvent);
-  //     log.fine('createMidiEventsMetronomeTrack() added noteOnEvent $noteOnEvent to metronomeTrackEventsList');
-  //
-  //     var noteOffEvent = NoteOffEvent();
-  //     noteOffEvent.type = 'noteOff';
-  //     noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
-  //     noteOffEvent.noteNumber = 60;
-  //     // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
-  //     noteOffEvent.velocity = 0; // shouldn't this just be 0?
-  //     noteOffEvent.channel = channel;
-  //
-  //     metronomeTrackEventsList.add(noteOffEvent);
-  //     log.fine('createMidiEventsMetronomeTrack() added noteOffEvent $noteOffEvent to metronomeTrackEventsList');
-  //
-  //   }
-  //   return metronomeTrackEventsList;
-  // }
-
-  // // this is also not called
-  // // Maybe will try to do the full track all at once, and not just the initial timesig and tempo, and filling in the rest later.  Thus the entire scoreElements
-  // // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo overrideTempo) { // check on "override" tempo.  Default tempo?
-  // // List<MidiEvent> createTimingTrackZero(List scoreElements, TimeSig overrideTimeSig, Tempo tempo) { // check on "override" tempo.  Default tempo?
-  // List<MidiEvent> createTimingTrackZero(List scoreElements, Channel channel, CommandLine commandLine) { // no we don't want command line values, because they default to 4/4 84
-  //   log.fine('\n\t\tcreateTimingTrackZero(), and commandLine timeSig: ${commandLine.timeSig}, tempo: ${commandLine.tempo}, tempo scalar: ${commandLine.tempoScalar}');
-  //   log.fine('\t\tSo, tempo should be scaled to be: ${Tempo.scaleThis(commandLine.tempo, commandLine.tempoScalar)}');
-  //   //print('\t\t!!!!!!!!!!!!!!!!!!!!! WHAT????????????? But if 3/8 time, then tempo should be ${Tempo.fillInTempoDuration(commandLine.tempo, commandLine.timeSig)}');
-  //   var timeSig = commandLine.timeSig;
-  //   var tempo = commandLine.tempo;
-  //
-  //   var timingTrackZeroMidiEventList = <MidiEvent>[];
-  //   // Could immediately add the overrideTimeSig and overrideTempo, I suppose.  But if the first non-comment event is a timesig or tempo, could just do those
-  //   addTimeSigChangeToTrackEventsList(timeSig, timingTrackZeroMidiEventList);
-  //   addTempoChangeToTrackEventsList(tempo, timingTrackZeroMidiEventList);
-  //   for (var element in scoreElements) { // is this right?
-  //     log.fine('element: $element');
-  //     if (element is TimeSig) {
-  //       addTimeSigChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
-  //       continue;
-  //     }
-  //     if (element is Tempo) {
-  //       addTempoChangeToTrackEventsList(element, timingTrackZeroMidiEventList);
-  //       continue;
-  //     }
-  //     if (element is Note) {
-  //       log.warning('got a note, so do we just put in rests into this timing track?');
-  //       log.info('Note duration: ${element.duration}');
-  //       var restNote = Note();
-  //       restNote.articulation = element.articulation; // prob unnec
-  //       restNote.duration.firstNumber = element.duration.firstNumber;
-  //       restNote.duration.secondNumber = element.duration.secondNumber;
-  //       restNote.noteType = NoteType.rest;
-  //       restNote.velocity = 0;
-  //       restNote.dynamic = Dynamic.p; // what do you put for rest?
-  //       //restNote.noteNumber = 0; // what's the note number for a rest?  0?  99?  Gets assigned later.
-  //       restNote.noteOffDeltaTimeShift = 0;  // right?  This accounts for gracenotes, right?  Don't bother.
-  //       // addNoteOnOffToTrackEventsList(restNote, channel.number, timingTrackZeroMidiEventList, false, false, Voice.solo); // what about voice?  Can ignore with null?
-  //       addNoteOnOffToTrackEventsList(restNote, channel.number, timingTrackZeroMidiEventList, false, false, snareNumber); // what about voice?  Can ignore with null?
-  //       continue;
-  //     }
-  //     log.warning('what was that element? $element');  // what if /track?  Messes things up?
-  //   }
-  //   return timingTrackZeroMidiEventList;
-  // }
-
-
-  // // Wow, currently not calling this at all.  I guess most of the time it isn't needed?  But maybe necessary if there are timesig or tempo changes
-  // // DOUBT WE NEED ALL THESE PARAMS
-  // // List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo, Dynamic dynamic) {
-  // List<MidiEvent> createTrackZeroMidiEventsList(List elements, TimeSig timeSig, Tempo tempo) {
-  //   log.fine('In Midi.createTrackZeroMidiEventsList()');
-  //   //
-  //   // Do TrackZero
-  //   //
-  //   var trackZeroEventsList = <MidiEvent>[];
-  //
-  //   Tempo.fillInTempoDuration(tempo, timeSig);
-  //   // Add a track name for track zero, which maybe will be called TempoMap if it's used that way
-  //   var trackNameEvent = TrackNameEvent();
-  //   trackNameEvent.text = 'TrackZero';
-  //   trackNameEvent.deltaTime = 0;
-  //   trackZeroEventsList.add(trackNameEvent);
-  //   log.finer('Added track name event to track zero: ${trackNameEvent.text}');
-  //
-  //   // Add file creation meta data, like the program that created the midi file.
-  //   var textEvent = TextEvent();
-  //   textEvent.type = 'text';
-  //   textEvent.text = 'creator:';
-  //   trackZeroEventsList.add(textEvent);
-  //   textEvent = TextEvent();
-  //   textEvent.type = 'text';
-  //   textEvent.text = 'SnareLang'; // change name later, as we're not just doing snare, something unique saying "language", and ""any duration"
-  //   trackZeroEventsList.add(textEvent);
-  //
-  //   // Add a time signature event for this track, though this can happen anywhere, right?
-  //   // But I guess they need to have this before any notes.
-  //   var timeSignatureEvent = TimeSignatureEvent();
-  //   timeSignatureEvent.type = 'timeSignature';
-  //   timeSignatureEvent.numerator = timeSig.numerator; // how are these used in a midi file?  Affects tempo????
-  //   timeSignatureEvent.denominator = timeSig.denominator;
-  //   timeSignatureEvent.metronome = 18; // for module synchronization
-  //   timeSignatureEvent.thirtyseconds = 8; // What used for?  Is this num 32nd's in a quarter, or in a beat?????????????????????????????????????????????????????
-  //   trackZeroEventsList.add(timeSignatureEvent);
-  //
-  //   //var noteChannel = 0; // Is this essentially a "tempo track", or a "control track"?
-  //
-  //   Tempo.fillInTempoDuration(tempo, timeSig);
-  //   addTempoChangeToTrackEventsList(tempo, trackZeroEventsList); // a bit strange.  Have to convert tempo to midi.  Can't just add tempo to track without converting
-  //   return trackZeroEventsList;
-  // }
-
-
   /// Add lists of events to tracks, and add the tracks to the list of midiTracks passed in.
   /// For now, only one track is worked on at a time.  A new track is created when one of the elements
   /// is a Track element.  There would be a new track for each instrument, or ensemble.  Snare, snareUnison,
@@ -515,7 +388,7 @@ class Midi {
             snareNumber = 9;
             break;
           default:
-            print('Huh?  Whats this element.id?: ${thisTrack.id}');
+            //print('Huh?  Whats this element.id?: ${thisTrack.id}');
             break;
         }
         //
@@ -811,16 +684,16 @@ class Midi {
     noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?????????????????????????????????????????
     // This is total hack and guess.  Don't know if this will clause a slide of everything after this, or whether it's compensated for somehow
     // I think it compounds over time.  Needs adjustment for subsequent notes.
-    print('hey, note type is a ruff3Left: ${note.noteType == NoteType.ruff3Left}');
-    if (note.noteType == NoteType.ruff3Left || note.noteType == NoteType.ruff3Right || note.noteType == NoteType.ruff3AltLeft || note.noteType == NoteType.ruff3AltRight) {
-      print('NoteType: $note');
-    }
+    //print('hey, note type is a ruff3Left: ${note.noteType == NoteType.ruff3Left}');
+    // if (note.noteType == NoteType.ruff3Left || note.noteType == NoteType.ruff3Right || note.noteType == NoteType.ruff3AltLeft || note.noteType == NoteType.ruff3AltRight) {
+    //   print('NoteType: $note');
+    // }
     // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left && note.noteType != NoteType.ruff3Right) {
-    if (wantDrumLine && note.deltaTimeDelayForRandomSnareLine > 0) {
-      print('\t\t\tnote.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
-      noteOnEvent.deltaTime += note.deltaTimeDelayForRandomSnareLine;  // Also don't know if the units are right, or need to be scaled.
-      print('\t\t\t\tso now noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
-    }
+    // if (wantDrumLine && snareNumber != 5 && note.deltaTimeDelayForRandomSnareLine > 0) {
+    //   //print('\t\t\tnote.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
+    //   noteOnEvent.deltaTime += note.deltaTimeDelayForRandomSnareLine;  // Also don't know if the units are right, or need to be scaled.
+    //   //print('\t\t\t\tso now noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
+    // }
 
 
 
@@ -845,9 +718,9 @@ class Midi {
     noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
 
 
-    print('\t\t\t\t\tnote.deltaTimeShiftForGraceNotes is ${note.deltaTimeShiftForGraceNotes} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+    //print('\t\t\t\t\tnote.deltaTimeShiftForGraceNotes is ${note.deltaTimeShiftForGraceNotes} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
     noteOffEvent.deltaTime += note.deltaTimeShiftForGraceNotes; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
-    print('\t\t\t\t\t\tSo now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+    //print('\t\t\t\t\t\tSo now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
 
 
 
@@ -855,10 +728,10 @@ class Midi {
 
     // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left) {
     // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left && note.noteType != NoteType.ruff3Right) {
-    if (wantDrumLine && note.deltaTimeDelayForRandomSnareLine > 0) {
-      print('\t\t\tas before, note.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+    if (wantDrumLine && snareNumber != 5 && note.deltaTimeDelayForRandomSnareLine > 0) {
+      //print('\t\t\tas before, note.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
       noteOffEvent.deltaTime -= note.deltaTimeDelayForRandomSnareLine;
-      print('\t\t\t\tso now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+      //print('\t\t\t\tso now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
     }
 
 
