@@ -633,7 +633,83 @@ class Score {
     return newVelocity;
   }
 
+  ///
+  /// This is experimental.  The idea here is to help a snare line of up to
+  /// 9 snares sound like a snare line rather than a single snare, by applying
+  /// random amounts of inaccuracies in timing to notes.  Every note will have
+  /// an amount of delay, from 0 to X units.  Not sure what those units are.
+  /// You'd think it would be in milliseconds (1/1000 of a second, or 0.001s)
+  /// If playing at 120 bpm, a 32nd note is 0.03125s    A 64th note would be
+  /// 0.015625.  A 128th note would be  0.007812, or about 8 milliseconds.
+  /// So, I'd guess that errors in playing should be less than 8ms.  Of course
+  /// unfortunately midi doesn't take milliseconds.  I think it takes ticks, and
+  /// tick durations are based on tempo, I think.  So, that's not cool.  Anyway,
+  /// this method should probably just do a random number generation from 0 to 8
+  /// milliseconds to add to the note, and then subtract that same amount to the
+  /// other end, so it's not cumulative.  So maybe you add the random delay to
+  /// the NoteOnEvent.deltaTime, and subtract it off the NoteOffEvent.deltaTime.
+  /// Maybe I'll add those things to the Note class just for this experiment to make
+  /// it easier than dealing with durations or something.
+  void addRandomDelaysForSnareNotesForDrumLine(CommandLine commandLine) {
+    log.fine('In addRandomDelaysForSnareNotesForDrumLine()');
 
+    var random = Random();
+    var randomDelayForANote = 0;
+
+    //var previousNote = Note();
+    //previousNote.deltaTimeDelayForRandomSnareLine = 0;
+    Tempo mostRecentTempo;
+    TimeSig mostRecentTimeSig; // assuming we'll hit one before we hit a note.
+    num scaleAdjustForNon44 = 1.0;
+    for (var element in elements) {
+
+      if (element is TimeSig) {
+        mostRecentTimeSig = element;
+        if (mostRecentTimeSig.denominator == 1) { // total hack
+          scaleAdjustForNon44 = 4.0; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 2) { // total hack
+          scaleAdjustForNon44 = 2.0; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 8 && mostRecentTimeSig.numerator % 3 == 0) { // total hack
+          scaleAdjustForNon44 = 1.5; // total hack, and a big guess
+        }
+        else if (mostRecentTimeSig.denominator == 8 && mostRecentTimeSig.numerator % 3 != 0) { // total hack
+          scaleAdjustForNon44 = 0.5; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 16) { // total hack
+          scaleAdjustForNon44 = 0.25; // total hack
+        }
+        else {
+          scaleAdjustForNon44 = 1.0;
+        }
+      }
+
+      if (element is Tempo) {
+        mostRecentTempo = element;
+        continue;
+      }
+
+      else if (element is Note) {
+        var note = element as Note; // unnec cast, it says, but I want to
+
+
+        // The random value 200 is found by trial and error.  If smaller it doesn't sound as much of a line, and flams/drags/ruffs stand out and if too big, it's muddled.  So this is a quick setting, and depends on other factors.
+        note.deltaTimeDelayForRandomSnareLine = (scaleAdjustForNon44 * random.nextInt(200) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+        print('\t\trandomDelayForANote: $randomDelayForANote');
+        //previousNote.deltaTimeDelayForRandomSnareLine -= randomDelayForANote;
+        //note.deltaTimeDelayForRandomSnareLine += randomDelayForANote;
+        //print('\t\tBut now previousNote is ${previousNote.deltaTimeDelayForRandomSnareLine} and current note is ${note.deltaTimeDelayForRandomSnareLine}');
+
+
+
+        //previousNote = note; // probably wrong.  Just want to work with pointers
+        continue;
+      }
+    }
+    log.finest('Leaving addRandomDelaysForSnareNotesForDrumLine(), and updated notes to have delta time shifts to account for simulating an inexact drumline.');
+    return;
+  }
 
   /// This comment is also in midi.dart.  So change/summarize it there.
   ///
@@ -702,7 +778,7 @@ class Score {
 
     // just a wild stab to handle first note case in list
     var previousNote = Note();
-    previousNote.noteOffDeltaTimeShift = 0;
+    previousNote.deltaTimeShiftForGraceNotes = 0;
     //
     // Clean up this crap in non-prototype version
     //
@@ -756,8 +832,8 @@ class Score {
             graceNotesDuration = (scaleAdjustForNon44 * 180 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
             //print('graceNotesDuration for flam: $graceNotesDuration at $mostRecentTempo');
             //graceNotesDuration = (mostRecentTempo.noteDuration.secondNumber / mostRecentTempo.noteDuration.firstNumber) * .008 / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
-            previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
-            note.noteOffDeltaTimeShift += graceNotesDuration;
+            previousNote.deltaTimeShiftForGraceNotes -= graceNotesDuration;
+            note.deltaTimeShiftForGraceNotes += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
             break;
           case NoteType.dragLeft:
@@ -766,8 +842,8 @@ class Score {
             // graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
             graceNotesDuration = (scaleAdjustForNon44 * 250 / (100 / mostRecentTempo.bpm)).round();
             //print('graceNotesDuration for drag: $graceNotesDuration at $mostRecentTempo');
-            previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
-            note.noteOffDeltaTimeShift += graceNotesDuration;
+            previousNote.deltaTimeShiftForGraceNotes -= graceNotesDuration;
+            note.deltaTimeShiftForGraceNotes += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
             break;
           case NoteType.ruff2Left:
@@ -775,8 +851,8 @@ class Score {
           // case NoteType.ruff2Unison:
             graceNotesDuration = (scaleAdjustForNon44 * 1400 / (100 / mostRecentTempo.bpm)).round();
             //print('graceNotesDuration for ruff2: $graceNotesDuration at $mostRecentTempo');
-            previousNote.noteOffDeltaTimeShift -= graceNotesDuration;
-            note.noteOffDeltaTimeShift += graceNotesDuration;
+            previousNote.deltaTimeShiftForGraceNotes -= graceNotesDuration;
+            note.deltaTimeShiftForGraceNotes += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
             break;
           case NoteType.ruff3Left:
@@ -794,8 +870,8 @@ class Score {
             // graceNotesDuration = (2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             //graceNotesDuration = (2 * 2150 / (100 / mostRecentTempo.bpm)).round(); // duration is absolute, but have to work with tempo ticks or something
             //print('graceNotesDuration for ruff3: $graceNotesDuration at $mostRecentTempo');
-            previousNote.noteOffDeltaTimeShift -= graceNotesDuration; // at slow tempos coming in too late
-            note.noteOffDeltaTimeShift += graceNotesDuration;
+            previousNote.deltaTimeShiftForGraceNotes -= graceNotesDuration; // at slow tempos coming in too late
+            note.deltaTimeShiftForGraceNotes += graceNotesDuration;
             previousNote = note; // probably wrong.  Just want to work with pointers
             break;
           default: // a note without gracenotes, or a rest
@@ -882,7 +958,7 @@ class Track {
 
 ///
 /// trackParser
-/// 2021, changing to "/track <name> [delay]"
+/// 2021, changing to "/track <name> [delay]"    // update, prob won't use delay.  Will use random delays per note basis.
 // I have failed to get Pettit Parser to parse a simple thing, so I'm giving up for now.
 // I just wanted it to parse "track snare3 250", where <snare3> was some string, and 250 was
 // and optional integer.  So it should have been like this:
@@ -960,7 +1036,7 @@ Parser trackParser = (    string('/track').trim()   &   word().plus().flatten() 
     }
   }
   log.finest('Leaving trackParser returning value $track');
-  print('Leaving trackParser returning value $track');
+  print('Leaving trackParser returning value $track but not gunna use that delay');
   return track;
 });
 

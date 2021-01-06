@@ -373,8 +373,19 @@ class Midi {
     var trackNameEvent = TrackNameEvent();
     trackNameEvent.text = trackIdToString(commandLine.track.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
     // print('Hey trackNameEvent.text is ${trackNameEvent.text}');
-    trackNameEvent.deltaTime = 0;
+    trackNameEvent.deltaTime = 0;  // add track delay here?????
     var snareNumber;
+
+
+
+    // Experiment for snare line
+    // Experiment for snare line
+    Tempo mostRecentTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
+    num scaleAdjustForNon44 = 1.0;
+    TimeSig mostRecentTimeSig;
+
+
+
 
     // Go through the elements, seeing what each one is, and add it to the current track if right kind of element.
     // Of course this is not yet written to midi.
@@ -384,23 +395,95 @@ class Midi {
         // what, no continue;?
         continue; // new
       }
+
+
+
+
+
+
+
+      // Experiment for snare line
+      // Experiment for snare line
+      // Experiment for snare line
+      // Experiment for snare line
+      // Experiment for snare line
+      if (element is TimeSig) {
+        mostRecentTimeSig = element;
+        if (mostRecentTimeSig.denominator == 1) { // total hack
+          scaleAdjustForNon44 = 4.0; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 2) { // total hack
+          scaleAdjustForNon44 = 2.0; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 8 && mostRecentTimeSig.numerator % 3 == 0) { // total hack
+          scaleAdjustForNon44 = 1.5; // total hack, and a big guess
+        }
+        else if (mostRecentTimeSig.denominator == 8 && mostRecentTimeSig.numerator % 3 != 0) { // total hack
+          scaleAdjustForNon44 = 0.5; // total hack
+        }
+        else if (mostRecentTimeSig.denominator == 16) { // total hack
+          scaleAdjustForNon44 = 0.25; // total hack
+        }
+        else {
+          scaleAdjustForNon44 = 1.0;
+        }
+      }
+      if (element is Tempo) {
+        mostRecentTempo = element;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       if (element is Track) { // I do not trust the logic in this section.  Revisit later.  Does this mean that we'd better have a Track command at the start of a score?????????????  Bad idea/dependency
+        var thisTrack = element as Track;
         // // if (track.id == currentTrack.id || midiTracks.isEmpty) {
         // if (midiTracks.isEmpty) {
         //   print('In addMidiEventsToTracks and got a Track element, and is either same as current, or this track is empty, so doing nothing with it and skipping it.');
         //   continue;
         // }
-        log.finer('New Track element ${element.id}');
-        //print('New Track element ${element.id}');
+        log.finer('New Track element ${thisTrack.id}');
+        //print('New Track element ${thisTrack.id}');
         // do something here to change the patch or channel or something so the soundfont can be accessed correctly?
-        if (element.id == TrackId.pad) { // this is kinda silly.  Pad should be an instrument
+        if (thisTrack.id == TrackId.pad) { // this is kinda silly.  Pad should be an instrument
           usePadSoundFont = true;
         }
         else {
           usePadSoundFont = false;
         }
+
+        // Is this needed any more if we're not doing offset based on where the snare is in the line?  Doing random instead?????
+        // Or maybe there's just a little bit of effect, a real small amount?  It all depends on where the listener stands.  If
+        // standing in the same line at the end, it would probably be worst.  In the middle, half as bad.  100 feet in front of
+        // snare 5 might sound like one drum.  If I picture myself somewhere listening to a drum line, it would probably be 20
+        // feet in front of snare 5.  And if only 9 snares, then the time sound difference won't be much.  So, I think this is
+        // minimal, and the bigger difference is in individual NON-UNIFORM inaccuracies when playing.  So this is a note by note
+        // randomness thing, I think.
         // hack:
-        switch (element.id) {
+        switch (thisTrack.id) {
           case TrackId.snare:
             snareNumber = 5;
             break;
@@ -432,7 +515,7 @@ class Midi {
             snareNumber = 9;
             break;
           default:
-            print('Huh?  Whats this element.id?: ${element.id}');
+            print('Huh?  Whats this element.id?: ${thisTrack.id}');
             break;
         }
         //
@@ -442,23 +525,61 @@ class Midi {
         //
         if (trackEventsList.isNotEmpty) {
           var endOfTrackEvent = EndOfTrackEvent(); // this is new
-          endOfTrackEvent.deltaTime = 0;
+          endOfTrackEvent.deltaTime = 0;  // subtract off track delay here??????  Just an idea
           trackEventsList.add(endOfTrackEvent); // sure???????
           log.fine('addMidiEventsToTrack() added endOfTrackEvent $endOfTrackEvent to trackEventsList');
 
           midiTracks.add(trackEventsList);
           trackEventsList = <MidiEvent>[]; // start a new one
         }
-          var trackNameEvent = TrackNameEvent();
-          // trackNameEvent.text = trackIdToString(overrideTrack.id); // ??
-          trackNameEvent.text = trackIdToString(element.id); // ????????????????????????????????????????????????????????????????????????????????????????????????
-          trackNameEvent.deltaTime = 0;  // time since the previous event?
-          trackEventsList.add(trackNameEvent);
-          log.finer('Added track name: ${trackNameEvent.text}');
-          // if (trackNameEvent.text == trackIdToString(TrackId.unison)) { // THIS IS A TOTAL HACK.  Clear up this Track/Track and Voice stuff.  Prob remove Voice, and make Unison an instrument
-          //   currentVoice = Voice.unison;
-          // }
-          //continue; // was here, moved down
+        var trackNameEvent = TrackNameEvent();
+        // trackNameEvent.text = trackIdToString(overrideTrack.id); // ??
+        trackNameEvent.text = trackIdToString(thisTrack.id); // ????????????????????????????????????????????????????????????????????????????????????????????????
+
+
+
+        trackNameEvent.deltaTime = 0;  // time since the previous event?   Wonder if I can stick in the track delay here, for multiple snares
+
+
+
+
+
+
+        // I don't think this is working so well.  I think it has to be random delay, per note.
+        //
+        // // LET'S TRY IT!!!!!!!!!!!!!!!!!!!!!!!!
+        // // Well, it really doesn't sound like a line.  It sounds strange.  Perhaps need to detune some of the drums.
+        // //   var tempoScaledDelay = (0.11 * thisTrack.delay * scaleAdjustForNon44 / (100 / mostRecentTempo.bpm)).round();
+        //   var tempoScaledDelay = (0.1 * thisTrack.delay * scaleAdjustForNon44 / (100 / mostRecentTempo.bpm)).round();
+        //   print('\tHey, tempoScaledDelay is $tempoScaledDelay because most recent tempo is ${mostRecentTempo.bpm}');
+        //   trackNameEvent.deltaTime += tempoScaledDelay; // what's the units?  At 60bpm a delay of 1000 is almost the same as a 16th note, and at 30bpm it's twice as long.  So tempo sensitive.
+        //   // We don't want that.  So, scale it by the tempo.
+        //
+        //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        trackEventsList.add(trackNameEvent);
+        log.finer('Added track name: ${trackNameEvent.text}');
+        // if (trackNameEvent.text == trackIdToString(TrackId.unison)) { // THIS IS A TOTAL HACK.  Clear up this Track/Track and Voice stuff.  Prob remove Voice, and make Unison an instrument
+        //   currentVoice = Voice.unison;
+        // }
+        //continue; // was here, moved down
         //}
         continue; // new here
       }
@@ -487,11 +608,13 @@ class Midi {
         //Tempo.fillInTempoDuration(tempo, overrideTimeSig); // check on this.  If already has duration, what happens?
         // first one can be bpm==null, right?
         addTempoChangeToTrackEventsList(tempo, trackEventsList); // also add to trackzero?   hey, hey, hey, hey, tempo can have a duration first/second of null!!!!!!
+        mostRecentTempo = element; // hey if this works here, don't need to do it up above
         continue;
       }
       if (element is TimeSig) { // THIS IS WRONG.  SHOULD BE 2/2 for that tune in 2/2  not 2/4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
         // addTimeSigChangeToTrackEventsList(element, noteChannel, snareTrackEventsList);
         addTimeSigChangeToTrackEventsList(element, trackEventsList); // also add to trackzero?
+        mostRecentTimeSig = element; // hey if this works here, don't need to do it up above.
         continue;
       }
       if (element is Comment) {
@@ -520,7 +643,7 @@ class Midi {
     }
     // Is this necessary?  Was working fine without it.
     var endOfTrackEvent = EndOfTrackEvent(); // this is new too.  One above like it
-    endOfTrackEvent.deltaTime = 0;
+    endOfTrackEvent.deltaTime = 0; // subtract off track delay here??????????????
     trackEventsList.add(endOfTrackEvent); // quite sure???
 
     midiTracks.add(trackEventsList); // right?
@@ -629,6 +752,17 @@ class Midi {
   /// Clean this up later.  It's too long for one thing.
   ///
   /// And should we add rest notes to track zero so that we know where to do the timesig and tempo changes?
+  ///
+  /// And as of 2021/01/04 there's a new experimental thing to handle a drumline of 9 snares in a line, where
+  /// timing will be used to simulate sound delay from the outer snares to the center, to make the sound fatter,
+  /// which I think is part of the reason drumlines sound different than a single snare.  One reason anyway.
+  /// So this is an experiment.  And rather than adjusting every note played by that instrument, is it possible
+  /// to just do an offset at the very start before any note is played, or at the very first note?  And how are
+  /// these notes calculated, isn't it based off the previous note?  So, after you've adjusted the first note
+  /// then you don't adjust any more notes.
+  /// Also, we don't want this based on tempo.  We want an absolute time, right?  Of course.  But in playback
+  /// when the user speeds it up, that value probably shortens.  So, it's important for the tempo in the score
+  /// to be the target tempo whereby the delay is calculated.
   // double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice, int snareNumber) { // add track?
   double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, snareNumber) { // add track?
     // var graceOffset = 0;
@@ -658,9 +792,31 @@ class Midi {
     // what happens in this method?  Do we write to midi here?  No, looks like it's just written to a
     // list.  But, noteOnEvent and noteOffEvent are midi objects, not mine.
     //
+    // Something totally new now...2021 01 04 .... If we have a line of 9 snares, and the listener is in the middle,
+    // or on the middle plane, sound from the edges takes longer to get to that plane, and so to simulate that
+    // sound, we'd want to delay those outer snares in the balanced/panned midi so it sounds fatter.
+    // If we don't, every snare track sounds at the same time and then the result is just one louder snare in the middle.
+    //
     var noteOnEvent = NoteOnEvent();
     noteOnEvent.type = 'noteOn';
+
+
+
+
+
+    // Maybe we can add a value here so that outer snares play later: ???????????????  No, I think we want to go random values
     noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?????????????????????????????????????????
+    // This is total hack and guess.  Don't know if this will clause a slide of everything after this, or whether it's compensated for somehow
+    // I think it compounds over time.  Needs adjustment for subsequent notes.
+    if (note.deltaTimeDelayForRandomSnareLine > 0) {
+      print('\t\t\tnote.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
+      noteOnEvent.deltaTime += note.deltaTimeDelayForRandomSnareLine;  // Also don't know if the units are right, or need to be scaled.
+      print('\t\t\t\tso now noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
+    }
+
+
+
+
     // noteOnEvent.deltaTime = graceOffset; // Can you do a negative amount, and add the rest on the off note?
     noteOnEvent.noteNumber = note.noteNumber; // this was determined above by all that code
     noteOnEvent.velocity = note.velocity;
@@ -671,18 +827,33 @@ class Midi {
     var noteOffEvent = NoteOffEvent();
     noteOffEvent.type = 'noteOff';
 
+
+
+
     // noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
     // // var diff = note.postNoteShift + note.preNoteShift;
     // noteOffEvent.deltaTime += note.noteOffDeltaTimeShift; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
     noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
-    noteOffEvent.deltaTime += note.noteOffDeltaTimeShift; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
+
+
+    print('\t\t\t\t\tnote.deltaTimeShiftForGraceNotes is ${note.deltaTimeShiftForGraceNotes} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+    noteOffEvent.deltaTime += note.deltaTimeShiftForGraceNotes; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
+    print('\t\t\t\t\t\tSo now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+
+    if (note.deltaTimeDelayForRandomSnareLine > 0) {
+      print('\t\t\tas before, note.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+      noteOffEvent.deltaTime -= note.deltaTimeDelayForRandomSnareLine;
+      print('\t\t\t\tso now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+    }
+
+
     noteOffEvent.noteNumber = note.noteNumber;
     // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
     noteOffEvent.velocity = 0; // shouldn't this just be 0?
     noteOffEvent.channel = channelNumber;
 
     trackEventsList.add(noteOffEvent);
-    log.finest('addNoteOnOffToTrackEventsList() added endOffvent $noteOffEvent to trackEventsList');
+    log.finest('addNoteOnOffToTrackEventsList() added endOffEvent $noteOffEvent to trackEventsList');
 
     // By rounding, what fraction of a tick are we adding or subtracting to the set of notes?
     // If the number of ticks for this note should be 53.33333, but it gets rounded down to 53
@@ -696,7 +867,7 @@ class Midi {
     // wish I had 9th and 18th notes, which are triplets in triplets, so this is worth working on in
     // the future.
     //
-    num noteTicksAsDouble = 4 * ticksPerBeat / snareLangNoteNameValue;
+    num noteTicksAsDouble = 4 * ticksPerBeat / snareLangNoteNameValue; // round this?
     var diffTicksAsDouble = noteTicksAsDouble - noteOffEvent.deltaTime;
     cumulativeRoundoffTicks += diffTicksAsDouble;
 

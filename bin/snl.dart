@@ -195,6 +195,14 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   // Do grace notes
   score.adjustForGraceNotes(commandLine); // maybe do this similar to how applyShorthands is done
 
+
+  // Phase 6, experimental:
+  // Throw in random delays for snare notes to simulate a drumline rather than a perfect single snare drummer.
+  // if (wantDrumLineSimulation)
+  score.addRandomDelaysForSnareNotesForDrumLine(commandLine);
+
+
+
   return score;
 }
 

@@ -80,7 +80,8 @@ class Note {
   int velocity;
   Dynamic dynamic;
   int noteNumber;
-  int noteOffDeltaTimeShift;
+  int deltaTimeShiftForGraceNotes; // this is being used for gracenotes, and should probably be renamed to reflect that
+  int deltaTimeDelayForRandomSnareLine; // don't know how this relates to noteOffDeltaTimeShift
   //int midiNoteNumber; // experiment 9/20/2020  This would be the midi soundfont number, related to NoteType
   Note() {
     //print('in Note() constructor');
@@ -90,7 +91,8 @@ class Note {
     velocity = 0;
     //dynamic = Dynamic.mf; What if we leave this null so that a value can be assigned later according to command line value, or something else?
     noteNumber = 0; // for now, new 10/4/2020
-    noteOffDeltaTimeShift = 0;
+    deltaTimeShiftForGraceNotes = 0;
+    deltaTimeDelayForRandomSnareLine = 0;
   }
 
   String toString() {
