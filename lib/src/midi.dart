@@ -374,7 +374,7 @@ class Midi {
     trackNameEvent.text = trackIdToString(commandLine.track.id); // RIGHT????????????????????only useful if nothing specified at start of score, right?
     // print('Hey trackNameEvent.text is ${trackNameEvent.text}');
     trackNameEvent.deltaTime = 0;  // add track delay here?????
-    var snareNumber;
+    var snareNumber; // keep null if don't want drumline sound, and only one snare (5?) is specified.
 
 
 
@@ -765,6 +765,8 @@ class Midi {
   /// to be the target tempo whereby the delay is calculated.
   // double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice, int snareNumber) { // add track?
   double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, snareNumber) { // add track?
+    // For now assume that if snareNumber is not null, then we want the drumline sound
+    var wantDrumLine = snareNumber != null; ;
     // var graceOffset = 0;
     if (note.duration == null) {
       log.severe('note should not have a null duration.');
@@ -804,15 +806,22 @@ class Midi {
 
 
 
+
     // Maybe we can add a value here so that outer snares play later: ???????????????  No, I think we want to go random values
     noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?????????????????????????????????????????
     // This is total hack and guess.  Don't know if this will clause a slide of everything after this, or whether it's compensated for somehow
     // I think it compounds over time.  Needs adjustment for subsequent notes.
-    if (note.deltaTimeDelayForRandomSnareLine > 0) {
+    print('hey, note type is a ruff3Left: ${note.noteType == NoteType.ruff3Left}');
+    if (note.noteType == NoteType.ruff3Left || note.noteType == NoteType.ruff3Right || note.noteType == NoteType.ruff3AltLeft || note.noteType == NoteType.ruff3AltRight) {
+      print('NoteType: $note');
+    }
+    // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left && note.noteType != NoteType.ruff3Right) {
+    if (wantDrumLine && note.deltaTimeDelayForRandomSnareLine > 0) {
       print('\t\t\tnote.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
       noteOnEvent.deltaTime += note.deltaTimeDelayForRandomSnareLine;  // Also don't know if the units are right, or need to be scaled.
       print('\t\t\t\tso now noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
     }
+
 
 
 
@@ -840,11 +849,20 @@ class Midi {
     noteOffEvent.deltaTime += note.deltaTimeShiftForGraceNotes; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
     print('\t\t\t\t\t\tSo now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
 
-    if (note.deltaTimeDelayForRandomSnareLine > 0) {
+
+
+
+
+    // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left) {
+    // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left && note.noteType != NoteType.ruff3Right) {
+    if (wantDrumLine && note.deltaTimeDelayForRandomSnareLine > 0) {
       print('\t\t\tas before, note.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
       noteOffEvent.deltaTime -= note.deltaTimeDelayForRandomSnareLine;
       print('\t\t\t\tso now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
     }
+
+
+
 
 
     noteOffEvent.noteNumber = note.noteNumber;

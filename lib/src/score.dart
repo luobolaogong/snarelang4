@@ -362,8 +362,8 @@ class Score {
           break;
         case NoteType.flamLeft:
         case NoteType.flamRight:
-          // note.velocity += 16;
-          note.velocity += 10; // was 6
+          //note.velocity += 10; // was 6
+          note.velocity += 0; // was 6
           break;
         case NoteType.dragLeft:
         case NoteType.dragRight:
@@ -399,7 +399,8 @@ class Score {
           break;
         case NoteType.roll:
           break;
-        case NoteType.met:
+        case NoteType.metLeft:
+        case NoteType.metRight:
           // note.velocity -= 40;
           note.velocity -= 10;
           break;

@@ -68,7 +68,8 @@ enum NoteType { // I think I can change this to "Type", because I don't think it
   tenorRight,
   bassLeft,
   bassRight,
-  met,
+  metLeft,
+  metRight,
   rest,
   previousNoteDurationOrType
 }
@@ -166,8 +167,11 @@ class Note {
         break;
       case NoteType.roll:
         break;
-      case NoteType.met:
-        //noteType = NoteType.met;
+      case NoteType.metLeft:
+        noteType = NoteType.metRight;
+        break;
+      case NoteType.metRight:
+        noteType = NoteType.metLeft;
         break;
       case NoteType.rest:
         break;
@@ -273,7 +277,11 @@ class Note {
         noteNumber = 123;
         // noteNumber = 110;
         break;
-      case NoteType.met: // new
+      case NoteType.metLeft: // new
+        // noteNumber = 112;
+        noteNumber = 125;
+        break;
+      case NoteType.metRight: // new
         // noteNumber = 112;
         noteNumber = 126;
         break;
@@ -432,7 +440,10 @@ Parser typeParser = pattern('TtFfDdZzXxYyVvRMNnBbr.').trim().map((value) { // tr
       noteType = NoteType.roll;
       break;
     case 'M':
-      noteType = NoteType.met;
+      noteType = NoteType.metRight;
+      break;
+    case 'm': // I know it doesn't make sense to do M and m for left and right met.  They do sound slightly different, but should reserve for very different mets.
+      noteType = NoteType.metLeft;
       break;
     case 'B': // wrong to give an instrument just a note type like this because then you can't specify flams, rolls, and other strokes
       noteType = NoteType.bassRight;

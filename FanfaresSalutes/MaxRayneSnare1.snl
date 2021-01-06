@@ -102,8 +102,10 @@ _16F t T _f  _F t _F t   T _f _F t   _F t T T
 // PAGE 1 Part 2 SNARE  6/8 TIME @ 50 BPM
 // PAGE 1 Part 2 SNARE  6/8 TIME @ 50 BPM
 
->40T 20z . 24z . .  >40T 20z .  >40t 20z .  24z . .  . . .
->24T >. >.  >40t 20Z .   >40T 20z .   >40t 20z .  24z . .  . . .
+//>40T 20z . 24z . .  >40T 20z .  >40t 20z .  24z . .  . . .
+//>24T >. >.  >40t 20Z .   >40T 20z .   >40t 20z .  24z . .  . . .
+8r 8r 8r 8r 8r 8r
+8r 8r 8r 8r 8r 8r
 >40T 20z .      >36t 18Z >24t     >36T 18z >24T    >40t 20Z .    >40T 20z .    >24t . .
 >40T 20z . >40t 20Z .  >24T . .   >40t 20Z .  24z . .  . . .
 /marker P1L11Rpt
@@ -188,18 +190,6 @@ _36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z . 
 ^16T 32t t T T t t   T T t t T T t t
 ^16T t _F ^f   T _f ^F t
 ^16F 32t t T T t t   T T t t T T t t
-//^16T ^t 48T T t t ^24T    ^36t T T t t T T t t     // as written, of course wrong
-//^16T ^240:7t T T t t >24T  ^36t T T t t T T t t   // 2nd attempt, not bad
-//^20T ^20t 40T T t t >20T    ^20t 40T T t t T T t t // 3rd attempt, which makes sense to me, since it's based on 5lets
-//^16T ^64:3t 128:3T T t t >20T    ^20t  40T T t t T T t t  // 4th attempt, but this sounds more like they do it
-//^12T ^264:7t T T t t >T     ^t  T T t t    32T T t t  // 5th attempt
-
-//^12T ^40t T T t t >24T     ^36t  T T t t    T T t t  // 6th attempt
-//^12T ^36t T T t t >T     ^36t  T T t t    T T t t // 7th attempt
-//^12T ^36t T T t t >T     ^16T 128:3t T T t t >T  // 8th attempt
-//^16T ^32t T T t t ^T          ^36t  T T t t    T T t t // not too bad
-//^16T ^t 32T T t t  ^24T ^24t  48T T t t T T t t // probaby what Alex wanted, but smoothed it out
-//^12T ^40t T T t t ^24T  ^20t 40T T t t T T t t // Would be closer to swing, but only at slower tempo
 ^20T ^t 40T T t t ^20T  ^20t 40T T t t T T t t  // makes best mathematical sense
 
 /marker P2L7
@@ -254,7 +244,8 @@ _24T t t   ^T t t   _T t t      _32T . . .
 // incredibly James has a gap between the sextuplets.
 // Very common for him to put spaces in before an accent,
 // which means he speeds notes up before that
->16T . . . . .    >. . . . . _.   ^8:3T r
+//>16T . . . . .    >. . . . . _.   ^8:3T r
+^8:3r . . .
 
 /mf
 /marker P2L12
