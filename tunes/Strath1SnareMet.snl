@@ -1,0 +1,84 @@
+// "Strathspey" as played by the band on Oahu.
+// This setting/score is badly written, and I'm not going to take the time to figure out what they had in mind.
+
+/track snare5
+/channel 5
+/time 4/4
+/tempo 100    // not sure
+/ff
+1r
+
+/marker L1
+// count 3 in next line is hard to do, because it requires a fractional timing because it starts and ends on right
+// which means it's either 2 or 4 pulses depending on tempo.  If 3 it would work.
+//16:3F 32Z .   16:3T  16t   24Z . . . 12T  16:3t 16t
+// Therefore I'm changing the hand order to allow for 3 pluses
+16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
+16:3F 32Z .   16:3T  16t   16Z . . 16t  12T . .   // hand order issue here
+
+/marker L2
+16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
+16Z . . 16T 12t . >.   . . >.  4t
+
+/marker L1rpt
+16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
+16:3F 32Z .   16:3T  16t   16Z . . 16t  12T . .   // hand order issue here
+
+/marker L2rpt
+16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
+16Z . . T 12t . >.   . . >.  6t 12t
+
+
+/marker L3
+4D  16t 16Z . .   16:3t 16T  16:3f  32Z .
+4T  16:3t 16F  12t . .  16:3F 16t
+
+/marker L4
+16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
+16Z . . 16T 12t . >.   . . >.  6t 12t
+
+/marker L3rpt
+4D  16t 16Z . .   16:3t 16T  16:3f  32Z .
+4T  16:3t 16F  12t . .  16:3F 16t
+
+/marker L4rpt
+16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
+16Z . . 16T 12t . >.   . . >.  6t 12t
+
+
+
+
+
+
+
+/track met
+/channel 0
+/time 4/4
+/tempo 100
+
+/mf
+4M . 12M . . 4M
+
+/mp
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+

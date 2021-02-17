@@ -1,6 +1,15 @@
 import 'package:petitparser/petitparser.dart'; // defines Result
 import '../snarelang4.dart';
 ///
+/// "The tempo is specified as the Number of microseconds per quarter note, between 1 and 16777215.
+/// A value of 500000 (07 A1 20) corresponds to 120 quarter notes ("beats") per minute.
+/// To convert beats per minute to a Tempo value, take the quotient from dividing 60,000,000 by the beats per minute.
+/// In a format 0 file, the tempo changes are scattered throughout the one track.
+/// In format 1, the very first track should consist of only the tempo (and time signature)
+/// events so that it could be read by some device capable of generating a "tempo map".
+/// It is best not to place MIDI events in this track. In format 2, each track should begin
+/// with at least one initial tempo (and time signature) event."  (From https://www.mixagesoftware.com/en/midikit/help/HTML/meta_events.html)
+///
 /// Placing tempo events into a MIDI file is important, but to do accel's and rit's
 /// are not important for pipe band music, and therefore is less important than other
 /// development tasks.  Still, if it was easy, I'd do it.

@@ -18,33 +18,33 @@ import 'package:petitparser/petitparser.dart';
 /// the sound font recordings made of a group of drummers playing, rather than a single instrument
 /// recording.  I have my snare drum, and I'm adding on recordings from SLOT, as a group.
 /// So I want to be able to play a score where there are sections of solo and sections of unison.
-enum Voice {
-  solo,
-  unison
-}
-
-///
-/// VoiceParser
-///
-Parser voiceParser = (
-    string('/unison') |
-    string('/chips') |
-    string('/tutti') |
-    string('/solo') |
-    string('/tip')
-).trim().map((value) { // trim?  Yes!  Makes a difference
-  Voice voice;
-  switch (value) {
-    case '/unison':
-    case '/chips':
-    case '/tutti':
-      voice = Voice.unison;
-      break;
-    case '/solo':
-    case '/tip':
-      voice =  Voice.solo;
-      break;
-  }
-  //log.info('Leaving VoiceParser returning value $voice');
-  return voice;
-});
+// enum Voice {
+//   solo,
+//   unison
+// }
+//
+// ///
+// /// VoiceParser
+// ///
+// Parser voiceParser = (
+//     string('/unison') |
+//     string('/chips') |
+//     string('/tutti') |
+//     string('/solo') |
+//     string('/tip')
+// ).trim().map((value) { // trim?  Yes!  Makes a difference
+//   Voice voice;
+//   switch (value) {
+//     case '/unison':
+//     case '/chips':
+//     case '/tutti':
+//       voice = Voice.unison;
+//       break;
+//     case '/solo':
+//     case '/tip':
+//       voice =  Voice.solo;
+//       break;
+//   }
+//   //log.info('Leaving VoiceParser returning value $voice');
+//   return voice;
+// });

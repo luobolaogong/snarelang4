@@ -18,6 +18,7 @@ class CommandLine {
 
   Tempo _tempo; // should create an object here, but without bpm?
   num _tempoScalar;
+  int _nSnares;
   Track _track;
   Channel _channel;
   Dynamic _dynamic;
@@ -37,6 +38,7 @@ class CommandLine {
   static final channelMapIndex = 'channel'; // -c --channel --chan --program
   static final tempoMapIndex = 'tempo'; // -t, --tempo
   static final tempoScalarMapIndex = 'temposcalar'; // -S? --ts --temposcalar
+  static final nSnaresMapIndex = 'nSnares'; // --ns --nsnares
   static final timeSigMapIndex = 'timesig'; // --timesig --sig
   static final usePadSoundFontMapIndex = 'usepad'; // --pad
 
@@ -51,6 +53,9 @@ class CommandLine {
   }
   num get tempoScalar {
     return _tempoScalar;
+  }
+  int get nSnares {
+    return _nSnares;
   }
   Track get track {
     return _track;
@@ -184,6 +189,10 @@ class CommandLine {
       _tempoScalar = num.parse(argResults[CommandLine.tempoScalarMapIndex]);
     }
 
+    if (argResults[CommandLine.nSnaresMapIndex] != null) {
+      _nSnares = num.parse(argResults[CommandLine.nSnaresMapIndex]);
+    }
+
     if (argResults[CommandLine.trackMapIndex] != null) {
       _track = parseTrack(argResults[CommandLine.trackMapIndex]);
     }
@@ -253,6 +262,13 @@ class CommandLine {
           //'tempo scalar percentage.  eg: "-10" for 10% slower',
           'tempo scalar fraction.  eg: "0.90" for 10% slower',
           valueHelp: 'percent')
+
+      ..addOption(CommandLine.nSnaresMapIndex,
+          //abbr: 'ns', // change later.  One letter, right?  Can't use s
+          defaultsTo: '5', // string okay here?
+          help:
+          'expected number of snares in a snare line, to help simulation',
+          valueHelp: '1 - 9')
 
       ..addOption(CommandLine.dynamicMapIndex,
           abbr: 'd',

@@ -1,0 +1,122 @@
+// Cameronian Rant, as played by Alex Duthart in the YouTube video https://youtu.be/pW39X9Rh_78  https://youtu.be/pW39X9Rh_78
+
+/track snare9
+// Don't know why channel 9 doesn't work
+/channel 10
+
+//time 4/4
+//tempo 128  // Dave Henry of Pryde of East Lothian
+//tempo 140  //Duthart playing
+
+/f
+
+1r
+
+/marker L1
+4r  4r  4r   12r /f /cresc 18Z . .
+^4t /ff /f     4r   /ff 20Z . . . .   >4t   /f
+1r
+>6D ^24T .  24T . . . >12D     4r    >4d
+
+/marker L2
+^12D 24T . 12T  . . .                   >12D 12t .   . /cresc 18Z . .
+>12t /ff /f 24T . 12T    >12t 12T t   /ff 20Z . . . .   >12t  /decresc . . /f
+/mf /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /f    // check for too stiff on the last roll stuff
+
+/marker L3
+/f
+/ff 20Z . . . .  _4t /f 4r  6r 24Z .
+^6T 12t 6F 12f 4r 4r
+1r
+1r
+
+/marker L4
+^6D 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
+>12D 12T .   12T >12d ^12t  12T . >12D  ^6T 12t
+24T . . . . .    ^. . . . . .   . . . . ^. .   ^. . . . . .
+>24T . . . ^. .     . . ^. . . .     /cresc >28T 14z . . 16Z . . . /fff /f
+
+/marker L5
+>4T    >4D  >4T 4r
+>4T  4r 20Z . . . .  4t
+1r
+>6D 24T .   24T . . . >12D   12t . . >8D 8r
+
+/marker L6
+>24T . . . . .   >12D 24T . . .   ^. . . . 12T  12t . .
+>24T . . . 12T  12t . .    20Z . . . .  12t . .
+/mf /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /f
+
+
+/marker L7
+^6F 24z .  12t . .  24Z . 12T .   4T
+1r
+6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
+15z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .      // ^16T 16z . .  // maybe check out this line again
+
+/marker L8
+^6T 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
+>12D 12T .   12T >12d ^12t  12T . >12D  ^6T 12t
+24T . . . . .    ^. . . . . .   . . . . ^. .   ^. . . . . .
+>24T . . . ^. .     . . ^. . . .     /ff /cresc >28T 14z . . 16Z . . . /fff /f
+
+
+/marker L9
+//>42T 21z . . . . . . . . .     >36t 18Z . . .   >36T 18z . . .
+//>42t 21Z . . . . . . . . .     >36T 18z . . .   >36t 18Z . . .
+>36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
+>36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+
+1T
+1r
+
+/marker L10
+//>42T 21z . . . . . . . . .     >36t 18Z . . .   >36T 18z . . .
+//>42t 21Z . . . . . . . . .     >36T 18z . . .   >36t 18Z . . .
+>36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
+>36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+12T . D 24T . . . 12T 12t . . 12D 24T . . .
+12T . D 24T . . . 12T 12t . . 8F 8r
+
+/marker L11
+^6F 24z .  12t . .  24Z . 12T .   4T
+1r
+6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
+15z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+
+/marker L12
+^6T 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
+>12D 12T .   12T >12d ^12t  12T . >12D  ^6T 12t
+24T . . . . .    ^. . . . . .   . . . . ^. .   ^. . . . . .
+>24T . . . ^. .     . . ^. . . .     /cresc >28T 14z . . 16Z . . . /fff /f
+
+/marker L13
+/f /cresc 6F 18Z . . . . . 4t /ff 4r
+/f /cresc 6r 18Z . . . . . 4t /ff 4r
+4r 4r 4r 16Z 16z . .
+>4T 4r 4r  16Z 16z . .   /f
+
+
+/marker L14
+/f /cresc 6T 18Z . . . . . 6t /ff /decresc  12T 6f 12t /p
+/f /cresc 6F 18Z . . . . . 6t /ff /decresc  12T 6f 12t /p /f
+>30T 15z .  >30t 15Z .  >12T   >36t 18Z 12t   >36T 18z 12T   >36t 18Z 12t  >36T 18z
+>36T 18z 12T  >36t 18Z  >30t 15Z .   >30T 15z .   >12t  >36T 18z   >28T 14z . .
+
+/marker L15
+>18T . . 12t  4r 4r  /cresc 16Z . . . /ff /f
+>18T . . 12t  4r 4r 4r /f
+12r . >12D 4r 4r  >4D
+12r . >12D  4r 4r  /cresc 16Z . . . /ff /f
+
+/marker L16
+>18T . . 12t  >12T . >12T  12t >12T .  24Z . 12T .
+>12D T t   >12T 12d 12t  12T . >12D   6T 12t
+^24T . . . . .    ^24T . . . ^. .   24T . ^12T ^24t .   ^24t . . . . .
+^24t . . . ^24t .   24t . ^12t ^24T .  /cresc ^28T 14z . . 16Z . . . /ff
+
+1T
+
+

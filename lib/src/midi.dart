@@ -240,7 +240,7 @@ class Midi {
     var trackEventsList = <MidiEvent>[];
 
     var noteChannel = Channel.DefaultChannelNumber;
-    var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
+    //var currentVoice = Voice.solo; // Hmmmmm done differently elsewhere as in firstNote.  Check it out later
     var usePadSoundFont = commandLine.usePadSoundFont;
     var loopBuzzes = commandLine.loopBuzzes; // silly.  just use commandLine.loopBuzzes, right?
     var trackNameEvent = TrackNameEvent();
@@ -682,92 +682,97 @@ class Midi {
 
     // Maybe we can add a value here so that outer snares play later: ???????????????  No, I think we want to go random values
     noteOnEvent.deltaTime = 0; // might need to adjust to handle roundoff???  Can you do a negative amount, and add the rest on the off note?????????????????????????????????????????
-    // This is total hack and guess.  Don't know if this will clause a slide of everything after this, or whether it's compensated for somehow
+    // This is total hack and guess.  Don't know if this will cause a slide of everything after this, or whether it's compensated for somehow
     // I think it compounds over time.  Needs adjustment for subsequent notes.
     //print('hey, note type is a ruff3Left: ${note.noteType == NoteType.ruff3Left}');
     // if (note.noteType == NoteType.ruff3Left || note.noteType == NoteType.ruff3Right || note.noteType == NoteType.ruff3AltLeft || note.noteType == NoteType.ruff3AltRight) {
     //   print('NoteType: $note');
     // }
+
     // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left && note.noteType != NoteType.ruff3Right) {
-    // if (wantDrumLine && snareNumber != 5 && note.deltaTimeDelayForRandomSnareLine > 0) {
-    //   //print('\t\t\tnote.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
-    //   noteOnEvent.deltaTime += note.deltaTimeDelayForRandomSnareLine;  // Also don't know if the units are right, or need to be scaled.
-    //   //print('\t\t\t\tso now noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
-    // }
+    //   if (wantDrumLine && snareNumber != 5 && note.deltaTimeDelayForRandomSnareLine > 0) {
+    //     //print('\t\t\tnote.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
+    //     noteOnEvent.deltaTime += note.deltaTimeDelayForRandomSnareLine;  // Also don't know if the units are right, or need to be scaled.
+    //     //print('\t\t\t\tso now noteOnEvent.deltaTime is ${noteOnEvent.deltaTime}');
+    //   }
+    noteOnEvent.deltaTime += note.deltaTimeDelayForRandomSnareLine;
 
 
 
 
+      // noteOnEvent.deltaTime = graceOffset; // Can you do a negative amount, and add the rest on the off note?
+      noteOnEvent.noteNumber = note.noteNumber; // this was determined above by all that code
+      noteOnEvent.velocity = note.velocity;
+      noteOnEvent.channel = channelNumber;  // why doesn't note have a channelNumber attribute?
+      trackEventsList.add(noteOnEvent);
+      log.finest('addNoteOnOffToTrackEventsList() added endOnEvent $noteOnEvent to trackEventsList');
 
-    // noteOnEvent.deltaTime = graceOffset; // Can you do a negative amount, and add the rest on the off note?
-    noteOnEvent.noteNumber = note.noteNumber; // this was determined above by all that code
-    noteOnEvent.velocity = note.velocity;
-    noteOnEvent.channel = channelNumber;
-    trackEventsList.add(noteOnEvent);
-    log.finest('addNoteOnOffToTrackEventsList() added endOnEvent $noteOnEvent to trackEventsList');
-
-    var noteOffEvent = NoteOffEvent();
-    noteOffEvent.type = 'noteOff';
-
-
-
-
-    // noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
-    // // var diff = note.postNoteShift + note.preNoteShift;
-    // noteOffEvent.deltaTime += note.noteOffDeltaTimeShift; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
-    noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
-
-
-    //print('\t\t\t\t\tnote.deltaTimeShiftForGraceNotes is ${note.deltaTimeShiftForGraceNotes} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
-    noteOffEvent.deltaTime += note.deltaTimeShiftForGraceNotes; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
-    //print('\t\t\t\t\t\tSo now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+      var noteOffEvent = NoteOffEvent();
+      noteOffEvent.type = 'noteOff';
 
 
 
 
+      // noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
+      // // var diff = note.postNoteShift + note.preNoteShift;
+      // noteOffEvent.deltaTime += note.noteOffDeltaTimeShift; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
+      noteOffEvent.deltaTime = (4 * ticksPerBeat / snareLangNoteNameValue).round(); // keep track of roundoff?
 
-    // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left) {
-    // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left && note.noteType != NoteType.ruff3Right) {
-    if (wantDrumLine && snareNumber != 5 && note.deltaTimeDelayForRandomSnareLine > 0) {
-      //print('\t\t\tas before, note.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
-      noteOffEvent.deltaTime -= note.deltaTimeDelayForRandomSnareLine;
-      //print('\t\t\t\tso now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+
+      //print('\t\t\t\t\tnote.deltaTimeShiftForGraceNotes is ${note.deltaTimeShiftForGraceNotes} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+      noteOffEvent.deltaTime += note.deltaTimeShiftForGraceNotes; // for grace notes.  May be zero if no grace notes, or if consecutive same grace notes, like 2 or more flams
+      //print('\t\t\t\t\t\tSo now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+
+
+
+      // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!111111111
+      // This is probably not the best way to make the sound of a snare line.  Perhaps we can assume the listener is at the END of the
+      // line, and not directly in the middle, and everyone plays perfectly, but the sound delay is linear based on distance from the ear.
+      // So, should try this out some time!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+      // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
+      // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left) {
+      // if (note.deltaTimeDelayForRandomSnareLine > 0 && note.noteType != NoteType.ruff3Left && note.noteType != NoteType.ruff3Right) {
+
+// The following is troublesome
+      // if (wantDrumLine && snareNumber != 5 && note.deltaTimeDelayForRandomSnareLine > 0) {
+      //   //print('\t\t\tas before, note.deltaTimeDelayForRandomSnareLine is ${note.deltaTimeDelayForRandomSnareLine} and noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+      //   noteOffEvent.deltaTime -= note.deltaTimeDelayForRandomSnareLine;
+      //   //print('\t\t\t\tso now noteOffEvent.deltaTime is ${noteOffEvent.deltaTime}');
+      // }
+    noteOffEvent.deltaTime -= note.deltaTimeDelayForRandomSnareLine;
+
+
+
+      noteOffEvent.noteNumber = note.noteNumber;
+      // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
+      noteOffEvent.velocity = 0; // shouldn't this just be 0?
+      noteOffEvent.channel = channelNumber;
+
+      trackEventsList.add(noteOffEvent);
+      log.finest('addNoteOnOffToTrackEventsList() added endOffEvent $noteOffEvent to trackEventsList');
+
+      // By rounding, what fraction of a tick are we adding or subtracting to the set of notes?
+      // If the number of ticks for this note should be 53.33333, but it gets rounded down to 53
+      // then the note ended 1/3 of a tick too soon, making the next note start 1/3 of a tick too soon.
+      // We cannot push the next note back 1/3 of a tick, but we can keep track of what fraction of a tick
+      // we're off.  If the next note is also supposed to be 53.3333, and we set it to 53, then its following
+      // note will start 2/3 of a tick too soon.  So do we extend this note to 54?  Perhaps so but it might
+      // also depend on what the next note is.  This is a solvable problem, of course, but not worth
+      // the time right now, since we are taking about small numbers, and typical notes, like 16th notes
+      // don't have a roundoff error, only the weird ones like 9, 13, 17, 18, 19 ... notes.  Actually I
+      // wish I had 9th and 18th notes, which are triplets in triplets, so this is worth working on in
+      // the future.
+      //
+      num noteTicksAsDouble = 4 * ticksPerBeat / snareLangNoteNameValue; // round this?
+      var diffTicksAsDouble = noteTicksAsDouble - noteOffEvent.deltaTime;
+      cumulativeRoundoffTicks += diffTicksAsDouble;
+
+      log.finest('noteOnNoteOff, Created note events for noteNameValue ${snareLangNoteNameValue}, '
+          'deltaTime ${noteOffEvent.deltaTime} (${noteTicksAsDouble}), velocity: ${note.velocity}, '
+          'number: ${note.noteNumber}, channel: $channelNumber, cumulative roundoff ticks: $cumulativeRoundoffTicks');
+
+      return diffTicksAsDouble; // kinda strange
     }
-
-
-
-
-
-    noteOffEvent.noteNumber = note.noteNumber;
-    // noteOffEvent.velocity = note.velocity; // shouldn't this just be 0?
-    noteOffEvent.velocity = 0; // shouldn't this just be 0?
-    noteOffEvent.channel = channelNumber;
-
-    trackEventsList.add(noteOffEvent);
-    log.finest('addNoteOnOffToTrackEventsList() added endOffEvent $noteOffEvent to trackEventsList');
-
-    // By rounding, what fraction of a tick are we adding or subtracting to the set of notes?
-    // If the number of ticks for this note should be 53.33333, but it gets rounded down to 53
-    // then the note ended 1/3 of a tick too soon, making the next note start 1/3 of a tick too soon.
-    // We cannot push the next note back 1/3 of a tick, but we can keep track of what fraction of a tick
-    // we're off.  If the next note is also supposed to be 53.3333, and we set it to 53, then its following
-    // note will start 2/3 of a tick too soon.  So do we extend this note to 54?  Perhaps so but it might
-    // also depend on what the next note is.  This is a solvable problem, of course, but not worth
-    // the time right now, since we are taking about small numbers, and typical notes, like 16th notes
-    // don't have a roundoff error, only the weird ones like 9, 13, 17, 18, 19 ... notes.  Actually I
-    // wish I had 9th and 18th notes, which are triplets in triplets, so this is worth working on in
-    // the future.
-    //
-    num noteTicksAsDouble = 4 * ticksPerBeat / snareLangNoteNameValue; // round this?
-    var diffTicksAsDouble = noteTicksAsDouble - noteOffEvent.deltaTime;
-    cumulativeRoundoffTicks += diffTicksAsDouble;
-
-    log.finest('noteOnNoteOff, Created note events for noteNameValue ${snareLangNoteNameValue}, '
-        'deltaTime ${noteOffEvent.deltaTime} (${noteTicksAsDouble}), velocity: ${note.velocity}, '
-        'number: ${note.noteNumber}, channel: $channelNumber, cumulative roundoff ticks: $cumulativeRoundoffTicks');
-
-    return diffTicksAsDouble; // kinda strange
-  }
 }
 
 /// Following comes from http://www.ccarh.org/courses/253/handout/smf/

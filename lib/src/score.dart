@@ -369,7 +369,8 @@ class Score {
         case NoteType.dragRight:
           //note.velocity += 10; // commented out because of a video I saw which says it softens the note
           //note.velocity -= 10; // No, too soft according to how James Laughlin plays.  Plays it like a flam in volume
-          note.velocity += 12; // this is a bit softer than a flam due to the recording volume
+          // note.velocity += 12; // this is a bit softer than a flam due to the recording volume
+          note.velocity += 15; // this is a bit softer than a flam due to the recording volume
           break;
         case NoteType.buzzLeft:
         case NoteType.buzzRight:
@@ -581,7 +582,7 @@ class Score {
           return note.velocity + 22; // was 20 // was 14
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 32; // was 30 // was 18,24
+          return note.velocity + 36; // was 32, was 30 // was 18,24
         }
         log.warning('what happened?');
         break;
@@ -593,7 +594,7 @@ class Score {
           return note.velocity + 7; // was 5 // was 3
         }
         if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 12; // was 10 // was 5 clips?
+          return note.velocity + 16; // was 12, was 10 // was 5 clips?
         }
         log.warning('what happened?');
         break;
@@ -632,7 +633,7 @@ class Score {
   /// the NoteOnEvent.deltaTime, and subtract it off the NoteOffEvent.deltaTime.
   /// Maybe I'll add those things to the Note class just for this experiment to make
   /// it easier than dealing with durations or something.
-  void addRandomDelaysForSnareNotesForDrumLine(CommandLine commandLine) {
+  void addDelaysForSnareNotesForDrumLine(CommandLine commandLine) {
     log.fine('In addRandomDelaysForSnareNotesForDrumLine()');
 
     var random = Random();
@@ -643,6 +644,8 @@ class Score {
     Tempo mostRecentTempo;
     TimeSig mostRecentTimeSig; // assuming we'll hit one before we hit a note.
     num scaleAdjustForNon44 = 1.0;
+    var snareNumber = 5;
+    var nSnares = 5;
     for (var element in elements) {
 
       if (element is TimeSig) {
@@ -665,10 +668,51 @@ class Score {
         else {
           scaleAdjustForNon44 = 1.0;
         }
+        continue; // added 2/7/21
       }
 
       if (element is Tempo) {
         mostRecentTempo = element;
+        continue;
+      }
+
+      if (element is Track) { // I do not trust the logic in this section.  Revisit later.  Does this mean that we'd better have a Track command at the start of a score?????????????  Bad idea/dependency
+        var thisTrack = element as Track;
+        switch (thisTrack.id) {
+          case TrackId.snare:
+            snareNumber = 5;
+            break;
+          case TrackId.snare1:
+            snareNumber = 1;
+            break;
+          case TrackId.snare2:
+            snareNumber = 2;
+            break;
+          case TrackId.snare3:
+            snareNumber = 3;
+            break;
+          case TrackId.snare4:
+            snareNumber = 4;
+            break;
+          case TrackId.snare5:
+            snareNumber = 5;
+            break;
+          case TrackId.snare6:
+            snareNumber = 6;
+            break;
+          case TrackId.snare7:
+            snareNumber = 7;
+            break;
+          case TrackId.snare8:
+            snareNumber = 8;
+            break;
+          case TrackId.snare9:
+            snareNumber = 9;
+            break;
+          default:
+          print('Huh?  Whats this element.id?: ${thisTrack.id}');
+            break;
+        }
         continue;
       }
 
@@ -678,9 +722,22 @@ class Score {
 
         // The random value 200 is found by trial and error.  If smaller it doesn't sound as much of a line, and flams/drags/ruffs stand out and if too big, it's muddled.  So this is a quick setting, and depends on other factors.
         // note.deltaTimeDelayForRandomSnareLine = (scaleAdjustForNon44 * random.nextInt(200) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
-        note.deltaTimeDelayForRandomSnareLine = (scaleAdjustForNon44 * random.nextInt(150) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
-        //print('\t\trandomDelayForANote: $randomDelayForANote');
+        // note.deltaTimeDelayForRandomSnareLine = (scaleAdjustForNon44 * random.nextInt(150) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
 
+        // note.deltaTimeDelayForRandomSnareLine = ((scaleAdjustForNon44 * 100 * (snareNumber - 1)) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+        // print('mostRecentTempo.bpm: ${mostRecentTempo.bpm}');
+        // print('scaleAdjustForNon44: $scaleAdjustForNon44');
+        // num factorBasedOn100Bpm = 100 / mostRecentTempo.bpm;
+        // print('factorBasedon108Bpm: $factorBasedOn100Bpm');
+        // var scaleAdjustForNon44Times100TimesSnareNumMinus1 = (scaleAdjustForNon44 * 25 * (snareNumber - 1));
+        // print('scaleAdjustForNon44Times100TimesSnareNumMinus1: $scaleAdjustForNon44Times100TimesSnareNumMinus1');
+        // var snareNumTimeDelayScaledBasedOn100Bpm = (scaleAdjustForNon44Times100TimesSnareNumMinus1 / factorBasedOn100Bpm).round();
+        // print('snareNumTimeDelayScaledBasedOn100Bpm: $snareNumTimeDelayScaledBasedOn100Bpm');
+        // note.deltaTimeDelayForRandomSnareLine = snareNumTimeDelayScaledBasedOn100Bpm; // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+        note.deltaTimeDelayForRandomSnareLine = calcSoundDelayFromCenter(snareNumber, mostRecentTempo.bpm, scaleAdjustForNon44, nSnares); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+
+        //print('\t\trandomDelayForANote: $randomDelayForANote');
+        print('delay for snare $snareNumber is ${note.deltaTimeDelayForRandomSnareLine} and for grace notes: ${note.deltaTimeShiftForGraceNotes}');
 
 
         //previousNote = note; // probably wrong.  Just want to work with pointers
@@ -689,6 +746,107 @@ class Score {
     }
     log.finest('Leaving addRandomDelaysForSnareNotesForDrumLine(), and updated notes to have delta time shifts to account for simulating an inexact drumline.');
     return;
+  }
+
+  // The idea here is to calculate a time difference from the center snare drum, as if you
+  // were the center snare.  The time delay from the furthest snare would be very small, but
+  // I think it is possible to detect it.  For example, if you have drummers packed into a
+  // football field, you'll hear a rolling roar of snares if they try to play a single tap at
+  // the same time.
+  // But one problem with making the left side and the right side equal in time delay is that
+  // they cancel out, and make a single sound as if it's in the middle, and then there's
+  // no stereo sound.  So, I'm thinking that if I stagger out the differences so that snares 1 and 9
+  // are not exactly the same in "distance" from the center, you'll hear them both on left and right.
+  // I'm not sure that's correct, but the goal is to stagger the delays.  For example,
+  // assume snare 5 (middle) is exactly with the metronome.  Snares 4 and snare 6 would be on
+  // either side, equal distance, and their sound would normally be "1 unit" away.  And snares
+  // 3 and 7 would be 2 units away.  And snares 2 and 8 would be 3 units away, and finally,
+  // snares 1 and 9 would be 4 units away from the center.  I think if everyone played exactly
+  // according to the metronome, there'd be a fat sound, but it would be in the center of
+  // the stereo image.  But maybe if the snares 4 and 6 were 0.9 and 1.1 units away, and
+  // snares 3 and 7 were 1.9 and 2.1 units away (or 2.1 and 1.9), etc, then you'd get the
+  // fat sound, but you'd also get more of a stereo image.
+  //
+  // Time for bed.  Finish this later
+  //
+  int calcSoundDelayFromCenter(int snareNum, int tempoBpm, num scaleAdjustForNon44, int nSnares) {
+    num soundDelay;
+    // print('snareNum: $snareNum');
+    // print('tempoBpm: $tempoBpm');
+    // print('scaleAdjustForNon44: $scaleAdjustForNon44');
+    num factorBasedOn100Bpm = 100 / tempoBpm;
+    // print('factorBasedon108Bpm: $factorBasedOn100Bpm');
+    // var scaleAdjustForNon44Times100TimesSnareNumMinus1 = (scaleAdjustForNon44 * 25 * (snareNum - 1));
+    // print('scaleAdjustForNon44Times100TimesSnareNumMinus1: $scaleAdjustForNon44Times100TimesSnareNumMinus1');
+    // soundDelay = (scaleAdjustForNon44Times100TimesSnareNumMinus1 / factorBasedOn100Bpm).round();
+    // print('soundDelay: $soundDelay');
+    // the more snares you have, the more tunnel sounding it is
+    // 5 snares, separated as much as possible sounds better than 9
+    switch (snareNum) { // this is a test based on a set tempo.  Needs adjustment for diff tempos.  The slower the tempo the more it's off.  Faster tempos reduce delay diffs
+      case 1:
+        soundDelay = 112;
+        break;
+      case 2:
+        soundDelay = 80;
+        break;
+      case 3:
+        soundDelay = 48;
+        break;
+      case 4:
+        soundDelay = 16;
+        break;
+      case 5:
+        soundDelay = 0;
+        break;
+      case 6:
+        soundDelay = 32;
+        break;
+      case 7:
+        soundDelay = 64;
+        break;
+      case 8:
+        soundDelay = 96;
+        break;
+      case 9:
+        soundDelay = 128;
+        break;
+      default:
+        print('what snare was that?: $snareNum');
+        break;
+    } //i screwed something up adding nSnares, and other stuff around here
+    var multiplierBasedOnNumberOfSnares = 3;
+    switch (nSnares) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+        multiplierBasedOnNumberOfSnares = 2; // maybe 3 better?
+        break;
+      case 5:
+        multiplierBasedOnNumberOfSnares = 3;
+        break;
+      case 6:
+      case 7:
+        multiplierBasedOnNumberOfSnares = 4;
+        break;
+      case 8:
+      case 9:
+        multiplierBasedOnNumberOfSnares = 5;
+        break;
+      default:
+        print('What is this nSnares? $nSnares');
+        break;
+    }
+    //return soundDelay; // bad tunnel
+    //return soundDelay * 2; // without *2 it sounds more like you're in a tunnel
+    //return soundDelay * 3; // even better. With 5 snares, separated widely, this sounds the best
+    //return soundDelay * 4; // probably a bit better, but starting to get too fat.
+    //return soundDelay * 5; // probably a bit better, but starting to get too fat, but the more snares you have the more separation you need to avoid tunnel sound.  This is okay for 9 snares, and maybe 5 close snares
+    // return (soundDelay * multiplierBasedOnNumberOfSnares * factorBasedOn100Bpm).round();
+    var finalSoundDelay = (soundDelay * multiplierBasedOnNumberOfSnares * factorBasedOn100Bpm).round();
+    print('finalSoundDelay: $finalSoundDelay, soundDelay: $soundDelay, multiplier: $multiplierBasedOnNumberOfSnares, factor: $factorBasedOn100Bpm');
+    //return finalSoundDelay;
+    return soundDelay;
   }
 
   /// This comment is also in midi.dart.  So change/summarize it there.
@@ -878,7 +1036,8 @@ class Score {
 ///
 /// ScoreParser
 ///
-Parser scoreParser = ((commentParser | markerParser | textParser | trackParser | channelParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+//Parser scoreParser = ((commentParser | markerParser | textParser | trackParser | channelParser | timeSigParser | tempoParser | voiceParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
+Parser scoreParser = ((commentParser | markerParser | textParser | trackParser | channelParser | timeSigParser | tempoParser | dynamicParser | dynamicRampParser | noteParser).plus()).trim().end().map((values) {    // trim()?
   log.finest('In Scoreparser, will now add values from parse result list to score.elements');
   var score = Score();
   if (values is List) {

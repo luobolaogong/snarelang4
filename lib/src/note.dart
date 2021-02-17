@@ -82,6 +82,7 @@ class Note {
   Dynamic dynamic;
   int noteNumber;
   int deltaTimeShiftForGraceNotes; // this is being used for gracenotes, and should probably be renamed to reflect that
+  // int deltaTimeDelayForRandomSnareLine; // don't know how this relates to noteOffDeltaTimeShift
   int deltaTimeDelayForRandomSnareLine; // don't know how this relates to noteOffDeltaTimeShift
   //int midiNoteNumber; // experiment 9/20/2020  This would be the midi soundfont number, related to NoteType
   Note() {

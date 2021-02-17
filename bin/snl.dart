@@ -120,7 +120,7 @@ void main(List<String> arguments) {
   var midiWriterCopy = MidiWriter();
 
   var midiFileOutFile = File(commandLine.outputMidiFile);
-  midiWriterCopy.writeMidiToFile(midiFile, midiFileOutFile); // will crash here
+  midiWriterCopy.writeMidiToFile(midiFile, midiFileOutFile); // will crash here.  Why?  "cannot write negative variable-length integer" ?
   print('Done writing midifile ${midiFileOutFile.path}');
 }
 
@@ -199,7 +199,7 @@ Score doThePhases(List<String> piecesOfMusic, CommandLine commandLine) {
   // Phase 6, experimental:
   // Throw in random delays for snare notes to simulate a drumline rather than a perfect single snare drummer.
   // if (wantDrumLineSimulation)
-  score.addRandomDelaysForSnareNotesForDrumLine(commandLine);
+  score.addDelaysForSnareNotesForDrumLine(commandLine); // maybe don't do random, but ear time delay based on distance or something
 
 
 

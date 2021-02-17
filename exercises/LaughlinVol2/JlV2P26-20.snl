@@ -6,17 +6,32 @@
 
 /track snare
 /channel 1
-/mf
+//mf
+/f
 
 /time 2/2
 /tempo 2=76
 //time 4/4
 //tempo 152
 
+// not quite right
+^6T 24t t     6T >12f      12T T           ^16t . . . ^12t
+^6T 16t t T T       ^12t T .    16D 16T . .     12t
+^6T 24t t     6T >12f      12T T           ^16t . . . ^12t
+^6T 16t t T T       ^12t T .    16D 16T . .     12t
+^6T 24t t     6T >12f      12T T           ^16t . . . ^12t
+^6T 16t t T T       ^12t T .    16D 16T . .     12t
+^6T 24t t     6T >12f      12T T           ^16t . . . ^12t
+^6T 16t t T T       ^12t T .    16D 16T . .     12t
+^6T 24t t     6T >12f      12T T           ^16t . . . ^12t
+^6T 16t t T T       ^12t T .    16D 16T . .     12t
+^6T 24t t     6T >12f      12T T           ^16t . . . ^12t
+^6T 16t t T T       ^12t T .    16D 16T . .     12t
+
+
+
 /marker Phrase Wrkouts 2/4 Reel Dot/Cut 4
 1r
-
-
 
 /marker W1
 ^6F 12t 6T ^16T . . . 12t ^6T 12t
@@ -27,6 +42,12 @@
 >18T 9z ^12T >18t 9Z ^16t . . . ^12t 6T 12t
 
 /marker W3
+// straight
+//^8T 16t t   16:3T >16f   16T T ^8t   16T . . .
+//^8T 16t t T T >8t   12T . D  16T . . .
+// swing
+^6T 24t t     6T >12f      12T T           ^16t . . . ^12t
+^6T 16t t T T       ^12t T .    16D 16T . .     12t
 
 /marker W4
 
@@ -59,7 +80,7 @@
 
 /track met
 /channel 2
-/p
+/pp
 ^2M ^2M
 
 _4M . _4M .
