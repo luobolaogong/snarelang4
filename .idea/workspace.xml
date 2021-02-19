@@ -19,15 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Just a kinda time stamp on files.  Not really doing anything &#10;as planned.">
-      <change afterPath="$PROJECT_DIR$/exercises/TapRollsXForm.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Mostly worked on the TapRolls thing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/dynamic.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/dynamic.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/TapRollsXForm.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/TapRollsXForm.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,14 +322,7 @@
       <workItem from="1613357954990" duration="2093000" />
       <workItem from="1613513788980" duration="11178000" />
       <workItem from="1613606150530" duration="13779000" />
-      <workItem from="1613678655659" duration="9381000" />
-    </task>
-    <task id="LOCAL-00030" summary="Scotland the Brave snare and chips added.">
-      <created>1601583589682</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1601583589682</updated>
+      <workItem from="1613678655659" duration="15316000" />
     </task>
     <task id="LOCAL-00031" summary="Scotland the Brave, tenor, bass, and metronome added.">
       <created>1601586474254</created>
@@ -673,7 +660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613527800148</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Mostly worked on the TapRolls thing.">
+      <created>1613695335114</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1613695335115</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +686,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added more JL exercises." />
     <MESSAGE value="5 new JL exercises from first book." />
     <MESSAGE value="2 new JL exercises from first book." />
     <MESSAGE value="Last two exercise pages plus 1st score." />
@@ -717,7 +710,8 @@
     <MESSAGE value="Minor tweaks to make drumline sound." />
     <MESSAGE value="Minor cleanup of old files and commented-out code." />
     <MESSAGE value="Just a kinda time stamp on files.  Not really doing anything &#10;as planned." />
-    <option name="LAST_COMMIT_MESSAGE" value="Just a kinda time stamp on files.  Not really doing anything &#10;as planned." />
+    <MESSAGE value="Mostly worked on the TapRolls thing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostly worked on the TapRolls thing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
