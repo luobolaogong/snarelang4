@@ -644,8 +644,9 @@ class Score {
     Tempo mostRecentTempo;
     TimeSig mostRecentTimeSig; // assuming we'll hit one before we hit a note.
     num scaleAdjustForNon44 = 1.0;
-    var snareNumber = 5;
-    var nSnares = 5;
+    var snareNumber = 5; // ??
+    //var nSnares = 5; // what??????
+    var nSnares = commandLine.nSnares ?? 1;
     for (var element in elements) {
 
       if (element is TimeSig) {
@@ -737,7 +738,7 @@ class Score {
         note.deltaTimeDelayForRandomSnareLine = calcSoundDelayFromCenter(snareNumber, mostRecentTempo.bpm, scaleAdjustForNon44, nSnares); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
 
         //print('\t\trandomDelayForANote: $randomDelayForANote');
-        print('delay for snare $snareNumber is ${note.deltaTimeDelayForRandomSnareLine} and for grace notes: ${note.deltaTimeShiftForGraceNotes}');
+        //print('delay for snare $snareNumber is ${note.deltaTimeDelayForRandomSnareLine} and for grace notes: ${note.deltaTimeShiftForGraceNotes}');
 
 
         //previousNote = note; // probably wrong.  Just want to work with pointers
@@ -844,7 +845,7 @@ class Score {
     //return soundDelay * 5; // probably a bit better, but starting to get too fat, but the more snares you have the more separation you need to avoid tunnel sound.  This is okay for 9 snares, and maybe 5 close snares
     // return (soundDelay * multiplierBasedOnNumberOfSnares * factorBasedOn100Bpm).round();
     var finalSoundDelay = (soundDelay * multiplierBasedOnNumberOfSnares * factorBasedOn100Bpm).round();
-    print('finalSoundDelay: $finalSoundDelay, soundDelay: $soundDelay, multiplier: $multiplierBasedOnNumberOfSnares, factor: $factorBasedOn100Bpm');
+    //print('finalSoundDelay: $finalSoundDelay, soundDelay: $soundDelay, multiplier: $multiplierBasedOnNumberOfSnares, factor: $factorBasedOn100Bpm');
     //return finalSoundDelay;
     return soundDelay;
   }

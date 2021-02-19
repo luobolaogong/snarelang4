@@ -113,10 +113,20 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /ff
 
 /marker L9
 /f /cresc
+// Any of the following sound okay (No! Totally wrong on the half note!  It's 9 notes, not 11!)
+//This is an even subdivision across the half note:
 //>42T 21z . . . . . . . . .     >36t 18Z . . .   >36T 18z . . .
 //>42t 21Z . . . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
->36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
->36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// Here's 5-6 subdivision across the half note, maybe they play it more like this:
+//>36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
+//>36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// Here's 6-5 subdivision, seems to match a bit better with the quarter notes:
+//>44T 22z . . . . 20z . . . .     >36t 18Z . . .   >36T 18z . . .
+//>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// This is based on 9 rather than 11, and then on 5 to closer match gap
+>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
+>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+
 12T . . . . d t . . D 24T . . .
 12T . D 24T . . . 12T 12t . f T . F
 
@@ -126,8 +136,14 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /ff
 //>22t 22Z . . . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
 //>42T 21z . . . . . . . . .     >36t 18Z . . .   >36T 18z . . .
 //>42t 21Z . . . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
->36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
->36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+//>36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
+//>36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// Here's 6-5 subdivision:
+//>44T 22z . . . . 20z . . . .     >36t 18Z . . .   >36T 18z . . .
+//>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// This is based on 9 rather than 11, and then on 5 to closer match gap
+>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
+>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
 12T . D 24T . . . 12T 12t . . 12D 24T . . .
 12T . D 24T . . . 12T 12t . . 8F 8r
 

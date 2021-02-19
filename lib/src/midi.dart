@@ -388,7 +388,7 @@ class Midi {
             snareNumber = 9;
             break;
           default:
-            //print('Huh?  Whats this element.id?: ${thisTrack.id}');
+            //print('Huh?  Whats this element.id?: ${thisTrack.id}'); // could be met or tenor or bass...
             break;
         }
         //
@@ -639,7 +639,7 @@ class Midi {
   // double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, Voice voice, int snareNumber) { // add track?
   double addNoteOnOffToTrackEventsList(Note note, int channelNumber, List<MidiEvent> trackEventsList, bool usePadSoundFont, bool loopBuzzes, snareNumber) { // add track?
     // For now assume that if snareNumber is not null, then we want the drumline sound
-    var wantDrumLine = snareNumber != null; ;
+    var wantDrumLine = snareNumber != null; // bad logic.  Could be here for met, tenor, bass
     // var graceOffset = 0;
     if (note.duration == null) {
       log.severe('note should not have a null duration.');

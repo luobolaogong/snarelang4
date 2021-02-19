@@ -66,8 +66,14 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /f
 /marker L9
 //>42T 21z . . . . . . . . .     >36t 18Z . . .   >36T 18z . . .
 //>42t 21Z . . . . . . . . .     >36T 18z . . .   >36t 18Z . . .
->36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
->36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+//>36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
+//>36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// Here's 6-5 subdivision:
+//>44T 22z . . . . 20z . . . .     >36t 18Z . . .   >36T 18z . . .
+//>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// This is based on 9 rather than 11, and then on 5 to closer match gap
+>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
+>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
 
 1T
 1r
@@ -75,8 +81,14 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /f
 /marker L10
 //>42T 21z . . . . . . . . .     >36t 18Z . . .   >36T 18z . . .
 //>42t 21Z . . . . . . . . .     >36T 18z . . .   >36t 18Z . . .
->36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
->36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+//>36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
+//>36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// Here's 6-5 subdivision:
+//>44T 22z . . . . 20z . . . .     >36t 18Z . . .   >36T 18z . . .
+//>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+// This is based on 9 rather than 11, and then on 5 to closer match gap
+>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
+>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
 12T . D 24T . . . 12T 12t . . 12D 24T . . .
 12T . D 24T . . . 12T 12t . . 8F 8r
 
