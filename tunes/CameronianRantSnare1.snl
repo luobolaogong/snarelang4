@@ -54,8 +54,10 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /f
 /marker L7
 ^6F 24z .  12t . .  24Z . 12T .   4T
 1r
-6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
-15z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .      // ^16T 16z . .  // maybe check out this line again
+//6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
+//15z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .      // ^16T 16z . .  // maybe check out this line again
+6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+27:2z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
 
 /marker L8
 ^6T 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
@@ -73,8 +75,12 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /f
 //>44T 22z . . . . 20z . . . .     >36t 18Z . . .   >36T 18z . . .
 //>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
 // This is based on 9 rather than 11, and then on 5 to closer match gap
->18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
->18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+// this is not bad, and it does allow for even subdivision by 9 (3 triplets inside 1 triplet):
+//>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
+//>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+// maybe sounds better:
+>34T 17z . . . . . . .     >36t 18Z . . .   >36T 18z . . .
+>34t 17Z . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
 
 1T
 1r
@@ -89,16 +95,18 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /f
 //>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
 // This is based on 9 rather than 11
 // This is based on 9 rather than 11, and then on 5 to closer match gap
->18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
->18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+//>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
+//>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+>34T 17z . . . . . . .     >36t 18Z . . .   >36T 18z . . .
+>34t 17Z . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
 12T . D 24T . . . 12T 12t . . 12D 24T . . .
 12T . D 24T . . . 12T 12t . . 8F 8r
 
 /marker L11
 ^6F 24z .  12t . .  24Z . 12T .   4T
 1r
-6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
-15z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+27:2z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
 
 /marker L12
 ^6T 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
@@ -120,16 +128,16 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /f
 >36T 18z 12T  >36t 18Z  >30t 15Z .   >30T 15z .   >12t  >36T 18z   >28T 14z . .
 
 /marker L15
->18T . . 12t  4r 4r  /cresc 16Z . . . /ff /f
->18T . . 12t  4r 4r 4r /f
+/cresc 18T . . ^12t /fff /f 4r 4r   16Z . . .
+/cresc 18T . . ^12t /fff /f  4r 4r 4r /f
 12r . >12D 4r 4r  >4D
-12r . >12D  4r 4r  /cresc 16Z . . . /ff /f
+12r . >12D  4r 4r  16Z . . .
 
 /marker L16
->18T . . 12t  >12T . >12T  12t >12T .  24Z . 12T .
+/cresc 18T . . ^12t  /fff /f >12T . >12T  12t >12T .  24Z . 12T .
 >12D T t   >12T 12d 12t  12T . >12D   6T 12t
 ^24T . . . . .    ^24T . . . ^. .   24T . ^12T ^24t .   ^24t . . . . .
-^24t . . . ^24t .   24t . ^12t ^24T .  /cresc ^28T 14z . . 16Z . . . /ff
+^24t . . . ^24t .   24t . ^12t ^24T .  /cresc ^28T 14z . . 16Z . . . /fff
 
 1T
 

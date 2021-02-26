@@ -1,79 +1,94 @@
 // Something to help learn/teach how to transform open rolls to pipeband tap rolls.
 
+// This really isn't very clear if you're just listening and trying to figure it out
+// Not so good.  The algorithm of figureing things out is good though.
+// The previous version was clearer.  The one I sent to dave and peter.
+
+// Change everything to 3/4 or 6/4  and shorten all 4/4 to 3/4 or expand to 6/4???  Easier to follow rather than changing????
 
 /time 4/4
-/tempo 60
 /track met
 /channel 0
 
-/f
-
-4M . 8M . 4M
-/mp
-/time 4/4
-4M . . .   . . . .   . . . .
-/time 3/4
-4M . .   . . .   . . .
-4M . .   . . .   . . .
-/time 4/4
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
-
-/tempo 70
+/tempo 60
 /f
 4M . 8M . 4M
 /mp
-4M . . .   . . . .   . . . .
-/time 3/4
-4M . .   . . .   . . .
-4M . .   . . .   . . .
 /time 4/4
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+/time 6/4
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+/time 4/4
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+
 
 /tempo 80
 /f
 4M . 8M . 4M
 /mp
-4M . . .   . . . .   . . . .
-/time 3/4
-4M . .   . . .   . . .
-4M . .   . . .   . . .
 /time 4/4
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+/time 6/4
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+/time 4/4
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
 
-/tempo 90
-/f
-4M . 8M . 4M
-/mp
-4M . . .   . . . .   . . . .
-/time 3/4
-4M . .   . . .   . . .
-4M . .   . . .   . . .
-/time 4/4
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
 
 /tempo 100
 /f
 4M . 8M . 4M
 /mp
-4M . . .   . . . .   . . . .
-/time 3/4
-4M . .   . . .   . . .
-4M . .   . . .   . . .
 /time 4/4
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
-4M . . .   . . . .   . . . .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+/time 6/4
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+>8M . _. . _. .    >8M . _. . _. .    >8M . _. . _. .   >8M . _. . _. .
+/time 4/4
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
+_8M . _. . _. . _. .   _8M . _. . _. . _. .   _8M . _. . _. . _. .
 
+//tempo 120
+/mf
+4M . 8M . 4M
 
+/mp
+/time 4/4
+4M . . .
+4M . . .
+4M . . .
 
+/time 6/4
+>4M . .   >4M . .
+>4M . .   >4M . .
+
+/time 4/4
+4M . . .
+4M . . .
+4M . . .
+
+/tempo 120
+^4M ^. ^12M . . ^4M
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+1M
 
 
 /track snare5
@@ -88,23 +103,33 @@
 ^24T t t   ^24T t t   ^24T t t   ^24T t t        ^24T ^t t   ^24T ^t t   ^24T ^t t   ^24T ^t t
 ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z     ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z
 
-// 3/4
-/marker 4strk, tap buzz tap
+// 4/4
+/marker 4strk,tap buzz tap
+16T 32t t >8T   16t 32T T >8t   16T 32t t >8T   16t 32T T >8t
+24T t t >8T    24t T T >8t   24T t t >8T    24t T T >8t
+24T 12z >8T  24t 12Z >8t  24T 12z >8T  24t 12Z >8t
+
+// 6/4
+/marker dotted 8th 4strk, tap buzz tap
 ^16T 32t t ^16T   ^16t 32T T ^16t   ^16T 32t t ^16T   ^16t 32T T ^16t
-//^24T t t ^16T     ^24t T T ^16t     ^24T t t ^16T     ^24t T T ^16t // wrong uness you want to presere last 16th, and maybe you do!
+^16T 32t t ^16T   ^16t 32T T ^16t   ^16T 32t t ^16T   ^16t 32T T ^16t
+^64:3T t t ^64:3T   ^64:3t T T ^64:3t   ^64:3T t t ^64:3T   ^64:3t T T ^64:3t
 ^64:3T t t ^64:3T   ^64:3t T T ^64:3t   ^64:3T t t ^64:3T   ^64:3t T T ^64:3t
 ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
+^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
 
-// 3/4
+// 6/4
 /marker dotted eighth 5strk, tap buzz buzz
 ^16T 32t t T T  ^16t 32T T t t  ^16T 32t t T T  ^16t 32T T t t
+^16T 32t t T T  ^16t 32T T t t  ^16T 32t t T T  ^16t 32T T t t
 ^80:3T t t T T   ^80:3t T T t t  ^80:3T t t T T   ^80:3t T T t t
+^80:3T t t T T   ^80:3t T T t t  ^80:3T t t T T   ^80:3t T T t t
+^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
 ^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
 
 // 4/4
 /marker 6strk, tap buzz buzz tap
 ^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t
-//^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t  // wrong unless you want to preserve the last 16th
 ^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t
 ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t
 
@@ -128,23 +153,33 @@
 ^24T t t   ^24T t t   ^24T t t   ^24T t t        ^24T ^t t   ^24T ^t t   ^24T ^t t   ^24T ^t t
 ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z     ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z
 
-// 3/4
-/marker 4strk, tap buzz tap
+// 4/4
+/marker 4strk,tap buzz tap
+16T 32t t >8T   16t 32T T >8t   16T 32t t >8T   16t 32T T >8t
+24T t t >8T    24t T T >8t   24T t t >8T    24t T T >8t
+24T 12z >8T  24t 12Z >8t  24T 12z >8T  24t 12Z >8t
+
+// 6/4
+/marker dotted 8th 4strk, tap buzz tap
 ^16T 32t t ^16T   ^16t 32T T ^16t   ^16T 32t t ^16T   ^16t 32T T ^16t
-//^24T t t ^16T     ^24t T T ^16t     ^24T t t ^16T     ^24t T T ^16t // wrong uness you want to presere last 16th, and maybe you do!
+^16T 32t t ^16T   ^16t 32T T ^16t   ^16T 32t t ^16T   ^16t 32T T ^16t
+^64:3T t t ^64:3T   ^64:3t T T ^64:3t   ^64:3T t t ^64:3T   ^64:3t T T ^64:3t
 ^64:3T t t ^64:3T   ^64:3t T T ^64:3t   ^64:3T t t ^64:3T   ^64:3t T T ^64:3t
 ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
+^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
 
-// 3/4
+// 6/4
 /marker dotted eighth 5strk, tap buzz buzz
 ^16T 32t t T T  ^16t 32T T t t  ^16T 32t t T T  ^16t 32T T t t
+^16T 32t t T T  ^16t 32T T t t  ^16T 32t t T T  ^16t 32T T t t
 ^80:3T t t T T   ^80:3t T T t t  ^80:3T t t T T   ^80:3t T T t t
+^80:3T t t T T   ^80:3t T T t t  ^80:3T t t T T   ^80:3t T T t t
+^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
 ^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
 
 // 4/4
 /marker 6strk, tap buzz buzz tap
 ^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t
-//^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t  // wrong unless you want to preserve the last 16th
 ^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t
 ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t
 
@@ -168,23 +203,33 @@
 ^24T t t   ^24T t t   ^24T t t   ^24T t t        ^24T ^t t   ^24T ^t t   ^24T ^t t   ^24T ^t t
 ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z     ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z
 
-// 3/4
-/marker 4strk, tap buzz tap
+// 4/4
+/marker 4strk,tap buzz tap
+16T 32t t >8T   16t 32T T >8t   16T 32t t >8T   16t 32T T >8t
+24T t t >8T    24t T T >8t   24T t t >8T    24t T T >8t
+24T 12z >8T  24t 12Z >8t  24T 12z >8T  24t 12Z >8t
+
+// 6/4
+/marker dotted 8th 4strk, tap buzz tap
 ^16T 32t t ^16T   ^16t 32T T ^16t   ^16T 32t t ^16T   ^16t 32T T ^16t
-//^24T t t ^16T     ^24t T T ^16t     ^24T t t ^16T     ^24t T T ^16t // wrong uness you want to presere last 16th, and maybe you do!
+^16T 32t t ^16T   ^16t 32T T ^16t   ^16T 32t t ^16T   ^16t 32T T ^16t
+^64:3T t t ^64:3T   ^64:3t T T ^64:3t   ^64:3T t t ^64:3T   ^64:3t T T ^64:3t
 ^64:3T t t ^64:3T   ^64:3t T T ^64:3t   ^64:3T t t ^64:3T   ^64:3t T T ^64:3t
 ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
+^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
 
-// 3/4
+// 6/4
 /marker dotted eighth 5strk, tap buzz buzz
 ^16T 32t t T T  ^16t 32T T t t  ^16T 32t t T T  ^16t 32T T t t
+^16T 32t t T T  ^16t 32T T t t  ^16T 32t t T T  ^16t 32T T t t
 ^80:3T t t T T   ^80:3t T T t t  ^80:3T t t T T   ^80:3t T T t t
+^80:3T t t T T   ^80:3t T T t t  ^80:3T t t T T   ^80:3t T T t t
+^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
 ^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
 
 // 4/4
 /marker 6strk, tap buzz buzz tap
 ^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t
-//^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t  // wrong unless you want to preserve the last 16th
 ^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t
 ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t
 
@@ -200,93 +245,31 @@
 ^36T t t T T t t T T    ^36T t t T T t t T T    ^36T ^t t ^T T ^t t ^T T    ^36T ^t t ^T T ^t t ^T T
 ^36T 18z .   .   .      ^36T 18z .   .   .      ^36T 18z .   .   .      ^36T 18z .   .   .
 
-1T
+^1T
 
-// 4/4
-/marker 3strk, tap buzz
-^16T 32t t  ^16T 32t t  ^16T 32t t  ^16T 32t t   ^16T 32t t  ^16T 32t t  ^16T 32t t  ^16T 32t t
-^24T t t   ^24T t t   ^24T t t   ^24T t t        ^24T ^t t   ^24T ^t t   ^24T ^t t   ^24T ^t t
+/marker endings from above
 ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z     ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z
+24T 12z ^8T  24t 12Z ^8t  24T 12z ^8T  24t 12Z ^8t
 
-// 3/4
-/marker 4strk, tap buzz tap
-^16T 32t t ^16T   ^16t 32T T ^16t   ^16T 32t t ^16T   ^16t 32T T ^16t
-//^24T t t ^16T     ^24t T T ^16t     ^24T t t ^16T     ^24t T T ^16t // wrong uness you want to presere last 16th, and maybe you do!
-^64:3T t t ^64:3T   ^64:3t T T ^64:3t   ^64:3T t t ^64:3T   ^64:3t T T ^64:3t
+48T 24z ^16T  48t 24Z ^16t   48T 24z ^16T  48t 24Z ^16t   48T 24z ^16T  48t 24Z ^16t   48T 24z ^16T  48t 24Z ^16t
+
 ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
-
-// 3/4
-/marker dotted eighth 5strk, tap buzz buzz
-^16T 32t t T T  ^16t 32T T t t  ^16T 32t t T T  ^16t 32T T t t
-^80:3T t t T T   ^80:3t T T t t  ^80:3T t t T T   ^80:3t T T t t
+^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
 ^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
-
-// 4/4
-/marker 6strk, tap buzz buzz tap
-^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t
-//^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t  // wrong unless you want to preserve the last 16th
-^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t
-^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t
-
-// 4/4
-/marker 7strk, tap buzz buzz buzz
-^16T 32t t T T t t  ^16T 32t t T T t t  ^16T 32t t T T t t  ^16T 32t t T T t t
-^28T t t T T t t    ^28T t t T T t t    ^28T ^t t ^T T ^t t    ^28T ^t t ^T T ^t t
-^28T 14z .   .      ^28T 14z .   .      ^28T 14z .   .      ^28T 14z .   .
-
-// 4/4
-/marker tap 9strk, tap buzz buzz buzz buzz, on the beat
-^20T 40t t T T t t T T  ^20t 40T T t t T T t t  ^20T 40t t T T t t T T  ^20t 40T T t t T T t t
-^36T t t T T t t T T    ^36T t t T T t t T T    ^36T ^t t ^T T ^t t ^T T    ^36T ^t t ^T T ^t t ^T T
-^36T 18z .   .   .      ^36T 18z .   .   .      ^36T 18z .   .   .      ^36T 18z .   .   .
-
-1T
-
-// 4/4
-/marker 3strk, tap buzz
-^16T 32t t  ^16T 32t t  ^16T 32t t  ^16T 32t t   ^16T 32t t  ^16T 32t t  ^16T 32t t  ^16T 32t t
-^24T t t   ^24T t t   ^24T t t   ^24T t t        ^24T ^t t   ^24T ^t t   ^24T ^t t   ^24T ^t t
-^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z     ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z
-
-// 3/4
-/marker 4strk, tap buzz tap
-^16T 32t t ^16T   ^16t 32T T ^16t   ^16T 32t t ^16T   ^16t 32T T ^16t
-//^24T t t ^16T     ^24t T T ^16t     ^24T t t ^16T     ^24t T T ^16t // wrong uness you want to presere last 16th, and maybe you do!
-^64:3T t t ^64:3T   ^64:3t T T ^64:3t   ^64:3T t t ^64:3T   ^64:3t T T ^64:3t
-^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
-
-// 3/4
-/marker dotted eighth 5strk, tap buzz buzz
-^16T 32t t T T  ^16t 32T T t t  ^16T 32t t T T  ^16t 32T T t t
-^80:3T t t T T   ^80:3t T T t t  ^80:3T t t T T   ^80:3t T T t t
-^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
-
-// 4/4
-/marker 6strk, tap buzz buzz tap
-^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t   ^16T 32t t T T ^16t
-//^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t   ^80:3T t t T T ^16t  // wrong unless you want to preserve the last 16th
-^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t   ^24T t t T T ^t
-^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t
-
-// 4/4
-/marker 7strk, tap buzz buzz buzz
-^16T 32t t T T t t  ^16T 32t t T T t t  ^16T 32t t T T t t  ^16T 32t t T T t t
-^28T t t T T t t    ^28T t t T T t t    ^28T ^t t ^T T ^t t    ^28T ^t t ^T T ^t t
-^28T 14z .   .      ^28T 14z .   .      ^28T 14z .   .      ^28T 14z .   .
-
-// 4/4
-/marker tap 9strk, tap buzz buzz buzz buzz, on the beat
-^20T 40t t T T t t T T  ^20t 40T T t t T T t t  ^20T 40t t T T t t T T  ^20t 40T T t t T T t t
-^36T t t T T t t T T    ^36T t t T T t t T T    ^36T ^t t ^T T ^t t ^T T    ^36T ^t t ^T T ^t t ^T T
-^36T 18z .   .   .      ^36T 18z .   .   .      ^36T 18z .   .   .      ^36T 18z .   .   .
-
-4T . . .
-
-/marker samples w/o met
-^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z     ^24T 12z    ^24T 12z    ^24T 12z    ^24T 12z
-^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t    ^64:3T 32:3z ^64:3T   ^64:3t 32:3Z ^64:3t
 ^80:3T 40:3z .  ^80:3t 40:3Z .    ^80:3T 40:3z .  ^80:3t 40:3Z .
 ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t   ^24T 12z . ^24t
 ^28T 14z .   .      ^28T 14z .   .      ^28T 14z .   .      ^28T 14z .   .
 /cresc ^36T 18z .   .   .      ^36T 18z .   .   .      ^36T 18z .   .   .      ^36T 18z .   .   .
-^1T /fff
+^1T /fff /f
+
+/marker from Rant
+/f /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /ff    // check for too stiff on the last roll stuff
+
+// Here's 6-5 subdivision, seems to match a bit better with the quarter notes:
+>44T 22z . . . . 20z . . . .     >36t 18Z . . .   >36T 18z . . .
+>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
+
+>30T 15z .  >30t 15Z .  >12T   >36t 18Z 12t   >36T 18z 12T   >36t 18Z 12t  >36T 18z
+>36T 18z 12T  >36t 18Z  >30t 15Z .   >30T 15z .   >12t  >36T 18z   >28T 14z . .
+1T

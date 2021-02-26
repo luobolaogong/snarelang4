@@ -2,6 +2,13 @@
 // video https://youtu.be/pW39X9Rh_78
 // Dave Henry solo, excellent:  https://youtu.be/954lUq5xqys
 // Strathclyde Police: https://www.youtube.com/watch?v=Pq_5Hr6zEBo  played at 124
+// Another strathclyde: https://youtu.be/FI83Wak43bc?t=148
+// Two drummers: https://youtu.be/JuAt-SMlNbU?t=131   at 126bpm
+// Bobby Rea version:  https://youtu.be/TzXgRWUwwDk
+
+// Alex playing Donald Cameron, on pad:  https://www.youtube.com/watch?v=0bxJlZfDbEk
+// Andre Scullion playing the Rant (tune 2 of 3): https://youtu.be/qqQJ8X2QCkc
+
 
 // Part 1: https://youtu.be/oKC-2yisPMc
 // Part 2: https://youtu.be/vDuBBpbWxK8
@@ -12,17 +19,22 @@
 // Part 7: https://youtu.be/K60bjNG7jns
 // Part 8: https://youtu.be/_OvBs5Phs-E
 
+// Wow, there's such a thing as a short single crush note
+// And a flammed roll, and a flammed tap roll
 
 /time 4/4
 //tempo 128  // Dave Henry of Pryde of East Lothian
 //tempo 140  //Duthart playing
-/tempo 124  // Strathclyde Police
+//tempo 124  // Strathclyde Police
+/tempo 112 // for Hawaiians
+//tempo 62 // just for fun
 /track met
 /channel 0
 
+// why does metronome sometimes come out so loud?
 /mp
 4M . 12M . . 4M
-
+/mp
 4M . . .   4M . . .   4M . . .   4M . . .
 4M . . .   4M . . .   4M . . .   4M . . .
 4M . . .   4M . . .   4M . . .   4M . . .
@@ -58,11 +70,10 @@
 
 1r
 
-
 /marker L1
 ^12D 24T . 12T  . . .      ^12D 12t .   . /cresc 18Z . .
 ^12t /fff /ff 24T . 12T    >12t 12T t   /ff 20Z . . . .   >12t  /decresc . . /ff
-^24Z ^24z 12T .               12T 12t ^24Z 24z^   24T . . . >12T  12t . .   //not same as written, but seems as if played this way
+^24Z ^24z 12T .               12T 12t ^24Z ^24z   24T . . . >12T  12t . .   //not same as written, but seems as if played this way
 >6D ^24T .  24T . . . >12D  12t . . >4d
 
 /marker L2
@@ -101,8 +112,10 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /ff
 ^6F 24z .  12t . .  24Z . 12T .   6T 12t
 24Z . 24T . 12T  6t 24Z .  24T . . .  12T  6t 12t
 //6D 12t >24T . . . ^. .  24T . . . >12T  20t 10Z . 12Z . .
-6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
-15z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .      // ^16T 16z . .  // maybe check out this line again
+//6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
+//15z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .      // ^16T 16z . .  // maybe check out this line again
+6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+27:2z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
 
 /marker L8
 ^6T 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
@@ -113,45 +126,29 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /ff
 
 /marker L9
 /f /cresc
-// Any of the following sound okay (No! Totally wrong on the half note!  It's 9 notes, not 11!)
-//This is an even subdivision across the half note:
-//>42T 21z . . . . . . . . .     >36t 18Z . . .   >36T 18z . . .
-//>42t 21Z . . . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
-// Here's 5-6 subdivision across the half note, maybe they play it more like this:
-//>36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
-//>36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
-// Here's 6-5 subdivision, seems to match a bit better with the quarter notes:
-//>44T 22z . . . . 20z . . . .     >36t 18Z . . .   >36T 18z . . .
-//>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
-// This is based on 9 rather than 11, and then on 5 to closer match gap
->18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
->18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
-
+// Maybe I could improve this by making tap shorter   as in 38 19 ////////    36 18 ///
+//>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
+//>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+>34T 17z . . . . . . .     >36t 18Z . . .   >36T 18z . . .
+>34t 17Z . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
 12T . . . . d t . . D 24T . . .
 12T . D 24T . . . 12T 12t . f T . F
 
 /marker L10
 /f /cresc
-//>22T 22z . . . . . . . . .     >20t 20Z . . .   >20T 20z . . .
-//>22t 22Z . . . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
-//>42T 21z . . . . . . . . .     >36t 18Z . . .   >36T 18z . . .
-//>42t 21Z . . . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
-//>36T 18z . . . 24z . . . . .     >36t 18Z . . .   >36T 18z . . .
-//>36t 18Z . . . 24Z . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
-// Here's 6-5 subdivision:
-//>44T 22z . . . . 20z . . . .     >36t 18Z . . .   >36T 18z . . .
-//>44t 22Z . . . . 20Z . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
-// This is based on 9 rather than 11, and then on 5 to closer match gap
->18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
->18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+//>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
+//>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+>34T 17z . . . . . . .     >36t 18Z . . .   >36T 18z . . .
+>34t 17Z . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
 12T . D 24T . . . 12T 12t . . 12D 24T . . .
 12T . D 24T . . . 12T 12t . . 8F 8r
 
 /marker L11
 ^6F 24z .  12t . .  24Z . 12T .   6T 12t
 24Z . 24T . 12T  6t 24Z .  24T . . .  12T  6t 12t
-6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
-15z     ^12T 36t 18Z   ^30t 15Z .   ^30T 15z .  >12t  ^36T 18z    ^16T 16z . .
+6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+27:2z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+
 
 /marker L12
 ^6T 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
@@ -164,24 +161,30 @@ _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /ff
 /f /cresc 6F 18Z . . . . . 6t /fff /decresc  12T 6f 12t /p
 /f /cresc 6F 18Z . . . . . 6t /fff /decresc  12T 6f 12t /p /ff
 // check following.  I think it's wrong
->30T 15z .  >30t 15Z .  >24T 24z >12T  ^20T 20z . . .  16Z 16z . .
->30T 15z .  >30t 15Z .  >24T 24z >12T  ^20T 20z . . .  16Z 16z . .
-
+//>30T 15z .  >30t 15Z .  >24T 24z >12T  ^20T 20z . . .  16Z 16z . .
+//>30T 15z .  >30t 15Z .  >24T 24z >12T  ^20T 20z . . .  16Z 16z . .
+// Dave henry plays it like this, which I think is an improvement:
+//^80:3T 40:3z . ^80:3t 40:3Z . 16T .      ^28T 14z . . 16Z . . .
+//^80:3T 40:3z . ^80:3t 40:3Z . 16T .      ^28T 14z . . 16Z . . .
+// Duthart plays it close to this:
+//^80:3T 40:3z . ^80:3t 40:3Z . 32T . . T  ^20t 10Z . 16Z . . .
+^80:3T 40:3z . ^80:3t 40:3Z . 32T 32z 16T  ^20t 10Z . 16Z . . .
+^80:3T 40:3z . ^80:3t 40:3Z . 16T T      ^20t 10Z . 16Z . . .
 
 /marker L14
 /mf /cresc 6T 18Z . . . . . 6t /ff /decresc  12T 6f 12t /p
 /mf /cresc 6F 18Z . . . . . 6t /ff /decresc  12T 6f 12t /p /ff
 >30T 15z .  >30t 15Z .  >12T   >36t 18Z 12t   >36T 18z 12T   >36t 18Z 12t  >36T 18z
->36T 18z 12T  >36t 18Z  >30t 15Z .   >30T 15z .   >12t  >36T 18z   >28T 14z . .
+>36T 18z 12T  >36t 18Z  >30t 15Z .   >30T   15z .   >12t  >36T 18z    >28T 14z . .
 
 /marker L15
->18T . . 12t  >12T . >12T  12t >12T .  /cresc 16Z . . . /ff /ff
->18T . . 12t  >12T . >12T  12t >12T .  /cresc 16Z . . . /ff /ff
-12T . >12D 24T . . . 12T  12t . .  >12D 24T . . .
-12T . >12D  24T . . . 12T  12t . .  /cresc 16Z . . . /ff /ff
+/cresc 18T . . ^12t /fff /ff  12T . >12T  12t >12T .  16Z . . .
+/cresc 18T . . ^12t /fff /ff  12T . >12T  12t >12T .  16Z . . .
+12T . >12D   /fff /ff  24T . . . 12T  12t . .  >12D 24T . . .
+12T . >12D  24T . . . 12T  12t . .  16Z . . .
 
 /marker L16
->18T . . 12t  >12T . >12T  12t >12T .  24Z . 12T .
+/cresc 18T . . ^12t /fff /ff 12T . >12T  12t >12T .  24Z . 12T .
 >12D T t   >12T 12d 12t  12T . >12D   6T 12t
 ^24T . . . . .    ^24T . . . ^. .   24T . ^12T ^24t .   ^24t . . . . .
 >24t . . . >24t .   24t . >12t >24T .  /cresc ^28T 14z . . 16Z . . . /fff

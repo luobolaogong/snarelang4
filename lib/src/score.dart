@@ -647,7 +647,7 @@ class Score {
     var snareNumber = 5; // ??
     //var nSnares = 5; // what??????
     var nSnares = commandLine.nSnares ?? 1;
-    for (var element in elements) {
+    for (var element in elements) { // where the crap is elements coming from?  If it's global, show it as global.
 
       if (element is TimeSig) {
         mostRecentTimeSig = element;
@@ -719,7 +719,7 @@ class Score {
 
       else if (element is Note) {
         var note = element as Note; // unnec cast, it says, but I want to
-
+        // How know if note is a snare?  check against NoteType.tapRight, etc?
 
         // The random value 200 is found by trial and error.  If smaller it doesn't sound as much of a line, and flams/drags/ruffs stand out and if too big, it's muddled.  So this is a quick setting, and depends on other factors.
         // note.deltaTimeDelayForRandomSnareLine = (scaleAdjustForNon44 * random.nextInt(200) / (100 / mostRecentTempo.bpm)).round(); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
@@ -735,7 +735,31 @@ class Score {
         // var snareNumTimeDelayScaledBasedOn100Bpm = (scaleAdjustForNon44Times100TimesSnareNumMinus1 / factorBasedOn100Bpm).round();
         // print('snareNumTimeDelayScaledBasedOn100Bpm: $snareNumTimeDelayScaledBasedOn100Bpm');
         // note.deltaTimeDelayForRandomSnareLine = snareNumTimeDelayScaledBasedOn100Bpm; // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
-        note.deltaTimeDelayForRandomSnareLine = calcSoundDelayFromCenter(snareNumber, mostRecentTempo.bpm, scaleAdjustForNon44, nSnares); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+
+
+
+        // everything's turning into a hack.  This should be done elsewhere probabl
+        // Only do this if we have a snare line, and the note is for a snare drum other than #5
+        switch (note.noteType) {
+          case NoteType.metLeft:
+          case NoteType.metRight:
+          case NoteType.bassLeft:
+          case NoteType.bassRight:
+          case NoteType.tenorLeft:
+          case NoteType.tenorRight:
+          case NoteType.rest:
+            break;
+          default: // includes previousNoteDurationOrType????
+            note.deltaTimeDelayForRandomSnareLine = calcSoundDelayFromCenter(snareNumber, mostRecentTempo.bpm, scaleAdjustForNon44, nSnares); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+        }
+// If you play back the midi really slowly (25%), all notes sound like flams.
+//          note.deltaTimeDelayForRandomSnareLine = calcSoundDelayFromCenter(snareNumber, mostRecentTempo.bpm, scaleAdjustForNon44, nSnares); // The 180 is based on a tempo of 100bpm.  What does this do for dotted quarter tempos?
+
+
+
+
+
+
 
         //print('\t\trandomDelayForANote: $randomDelayForANote');
         //print('delay for snare $snareNumber is ${note.deltaTimeDelayForRandomSnareLine} and for grace notes: ${note.deltaTimeShiftForGraceNotes}');
@@ -783,39 +807,53 @@ class Score {
     // print('soundDelay: $soundDelay');
     // the more snares you have, the more tunnel sounding it is
     // 5 snares, separated as much as possible sounds better than 9
+
+    // The greater the sound delay causes the sound to be more pronounced and weighted in the ear it's closer further from.  For example,
+    // snare1 with soundDelay of 64 and snare9 with delay of 57 causes more sound to go to the right ear more, because it seems closer
+    // because sound reaches the right ear first, it seems.  That's my guess.
+
+    // Doing a random delay here makes the sound bounce back and forth between right and left.
+    // var snareNumOrig = snareNum;
+    // var rng = Random();
+    // if (snareNum != 5) {
+    //   snareNum = rng.nextInt(9) + 1;
+    //   if (snareNum == 5) {
+    //     snareNum = snareNumOrig;
+    //   }
+    // }
     switch (snareNum) { // this is a test based on a set tempo.  Needs adjustment for diff tempos.  The slower the tempo the more it's off.  Faster tempos reduce delay diffs
       case 1:
-        soundDelay = 112;
+        soundDelay = 32; // 64; // 56; // 112;
         break;
       case 2:
-        soundDelay = 80;
+        soundDelay = 20; // 40; // 80;
         break;
       case 3:
-        soundDelay = 48;
+        soundDelay = 16; // 32; // 24; // 48;
         break;
       case 4:
-        soundDelay = 16;
+        soundDelay = 4; // 8; // 16;
         break;
       case 5:
         soundDelay = 0;
         break;
       case 6:
-        soundDelay = 32;
+        soundDelay = 8; // 16; // 32;
         break;
       case 7:
-        soundDelay = 64;
+        soundDelay = 12; // 24; // 32; // 64;
         break;
       case 8:
-        soundDelay = 96;
+        soundDelay = 24; // 48; // 96;
         break;
       case 9:
-        soundDelay = 128;
+        soundDelay = 28; // 56; // 64; // 128;
         break;
       default:
         print('what snare was that?: $snareNum');
         break;
     } //i screwed something up adding nSnares, and other stuff around here
-    var multiplierBasedOnNumberOfSnares = 3;
+    num multiplierBasedOnNumberOfSnares = 3;
     switch (nSnares) {
       case 1:
       case 2:
@@ -824,15 +862,15 @@ class Score {
         multiplierBasedOnNumberOfSnares = 2; // maybe 3 better?
         break;
       case 5:
-        multiplierBasedOnNumberOfSnares = 3;
+        multiplierBasedOnNumberOfSnares = 2.5; // 3;
         break;
       case 6:
       case 7:
-        multiplierBasedOnNumberOfSnares = 4;
+        multiplierBasedOnNumberOfSnares = 3; // 4;
         break;
       case 8:
       case 9:
-        multiplierBasedOnNumberOfSnares = 5;
+        multiplierBasedOnNumberOfSnares = 3.5; // 5;
         break;
       default:
         print('What is this nSnares? $nSnares');

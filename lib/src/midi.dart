@@ -461,6 +461,29 @@ class Midi {
       //   continue; // new
       // }
       if (element is Note) {
+        print('snareNumber: $snareNumber and nSnares is ${commandLine.nSnares}');
+
+        // Adjust for cumulative increase in sound when have a drumline rather than a soloist
+        // Only do this if we have a snare line, and the note is for a snare drum other than #5
+        if (commandLine.nSnares > 3 && snareNumber != 5) {
+          switch (element.noteType) {
+            case NoteType.metLeft:
+            case NoteType.metRight:
+            case NoteType.bassLeft:
+            case NoteType.bassRight:
+            case NoteType.tenorLeft:
+            case NoteType.tenorRight:
+            case NoteType.rest:
+              break;
+            default: // includes previousNoteDurationOrType????
+              print('velocity was ${element.velocity}');
+              element.velocity = element.velocity - (commandLine.nSnares * 4);
+              print('now velocity is ${element.velocity}');
+          }
+        }
+
+
+
         // If the note is flam, drag, or ruff we should adjust placement of the note in the timeline so that the
         // principle part of the note is where it should go (and adjust after the note by the same difference.)
         // To do this, we need access to the previous note to shorten it.  So that means gotta process in a separate

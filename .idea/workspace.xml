@@ -19,9 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Mostly worked on the TapRolls thing.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded.">
+      <change afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare2.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare3.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare4.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare6.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare7.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare8.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/TapRollsXForm.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/TapRollsXForm.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +81,19 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.TapRollsXForm">
+  <component name="RunManager" selected="Dart Command Line App.CameronianRant3Snares">
+    <configuration name="Cameronian5Snares" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/CameronianRantSnare5.snl,tunes/CameronianRantSnare1.snl,tunes/CameronianRantSnare3.snl,tunes/CameronianRantSnare7.snl,tunes/CameronianRantSnare9.snl -o midifiles/CameronianRant5Snares.mid -S 1.0 --nSnares 5" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Cameronian9Snares" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/CameronianRantSnare5.snl,tunes/CameronianRantSnare1.snl,tunes/CameronianRantSnare2.snl,tunes/CameronianRantSnare3.snl,tunes/CameronianRantSnare4.snl,tunes/CameronianRantSnare6.snl,tunes/CameronianRantSnare7.snl,tunes/CameronianRantSnare8.snl,tunes/CameronianRantSnare9.snl -o midifiles/CameronianRant9Snares.mid -S 1.0 --nSnares 9" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="CameronianRant3Snares" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i tunes/CameronianRantSnare5.snl,tunes/CameronianRantSnare1.snl,tunes/CameronianRantSnare9.snl -o midifiles/CameronianRant3Snares.mid -S 0.33 --nSnares 3" />
+      <option name="arguments" value="-i tunes/CameronianRantSnare5.snl,tunes/CameronianRantSnare1.snl,tunes/CameronianRantSnare9.snl -o midifiles/CameronianRant3Snares.mid -S 1.0 --nSnares 3" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -128,6 +149,8 @@
     <list>
       <item itemvalue="Dart Command Line App.Experiments" />
       <item itemvalue="Dart Command Line App.CameronianRant3Snares" />
+      <item itemvalue="Dart Command Line App.Cameronian5Snares" />
+      <item itemvalue="Dart Command Line App.Cameronian9Snares" />
       <item itemvalue="Dart Command Line App.TapRollsXForm" />
       <item itemvalue="Dart Command Line App.MaxRayneSnareLine" />
       <item itemvalue="Dart Command Line App.MaxRayneDrumLine" />
@@ -322,14 +345,15 @@
       <workItem from="1613357954990" duration="2093000" />
       <workItem from="1613513788980" duration="11178000" />
       <workItem from="1613606150530" duration="13779000" />
-      <workItem from="1613678655659" duration="15316000" />
-    </task>
-    <task id="LOCAL-00031" summary="Scotland the Brave, tenor, bass, and metronome added.">
-      <created>1601586474254</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1601586474254</updated>
+      <workItem from="1613678655659" duration="20695000" />
+      <workItem from="1613759873874" duration="11147000" />
+      <workItem from="1613847270407" duration="2230000" />
+      <workItem from="1613880101934" duration="629000" />
+      <workItem from="1613940777043" duration="9626000" />
+      <workItem from="1614029877671" duration="3151000" />
+      <workItem from="1614114121807" duration="1763000" />
+      <workItem from="1614223999720" duration="3109000" />
+      <workItem from="1614298439374" duration="1240000" />
     </task>
     <task id="LOCAL-00032" summary="Getting ready to change stuff to support grace note delta times.">
       <created>1601939000288</created>
@@ -667,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613695335115</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded.">
+      <created>1613703098152</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1613703098152</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +717,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="5 new JL exercises from first book." />
     <MESSAGE value="2 new JL exercises from first book." />
     <MESSAGE value="Last two exercise pages plus 1st score." />
     <MESSAGE value="Added last 4 pages of the book." />
@@ -711,7 +741,8 @@
     <MESSAGE value="Minor cleanup of old files and commented-out code." />
     <MESSAGE value="Just a kinda time stamp on files.  Not really doing anything &#10;as planned." />
     <MESSAGE value="Mostly worked on the TapRolls thing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mostly worked on the TapRolls thing." />
+    <MESSAGE value="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -738,32 +769,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>995</line>
+          <line>1033</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>931</line>
+          <line>969</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>934</line>
+          <line>972</line>
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>943</line>
+          <line>981</line>
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>940</line>
+          <line>978</line>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>567</line>
+          <line>590</line>
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
@@ -833,7 +864,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>523</line>
+          <line>546</line>
           <option name="timeStamp" value="242" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
@@ -843,78 +874,63 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>788</line>
+          <line>826</line>
           <option name="timeStamp" value="257" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>791</line>
+          <line>829</line>
           <option name="timeStamp" value="258" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>794</line>
+          <line>832</line>
           <option name="timeStamp" value="259" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>797</line>
+          <line>835</line>
           <option name="timeStamp" value="260" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>803</line>
+          <line>841</line>
           <option name="timeStamp" value="262" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>806</line>
+          <line>844</line>
           <option name="timeStamp" value="263" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>809</line>
+          <line>847</line>
           <option name="timeStamp" value="264" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>812</line>
+          <line>850</line>
           <option name="timeStamp" value="265" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>827</line>
+          <line>865</line>
           <option name="timeStamp" value="272" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>831</line>
+          <line>869</line>
           <option name="timeStamp" value="273" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>835</line>
-          <option name="timeStamp" value="274" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>838</line>
+          <line>876</line>
           <option name="timeStamp" value="275" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/note.dart</url>
           <line>198</line>
           <option name="timeStamp" value="276" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>647</line>
-          <option name="timeStamp" value="278" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
-          <line>648</line>
-          <option name="timeStamp" value="280" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
@@ -930,6 +946,71 @@
           <url>file://$PROJECT_DIR$/lib/src/note.dart</url>
           <line>195</line>
           <option name="timeStamp" value="284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
+          <line>319</line>
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>493</line>
+          <option name="timeStamp" value="292" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>727</line>
+          <option name="timeStamp" value="293" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>462</line>
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
+          <line>681</line>
+          <option name="timeStamp" value="298" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
+          <line>201</line>
+          <option name="timeStamp" value="300" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
+          <line>205</line>
+          <option name="timeStamp" value="301" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
+          <line>752</line>
+          <option name="timeStamp" value="304" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
+          <line>755</line>
+          <option name="timeStamp" value="305" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
+          <line>742</line>
+          <option name="timeStamp" value="306" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>467</line>
+          <option name="timeStamp" value="307" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>476</line>
+          <option name="timeStamp" value="308" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>480</line>
+          <option name="timeStamp" value="309" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
