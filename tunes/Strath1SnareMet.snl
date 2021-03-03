@@ -15,6 +15,9 @@
 // Therefore I'm changing the hand order to allow for 3 pluses
 16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
 16:3F 32Z .   16:3T  16t   16Z . . 16t  12T . .   // hand order issue here
+// They want more of a strath feeling, and they want those hand orders?  Well then, a 5 pulse
+//16:3F 32Z .   16:3T  16t   20Z . . . 20t  16:3T 16t
+//16:3F 32Z .   16:3T  16t   20Z . . . 20t  12T . .   // hand order issue here
 
 /marker L2
 16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
@@ -43,7 +46,7 @@
 
 /marker L4rpt
 16:3F 32Z .   16:3T  16t   16Z . . 16t  16:3T 16t
-16Z . . 16T 12t . >.   . . >.  6t 12t
+16Z . . 16T 12t . >.   . . >.  4t
 
 
 

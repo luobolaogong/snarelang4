@@ -4,6 +4,7 @@
 // Strathclyde Police: https://www.youtube.com/watch?v=Pq_5Hr6zEBo  played at 124
 // Another strathclyde: https://youtu.be/FI83Wak43bc?t=148
 // Two drummers: https://youtu.be/JuAt-SMlNbU?t=131   at 126bpm
+// Stephen McWhirter:  https://youtu.be/_HlxIJQ3P9A?t=107  at 125
 // Bobby Rea version:  https://youtu.be/TzXgRWUwwDk
 
 // Alex playing Donald Cameron, on pad:  https://www.youtube.com/watch?v=0bxJlZfDbEk
@@ -25,9 +26,9 @@
 /time 4/4
 //tempo 128  // Dave Henry of Pryde of East Lothian
 //tempo 140  //Duthart playing
-//tempo 124  // Strathclyde Police
-/tempo 112 // for Hawaiians
-//tempo 62 // just for fun
+/tempo 124  // Strathclyde Police, and McWhirter
+//tempo 112 // for Hawaiians
+//tempo 84 // just for fun
 /track met
 /channel 0
 
@@ -66,128 +67,123 @@
 //tempo 128  // Dave Henry of Pryde of East Lothian
 //tempo 140  //Duthart playing
 
-/ff
+/mf
 
 1r
 
 /marker L1
-^12D 24T . 12T  . . .      ^12D 12t .   . /cresc 18Z . .
-^12t /fff /ff 24T . 12T    >12t 12T t   /ff 20Z . . . .   >12t  /decresc . . /ff
-^24Z ^24z 12T .               12T 12t ^24Z ^24z   24T . . . >12T  12t . .   //not same as written, but seems as if played this way
->6D ^24T .  24T . . . >12D  12t . . >4d
+/fff ^12D /mf 24T . 12T  . . .      /fff ^12D /mf 12t .   . /cresc 18Z . .
+^12t /fff /mf 24T . 12T    12t 12T t    >20Z >. >. >. >.   ^12t  . .
+^24Z ^24z 12T .     12T 12t ^24Z ^24z   24T . . . 12T  12t . .
+^6D ^24T .  24T . . . >12D  12t . . >4d
 
 /marker L2
-^12D 24T . 12T  . . .                   >12D 12t .   . /cresc 18Z . .
->12t /fff /ff 24T . 12T    >12t 12T t   /ff 20Z . . . .   >12t  /decresc . . /ff
-/f /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
-_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /ff    // check for too stiff on the last roll stuff
+/fff ^12D /mf 24T . 12T  . . .      /fff ^12D /mf 12t .   . /cresc 18Z . .
+^12t /fff /mf 24T . 12T    12t 12T t    >20Z >. >. >. >.   ^12t  . .
+/mp /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
+//_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _36t 18Z . . .  ^4T /ff
 
 /marker L3
-/ff
-/ff 20Z . . . .  _6t /ff >12f 12T . _12F >6f 24Z .
-^6T 12t 6F 12f 12r 24Z . 12T 6t 12t
+/ff 20Z . . . .  _6t /mf ^12f 12T . _12F ^6f >24Z >.
+^6T 12t 6F >12f 12r >24Z >. >12T _6t 12t
 ^24T . . . . .   ^24T . . .   ^24T . . . . . ^12T  ^6t 12t
-^24Z ^24z 24T . 12T  6t ^24Z ^24z 24T . . . >12T >6t 12t
+//^24Z ^24z 24T . 12T  6t ^24Z ^24z 24T . . . >12T >6t 12t
+>14Z >14z 28T . .  ^6t ^24Z ^24z 24T . . . _12T ^6t 12t
 
 /marker L4
-^6D 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
->12D 12T .   12T >12d ^12t  12T . >12D  ^6T 12t
-24T . . . . .    ^. . . . . .   . . . . ^. .   ^. . . . . .
->24T . . . ^. .     . . ^. . . .     /cresc >28T 14z . . 16Z . . . /fff /ff
+^6D 20t 20t   20T . _20T ^12t  12T . >12F >6f 12t
+>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+>24T . . . . .    ^. . . . . .   . . . . ^. .   ^. . . . . .
+>24T . . . ^. .     . . ^. . . .     /cresc >30T 15z . . . . . . /fff /mf
 
 /marker L5
 >24T . . . . .   >12D 24T . . .    >24T . . . 12T  12t . .
->24T . . . 12T  12t . .    20Z . . . .  12t . .
-24Z . 12T .   12T . 24Z .   24T . . . 12T  12t . .
->6D 24T .   24T . . . >12D   12t . . >8D 8r
+_24T _. _. _. >12T  12t . .    >20Z >. >. >. >.  >12t . .
+>24Z >. 12T .   12T . >24Z >.   24T . . . 12T  12t . .
+>6D 24T .   24T . . . >12D   12t . . >4D
 
 /marker L6
 >24T . . . . .   >12D 24T . . .   ^. . . . 12T  12t . .
->24T . . . 12T  12t . .    20Z . . . .  12t . .
+_24T _. _. _. _12T  12t . .    /ff 20Z . . . . /mf 12t . .
 /mf /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
-_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /ff
+//_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _20t Z . . .  ^4T /ff /mf
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _36t 18Z . . .  ^4T  /ff /mf
 
 
 /marker L7
-^6F 24z .  12t . .  24Z . 12T .   6T 12t
-24Z . 24T . 12T  6t 24Z .  24T . . .  12T  6t 12t
+^6F 24z .  12t . .  >24Z >. 12T .   6T 12t
+>24Z >. 24T . 12T  6t >24Z >.  24T . . .  12T  6t 12t
 //6D 12t >24T . . . ^. .  24T . . . >12T  20t 10Z . 12Z . .
 //6D 12t >24T . . . ^. .  24T . . . >12T  ^15t 15Z 15z 15Z
 //15z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .      // ^16T 16z . .  // maybe check out this line again
-6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
-27:2z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+>6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+27:2z     ^12T ^36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
 
 /marker L8
-^6T 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
->12D 12T .   12T >12d ^12t  12T . >12D  ^6T 12t
-24T . . . . .    ^. . . . . .   . . . . ^. .   ^. . . . . .
->24T . . . ^. .     . . ^. . . .     /ff /cresc >28T 14z . . 16Z . . . /fff /ff
-
+^6T 20t 20t   20T . _20T ^12t  12T . >12F >6f 12t
+>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+>24T . . . . .   >. . . .  >. .    . . >12T  >24t .    >24t . . . . .
+>24t . . . >. .     . . >12t >24T .      /cresc ^30T 15z . . . . . . /fff
 
 /marker L9
-/f /cresc
-// Maybe I could improve this by making tap shorter   as in 38 19 ////////    36 18 ///
+/mp /cresc
 //>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
-//>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+//>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . .
 >34T 17z . . . . . . .     >36t 18Z . . .   >36T 18z . . .
->34t 17Z . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
-12T . . . . d t . . D 24T . . .
-12T . D 24T . . . 12T 12t . f T . F
+>34t 17Z . . . . . . .     >36T 18z . . .   >36t 18Z . . .
+12T /ff /mf 12t . . . >d >t . . >D 24T . . .
+12T . >D 24T . . . 12T 12t . >f T . >F      // watch out for errors in parsing in this line 9
 
 /marker L10
-/f /cresc
-//>18T 18z . . . . . . .     >20t 20Z . . .   >20T 20z . . .
-//>18t 18Z . . . . . . .     >20T 20z . . .   >20t 20Z . . . /fff /ff
+/mp /cresc
 >34T 17z . . . . . . .     >36t 18Z . . .   >36T 18z . . .
->34t 17Z . . . . . . .     >36T 18z . . .   >36t 18Z . . . /fff /ff
-12T . D 24T . . . 12T 12t . . 12D 24T . . .
-12T . D 24T . . . 12T 12t . . 8F 8r
+>34t 17Z . . . . . . .     >36T 18z . . .   >36t 18Z . . .
+12T /ff /mf 12t >D 24T . . . 12T 12t . . >12D 24T . . .
+12T . >D 24T . . . 12T 12t . . >4F
 
 /marker L11
-^6F 24z .  12t . .  24Z . 12T .   6T 12t
-24Z . 24T . 12T  6t 24Z .  24T . . .  12T  6t 12t
+^6F 24z .  12t . .  >24Z >. 12T .   6T 12t
+>24Z >. 24T . 12T  6t >24Z >.  24T . . .  12T  6t 12t
 6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
-27:2z     ^12T 36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+27:2z     ^12T ^36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
 
 
 /marker L12
-^6T 20t 20t   20T . _20T ^12t  12T . 12F 6f 12t
->12D 12T .   12T >12d ^12t  12T . >12D  ^6T 12t
-24T . . . . .    ^. . . . . .   . . . . ^. .   ^. . . . . .
->24T . . . ^. .     . . ^. . . .     /cresc >28T 14z . . 16Z . . . /fff /ff
+^6T 20t 20t   20T . _20T ^12t  12T . >12F >6f 12t
+>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+>24T . >. . >. .    >. . . . >. .   . . >. . >. .   >. . . . . .
+>24T . . . >. .     . . >. . . .     /cresc >28T 14z . . 16Z . . .
 
 /marker L13
-// next lin diff fromscore
-/f /cresc 6F 18Z . . . . . 6t /fff /decresc  12T 6f 12t /p
-/f /cresc 6F 18Z . . . . . 6t /fff /decresc  12T 6f 12t /p /ff
-// check following.  I think it's wrong
-//>30T 15z .  >30t 15Z .  >24T 24z >12T  ^20T 20z . . .  16Z 16z . .
-//>30T 15z .  >30t 15Z .  >24T 24z >12T  ^20T 20z . . .  16Z 16z . .
+>6F /fff /mp /cresc 18Z . . . . . 6t /fff /mf  12T >6f 12t
+>6F /fff /mp /cresc 18Z . . . . . 6t /fff /mf  12T >6f 12t
 // Dave henry plays it like this, which I think is an improvement:
 //^80:3T 40:3z . ^80:3t 40:3Z . 16T .      ^28T 14z . . 16Z . . .
 //^80:3T 40:3z . ^80:3t 40:3Z . 16T .      ^28T 14z . . 16Z . . .
-// Duthart plays it close to this:
-//^80:3T 40:3z . ^80:3t 40:3Z . 32T . . T  ^20t 10Z . 16Z . . .
-^80:3T 40:3z . ^80:3t 40:3Z . 32T 32z 16T  ^20t 10Z . 16Z . . .
-^80:3T 40:3z . ^80:3t 40:3Z . 16T T      ^20t 10Z . 16Z . . .
+^80:3T 40:3z . >80:3t 40:3Z . >32T 32z >16T  ^34t 17Z . . . . . . .
+^80:3T 40:3z . >80:3t 40:3Z . >32T 32z >16T  ^34t 17Z . . . . . . .
+
+
 
 /marker L14
-/mf /cresc 6T 18Z . . . . . 6t /ff /decresc  12T 6f 12t /p
-/mf /cresc 6F 18Z . . . . . 6t /ff /decresc  12T 6f 12t /p /ff
+/mf 6F /fff 18Z . . . . . 6t /mf  12T >6f 12t
+/mf 6F /fff 18Z . . . . . 6t /mf  12T >6f 12t
 >30T 15z .  >30t 15Z .  >12T   >36t 18Z 12t   >36T 18z 12T   >36t 18Z 12t  >36T 18z
 >36T 18z 12T  >36t 18Z  >30t 15Z .   >30T   15z .   >12t  >36T 18z    >28T 14z . .
 
 /marker L15
-/cresc 18T . . ^12t /fff /ff  12T . >12T  12t >12T .  16Z . . .
-/cresc 18T . . ^12t /fff /ff  12T . >12T  12t >12T .  16Z . . .
-12T . >12D   /fff /ff  24T . . . 12T  12t . .  >12D 24T . . .
-12T . >12D  24T . . . 12T  12t . .  16Z . . .
+/mf /cresc 18T . . ^12t /fff /mf  12T . >12T  12t >12T .  >16Z >. >. >.
+/mf /cresc 18T . . ^12t /fff /mf  12T . >12T  12t >12T .  >16Z >. >. >.
+12T . >12D  24T . . . 12T  12t . .  >12D 24T . . .
+12T . >12D  24T . . . 12T  12t . .  >16Z >. >. >.
 
 /marker L16
-/cresc 18T . . ^12t /fff /ff 12T . >12T  12t >12T .  24Z . 12T .
->12D T t   >12T 12d 12t  12T . >12D   6T 12t
-^24T . . . . .    ^24T . . . ^. .   24T . ^12T ^24t .   ^24t . . . . .
->24t . . . >24t .   24t . >12t >24T .  /cresc ^28T 14z . . 16Z . . . /fff
+/mf /cresc 18T . . ^12t /fff /mf 12T . >12T  12t >12T .  >24Z >. 12T .
+>12D T t   12T _12d >12t  12T . _12D   >6T 12t
+24T . . . . .    ^24T . . . . .   24T . . . >. .   ^24t . . . . .
+//>24t . . . >24t .   24t . >12t >24T .  /cresc ^28T 14z . . 16Z . . . /fff
+>24T . . . >. .  24T . >. . . .  /cresc ^30T 15z . . . . . . /fff
 
 1T
 

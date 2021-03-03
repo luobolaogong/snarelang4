@@ -192,6 +192,13 @@ bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sou
 ///
 /// Every note has a channel.  I don't know how that works if you change the channel.  Perhaps it's only for "transport"
 /// of signal?
+///
+/// Just a note, don't know where to put it for now.  Regarding buzz notes, we need different durations in the sound font.
+/// If you only have one duration, say one that bounces a long time, it can't be used for very short buzzes.  For short
+/// ones in the scores, you need a buzz that's short and more crushed.  So, to choose the correct buzz, it depends on the
+/// target tempo.  When the user of MidiVoyager slows something way down, the buzzes will sound really short or longer,
+/// depending on which one was chosen when the soundfont buzz was chosen.  I think that's about the best you can do, because
+/// MidiVoyager doesn't make a selection based on tempo.  It would be good if it did.  (So I need to write my own midi player.)
 
 class Midi {
   static final ticksPerBeat = 10080; // put this elsewhere later
@@ -461,7 +468,7 @@ class Midi {
       //   continue; // new
       // }
       if (element is Note) {
-        print('snareNumber: $snareNumber and nSnares is ${commandLine.nSnares}');
+        //print('snareNumber: $snareNumber and nSnares is ${commandLine.nSnares}');
 
         // Adjust for cumulative increase in sound when have a drumline rather than a soloist
         // Only do this if we have a snare line, and the note is for a snare drum other than #5

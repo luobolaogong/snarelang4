@@ -711,7 +711,7 @@ class Score {
             snareNumber = 9;
             break;
           default:
-          print('Huh?  Whats this element.id?: ${thisTrack.id}');
+          //print('Huh?  Whats this element.id?: ${thisTrack.id}');
             break;
         }
         continue;
