@@ -1,0 +1,56 @@
+// "Reel" as played by the band on Oahu.
+// "Straight" version, not dot/cut
+
+/track met
+/channel 0
+/time 2/4
+/tempo 96 // not sure
+
+/mf
+4M . 16M 16M 16M 16M 8M 8M
+
+/mp
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+
+
+
+
+/track snare5
+/channel 5
+//time 2/4
+//tempo 96    // not sure
+
+/f
+
+2r 2r
+
+/marker L1
+8t /cresc 24Z . . 8t /fff /f /cresc 24Z . .
+16T /fff /f 16t 16T 16t   16T 16t 16T 16t
+8t /cresc 24Z . . 8t /fff /f /cresc 24Z . .
+16T /fff /f 16t 16T 16t   8t .
+
+/marker L1rpt
+8t /cresc 24Z . . 8t /fff /f /cresc 24Z . .
+16T /fff /f 16t 16T 16t   16T 16t 16T 16t
+8t /cresc 24Z . . 8t /fff /f /cresc 24Z . .
+16T /fff /f 16t 16T 16t   8t .
+
+
+
+/marker L2
+16T 16t 16T 16t 8t /cresc 24Z . .
+8t /fff /f /cresc 24Z . . 16T /fff /f 16t 8t
+16T 16t 16T 16t 8t /cresc 24Z . .
+16T /fff /f 16t 16T 16t   8t .
+
+/marker L2rpt
+16T 16t 16T 16t 8t /cresc 24Z . .
+8t /fff /f /cresc 24Z . . 16T /fff /f 16t 8t
+16T 16t 16T 16t 8t /cresc 24Z . .
+16T /fff /f 16t 16T 16t   ^4t
+
+

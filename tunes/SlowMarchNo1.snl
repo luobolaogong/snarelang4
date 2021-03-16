@@ -1,0 +1,83 @@
+// "Jig" as played by the band on Oahu.
+
+/track met
+/channel 0
+/time 6/8
+/tempo 84 // not sure
+
+/mf
+8:3M . 16:3M 16M 8M 8:3M
+
+/mp
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+
+
+
+
+/track snare5
+/channel 5
+
+/mf
+
+8:3r . . 4r 24Z . .
+
+/marker L1
+/mf
+16:3t /fff /mf 16T 8t   /cresc 16Z . . . . .
+16:3T /fff /mf 16T 8t   /cresc 16Z . . . . .
+16:3T /fff /mf 16T 8t    16:3T 16t 8T
+/cresc 16Z . . . . .  4T /fff /mf /cresc 24Z . .
+
+/marker L2
+/mf
+16:3t /fff /mf 16T 8t   /cresc 16Z . . . . .
+16:3T /fff /mf 16T 8t   /cresc 16Z . . . . .
+16:3T /fff /mf 16T 8t    16:3T 16t 8T
+/cresc 16Z . . . . .  4T /fff /mf /cresc 24Z . .
+
+/marker L1Rpt
+/mf
+16:3t /fff /mf 16T 8t   /cresc 16Z . . . . .
+16:3T /fff /mf 16T 8t   /cresc 16Z . . . . .
+16:3T /fff /mf 16T 8t    16:3T 16t 8T
+/cresc 16Z . . . . .  4T /fff /mf /cresc 24Z . .
+
+/marker L2Rpt
+/mf
+16:3t /fff /mf 16T 8t   /cresc 16Z . . . . .
+16:3T /fff /mf 16T 8t   /cresc 16Z . . . . .
+16:3T /fff /mf 16T 8t    16:3T 16t 8T
+/cresc 16Z . . . . .  4T /fff /mf 8t
+
+
+
+/marker L3
+/mf /cresc 16Z . . . . . 4T /fff /mf 8t
+/mf /cresc 16Z . . . . . 4T /fff /mf 24Z . .
+16:3t /fff /mf 16T 8t    16:3T 16t 8T
+/mf /cresc 16Z . . . . . 4T /fff /mf 8t
+
+/marker L4
+/mf /cresc 16Z . . . . . 4T /fff /mf 8t
+/mf /cresc 16Z . . . . . 4T /fff /mf 24Z . .
+16:3t /fff /mf 16T 8t    16:3T 16t 8T
+/mf /cresc 16Z . . . . . 4T /fff /mf 8t
+
+/marker L3Rpt
+/mf /cresc 16Z . . . . . 4T /fff /mf 8t
+/mf /cresc 16Z . . . . . 4T /fff /mf 24Z . .
+16:3t /fff /mf 16T 8t    16:3T 16t 8T
+/mf /cresc 16Z . . . . . 4T /fff /mf 8t
+
+/marker L4Rpt
+/mf /cresc 16Z . . . . . 4T /fff /mf 8t
+/mf /cresc 16Z . . . . . 4T /fff /mf 24Z . .
+16:3t /fff /mf 16T 8t    16:3T 16t 8T
+/mf /cresc 16Z . . . . . 8:3T /fff

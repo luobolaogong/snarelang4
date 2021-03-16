@@ -1,0 +1,79 @@
+// "Jig" as played by the band on Oahu.
+
+/track met
+/channel 0
+/time 6/8
+/tempo 84 // not sure
+
+/mf
+8:3M . 8M . . 8:3M
+
+/mp
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+8:3M .    . .    . .    . .
+
+
+
+
+/track snare5
+/channel 5
+//time 2/4
+//tempo 96    // not sure
+
+/f
+
+4:3r .
+
+/marker L1
+>16Z >. 8T . >16Z >. 8T .
+8t . . >16Z >. 8t .
+>16Z >. 8T t t T t
+/cresc 16Z . . . . .   8T /fff /f t T
+
+/marker L2
+16Z . 8T . 16Z . 8T .
+8t . . 16Z . 8t .
+16Z . 8T t t T t
+/cresc 16Z . . . . .   8:3T /fff /f
+
+/marker L1Rpt
+>16Z >. 8T . >16Z >. 8T .
+8t . . >16Z >. 8t .
+>16Z >. 8T t t T t
+/cresc 16Z . . . . .   8T /fff /f t T
+
+/marker L2Rpt
+16Z . 8T . 16Z . 8T .
+8t . . 16Z . 8t .
+16Z . 8T t t T t
+/cresc 16Z . . . . .   8:3T /fff /f
+
+/marker L3
+/cresc 16Z . . . . . 8:3T /fff /f
+8T . . . . .
+>16Z >. 8T t T t T
+/cresc 16Z . . . . .   8T /fff /f t T
+
+/marker L4
+/cresc 16Z . . . . . 8:3T /fff /f
+8T . . . . .
+>16Z >. 8T t T t T
+/cresc 16Z . . . . .   8:3T /fff /f
+
+/marker L3Rpt
+/cresc 16Z . . . . . 8:3T /fff /f
+8T . . . . .
+>16Z >. 8T t T t T
+/cresc 16Z . . . . .   8T /fff /f t T
+
+/marker L4Rpt
+/cresc 16Z . . . . . 8:3T /fff /f
+8T . . . . .
+>16Z >. 8T t T t T
+/cresc 16Z . . . . .   8:3T /fff /f

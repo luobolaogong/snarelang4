@@ -483,9 +483,9 @@ class Midi {
             case NoteType.rest:
               break;
             default: // includes previousNoteDurationOrType????
-              print('velocity was ${element.velocity}');
+              log.fine('velocity was ${element.velocity}');
               element.velocity = element.velocity - (commandLine.nSnares * 4);
-              print('now velocity is ${element.velocity}');
+              log.fine('now velocity is ${element.velocity}');
           }
         }
 

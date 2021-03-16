@@ -1,0 +1,201 @@
+// The Black Bear
+
+
+/time 2/4
+/tempo 84
+
+/track met
+/channel 0
+
+/mp
+
+>4M >. >8M >. >4M
+
+4M .   . .   . .  8M . 4M
+4M .   . .   . .  8M . 4M
+
+4M .   . .   . .  8M . 4M
+4M .   . .   . .  8M . 4M
+
+4M .   . .   . .   . .
+4M .   . .   . .   . .
+
+
+4M .   . .   . .  8M . 4M
+4M .   . .   . .  8M . 4M
+
+
+
+
+
+/track snare5
+/channel 5
+
+/mf
+4r . . 8r
+
+/cresc 24Z . .
+
+/marker L1
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /mf >. >.  /cresc 24Z . .
+
+/marker L1Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /mf . . T
+
+/marker L3
+>8t /cresc 24Z . .   >8t /ff /mf /cresc 24Z . .
+>12t /ff /mf 24T 12t 24t  >12T 24t 12T 24T
+>8t /cresc 24Z . .   >8t /ff /mf 24Z . .
+>12t 24T 12t 24t  >12T 24t 12T 24T
+
+/marker L4
+/cresc >44T 22z . . . .  >216:5T  108:5z . . .  >24t
+>40T 20z .  >40t 20Z .  >44T 22z . . . .
+>8T /ff /mf . >12T 24t 12T 24T
+>8t /cresc 32Z . . .  >8T /ff /mf  /cresc 24Z . .
+
+/marker L1Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff >. >4T
+
+
+/track snare1
+/channel 1
+
+/mf
+4r . . 8r
+
+/cresc 24Z . .
+
+/marker L1
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /mf >. >.  /cresc 24Z . .
+
+/marker L1Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /mf . . T
+
+/marker L3
+>8t /cresc 24Z . .   >8t /ff /mf /cresc 24Z . .
+>12t /ff /mf 24T 12t 24t  >12T 24t 12T 24T
+>8t /cresc 24Z . .   >8t /ff /mf 24Z . .
+>12t 24T 12t 24t  >12T 24t 12T 24T
+
+/marker L4
+/cresc >44T 22z . . . .  >216:5T  108:5z . . .  >24t
+>40T 20z .  >40t 20Z .  >44T 22z . . . .
+>8T /ff /mf . >12T 24t 12T 24T
+>8t /cresc 32Z . . .  >8T /ff /mf  /cresc 24Z . .
+
+/marker L1Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff >. >4T
+
+
+/track snare9
+/channel 10
+
+/mf
+4r . . 8r
+
+/cresc 24Z . .
+
+/marker L1
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /mf >. >.  /cresc 24Z . .
+
+/marker L1Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /mf . . T
+
+/marker L3
+>8t /cresc 24Z . .   >8t /ff /mf /cresc 24Z . .
+>12t /ff /mf 24T 12t 24t  >12T 24t 12T 24T
+>8t /cresc 24Z . .   >8t /ff /mf 24Z . .
+>12t 24T 12t 24t  >12T 24t 12T 24T
+
+/marker L4
+/cresc >44T 22z . . . .  >216:5T  108:5z . . .  >24t
+>40T 20z .  >40t 20Z .  >44T 22z . . . .
+>8T /ff /mf . >12T 24t 12T 24T
+>8t /cresc 32Z . . .  >8T /ff /mf  /cresc 24Z . .
+
+/marker L1Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker L2Rpt
+>8t /ff /mf . >12T 24t 12T 24T
+>8t t >12T 24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff >. >4T
+
+

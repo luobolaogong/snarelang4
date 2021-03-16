@@ -1,0 +1,119 @@
+// The Black Bear
+// Why is the bass distorted and coming out right ear?
+
+//time 2/4
+//tempo 84
+
+/track bass
+/channel 11
+/mp
+1r
+
+// line 1
+_8B _B 4r
+_8B _B 4r
+_4B 4r
+2r
+
+// line 2
+_8B _B 4r
+_8B _B 4r
+_4B 4b
+8B _b >4B
+
+// line 1Rpt
+_8B _B 4r
+_8B _B 4r
+_4B 4r
+2r
+
+// line 2Rpt
+_8B _B 4r
+_8B _B 4r
+_4B 4b
+8B _b >4B
+
+// part b, line 3
+_8B . . .
+_8B . . .
+_8B . . .
+_8B . . .
+
+// line 4
+_4B _24:5B _24b
+_8B _. >4B
+_4B .
+8B _b >4B
+
+
+
+// Part A, line 1 rpt
+_8B _B 4r
+_8B _B 4r
+_4B 4r
+2r
+
+// Part A, line 2 rpt
+_8B _B 4r
+_8B _B 4r
+_4B 4b
+8B _b >4B
+
+
+
+
+
+/track tenor
+/channel 12
+/p
+1r
+
+// line 1
+_8N _N 4r
+_8N _N 4r
+_4N 4r
+2r
+
+// line 2
+_8N _N 4r
+_8N _N 4r
+_4N 4n
+8N _n >4N
+
+// line 1Rpt
+_8N _N 4r
+_8N _N 4r
+_4N 4r
+2r
+
+// line 2Rpt
+_8N _N 4r
+_8N _N 4r
+_4N 4n
+8N _n >4N
+
+// part b, line 3
+_8N . . .
+_8N . . .
+_8N . . .
+_8N . . .
+
+// line 4
+_4N _24:5N _24n
+_8N _. >4N
+_4N .
+8N _n >4N
+
+
+
+// Part A, line 1 rpt
+_8N _N 4r
+_8N _N 4r
+_4N 4r
+2r
+
+// Part A, line 2 rpt
+_8N _N 4r
+_8N _N 4r
+_4N 4n
+8N _n >4N

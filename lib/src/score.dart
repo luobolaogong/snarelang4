@@ -296,7 +296,7 @@ class Score {
         continue;
       }
       if (element is Note) {
-        log.finest('\telement is a Note...');
+        log.finest('\telement $elementCtr is a Note... $element');
         var note = element as Note;
         // If a note is not in a dynamicRamp, skip it
         if (!inDynamicRamp) {
@@ -317,7 +317,7 @@ class Score {
           var cumulativeTicksSinceDynamicRampStartNote = beatFractionToTicks(cumulativeDurationSinceDynamicRampStartNote);
           log.finest('\t\t\tcumulativeTicksSinceDynamicRampStartNote: $cumulativeTicksSinceDynamicRampStartNote and dynamicsDynamicRamp slope is ${currentDynamicRamp.slope}');
           if (currentDynamicRamp.slope == null) { // hack
-            log.warning('Still in dynamic ramp, right?  Well, got a null at note element $elementCtr, Note duration: ${note.duration}');
+            log.warning('In dynamic ramp: $inDynamicRamp .  Got a null currentDynamicRamp.slope at note element $elementCtr, $note');
             log.severe('Error in dynamic ramp.  Not sure what to do.  Did we have a ramp start, and no ramp end?');
           }
           else {
