@@ -19,29 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Score close to final.">
-      <change afterPath="$PROJECT_DIR$/tunes/44MarchSnare.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/BlackBear.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/BlackBearMidSection.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/JigSnare.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/ReelSnareMet.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/ReelStraightSnareMet.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/SlowMarchNo1.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/SlowMarchNo2.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/SuperSlowMarchNo2.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="More tweaks, and some recent tunes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/tempo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/tempo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare2.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare2.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare3.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare3.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare4.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare4.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare6.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare6.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare7.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare7.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare8.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare8.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +92,7 @@
       <method v="2" />
     </configuration>
     <configuration name="CameronianRant1Snare" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i tunes/CameronianRantSnare5.snl -o midifiles/CameronianRant1Snare.mid -S 0.5 --nSnares 1" />
+      <option name="arguments" value="-i tunes/CameronianRantSnare5.snl -o midifiles/CameronianRant1Snare.mid -S 1.0 --nSnares 1" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -442,14 +422,8 @@
       <workItem from="1615435230930" duration="1343000" />
       <workItem from="1615659547222" duration="5105000" />
       <workItem from="1615834851593" duration="603000" />
-      <workItem from="1615932740100" duration="1658000" />
-    </task>
-    <task id="LOCAL-00034" summary="First cut at John Walsh's Walk.">
-      <created>1602141770942</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1602141770942</updated>
+      <workItem from="1615932740100" duration="3095000" />
+      <workItem from="1616024147633" duration="8545000" />
     </task>
     <task id="LOCAL-00035" summary="Just starting into Annette's Chatter.  &#10;Did cosmetic cleanup in other files.&#10;Nobody should look at this code because it's junk.">
       <created>1602313581910</created>
@@ -787,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614756343033</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="More tweaks, and some recent tunes.">
+      <created>1615936068337</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1615936068338</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -806,7 +787,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added last 4 pages of the book." />
     <MESSAGE value="Starting into Volume 2." />
     <MESSAGE value="Starting into Chapter 2 of Vol 2." />
     <MESSAGE value="Added a few new files, but also changed default&#10;dynamic level to mf." />
@@ -831,7 +811,8 @@
     <MESSAGE value="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded." />
     <MESSAGE value="Slowly working on Cameronian Rant." />
     <MESSAGE value="Score close to final." />
-    <option name="LAST_COMMIT_MESSAGE" value="Score close to final." />
+    <MESSAGE value="More tweaks, and some recent tunes." />
+    <option name="LAST_COMMIT_MESSAGE" value="More tweaks, and some recent tunes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
