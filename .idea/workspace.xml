@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="More tweaks, and some recent tunes.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Rant tweaks.">
+      <change afterPath="$PROJECT_DIR$/tunes/Rant2BarPhrases.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +96,7 @@
       <method v="2" />
     </configuration>
     <configuration name="CameronianRant1Snare" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i tunes/CameronianRantSnare5.snl -o midifiles/CameronianRant1Snare.mid -S 1.0 --nSnares 1" />
+      <option name="arguments" value="-i tunes/CameronianRantSnare5.snl -o midifiles/CameronianRant1Snare.mid -S 1.10 --nSnares 1" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -133,6 +137,11 @@
     </configuration>
     <configuration name="MaxRayneSnareLine" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare1.snl,FanfaresSalutes/MaxRayneSnare2.snl,FanfaresSalutes/MaxRayneSnare3.snl,FanfaresSalutes/MaxRayneSnare4.snl,FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneSnare6.snl,FanfaresSalutes/MaxRayneSnare7.snl,FanfaresSalutes/MaxRayneSnare8.snl,FanfaresSalutes/MaxRayneSnare9.snl -o midifiles/MaxRayneSnareLine.mid -S 1.25" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Rant2BarPhrases" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/Rant2BarPhrases.snl -o midifiles/Rant2BarPhrases.mid -S 1.0 --nSnares 1" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -200,6 +209,7 @@
       <item itemvalue="Dart Command Line App.SlowMarchNo1" />
       <item itemvalue="Dart Command Line App.SlowMarchNo2" />
       <item itemvalue="Dart Command Line App.CameronianRant1Snare" />
+      <item itemvalue="Dart Command Line App.Rant2BarPhrases" />
       <item itemvalue="Dart Command Line App.Rant2BarRepeats" />
       <item itemvalue="Dart Command Line App.Cameronian5Snares" />
       <item itemvalue="Dart Command Line App.ReelSnareMet" />
@@ -423,14 +433,14 @@
       <workItem from="1615659547222" duration="5105000" />
       <workItem from="1615834851593" duration="603000" />
       <workItem from="1615932740100" duration="3095000" />
-      <workItem from="1616024147633" duration="8545000" />
-    </task>
-    <task id="LOCAL-00035" summary="Just starting into Annette's Chatter.  &#10;Did cosmetic cleanup in other files.&#10;Nobody should look at this code because it's junk.">
-      <created>1602313581910</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1602313581910</updated>
+      <workItem from="1616024147633" duration="8573000" />
+      <workItem from="1616089168598" duration="7662000" />
+      <workItem from="1616175316960" duration="1199000" />
+      <workItem from="1616220999258" duration="3175000" />
+      <workItem from="1616454470576" duration="8790000" />
+      <workItem from="1616540344237" duration="1609000" />
+      <workItem from="1616603471637" duration="602000" />
+      <workItem from="1616616572860" duration="630000" />
     </task>
     <task id="LOCAL-00036" summary="Added more to Annette's Chatter.">
       <created>1602484487560</created>
@@ -768,7 +778,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615936068338</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Rant tweaks.">
+      <created>1616047721499</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1616047721500</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -787,7 +804,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Starting into Volume 2." />
     <MESSAGE value="Starting into Chapter 2 of Vol 2." />
     <MESSAGE value="Added a few new files, but also changed default&#10;dynamic level to mf." />
     <MESSAGE value="Adjusted embellishment shifts for x/2 time.  &#10;Not sure how x/8 time works.  Plus added a few more&#10;from volume 2." />
@@ -812,7 +828,8 @@
     <MESSAGE value="Slowly working on Cameronian Rant." />
     <MESSAGE value="Score close to final." />
     <MESSAGE value="More tweaks, and some recent tunes." />
-    <option name="LAST_COMMIT_MESSAGE" value="More tweaks, and some recent tunes." />
+    <MESSAGE value="Rant tweaks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rant tweaks." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,7 +881,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>597</line>
+          <line>636</line>
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
@@ -889,7 +906,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>351</line>
+          <line>393</line>
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
@@ -914,22 +931,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>292</line>
+          <line>344</line>
           <option name="timeStamp" value="210" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>304</line>
+          <line>356</line>
           <option name="timeStamp" value="212" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>301</line>
+          <line>353</line>
           <option name="timeStamp" value="213" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>295</line>
+          <line>347</line>
           <option name="timeStamp" value="215" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
@@ -984,13 +1001,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
-          <line>487</line>
+          <line>526</line>
           <option name="timeStamp" value="309" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
           <line>320</line>
           <option name="timeStamp" value="312" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>300</line>
+          <option name="timeStamp" value="317" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

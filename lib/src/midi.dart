@@ -5,12 +5,15 @@ import '../snarelang4.dart';
 
 bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sound font file has soft,med,loud recordings, and mapped offsets by 10
 ///
-/// The Dart midi library, which is basically a rewrite of a JavaScript library:
+/// The Dart midi library with no explanations, which is basically a rewrite of a JavaScript library:
 /// https://pub.dev/documentation/dart_midi/latest/midi/midi-library.html
+/// Wish I knew where the javascript library was, or some kind of documentation behind these things.
+/// And what is this?:
 /// https://www.mixagesoftware.com/en/midikit/help/HTML/meta_events.html
 /// A midi spec: http://www.cs.cmu.edu/~music/cmsip/readings/Standard-MIDI-file-format-updated.pdf
 /// is based on https://github.com/gasman/jasmid, with no API documentation.
-/// Might also wanna look at javax.sound.midi library.  https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/package-summary.html
+/// Don't know how close this is, but might also wanna look at javax.sound.midi library.
+/// https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/package-summary.html
 ///
 /// A converter of a midi file to JSON:
 /// https://tonejs.github.io/Midi/
@@ -199,6 +202,21 @@ bool soundFontHasSoftMediumLoudRecordings = false; // Change this later when sou
 /// target tempo.  When the user of MidiVoyager slows something way down, the buzzes will sound really short or longer,
 /// depending on which one was chosen when the soundfont buzz was chosen.  I think that's about the best you can do, because
 /// MidiVoyager doesn't make a selection based on tempo.  It would be good if it did.  (So I need to write my own midi player.)
+///
+/// As far as I know, a soundfont can contain multiple "presets", and maybe a preset is a list of "instruments", like
+/// the instruments making up a brass section, and could be called "brass", or "drumline" for a set of snares and other drums.
+/// And an instrument is composed of a set of samples.
+///
+/// When I create a soundfont file, usually it contains one preset, and that preset is "DrumLine".  I'd like to create another
+/// one called "Pipes", and it would be composed of the instruments "HighlandPipes", "Chanter", "SmallPipes", "ePipes" or whatever.
+/// And a "Chanter" instrument would be composed of around 30 samples, corresponding to the various note/embellishment combinations
+/// that are common.
+///
+/// The problem is telling my software to use a different preset within that sondfont file.  Do you do it with ProgramChangeMidiEvent ????
+/// I can create such an object, and set a "programNumber".  But maybe I have to next write it.
+///
+/// Okay, in the soundfont file tool I'm using, there's a "Bank", and a "preset".  I think a Bank can have multiple presets in it.
+///
 
 class Midi {
   static final ticksPerBeat = 10080; // put this elsewhere later
@@ -242,7 +260,7 @@ class Midi {
   /// be able to hold a tempoMap.
   ///
   // List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, num tempoScalar, TimeSig overrideTimeSig, bool usePadSoundFont, bool loopBuzzes, overrideTrack) {
-  List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, commandLine) {
+  List<List<MidiEvent>> addMidiEventsToTracks(List<List> midiTracks, List elements, commandLine) { // this list of elements is supposed to be a list of midi events?  Why two names, elements and midiEvents?
     log.fine('In Midi.createMidiEventsTracksList()');
     var trackEventsList = <MidiEvent>[];
 
@@ -263,6 +281,40 @@ class Midi {
     Tempo mostRecentTempo; // assuming here that we'll hit a tempo before we hit a note, because already added a scaled tempo at start of list.
     num scaleAdjustForNon44 = 1.0;
     TimeSig mostRecentTimeSig;
+
+
+
+
+
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+    // I don't know how to use this program change stuff, but hopefully when I get it right it will allow me to change
+    // the bank's preset
+
+    // starting to think that you can maybe select a different "preset" in the sound font by specifying a ProgramChangeMidiEvent.
+    // Perhaps a "preset" in the soundfont file is like a "bank", or maybe "program", or maybe a "patch", but not sure.
+    // The following doesn't seem to do anything, but some values are required if you want to send that event.
+    // But maybe a "patch" is an instrument.
+    // var programChangeMidiEvent = ProgramChangeMidiEvent();
+    // print('programChangeMidiEvent.channel, .programNumber: ${programChangeMidiEvent.channel}, ${programChangeMidiEvent.programNumber}');
+    // programChangeMidiEvent.programNumber = 1; // maybe 1 for the next preset?????
+    // programChangeMidiEvent.channel = 0; // cannot be null, it seems
+    // programChangeMidiEvent.deltaTime = 0;
+    // //programChangeMidiEvent.type = 'whatever';
+    // trackEventsList.add(programChangeMidiEvent); // does this screw everything up?
+    //
+    // var instrumentNameEvent = InstrumentNameEvent();
+    // print('instrumentNameEvent: $instrumentNameEvent');
+    // instrumentNameEvent.text = 'bilbo';
+    // trackEventsList.add(instrumentNameEvent);
+
+
+
+
+
 
 
 
@@ -311,16 +363,6 @@ class Midi {
       if (element is Tempo) {
         mostRecentTempo = element;
       }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -436,9 +478,6 @@ class Midi {
         //   // We don't want that.  So, scale it by the tempo.
         //
         //
-
-
-
 
 
 
