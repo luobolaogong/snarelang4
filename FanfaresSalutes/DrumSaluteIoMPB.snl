@@ -1,0 +1,106 @@
+// "Drum Salute" from "Maui Celtic Pipes and Drums"
+
+
+/time 4/4
+/tempo 84
+
+/track met
+/channel 0
+/mp
+4M . 16M . . . 8M .
+
+4M . 8r 8M . .
+4M . 8r 8M . .
+4M . . .
+4M . 8r 8M . .
+
+4M . 8r 8M . .
+4M . 8r 8M . .
+4M . . .
+4M . 8r 8M . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . 8r 8M . .
+
+/tempo 76
+4r 8M . 24M . . 8M   // set up the new tempo
+
+24M . .  12M 24M   24M . . 12M 24M   12M 24M 12M 24M  12M 24M 12M 24M
+24M . .  12M 24M   24M . . 12M 24M   24M . . 12M 24M  24M . . 12M 24M  /cresc 24M . . . . .   ^4M /f
+
+24M . .  12M 24M   24M . . 12M 24M   12M 24M 12M 24M  12M 24M 12M 24M
+24M . .  12M 24M   24M . . 12M 24M   24M . . 12M 24M  24M . . 12M 24M  /cresc 24M . . . . .   ^4M /f
+/mp
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+
+
+
+
+/track snare
+/channel 5
+/f
+1r
+/marker P1
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r . . .
+
+/marker P1Rpt
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r . . .
+
+
+/marker P2
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+
+/marker P2Rpt
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r . . .
+
+
+/marker P3 auf Rand!
+//tempo 76
+4r 8T . 24T . . 8T
+//1r
+
+//1r
+//1r
+// Should be sticks on rim with some stick clicks
+/p
+//24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+//24T . .  12t 24t   24T . . 12t 24t   24T . . 12t 24t  24T . . 12t 24t  /cresc 24T . . . . .   ^4T /ff
+
+/ff
+//24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+//24T . .  12t 24t   24T . . 12t 24t   24T . . 12t 24t  24T . . 12t 24t  /cresc 24T . . . . .   ^4T /fff
+
+// sticks on head with some stick clicks
+/p
+24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+24T . .  12t 24t   24T . . 12t 24t   24T . . 12t 24t  24T . . 12t 24t  /cresc 24T . . . . .   ^4T /ff
+
+/ff
+24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+24T . .  12t 24t   24T . . 12t 24t   24T . . 12t 24t  24T . . 12t 24t  /cresc 24T . . . . .   ^4T /fff
+
+/f
+

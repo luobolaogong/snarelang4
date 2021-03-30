@@ -1,3 +1,9 @@
+// March 4/4
+/time 4/4
+
+/tempo 100 // just for easy computation in Midi Voyager
+/track snare
+/channel 0
 
 4T . 8 . .
 

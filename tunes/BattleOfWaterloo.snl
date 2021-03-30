@@ -1,13 +1,14 @@
 // Battle of Waterloo
 // next line could be a problem.  What are the defaults for note duration?
 /tempo 84
-//tempo 4=42
 
 // This /unison stuff doesn't sound good at this time due to the recording of SLOT.  So postpone working on this for now
 //unison
 // Roll-off
-/mf /< 24Z . . . . .    . . . . . .  /f 2T
-/mf /< 24Z . . . . .    . . . . . .  /f 4T
+/track snare
+
+/mf /cresc 24Z . . . . .    . . . . . .  /f 2T
+/mf /cresc 24Z . . . . .    . . . . . .  /f 4T
 
 /mf
 

@@ -51,11 +51,13 @@
 >6T 24Z . 6T /cresc >15T 15T . . .  6T /fff /f  >16t
 16T . . >16t 16T . . >16t  >4T 48r  4t
 
+
 // Line 5
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
 6t >15t . . . .  6T 15f 15T . . .
-/dim   >12X 12z .  /mp >12x 12z 12t  12X 12z 12t /cresc >12x 12Z .
+/dim   >20T 10z .  /mp >18t 9Z 12t  18T 10z 12T /cresc >20t 10Z .
 6T /fff /f 12t >6F 12t 6T >12f  6T 12t
+
 
 // Line 6
 12Z . T 6 24Z . 12T . . 6t 36t 36T T
@@ -65,13 +67,13 @@
 
 // Line 7
 >6F 12t  >6F 12T  6t >15f 15T . . .
-/cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
->12X 12z . >12x 12Z . 16T . . . 6T 12t   /f
+/cresc >20T 10z .  >20t 10Z . . . >12T >20t 10Z . /ff
+>20T 10z . >20t 10Z . 16T . . . 6T 12t   /f
 6T 12t >6F 12t  6T >12f 6t 12t
 
 // Line 8
 >6F 12t  >6F 12T  6t >15f 15T . . .
-/cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
+/cresc >20T 10z .  >20t 10Z . . . >12T >20t 10Z . /ff
 >6T 24Z . 6T /cresc >15T 15T . . .  6T /ff >16t
 16T . . ^16t 16T . . ^16t  ^2T 48r
 

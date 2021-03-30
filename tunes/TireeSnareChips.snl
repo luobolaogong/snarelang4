@@ -14,8 +14,8 @@
 // but how do you make a stereo image with one track?
 
 //track unison
-/track pad
-/channel 5
+/track snare
+/channel 1
 
 /time 2/2
 /tempo 2=72
@@ -59,7 +59,7 @@
 // Line 5
 12Z . T 6 24Z . 12T . . 4t
 2r  6r 15f 15T . . .
-4T 4r 6r >12t /cresc >12x 12Z .
+4T 4r 6r >12t /cresc >20t 10Z .
 6T /fff /f 12t >6F 12r 6r >12f  6T 12t
 
 // Line 6
@@ -70,12 +70,12 @@
 
 // Line 7
 >6F 12t  >4F 4r .
-/cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
+/cresc >20T 10z .  >20t 10Z . . . >12T >20t 10Z . /ff
 1r
 6r 12r >6F 12r  6r >12f 6r 12r
 
 // Line 8
 >6F 12t  >6F 12T  6t >15f 15T . . .
-/cresc >12X 12z .  >12x 12Z . . . >12T >12x 12Z . /ff
+/cresc >20T 10z .  >20t 10Z . . . >12T >20t 10Z . /ff
 >6T 24Z . 6T /cresc >15T 15T . . .  6T /ff >16t
 16T . . ^16t 16T . . ^16t  ^2T 48r

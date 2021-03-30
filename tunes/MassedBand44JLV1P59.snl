@@ -1,0 +1,217 @@
+// Massed Band Setting, by James Laughlin
+// From "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
+// Page 59, audio recording track 40
+// Section Fourteen -  Drum Scores, Massed Band Setting in 4/4
+// Some rolls are marked with crescendos.  Most not
+
+
+/time 4/4
+/tempo 84
+
+
+/track snare5
+/channel 5
+/f
+
+/marker Massd Bnd 4/4
+1r
+/marker Part1
+/f
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+
+/marker P1Rpt
+/f
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+
+/marker Pt2
+/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+
+/marker Pt2Rpt
+/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+
+/marker Pt3
+/f
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+
+/marker Pt3Rpt
+/f
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+
+/marker Pt4
+/f
+^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t
+^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+
+/marker Pt4Rpt
+/f
+^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t
+^4F /mp /cresc 24Z . . . . . >4T /ff 4r
+
+
+/track bass
+/channel 1
+1r
+/mf
+4B . . .
+24:5B 6b 8b   24:5B 6b 8b
+4B . . .
+4B . 2B
+
+4B . . .
+24:5B 6b 8b   24:5B 6b 8b
+4B . . .
+4B . 2B
+
+
+8B . 4B 8B . 4B
+24:5B 6b 8b   24:5B 6b 8b
+8B . 4B 8B . 4B
+4B . 2B
+
+8B . 4B 8B . 4B
+24:5B 6b 8b   24:5B 6b 8b
+8B . 4B 8B . 4B
+4B . 2B
+
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+
+
+
+/track tenor
+/channel 8
+1r
+/mf
+4N . . .
+24:5N 6n 8n   24:5N 6n 8n
+4N . . .
+4N . 2N
+
+4N . . .
+24:5N 6n 8n   24:5N 6n 8n
+4N . . .
+4N . 2N
+
+
+4N 8N . 4N 8N .
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N . 4N 8N .
+4N . 2N
+
+4N 8N . 4N 8N .
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N . 4N 8N .
+4N . 2N
+
+
+4N 8N 8:5N
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N 8:5N
+4N . 2N
+
+4N 8N 8:5N
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N 8:5N
+4N . 2N
+
+
+4N 8N 24n . . 2N
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N 24n . . 2N
+4N . . 4r
+
+
+4N 8N 24n . . 2N
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N 24n . . 2N
+4N . . 4r
+
+
+
+
+/track met
+/channel 15
+/p
+^8M . ^8M . ^8M ^8M ^8M .
+/pp
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . 4r

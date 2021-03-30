@@ -19,13 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Rant tweaks.">
-      <change afterPath="$PROJECT_DIR$/tunes/Rant2BarPhrases.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Pretty close to final, for single snare.">
+      <change afterPath="$PROJECT_DIR$/FanfaresSalutes/DrumSaluteIoMPB.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/BeginnerMarch.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/MassedBand24JLV1P60.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/MassedBand44JLV1P59.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare1.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare9.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/BattleOfWaterloo.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BattleOfWaterloo.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/BlackBear.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BlackBear.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/March44.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/March44.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/RowanTree.snl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/ScotlandTheBraveSnareChips.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ScotlandTheBraveSnareChips.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/TireeSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/TireeSnare.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/TireeSnareChips.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/TireeSnareChips.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +80,19 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.CameronianRant1Snare">
+  <component name="RunManager" selected="Dart Command Line App.DrumSaluteMaui">
     <configuration name="44March" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/44MarchSnare.snl -o midifiles/44MarchSnare.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BattleOfWaterloo" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/BattleOfWaterloo.snl -o midifiles/BattleOfWaterloo.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BeginMrch" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/BeginnerMarch.snl -o midifiles/BeginnerMarch.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -105,6 +121,11 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="DrumSaluteMaui" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i FanfaresSalutes/DrumSaluteIoMPB.snl -o midifiles/DrumSaluteIoMPB.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="Experiments" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="--input=experiments/TrackTimings.snl -o midifiles/eba.mid -S 1.0" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -125,6 +146,11 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="March44" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/March44.snl -o midifiles/March44.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="MaxRayneDrumLine" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i FanfaresSalutes/MaxRayneTempoAndMet.snl,FanfaresSalutes/MaxRayneSnare1.snl,FanfaresSalutes/MaxRayneSnare2.snl,FanfaresSalutes/MaxRayneSnare3.snl,FanfaresSalutes/MaxRayneSnare4.snl,FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneSnare6.snl,FanfaresSalutes/MaxRayneSnare7.snl,FanfaresSalutes/MaxRayneSnare8.snl,FanfaresSalutes/MaxRayneSnare9.snl,FanfaresSalutes/MaxRayneTenorBass.snl -o midifiles/MaxRayneDrumLine.mid -S 1.25" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -137,6 +163,16 @@
     </configuration>
     <configuration name="MaxRayneSnareLine" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare1.snl,FanfaresSalutes/MaxRayneSnare2.snl,FanfaresSalutes/MaxRayneSnare3.snl,FanfaresSalutes/MaxRayneSnare4.snl,FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneSnare6.snl,FanfaresSalutes/MaxRayneSnare7.snl,FanfaresSalutes/MaxRayneSnare8.snl,FanfaresSalutes/MaxRayneSnare9.snl -o midifiles/MaxRayneSnareLine.mid -S 1.25" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MsBnd24JL" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/MassedBand24JLV1P60.snl -o midifiles/MassedBand24JLV1P60.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MsBnd44JL" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/MassedBand44JLV1P59.snl -o midifiles/MassedBand44JLV1P59.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -157,6 +193,11 @@
     </configuration>
     <configuration name="ReelStraightSnareMet" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/ReelStraightSnareMet.snl -o midifiles/ReelStraightSnareMet.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ScotBraveChips" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/ScotlandTheBraveSnareChips.snl -o midifiles/ScotlandTheBraveSnareChips.mid -l ALL" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -195,6 +236,11 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="Tiree" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/TireeSnare.snl -o midifiles/TireeSnare.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="SnareLang4Test" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <option name="filePath" value="$PROJECT_DIR$/test/snarelang4_test.dart" />
       <method v="2" />
@@ -204,11 +250,17 @@
       <item itemvalue="Dart Command Line App.CameronianRant3Snares" />
       <item itemvalue="Dart Command Line App.Jig" />
       <item itemvalue="Dart Command Line App.BlackBear" />
+      <item itemvalue="Dart Command Line App.BeginMrch" />
+      <item itemvalue="Dart Command Line App.MsBnd24JL" />
       <item itemvalue="Dart Command Line App.44March" />
       <item itemvalue="Dart Command Line App.SuperSlowMarchNo2" />
       <item itemvalue="Dart Command Line App.SlowMarchNo1" />
       <item itemvalue="Dart Command Line App.SlowMarchNo2" />
       <item itemvalue="Dart Command Line App.CameronianRant1Snare" />
+      <item itemvalue="Dart Command Line App.DrumSaluteMaui" />
+      <item itemvalue="Dart Command Line App.BattleOfWaterloo" />
+      <item itemvalue="Dart Command Line App.March44" />
+      <item itemvalue="Dart Command Line App.ScotBraveChips" />
       <item itemvalue="Dart Command Line App.Rant2BarPhrases" />
       <item itemvalue="Dart Command Line App.Rant2BarRepeats" />
       <item itemvalue="Dart Command Line App.Cameronian5Snares" />
@@ -223,6 +275,8 @@
       <item itemvalue="Dart Command Line App.StrathSnareMet" />
       <item itemvalue="Dart Command Line App.StrathBasedOn16ths" />
       <item itemvalue="Dart Command Line App.ScotlandTheBraveDrums" />
+      <item itemvalue="Dart Command Line App.Tiree" />
+      <item itemvalue="Dart Command Line App.MsBnd44JL" />
       <item itemvalue="Dart Command Line App.JLVol1" />
       <item itemvalue="Dart Test.SnareLang4Test" />
     </list>
@@ -441,13 +495,12 @@
       <workItem from="1616540344237" duration="1609000" />
       <workItem from="1616603471637" duration="602000" />
       <workItem from="1616616572860" duration="630000" />
-    </task>
-    <task id="LOCAL-00036" summary="Added more to Annette's Chatter.">
-      <created>1602484487560</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1602484487560</updated>
+      <workItem from="1616737538844" duration="723000" />
+      <workItem from="1616809037732" duration="596000" />
+      <workItem from="1616898659397" duration="1908000" />
+      <workItem from="1616908614720" duration="2955000" />
+      <workItem from="1616958808866" duration="8694000" />
+      <workItem from="1617058927059" duration="7476000" />
     </task>
     <task id="LOCAL-00037" summary="Worked on Jimmy Rollo and also added Marker and Text although Text doesn't show up.">
       <created>1602659654287</created>
@@ -785,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616047721500</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Pretty close to final, for single snare.">
+      <created>1616737616035</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1616737616036</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -804,7 +864,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Starting into Chapter 2 of Vol 2." />
     <MESSAGE value="Added a few new files, but also changed default&#10;dynamic level to mf." />
     <MESSAGE value="Adjusted embellishment shifts for x/2 time.  &#10;Not sure how x/8 time works.  Plus added a few more&#10;from volume 2." />
     <MESSAGE value="Added one or two new workouts, started working on fixing embellishments, but not done." />
@@ -829,7 +888,8 @@
     <MESSAGE value="Score close to final." />
     <MESSAGE value="More tweaks, and some recent tunes." />
     <MESSAGE value="Rant tweaks." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rant tweaks." />
+    <MESSAGE value="Pretty close to final, for single snare." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pretty close to final, for single snare." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1013,6 +1073,16 @@
           <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
           <line>300</line>
           <option name="timeStamp" value="317" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
+          <line>76</line>
+          <option name="timeStamp" value="318" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
+          <line>84</line>
+          <option name="timeStamp" value="319" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
