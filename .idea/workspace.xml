@@ -19,19 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Pretty close to final, for single snare.">
-      <change afterPath="$PROJECT_DIR$/FanfaresSalutes/DrumSaluteIoMPB.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/BeginnerMarch.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/MassedBand24JLV1P60.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/MassedBand44JLV1P59.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Adding some new tunes, and fixing a few others.">
+      <change afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/BattleOfWaterloo.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BattleOfWaterloo.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/BlackBear.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BlackBear.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/March44.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/March44.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/RowanTree.snl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/ScotlandTheBraveSnareChips.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ScotlandTheBraveSnareChips.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/TireeSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/TireeSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/TireeSnareChips.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/TireeSnareChips.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +56,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tunes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin/test.bash" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/tunes" />
       <recent name="$PROJECT_DIR$/FanfaresSalutes" />
       <recent name="$PROJECT_DIR$/exercises/warmups/LeoBrowne" />
@@ -80,7 +72,7 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.DrumSaluteMaui">
+  <component name="RunManager" selected="Shell Script.ProcessThese.bash">
     <configuration name="44March" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/44MarchSnare.snl -o midifiles/44MarchSnare.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -245,6 +237,19 @@
       <option name="filePath" value="$PROJECT_DIR$/test/snarelang4_test.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="ProcessThese.bash" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/bin/ProcessThese.bash" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Dart Command Line App.Experiments" />
       <item itemvalue="Dart Command Line App.CameronianRant3Snares" />
@@ -279,6 +284,7 @@
       <item itemvalue="Dart Command Line App.MsBnd44JL" />
       <item itemvalue="Dart Command Line App.JLVol1" />
       <item itemvalue="Dart Test.SnareLang4Test" />
+      <item itemvalue="Shell Script.ProcessThese.bash" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -500,14 +506,12 @@
       <workItem from="1616898659397" duration="1908000" />
       <workItem from="1616908614720" duration="2955000" />
       <workItem from="1616958808866" duration="8694000" />
-      <workItem from="1617058927059" duration="7476000" />
-    </task>
-    <task id="LOCAL-00037" summary="Worked on Jimmy Rollo and also added Marker and Text although Text doesn't show up.">
-      <created>1602659654287</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1602659654287</updated>
+      <workItem from="1617058927059" duration="7506000" />
+      <workItem from="1617245898008" duration="601000" />
+      <workItem from="1617317480778" duration="5134000" />
+      <workItem from="1617410838629" duration="2617000" />
+      <workItem from="1617488817930" duration="9907000" />
+      <workItem from="1617578936833" duration="5537000" />
     </task>
     <task id="LOCAL-00038" summary="Added tempo scale for command line, removed set tempo on command line.  Rough.">
       <created>1602743377346</created>
@@ -845,7 +849,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616737616036</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Adding some new tunes, and fixing a few others.">
+      <created>1617093084618</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1617093084618</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -864,7 +875,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a few new files, but also changed default&#10;dynamic level to mf." />
     <MESSAGE value="Adjusted embellishment shifts for x/2 time.  &#10;Not sure how x/8 time works.  Plus added a few more&#10;from volume 2." />
     <MESSAGE value="Added one or two new workouts, started working on fixing embellishments, but not done." />
     <MESSAGE value="Hack embellishment durations." />
@@ -889,7 +899,8 @@
     <MESSAGE value="More tweaks, and some recent tunes." />
     <MESSAGE value="Rant tweaks." />
     <MESSAGE value="Pretty close to final, for single snare." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pretty close to final, for single snare." />
+    <MESSAGE value="Adding some new tunes, and fixing a few others." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding some new tunes, and fixing a few others." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
