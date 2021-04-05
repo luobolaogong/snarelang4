@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Adding some new tunes, and fixing a few others.">
-      <change afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Will process files for website using ProcessThese.bash.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ProcessThese.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -511,14 +511,8 @@
       <workItem from="1617317480778" duration="5134000" />
       <workItem from="1617410838629" duration="2617000" />
       <workItem from="1617488817930" duration="9907000" />
-      <workItem from="1617578936833" duration="5537000" />
-    </task>
-    <task id="LOCAL-00038" summary="Added tempo scale for command line, removed set tempo on command line.  Rough.">
-      <created>1602743377346</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1602743377346</updated>
+      <workItem from="1617578936833" duration="7177000" />
+      <workItem from="1617649853289" duration="8841000" />
     </task>
     <task id="LOCAL-00039" summary="About to change all 36th note ruffs to 3 stroke ruffs in John Walsh">
       <created>1602807138511</created>
@@ -856,7 +850,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617093084618</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Will process files for website using ProcessThese.bash.">
+      <created>1617596778847</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1617596778852</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -875,7 +876,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adjusted embellishment shifts for x/2 time.  &#10;Not sure how x/8 time works.  Plus added a few more&#10;from volume 2." />
     <MESSAGE value="Added one or two new workouts, started working on fixing embellishments, but not done." />
     <MESSAGE value="Hack embellishment durations." />
     <MESSAGE value="What a mess for JlV2P25-19 part 8." />
@@ -900,7 +900,8 @@
     <MESSAGE value="Rant tweaks." />
     <MESSAGE value="Pretty close to final, for single snare." />
     <MESSAGE value="Adding some new tunes, and fixing a few others." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding some new tunes, and fixing a few others." />
+    <MESSAGE value="Will process files for website using ProcessThese.bash." />
+    <option name="LAST_COMMIT_MESSAGE" value="Will process files for website using ProcessThese.bash." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

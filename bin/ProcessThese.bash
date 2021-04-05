@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Processing .snl and .ppl files, to create .mid and audio files under ~/MyHobby/ which can be copied into Google Drive for the .org website use."
-
+echo This is being run out of the bin directory of the snarelang4 project, and not the pipelang project, so later pipes wont work right
 echo We are here: `pwd`
 
 declare myHobby=/home/rob/MyHobby
@@ -17,12 +17,22 @@ echo soundfont is $soundFontFile
 #cd /home/rob/WebstormProjects/snarelang4/bin
 
 
-echo Starting to process easy snare tunes ...
-declare -a tuneNameArray=(44MarchSnare \
+
+
+if false; then
+
+
+
+
+echo Starting to process snare tunes ...
+declare -a tuneNameArray=( \
+44MarchSnare \
+#BadgeOfScotland \
+BanjoBreakdown \
+BattleOfWaterloo \
 BeginnerMarch \
 BlackBear \
-JigSnare \
-CameronianRantSnare5 \
+CastleDangerousSnareAndMet \
 JigSnare \
 March44 \
 MassedBand24JLV1P60 \
@@ -32,18 +42,58 @@ SlowMarchNo2 \
 Strath1SnareMet \
 SuperSlowMarchNo2 )
 
+rm -f ${myHobby}/BandTunes/Midis/*.mid
+rm -f ${myHobby}/BandTunes/Mp3s/*.mp3
+rm -f ${myHobby}/BandTunes/Oggs/*.ogg
+rm -f ${myHobby}/BandTunes/Wavs/*.wav
+
+
 for f in ${tuneNameArray[@]}; do
-  rm -f ${myHobby}/BandTunes/Midis/${f}.mid
+  # I doubt I really need to remove the file before create a new one.  Can probably just write on top of it.
+  # If anything, I should probably just delete everything in the directory before doing a zip of everything.
+  #rm -f ${myHobby}/BandTunes/Midis/${f}.mid
   dart bin/snl.dart -i tunes/${f}.snl -o ${myHobby}/BandTunes/Midis/${f}.mid
-  rm -f ${myHobby}/BandTunes/Mp3s/${f}.mp3
+  #rm -f ${myHobby}/BandTunes/Mp3s/${f}.mp3
   fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/${f}.mp3
-  rm -f ${myHobby}/BandTunes/Oggs/Tunes/${f}.ogg
+  #rm -f ${myHobby}/BandTunes/Oggs/Tunes/${f}.ogg
   fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/${f}.ogg
-  rm -f ${myHobby}/BandTunes/Wavs/${f}.wav
+  #rm -f ${myHobby}/BandTunes/Wavs/${f}.wav
   fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/${f}.wav
 done
 
 # What about the tunes that have multiple .mid files?
+# Probably better just to combine files into one.
+#rm -f ${myHobby}/BandTunes/Midis/BlackBearSnareAndMidSection.mid
+dart bin/snl.dart -i tunes/BlackBear.snl,tunes/BlackBearMidSection.snl -o ${myHobby}/BandTunes/Midis/BlackBearDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BlackBearDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/BlackBearDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BlackBearDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/BlackBearDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BlackBearDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/BlackBearDrums.wav
+
+dart bin/snl.dart -i tunes/CaptEwingMet.snl,tunes/CaptEwingSnare.snl,tunes/CaptEwingTenor.snl,tunes/CaptEwingBass.snl -o ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/CaptEwingDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/CaptEwingDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/CaptEwingDrums.wav
+
+dart bin/snl.dart -i tunes/FlettFromFlottaMet.snl,tunes/FlettFromFlottaSnare.snl,tunes/FlettFromFlottaTenor.snl,tunes/FlettFromFlottaBass.snl -o ${myHobby}/BandTunes/Midis/FlettFromFlottaDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/FlettFromFlottaDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/FlettFromFlottaDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/FlettFromFlottaDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/FlettFromFlottaDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/FlettFromFlottaDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/FlettFromFlottaDrums.wav
+
+dart bin/snl.dart -i tunes/HawaiiAlohaMet.snl,tunes/HawaiiAlohaSnare.snl,tunes/HawaiiAlohaTenor.snl,tunes/HawaiiAlohaBass.snl -o ${myHobby}/BandTunes/Midis/HawaiiAlohaDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/HawaiiAlohaDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/HawaiiAlohaDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/HawaiiAlohaDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/HawaiiAlohaDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/HawaiiAlohaDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/HawaiiAlohaDrums.wav
+
+dart bin/snl.dart -i tunes/ScotlandTheBraveMet.snl,tunes/ScotlandTheBraveSnare.snl,tunes/ScotlandTheBraveSnareChips.snl,tunes/ScotlandTheBraveTenor.snl,tunes/ScotlandTheBraveBass.snl -o ${myHobby}/BandTunes/Midis/ScotlandTheBraveDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/ScotlandTheBraveDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/ScotlandTheBraveDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/ScotlandTheBraveDrums.wav
+
+#dart bin/snl.dart -i tunes/TireeMet.snl,tunes/TireeSnare.snl,tunes/TireeSnareChips.snl,tunes/TireeTenor.snl,tunes/TireeBass.snl -o ${myHobby}/BandTunes/Midis/TireeDrums.mid
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TireeDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/TireeDrums.mp3
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TireeDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/TireeDrums.ogg
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TireeDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/TireeDrums.wav
+
 
 # Now zip up the tunes
 rm -f "${myHobby}/BandTunes/Midis/BandTunesMids.zip"
@@ -57,50 +107,6 @@ zip ${myHobby}/BandTunes/Oggs/BandTunesOggs.zip  ${myHobby}/BandTunes/Oggs/*.ogg
 
 rm -f "${myHobby}/BandTunes/Wavs/BandTunesWavs.zip"
 zip ${myHobby}/BandTunes/Wavs/BandTunesWavs.zip  ${myHobby}/BandTunes/Wavs/*.wav
-
-exit 3
-
-
-
-
-
-echo Starting to process regular tunes with just one file ...
-declare -a regularTuneNameArray=( \
-BadgeOfScotland \
-BanjoBreakdownBattleOfWaterloo \
-CastleDangerousSnareAndMet \
-)
-
-for f in ${regulartuneNameArray[@]}; do
-  rm -f midifiles/${f}.mid
-  dart bin/snl.dart -i tunes/${f}.snl -o ${myHobby}/BandTunes/Midis/${f}.mid
-  rm -f ${myHobby}/BandTunes/Mp3s/${f}.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/${f}.mp3
-  rm -f ${myHobby}/Oggs/Tunes/${f}.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Oggs/Tunes/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Oggs/Tunes/${f}.ogg
-  rm -f ${myHobby}/Wavs/Tunes/${f}.wav
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Wavs/Tunes/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Wavs/Tunes/${f}.wav
-done
-
-# What about the tunes that have multiple .mid files?
-
-# Now zip up the tunes
-rm -f "${myHobby}/BandTunes/Midis/regTunesMids.zip"
-zip ${myHobby}/BandTunes/Midis/regTunesMids.zip  ${myHobby}/BandTunes/Midis/*.mid          no can do  need separate areas.
-
-rm -f "${myHobby}/BandTunes/Mp3s/tunesMp3s.zip"
-zip ${myHobby}/BandTunes/Mp3s/tunesMp3s.zip  ${myHobby}/BandTunes/Mp3s/*.mp3
-
-rm -f "${myHobby}/Oggs/Tunes/tunesOggs.zip"
-zip ${myHobby}/Oggs/Tunes/tunesOggs.zip  ${myHobby}/Oggs/Tunes/*.ogg
-
-rm -f "${myHobby}/Wavs/Tunes/tunesWavs.zip"
-zip ${myHobby}/Wavs/Tunes/tunesWavs.zip  ${myHobby}/Wavs/Tunes/*.wav
-
-exit 0
-
-
-
 
 
 
@@ -152,18 +158,32 @@ JlV1P61-42 \
 JlV1P62-43 \
 )
 
+rm -f ${myHobby}/Books/JLV1/Midis/*.mid
+rm -f ${myHobby}/Books/JLV1/Mp3s/*.mp3
+rm -f ${myHobby}/Books/JLV1/Oggs/*.ogg
+rm -f ${myHobby}/Books/JLV1/Wavs/*.wav
+
 #rm -f ${myHobby}/mp3s/JLV1/*.mp3
 for f in ${JlV1NameArray[@]}; do
-    rm -f "${myHobby}/midis/JLV1midis/${f}.mid"
-    dart bin/snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/LaughlinVol1/${f}.snl -o ${myHobby}/midis/JLV1midis/${f}.mid -S 1.25
-    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/midis/JLV1midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/mp3s/JLV1/${f}.mp3
+    #rm -f "${myHobby}/Books/JLV1/Midis/${f}.mid"
+    dart bin/snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/LaughlinVol1/${f}.snl -o ${myHobby}/Books/JLV1/Midis/${f}.mid -S 1.25
+    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Books/JLV1/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Books/JLV1/Mp3s/${f}.mp3
+    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Books/JLV1/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Books/JLV1/Oggs/${f}.ogg
+    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Books/JLV1/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Books/JLV1/Wavs/${f}.wav
 done
 
 # Now zip
-[ -e "${myHobby}/mp3s/JLV1/JlV1Mp3s.zip" ] && rm "${myHobby}/mp3s/JLV1/JlV1Mp3s.zip"
-zip ${myHobby}/mp3s/JLV1/JlV1Mp3s.zip  ${myHobby}/mp3s/JLV1/*.mp3
-#do same for wavs and oggs etc.
+rm -f "${myHobby}/Books/JLV1/Midis/Books/JLV1Mids.zip"
+zip ${myHobby}/Books/JLV1/Midis/JLV1Mids.zip  ${myHobby}/Books/JLV1/Midis/*.mid
 
+rm -f "${myHobby}/Books/JLV1/Mp3s/Books/JLV1Mp3s.zip"
+zip ${myHobby}/Books/JLV1/Mp3s/JLV1Mp3s.zip  ${myHobby}/Books/JLV1/Mp3s/*.mp3
+
+rm -f "${myHobby}/Books/JLV1/Oggs/Books/JLV1Oggs.zip"
+zip ${myHobby}/Books/JLV1/Oggs/JLV1Oggs.zip  ${myHobby}/Books/JLV1/Oggs/*.ogg
+
+rm -f "${myHobby}/Books/JLV1/Wavs/Books/JLV1Wavs.zip"
+zip ${myHobby}/Books/JLV1/Wavs/JLV1Wavs.zip  ${myHobby}/Books/JLV1/Wavs/*.wav
 
 
 
@@ -191,28 +211,44 @@ JlV2P25-19 \
 JlV2P26-20 \
 )
 
+rm -f ${myHobby}/Books/JLV2/Midis/*.mid
+rm -f ${myHobby}/Books/JLV2/Mp3s/*.mp3
+rm -f ${myHobby}/Books/JLV2/Oggs/*.ogg
+rm -f ${myHobby}/Books/JLV2/Wavs/*.wav
+
 #rm -f ${myHobby}/mp3s/JLV2/*.mp3
 for f in ${JlV2NameArray[@]}; do
-    rm -f "${myHobby}/midis/JLV2midis/${f}.mid"
-    dart bin/snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/LaughlinVol2/${f}.snl -o ${myHobby}/midis/JLV2midis/${f}.mid
-    rm -f "${myHobby}/mp3s/JLV2/${f}.mp3"
-    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/midis/JLV2midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/mp3s/JLV2/${f}.mp3
+    #rm -f "${myHobby}/Books/JLV2/Midis/${f}.mid"
+    dart bin/snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/LaughlinVol2/${f}.snl -o ${myHobby}/Books/JLV2/Midis/${f}.mid
+    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Books/JLV2/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Books/JLV2/Mp3s/${f}.mp3
+    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Books/JLV2/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Books/JLV2/Oggs/${f}.ogg
+    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Books/JLV2/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Books/JLV2/Wavs/${f}.wav
 done
 
 # Now zip
-[ -e "${myHobby}/mp3s/JLV2/JlV2Mp3s.zip" ] && rm "${myHobby}/mp3s/JLV2/JlV2Mp3s.zip"
-zip ${myHobby}/mp3s/JLV2/JlV2Mp3s.zip  ${myHobby}/mp3s/JLV2/*.mp3
+rm -f "${myHobby}/Books/JLV2/Midis/JLV2Mids.zip"
+zip ${myHobby}/Books/JLV2/Midis/JLV2Mids.zip  ${myHobby}/Books/JLV2/Midis/*.mid
+
+rm -f "${myHobby}/Books/JLV2/Mp3s/JLV2Mp3s.zip"
+zip ${myHobby}/Books/JLV2/Mp3s/JLV2Mp3s.zip  ${myHobby}/Books/JLV2/Mp3s/*.mp3
+
+rm -f "${myHobby}/Books/JLV2/Oggs/JLV2Oggs.zip"
+zip ${myHobby}/Books/JLV2/Oggs/JLV2Oggs.zip  ${myHobby}/Books/JLV2/Oggs/*.ogg
+
+rm -f "${myHobby}/Books/JLV2/Wavs/JLV2Wavs.zip"
+zip ${myHobby}/Books/JLV2/Wavs/JLV2Wavs.zip  ${myHobby}/Books/JLV2/Wavs/*.wav
+
+exit 8
 
 
-
-
-
+# Another book, kinda, Maxwell????
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/MaxwellPg1.snl -o /home/rob/MyHobby/midis/ForDrummers/MaxwellPg1.mid
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/MaxwellPg2.snl -o /home/rob/MyHobby/midis/ForDrummers/MaxwellPg2.mid
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/MaxwellPg27.snl -o /home/rob/MyHobby/midis/ForDrummers/MaxwellPg27.mid
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/MaxwellPg27Swing.snl -o /home/rob/MyHobby/midis/ForDrummers/MaxwellPg27Swing.mid
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/MaxwellPg3.snl -o /home/rob/MyHobby/midis/ForDrummers/MaxwellPg3.mid
 
+# exercises no one's interested in:
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/warmups/LeoBrowne/8s.snl -o /home/rob/MyHobby/midis/ForDrummers/LeoBrowne8s.mid
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/warmups/LeoBrowne/Accents.snl -o /home/rob/MyHobby/midis/ForDrummers/LeoBrowneAccents.mid
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/warmups/LeoBrowne/Accents8ths.snl -o /home/rob/MyHobby/midis/ForDrummers/LeoBrowneAccents8ths.mid
@@ -223,135 +259,45 @@ zip ${myHobby}/mp3s/JLV2/JlV2Mp3s.zip  ${myHobby}/mp3s/JLV2/*.mp3
 
 # tunes
 
-
+# Non-band tunes
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/AnnettesChatterMet.snl -o /home/rob/MyHobby/midis/AnnettesChatterMet.mid
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/AnnettesChatterSnare.snl -o /home/rob/MyHobby/midis/AnnettesChatterSnare.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/44MarchSnare.snl -o /home/rob/MyHobby/midis/44MarchSnare.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/BadgeOfScotland.snl -o /home/rob/MyHobby/midis/BadgeOfScotland.mid # compile error?
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/BanjoBeakdown.snl -o /home/rob/MyHobby/midis/BanjoBreakdown.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/BattleOfWaterloo.snl -o /home/rob/MyHobby/midis/BattleOfWaterloo.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/BeginnerMarch.snl -o /home/rob/MyHobby/midis/BeginnerMarch.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/BlackBear.snl -o /home/rob/MyHobby/midis/BlackBear.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/CaptEwingBass.snl -o /home/rob/MyHobby/midis/CaptEwingBass.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/CaptEwingMet.snl -o /home/rob/MyHobby/midis/CaptEwingMet.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/CaptEwingSnare.snl -o /home/rob/MyHobby/midis/CaptEwingSnare.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/CaptEwingTenor.snl -o /home/rob/MyHobby/midis/CaptEwingTenor.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/CastleDangerousSnareAndMet.snl -o /home/rob/MyHobby/midis/CastleDangerousSnareAndMet.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/FlettFromFlottaBass.snl -o /home/rob/MyHobby/midis/FlettFromFlottaBass.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/FlettFromFlottaMet.snl -o /home/rob/MyHobby/midis/FlettFromFlottaMet.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/FlettFromFlottaSnare.snl -o /home/rob/MyHobby/midis/FlettFromFlottaSnare.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/FlettFromFlottaTenor.snl -o /home/rob/MyHobby/midis/FlettFromFlottaTenor.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/HawaiiAlohaBass.snl -o /home/rob/MyHobby/midis/HawaiiAlohaBass.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/HawaiiAlohaMet.snl -o /home/rob/MyHobby/midis/HawaiiAlohaMet.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/HawaiiAlohaSnare.snl -o /home/rob/MyHobby/midis/HawaiiAlohaSnare.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/HawaiiAlohaTenor.snl -o /home/rob/MyHobby/midis/HawaiiAlohaTenor.mid
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JaneCampbellSnare.snl -o /home/rob/MyHobby/midis/JaneCampbellSnare.mid
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JimmyRolloSnare.snl -o /home/rob/MyHobby/midis/JimmyRolloSnare.mid
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JimmyRolloMet.snl -o /home/rob/MyHobby/midis/JimmyRolloMet.mid
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JohnWalshsWalkMet.snl -o /home/rob/MyHobby/midis/JohnWalshsWalkMet.mid
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JohnWalshsWalkSnare.snl -o /home/rob/MyHobby/midis/JohnWalshsWalkSnare.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/March44.snl -o /home/rob/MyHobby/midis/March44.mid  # errors in this
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/MassedBand24JLV1P60.snl -o /home/rob/MyHobby/midis/MassedBand24JLV1P60.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/MassedBand44JLV1P59.snl -o /home/rob/MyHobby/midis/MassedBand44JLV1P59.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/ReelSnareMet.snl -o /home/rob/MyHobby/midis/ReelSnareMet.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/ReelStraightSnareMet.snl -o /home/rob/MyHobby/midis/ReelStraightSnareMet.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/ScotlandTheBraveBass.snl -o /home/rob/MyHobby/midis/ScotlandTheBraveBass.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/ScotlandTheBraveMet.snl -o /home/rob/MyHobby/midis/ScotlandTheBraveMet.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/ScotlandTheBraveSnare.snl -o /home/rob/MyHobby/midis/ScotlandTheBraveSnare.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/ScotlandTheBraveSnareChips.snl -o /home/rob/MyHobby/midis/ScotlandTheBraveSnareChips.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/ScotlandTheBraveTenor.snl -o /home/rob/MyHobby/midis/ScotlandTheBraveTenor.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/SlowMarchNo1.snl -o /home/rob/MyHobby/midis/SlowMarchNo1.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/SlowMarchNo2.snl -o /home/rob/MyHobby/midis/SlowMarchNo2.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/StrathSnareMet.snl -o /home/rob/MyHobby/midis/StrathSnareMet.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/SuperSlowMarchNo2.snl -o /home/rob/MyHobby/midis/SuperSlowMarchNo2.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/TireeBass.snl -o /home/rob/MyHobby/midis/TireeBass.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/TireeMet.snl -o /home/rob/MyHobby/midis/TireeMet.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/TireeSnare.snl -o /home/rob/MyHobby/midis/TireeSnare.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/TireeSnareChips.snl -o /home/rob/MyHobby/midis/TireeSnareChips.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/TireeTenor.snl -o /home/rob/MyHobby/midis/TireeTenor.mid
-#
-#zip /home/rob/MyHobby/BandTunes/MidisMidis.zip /home/rob/MyHobby/midis/*.mid
+#CameronianRant
+
+# I think this next part is for adding pipes to the mix.  Need to process the pipe.ppl file to create a mid, and then need to
+# merge the pipes mid with the drums mid
 
 
 
-# Now try creating tunes .mid and .mp3 and others, and .zip files
+fi
+echo skipped to here
 
-echo Starting to process tunes ...
-declare -a tuneNameArray=(44MarchSnare \
-BeginnerMarch \
-BlackBear \
-JigSnare \
-CameronianRantSnare5 \
-JigSnare \
-March44 \
-MassedBand24JLV1P60 \
-MassedBand44JLV1P59 \
-SlowMarchNo1 \
-SlowMarchNo2 \
-Strath1SnareMet \
-SuperSlowMarchNo2 )
+# This stuff doesn't make sense until have soundfont that has pipes in it
 
-#rm -f ${myHobby}/mp3s/*.mp3
-for f in ${tuneNameArray[@]}; do
-  rm -f midifiles/${f}.mid
-  dart bin/snl.dart -i tunes/${f}.snl -o ${myHobby}/BandTunes/Mp3s/${f}.mid
-  rm -f ${myHobby}/BandTunes/Mp3s/${f}.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Mp3s/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/${f}.mp3
-done
-
-# What about the tunes that have multiple .mid files?
-
-# Now zip up the tunes
-[ -e "${myHobby}/mp3s/tunes.zip" ] && rm "${myHobby}/mp3s/tunes.zip"
-#rm ${myHobby}/mp3s/tunes.zip
-zip ${myHobby}/BandTunes/Mp3s/tunes.zip  ${myHobby}/BandTunes/Mp3s/*.mp3
+declare pipeLangDir=/home/rob/WebstormProjects/pipelang
+declare pipeLangDartFile=${pipeLangDir}/bin/ppl.dart
 
 
-#pushd /home/rob/MyHobby/midis
-#for f in *.mid
-#do
-#    bn=`basename $f .mid`
-#    fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  $f | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - /home/rob/MyHobby/mp3s/${bn}.mp3
-#    echo Created /home/rob/MyHobby/mp3s/${bn}.mp3
-#done
-#zip /home/rob/MyHobby/mp3s/tunes.zip  /home/rob/MyHobby/mp3s/*.mp3 &
+#dart ppl.dart -i ${pipeLangDir}/exercises/rf1.ppl -o ${myHobby}/midis/ForPipers/rf1.mid
+#dart ppl.dart -i ${pipeLangDir}/exercises/rf5.ppl -o ${myHobby}/midis/ForPipers/rf5.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/AmberOnTheRocks.ppl -o ${myHobby}/Pipes/Midis/AmberOnTheRocks.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/BanjoBreakdown.ppl -o ${myHobby}/Pipes/Midis/BanjoBreakdownChanter.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/CaptEwingChanter.ppl -o ${myHobby}/Pipes/Midis/CaptEwingChanter.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/HawaiiAlohaChanterHarmony.ppl -o ${myHobby}/Pipes/Midis/HawaiiAlohaChanterHarmony.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/HawaiiAlohaChanterMelody.ppl -o ${myHobby}/Pipes/Midis/HawaiiAlohaChanterMelody.mid
 
-#zip JLV1midis.zip  *.mid &
-#zip /home/rob/MyHobby/mp3s/JLV1/JLV1mp3s.zip  /home/rob/MyHobby/mp3s/JLV1/*.mp3 &
-#zip /home/rob/MyHobby/wavs/JLV1/JLV1wavs.zip  /home/rob/MyHobby/wavs/JLV1/*.wav &
-#zip /home/rob/MyHobby/oggs/JLV1/JLV1oggs.zip  /home/rob/MyHobby/oggs/JLV1/*.ogg &
+exit 9
 
-#popd
-
-
-
-exit 1
-
-
-
-
-
-
-
-
-cd /home/rob/WebstormProjects/pipelang/bin
-dart ppl.dart -i /home/rob/WebstormProjects/pipelang/exercises/rf1.ppl -o ${myHobby}/midis/ForPipers/rf1.mid
-dart ppl.dart -i /home/rob/WebstormProjects/pipelang/exercises/rf5.ppl -o ${myHobby}/midis/ForPipers/rf5.mid
-dart ppl.dart -i /home/rob/WebstormProjects/pipelang/tunes/AmberOnTheRocks.ppl -o ${myHobby}/midis/AmberOnTheRocks.mid
-dart ppl.dart -i /home/rob/WebstormProjects/pipelang/tunes/BanjoBreakdown.ppl -o ${myHobby}/midis/BanjoBreakdownChanter.mid
-dart ppl.dart -i /home/rob/WebstormProjects/pipelang/tunes/CaptEwingChanter.ppl -o ${myHobby}/midis/CaptEwingChanter.mid
-dart ppl.dart -i /home/rob/WebstormProjects/pipelang/tunes/HawaiiAlohaChanterHarmony.ppl -o ${myHobby}/midis/HawaiiAlohaChanterHarmony.mid
-dart ppl.dart -i /home/rob/WebstormProjects/pipelang/tunes/HawaiiAlohaChanterMelody.ppl -o ${myHobby}/midis/HawaiiAlohaChanterMelody.mid
-
-sleep 15
 cd /home/rob/WebstormProjects/tracks/bin
 
 dart tracks.dart -l WARNING  -i ${myHobby}/midis/ScotlandTheBraveSnare.mid,${myHobby}/midis/ScotlandTheBraveSnareChips.mid,${myHobby}/midis/ScotlandTheBraveTenor.mid,${myHobby}/midis/ScotlandTheBraveBass.mid,${myHobby}/midis/ScotlandTheBraveMet.mid -o ${myHobby}/midis/ForDrummers/ScotlandTheBraveDrums.mid
-sleep 3
 dart tracks.dart -l WARNING  -i ${myHobby}/midis/BanjoBreakdownSnare.mid,${myHobby}/midis/BanjoBreakdownChanter.mid -o ${myHobby}/midis/ForBand/BanjoBreakdownSnareAndChanter.mid -l ALL
-sleep 3
 dart tracks.dart -l WARNING -i ${myHobby}/midis/CaptEwingSnare.mid,${myHobby}/midis/CaptEwingTenor.mid,${myHobby}/midis/CaptEwingBass.mid,${myHobby}/midis/CaptEwingMet.mid -o ${myHobby}/midis/CaptEwingDrums.mid
-sleep 3
 dart tracks.dart -l WARNING -i ${myHobby}/midis/CaptEwingDrums.mid,${myHobby}/midis/CaptEwingChanter.mid -o ${myHobby}/midis/ForBand/CaptEwingChanterAndDrums.mid
 sleep 3
 
