@@ -284,12 +284,62 @@ class Midi {
 
 
 
-
+// so a patch is an instrument?
 
 
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // http://midi.teragonaudio.com/
+// From http://midi.teragonaudio.com/tutr/bank.htm
+// When the MIDI spec was first developed, it wasn't foreseen that anyone would need more than 128 patches on a given module.
+// (Back then, most didn't even have anywhere near that number of patches). So, the MIDI Program Change message was hardwired
+// to have a limit of counting only from 1 to 128.
+// Later, modules with more than 128 patches came on the market. People needed some way of being able to switch
+// to these extra patches, but which was still compatible with the old way of switching patches.
+// The manufacturers adopted a scheme of arranging patches in "banks" (ie, groups of usually 128 patches).
+// For example, the first 128 patches in a module may be "bank 1". The next 128 patches may be "bank 2". Etc.
+// Theoretically, there can be up to 16,384 banks on a module.
+    // The technique that the manufacturers adopted for MIDI control over patch changing is to have the musician first
+    // select the bank that contains his desired patch, and then select the patch within that bank.
+    // For example, assume that a musician wants to select the patch "Gungho" which happens to be the third patch
+    // in the second bank. First the musician would have to send one or two (depending upon how the manufacturer arranged
+    // patches into banks) MIDI messages to select the second bank (MIDI counts this as bank 1, since MIDI considers
+    // bank number 0 to actually be the first bank). Then, the musician sends a MIDI message to select the third patch
+    // (again, MIDI considers patch number 0 to be the first patch in a bank, so the third patch would actually be number 2).
+    //
+    // So, selecting a patch is a two-step (ie, 2 or 3 message) process. First, you send the Bank Select message(s)
+    // to switch to the desired bank. Then you send an ordinary Program Change message to select which one of the
+    // 128 possible patches in that bank you desire.
+    //
+    // The Bank Select messages are actually MIDI Controller messages, just like Volume, Pan, Sustain Pedal, Wind,
+    // and other controllers. Specifically, the controller number for the "Most Significant Byte" (ie, MSB) of
+    // Bank Select is controller 0. The controller number for "Least Significant Byte" (ie, LSB) of Bank Select
+    // is controller 32. The data for these messages are the bank number you want to select. (Sometimes the MSB
+    // Bank Select is referred to as the coarse adjustment for bank, and the LSB Bank Select is referred to as
+    // the fine adjustment).
+    //
+    // NOTE: We need to use 2 messages to contain the bank number because, due to MIDI's design, it's not possible
+    // to transmit a value greater than 128 in just one controller message. Remember that a bank number can go as
+    // high as 16,384, and you need 2 MIDI controller messages to send such a large value. But, since most modules
+    // do not have more than 128 banks anyway, these modules typically only use the MSB message (ie, controller number 0)
+    // to select bank, and ignore any LSB message (ie, controller number 32). So then, here are the two messages
+    // (in hexadecimal, assuming MIDI channel 1, and assuming that the module only uses the MSB Bank Select controller)
+    // to select that "Gungho" patch:
+    //
+    // B0 00 01	Switch to bank 2 (NOTE: only the MSB message needed)
+    // C0 02	Switch to the third patch in this bank
 
+// Okay, so banks are a collection of patches.  A "program" contains patches.  So a program is a bank?
+// What's a patch?  A single sample assigned to a number?
 
+    // And then in the Polyphone program there are "Presets", which is a collection of "Instruments", and an instrument is a collection of samples.
+    //
+    // The Dart/JavaScript/Whatever midi commands/methods/functions only have
+    // ControllerEvent: channel, number, type, value
+    // ProgramChangeMidiEvent class, which has a channel number and a program number as fields.
+    // SequenceNumberEvent class, prob nothing of interest
+    // SequenceSpecificEvent, prob nothing of interest
+    // TrackNameEvent
+    // InstrumentNameEvent
 
     // I don't know how to use this program change stuff, but hopefully when I get it right it will allow me to change
     // the bank's preset
@@ -298,13 +348,26 @@ class Midi {
     // Perhaps a "preset" in the soundfont file is like a "bank", or maybe "program", or maybe a "patch", but not sure.
     // The following doesn't seem to do anything, but some values are required if you want to send that event.
     // But maybe a "patch" is an instrument.
-    // var programChangeMidiEvent = ProgramChangeMidiEvent();
-    // print('programChangeMidiEvent.channel, .programNumber: ${programChangeMidiEvent.channel}, ${programChangeMidiEvent.programNumber}');
-    // programChangeMidiEvent.programNumber = 1; // maybe 1 for the next preset?????
-    // programChangeMidiEvent.channel = 0; // cannot be null, it seems
-    // programChangeMidiEvent.deltaTime = 0;
+    var controllerEvent = ControllerEvent();
+    print('controllerEvent: $controllerEvent');
+    print('controllerEvent: channel, number, type, value, deltaTime: ${controllerEvent.channel}, ${controllerEvent.number}, ${controllerEvent.type}, ${controllerEvent.value}, ${controllerEvent.deltaTime}');
+    controllerEvent.channel = 0;
+    controllerEvent.number = 1; // guess
+    controllerEvent.type = "Bajingo"; // guess
+    controllerEvent.value = 0; // guess
+    controllerEvent.deltaTime = 0;
+    //trackEventsList.add(controllerEvent);
+
+    var programChangeMidiEvent = ProgramChangeMidiEvent();
+    print('programChangeMidiEvent.channel, .programNumber: ${programChangeMidiEvent.channel}, ${programChangeMidiEvent.programNumber}');
+    programChangeMidiEvent.programNumber = 0; // maybe 1 for the next preset?????
+    programChangeMidiEvent.channel = 5; // cannot be null, it seems, and whatever number this is, will turn off that channel that's specified in the file for the instrument.  Used as a track in my software????
+    programChangeMidiEvent.deltaTime = 0;
+    //trackEventsList.add(programChangeMidiEvent); // does this screw everything up?  Yes!  It causes the metronome to go away!  What's special about the metronome??????  In Black Bear metronome is channel 0
+    // SEEMS THAT IF programNumber is 1 and channel is 5 then snare turns off.  But if program number is 0, then it doesn't turn off.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // So, experiment with program number to see if can change to a different patch (instrument)
+
     // //programChangeMidiEvent.type = 'whatever';
-    // trackEventsList.add(programChangeMidiEvent); // does this screw everything up?
     //
     // var instrumentNameEvent = InstrumentNameEvent();
     // print('instrumentNameEvent: $instrumentNameEvent');
@@ -579,6 +642,16 @@ class Midi {
       }
       log.finest('have something else not putting into the track: ${element.runtimeType}, $element');
     } // end of list of events to add to snare track
+
+
+
+
+
+
+
+
+
+
 
     if (trackEventsList.isEmpty) {  // right here?????
       log.warning('What?  no events for track?');

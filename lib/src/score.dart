@@ -1259,7 +1259,7 @@ String trackIdToString(TrackId id) {
 /// continues on as the only channel being written
 /// to, until either the end of the score, or there's another /channel designation.
 /// The default number is 0.
-class Channel {
+class Channel {  // This probably should be renamed because "channel" is an official MIDI thing that is in parts of some of the classes
   static const DefaultChannelNumber = 0;
   int number; // the default should be 0.
 

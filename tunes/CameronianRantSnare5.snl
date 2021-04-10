@@ -27,7 +27,8 @@
 //tempo 140  //Duthart playing
 //tempo 124  // Strathclyde Police, and McWhirter
 //tempo 112 // for Hawaiians
-/tempo 100 // just for easy computation in Midi Voyager
+//tempo 100 // just for easy computation in Midi Voyager
+/tempo 110
 /track met
 /channel 0
 
@@ -41,7 +42,7 @@
 
 _4M _. _12M . . _4M    _4M _. _. _.   // sync audio and video, 4 + 4
 _20M . . . .   _. . . . .   _4M _.   // 4 for nothing
-_4M _. _20M . . . .   _. . . . .    _4M _. _12M 24M . 12M   _12M 24M . 12M  // roll off   8 counts
+_4M _. _20M . . . .   _. . . . .    _4M _. _10M 20M 10M _4M  // roll off   8 counts
 
 /mp
 4M . . .   4M . . .   4M . . .   4M . . .
