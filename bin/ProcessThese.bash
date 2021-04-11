@@ -82,7 +82,13 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/CaptEwingDrums.ogg
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/CaptEwingDrums.wav
 dart $pipeLangDartFile -i ${pipeLangDir}/tunes/CaptEwingChanter.ppl -o ${myHobby}/Pipes/Midis/CaptEwingChanter.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CaptEwingChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Mp3s/CaptEwingChanter.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CaptEwingChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Oggs/CaptEwingChanter.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CaptEwingChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Wavs/CaptEwingChanter.wav
 dart $tracksFile -l WARNING -i ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid,${myHobby}/Pipes/Midis/CaptEwingChanter.mid -o ${myHobby}/BandTunes/Midis/CaptEwingChanterAndDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/CaptEwingChanterAndDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/CaptEwingChanterAndDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/CaptEwingChanterAndDrums.wav
 
 
 
@@ -97,9 +103,14 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/HawaiiAlohaDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/HawaiiAlohaDrums.wav
 # Hawaii Aloha has regular pipes, and harmony pipes, and drums, I think, somewhere
 dart $pipeLangDartFile -i ${pipeLangDir}/tunes/HawaiiAlohaChanterMelody.ppl,${pipeLangDir}/tunes/HawaiiAlohaChanterHarmony.ppl  -o ${myHobby}/Pipes/Midis/HawaiiAlohaChanterMelodyAndHarmony.mid
-#dart $pipeLangDartFile  -i ${myHobby}/BandTunes/Midis/HawaiiAlohaSnare.mid,${myHobby}/BandTunes/Midis/HawaiiAlohaTenor.mid,${myHobby}/BandTunes/Midis/HawaiiAlohaBass.mid,${myHobby}/BandTunes/Midis/HawaiiAlohaMet.mid -o ${myHobby}/BandTunes/Midis/HawaiiAlohaDrums.mid
-#dart $pipeLangDartFile  -i ${myHobby}/BandTunes/Midis/HawaiiAlohaChanterMelody.mid,${myHobby}/BandTunes/Midis/HawaiiAlohaChanterHarmony.mid -o ${myHobby}/BandTunes/Midis/HawaiiAlohaChanter.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/HawaiiAlohaChanterMelodyAndHarmony.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/HawaiiAlohaChanterMelodyAndHarmony.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/HawaiiAlohaChanterMelodyAndHarmony.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/HawaiiAlohaChanterMelodyAndHarmony.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/HawaiiAlohaChanterMelodyAndHarmony.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/HawaiiAlohaChanterMelodyAndHarmony.wav
+
 dart $tracksFile  -i ${myHobby}/BandTunes/Midis/HawaiiAlohaDrums.mid,${myHobby}/Pipes/Midis/HawaiiAlohaChanterMelodyAndHarmony.mid -o ${myHobby}/BandTunes/Midis/HawaiiAlohaChantersAndDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/HawaiiAlohaChantersAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/HawaiiAlohaChantersAndDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/HawaiiAlohaChantersAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/HawaiiAlohaChantersAndDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/HawaiiAlohaChantersAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/HawaiiAlohaChantersAndDrums.wav
 
 
 
@@ -192,19 +203,26 @@ for f in ${JlV1NameArray[@]}; do
     fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Books/JLV1/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Books/JLV1/Wavs/${f}.wav
 done
 
-# Now zip
-rm -f "${myHobby}/Books/JLV1/Midis/JLV1Mids.zip"
-zip ${myHobby}/Books/JLV1/Midis/JLV1Mids.zip  ${myHobby}/Books/JLV1/Midis/*.mid
+# Now zip.  Need to cd into the directoryy where the files are so that unzipping doesn't duplicate the tree
+pushd ${myHobby}/Books/JLV1/Midis/
+rm -f JLV1Mids.zip
+zip JLV1Mids.zip  *.mid
+popd
 
-rm -f "${myHobby}/Books/JLV1/Mp3s/JLV1Mp3s.zip"
-zip ${myHobby}/Books/JLV1/Mp3s/JLV1Mp3s.zip  ${myHobby}/Books/JLV1/Mp3s/*.mp3
+pushd ${myHobby}/Books/JLV1/Mp3s
+rm -f JLV1Mp3s.zip
+zip JLV1Mp3s.zip  *.mp3
+popd
 
-rm -f "${myHobby}/Books/JLV1/Oggs/JLV1Oggs.zip"
-zip ${myHobby}/Books/JLV1/Oggs/JLV1Oggs.zip  ${myHobby}/Books/JLV1/Oggs/*.ogg
+pushd ${myHobby}/Books/JLV1/Oggs
+rm -f JLV1Oggs.zip
+zip JLV1Oggs.zip  *.ogg
+popd
 
-rm -f "${myHobby}/Books/JLV1/Wavs/JLV1Wavs.zip"
-zip ${myHobby}/Books/JLV1/Wavs/JLV1Wavs.zip  ${myHobby}/Books/JLV1/Wavs/*.wav
-
+pushd ${myHobby}/Books/JLV1/Wavs
+rm -f JLV1Wavs.zip
+zip JLV1Wavs.zip  *.wav
+popd
 
 
 # Process JlV2 files
@@ -245,19 +263,26 @@ for f in ${JlV2NameArray[@]}; do
     fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Books/JLV2/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Books/JLV2/Wavs/${f}.wav
 done
 
-# Now zip
-rm -f "${myHobby}/Books/JLV2/Midis/JLV2Mids.zip"
-zip ${myHobby}/Books/JLV2/Midis/JLV2Mids.zip  ${myHobby}/Books/JLV2/Midis/*.mid
+# Now zip Volume 2
+pushd ${myHobby}/Books/JLV2/Midis/
+rm -f JLV2Mids.zip
+zip JLV2Mids.zip  *.mid
+popd
 
-rm -f "${myHobby}/Books/JLV2/Mp3s/JLV2Mp3s.zip"
-zip ${myHobby}/Books/JLV2/Mp3s/JLV2Mp3s.zip  ${myHobby}/Books/JLV2/Mp3s/*.mp3
+pushd ${myHobby}/Books/JLV2/Mp3s/
+rm -f JLV2Mp3s.zip
+zip JLV2Mp3s.zip  *.mp3
+popd
 
-rm -f "${myHobby}/Books/JLV2/Oggs/JLV2Oggs.zip"
-zip ${myHobby}/Books/JLV2/Oggs/JLV2Oggs.zip  ${myHobby}/Books/JLV2/Oggs/*.ogg
+pushd ${myHobby}/Books/JLV2/Oggs/
+rm -f JLV2Oggs.zip
+zip JLV2Oggs.zip  *.ogg
+popd
 
-rm -f "${myHobby}/Books/JLV2/Wavs/JLV2Wavs.zip"
-zip ${myHobby}/Books/JLV2/Wavs/JLV2Wavs.zip  ${myHobby}/Books/JLV2/Wavs/*.wav
-
+pushd ${myHobby}/Books/JLV2/Wavs/
+rm -f JLV2Wavs.zip
+zip JLV2Wavs.zip  *.wav
+popd
 
 
 # Another book, kinda, Maxwell????
@@ -323,6 +348,10 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTu
 # These are pipes parts, but I think they also have a snare or drum part to them somewhere too
 # Already have the snare score midi because processed it from a list of single scores, not multiple that make up a midi.
 dart $pipeLangDartFile -i ${pipeLangDir}/tunes/BanjoBreakdown.ppl -o ${myHobby}/Pipes/Midis/BanjoBreakdownChanter.mid
+# I prob don't need to create audio renders of pipe midis, because they don't help pipers at this time.  Maybe when get grace notes in, and get things much better
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Mp3s/BanjoBreakdownChanter.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Oggs/BanjoBreakdownChanter.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Wavs/BanjoBreakdownChanter.wav
 dart $tracksFile   -i ${myHobby}/BandTunes/Midis/BanjoBreakdown.mid,${myHobby}/Pipes/Midis/BanjoBreakdownChanter.mid -o ${myHobby}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/BanjoBreakdownSnareAndChanter.mp3
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/BanjoBreakdownSnareAndChanter.ogg
@@ -331,32 +360,47 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 
 
 
-# Now zip up the band tunes  (what about the non-band tunes?)
-rm -f "${myHobby}/BandTunes/Midis/BandTunesMids.zip"
-zip ${myHobby}/BandTunes/Midis/BandTunesMids.zip  ${myHobby}/BandTunes/Midis/*.mid
+# Now zip up the band tunes
+pushd ${myHobby}/BandTunes/Midis/
+rm -f BandTunesMids.zip
+zip BandTunesMids.zip  *.mid
+popd
 
-rm -f "${myHobby}/BandTunes/Mp3s/BandTunesMp3s.zip"
-zip ${myHobby}/BandTunes/Mp3s/BandTunesMp3s.zip  ${myHobby}/BandTunes/Mp3s/*.mp3
+pushd ${myHobby}/BandTunes/Mp3s/
+rm -f BandTunesMp3s.zip
+zip BandTunesMp3s.zip  *.mp3
+popd
 
-rm -f "${myHobby}/BandTunes/Oggs/BandTunesOggs.zip"
-zip ${myHobby}/BandTunes/Oggs/BandTunesOggs.zip  ${myHobby}/BandTunes/Oggs/*.ogg
+pushd ${myHobby}/BandTunes/Oggs/
+rm -f BandTunesOggs.zip
+zip BandTunesOggs.zip  *.ogg
+popd
 
-rm -f "${myHobby}/BandTunes/Wavs/BandTunesWavs.zip"
-zip ${myHobby}/BandTunes/Wavs/BandTunesWavs.zip  ${myHobby}/BandTunes/Wavs/*.wav
+pushd ${myHobby}/BandTunes/Wavs/
+rm -f BandTunesWavs.zip
+zip BandTunesWavs.zip  *.wav
+popd
 
 
-# Now zip up the non-band tunes  (what about the non-band tunes?)
-rm -f "${myHobby}/NonBandTunes/Midis/NonBandTunesMids.zip"
-zip ${myHobby}/NonBandTunes/Midis/NonBandTunesMids.zip  ${myHobby}/NonBandTunes/Midis/*.mid
+# Now zip up the non-band tunes
+pushd ${myHobby}/NonBandTunes/Midis/
+rm -f NonBandTunesMids.zip
+zip NonBandTunesMids.zip  *.mid
+popd
 
-rm -f "${myHobby}/NonBandTunes/Mp3s/NonBandTunesMp3s.zip"
-zip ${myHobby}/NonBandTunes/Mp3s/NonBandTunesMp3s.zip  ${myHobby}/NonBandTunes/Mp3s/*.mp3
+pushd ${myHobby}/NonBandTunes/Mp3s/
+rm -f NonBandTunesMp3s.zip
+zip NonBandTunesMp3s.zip  *.mp3
+popd
 
-rm -f "${myHobby}/NonBandTunes/Oggs/NonBandTunesOggs.zip"
-zip ${myHobby}/NonBandTunes/Oggs/NonBandTunesOggs.zip  ${myHobby}/NonBandTunes/Oggs/*.ogg
+pushd ${myHobby}/NonBandTunes/Oggs/
+rm -f NonBandTunesOggs.zip
+zip NonBandTunesOggs.zip  *.ogg
+popd
 
-rm -f "${myHobby}/NonBandTunes/Wavs/NonBandTunesWavs.zip"
-zip ${myHobby}/NonBandTunes/Wavs/NonBandTunesWavs.zip  ${myHobby}/NonBandTunes/Wavs/*.wav
+pushd ${myHobby}/NonBandTunes/Wavs/
+rm -f NonBandTunesWavs.zip
+zip NonBandTunesWavs.zip  *.wav
 
 
 
@@ -391,7 +435,7 @@ zip ${myHobby}/NonBandTunes/Wavs/NonBandTunesWavs.zip  ${myHobby}/NonBandTunes/W
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TireeDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/TireeDrums.ogg
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TireeDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/TireeDrums.wav
 
-
+echo Done processing files
 exit 0
 
 

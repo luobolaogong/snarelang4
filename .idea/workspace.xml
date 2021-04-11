@@ -19,12 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Will process files for website using ProcessThese.bash.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Most of bash file finished.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/ProcessThese.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantSnare5.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -520,14 +517,8 @@
       <workItem from="1617844718111" duration="735000" />
       <workItem from="1617858894888" duration="7022000" />
       <workItem from="1617900179000" duration="11204000" />
-      <workItem from="1618022591416" duration="2171000" />
-    </task>
-    <task id="LOCAL-00040" summary="Added accents of different levels to John Walsh's Walk.">
-      <created>1602811223914</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1602811223914</updated>
+      <workItem from="1618022591416" duration="4542000" />
+      <workItem from="1618095812016" duration="4151000" />
     </task>
     <task id="LOCAL-00041" summary="Finished MaxwellPg27 swing and straight.">
       <created>1602891756609</created>
@@ -865,7 +856,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617660928838</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Most of bash file finished.">
+      <created>1618026475540</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1618026475541</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -884,7 +882,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added one or two new workouts, started working on fixing embellishments, but not done." />
     <MESSAGE value="Hack embellishment durations." />
     <MESSAGE value="What a mess for JlV2P25-19 part 8." />
     <MESSAGE value="P25 vol 2 was a tough one." />
@@ -909,7 +906,8 @@
     <MESSAGE value="Pretty close to final, for single snare." />
     <MESSAGE value="Adding some new tunes, and fixing a few others." />
     <MESSAGE value="Will process files for website using ProcessThese.bash." />
-    <option name="LAST_COMMIT_MESSAGE" value="Will process files for website using ProcessThese.bash." />
+    <MESSAGE value="Most of bash file finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Most of bash file finished." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
