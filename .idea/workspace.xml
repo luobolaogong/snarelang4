@@ -518,14 +518,9 @@
       <workItem from="1617858894888" duration="7022000" />
       <workItem from="1617900179000" duration="11204000" />
       <workItem from="1618022591416" duration="4542000" />
-      <workItem from="1618095812016" duration="4151000" />
-    </task>
-    <task id="LOCAL-00041" summary="Finished MaxwellPg27 swing and straight.">
-      <created>1602891756609</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1602891756609</updated>
+      <workItem from="1618095812016" duration="4286000" />
+      <workItem from="1618272769064" duration="2656000" />
+      <workItem from="1618363642466" duration="967000" />
     </task>
     <task id="LOCAL-00042" summary="Trying to clean up tempo stuff (override, defalt, commandLine, ...)  So,&#10;checkpointing what I have because it maybe works.">
       <created>1602911946559</created>
@@ -863,7 +858,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618026475541</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Most of bash file finished.">
+      <created>1618118644371</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1618118644372</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

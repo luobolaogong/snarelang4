@@ -19,6 +19,9 @@ declare tracksFile=${tracksDir}/bin/tracks.dart
 #declare soundFontName=DrumLine202103081351.sf2
 declare soundFontName=DrumsChanterMelody20210407.sf2
 cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
+cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
+cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
+cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
 declare soundFontFile=${myHobby}/SoundFonts/${soundFontName}
 #cp /home/rob/Desktop/MySoundFonts/PipesAndDrums202011060735.sf2 ${myHobby}/MySoundFonts
 echo soundfont is $soundFontFile
@@ -26,7 +29,12 @@ echo soundfont is $soundFontFile
 
 
 
-
+# The website has a Band Tunes area under MIDI, and also under For Drummers.  But the MyHobby directory
+# on my machine just has BandTunes and NonBandTunes.  And then there's the Google Drive storage, and
+# I don't remember if it has two BandTunes areas or just one.  There should be just one.
+# But in any case, it's a manual copy from MyHobby to the Google Drive, and so it's either two
+# copies or just one, depending.  It should be just one copy, and then the website pages should
+# both reference the same area on the Google Drive.
 
 
 
@@ -190,6 +198,7 @@ JlV1P62-43 \
 )
 
 rm -f ${myHobby}/Books/JLV1/Midis/*.mid
+rm -f ${myHobby}/Books/JLV1/Midis/*.sf2
 rm -f ${myHobby}/Books/JLV1/Mp3s/*.mp3
 rm -f ${myHobby}/Books/JLV1/Oggs/*.ogg
 rm -f ${myHobby}/Books/JLV1/Wavs/*.wav
@@ -205,8 +214,10 @@ done
 
 # Now zip.  Need to cd into the directoryy where the files are so that unzipping doesn't duplicate the tree
 pushd ${myHobby}/Books/JLV1/Midis/
+rm *.sf2
+cp $soundFontFile ./
 rm -f JLV1Mids.zip
-zip JLV1Mids.zip  *.mid
+zip JLV1Mids.zip  *.mid *.sf2
 popd
 
 pushd ${myHobby}/Books/JLV1/Mp3s
@@ -265,8 +276,10 @@ done
 
 # Now zip Volume 2
 pushd ${myHobby}/Books/JLV2/Midis/
+rm -f *.sf2
+cp $soundFontFile ./
 rm -f JLV2Mids.zip
-zip JLV2Mids.zip  *.mid
+zip JLV2Mids.zip  *.mid *.sf2
 popd
 
 pushd ${myHobby}/Books/JLV2/Mp3s/
@@ -345,6 +358,7 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTu
 
 
 
+
 # These are pipes parts, but I think they also have a snare or drum part to them somewhere too
 # Already have the snare score midi because processed it from a list of single scores, not multiple that make up a midi.
 dart $pipeLangDartFile -i ${pipeLangDir}/tunes/BanjoBreakdown.ppl -o ${myHobby}/Pipes/Midis/BanjoBreakdownChanter.mid
@@ -361,9 +375,10 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 
 
 # Now zip up the band tunes
-pushd ${myHobby}/BandTunes/Midis/
+rm -f *.sf2
+cp $soundFontFile ./
 rm -f BandTunesMids.zip
-zip BandTunesMids.zip  *.mid
+zip BandTunesMids.zip  *.mid *.sf2
 popd
 
 pushd ${myHobby}/BandTunes/Mp3s/
@@ -384,8 +399,10 @@ popd
 
 # Now zip up the non-band tunes
 pushd ${myHobby}/NonBandTunes/Midis/
+rm -f *.sf2
+cp $soundFontFile ./
 rm -f NonBandTunesMids.zip
-zip NonBandTunesMids.zip  *.mid
+zip NonBandTunesMids.zip  *.mid *.sf2
 popd
 
 pushd ${myHobby}/NonBandTunes/Mp3s/
