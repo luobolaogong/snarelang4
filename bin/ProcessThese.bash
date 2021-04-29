@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Processing .snl and .ppl files, to create .mid and audio files under ~/MyHobby/ which can be copied into Google Drive for the .org website use."
-echo This is being run out of the bin directory of the snarelang4 project, and not the pipelang project, so later pipes wont work right
-echo We are here: `pwd`
+#echo This is being run out of the bin directory of the snarelang4 project, and not the pipelang project, so later pipes wont work right
+#echo We are here: `pwd`
 
 declare myHobby=/home/rob/MyHobby
-echo myHobby is $myHobby and it has `ls $myHobby`
+#echo myHobby is $myHobby and it has `ls $myHobby`
 
 declare snareLangDir=/home/rob/WebstormProjects/snarelang4
 declare snareLangExecutable=${snareLangDir}/bin/snl.dart
@@ -19,9 +19,6 @@ declare tracksFile=${tracksDir}/bin/tracks.dart
 #declare soundFontName=DrumLine202103081351.sf2
 declare soundFontName=DrumsChanterMelody20210407.sf2
 cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
-cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
-cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
-cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
 declare soundFontFile=${myHobby}/SoundFonts/${soundFontName}
 #cp /home/rob/Desktop/MySoundFonts/PipesAndDrums202011060735.sf2 ${myHobby}/MySoundFonts
 echo soundfont is $soundFontFile
@@ -35,6 +32,53 @@ echo soundfont is $soundFontFile
 # But in any case, it's a manual copy from MyHobby to the Google Drive, and so it's either two
 # copies or just one, depending.  It should be just one copy, and then the website pages should
 # both reference the same area on the Google Drive.
+
+
+
+echo Starting to process metronomes ...
+declare -a metronomeNameArray=( \
+QuarterNotes44
+EighthNotes44
+TwelfthNotes44
+)
+rm -f ${myHobby}/Metronomes/Midis/*.mid
+rm -f ${myHobby}/Metronomes/Midis/*.sf2
+# rm -f ${myHobby}/Metronomes/Mp3s/*.mp3
+# rm -f ${myHobby}/Metronomes/Oggs/*.ogg
+# rm -f ${myHobby}/Metronomes/Wavs/*.wav
+
+for f in "${metronomeNameArray[@]}"; do
+  dart $snareLangExecutable -i Metronomes/${f}.snl -o ${myHobby}/Metronomes/Midis/${f}.mid
+  # fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Metronomes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Metronomes/Mp3s/${f}.mp3
+  # fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Metronomes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Metronomes/Oggs/${f}.ogg
+  # fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Metronomes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Metronomes/Wavs/${f}.wav
+done
+
+pushd ${myHobby}/Metronomes/Midis/ > /dev/null
+rm -f *.sf2
+cp $soundFontFile ./
+rm -f MetronomesMidis.zip
+zip MetronomesMidis.zip  *.mid *.sf2
+popd > /dev/null
+
+# It doesn't make any sense to do MP3's or other renderings because they'd play at 100bpm always
+# pushd ${myHobby}/Metronomes/Mp3s/
+# rm -f MetronomesMp3s.zip
+# zip MetronomesMp3s.zip  *.mp3
+# popd
+
+# pushd ${myHobby}/Metronomes/Oggs/
+# rm -f MetronomesOggs.zip
+# zip MetronomesOggs.zip  *.ogg
+# popd
+
+# pushd ${myHobby}/Metronomes/Wavs/
+# rm -f MetronomesWavs.zip
+# zip MetronomesWavs.zip  *.wav
+# popd
+
+
+
 
 
 
@@ -147,6 +191,73 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 
 
 
+echo Starting to process Non-Band tunes
+
+
+declare -a nonBandTunes=( \
+AnnettesChatterMetSnare \
+JaneCampbellSnare \
+JimmyRolloMetSnare \
+JohnWalshsWalkMetSnare )
+
+# before doing this, make sure all the nonBand tunes are in one place
+rm -f ${myHobby}/NonBandTunes/Midis/*.mid
+rm -f ${myHobby}/NonBandTunes/Mp3s/*.mp3
+rm -f ${myHobby}/NonBandTunes/Mp3s/*.ogg
+rm -f ${myHobby}/NonBandTunes/Mp3s/*.wav
+
+
+for f in "${nonBandTunes[@]}"; do
+  dart $snareLangExecutable -i tunes/${f}.snl -o ${myHobby}/NonBandTunes/Midis/${f}.mid
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Mp3s/${f}.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Oggs/${f}.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Wavs/${f}.wav
+done
+
+
+
+
+
+# Cameronian Rant can have several snares, plus pipes, and met.  The met part is in snare5, and not separate, which is a bit strange
+dart $snareLangExecutable -i tunes/CameronianRantSnare5.snl,tunes/CameronianRantSnare1.snl,tunes/CameronianRantSnare9.snl -o ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Mp3s/CameronianRantSnares.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Oggs/CameronianRantSnares.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Wavs/CameronianRantSnares.wav
+
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/CameronianRantStrath.ppl -o ${myHobby}/Pipes/Midis/CameronianRantStrath.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CameronianRantStrath.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Mp3s/CameronianRantStrath.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CameronianRantStrath.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Mp3s/CameronianRantStrath.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CameronianRantStrath.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Mp3s/CameronianRantStrath.wav
+
+dart $tracksFile   -i ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid,${myHobby}/Pipes/Midis/CameronianRantStrath.mid -o ${myHobby}/NonBandTunes/Midis/CameronianRantSnaresAndChanter.mid
+# I think the ffmpeg does not do the stereo separation.  Not sure why.
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnaresAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Mp3s/CameronianRantSnaresAndChanter.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnaresAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Oggs/CameronianRantSnaresAndChanter.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnaresAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Wavs/CameronianRantSnaresAndChanter.wav
+
+
+
+
+# zip them?
+pushd ${myHobby}/NonBandTunes/Midis/
+rm *.sf2
+cp $soundFontFile ./
+rm -f NonBandTunesMidis.zip
+zip NonBandTunesMidis.zip  *.mid *.sf2
+popd
+
+pushd ${myHobby}/NonBandTunes/Mp3s/
+rm -f NonBandTunesMp3s.zip
+zip NonBandTunesMp3s.zip  *.mp3
+popd
+
+
+
+
+
+
+
+
 #if true; then
 #if false; then
 
@@ -216,8 +327,8 @@ done
 pushd ${myHobby}/Books/JLV1/Midis/
 rm *.sf2
 cp $soundFontFile ./
-rm -f JLV1Mids.zip
-zip JLV1Mids.zip  *.mid *.sf2
+rm -f JLV1Midis.zip
+zip JLV1Midis.zip  *.mid *.sf2
 popd
 
 pushd ${myHobby}/Books/JLV1/Mp3s
@@ -278,8 +389,8 @@ done
 pushd ${myHobby}/Books/JLV2/Midis/
 rm -f *.sf2
 cp $soundFontFile ./
-rm -f JLV2Mids.zip
-zip JLV2Mids.zip  *.mid *.sf2
+rm -f JLV2Midis.zip
+zip JLV2Midis.zip  *.mid *.sf2
 popd
 
 pushd ${myHobby}/Books/JLV2/Mp3s/
@@ -306,11 +417,55 @@ popd
 #dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/MaxwellPg3.snl -o /home/rob/MyHobby/midis/ForDrummers/MaxwellPg3.mid
 
 # exercises no one's interested in:
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/warmups/LeoBrowne/8s.snl -o /home/rob/MyHobby/midis/ForDrummers/LeoBrowne8s.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/warmups/LeoBrowne/Accents.snl -o /home/rob/MyHobby/midis/ForDrummers/LeoBrowneAccents.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/warmups/LeoBrowne/Accents8ths.snl -o /home/rob/MyHobby/midis/ForDrummers/LeoBrowneAccents8ths.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/warmups/LeoBrowne/LeoFlams.snl -o /home/rob/MyHobby/midis/ForDrummers/LeoBrownFlams.mid
-#dart snl.dart -i /home/rob/WebstormProjects/snarelang4/exercises/warmups/LeoBrowne/Wipers.snl -o /home/rob/MyHobby/midis/ForDrummers/LeoBrowneWipers.mid
+
+# Leo Browne exercises.  These are not really warmups, but just technique builders.  Move later.
+echo Starting to process Leo Brown exercises
+declare -a leoBrowneExercises=( \
+8s \
+Accents \
+Accents8ths \
+Fix8s \
+LeoFlams \
+LeoFlamsWithTempoTrack \
+Wipers )
+
+rm -f ${myHobby}/Exercises/LeoBrowne/Midis/*.mid
+rm -f ${myHobby}/Exercises/LeoBrowne/Mp3s/*.mp3
+rm -f ${myHobby}/Exercises/LeoBrowne/Oggs/*.ogg
+rm -f ${myHobby}/Exercises/LeoBrowne/Wavs/*.wav
+
+
+for f in "${leoBrowneExercises[@]}"; do
+  # If anything, I should probably just delete everything in the directory before doing a zip of everything.
+  dart $snareLangExecutable -i exercises/LeoBrowne/${f}.snl -o ${myHobby}/Exercises/LeoBrowne/Midis/${f}.mid
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Exercises/LeoBrowne/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Exercises/LeoBrowne/Mp3s/${f}.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Exercises/LeoBrowne/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Exercises/LeoBrowne/Oggs/${f}.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Exercises/LeoBrowne/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Exercises/LeoBrowne/Wavs/${f}.wav
+done
+
+# zip them?
+pushd ${myHobby}/Exercises/LeoBrowne/Midis/
+rm *.sf2
+cp $soundFontFile ./
+rm -f LeoBrowneMidis.zip
+zip LeoBrowneMidis.zip  *.mid *.sf2
+popd
+
+pushd ${myHobby}/Exercises/LeoBrowne/Mp3s/
+rm -f LeoBrowneMp3s.zip
+zip LeoBrowneMp3s.zip  *.mp3
+popd
+
+pushd ${myHobby}/Exercises/LeoBrowne/Oggs/
+rm -f LeoBrowneOggs.zip
+zip LeoBrowneOggs.zip  *.ogg
+popd
+
+pushd ${myHobby}/Exercises/LeoBrowne/Wavs/
+rm -f LeoBrowneWavs.zip
+zip LeoBrowneWavs.zip  *.wav
+popd
+
 
 
 
@@ -323,7 +478,9 @@ popd
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JimmyRolloSnare.snl -o /home/rob/MyHobby/midis/JimmyRolloSnare.mid
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JimmyRolloMet.snl -o /home/rob/MyHobby/midis/JimmyRolloMet.mid
 ##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JohnWalshsWalkMet.snl -o /home/rob/MyHobby/midis/JohnWalshsWalkMet.mid
-##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JohnWalshsWalkSnare.snl -o /home/rob/MyHobby/midis/JohnWalshsWalkSnare.mid
+##dart snl.dart -i /home/rob/WebstormProjects/snarelang4/tunes/JohnWalshsWalkMetSnare.snl -o /home/rob/MyHobby/midis/JohnWalshsWalkSnare.mid
+
+
 
 # I think this next part is for adding pipes to the mix.  Need to process the pipe.ppl file to create a mid, and then need to
 # merge the pipes mid with the drums mid
@@ -339,22 +496,13 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Mid
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/AmberOnTheRocks.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Wavs/AmberOnTheRocks.wav
 
 
-# Cameronian Rant can have several snares, plus pipes, and met.  The met part is in snare5, and not separate, which is a bit strange
-dart $snareLangExecutable -i tunes/CameronianRantSnare5.snl,tunes/CameronianRantSnare1.snl,tunes/CameronianRantSnare9.snl -o ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Mp3s/CameronianRantSnares.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Oggs/CameronianRantSnares.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Wavs/CameronianRantSnares.wav
 
-dart $pipeLangDartFile -i ${pipeLangDir}/tunes/CameronianRantStrath.ppl -o ${myHobby}/Pipes/Midis/CameronianRantStrath.mid
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CameronianRantStrath.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Mp3s/CameronianRantStrath.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CameronianRantStrath.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Mp3s/CameronianRantStrath.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/CameronianRantStrath.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/Pipes/Mp3s/CameronianRantStrath.wav
 
-dart $tracksFile   -i ${myHobby}/NonBandTunes/Midis/CameronianRantSnares.mid,${myHobby}/Pipes/Midis/CameronianRantStrath.mid -o ${myHobby}/NonBandTunes/Midis/CameronianRantSnaresAndChanter.mid
-# I think the ffmpeg does not do the stereo separation.  Not sure why.
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnaresAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Mp3s/CameronianRantSnaresAndChanter.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnaresAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Oggs/CameronianRantSnaresAndChanter.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/NonBandTunes/Midis/CameronianRantSnaresAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/NonBandTunes/Wavs/CameronianRantSnaresAndChanter.wav
+
+
+
+
+
 
 
 
@@ -377,8 +525,8 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 # Now zip up the band tunes
 rm -f *.sf2
 cp $soundFontFile ./
-rm -f BandTunesMids.zip
-zip BandTunesMids.zip  *.mid *.sf2
+rm -f BandTunesMidis.zip
+zip BandTunesMidis.zip  *.mid *.sf2
 popd
 
 pushd ${myHobby}/BandTunes/Mp3s/
@@ -395,30 +543,6 @@ pushd ${myHobby}/BandTunes/Wavs/
 rm -f BandTunesWavs.zip
 zip BandTunesWavs.zip  *.wav
 popd
-
-
-# Now zip up the non-band tunes
-pushd ${myHobby}/NonBandTunes/Midis/
-rm -f *.sf2
-cp $soundFontFile ./
-rm -f NonBandTunesMids.zip
-zip NonBandTunesMids.zip  *.mid *.sf2
-popd
-
-pushd ${myHobby}/NonBandTunes/Mp3s/
-rm -f NonBandTunesMp3s.zip
-zip NonBandTunesMp3s.zip  *.mp3
-popd
-
-pushd ${myHobby}/NonBandTunes/Oggs/
-rm -f NonBandTunesOggs.zip
-zip NonBandTunesOggs.zip  *.ogg
-popd
-
-pushd ${myHobby}/NonBandTunes/Wavs/
-rm -f NonBandTunesWavs.zip
-zip NonBandTunesWavs.zip  *.wav
-
 
 
 

@@ -1,0 +1,183 @@
+// Twelfth note metronome.
+// Set to 100 bpm, approximately.  This is not exact, unfortunately.
+// This is about 5 minutes of clicks at 100bpm
+
+/track met
+/time 4/4
+/tempo 100
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+
+
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+
+
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+
+
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+/fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .  /fff >12M /f . .
+
+
+

@@ -349,8 +349,8 @@ class Midi {
     // The following doesn't seem to do anything, but some values are required if you want to send that event.
     // But maybe a "patch" is an instrument.
     var controllerEvent = ControllerEvent();
-    print('controllerEvent: $controllerEvent');
-    print('controllerEvent: channel, number, type, value, deltaTime: ${controllerEvent.channel}, ${controllerEvent.number}, ${controllerEvent.type}, ${controllerEvent.value}, ${controllerEvent.deltaTime}');
+    log.fine('controllerEvent: $controllerEvent');
+    log.fine('controllerEvent: channel, number, type, value, deltaTime: ${controllerEvent.channel}, ${controllerEvent.number}, ${controllerEvent.type}, ${controllerEvent.value}, ${controllerEvent.deltaTime}');
     controllerEvent.channel = 0;
     controllerEvent.number = 1; // guess
     controllerEvent.type = "Bajingo"; // guess
@@ -359,7 +359,7 @@ class Midi {
     //trackEventsList.add(controllerEvent);
 
     var programChangeMidiEvent = ProgramChangeMidiEvent();
-    print('programChangeMidiEvent.channel, .programNumber: ${programChangeMidiEvent.channel}, ${programChangeMidiEvent.programNumber}');
+    log.fine('programChangeMidiEvent.channel, .programNumber: ${programChangeMidiEvent.channel}, ${programChangeMidiEvent.programNumber}');
     programChangeMidiEvent.programNumber = 0; // maybe 1 for the next preset?????
     programChangeMidiEvent.channel = 5; // cannot be null, it seems, and whatever number this is, will turn off that channel that's specified in the file for the instrument.  Used as a track in my software????
     programChangeMidiEvent.deltaTime = 0;

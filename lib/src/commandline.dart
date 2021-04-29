@@ -177,6 +177,7 @@ class CommandLine {
 
     if (argResults[CommandLine.outputMidiFilePathMapIndex] != null) {
       _outputMidiFile = argResults[CommandLine.outputMidiFilePathMapIndex];
+      log.fine('output file: $_outputMidiFile');
     }
 
     // The defaultsTo values when creating the command line parser may mess this up.  Does it?

@@ -36,7 +36,7 @@ import 'package:snarelang4/snarelang4.dart';
 //   // return  16 * (4.0 * sin(((pi / 2) * ctr - 6.3)/4.0) + 4.0);
 //   return  20 * (3.0 * sin(((pi / 2) * ctr - 6.3)/4.0) + 3.0);
 // }
-void main(List<String> arguments) {
+Future <void> main(List<String> arguments) async {
   // print('Here are the dynamics that will be used:');
   // print('Parabolic1');
   // for (var ctr = 0; ctr < 9; ctr++) {
@@ -120,8 +120,21 @@ void main(List<String> arguments) {
   var midiWriterCopy = MidiWriter();
 
   var midiFileOutFile = File(commandLine.outputMidiFile);
-  midiWriterCopy.writeMidiToFile(midiFile, midiFileOutFile); // will crash here.  Why?  "cannot write negative variable-length integer" ?
-  print('Done writing midifile ${midiFileOutFile.path}');
+  // should check if path is writable.  Maybe directory doesn't exist.
+  // Seems that this file is a "relative" file path.  Can it be checked to see if the dir is writeable?
+  print(midiFileOutFile.toString());
+  var dirMaybe = midiFileOutFile.parent;
+  var dirExists = await dirMaybe.exists();
+  if (dirExists) {
+    midiWriterCopy.writeMidiToFile(midiFile,
+        midiFileOutFile); // will crash here.  Why?  "cannot write negative variable-length integer" ?
+    print('Done writing midifile ${midiFileOutFile.path}');
+  }
+  else {
+    print('dir did not exist');
+    exit(1);
+  }
+  exit(0);
 }
 
 

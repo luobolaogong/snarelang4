@@ -9,9 +9,44 @@
 
 
 /marker John Walsh's Walk
-/track snare
+
+
+/track met
+/channel 4
 /time 2/4   // maybe 4/4?
-/tempo 98 // 98 on recording
+/tempo 98 // 97-98 on recording
+
+// Roll off
+4M . . .    . . . .
+// Part 1
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+
+// Part 2
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+
+// Part 3
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+
+// Part 4
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+
+
+/track snare
+/channel 5
+//time 2/4   // maybe 4/4?
+//tempo 98 // 98 on recording
 
 
 
