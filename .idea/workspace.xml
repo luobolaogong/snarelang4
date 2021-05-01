@@ -19,27 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="More tuning of the bash script.">
-      <change afterPath="$PROJECT_DIR$/Metronomes/EighthNotes44.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Metronomes/QuarterNotes44.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Metronomes/TwelfthNotes44.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/AnnettesChatterMetSnare.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/JimmyRolloMetSnare.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Additions and corrections to several tunes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FanfaresSalutes/DrumSaluteIoMPB.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/DrumSaluteIoMPB.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ProcessThese.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/warmups/LeoBrowne/8s.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LeoBrowne/8s.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/warmups/LeoBrowne/Accents.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LeoBrowne/Accents.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/warmups/LeoBrowne/LeoFlams.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LeoBrowne/LeoFlams.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/warmups/LeoBrowne/LeoFlamsWithTempoTrack.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LeoBrowne/LeoFlamsWithTempoTrack.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/warmups/LeoBrowne/Wipers.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/LeoBrowne/Wipers.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/AnnettesChatterSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/AnnettesChatterSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/JaneCampbellSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/JaneCampbellSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/JimmyRolloSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/JimmyRolloSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/JohnWalshsWalkSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/JohnWalshsWalkMetSnare.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +121,7 @@
       <method v="2" />
     </configuration>
     <configuration name="DrumSaluteMaui" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i FanfaresSalutes/DrumSaluteIoMPB.snl -o midifiles/DrumSaluteIoMPB.mid" />
+      <option name="arguments" value="-i FanfaresSalutes/DrumSaluteIoMPB.snl -o midifiles/DrumSaluteIoMPB.mid -S 1.5" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -573,14 +555,8 @@
       <workItem from="1619412414449" duration="607000" />
       <workItem from="1619549404824" duration="13660000" />
       <workItem from="1619630795415" duration="6011000" />
-      <workItem from="1619716861118" duration="8226000" />
-    </task>
-    <task id="LOCAL-00043" summary="A lot of reorganizing CommandLine stuff and overrides, etc.  Probably several errors&#10;that will popup later.">
-      <created>1603180353618</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1603180353618</updated>
+      <workItem from="1619716861118" duration="18792000" />
+      <workItem from="1619803369213" duration="3899000" />
     </task>
     <task id="LOCAL-00044" summary="Added two exercises from James Laughlin.">
       <created>1603346428744</created>
@@ -918,7 +894,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618380062374</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Additions and corrections to several tunes.">
+      <created>1619740085355</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1619740085356</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -937,7 +920,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="What a mess for JlV2P25-19 part 8." />
     <MESSAGE value="P25 vol 2 was a tough one." />
     <MESSAGE value="Started into Max Rayne." />
     <MESSAGE value="More progress on Rayne." />
@@ -962,7 +944,8 @@
     <MESSAGE value="Will process files for website using ProcessThese.bash." />
     <MESSAGE value="Most of bash file finished." />
     <MESSAGE value="More tuning of the bash script." />
-    <option name="LAST_COMMIT_MESSAGE" value="More tuning of the bash script." />
+    <MESSAGE value="Additions and corrections to several tunes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Additions and corrections to several tunes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

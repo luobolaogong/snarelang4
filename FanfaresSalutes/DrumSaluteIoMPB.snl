@@ -35,16 +35,16 @@
 /tempo 76
 /time 4/4
 //marker P3 auf Rand!
-4M . /mf 12M 24M /mp 8r 8M /mf 12M 24M /mp
+4M . 12M 24M 8r 8M 12M 24M
 4M . . .
 
-4M . /mf 12M 24M /mp 8r 8M /mf 12M 24M /mp
+4M . 12M 24M 8r 8M 12M 24M
 4M . . .
 
-4M . /mf 12M 24M /mp 8r 8M /mf 12M 24M /mp
+4M . . .
 4M . . .
 
-4M . /mf 12M 24M /mp 8r 8M /mf 12M 24M /mp
+4M . . .
 4M . . .
 
 
@@ -115,14 +115,119 @@
 4M . . .
 4M . . .
 
+/track bass
+/channel 4
+1r
+/f
+//marker P1
+>4B >16:3B >16B 4r .
+>4B >16:3B >16B 4r .
+4B . . .
+>4B >16:3B >16B 4r .
+
+>4B >16:3B >16B 4r .
+>4B >16:3B >16B 4r .
+4B . . .
+>4B >16:3B >16B 4r .
 
 
-/track snare
+//marker P2
+>4B >16:3B >16B 4r .
+>4B >16:3B >16B 4r .
+4B . . .
+>4B >16:3B >16B 4r .
+
+>4B >16:3B >16B 4r .
+>4B >16:3B >16B 4r .
+4B . . .
+>4B >16:3B >16B 4r .
+
+//marker P3
+/mp
+2B 2B
+2B 4B 4r
+2B 2B
+2B 4B 4r
+
+4B . . .
+4B . /cresc 8B . ^4B /ff /f
+4B . . .
+/cresc 8B . . . . . ^4B /ff /f
+
+//marker P4
+>8B . . .   >8B . . .
+>8B . . .   >8B . . .
+>8B . . .  >8B >8b 8r >8b
+8r /cresc 8b . .   /ff ^8B >B >B >B  /f
+
+8B . . . . . . .
+8B . . . . . . .
+>8B . . .  >8B >8b 8r >8b
+8r /cresc 8b . . ^4B /ff 4r /f
+
+//marker P5
+/f
+4B 24:5B 24b 8B . 4B
+4B 24:5B 24b 8B . 4B
+4B 24:5B 24b 8B . 8r 8b
+8r /cresc 8b . . ^4B /ff 4r /f
+
+>8B . . .   >8B . . .
+>8B . . .   >8B . . .
+>8B . . .  >8B >8b 8r >8b
+8r /cresc 8b . .   /ff /f /cresc ^8B >B >B >B /ff /f
+
+//marker P6
+>8B . . .   >8B . . .
+>8B . . .   >8B . . .
+>8B . . .  >8B 8b 8r >8b
+8r 8b . .  ^8B /cresc >B >B >B /ff /f
+
+>8B . >24:5B >24b >8B . . .
+>8B . >24:5B >24b >8B . . .
+>8B . >24:5B >24b >8B . 8r 8b
+8r /cresc 8b . . ^4B /ff 4r
+
+//marker P7
+^8B ^8b ^4B 4r 4r
+^8B ^8b ^4B 4r 4r
+^8B ^8b ^4B 4r 4r
+^8B ^8b ^4B 4r 4r
+
+//marker P7Rpt
+^8B ^8b ^4B 4r 4r
+^8B ^8b ^4B 4r 4r
+^8B ^8b ^4B 4r 4r
+^8B ^8b ^4B 4r 4r
+
+//marker P7 3rd part
+/f /cresc 8B . 4B /ff /f 4r ^4B
+/f /cresc 8B . 4B /ff /f 4r ^4B
+/f /cresc 8B . 4B /ff /f 4r ^4B
+/f 8B . 16:3B 8b 8b 16b ^4B
+
+//marker P8
+/p 4B . . .
+/f ^8B ^8b ^16:3B ^8b ^8b ^16b ^8B ^8b
+4B . . .
+4B . . .
+4B 4r 12r ^24B ^8b ^4B
+
+
+
+
+
+
+
+
+/track snare5
 /channel 5
+/time 4/4
+///p 24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+///p 24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /ff
 
 
 /f
-/marker RollOff
 1r
 /marker P1
 ^16T . . .  ^16T . . ^.  8r . . .
@@ -153,19 +258,12 @@
 
 /marker P3 auf Rand!
 //tempo 76
-//4r 8T . 24T . . 8T
-//1r
-
-//1r
-//1r
 // Should be sticks on rim with some stick clicks
-/p
-24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
-24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /ff
+/p 24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+/p 24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /ff
 
-/ff
-24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
-24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /fff
+/ff 24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+/ff 24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /fff
 
 // sticks on head with some stick clicks
 /p
@@ -248,4 +346,276 @@ _44T 22z . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
 ^8T /fff  24Z . .  24t . .  12T 24T    12r 24T   8f  4F
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/track snare1
+/channel 1
+/time 4/4
+//1r
+///mp 4r 4r  /mf 24T . . . . .   ^4T /ff
+
+
+/f
+1r
+/marker P1
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r . . .
+
+/marker P1Rpt
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r . . .
+
+
+/marker P2
+^16T . . .  ^16T . . ^.  2r
+^16T . . .  ^16T . . ^.  2r
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  2r
+
+/marker P2Rpt
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r .    . .
+
+// No break for now.  Go right into it.
+
+/marker P3 auf Rand!
+//tempo 76
+
+// Should be sticks on rim with some stick clicks
+/mp
+1r
+2r   /cresc 24T . . . . .   ^4T /ff
+
+/ff
+24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /fff
+
+// sticks on head with some stick clicks
+/mp
+24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /ff
+
+/ff
+24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /fff
+
+/f
+/marker P4
+/f /decresc ^44T 22z . . . . /p  _216:5T 108:5z . . . _24t   _40T 20z .  _40t 20Z .   /cresc _44T 22z . . . . /f
+/f /decresc ^44T 22z . . . . /p  _216:5T 108:5z . . . _24t   _40T 20z .  _40t 20Z .   /cresc _44T 22z . . . . /ff
+/ff ^44T 22z . . . .   _216:5T 108:5z . . . _24t   _40T 20z .    ^44t /decresc 22Z . . . .
+ /p  ^44t 22Z . . . .   /cresc _40t 20Z .    _40T 20z .   _40t 20Z .   ^4T /ff 4r
+
+/marker P4Rpt
+/f /decresc ^44T 22z . . . . /p  _216:5T 108:5z . . . _24t   _40T 20z .  _40t 20Z .   /cresc _44T 22z . . . . /f
+/f /decresc ^44T 22z . . . . /p  _216:5T 108:5z . . . _24t   _40T 20z .  _40t 20Z .   /cresc _44T 22z . . . . /ff
+/ff ^44T 22z . . . .   _216:5T 108:5z . . . _24t   _40T 20z .    ^44t /decresc 22Z . . . .
+ /p  ^44t 22Z . . . .   /cresc _40t 20Z .    _40T 20z .   _40t 20Z .   ^4T /ff 4r
+
+
+
+// error below somewhere
+
+/marker P5
+/ff
+_44T 22z . . . .    >4T 4r 8r  /mp /cresc 24t . .
+/ff
+_44T 22z . . . .    >4T 4r 8r  /mp /cresc 24t . .
+^44T /ff 22z . . . .   _24:5T _24t   _40T 20z .    8t 8r 8t
+8r   _40t 20Z .    _40T 20z .   _40t 20Z .   >8T /f /cresc 24t . .    . . . . . . /ff
+
+/ff
+_44T 22z . . . .    24:5T /f 24t   24T . . 8F   8F  /cresc 24t . .
+_44T /ff 22z . . . .   _24:5T /f 24t   24T . . 8F   8F  /cresc 24t . .
+^44T /ff 22z . . . .   _216:5T 108:5z . . . _24t   _40T 20z .    ^44t 22Z . . . .
+^44t 22Z . . . .   _40t 20Z .    _40T 20z .   _40t 20Z .   >8T /f /cresc 24t . .    . . . . . . /ff
+
+
+
+/marker P6
+/ff
+^24T . . . . .   ^24T . . . . ^.    ^24T . . ^. . .   ^24T . . . . .
+^24T . . . . .   ^24T . . . . ^.    ^24T . . ^. . .   ^24T . . . . .
+>24T . . . . .   >24T . . . . >.    >24T . . ^. . .   24T . . ^. . .
+24T . . /cresc >. . .   >24T . . >. . .     ^8T /ff 8r 4r
+
+/ff
+^24T . . . . .   ^24T . . . . ^.    ^24T . . ^. . .   ^24T . . . . .
+^24T . . . . .   ^24T . . . . ^.    ^24T . . ^. . .   ^24T . . . . .
+>24T . . . . .   >24T . . . . >.    >24T . . ^. . .   24T . . ^. . .
+24T . . /cresc >. . .   >24T . . >. . .     ^4T /fff /decresc ^44T 22z . . . .  /f
+
+
+
+/marker P7
+/f
+^8T 8T 8T 16T 16t 16r 16t 16r >16t ^8T 8T
+^8T 8T 8T 16T 16t 16r 16t 16r >16t ^4T
+
+^8T 8T 8T 16T 16t 16r 16t 16r >16t ^8T 8T
+^8T 8T 8T 16T 16t 16r 16t 16r >16t ^4T
+
+^16T . 16T .   16T . . 16t   16T . . ^.  ^16T . . .
+^16T . 16T .   16T . . 16t   16T . . ^.  >4T
+
+^16T . 16T .   16T . . 16t   16T . . ^.  ^16T . . .
+^16T . 16T .   16T . . 16t   16T . . ^.  >8T /mp /cresc 32T . . . /f
+
+
+^16T . 16T .   16T . . 16t   16T . . ^.  ^16T . . .
+^16T . 16T .   16T . . 16t   16T . . ^.  >8T /mp /cresc 32T . . . /f
+
+^16T . 16T .   16T . . 16t   16T . . ^.  ^16T . . .
+^16T . 16T .   16T . . 16t   16T . . ^.  ^4T
+
+/marker P8
+/p
+_44T 22z . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+/cresc 24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+^4T /fff 4r 12r 24T   8f  4F
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/track snare7
+/channel 7
+/time 4/4
+//1r
+///mp 4r 4r /mf   24T . . . . .   ^4T /ff
+
+
+/f
+1r
+/marker P1
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r . . .
+
+/marker P1Rpt
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . ^.  8r . . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r . . .
+
+
+/marker P2
+^16T . . .  ^16T . . ^.  2r
+^16T . . .  ^16T . . ^.  2r
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  2r
+
+/marker P2Rpt
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+^16T . . .  ^16T . . ^.  8r /cresc 32T . . .   16T /fff /f ^. . .
+^16T . . .  ^16T . . .  ^16T . . ^.  16T ^. . .
+^16T . . .  ^16T . . ^.  8r .    . .
+
+// No break for now.  Go right into it.
+
+/marker P3 auf Rand!
+//tempo 76
+
+// Should be sticks on rim with some stick clicks
+/mp
+1r
+2r   /cresc 24T . . . . .   ^4T /ff
+
+/ff
+24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /fff
+
+// sticks on head with some stick clicks
+/mp
+24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /ff
+
+/ff
+24T . .  12t 24t   24T . . 12t 24t   12T 24T 12t 24t  12T 24T 12t 24t
+24T . .  12t 24t   24T . . 12t 24t   /cresc 24T . . . . .   ^4T /fff
+
+/f
+/marker P4
+/f /decresc ^44T 22z . . . . /p  _216:5T 108:5z . . . _24t   _40T 20z .  _40t 20Z .   /cresc _44T 22z . . . . /f
+/f /decresc ^44T 22z . . . . /p  _216:5T 108:5z . . . _24t   _40T 20z .  _40t 20Z .   /cresc _44T 22z . . . . /ff
+/ff ^44T 22z . . . .   _216:5T 108:5z . . . _24t   _40T 20z .    ^44t /decresc 22Z . . . .
+ /p  ^44t 22Z . . . .   /cresc _40t 20Z .    _40T 20z .   _40t 20Z .   ^4T /ff 4r
+
+/marker P4Rpt
+/f /decresc ^44T 22z . . . . /p  _216:5T 108:5z . . . _24t   _40T 20z .  _40t 20Z .   /cresc _44T 22z . . . . /f
+/f /decresc ^44T 22z . . . . /p  _216:5T 108:5z . . . _24t   _40T 20z .  _40t 20Z .   /cresc _44T 22z . . . . /ff
+/ff ^44T 22z . . . .   _216:5T 108:5z . . . _24t   _40T 20z .    ^44t /decresc 22Z . . . .
+ /p  ^44t 22Z . . . .   /cresc _40t 20Z .    _40T 20z .   _40t 20Z .   ^4T /ff 4r
+
+
+
+// error below somewhere
+
+/marker P5
+/ff
+_44T 22z . . . .    >4T 4r 8r  /mp /cresc 24t . .
+/ff
+_44T 22z . . . .    >4T 4r 8r  /mp /cresc 24t . .
+^44T /ff 22z . . . .   _24:5T _24t   _40T 20z .    8t 8r 8t
+8r   _40t 20Z .    _40T 20z .   _40t 20Z .   >8T /f /cresc 24t . .    . . . . . . /ff
+
+/ff
+_44T 22z . . . .    24:5T /f 24t   24T . . 8F   8F  /cresc 24t . .
+_44T /ff 22z . . . .   _24:5T /f 24t   24T . . 8F   8F  /cresc 24t . .
+^44T /ff 22z . . . .   _216:5T 108:5z . . . _24t   _40T 20z .    ^44t 22Z . . . .
+^44t 22Z . . . .   _40t 20Z .    _40T 20z .   _40t 20Z .   >8T /f /cresc 24t . .    . . . . . . /ff
+
+
+
+/marker P6
+/ff
+^24T . . . . .   ^24T . . . . ^.    ^24T . . ^. . .   ^24T . . . . .
+^24T . . . . .   ^24T . . . . ^.    ^24T . . ^. . .   ^24T . . . . .
+>24T . . . . .   >24T . . . . >.    >24T . . ^. . .   24T . . ^. . .
+24T . . /cresc >. . .   >24T . . >. . .     ^8T /ff 8r 4r
+
+/ff
+^24T . . . . .   ^24T . . . . ^.    ^24T . . ^. . .   ^24T . . . . .
+^24T . . . . .   ^24T . . . . ^.    ^24T . . ^. . .   ^24T . . . . .
+>24T . . . . .   >24T . . . . >.    >24T . . ^. . .   24T . . ^. . .
+24T . . /cresc >. . .   >24T . . >. . .     ^4T /fff /decresc ^44T 22z . . . .  /f
+
+
+
+/marker P7
+/f
+^8T 8T 8T 16T 16t 16r 16t 16r >16t ^8T 8T
+^8T 8T 8T 16T 16t 16r 16t 16r >16t ^4T
+
+^8T 8T 8T 16T 16t 16r 16t 16r >16t ^8T 8T
+^8T 8T 8T 16T 16t 16r 16t 16r >16t ^4T
+
+^16T . 16T .   16T . . 16t   16T . . ^.  ^16T . . .
+^16T . 16T .   16T . . 16t   16T . . ^.  >4T
+
+^16T . 16T .   16T . . 16t   16T . . ^.  ^16T . . .
+^16T . 16T .   16T . . 16t   16T . . ^.  >8T /mp /cresc 32T . . . /f
+
+
+^16T . 16T .   16T . . 16t   16T . . ^.  ^16T . . .
+^16T . 16T .   16T . . 16t   16T . . ^.  >8T /mp /cresc 32T . . . /f
+
+^16T . 16T .   16T . . 16t   16T . . ^.  ^16T . . .
+^16T . 16T .   16T . . 16t   16T . . ^.  ^4T
+
+/marker P8
+/p
+_44T 22z . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+/cresc 24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+^4T /fff 4r 12r 24T   8f  4F
 
