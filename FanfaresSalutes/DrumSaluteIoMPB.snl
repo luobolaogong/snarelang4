@@ -115,6 +115,8 @@
 4M . . .
 4M . . .
 
+///////////////////////////////////////////////////////////////
+
 /track bass
 /channel 4
 1r
@@ -213,6 +215,115 @@
 4B . . .
 4B 4r 12r ^24B ^8b ^4B
 
+///////////////////////////////////////////////////////////////
+
+/track tenor
+/channel 6
+1r
+/f
+//marker P1
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+>8N . . . ^8N . . .
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+
+
+/marker P1Rpt
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+>8N . . . ^8N . . .
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+
+//marker P2
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+>8N . . . ^8N . . .
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+
+/marker P1Rpt
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+>8N . . . ^8N . . .
+>8N . /cresc 16N . . ^16:3n 8r /ff /f 4r
+
+//marker P3
+4n . . .
+4n . . .
+4n 4n 4N 4N
+4n 4n 4N 4N
+
+/mf
+>8N . . .  >8N . . .
+>8N . . .  >8N . 4N
+/ff
+>8N . . .  >8N . . .
+>8N . . .  >8N /cresc 24N . . 4N /fff /f
+
+
+//marker P4
+4N 24:5N 24n 8N . 4N
+4N 24:5N 24n 8N . 4N
+4N 24:5N 24n 8N . 8r 8n
+8N . . . . >. >. >.
+
+//marker P4Rpt
+4N 24:5N 24n 8N . 4N
+4N 24:5N 24n 8N . 4N
+4N 24:5N 24n 8N . 8r 8n
+8N . . . . /decresc . . . /mp
+
+
+
+//marker P5
+/mf
+4n 4n 4N 4N
+4n 4n 4N 4N
+4n 4n 4N 4N
+4n 4:3r
+
+4n 4n 4N 4N
+4n 4n 4N 4N
+4n 4n 4N 4N
+4n 4:3r
+
+
+//marker P6
+/f
+>8N . . .   >8N . . .
+>8N . . .   >8N . . .
+>8N . . .   >8N . . .
+>8N . . .  >4N 4r
+
+>8N . . .   >8N . . .
+>8N . . .   >8N . . .
+>8N . . .   >8N . . .
+>8N . . .  >4N 4r
+
+
+//marker P7
+1r
+1r
+4r 16:3r 8n 8n 16n 4N
+4r 16:3r 8n 8n 16n 4N
+
+4r 16:3r 8n 8n 16n 4N
+4r 16:3r 8n 8n 16n 4N
+4r 16:3r 8n 8n 16n 4N
+4r 16:3r 8n 8n 16n 4N
+
+>8N . 16:3N 8n 8n 16n 4N
+>8N . 16:3N 8n 8n 16n 4N
+>8N . 16:3N 8n 8n 16n 4N
+>8N . . 16N ^8n ^8n ^16n ^4N
+
+
+//marker P8
+4N . . .
+>8N >. >16:3N >8n >8n >16n >8N >8n
+>8N >. >16:3N >8n >8n >16n >8N >8n
+>8N >. >16:3N >8n >8n >16n >8N >8n
+
+4N 4r 12r 24N 8n 4N
 
 
 

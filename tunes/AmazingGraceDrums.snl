@@ -1,0 +1,180 @@
+// Amazing Grace
+
+// Sounds to me like it should be 9/8 time
+// And the subdivisions should be 20th notes
+/time 3/4
+/tempo 4=66
+
+/track met
+/channel 0
+/mp
+// Count in and pickup
+>4M . 20:3M 10M
+>4M 10M 20M 10M
+// pickup:
+4M
+
+//marker B1-4
+>4M . .  >4M . .  >4M . .  >4M . .
+//marker B5-8
+>4M . .  >4M . .  >4M . .  >4M . .
+//marker B9-12
+>4M . .  >4M . .  >4M . .  >4M . .
+//marker B13-16
+>4M . .  >4M . .  >4M . .  >4M . .
+
+//marker B1-4 2nd time through
+>4M . .  >4M . .  >4M . .  >4M . .
+//marker B5-8 2nd time through
+>4M . .  >4M . .  >4M . .  >4M . .
+//marker B9-12 2nd time through
+>4M . .  >4M . .  >4M . .  >4M . .
+//marker B13-16 2nd time through
+>4M . .  >4M . .  >4M . .  >4M . .
+
+
+/track snare1
+/channel 1
+// Count in and pickup
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+4:3r . . .
+4:3r . . .
+4:3r . . .
+4:3r . . .
+
+/p
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+/cresc 24z . . . . .  24z . . . . .  24z . . . . .  /f
+/decresc 24z . . . . .  24z . . . . .  24z . . . . . /p
+
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+/cresc 24z . . . . .  24z . . . . .  24z . . . . .  /f
+/decresc 24z . . . . .  24z . . . . .  /p 4t
+
+
+/track snare5
+/channel 5
+// Count in and pickup
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+4:3r . . .
+4:3r . . .
+4:3r . . .
+4:3r . . .
+
+/p
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+/cresc 24Z . . . . .  24Z . . . . .  24Z . . . . .  /f
+/decresc 24Z . . . . .  24Z . . . . .  24Z . . . . . /p
+
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+24Z . . . . .  24Z . . . . .  24Z . . . . .
+/cresc 24Z . . . . .  24Z . . . . .  24Z . . . . .  /f
+/decresc 24Z . . . . .  24Z . . . . .  /p 4t
+
+
+/track snare9
+/channel 10
+// Count in and pickup
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+4:3r . . .
+4:3r . . .
+4:3r . . .
+4:3r . . .
+
+/p
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+/cresc 24z . . . . .  24z . . . . .  24z . . . . .  /f
+/decresc 24z . . . . .  24z . . . . .  24z . . . . . /p
+
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+
+24z . . . . .  24z . . . . .  24z . . . . .
+24z . . . . .  24z . . . . .  24z . . . . .
+/cresc 24z . . . . .  24z . . . . .  24z . . . . .  /f
+/decresc 24z . . . . .  24z . . . . .  /p 4t
+
+
+/track bass
+/channel 4
+/mf
+// Count in and pickup
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+4:3r . . .
+4:3r . . .
+4:3r . . .
+4:3r . . .
+/mf
+4:3B . . .
+4:3B . /cresc 4B . .  /f /decresc 4b . . /mf
+4:3B . . .
+4:3B . /cresc 4B . .  /f /decresc 4b . 4b /mp
+
+
+/track tenor
+/channel 6
+/mp
+// Count in and pickup
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+4:3r . . .
+4:3r . . .
+4:3r . . .
+4:3r . . .
+/mp
+4r 4N . 4r 4N . 4r 4N . 4r 4N .
+4r 4N . 4r 4N . 4r 4N . 4r 4N .
+
+4r 4N . 4r 4N . 4r 4N . 4r 4N .
+//4r 4N . 4r 4N . /cresc 24N . . . . .  . . . . . .  . . . . . . /f /decresc 24N . . . . .  . . . . . . /mp 4N
+4r 4N . 4r 4N . /cresc 32N . . . . . . .  . . . . . . . .  . . . . . . . . /f /decresc 32N . . . . . . .  . . . . . . . . /mp 4N

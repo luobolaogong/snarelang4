@@ -3,7 +3,7 @@
 // Copyright 2012
 // March
 /time 3/4
-/tempo 76
+/tempo 80
 
 /track snare
 
@@ -14,7 +14,7 @@
 // rather than absolute levels like /ff  because it all depends on the default dynamic
 
 /marker Castle Dangerous
-4:3r
+//4:3r  // this tune comes right after The Haunting, and so for now, no count in.
 
 /marker Line 1
 /dd >24:5F 24t /cresc 24Z . . . . .  8T /f >.
@@ -70,7 +70,7 @@
 /track met    // should have two tones for metronome
 
 /p
-^8M . >8M . >8M .
+//^8M . >8M . >8M .
 ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
 ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
 ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M

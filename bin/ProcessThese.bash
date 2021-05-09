@@ -24,6 +24,67 @@ declare soundFontFile=${myHobby}/SoundFonts/${soundFontName}
 echo soundfont is $soundFontFile
 #cd /home/rob/WebstormProjects/snarelang4/bin
 
+# There should be a way to tell fluidsynth or ffmpeg to make a stereo image like you can do with Rosegarden with the mixer
+
+
+dart $snareLangExecutable -i tunes/CastleDangerousDrums.snl -o ${myHobby}/BandTunes/Midis/CastleDangerousDrums.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/CastleDangerousChanter.ppl -o ${myHobby}/Pipes/Midis/CastleDangerousChanter.mid
+dart $tracksFile -l WARNING -i ${myHobby}/BandTunes/Midis/CastleDangerousDrums.mid,${myHobby}/Pipes/Midis/CastleDangerousChanter.mid -o ${myHobby}/BandTunes/Midis/CastleDangerousChanterAndDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CastleDangerousChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/CastleDangerousChanterAndDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CastleDangerousChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/CastleDangerousChanterAndDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CastleDangerousChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/CastleDangerousChanterAndDrums.wav
+
+exit 0
+
+
+
+
+
+echo Starting to process drum salutes/fanfares ...
+declare -a FanfaresSalutesNameArray=( \
+DrumSaluteIoMPB
+)
+rm -f ${myHobby}/FanfaresSalutes/Midis/*.mid
+rm -f ${myHobby}/FanfaresSalutes/Midis/*.sf2
+rm -f ${myHobby}/FanfaresSalutes/Mp3s/*.mp3
+rm -f ${myHobby}/FanfaresSalutes/Oggs/*.ogg
+rm -f ${myHobby}/FanfaresSalutes/Wavs/*.wav
+
+for f in "${FanfaresSalutesNameArray[@]}"; do
+  dart $snareLangExecutable -i FanfaresSalutes/${f}.snl -o ${myHobby}/FanfaresSalutes/Midis/${f}.mid
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/FanfaresSalutes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/FanfaresSalutes/Mp3s/${f}.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/FanfaresSalutes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/FanfaresSalutes/Oggs/${f}.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/FanfaresSalutes/Midis/${f}.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/FanfaresSalutes/Wavs/${f}.wav
+done
+
+pushd ${myHobby}/FanfaresSalutes/Midis/ > /dev/null
+rm -f *.sf2
+cp $soundFontFile ./
+rm -f FanfaresSalutesMidis.zip
+zip FanfaresSalutesMidis.zip  *.mid *.sf2
+popd > /dev/null
+
+pushd ${myHobby}/FanfaresSalutes/Mp3s/
+rm -f FanfaresSalutesMp3s.zip
+zip FanfaresSalutesMp3s.zip  *.mp3
+popd
+
+pushd ${myHobby}/FanfaresSalutes/Oggs/
+rm -f FanfaresSalutesOggs.zip
+zip FanfaresSalutesOggs.zip  *.ogg
+popd
+
+pushd ${myHobby}/FanfaresSalutes/Wavs/
+rm -f FanfaresSalutesWavs.zip
+zip FanfaresSalutesWavs.zip  *.wav
+popd
+
+
+
+
+
+
+
 
 
 # The website has a Band Tunes area under MIDI, and also under For Drummers.  But the MyHobby directory
@@ -82,7 +143,6 @@ popd > /dev/null
 
 
 
-
 echo Starting to process tunes snare scores that have only one file ...
 declare -a tuneNameArray=( \
 44MarchSnare \
@@ -91,9 +151,9 @@ BanjoBreakdown \
 BattleOfWaterloo \
 BeginnerMarch \
 BlackBear \
-CastleDangerousSnareAndMet \
+CastleDangerousDrums \
 JigSnare \
-March44 \
+# March44 \ Fix/check this one
 MassedBand24JLV1P60 \
 MassedBand44JLV1P59 \
 SlowMarchNo1 \
@@ -129,6 +189,31 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BlackBearDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/BlackBearDrums.wav
 
 
+
+
+dart $snareLangExecutable -i tunes/TheHauntingDrums.snl -o ${myHobby}/BandTunes/Midis/TheHauntingDrums.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/TheHauntingChanter.ppl -o ${myHobby}/Pipes/Midis/TheHauntingChanter.mid
+dart $tracksFile -l WARNING -i ${myHobby}/BandTunes/Midis/TheHauntingDrums.mid,${myHobby}/Pipes/Midis/TheHauntingChanter.mid -o ${myHobby}/BandTunes/Midis/TheHauntingChanterAndDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TheHauntingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/TheHauntingChanterAndDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TheHauntingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/TheHauntingChanterAndDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TheHauntingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/TheHauntingChanterAndDrums.wav
+
+dart $snareLangExecutable -i tunes/CastleDangerousDrums.snl -o ${myHobby}/BandTunes/Midis/CastleDangerousDrums.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/CastleDangerousChanter.ppl -o ${myHobby}/Pipes/Midis/CastleDangerousChanter.mid
+dart $tracksFile -l WARNING -i ${myHobby}/BandTunes/Midis/CastleDangerousDrums.mid,${myHobby}/Pipes/Midis/CastleDangerousChanter.mid -o ${myHobby}/BandTunes/Midis/CastleDangerousChanterAndDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CastleDangerousChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/CastleDangerousChanterAndDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CastleDangerousChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/CastleDangerousChanterAndDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CastleDangerousChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/CastleDangerousChanterAndDrums.wav
+
+
+dart $snareLangExecutable -i tunes/AmazingGraceDrums.snl -o ${myHobby}/BandTunes/Midis/AmazingGraceDrums.mid
+dart $pipeLangDartFile -i ${pipeLangDir}/tunes/AmazingGraceChanter.ppl -o ${myHobby}/Pipes/Midis/AmazingGraceChanter.mid
+dart $tracksFile -l WARNING -i ${myHobby}/BandTunes/Midis/AmazingGraceDrums.mid,${myHobby}/Pipes/Midis/AmazingGraceChanter.mid -o ${myHobby}/BandTunes/Midis/AmazingGraceChanterAndDrums.mid
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/AmazingGraceChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/AmazingGraceChanterAndDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/AmazingGraceChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/AmazingGraceChanterAndDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/AmazingGraceChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/AmazingGraceChanterAndDrums.wav
+
+
 dart $snareLangExecutable -i tunes/CaptEwingMet.snl,tunes/CaptEwingSnare.snl,tunes/CaptEwingTenor.snl,tunes/CaptEwingBass.snl -o ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/CaptEwingDrums.mp3
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/CaptEwingDrums.ogg
@@ -141,6 +226,7 @@ dart $tracksFile -l WARNING -i ${myHobby}/BandTunes/Midis/CaptEwingDrums.mid,${m
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Mp3s/CaptEwingChanterAndDrums.mp3
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Oggs/CaptEwingChanterAndDrums.ogg
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/CaptEwingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - ${myHobby}/BandTunes/Wavs/CaptEwingChanterAndDrums.wav
+
 
 
 
