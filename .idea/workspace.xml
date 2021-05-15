@@ -19,13 +19,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added bass part to drum salute.">
-      <change afterPath="$PROJECT_DIR$/tunes/AmazingGraceDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/TheHauntingDrums.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Mostly just new tunes or fixes to tunes I think.">
+      <change afterPath="$PROJECT_DIR$/bin/BuildTunes.bash" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/BadgeSetDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/BattleOfWaterlooDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/BattleOfWaterlooOlderVersionDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/CaptEwingDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/Competition44SetDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/FlettFromFlottaDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/HauntingCastleSetDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/MurdosWeddingDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/RowanTreeDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/ScotlandTheBraveDrums.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FanfaresSalutes/DrumSaluteIoMPB.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/DrumSaluteIoMPB.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Metronomes/QuarterNotes44.snl" beforeDir="false" afterPath="$PROJECT_DIR$/Metronomes/QuarterNotes44.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/ProcessThese.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CastleDangerousSnareAndMet.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CastleDangerousDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/BadgeOfScotland.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BadgeOfScotlandDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/BattleOfWaterloo.snl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/BeginnerMarch.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BeginnerMarchDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/HawaiiAlohaMet.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaMet.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/HawaiiAlohaSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaSnare.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/JigSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MassedBandsJigDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/March44.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/March44Drums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/MassedBand24JLV1P60.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MassedBands24JLDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/MassedBand44JLV1P59.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MassedBands44JLDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/ReelSnareMet.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ReelDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/ReelStraightSnareMet.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ReelStraightDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/RollOff.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/RollOff.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/SlowMarchNo1.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/SlowMarchNo1Drums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/SlowMarchNo2.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/SlowMarchNo2Drums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/SuperSlowMarchNo2.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/SuperSlowMarchNo2Drums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +104,7 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.ProcessThese.bash">
+  <component name="RunManager" selected="Shell Script.BuildTunes">
     <configuration name="44March" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/44MarchSnare.snl -o midifiles/44MarchSnare.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -96,6 +122,11 @@
     </configuration>
     <configuration name="BattleOfWaterloo" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/BattleOfWaterloo.snl -o midifiles/BattleOfWaterloo.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BattleWaterMcWhirter" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/BattleOfWaterlooMcWhirterDrums.snl -o midifiles/BattleOfWaterlooMcWhirterDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -134,6 +165,11 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="Comp44Set" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/Competition44SetDrums.snl -o midifiles/Competition44SetDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="DrumSaluteMaui" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i FanfaresSalutes/DrumSaluteIoMPB.snl -o midifiles/DrumSaluteIoMPB.mid -S 1.0" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -141,6 +177,16 @@
     </configuration>
     <configuration name="Experiments" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="--input=experiments/TrackTimings.snl -o midifiles/eba.mid -S 1.0" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FlettFromFlottaDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/FlettFromFlottaDrums.snl -o midifiles/FlettFromFlottaDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HauntingCastleSetDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/HauntingCastleSetDrums.snl -o midifiles/HauntingCastleSetDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -199,6 +245,16 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="MurdosWeddingDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/MurdosWeddingDrums.snl -o midifiles/MurdosWeddingDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PipesAndDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/PipesAndDrums.snl -o midifiles/PipesAndDrums.mid -l FINER" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="Rant2BarPhrases" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/Rant2BarPhrases.snl -o midifiles/Rant2BarPhrases.mid -S 1.0 --nSnares 1" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -219,8 +275,18 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="RowanTree" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/RowanTreeDrums.snl -o midifiles/RownTreeDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="ScotBraveChips" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/ScotlandTheBraveSnareChips.snl -o midifiles/ScotlandTheBraveSnareChips.mid -l ALL" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ScotlandBrave" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/ScotlandTheBraveDrums.snl -o midifiles/ScotlandTheBraveDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -278,6 +344,21 @@
       <option name="filePath" value="$PROJECT_DIR$/test/snarelang4_test.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="BuildTunes" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/bin/BuildTunes.bash" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="ProcessThese.bash" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -294,7 +375,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Dart Command Line App.RowanTree" />
+      <item itemvalue="Dart Command Line App.PipesAndDrums" />
+      <item itemvalue="Dart Command Line App.ScotlandBrave" />
+      <item itemvalue="Dart Command Line App.Comp44Set" />
+      <item itemvalue="Dart Command Line App.BattleWaterMcWhirter" />
+      <item itemvalue="Dart Command Line App.MurdosWeddingDrums" />
+      <item itemvalue="Dart Command Line App.FlettFromFlottaDrums" />
       <item itemvalue="Dart Command Line App.CastleDangerousDrums" />
+      <item itemvalue="Dart Command Line App.HauntingCastleSetDrums" />
       <item itemvalue="Dart Command Line App.TheHauntingDrums" />
       <item itemvalue="Dart Command Line App.AmazingGraceDrums" />
       <item itemvalue="Dart Command Line App.44March" />
@@ -335,6 +424,7 @@
       <item itemvalue="Dart Command Line App.TwelfthNotes44" />
       <item itemvalue="Dart Test.SnareLang4Test" />
       <item itemvalue="Shell Script.ProcessThese.bash" />
+      <item itemvalue="Shell Script.BuildTunes" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -585,14 +675,15 @@
       <workItem from="1619942148997" duration="17000" />
       <workItem from="1620266323288" duration="730000" />
       <workItem from="1620425331323" duration="9357000" />
-      <workItem from="1620490552751" duration="5445000" />
-    </task>
-    <task id="LOCAL-00045" summary="Will next delete a lot of commented-out code.">
-      <created>1603429306242</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1603429306242</updated>
+      <workItem from="1620490552751" duration="10716000" />
+      <workItem from="1620616835654" duration="4787000" />
+      <workItem from="1620663357949" duration="289000" />
+      <workItem from="1620663667533" duration="14399000" />
+      <workItem from="1620749835987" duration="19219000" />
+      <workItem from="1620838113104" duration="14243000" />
+      <workItem from="1620922570095" duration="14989000" />
+      <workItem from="1621014167610" duration="7156000" />
+      <workItem from="1621036925343" duration="11476000" />
     </task>
     <task id="LOCAL-00046" summary="Starting to fix some of the errors I made previously.  Currently working on /defdyn.  Also, changed from staff to track.">
       <created>1603702728867</created>
@@ -930,7 +1021,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619828790713</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Mostly just new tunes or fixes to tunes I think.">
+      <created>1620527075744</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1620527075745</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -949,7 +1047,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Started into Max Rayne." />
     <MESSAGE value="More progress on Rayne." />
     <MESSAGE value="First cut of Max Rayne salute done." />
     <MESSAGE value="Added Tenor part for Max Rayne." />
@@ -974,6 +1071,43 @@
     <MESSAGE value="More tuning of the bash script." />
     <MESSAGE value="Additions and corrections to several tunes." />
     <MESSAGE value="Added bass part to drum salute." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added bass part to drum salute." />
+    <MESSAGE value="Mostly just new tunes or fixes to tunes I think." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostly just new tunes or fixes to tunes I think." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>795</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>602</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
+          <line>115</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
+          <line>97</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/bin/snl.dart</url>
+          <line>118</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>603</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

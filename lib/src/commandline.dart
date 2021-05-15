@@ -104,7 +104,7 @@ class CommandLine {
       print('No arguments provided.  Aborting ...');
       print('Usage:\n${parser.usage}');
       print(
-          'Example: <thisProg> -p Tunes/BadgeOfScotland.snl,Tunes/RowanTree.snl,Tunes/ScotlandTheBraveSnare.snl --midi midifiles/BadgeSet.mid');
+          'Example: <thisProg> -p Tunes/BadgeOfScotlandDrums.snl,Tunes/RowanTree.snl,Tunes/ScotlandTheBraveSnare.snl --midi midifiles/BadgeSet.mid');
       exitCode = 2; // does anything?
       //return;
       exit(exitCode);
@@ -113,7 +113,7 @@ class CommandLine {
       print('Command line arguments error: -->${argResults.rest}<-- Aborting ...');
       print('Usage:\n${parser.usage}');
       print(
-          'Example: <thisProg> -p Tunes/BadgeOfScotland.snl,Tunes/RowanTree.snl,Tunes/ScotlandTheBraveSnare.snl --midi midifiles/BadgeSet.mid');
+          'Example: <thisProg> -p Tunes/BadgeOfScotlandDrums.snl,Tunes/RowanTree.snl,Tunes/ScotlandTheBraveSnare.snl --midi midifiles/BadgeSet.mid');
       exitCode = 2; // does anything?
       // return;
       exit(exitCode);

@@ -1,2 +1,31 @@
+// Command and roll-off for a march and maybe others
+// 12    24  8      4        4     4
+// Pipes &   Drums, <rest>   One   Two
+// or
+// By    the Right, <rest>   Quick March
 
-24Z . . . . . . . . . . . 4t 4r     24Z . . . . . . . . . . . 4t 8r
+
+/track met
+/channel 0   // wow, you have to specify a channel for met or you get an error hard to track
+/time 4/4
+/tempo 84
+// Sync:
+_4M _. _8M . _4M
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+4M . 8M . . .
+4M . 8M . . .
+
+
+
+/track snare5
+/channel 5
+// sync
+1r
+// "pipes and drums, One Two"
+// "By the right, quick march"
+32:3T 32t 8F 4r 4F .
+// Roll-off
+24Z . . . . .    . . . . . .   2T
+24Z . . . . .    . . . . . .   2T

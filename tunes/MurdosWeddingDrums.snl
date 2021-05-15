@@ -1,0 +1,124 @@
+// Murdo's Wedding - drums
+/time 4/4
+/tempo 84   // right?
+
+/track met
+/channel 0
+
+// sync
+4M . 8M . 4M
+// roll off
+4M . 8M . . .
+4M . 8M . 4M
+
+4M . . .   . . . .   . . . .   . . . .
+4M . . .   . . . .   . . . .   . . . .
+4M . . .   . . . .   . . . .   . . . .
+4M . . .   . . . .   . . . .   . . . 4r
+
+/track snare5
+/channel 5
+
+// sync
+1r
+// roll off
+/f /cresc 24Z . . . . .    . . . . . .  /ff 2T
+/f /cresc 24Z . . . . .    . . . . . .  /ff 4T
+/f
+8r /cresc 24Z . .
+
+/marker B1
+24:5t /ff /f 24t 8F . /cresc 24Z . . . . . 8T /ff /f f
+24:5F 48Z . 8T f /cresc 24Z . . 24t . . 8T /ff /f f
+/cresc 24Z . . . . t  8T /ff /f t  12T 24f 12T 24t 8F .
+24F t T 12t 24t 8F . /cresc 24Z . . . . .  8T /ff /f /cresc 24Z . .
+
+/marker B5
+24:5t /ff /f 24t 8F . /cresc 24Z . . . . .  8T /ff /f 8f
+24:5F 48Z . 8T f /cresc 24Z . . 24t . . 8T /ff /f f
+/cresc 24Z . . . . t  8T /ff /f .  12T 24f 12T 24t 8F .
+/cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . . . . 4T /ff /f
+
+/marker B9
+4F /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . . . .
+4T /ff /f /cresc 24Z . . 8t /ff /f 4F 12T 24t 12T 24t
+/cresc 24Z . . . . 24t 8T /ff /f 8t 12T 24f 12T 24t 8F .
+24F t T 12t 24t 8F . /cresc 24Z . . . . . 8T /ff /f /cresc 24Z . .
+
+/marker B13
+24:5t /ff /f 24t 8F . /cresc 24Z . . . . . 8T /ff /f f
+24:5F 48Z .   8T f /cresc 24Z . . t . . 8T /ff /f f
+/cresc 24Z . . . .  t 8T /ff /f . 12T 24f 12T 24t 8F .
+/cresc 24Z . . . . . 8T /ff /f f 4F 4r
+
+/track snare1
+/channel 1
+
+// sync
+1r
+// roll off
+/f /cresc 24z . . . . .    . . . . . .  /ff 2t
+/f /cresc 24z . . . . .    . . . . . .  /ff 4t
+/f
+8r /cresc 24z . .
+
+/marker B1
+24:5r /ff /f 24r 8r . /cresc 24z . . . . . 8t /ff /f f
+24:5F 48r . 8r . /cresc 24z . . 24T . . 8t /ff /f f
+/cresc 24r . . . . r  8t /ff /f T  12t 24f 12r 24r 8F .
+24F r r 12r 24r 8F . /cresc 24z . . . . .  8t /ff /f /cresc 24z . .
+
+/marker B5
+24:5T /ff /f 24T 8F . /cresc 24z . . . . .  8t /ff /f 8f
+24:5F 48z . 8t f /cresc 24z . . 24T . . 8t /ff /f f
+/cresc 24z . . . . T  8t /ff /f .  12t 24f 12t 24T 8F .
+/cresc 24z . . . . . 8t /ff /f 8T /cresc 24z . . . . . 4t /ff /f
+
+/marker B9
+4r /cresc 24r . . 8r /ff /f 4r /cresc 24z . . . . .
+4t /ff /f /cresc 24z . . 8T /ff /f 4F 12r 24r 12r 24r
+/cresc 24r . . . . 24r 8t /ff /f 8T 12t 24f 12r 24r 8F .
+24F r r 12r 24r 8F . /cresc 24z . . . . . 8t /ff /f /cresc 24z . .
+
+/marker B13
+24:5T /ff /f 24T 8F . /cresc 24z . . . . . 8t /ff /f f
+24:5F 48z .   8t f /cresc 24z . . T . . 8t /ff /f f
+/cresc 24z . . . .  T 8t /ff /f . 12t 24f 12t 24T 8F .
+/cresc 24z . . . . . 8t /ff /f f 4F 4r
+
+
+
+/track snare9
+/channel 10
+
+// sync
+1r
+// roll off
+/f /cresc 24z . . . . .    . . . . . .  /ff 2t
+/f /cresc 24z . . . . .    . . . . . .  /ff 4t
+/f
+8r /cresc 24z . .
+
+/marker B1
+24:5r /ff /f 24r 8r . /cresc 24z . . . . . 8t /ff /f f
+24:5F 48r . 8r . /cresc 24z . . 24T . . 8t /ff /f f
+/cresc 24r . . . . r  8t /ff /f T  12t 24f 12r 24r 8F .
+24F r r 12r 24r 8F . /cresc 24z . . . . .  8t /ff /f /cresc 24z . .
+
+/marker B5
+24:5T /ff /f 24T 8F . /cresc 24z . . . . .  8t /ff /f 8f
+24:5F 48z . 8t f /cresc 24z . . 24T . . 8t /ff /f f
+/cresc 24z . . . . T  8t /ff /f .  12t 24f 12t 24T 8F .
+/cresc 24z . . . . . 8t /ff /f 8T /cresc 24z . . . . . 4t /ff /f
+
+/marker B9
+4r /cresc 24r . . 8r /ff /f 4r /cresc 24z . . . . .
+4t /ff /f /cresc 24z . . 8T /ff /f 4F 12r 24r 12r 24r
+/cresc 24r . . . . 24r 8t /ff /f 8T 12t 24f 12r 24r 8F .
+24F r r 12r 24r 8F . /cresc 24z . . . . . 8t /ff /f /cresc 24z . .
+
+/marker B13
+24:5T /ff /f 24T 8F . /cresc 24z . . . . . 8t /ff /f f
+24:5F 48z .   8t f /cresc 24z . . T . . 8t /ff /f f
+/cresc 24z . . . .  T 8t /ff /f . 12t 24f 12t 24T 8F .
+/cresc 24z . . . . . 8t /ff /f f 4F 4r

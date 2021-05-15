@@ -1,0 +1,172 @@
+// Scotland the Brave - drums
+
+/track metronome
+/channel 0
+/time 4/4 // yes both of these lines can be here and in snare score
+/tempo 80    // not sure
+
+// Set the beat
+/ff
+8M . . .
+4M . . .
+
+/ff
+// "To the right, quick march"
+4M . . .
+
+// Roll off
+4M . . . . . . .
+
+
+/mf
+// Line 1
+4M . . . . . . . . . . . . . . .
+
+// Line 2
+4M . . . . . . . . . . . . . . .
+
+// Line 3
+4M . . . . . . . . . . . . . . .
+
+// Line 4
+4M . . . . . . . . . . . . . . .
+
+/////////////// Snare ///////////////////
+
+/track snare5
+/channel 5
+//time 4/4
+//tempo 80
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
+
+/ff
+
+// Roll off
+/cresc 24Z . . . . .   . . . . . . 2T /fff /mf
+/cresc 24Z . . . . .   . . . . . . 2T /fff /mf
+
+
+
+/f
+// Line 1
+/f /< 24Z . . . . . 8T /fff /f  12r 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24Z . 24t  _40T /fff /f 20z . 8t 24Z . . 8t
+4F /f /< 24Z . . . . 24t 8T /fff /f . /< 24Z . . 24t . .
+4F /f /< 24Z . . . . . 8T /fff /f 12r 24t  12f ^24T 12t 24
+
+// Line 2
+/f /< 24Z . . . . . 8T /fff /f 12r 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24Z . 24t  _40T /fff /f 20z . 8t 24Z . . 8t
+4F /f /< 24Z . . . . t 8T /fff /f . /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . 24t _40T 20z . 24z . . 8T /fff /f .
+
+// Line 3
+4F /f /< 24Z . . . . 24t _40T /fff /f 20z . 8t /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . . 8T /fff /f . 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24z . 24t 4T /fff /f /< 24Z . . . . 24t
+>8T /fff /f /< 24Z . . 8T 8F 24T . . 8f 24Z . . 8t
+
+// Line 4
+/f /< 24Z . . . . . 24:5T /fff /f 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24z . 24t  _40T /fff /f 20z .  8t  24Z . . 8t
+4F /f /< 24Z . . . . 24t 8t /fff /f . /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . 24t  _40T /fff 20z . 24z . . 4T
+
+////////////////// Tenor //////////////////////////
+
+/track tenor
+/channel 2
+//time 4/4
+//tempo 80
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
+
+
+/f
+// Roll off
+4N . 2N
+4N . 2N
+
+
+/f
+// Line 1
+4N . 2N
+4N . 2N
+4N . . 8N 24n . .
+1N
+
+// Line 2
+4N . 2N
+4N . 2N
+4N 24:5N 24n 4N 8N 24n . .
+4N . . .
+
+// Line 3
+2N 8N . 8N 24n . .
+2N 8N . . .
+2N 4r 8N 24n . .
+2N 24N . . 8:3n
+
+// Line 4
+4N . 2N
+4N . 2N
+4N 24:5N 24n  4N 8N 24n . .
+4N . . .
+
+///////////// Bass ///////////////////////////////
+/track bass
+/channel 3
+/time 4/4
+/tempo 80
+
+// Wait for met to establish tempo
+8r . . .
+4r . . .
+
+// "To the right, quick march"
+4r . . .
+
+
+/f
+
+4B . . 4r
+4B . . 4r
+
+
+/f
+// Line 1
+4B . 8B . . .
+4B . 8B . . .
+2B 4b 8B .
+4B . 2B
+
+// Line 2
+4B . 8B . . .
+4B . 8B . . .
+2B 4b 8B .
+4B . . 4r
+
+// Line 3
+4B . 8B . . .
+4B . . 8B .
+4B . 2B
+8B . . 8:3b 8B .
+
+// Line 4
+4B . 8B . . .
+4B . 8B . . .
+2B 4B 8B .
+4B 2B 4b
+
+

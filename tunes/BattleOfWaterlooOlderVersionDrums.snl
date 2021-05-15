@@ -1,0 +1,77 @@
+// Battle of Waterloo - Drums
+// Looks like this version may be replaced by a McWhirter version
+// This version should be replaced.
+// next line could be a problem.  What are the defaults for note duration?
+/time 4/4
+/tempo 84
+
+/track met
+/channel 4
+/mf
+4M . . .
+4M . 8M . . .
+4M . 8M . 4M
+
+4M . . .  . . . .  . . . .  . . . .
+4M . . .  . . . .  . . . .  . . . .
+
+4M . . .  . . . .  . . . .  . . . .
+4M . . .  . . . .  . . . .  . . . .
+
+
+
+// This /unison stuff doesn't sound good at this time due to the recording of SLOT.  So postpone working on this for now
+//unison
+
+/track snare
+// sync
+1r
+// Roll-off
+/f /cresc 24Z . . . . .    . . . . . .  /ff 2T
+/f /cresc 24Z . . . . .    . . . . . .  /ff 4T
+
+/f
+
+8F /f 32T . . .  // Pickup, all play
+
+// first bar, all play only first tap, and flam
+>6T 24r 24t                  /mp 24Z . . 8t            8F    24Z . .              ^40T 20z .  24T . .
+
+// second bar, all play
+/f 12f  24t  12F >30f       30T . . .  >8T            /p /> 24Z . . . . .          /f >8T   32T . . .
+
+// 3rd bar
+>6T 24r 24t                  /mp  24Z . . 24t . .      /ff  >12T  24t  12r  ^30t     . . . ^.  ^8T
+
+// 4th bar
+/mp ^40T 20z . 24Z .  ^t      ^40T 20z . ^40t 20z .     ^4T  /f                     8F 32T . . .
+
+
+
+// Repeat first 3 bars above
+/f >6T 24r 24t              /mp 24Z . . 8t            8F  24Z . .                  ^40T 20z .  24T . .
+
+/f 12f  24t  12F >30f       30T . . .  >8T            /p /<  24Z . . . . .         /f >8T   32T . . .
+
+>6T 24r 24t                  /mp 24Z . . 24t . .       /ff  >12T  24t  12r  ^30t     . . . ^.  ^8T
+
+// This is the 2nd ending
+/p /< 24Z . . . . .          . . . . . .               /ff >4T                       8r 8t
+
+
+// 2nd part
+/ff ^40T 20z . 24z . ^24t     ^40T 20z . ^40t 20Z .     ^40T 20z . 24z . ^24t        ^40T 20z . 24t . .
+/f 12f  24t  12F >30f       30T . . .  >8T            /p /< 24Z . . . . .          /f  >8T   32T . . .
+>6T 24r 24t                  /mp 24Z . . 24t . .       /ff >12T  24t  12r  ^30t      . . . ^.  ^8T
+/mp ^40T 20z . 24Z . ^t       ^40T 20z . ^40t 20z .    ^4T /f                     8F 32T . . .
+
+
+// 1st part, but take 2nd ending
+/f>6T 24r 24t               /mp   24Z . . 8t          8F  24Z . .                  ^40T 20z .  24T . .
+/f 12f  24t  12F >30f       30T . . .  >8T            /p /<  24Z . . . . .         /f   >8T   32T . . .
+>6T 24r 24t                  /mp 24Z . . 24t . .       /ff >12T  24t  12r  >30t      . . . >.  >8T
+
+// second ending of first part
+/p /< 24Z . . . . .          . . . . . .               /ff  >4T                      4r
+
+

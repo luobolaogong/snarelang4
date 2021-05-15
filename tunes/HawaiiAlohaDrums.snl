@@ -1,0 +1,306 @@
+// Hawai'i Aloha
+// Lorenzo Lyons
+
+// "Slow Air in 4/4", but written "cut time"
+/time 4/4
+/tempo 2=70
+/track met
+/channel 0
+/f
+
+/f 4M /p 4M /mf 4M /p 4M
+// Drums Roll off
+2r . . 2r
+2r . . 2r
+
+/marker L1
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+/marker L2
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+
+/marker L3
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+
+/marker L4B13
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+
+
+/marker L5B17
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+
+/marker L6B21
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+
+/marker L7B25
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+/marker L8B29
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+/marker L5RptB17
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+/marker L6RptB21
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+/marker L7RptB25
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+
+/marker L8RptB29
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /mf 4M /p 4M
+/f 4M /p 4M /mf 4M /p 4M   /f 4M /p 4M /tempo 120 /mf 4M /p 4M
+
+
+/marker L8RptB29
+/tempo 115
+/f 4M /p 4M /mf 4M /p 4M
+/tempo 110
+/f 4M /p 4M /mf 4M /p 4M
+/tempo 105
+/f 4M /p 4M
+/tempo 100
+1M
+
+/////////////////////////////////////////////////
+/track snare
+/channel 3
+/ff
+
+// Met count in
+1r
+
+/f /cresc 12Z . . . . .   . . . . . .   2T /fff 2r
+/f /cresc 12Z . . . . .   . . . . . .   2T /fff 2r /f
+
+
+// markers will follow pipes score
+//marker L1
+1r 1r 1r 1r
+
+//marker L2
+1r 1r 1r 1r
+
+//marker L3
+1r 1r 1r 1r
+
+//marker L4
+1r 1r 1r
+/mf /cresc 12Z . .  . . .   >20T 10z .  >20t 10Z .
+
+
+//marker L5
+>4T /fff /ff 4r 2r
+1r
+/mf /cresc 12Z . .  . . 12t  20T 10z 10Z  20t 10Z 10z
+20T 10z 10Z  12z . 12t  16T . . .   >4T
+
+//marker L6
+4F /fff /ff 4r 2r
+4r 6r 12t 12T . . 4f
+/mf /cresc 12Z . .  . . . /fff /decresc 12Z . .  . . . /mf
+/ff 4T 6r 12t 4F .
+
+//marker L7
+/mf /cresc 36Z . .  . . .  . . .    . . .  . . .  . . .    36Z . .  . . .  . . .    . . .  . . .  . . .     /fff
+  /decresc 36Z . .  . . .  . . .    . . .  . . .  . . .    36Z . .  . . .  . . .    . . .  . . .  . . .     /mf
+4T 4r 2r
+1r
+
+//marker L8
+/ff
+1r 1r 1r  /mf /cresc 12Z . .   . . .   >20T 10z . >20t 10Z .
+
+
+//marker L5Rpt
+>4T /fff /ff 4r 2r
+1r
+/mf /cresc 12Z . .  . . 12t  20T 10z 10Z  20t 10Z 10z
+20T 10z 10Z  12z . 12t  16T . . .   >4T
+
+//marker L3Rpt
+4F /fff /ff 4r 2r
+4r 6r 12t 12T . . 4f
+/mf /cresc 12Z . .  . . .  /fff 12Z . .  . . . /mp
+/mf 4T 6r 12t 4F .
+
+//marker L4Rpt
+/mf /cresc 36Z . .  . . .  . . .    . . .  . . .  . . .  36Z . .  . . .  . . .    . . .  . . .  . . .  /ff
+ /decresc  36Z . .  . . .  . . .    . . .  . . .  . . .  36Z . .  . . .  . . .    . . .  . . .  . . .  /mf
+4T 4r 2r
+1r
+
+// ralantando
+/marker L5Rpt
+1r 1r 1r  1r
+
+//////////////////////////////////////////////////
+/track tenor
+/channel 4
+/mp
+
+// Met count in
+1r
+
+// Drums Roll off
+2N . 1N
+2N . 1N
+
+//marker L1
+1r 1r 1r 1r
+
+//marker L2B5
+1r 1r 1r 1r
+
+//marker L3B9
+1r 1r 1r 1r
+
+//marker L4B13
+1r 1r 1r 1r
+
+//marker L5B17
+1r
+1r
+12:5N 12n 4N .
+2N 4N .
+
+//marker L6B21
+1N
+2r 4N .
+1N
+1r
+
+//marker L7
+/ppp /cresc 16N . . .   . . . .   . . . .   . . . .      /f
+   /decresc 16N . . .   . . . .   . . . .   . . . .     /p
+1N /mf
+1r
+
+//marker L8
+1r . . .
+
+//marker L5B17Rpt
+1r
+1r
+12:5N 12n 4N .
+2N 4N .
+
+//marker L6B21Rpt
+1N
+2r 4N .
+1N
+1r
+
+
+//marker L7Rpt
+/ppp /cresc 16N . . .   . . . .   . . . .   . . . .      /f
+   /decresc 16N . . .   . . . .   . . . .   . . . .     /p
+
+1N /mf
+1r
+
+//marker L8Rpt
+1r . . .
+
+//marker L8RptRpt
+1r . . .
+
+//////////////////////////////////////////
+/track bass
+/channel 5
+/mp
+
+
+
+// Met count in
+1r
+
+// Drums Roll off
+/mf
+2B . 1B
+2B . 1B
+
+
+/mf
+
+//marker L1
+1r 1r 1r 1r
+
+//marker L2B5
+1r 1r 1r 1r
+
+//marker L3B9
+1r 1r 1r 1r
+
+//marker L4B13
+1r 1r 1r   2r /mp 4B /mf 4B
+
+
+//marker L5B17
+/f 1B
+1r
+1r
+2r /mp 4B /mf .
+
+//marker L6B21
+/f 1B
+1r
+1r
+2r /mp 4B /mf .
+
+//marker L7B25
+/ppp /cresc 16B . . .   . . . .   . . . .   . . . .      /f
+   /decresc 16B . . .   . . . .   . . . .   . . . .     /ppp
+1B
+1r
+
+//marker L8B29
+/mf
+1r 1r 1r
+2r /mp 4B /mf .
+
+
+
+//marker L5B17Rpt
+/f 1B
+1r
+1r
+2r /mp 4B /mf .
+
+//marker L6B21Rpt
+/f 1B
+1r
+1r
+2r /mp 4B /mf .
+
+//marker L7B25Rpt
+/ppp /cresc 16B . . .   . . . .   . . . .   . . . .      /f
+   /decresc 16B . . .   . . . .   . . . .   . . . .     /ppp
+1B
+1r
+
+//marker L8B29Rpt
+/mf
+1r 1r 1r
+2r 2r
+
+//marker L8B29RptRpt
+1r 1r 1r 1r
+
+

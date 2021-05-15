@@ -1,0 +1,243 @@
+// Badge Set (Badge of Sctoland, The Rowan Tree, Scotland the Brave)
+
+///////////////////// Metronome /////////////////////////////
+/track met
+/channel 0
+/time 4/4
+/tempo 84
+// Sync:
+_4M _. _8M . _4M
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+4M . 8M . . .
+4M . 8M . . .
+
+// Badge of Scotland
+/mp
+4M . . .    . . . .    . . . .    . . . .
+
+// Rowan Tree
+/mf
+4M . . .    . . . .    . . . .    . . . .
+4M . . .    . . . .    . . . .    . . . .
+4M . . .    . . . .    . . . .    . . . .
+4M . . .    . . . .    . . . .    . . . 4r
+
+// Scotland the Brave
+/mf
+4M . . .    . . . .    . . . .    . . . .
+4M . . .    . . . .    . . . .    . . . .
+4M . . .    . . . .    . . . .    . . . .
+4M . . .    . . . .    . . . .    . . . .
+
+
+
+
+
+//////////////// Snare 5 ///////////////////////////////
+
+/track snare5
+/channel 5
+
+
+// sync
+1r
+// "pipes and drums, One Two"
+// "By the right, quick march"
+32:3T 32t 8F 4r 4F .
+// Roll-off
+24Z . . . . .    . . . . . .   2T
+24Z . . . . .    . . . . . .   4T 8r
+
+
+
+// Badge of Scotland
+///////////////// This snare part is the March 4/4, and not meant for this tune.  Peter said to put it in for now /////////////////////////
+/marker PtA
+24Z _. _.
+^8t 24Z _. _. ^12t 24 8          ^12 24 12 24T   ^8 24Z _. _.
+^12t 24T 8t     ^12 24 12 24T      ^8t ^. ^.             24Z _. _.
+^8t 24Z _. _. ^12t 24T 8t          ^12T 24t 12T 24T   ^8t 24Z . .
+24t . ^. ^8T    12t ^24 12 24t     >40T 20z . >40t 20z .  >8T
+
+/marker PtA1
+24Z _. _.
+^8t 24Z _. >. ^12t 24 8          >40T 20z . >40t 20z .  >8T  24Z . .
+^12t 24 8  ^12 24 12 24T         12t ^24 12 24t   ^8T 24Z _. _.
+^8t 24Z _. _.  ^12t 24 8         ^12T 24 12 24T   ^8  24Z . .
+24t . ^24  ^8    12 ^24 12 24t   >40T 20z . >40t 20z .     >8T
+
+8t
+/marker PtB
+24Z . . _. _. _. ^8T .           24Z . . _. _. _. ^8T .
+^12F 24t 12 24T  8f t            ^12F 24t 12 24T  8f t
+24Z . . _. _. _. ^8T .           24Z . . _. _. _. ^8T 24Z _. _.
+^4T                              24Z . _. _. _. _. ^4T 8r
+
+8t
+/marker PtB1
+24Z . . _. _. _. ^8T .           24Z . . _. _. _. ^8T .
+32T . . . ^12 24T 12t 24t ^8T    32T . . . ^12 24T 12t 24t ^8T
+24Z . . _. _. _. ^8T .           24Z . . _. _. _. ^8T 24Z _. >.
+^4T                              24Z . _. _. _. _. ^4T
+
+// Rowan Tree
+/f
+24:5T 24t
+
+/< 24Z . . . . . 8T /ff /f /< 24Z . .   . . . 8T /ff /f 8t 24Z . .
+24t . . >8T  24t . . >8t  8F 32T . . .  8T .
+/< 24Z . . . . .  8T /ff /f /< 24Z . . . . .  8T /ff /f 8t f
+8F 8r /< 24Z . . . . .  8T  /ff /f 8r 24:5T 24t
+
+/< 24Z . . . . .  8T /ff /f /< 24Z . .  . . . 8T /ff /f 8t 24Z . .
+24t . . >8T 24T . . >8t 8F 32T . . . 8T .
+>8F 24T . . 8f 12 >24t 12T 24T 8t 8T f
+8F 8r /< 24Z . . . . . 8T /ff /f 8r 24:5T 24t
+
+>40T 20Z . 24t . . >40T 20Z .  8t /< 24Z . . . . .  8T /ff /f 24Z . .
+24t . . >8T 24T . . >8t 8F 32T . . . 8T .
+>40T 20Z . 24t . . >40T 20Z .  8t /< 24Z . . . . .  8T  /ff /f f
+8F 8r /< 24Z . . . . .  8T /ff /f 8r 24:5T 24t
+
+/< 24Z . . . . .  8T /ff /f /< 24Z . .  . . . 8T /ff /f 8t 24Z . .
+24t . . >8T 24T . . >8t 8F 32T . . . 8T .
+>8F 24T . . 8f 12 >24t 12T 24T 8t 8T f
+8F 8r /< 24Z . . . . . 8T /ff /f 8r 4r
+
+
+
+// Scotland the Brave
+
+/f
+// Line 1
+/f /< 24Z . . . . . 8T /fff /f  12r 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24Z . 24t  _40T /fff /f 20z . 8t 24Z . . 8t
+4F /f /< 24Z . . . . 24t 8T /fff /f . /< 24Z . . 24t . .
+4F /f /< 24Z . . . . . 8T /fff /f 12r 24t  12f ^24T 12t 24
+
+// Line 2
+/f /< 24Z . . . . . 8T /fff /f 12r 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24Z . 24t  _40T /fff /f 20z . 8t 24Z . . 8t
+4F /f /< 24Z . . . . t 8T /fff /f . /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . 24t _40T 20z . 24z . . 8T /fff /f .
+
+// Line 3
+4F /f /< 24Z . . . . 24t _40T /fff /f 20z . 8t /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . . 8T /fff /f . 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24z . 24t 4T /fff /f /< 24Z . . . . 24t
+>8T /fff /f /< 24Z . . 8T 8F 24T . . 8f 24Z . . 8t
+
+// Line 4
+/f /< 24Z . . . . . 24:5T /fff /f 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24z . 24t  _40T /fff /f 20z .  8t  24Z . . 8t
+4F /f /< 24Z . . . . 24t 8t /fff /f . /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . 24t  _40T /fff 20z . 24z . . 4T
+
+/////////////////////// Tenor  ////////////////////////
+/track tenor
+/channel 7
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+
+/mf
+// Roll off
+4N . 2N
+4N . 2N
+
+// Badge of Scotland
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+
+// Rowan Tree
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+
+
+// Scotland the Brave
+/mf
+// Line 1
+4N . 2N
+4N . 2N
+4N . . 8N 24n . .
+1N
+
+// Line 2
+4N . 2N
+4N . 2N
+4N 24:5N 24n 4N 8N 24n . .
+4N . . .
+
+// Line 3
+2N 8N . 8N 24n . .
+2N 8N . . .
+2N 4r 8N 24n . .
+2N 24N . . 8:3n
+
+// Line 4
+4N . 2N
+4N . 2N
+4N 24:5N 24n  4N 8N 24n . .
+4N . . .
+
+
+////////////////// Bass //////////////
+/track bass
+/channel 3
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+
+/mf
+// Roll off
+4B . . 4r
+4B . . 4r
+
+// Badge of Scotland
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+
+// Rowan Tree
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+
+// Scotland the Brave
+/mf
+// Line 1
+4B . 8B . . .
+4B . 8B . . .
+2B 4b 8B .
+4B . 2B
+
+// Line 2
+4B . 8B . . .
+4B . 8B . . .
+2B 4b 8B .
+4B . . 4r
+
+// Line 3
+4B . 8B . . .
+4B . . 8B .
+4B . 2B
+8B . . 8:3b 8B .
+
+// Line 4
+4B . 8B . . .
+4B . 8B . . .
+2B 4B 8B .
+4B 2B 4b
+
+

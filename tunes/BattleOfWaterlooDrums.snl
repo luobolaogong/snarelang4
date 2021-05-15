@@ -1,0 +1,54 @@
+// Battle of Waterloo - Steven McWhirter version, Drums
+/time 4/4
+/tempo 84
+
+/track met
+/channel 4
+/mf
+4M . . .
+4M . 8M . . .
+4M . 8M . 4M
+
+4M . . .  . . . .  . . . .  . . . .
+4M . . .  . . . .  . . . .  . . . .
+
+4M . . .  . . . .  . . . .  . . . .
+4M . . .  . . . .  . . . .  . . . .
+
+
+
+// This /unison stuff doesn't sound good at this time due to the recording of SLOT.  So postpone working on this for now
+//unison
+
+/track snare
+// sync
+1r
+// Roll-off
+/f /cresc 24Z . . . . .    . . . . . .  /ff 2T
+/f /cresc 24Z . . . . .    . . . . . .  /ff 4T
+
+/f
+
+8r 8t
+/cresc 24Z . . . . . 8T /ff /f . /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
+24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
+24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /f
+24:5f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . . 8T /ff /f 24T 12t  // changed ending to match pipes
+
+// line 2
+/cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
+24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
+24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /mp
+/cresc 24Z . . . . .   . . . . . .  4T /ff /f 8r /cresc 24Z . .
+
+// line 3
+24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . .   40T 20z . 40t 20Z .
+24:5T /ff /f 30t . . . . 8T 4f /cresc 24Z . . t . .
+24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /f
+24:5f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . . 8T /ff /f 24T 12t // changed ending to match pipes
+
+/cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
+24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
+24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /mf
+4f 4r /cresc 24Z . . . . .   . . . . . .
+4T /ff

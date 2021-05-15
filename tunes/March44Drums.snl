@@ -1,34 +1,36 @@
 // March 4/4
 /time 4/4
-
+// This needs to be checked.  The parser isn't that good.  Makes mistakes
 /tempo 100 // just for easy computation in Midi Voyager
 /track snare
 /channel 0
 
-4T . 8 . .
-
+4T . 8T . .
+/marker PtA
 24Z _. _.
 ^8t 24Z _. _. ^12t 24 8          ^12 24 12 24T   ^8 24Z _. _.
-^12t 24 8     ^12 24 12 24T      ^8 ^ ^             24Z _. _.
-^8t 24Z _. _. ^12t 24 8          ^12 24 12 24T   ^8 24Z . .
-24t . ^ ^8    12t ^24 12 24t     >40T 20z . >40t 20z .  >8T
+^12t 24T 8t     ^12 24 12 24T      ^8t ^. ^.             24Z _. _.
+^8t 24Z _. _. ^12t 24T 8t          ^12T 24t 12T 24T   ^8t 24Z . .
+24t . ^. ^8T    12t ^24 12 24t     >40T 20z . >40t 20z .  >8T
 
-
+/marker PtA1
 24Z _. _.
 ^8t 24Z _. >. ^12t 24 8          >40T 20z . >40t 20z .  >8T  24Z . .
 ^12t 24 8  ^12 24 12 24T         12t ^24 12 24t   ^8T 24Z _. _.
 ^8t 24Z _. _.  ^12t 24 8         ^12T 24 12 24T   ^8  24Z . .
-24t . ^24  ^8    12 ^24 12 24t   >40T 20z . >40t 20z .  >8T
+24t . ^24  ^8    12 ^24 12 24t   >40T 20z . >40t 20z .     >8T
 
 
-t8
+8t
+/marker PtB
 24Z . . _. _. _. ^8T .           24Z . . _. _. _. ^8T .
 ^12F 24t 12 24T  8f t            ^12F 24t 12 24T  8f t
 24Z . . _. _. _. ^8T .           24Z . . _. _. _. ^8T 24Z _. _.
 ^4T                              24Z . _. _. _. _. ^4T 8r
 
 
-t8
+8t
+/marker PtB1
 24Z . . _. _. _. ^8T .           24Z . . _. _. _. ^8T .
 32T . . . ^12 24T 12t 24t ^8T    32T . . . ^12 24T 12t 24t ^8T
 24Z . . _. _. _. ^8T .           24Z . . _. _. _. ^8T 24Z _. >.

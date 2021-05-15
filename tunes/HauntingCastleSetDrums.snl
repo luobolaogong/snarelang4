@@ -1,0 +1,148 @@
+
+// The Haunting / Castle Dangerous Set - Drums
+
+// metronome first for both tunes
+
+/time 6/4
+/tempo 4=80
+
+/track met
+/channel 0
+/mp
+// Count in
+>4M . 8M . _4M . 8M .
+
+//marker B1-4
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+
+//marker B5-8
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+//marker B9-12
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+//marker B13-16
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Castle Dangerous
+// James Laughlin
+// Copyright 2012
+// March
+/time 3/4
+/tempo 80
+
+//track met    // should have two tones for metronome
+
+/mp
+//^8M . >8M . >8M .
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _4M  4r
+
+//////////////////////////////////////////////////////
+
+// now snare for both tunes
+
+/track snare
+
+// This is for Haunting
+
+// Count in
+>4r . 8r . _4r . 8r .
+
+//rarker B1-4
+>4r . .  _4r . .   >4r . .  _4r . .   >4r . .  _4r . .   >4r . .  _4r . .
+
+//rarker B5-8
+>4r . .  _4r . .   >4r . .  _4r . .   >4r . .  _4r . .   >4r . .  _4r . .
+//rarker B9-12
+>4r . .  _4r . .   >4r . .  _4r . .   >4r . .  _4r . .   >4r . .  _4r . .
+//rarker B13-16
+>4r . .  _4r . .   >4r . .  _4r . .   >4r . .  _4r . .
+/time 5/4
+>4r . .  _4r .
+
+
+
+
+
+
+
+
+
+
+
+
+/time 6/4
+
+// This is for Castle
+
+//mf  // assuming this dynamic as default /dd
+// Should allow /dd=mf or something like that.
+// Then every time you see /dd you stick in /mf
+// And maybe dynamics should be more "relative", as in "/+2" or "/-1" for relative dynamic levels
+// rather than absolute levels like /ff  because it all depends on the default dynamic
+
+/marker Castle Dangerous
+//4:3r  // this tune comes right after The Haunting, and so for now, no count in.
+
+/marker Line 1
+/dd >24:5F 24t /cresc 24Z . . . . .  8T /f >.
+/dd 24Z . . 8t  /cresc 24Z . . . . .  ^40T  20z . 24z . .
+>8T /ff 24T . .  8f 12D >24T  12t 30D 30T . . .
+^40T 20z . 8t 24T . 24F 24T . 24F ^4f
+
+/marker Line2
+/dd >24F 24t . 12t 24t   8F >12f 24T 12t >24T 12t 24t
+12F 24f >8F /cresc 24Z . . . . . 4T /fff
+/dd /cresc ^40T 20z .  24t . .   >40T 20z . >40t 20Z .  24Z . ^40T 20z . ^30t
+30T . . . ^8T /ff >4f /dd /cresc 24Z . . . . . /ff
+
+/marker Line3
+/dd ^24:5T 24t /cresc 24Z . . . . .  8T /f .
+/dd 24Z . . 8t  /cresc 24Z . . . . .  ^40T 20z . 24z . .
+>8T /ff 24T . .  8f 12D >24T  12t 30D 30T . . .
+^40T 20z . 8t 24T . 24F 24T . 24F ^4f
+
+/marker Line4
+/dd >24F 24t . 12t 24t   8F >12f 24T 12t >24T 12t 24t
+12F 24f >8F /cresc 24Z . . . . . 4T /fff
+/dd /cresc ^40T 20z .  24t . .   >40T 20z . >40t 20Z .  24Z . ^40T 20z . ^30t
+30T . . . ^8T /ff /dd /cresc 24Z . . . . . _4T /ff
+
+/marker Line5
+/dd /cresc 24Z . . . . 24t  ^40T 20z . 24z . .   ^40T 20z .  ^40t 20Z .
+32T . . .  >8T /ff /f 40t 20z . 32T . . .  ^4T    // 28th notes don't sound quite right
+/f >8F 24T . .  8f  12D >24T   12t  30D 30T . . .
+^40T 20z . 8t 24T . 24F 24T . 24F ^4f
+
+/marker Line6
+/dd /cresc 24Z . . . . 24t   ^40T 20z . 24z . . ^40T 20z . ^40t 20Z .
+32T . . . >8T /ff /dd /cresc 24Z . . . . .  4T /fff
+/dd /cresc ^40T 20z .  24t . .   >40T 20z . >40t 20Z .  24Z . ^40T 20z . ^30t
+30T . . . ^8T /ff >4f /dd /cresc 24Z . . 24t . . /ff
+
+/marker Line7
+/dd ^24:5F 24t /cresc 24Z . . . . .  ^40T 20z . ^40t 20Z .
+32T . . .  >8T /ff /f 40t 20z . 32T . . .  ^4T
+>8F 24T . .  8f  12D >24T   12t  30D 30T . . .
+^40T 20z . 8t 24T . 24F 24T . 24F ^4f
+
+/marker Line8
+/dd /cresc 24Z . . . . 24t   ^40T 20z . 24z . . ^40T 20z . ^40t 20Z .
+32T . . . >8T /ff /dd /cresc 24Z . . . . .  4T /fff
+/dd /cresc ^40T 20z .  24t . .   >40T 20z . >40t 20Z .  24Z . ^40T 20z . ^30t
+30T . . . ^8T /ff /dd /cresc 24Z . . . . . _4T /ff
+
+
+
+
+
+

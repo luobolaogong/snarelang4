@@ -792,6 +792,7 @@ class Midi {
     note.setNoteNumber(loopBuzzes, usePadSoundFont, snareNumber); // hey, maybe "note" knows what snare number it is, if it's a snare, right?  Prob.
 
       // // var snareLangNoteNameValue = (note.duration.firstNumber / note.duration.secondNumber).floor(); // is this right???????
+    // The next line fails with "The method '/' as called on null" when there's a problem finding input file or something
     var snareLangNoteNameValue = note.duration.firstNumber / note.duration.secondNumber; // is this right???????  A double?
     if (note.noteType == NoteType.rest) {
       note.velocity = 0; // new, nec?
