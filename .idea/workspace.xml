@@ -19,39 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Mostly just new tunes or fixes to tunes I think.">
-      <change afterPath="$PROJECT_DIR$/bin/BuildTunes.bash" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/BadgeSetDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/BattleOfWaterlooDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/BattleOfWaterlooOlderVersionDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/CaptEwingDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/Competition44SetDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/FlettFromFlottaDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/HauntingCastleSetDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/MurdosWeddingDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/RowanTreeDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/ScotlandTheBraveDrums.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Mostly just updating tunes for new storage area.">
+      <change afterPath="$PROJECT_DIR$/tunes/BarrenRocksOfAdenDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/RowanTreeDCDrums.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Metronomes/QuarterNotes44.snl" beforeDir="false" afterPath="$PROJECT_DIR$/Metronomes/QuarterNotes44.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ProcessThese.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/BadgeOfScotland.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BadgeOfScotlandDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/BattleOfWaterloo.snl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/BeginnerMarch.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BeginnerMarchDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/HawaiiAlohaMet.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaMet.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/HawaiiAlohaSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/HawaiiAlohaSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/JigSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MassedBandsJigDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/March44.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/March44Drums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/MassedBand24JLV1P60.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MassedBands24JLDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/MassedBand44JLV1P59.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MassedBands44JLDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/ReelSnareMet.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ReelDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/ReelStraightSnareMet.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ReelStraightDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/RollOff.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/RollOff.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/SlowMarchNo1.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/SlowMarchNo1Drums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/SlowMarchNo2.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/SlowMarchNo2Drums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/SuperSlowMarchNo2.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/SuperSlowMarchNo2Drums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/BuildTunes.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BuildTunes.bash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/BadgeSetDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BadgeSetDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/RowanTreeDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/RowanTreeDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +91,11 @@
     </configuration>
     <configuration name="AmazingGraceDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/AmazingGraceDrums.snl -o midifiles/AmazingGraceDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BarrenRocks" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/BarrenRocksOfAdenDrums.snl -o midifiles/BarrenRocksOfAdenDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -280,6 +259,11 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="RowanTreeJL" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/RowanTreeJLDrums.snl -o midifiles/RowanTreeJLDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="ScotBraveChips" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/ScotlandTheBraveSnareChips.snl -o midifiles/ScotlandTheBraveSnareChips.mid -l ALL" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -375,6 +359,8 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Dart Command Line App.BarrenRocks" />
+      <item itemvalue="Dart Command Line App.RowanTreeJL" />
       <item itemvalue="Dart Command Line App.RowanTree" />
       <item itemvalue="Dart Command Line App.PipesAndDrums" />
       <item itemvalue="Dart Command Line App.ScotlandBrave" />
@@ -683,14 +669,9 @@
       <workItem from="1620838113104" duration="14243000" />
       <workItem from="1620922570095" duration="14989000" />
       <workItem from="1621014167610" duration="7156000" />
-      <workItem from="1621036925343" duration="11476000" />
-    </task>
-    <task id="LOCAL-00046" summary="Starting to fix some of the errors I made previously.  Currently working on /defdyn.  Also, changed from staff to track.">
-      <created>1603702728867</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1603702728867</updated>
+      <workItem from="1621036925343" duration="14884000" />
+      <workItem from="1621106299909" duration="599000" />
+      <workItem from="1621140397276" duration="4306000" />
     </task>
     <task id="LOCAL-00047" summary="Looks like dynamics are working now with the /dd thing, and 1st cut of Castle Dangerous.">
       <created>1603832929130</created>
@@ -1028,7 +1009,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620527075745</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Mostly just updating tunes for new storage area.">
+      <created>1621051319137</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1621051319138</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1047,7 +1035,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="More progress on Rayne." />
     <MESSAGE value="First cut of Max Rayne salute done." />
     <MESSAGE value="Added Tenor part for Max Rayne." />
     <MESSAGE value="Added Bass to Max Rayne." />
@@ -1072,7 +1059,8 @@
     <MESSAGE value="Additions and corrections to several tunes." />
     <MESSAGE value="Added bass part to drum salute." />
     <MESSAGE value="Mostly just new tunes or fixes to tunes I think." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mostly just new tunes or fixes to tunes I think." />
+    <MESSAGE value="Mostly just updating tunes for new storage area." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostly just updating tunes for new storage area." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
