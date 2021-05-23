@@ -1,0 +1,103 @@
+// Highland Lddie
+// J. Reid Maxwell
+
+
+/time 2/4
+/tempo 84
+
+/track met
+/channel 0
+
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+/mp
+4M .   . .   . .   . .
+4M .   . .   . .   . .
+
+4M .   . .   . .   . .
+4M .   . .   . .   . .
+
+
+4M .   . .   . .   . .
+4M .   . .   . .   . .
+
+4M .   . .   . .   . .
+4M .   . .   . .   . .
+
+
+
+
+/track snare5
+/channel 5
+
+
+// sync
+1r
+// "pipes and drums, One Two"
+// "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r 4F .
+// Roll-off
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff
+
+
+/f
+8r 12T 24t
+
+/marker L1
+24:5F 24t 24Z . . 8t
+24Z . 24T 12t 24t 24Z . . . . .
+8T . 24Z . . 24t . .
+8F 24Z . . 8t 24T 12t
+
+/marker L2
+24Z . . . . 24t >40T 20z . >40t 20Z .
+12T >24t 12T 24T 8f 12T 24t
+24Z . . 12t >24T 12t 24D 12T 24t
+8F 24Z . . 8T 12T 24t
+
+/marker L1Rpt
+24:5F 24t 24Z . . 8t
+24Z . 24T 12t 24t 24Z . . . . .
+8T . 24Z . . 24t . .
+8F 24Z . . 8t 24T 12t
+
+/marker L2Rpt
+24Z . . . . 24t >40T 20z . >40t 20Z .
+12T >24t 12T 24T 8f 12T 24t
+24Z . . 12t >24T 12t 24D 12T 24t
+8F 24Z . . 8T 12T 24t
+
+/marker L3
+8F >40t 20Z . 8T >40t 20Z .
+24T . >. 12t 24t 24Z . . . . . >40T 20z . 8t 24Z . . 24t . .
+8F 24Z . . 8t 12T 24t
+
+/marker L4
+24Z . . 8t 8F 24Z . .
+12t >24T 12t 24t 8F 12T 24t
+24Z . . 12t >24T 12t 24D 12T 24t
+8F 24Z . . 8t 12T 24t
+
+
+/marker L3Rpt
+8F >40t 20Z . 8T >40t 20Z .
+24T . >. 12t 24t 24Z . . . . . >40T 20z . 8t 24Z . . 24t . .
+8F 24Z . . 8t 12T 24t
+
+/marker L4Rpt
+24Z . . 8t 8F 24Z . .
+12t >24T 12t 24t 8F 12T 24t
+24Z . . 12t >24T 12t 24D 12T 24t
+8F 24Z . . 8t 8r
+
+

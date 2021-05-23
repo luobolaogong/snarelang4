@@ -3,7 +3,7 @@
 // Sounds to me like it should be 9/8 time
 // And the subdivisions should be 20th notes
 /time 3/4
-/tempo 4=66
+/tempo 4=70
 
 /track met
 /channel 0
@@ -40,7 +40,7 @@
 >4r .
 // pickup:
 4r
-
+/marker Amazing Grace
 4:3r . . .
 4:3r . . .
 4:3r . . .

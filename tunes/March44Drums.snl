@@ -1,24 +1,61 @@
-// March 4/4
-/time 4/4
-// This needs to be checked.  The parser isn't that good.  Makes mistakes
-/tempo 100 // just for easy computation in Midi Voyager
-/track snare
-/channel 0
+// March 4/4  (Not 44March)
+// This is the A A1, B B1 thing, I think.
 
-4T . 8T . .
+
+/time 4/4
+/tempo 84
+
+/track met
+/channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+
+/mp
+4M . . .   . . . .   . . . .   . . . .
+4M . . .   . . . .   . . . .   . . . .
+4M . . .   . . . .   . . . .   . . . .
+4M . . .   . . . .   . . . .   . . . .
+
+
+/track snare5
+/channel 5
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   4T /fff
+
+
+/f
+// Notice how I did crescendos using "_" and ">" and "^".  Seems to work, but
+// should do it regular way.
 /marker PtA
-24Z _. _.
+8r 24Z _. _.
 ^8t 24Z _. _. ^12t 24 8          ^12 24 12 24T   ^8 24Z _. _.
 ^12t 24T 8t     ^12 24 12 24T      ^8t ^. ^.             24Z _. _.
 ^8t 24Z _. _. ^12t 24T 8t          ^12T 24t 12T 24T   ^8t 24Z . .
-24t . ^. ^8T    12t ^24 12 24t     >40T 20z . >40t 20z .  >8T
+//24t . ^. ^8T    12t ^24 12 24t     >40T 20z . >40t 20z .  >8T
+^4T                              24Z . _. _. _. _. ^4T 8r
 
 /marker PtA1
 24Z _. _.
 ^8t 24Z _. >. ^12t 24 8          >40T 20z . >40t 20z .  >8T  24Z . .
 ^12t 24 8  ^12 24 12 24T         12t ^24 12 24t   ^8T 24Z _. _.
 ^8t 24Z _. _.  ^12t 24 8         ^12T 24 12 24T   ^8  24Z . .
-24t . ^24  ^8    12 ^24 12 24t   >40T 20z . >40t 20z .     >8T
+//24t . ^24  ^8    12 ^24 12 24t   >40T 20z . >40t 20z .     >8T
+^4T                              24Z . _. _. _. _. ^4T 8r
 
 
 8t

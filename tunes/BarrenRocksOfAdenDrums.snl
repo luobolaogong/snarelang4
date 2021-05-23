@@ -1,15 +1,22 @@
+// The Barren Rocks of Aden
+// Peter Caroe Nielsen 0898 AaP&D
+
+
 /time 2/4
 /tempo 84
 
 /track met
 /channel 0
 
-/f
+// Sync:
+/ff
 _4M _. _8M . _4M
 /f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
 4M . . .
-4M . 8M . . .
-4M . 8M . 4M
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
 /mp
 4M .   . .   . .   . .
 4M .   . .   . .   . .
@@ -35,59 +42,61 @@ _4M _. _8M . _4M
 1r
 // "pipes and drums, One Two"
 // "By the right, quick march"
-/fff
+/ff
+/marker P&D 1,2
 32:3T 32t 8F 4r 4F .
 // Roll-off
 /f /< 24Z . . . . .    . . . . . .   2T /fff /ff
-/f /< 24Z . . . . .    . . . . . .   4T /fff 8r
+/f /< 24Z . . . . .    . . . . . .   4T /fff
+
 
 /f
-24z . .
+8r 24z . .
 
 /marker L1
-24:5T 24t ^24T z . . . t
+24:5T 24t ^216:5T 108:5z . . . 24t
 12T ^24t 12T 24T  12t 24t 24T . .
 8f 12T ^40t 20Z . 24T 12t 24t
 12F ^30t . . . . ^8T 24z . .
 
 /marker L2
-24:5T 24t ^24T z . . . t
+24:5T 24t ^216:5T 108:5z . . . 24t
 12T ^24t 12T 24T  12t 24t 24T . .
 8f 12T 24t 24T . ^. . . .
 8F 24z . . 8T  24z . .
 
 /marker L1Rpt
-24:5T 24t ^24T z . . . t
+24:5T 24t ^216:5T 108:5z . . . 24t
 12T ^24t 12T 24T  12t 24t 24T . .
 8f 12T ^40t 20Z . 24T 12t 24t
 12F ^30t . . . . ^8T 24z . .
 
 /marker L2Rpt
-24:5T 24t ^24T z . . . t
+24:5T 24t ^216:5T 108:5z . . . 24t
 12T ^24t 12T 24T  12t 24t 24T . .
 8f 12T 24t 24T . ^. . . .
 8F 24z . . 8T .
 
 /marker L3
-/cresc ^24T z . . . t  ^40T 20z . ^40t 20Z .
+/cresc ^216:5T 108:5z . . . 24t  ^40T 20z . ^40t 20Z .
 ^36T 18z 24T ^36t 18Z 24t 8T /fff /f 24T . .
 8f 12T ^30t . . . . ^12T 24t
 24Z . t 12t 24t 8F 8t
 
 /marker L4
-/cresc ^24T z . . . t  ^40T 20z . ^40t 20Z .
+/cresc ^216:5T 108:5z . . . 24t  ^40T 20z . ^40t 20Z .
 ^36T 18z 24T ^36t 18Z 24t 8T /fff /f 24T . .
 8f 12T ^30t . . . . ^12T 24t
 8F 24z . . 8T .
 
 /marker L3Rpt
-/cresc ^24T z . . . t  ^40T 20z . ^40t 20Z .
+/cresc ^216:5T 108:5z . . . 24t  ^40T 20z . ^40t 20Z .
 ^36T 18z 24T ^36t 18Z 24t 8T /fff /f 24T . .
 8f 12T ^30t . . . . ^12T 24t
 24Z . t 12t 24t 8F 8t
 
 /marker L4Rpt
-/cresc ^24T z . . . t  ^40T 20z . ^40t 20Z .
+/cresc ^216:5T 108:5z . . . 24t  ^40T 20z . ^40t 20Z .
 ^36T 18z 24T ^36t 18Z 24t 8T /fff /f 24T . .
 8f 12T ^30t . . . . ^12T 24t
 8F 24z . . 8T 8r

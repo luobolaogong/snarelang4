@@ -4,12 +4,15 @@
 
 /track met
 /channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
 
-// sync
-4M . 8M . 4M
-// roll off
-4M . 8M . . .
-4M . 8M . 4M
 
 4M . . .   . . . .   . . . .   . . . .
 4M . . .   . . . .   . . . .   . . . .
@@ -21,9 +24,16 @@
 
 // sync
 1r
-// roll off
-/f /cresc 24Z . . . . .    . . . . . .  /ff 2T
-/f /cresc 24Z . . . . .    . . . . . .  /ff 4T
+// "pipes and drums, One Two"
+// "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r 4F .
+/marker Murdo's Wedding
+// Roll-off
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff
+
 /f
 8r /cresc 24Z . .
 
@@ -56,31 +66,35 @@
 
 // sync
 1r
-// roll off
-/f /cresc 24z . . . . .    . . . . . .  /ff 2t
-/f /cresc 24z . . . . .    . . . . . .  /ff 4t
-/f
-8r /cresc 24z . .
+// "pipes and drums, One Two"
+// "By the right, quick march"
+32:3T 32t 8F 4r 4F .
+// Roll-off
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff
 
-/marker B1
+/f
+8r /cresc 24Z . .
+
+//marker B1
 24:5r /ff /f 24r 8r . /cresc 24z . . . . . 8t /ff /f f
 24:5F 48r . 8r . /cresc 24z . . 24T . . 8t /ff /f f
 /cresc 24r . . . . r  8t /ff /f T  12t 24f 12r 24r 8F .
 24F r r 12r 24r 8F . /cresc 24z . . . . .  8t /ff /f /cresc 24z . .
 
-/marker B5
+//marker B5
 24:5T /ff /f 24T 8F . /cresc 24z . . . . .  8t /ff /f 8f
 24:5F 48z . 8t f /cresc 24z . . 24T . . 8t /ff /f f
 /cresc 24z . . . . T  8t /ff /f .  12t 24f 12t 24T 8F .
 /cresc 24z . . . . . 8t /ff /f 8T /cresc 24z . . . . . 4t /ff /f
 
-/marker B9
+//marker B9
 4r /cresc 24r . . 8r /ff /f 4r /cresc 24z . . . . .
 4t /ff /f /cresc 24z . . 8T /ff /f 4F 12r 24r 12r 24r
 /cresc 24r . . . . 24r 8t /ff /f 8T 12t 24f 12r 24r 8F .
 24F r r 12r 24r 8F . /cresc 24z . . . . . 8t /ff /f /cresc 24z . .
 
-/marker B13
+//marker B13
 24:5T /ff /f 24T 8F . /cresc 24z . . . . . 8t /ff /f f
 24:5F 48z .   8t f /cresc 24z . . T . . 8t /ff /f f
 /cresc 24z . . . .  T 8t /ff /f . 12t 24f 12t 24T 8F .
@@ -93,31 +107,35 @@
 
 // sync
 1r
-// roll off
-/f /cresc 24z . . . . .    . . . . . .  /ff 2t
-/f /cresc 24z . . . . .    . . . . . .  /ff 4t
-/f
-8r /cresc 24z . .
+// "pipes and drums, One Two"
+// "By the right, quick march"
+32:3T 32t 8F 4r 4F .
+// Roll-off
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff
 
-/marker B1
+/f
+8r /cresc 24Z . .
+
+//marker B1
 24:5r /ff /f 24r 8r . /cresc 24z . . . . . 8t /ff /f f
 24:5F 48r . 8r . /cresc 24z . . 24T . . 8t /ff /f f
 /cresc 24r . . . . r  8t /ff /f T  12t 24f 12r 24r 8F .
 24F r r 12r 24r 8F . /cresc 24z . . . . .  8t /ff /f /cresc 24z . .
 
-/marker B5
+//marker B5
 24:5T /ff /f 24T 8F . /cresc 24z . . . . .  8t /ff /f 8f
 24:5F 48z . 8t f /cresc 24z . . 24T . . 8t /ff /f f
 /cresc 24z . . . . T  8t /ff /f .  12t 24f 12t 24T 8F .
 /cresc 24z . . . . . 8t /ff /f 8T /cresc 24z . . . . . 4t /ff /f
 
-/marker B9
+//marker B9
 4r /cresc 24r . . 8r /ff /f 4r /cresc 24z . . . . .
 4t /ff /f /cresc 24z . . 8T /ff /f 4F 12r 24r 12r 24r
 /cresc 24r . . . . 24r 8t /ff /f 8T 12t 24f 12r 24r 8F .
 24F r r 12r 24r 8F . /cresc 24z . . . . . 8t /ff /f /cresc 24z . .
 
-/marker B13
+//marker B13
 24:5T /ff /f 24T 8F . /cresc 24z . . . . . 8t /ff /f f
 24:5F 48z .   8t f /cresc 24z . . T . . 8t /ff /f f
 /cresc 24z . . . .  T 8t /ff /f . 12t 24f 12t 24T 8F .

@@ -1,5 +1,26 @@
 /time 4/4
 /tempo 84
+
+/track met
+/channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+
+/mp
+4M . . .   . . . .   . . . .   . . . .
+
+
+
+
+
+
 /track snare5
 /channel 5
 
@@ -8,29 +29,34 @@
 1r
 // "pipes and drums, One Two"
 // "By the right, quick march"
-32:3T 32t 8F 4r 4F .
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
 // Roll-off
 /f /< 24Z . . . . .    . . . . . .   2T /fff /ff
 /f /< 24Z . . . . .    . . . . . .   4T /fff
 
 /f
 >24:5F 24t
-
+/marker Pt1
 /mf /< 24Z . . . . .  8T >8t /ff /mf 24Z . . . . . 8T 24Z . .
 24t . . >12F 24t  24T . . >12f 24t  12F >24t 12T 24T 8f t
 /mf /< 24Z . . . . .  8T >8t  /ff /mf24Z . . . . . 8T 24Z . .
 >4t /mf /< 24Z . . . . .  4T /ff /f >24:5F 24t
 
+/marker Pt2
 /mf /< 24Z . . . . .  8T >8t /ff /mf /< 24Z . . . . . 8T 24Z . .
 24t . . >12F 24t  24T . . >12f 24t  12F >24t 12T 24T 8f t
 >8F >8f 8r 24Z . . 8t 8F 8f 24T . .
 >4f /mf /< 24Z . . . . .  4T  /ff /f 8r >8f
 
+/marker Pt3
 >8F 24Z . . 8t 8f /mf /< 24Z . . . . .  8T  /ff /f 24Z . .
 24t . . >12F 24t  24T . . >12f 24t  12F >24t 12T 24T 8f 24Z . .
 >24:5t 24t 24Z . . 40t 20Z . 40 20z . 24t . .  >8F 24Z . .
 >4T /mf /< 24Z . . . . .  4T  /ff /f >24:5F 24t
 
+/marker Pt4
 /mf /< 24Z . . . . .  8T >8f /ff /mf /< 24Z . . . . . 8T /ff /f 24Z . .
 24t . . >12F 24t  24T . . >12f 24t  12F >24t 12T 24T 8f t
 >8F >8f 8r 24Z . . 8t 8F 8f 24T . .

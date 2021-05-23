@@ -6,32 +6,39 @@
 
 /track met
 /channel 0
-/mf
-4M . 8M . 4M
-
-// Set the beat
-//ff
-//8M . . .
-//4M . . .
-
-//ff
-// "To the right, quick march"
-//4M . . .
-
-// Roll off
-//4M . . .    . . . .
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
 
 
 /mp
 4M . . .   . . . .   . . . .   . . . .
 
+
+
 ///////////////// This snare part is the March 4/4, and not meant for this tune.  Peter said to put it in for now /////////////////////////
 /track snare5
 /channel 5
-4r . . 8r
-//4T . 8T . .
+
+// sync
+1r
+// "pipes and drums, One Two"
+// "By the right, quick march"
+/ff
+/marker P&D, 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff
+
+/f
 /marker PtA
-24Z _. _.
+8r 24Z _. _.
 ^8t 24Z _. _. ^12t 24 8          ^12 24 12 24T   ^8 24Z _. _.
 ^12t 24T 8t     ^12 24 12 24T      ^8t ^. ^.             24Z _. _.
 ^8t 24Z _. _. ^12t 24T 8t          ^12T 24t 12T 24T   ^8t 24Z . .

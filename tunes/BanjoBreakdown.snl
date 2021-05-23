@@ -6,7 +6,7 @@
 /f
 8:3r . . .
 
-// 1st line
+/marker L1
 8F 8t . 4f 16Z .
 4T 8 12Z . . 8t
 8T . 8D  /cresc >12T 12z .  8t /fff /dd    // that's a tap roll, may want to slide it to ">30t 20z ."
@@ -18,7 +18,7 @@
 8t . . /cresc >12T 12z . 8t /fff /dd
 
 
-// 2nd line
+/marker L2
 8T . . 4f 16Z .
 4T 8 12Z . . 8t
 8T . 8D  /cresc >12T 12z . /f 8t /dd
@@ -29,7 +29,7 @@
 8t . 8F 8t . .
 8:3F  8:3r
 
-// 3rd line
+/marker L3
 /cresc 12Z . . /f 8t /dd . . .
 4F 16Z . 4T 8t
 8T . 8D /cresc >12T 12z . 8t /fff /dd
@@ -41,6 +41,7 @@
 8t . . /cresc >12T 12z . 8t /fff /dd
 
 // 4th line -- starts slowing down here, I think
+/marker L4
 /cresc >12T 12z . 8t /fff /dd . . .
 4f 16Z . 4T 8t
 8T . 8D /cresc >12T 12z . 8t /fff /dd
@@ -51,7 +52,7 @@
 8T . 8F 8t . 8f
 8:3F /cresc 16Z . . . . .
 
-// 5th line
+/marker L5
 8T /fff /dd . . 4f 8f
 8T . 8D /cresc >12T 12z . 8t /fff /dd
 8T . . 4f 8D
@@ -62,7 +63,7 @@
 >12T 12z . 8t . . .
 8t . . /cresc >12T 12z . 8t /fff /dd
 
-// 6th line
+/marker L6
 8T . . 4f 8f
 8T . 8D /cresc >12T 12z . 8t /fff /dd
 8T . . 4f 8D
@@ -73,7 +74,7 @@
 8T . 8F 8t . .
 /cresc 16Z . . . . . 8T /fff /dd . 8D
 
-// 7th line
+/marker L7
 /cresc >12T 12z . 8t /fff /dd . . 8D
 16T . . . >8T . . .
 4F 8f 8r 4F
@@ -84,7 +85,7 @@
 8:3F 8:3r
 4:3r
 
-// 8th line
+/marker L8
 /cresc >12T 12z . 8t /fff /dd . . 8D
 /cresc 16T . . . >8t /fff /dd . . .
 4F . .

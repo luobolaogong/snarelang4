@@ -79,9 +79,6 @@
 # My Drive > Websiteresources > MIDI > Zips
 # My Drive > Websiteresources > MIDI >
 
-
-
-
 #echo "This is being run out of the bin directory of the snarelang4 project, and not the pipelang project"
 #echo We are here: `pwd`
 
@@ -92,30 +89,26 @@ declare pipeLangDartFile=${pipeLangDir}/bin/ppl.dart
 declare tracksDir=/home/rob/WebstormProjects/tracks
 declare tracksFile=${tracksDir}/bin/tracks.dart
 
-
 declare learnWithMidi=/home/rob/LearnWithMidi
 declare forDrummers=${learnWithMidi}/ForDrummers
 declare forPipers=${learnWithMidi}/ForPipers
 #echo learnWithMidi is $learnWithMidi and it has `ls $learnWithMidi`
 
-
-
 # The soundfont file must coordinate with the midi files that are created, and they're created with "pitches" in mind, so really only
 # one soundfont file should exist per organization of midi files.
 #declare soundFont=/home/rob/Desktop/MySoundFonts/DrumLine202103081351.sf2
 #declare soundFontName=DrumLine202103081351.sf2
-declare soundFontName=DrumsChanterMelody20210407.sf2
+#declare soundFontName=DrumsChanterMelody20210407.sf2
+declare soundFontName=DrumLineMelodyChanter20210518.sf2
 cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${learnWithMidi}/SoundFonts
 declare soundFontFile=${learnWithMidi}/SoundFonts/${soundFontName}
 #cp /home/rob/Desktop/MySoundFonts/PipesAndDrums202011060735.sf2 ${learnWithMidi}/MySoundFonts
 echo soundfont is $soundFontFile
+
 #cd /home/rob/WebstormProjects/snarelang4/bin
 
 # There should be a way to tell fluidsynth or ffmpeg to make a stereo image like you can do with Rosegarden with the mixer
 # Also, Fluidsynth or ffmpeg needs to boost the volume.
-
-
-
 
 #rm -f ${myHobby}/BandTunes/Midis/*.mid
 #rm -f ${myHobby}/BandTunes/Mp3s/*.mp3
@@ -133,35 +126,42 @@ echo soundfont is $soundFontFile
 bandTunesPipesAndDrums() {
   declare tune=$1
   dart $snareLangExecutable -i tunes/${tune}Drums.snl -o ${forDrummers}/BandTunes/Midis/${tune}Drums.mid
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/${tune}Drums.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/${tune}Drums.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Wavs/${tune}Drums.wav
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/${tune}Drums.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/${tune}Drums.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Wavs/${tune}Drums.wav
   dart $pipeLangDartFile -i ${pipeLangDir}/tunes/${tune}Chanter.ppl -o ${forPipers}/BandTunes/Midis/${tune}Chanter.mid
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Mp3s/${tune}Chanter.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Oggs/${tune}Chanter.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Wavs/${tune}Chanter.wav
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Mp3s/${tune}Chanter.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Oggs/${tune}Chanter.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Wavs/${tune}Chanter.wav
   dart $tracksFile -l WARNING -i ${forDrummers}/BandTunes/Midis/${tune}Drums.mid,${forPipers}/BandTunes/Midis/${tune}Chanter.mid -o ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Mp3s/${tune}ChanterAndDrums.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Oggs/${tune}ChanterAndDrums.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Wavs/${tune}ChanterAndDrums.wav
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Mp3s/${tune}ChanterAndDrums.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Oggs/${tune}ChanterAndDrums.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Wavs/${tune}ChanterAndDrums.wav
 }
 
-declare -a bandTunesPipesAndDrumsNameArray=( \
+declare -a bandTunesPipesAndDrumsNameArray=(
+  HauntingCastleSetSimple
+  HauntingCastleSet
+  Lochanside
+  24MarchSet
+  CaptEwing
+  Competition44Set
+  Competition44SetMassedBands
   BarrenRocksOfAden
-BadgeSet
-AmazingGrace
-TheHaunting
-CastleDangerous
-HauntingCastleSet
-HawaiiAloha
-CaptEwing
-FlettFromFlotta
-BattleOfWaterloo
-MurdosWedding
-Competition44Set
-RowanTree
-BadgeOfScotland
-ScotlandTheBrave
+  BadgeSet
+  AmazingGrace
+  TheHaunting
+  CastleDangerous
+  HawaiiAloha
+  FlettFromFlotta
+  BattleOfWaterloo
+  MurdosWedding
+  RowanTree
+  BadgeOfScotland
+  ScotlandTheBrave
+  BrownHairedMaiden
+  HighlandLaddie
+  24MarchSet
 )
 
 # There could be stray files in these various dirs, so might want to check time stamps
@@ -172,12 +172,12 @@ done
 massedBandsDrums() {
   declare tune=$1
   dart $snareLangExecutable -i tunes/${tune}Drums.snl -o ${forDrummers}/MassedBands/Midis/${tune}Drums.mid
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/MassedBands/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/MassedBands/Mp3s/${tune}Drums.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/MassedBands/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/MassedBands/Oggs/${tune}Drums.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/MassedBands/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/MassedBands/Wavs/${tune}Drums.wav
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/MassedBands/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/MassedBands/Mp3s/${tune}Drums.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/MassedBands/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/MassedBands/Oggs/${tune}Drums.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/MassedBands/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/MassedBands/Wavs/${tune}Drums.wav
 }
 
-declare -a massedBandsDrumsNameArray=( \
+declare -a massedBandsDrumsNameArray=(
   BeginnerMarch
   March44
   MassedBands24JL
@@ -196,14 +196,12 @@ for f in "${massedBandsDrumsNameArray[@]}"; do
   massedBandsDrums ${f}
 done
 
-
-
 justDrums() {
   declare tune=$1
   dart $snareLangExecutable -i tunes/${tune}Drums.snl -o ${forDrummers}/BandTunes/Midis/${tune}Drums.mid
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/${tune}Drums.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/${tune}Drums.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Wavs/${tune}Drums.wav
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/${tune}Drums.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/${tune}Drums.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Wavs/${tune}Drums.wav
 }
 
 # There are things that are not part of the Set List
@@ -211,20 +209,20 @@ justDrums() {
 nonBandTunesPipesAndDrums() {
   declare tune=$1
   dart $snareLangExecutable -i tunes/${tune}Drums.snl -o ${forDrummers}/NonBandTunes/Midis/${tune}Drums.mid
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/NonBandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/NonBandTunes/Mp3s/${tune}Drums.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/NonBandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/NonBandTunes/Oggs/${tune}Drums.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/NonBandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/NonBandTunes/Wavs/${tune}Drums.wav
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/NonBandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/NonBandTunes/Mp3s/${tune}Drums.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/NonBandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/NonBandTunes/Oggs/${tune}Drums.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/NonBandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/NonBandTunes/Wavs/${tune}Drums.wav
   dart $pipeLangDartFile -i ${pipeLangDir}/tunes/${tune}Chanter.ppl -o ${forPipers}/NonBandTunes/Midis/${tune}Chanter.mid
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/NonBandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/NonBandTunes/Mp3s/${tune}Chanter.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/NonBandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/NonBandTunes/Oggs/${tune}Chanter.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/NonBandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/NonBandTunes/Wavs/${tune}Chanter.wav
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/NonBandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/NonBandTunes/Mp3s/${tune}Chanter.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/NonBandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/NonBandTunes/Oggs/${tune}Chanter.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/NonBandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/NonBandTunes/Wavs/${tune}Chanter.wav
   dart $tracksFile -l WARNING -i ${forDrummers}/NonBandTunes/Midis/${tune}Drums.mid,${forPipers}/NonBandTunes/Midis/${tune}Chanter.mid -o ${learnWithMidi}/NonBandTunes/Midis/${tune}ChanterAndDrums.mid
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/NonBandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/NonBandTunes/Mp3s/${tune}ChanterAndDrums.mp3
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/NonBandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/NonBandTunes/Oggs/${tune}ChanterAndDrums.ogg
-  fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/NonBandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/NonBandTunes/Wavs/${tune}ChanterAndDrums.wav
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/NonBandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/NonBandTunes/Mp3s/${tune}ChanterAndDrums.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/NonBandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/NonBandTunes/Oggs/${tune}ChanterAndDrums.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/NonBandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/NonBandTunes/Wavs/${tune}ChanterAndDrums.wav
 }
 
-declare -a nonBandTunesPipesAndDrumsNameArray=( \
+declare -a nonBandTunesPipesAndDrumsNameArray=(
   AnnettesChatter
   CameronianRant
   JaneCampbell
@@ -234,11 +232,31 @@ declare -a nonBandTunesPipesAndDrumsNameArray=( \
 
 # There could be stray files in these various dirs, so might want to check time stamps
 for f in "${nonBandTunesPipesAndDrumsNameArray[@]}"; do
-   echo nonBandTunesPipesAndDrums ${f}  not ready with pipes parts, right?
+  echo nonBandTunesPipesAndDrums ${f} not ready with pipes parts, right?
 done
 
+exercisesPipesAndDrums() {
+  declare tune=$1
+  dart $snareLangExecutable -i exercises/${tune}Drums.snl -o ${forDrummers}/Exercises/Midis/${tune}Drums.mid
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/Exercises/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/Exercises/Mp3s/${tune}Drums.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/Exercises/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/Exercises/Oggs/${tune}Drums.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/Exercises/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/Exercises/Wavs/${tune}Drums.wav
+  dart $pipeLangDartFile -i ${pipeLangDir}/exercises/${tune}Chanter.ppl -o ${forPipers}/Exercises/Midis/${tune}Chanter.mid
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/Exercises/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/Exercises/Mp3s/${tune}Chanter.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/Exercises/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/Exercises/Oggs/${tune}Chanter.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/Exercises/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/Exercises/Wavs/${tune}Chanter.wav
+  dart $tracksFile -l WARNING -i ${forDrummers}/Exercises/Midis/${tune}Drums.mid,${forPipers}/Exercises/Midis/${tune}Chanter.mid -o ${learnWithMidi}/Exercises/Midis/${tune}ChanterAndDrums.mid
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/Exercises/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/Exercises/Mp3s/${tune}ChanterAndDrums.mp3
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/Exercises/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/Exercises/Oggs/${tune}ChanterAndDrums.ogg
+  fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/Exercises/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/Exercises/Wavs/${tune}ChanterAndDrums.wav
+}
 
-
+declare -a exercisesPipesAndDrumsNameArray=(
+  ForRecording
+)
+for f in "${exercisesPipesAndDrumsNameArray[@]}"; do
+  exercisesPipesAndDrums ${f}
+done
 
 
 
@@ -250,31 +268,30 @@ done
 
 # BandTunes (pipes and drums)
 pushd ${learnWithMidi}/BandTunes/Midis
-rm -f BandTunesMidis.zip
-zip BandTunesMidis.zip *.mid
+rm -f *.zip
 cp ${soundFontFile} .
+zip BandTunesChanterAndDrumsMidis.zip *.mid ${soundFontName}
 popd
 
 pushd ${learnWithMidi}/BandTunes/Mp3s
-rm -f BandTunesMp3s.zip
-zip BandTunesMp3s.zip *.mp3
+rm -f *.zip
+zip BandTunesChanterAndDrumsMp3s.zip *.mp3
 popd
 
 pushd ${learnWithMidi}/BandTunes/Oggs
-rm -f BandTunesOggs.zip
-zip BandTunesOggs.zip *.ogg
+rm -f *.zip
+zip BandTunesChanterAndDrumsOggs.zip *.ogg
 popd
 
 pushd ${learnWithMidi}/BandTunes/Wavs
-rm -f BandTunesWavs.zip
-zip BandTunesWavs.zip *.wav
+rm -f *.zip
+zip BandTunesChanterAndDrumsWavs.zip *.wav
 popd
-
 
 # ForDrummers/BandTunes
 pushd ${learnWithMidi}/ForDrummers/BandTunes/Midis
-rm -f BandTunesDrumsMidis.zip
-zip BandTunesDrumsMidis.zip *.mid
+rm -f *.zip
+zip BandTunesDrumsChanterAndDrumsMidis.zip *.mid ${soundFontName}
 cp ${soundFontFile} .
 popd
 
@@ -293,11 +310,10 @@ rm -f BandTunesDrumsWavs.zip
 zip BandTunesDrumsWavs.zip *.wav
 popd
 
-
 # ForPipers/BandTunes
 pushd ${learnWithMidi}/ForPipers/BandTunes/Midis
 rm -f BandTunesChanterMidis.zip
-zip BandTunesChanterMidis.zip *.mid
+zip BandTunesChanterMidis.zip *.mid ${soundFontName}
 cp ${soundFontFile} .
 popd
 
@@ -319,7 +335,7 @@ popd
 #  ForDrummers/MassedBands
 pushd ${learnWithMidi}/ForDrummers/MassedBands/Midis
 rm -f MassedBandsDrumsMidis.zip
-zip MassedBandsDrumsMidis.zip *.mid
+zip MassedBandsDrumsMidis.zip *.mid ${soundFontName}
 cp ${soundFontFile} .
 popd
 
@@ -338,15 +354,7 @@ rm -f MassedBandsDrumsWavs.zip
 zip MassedBandsDrumsWavs.zip *.wav
 popd
 
-
-
 exit 3
-
-
-
-
-
-
 
 #rm -f *.sf2
 #cp $soundFontFile ./
@@ -369,34 +377,28 @@ exit 3
 #zip BandTunesWavs.zip  *.wav
 #popd
 
-
-
 dart $snareLangExecutable -i tunes/ScotlandTheBraveMet.snl,tunes/ScotlandTheBraveSnare.snl,tunes/ScotlandTheBraveSnareChips.snl,tunes/ScotlandTheBraveTenor.snl,tunes/ScotlandTheBraveBass.snl -o ${forDrummers}/BandTunes/Midis/ScotlandTheBraveDrums.mid
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/ScotlandTheBraveDrums.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/ScotlandTheBraveDrums.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Wavs/ScotlandTheBraveDrums.wav
-
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/ScotlandTheBraveDrums.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/ScotlandTheBraveDrums.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/ScotlandTheBraveDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Wavs/ScotlandTheBraveDrums.wav
 
 # I think Amber On The Rocks is pipes only
 dart $pipeLangDartFile -i ${pipeLangDir}/tunes/AmberOnTheRocks.ppl -o ${forPipers}/BandTunes/Midis/AmberOnTheRocks.mid
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/AmberOnTheRocks.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Mp3s/AmberOnTheRocks.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/AmberOnTheRocks.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Oggs/AmberOnTheRocks.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/AmberOnTheRocks.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Wavs/AmberOnTheRocks.wav
-
-
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/AmberOnTheRocks.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Mp3s/AmberOnTheRocks.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/AmberOnTheRocks.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Oggs/AmberOnTheRocks.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/AmberOnTheRocks.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Wavs/AmberOnTheRocks.wav
 
 # These are pipes parts, but I think they also have a snare or drum part to them somewhere too
 # Already have the snare score midi because processed it from a list of single scores, not multiple that make up a midi.
 dart $pipeLangDartFile -i ${pipeLangDir}/tunes/BanjoBreakdown.ppl -o ${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid
 # I prob don't need to create audio renders of pipe midis, because they don't help pipers at this time.  Maybe when get grace notes in, and get things much better
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Mp3s/BanjoBreakdownChanter.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Oggs/BanjoBreakdownChanter.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Wavs/BanjoBreakdownChanter.wav
-dart $tracksFile   -i ${learnWithMidi}/BandTunes/Midis/BanjoBreakdown.mid,${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid -o ${learnWithMidi}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Mp3s/BanjoBreakdownSnareAndChanter.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Oggs/BanjoBreakdownSnareAndChanter.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Wavs/BanjoBreakdownSnareAndChanter.wav
-
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Mp3s/BanjoBreakdownChanter.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Oggs/BanjoBreakdownChanter.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forPipers}/BandTunes/Wavs/BanjoBreakdownChanter.wav
+dart $tracksFile -i ${learnWithMidi}/BandTunes/Midis/BanjoBreakdown.mid,${forPipers}/BandTunes/Midis/BanjoBreakdownChanter.mid -o ${learnWithMidi}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Mp3s/BanjoBreakdownSnareAndChanter.mp3
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Oggs/BanjoBreakdownSnareAndChanter.ogg
+fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/BanjoBreakdownSnareAndChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Wavs/BanjoBreakdownSnareAndChanter.wav
 
 fix these for the different areas drums and pipes and both
 
@@ -404,32 +406,26 @@ fix these for the different areas drums and pipes and both
 rm -f *.sf2
 cp $soundFontFile ./
 rm -f BandTunesMidis.zip
-zip BandTunesMidis.zip  *.mid *.sf2
+zip BandTunesMidis.zip *.mid *.sf2
 popd
 
 pushd ${learnWithMidi}/BandTunes/Mp3s/
 rm -f BandTunesMp3s.zip
-zip BandTunesMp3s.zip  *.mp3
+zip BandTunesMp3s.zip *.mp3
 popd
 
 pushd ${learnWithMidi}/BandTunes/Oggs/
 rm -f BandTunesOggs.zip
-zip BandTunesOggs.zip  *.ogg
+zip BandTunesOggs.zip *.ogg
 popd
 
 pushd ${learnWithMidi}/BandTunes/Wavs/
 rm -f BandTunesWavs.zip
-zip BandTunesWavs.zip  *.wav
+zip BandTunesWavs.zip *.wav
 popd
-
 
 echo Done processing Band Tunes files
 exit 0
-
-
-
-
-
 
 ################## Amazing Grace ###################################
 #declare tune=AmazingGrace
@@ -602,8 +598,6 @@ exit 0
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Wavs/${tune}ChanterAndDrums.wav
 exit 6
 
-
-
 #################  ###################################
 
 #dart $snareLangExecutable -i tunes/FlettFromFlottaDrums.snl -o ${forDrummers}/BandTunes/Midis/FlettFromFlottaDrums.mid
@@ -621,8 +615,6 @@ exit 6
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/FlettFromFlottaChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/FlettFromFlottaChanterAndDrums.ogg
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/FlettFromFlottaChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Wavs/FlettFromFlottaChanterAndDrums.wav
 
-
-
 #dart $snareLangExecutable -i tunes/BattleOfWaterlooDrums.snl -o ${forDrummers}/BandTunes/Midis/BattleOfWaterlooDrums.mid
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/BattleOfWaterlooDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/BattleOfWaterlooDrums.mp3
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/BattleOfWaterlooDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/BattleOfWaterlooDrums.ogg
@@ -637,7 +629,6 @@ exit 6
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/BattleOfWaterlooChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Mp3s/BattleOfWaterlooChanterAndDrums.mp3
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/BattleOfWaterlooChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Oggs/BattleOfWaterlooChanterAndDrums.ogg
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/BattleOfWaterlooChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Wavs/BattleOfWaterlooChanterAndDrums.wav
-
 
 #dart $snareLangExecutable -i tunes/BattleOfWaterlooMcWhirterDrums.snl -o ${forDrummers}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/BattleOfWaterlooMcWhirterDrums.mp3
@@ -654,7 +645,6 @@ exit 6
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Oggs/BattleOfWaterlooChanterAndMcWhirterDrums.ogg
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Wavs/BattleOfWaterlooChanterAndMcWhirterDrums.wav
 
-
 #dart $snareLangExecutable -i tunes/MurdosWeddingDrums.snl -o ${forDrummers}/BandTunes/Midis/MurdosWeddingDrums.mid
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/MurdosWeddingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Mp3s/MurdosWeddingDrums.mp3
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${forDrummers}/BandTunes/Midis/MurdosWeddingDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${forDrummers}/BandTunes/Oggs/MurdosWeddingDrums.ogg
@@ -670,21 +660,6 @@ exit 6
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/MurdosWeddingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Oggs/MurdosWeddingChanterAndDrums.ogg
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${learnWithMidi}/BandTunes/Midis/MurdosWeddingChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${learnWithMidi}/BandTunes/Wavs/MurdosWeddingChanterAndDrums.wav
 
-
 #################  ###################################
 #################  ###################################
 #################  ###################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-

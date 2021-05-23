@@ -1,0 +1,180 @@
+// For recording - drums to support chanter
+// The goal is to create a soundfont file that has the notes that we use,
+// along with their grace notes, as a single unit.
+//
+
+/track metronome
+/channel 0
+/time 4/4
+/tempo 120
+/f
+// This is for sync
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// no grace notes, G...c
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// no grace notes, d...a
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// Single grace notes G...A
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// Single grace notes b...c
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// Single grace notes d...e
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// Single grace notes f...a
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// double grace notes c...a
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// triple grace notes G...b
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+
+// triple grace notes c...d
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// triple grace notes e...a
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// take a break
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+4M . 8M . 4M
+
+// quadruple grace notes A...d
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+// quintuple grace notes A
+/f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . . . . . /mp 8M . . .   /f ^4M . ^. ^. ^8M ^. ^. ^. /mp 8M . . .
+
+

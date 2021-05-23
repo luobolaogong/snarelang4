@@ -3,11 +3,15 @@
 /tempo 84
 
 /track met
-/channel 4
-/mf
+/channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
 4M . . .
-4M . 8M . . .
-4M . 8M . 4M
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
 
 4M . . .  . . . .  . . . .  . . . .
 4M . . .  . . . .  . . . .  . . . .
@@ -21,32 +25,40 @@
 //unison
 
 /track snare
+
 // sync
 1r
+// "pipes and drums, One Two"
+// "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r 4F .
 // Roll-off
-/f /cresc 24Z . . . . .    . . . . . .  /ff 2T
-/f /cresc 24Z . . . . .    . . . . . .  /ff 4T
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff
+
 
 /f
-
+/marker L1
 8r 8t
 /cresc 24Z . . . . . 8T /ff /f . /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
 24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
 24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /f
 24:5f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . . 8T /ff /f 24T 12t  // changed ending to match pipes
 
-// line 2
+/marker L2
 /cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
 24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
 24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /mp
 /cresc 24Z . . . . .   . . . . . .  4T /ff /f 8r /cresc 24Z . .
 
-// line 3
+/marker L3
 24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . .   40T 20z . 40t 20Z .
 24:5T /ff /f 30t . . . . 8T 4f /cresc 24Z . . t . .
 24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /f
 24:5f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . . 8T /ff /f 24T 12t // changed ending to match pipes
 
+/marker L4
 /cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
 24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
 24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /mf

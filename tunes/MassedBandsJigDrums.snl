@@ -2,11 +2,20 @@
 
 /track met
 /channel 0
-/time 6/8
-/tempo 84 // not sure
 
-/mf
-8:3M . 8M . . 8:3M
+/time 4/4
+/tempo 100 // not sure
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _12M . . _. . . _4M _. _12M . . _4M
+
+/time 6/8
+/tempo 100
 
 /mp
 8:3M .    . .    . .    . .
@@ -23,12 +32,18 @@
 
 /track snare5
 /channel 5
-//time 2/4
-//tempo 96    // not sure
+// sync
+//time 4/4
+1r
+// "pipes and drums, One Two" or "By the right, jig jag"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
 
 /f
-
-4:3r .
 
 /marker L1
 >16Z >. 8T . >16Z >. 8T .

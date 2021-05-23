@@ -1,0 +1,250 @@
+// 2/4 March Set (Barren Rocks, Brown Hair, Highland Laddie)
+
+///////////////////// Metronome /////////////////////////////
+/track met
+/channel 0
+/time 2/4
+/tempo 76
+
+/ff
+// Sync:
+_4M _. _8M . _4M
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+4M . 8M . . .
+4M . 8M . . .
+
+// Barren Rocks
+/mf
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+// Brown Hair
+/mf
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+
+// Highland Laddie
+/mf
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+4M .   . .    . .   . .
+4M .   . .    . .   . .
+
+
+
+
+
+
+//////////////// Snare 5 ///////////////////////////////
+
+/track snare5
+/channel 5
+
+
+// sync
+1r
+// "pipes and drums, One Two"
+// "By the right, quick march"
+/ff
+32:3T 32t 8F 4r 4F .
+// Roll-off
+/cresc 24Z . . . . .    . . . . . .   2T /fff /ff
+/cresc 24Z . . . . .    . . . . . .   4T /fff /f
+
+
+
+// Barren Rocks
+/marker BrrnRcks
+/f
+8r 24z . .
+
+/marker L1
+24:5T 24t ^216:5T 108:5z . . . 24t
+12T ^24t 12T 24T  12t 24t 24T . .
+8f 12T ^40t 20Z . 24T 12t 24t
+12F ^30t . . . . ^8T 24z . .
+
+/marker L2
+24:5T 24t ^216:5T 108:5z . . . 24t
+12T ^24t 12T 24T  12t 24t 24T . .
+8f 12T 24t 24T . ^. . . .
+8F 24z . . 8T  24z . .
+
+/marker L1Rpt
+24:5T 24t ^216:5T 108:5z . . . 24t
+12T ^24t 12T 24T  12t 24t 24T . .
+8f 12T ^40t 20Z . 24T 12t 24t
+12F ^30t . . . . ^8T 24z . .
+
+/marker L2Rpt
+24:5T 24t ^216:5T 108:5z . . . 24t
+12T ^24t 12T 24T  12t 24t 24T . .
+8f 12T 24t 24T . ^. . . .
+8F 24z . . 8T .
+
+/marker L3
+/cresc ^216:5T 108:5z . . . 24t  ^40T 20z . ^40t 20Z .
+^36T 18z 24T ^36t 18Z 24t 8T /fff /f 24T . .
+8f 12T ^30t . . . . ^12T 24t
+24Z . t 12t 24t 8F 8t
+
+/marker L4
+/cresc ^216:5T 108:5z . . . 24t  ^40T 20z . ^40t 20Z .
+^36T 18z 24T ^36t 18Z 24t 8T /fff /f 24T . .
+8f 12T ^30t . . . . ^12T 24t
+8F 24z . . 8T .
+
+/marker L3Rpt
+/cresc ^216:5T 108:5z . . . 24t  ^40T 20z . ^40t 20Z .
+^36T 18z 24T ^36t 18Z 24t 8T /fff /f 24T . .
+8f 12T ^30t . . . . ^12T 24t
+24Z . t 12t 24t 8F 8t
+
+/marker L4Rpt
+/cresc ^216:5T 108:5z . . . 24t  ^40T 20z . ^40t 20Z .
+^36T 18z 24T ^36t 18Z 24t 8T /fff /f 24T . .
+8f 12T ^30t . . . . ^12T 24t
+8F 24z . . 8T
+
+
+
+
+
+// Brown Haired Maiden
+/marker BrnHairMdn
+/f
+24z . .
+
+/marker L1
+24:5t 24t 24Z . . 8t
+/cresc 24Z . . . . .  8T  /ff /f 32T . . .
+>8T 24Z . T  12t 24t 12F >24t
+12T 24T 8f 24Z . . 24t . .
+
+/marker L2
+8F 24T . >. 12t 24t 8F
+/cresc 24Z . . . . .  24:5T 24t
+8F  /ff /f 12f >24T 12t 24D 8T
+24Z . . . . . 8T 24Z . .
+
+/marker L1Rpt
+24:5t 24t 24Z . . 8t
+/cresc 24Z . . . . .  8T /ff /f 32T . . .
+>8T 24Z . T  12t 24t 12F >24t
+12T 24T 8f /cresc 24Z . . 24t . .
+
+/marker L2Rt
+8F  /ff /f 24T . >. 12t 24t 8F
+/cresc 24Z . . . . .  24:5T  /ff /f 24t
+8F 12f >24T 12t 24D 8T
+/cresc 24Z . . . . . 8T  /ff /f 8t
+
+/marker L3
+24F 24:5t 24Z . . >40t 20Z .
+24T . >.  12t 24t /cresc 24Z . . . . 24t
+^8T  /ff /f 24Z . 24T 12t 24t 12F >24t
+12T 24T 8f /cresc 24Z . . 24t . .
+
+/marker L4
+4F  /ff /f 24Z . . >40t 20Z .
+24T . >. 12t 24t 24:5F 24t
+8F 12f >24t 12t 24D 8T
+/cresc 24Z . . . . . 8T  /ff /f .
+
+/marker L3Rpt
+24F 24:5t 24Z . . >40t 20Z .
+24T . >.  12t 24t /cresc 24Z . . . . 24t
+^8T  /ff /f 24Z . 24T 12t 24t 12F >24t
+12T 24T 8f /cresc 24Z . . 24t . .
+
+/marker L5
+12F 24t 12T >30t . . . . >8T  /ff /f
+/cresc 24Z . . . . . 24:5T  /ff /f 24t
+8F 12f >24T 12t 24D 8T
+/cresc 24Z . . . . . 8T  /ff /f
+
+
+
+
+// Highland Laddie
+/marker HghlndLddie
+/f
+12T 24t
+
+/marker L1
+24:5F 24t 24Z . . 8t
+24Z . 24T 12t 24t 24Z . . . . .
+8T . 24Z . . 24t . .
+8F 24Z . . 8t 24T 12t
+
+/marker L2
+24Z . . . . 24t >40T 20z . >40t 20Z .
+12T >24t 12T 24T 8f 12T 24t
+24Z . . 12t >24T 12t 24D 12T 24t
+8F 24Z . . 8T 12T 24t
+
+/marker L1Rpt
+24:5F 24t 24Z . . 8t
+24Z . 24T 12t 24t 24Z . . . . .
+8T . 24Z . . 24t . .
+8F 24Z . . 8t 24T 12t
+
+/marker L2Rpt
+24Z . . . . 24t >40T 20z . >40t 20Z .
+12T >24t 12T 24T 8f 12T 24t
+24Z . . 12t >24T 12t 24D 12T 24t
+8F 24Z . . 8T 12T 24t
+
+/marker L3
+8F >40t 20Z . 8T >40t 20Z .
+24T . >. 12t 24t 24Z . . . . . >40T 20z . 8t 24Z . . 24t . .
+8F 24Z . . 8t 12T 24t
+
+/marker L4
+24Z . . 8t 8F 24Z . .
+12t >24T 12t 24t 8F 12T 24t
+24Z . . 12t >24T 12t 24D 12T 24t
+8F 24Z . . 8t 12T 24t
+
+
+/marker L3Rpt
+8F >40t 20Z . 8T >40t 20Z .
+24T . >. 12t 24t 24Z . . . . . >40T 20z . 8t 24Z . . 24t . .
+8F 24Z . . 8t 12T 24t
+
+/marker L4Rpt
+24Z . . 8t 8F 24Z . .
+12t >24T 12t 24t 8F 12T 24t
+24Z . . 12t >24T 12t 24D 12T 24t
+8F 24Z . . 8t 8r
+
+
+

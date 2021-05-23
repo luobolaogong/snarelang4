@@ -40,22 +40,23 @@ _4M _. _8M . _4M
 /track snare5
 /channel 5
 
-
 // sync
 1r
 // "pipes and drums, One Two"
 // "By the right, quick march"
-32:3T 32t 8F 4r 4F .
+/ff
+/marker P&D, 1,2
+32:3T 32t 8F 4r ^4F ^.
 // Roll-off
-24Z . . . . .    . . . . . .   2T
-24Z . . . . .    . . . . . .   4T 8r
-
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff
 
 
 // Badge of Scotland
+/marker BadgeScotland
 ///////////////// This snare part is the March 4/4, and not meant for this tune.  Peter said to put it in for now /////////////////////////
 /marker PtA
-24Z _. _.
+8r 24Z _. _.
 ^8t 24Z _. _. ^12t 24 8          ^12 24 12 24T   ^8 24Z _. _.
 ^12t 24T 8t     ^12 24 12 24T      ^8t ^. ^.             24Z _. _.
 ^8t 24Z _. _. ^12t 24T 8t          ^12T 24t 12T 24T   ^8t 24Z . .
@@ -83,6 +84,7 @@ _4M _. _8M . _4M
 ^4T                              24Z . _. _. _. _. ^4T
 
 // Rowan Tree
+/marker RowanTree
 /f
 >24:5F 24t
 
@@ -110,7 +112,7 @@ _4M _. _8M . _4M
 
 
 // Scotland the Brave
-
+/marker ScotlandBrave
 /f
 // Line 1
 /f /< 24Z . . . . . 8T /fff /f  12r 24t 8F 8t 24Z . . 8t

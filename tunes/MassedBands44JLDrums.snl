@@ -8,21 +8,81 @@
 /time 4/4
 /tempo 84
 
+/track met
+/channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+/p
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . 4r
+
+
 
 /track snare5
 /channel 5
-/f
 
-/marker Massd Bnd 4/4
+// sync
 1r
-/marker Part1
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+/marker Pt1
 /f
 ^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
 ^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
-/marker P1Rpt
+/marker Pt1Rpt
 /f
 ^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
@@ -70,59 +130,20 @@
 ^4F /mp /cresc 24Z . . . . . >4T /ff 4r
 
 
-/track bass
-/channel 1
-1r
-/mf
-4B . . .
-24:5B 6b 8b   24:5B 6b 8b
-4B . . .
-4B . 2B
-
-4B . . .
-24:5B 6b 8b   24:5B 6b 8b
-4B . . .
-4B . 2B
-
-
-8B . 4B 8B . 4B
-24:5B 6b 8b   24:5B 6b 8b
-8B . 4B 8B . 4B
-4B . 2B
-
-8B . 4B 8B . 4B
-24:5B 6b 8b   24:5B 6b 8b
-8B . 4B 8B . 4B
-4B . 2B
-
-
-2B 8r 8b 4B
-24:5B 6b 8b   24:5B 6b 8b
-2B 8r 8b 4B
-4B . 2B
-
-2B 8r 8b 4B
-24:5B 6b 8b   24:5B 6b 8b
-2B 8r 8b 4B
-4B . 2B
-
-
-2B 8r 8b 4B
-24:5B 6b 8b   24:5B 6b 8b
-2B 8r 8b 4B
-4B . 2B
-
-2B 8r 8b 4B
-24:5B 6b 8b   24:5B 6b 8b
-2B 8r 8b 4B
-4B . 2B
-
-
-
 
 /track tenor
 /channel 8
+
+// Sync:
 1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/mf
+// Roll off
+4N . 2N
+4N . 2N
+
+
 /mf
 4N . . .
 24:5N 6n 8n   24:5N 6n 8n
@@ -171,47 +192,60 @@
 
 
 
-/track met
-/channel 15
-/p
-^8M . ^8M . ^8M ^8M ^8M .
-/pp
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+/track bass
+/channel 1
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/mf
+// Roll off
+4B . 2B
+4B . 2B
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+/mf
+4B . . .
+24:5B 6b 8b   24:5B 6b 8b
+4B . . .
+4B . 2B
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+4B . . .
+24:5B 6b 8b   24:5B 6b 8b
+4B . . .
+4B . 2B
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+8B . 4B 8B . 4B
+24:5B 6b 8b   24:5B 6b 8b
+8B . 4B 8B . 4B
+4B . 2B
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+8B . 4B 8B . 4B
+24:5B 6b 8b   24:5B 6b 8b
+8B . 4B 8B . 4B
+4B . 2B
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . 4r
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+

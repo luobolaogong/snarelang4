@@ -3,7 +3,8 @@
 
 // "Slow Air in 4/4", but written "cut time"
 /time 4/4
-/tempo 2=70
+//tempo 2=70
+/tempo 140
 /track met
 /channel 0
 /f
@@ -79,68 +80,70 @@
 1M
 
 /////////////////////////////////////////////////
-/track snare
-/channel 3
+/track snare5
+/channel 5
 /ff
 
 // Met count in
 1r
 
-/f /cresc 12Z . . . . .   . . . . . .   2T /fff 2r
-/f /cresc 12Z . . . . .   . . . . . .   2T /fff 2r /f
+///f /cresc 12Z . . . . .   . . . . . .   2T /fff 2r
+///f /cresc 12Z . . . . .        . . . . . .   2T /fff 2r /f
+/f   /cresc 16Z . . . . . . .    . . . . . . . .   2T /fff 2r
+/f   /cresc 16Z . . . . . . .    . . . . . . . .   2T /fff 2r /f
 
 
 // markers will follow pipes score
-//marker L1
+/marker L1
 1r 1r 1r 1r
 
-//marker L2
+/marker L2
 1r 1r 1r 1r
 
-//marker L3
+/marker L3
 1r 1r 1r 1r
 
-//marker L4
+/marker L4
 1r 1r 1r
 /mf /cresc 12Z . .  . . .   >20T 10z .  >20t 10Z .
 
 
-//marker L5
+/marker L5
 >4T /fff /ff 4r 2r
 1r
 /mf /cresc 12Z . .  . . 12t  20T 10z 10Z  20t 10Z 10z
 20T 10z 10Z  12z . 12t  16T . . .   >4T
 
-//marker L6
+/marker L6
 4F /fff /ff 4r 2r
 4r 6r 12t 12T . . 4f
 /mf /cresc 12Z . .  . . . /fff /decresc 12Z . .  . . . /mf
 /ff 4T 6r 12t 4F .
 
-//marker L7
+/marker L7
 /mf /cresc 36Z . .  . . .  . . .    . . .  . . .  . . .    36Z . .  . . .  . . .    . . .  . . .  . . .     /fff
   /decresc 36Z . .  . . .  . . .    . . .  . . .  . . .    36Z . .  . . .  . . .    . . .  . . .  . . .     /mf
 4T 4r 2r
 1r
 
-//marker L8
+/marker L8
 /ff
 1r 1r 1r  /mf /cresc 12Z . .   . . .   >20T 10z . >20t 10Z .
 
 
-//marker L5Rpt
+/marker L5Rpt
 >4T /fff /ff 4r 2r
 1r
 /mf /cresc 12Z . .  . . 12t  20T 10z 10Z  20t 10Z 10z
 20T 10z 10Z  12z . 12t  16T . . .   >4T
 
-//marker L3Rpt
+/marker L3Rpt
 4F /fff /ff 4r 2r
 4r 6r 12t 12T . . 4f
 /mf /cresc 12Z . .  . . .  /fff 12Z . .  . . . /mp
 /mf 4T 6r 12t 4F .
 
-//marker L4Rpt
+/marker L4Rpt
 /mf /cresc 36Z . .  . . .  . . .    . . .  . . .  . . .  36Z . .  . . .  . . .    . . .  . . .  . . .  /ff
  /decresc  36Z . .  . . .  . . .    . . .  . . .  . . .  36Z . .  . . .  . . .    . . .  . . .  . . .  /mf
 4T 4r 2r
@@ -223,7 +226,7 @@
 
 //////////////////////////////////////////
 /track bass
-/channel 5
+/channel 6
 /mp
 
 

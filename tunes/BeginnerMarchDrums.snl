@@ -6,45 +6,23 @@
 // James plays huge accents.  Hard to imagine he could play them louder.
 
 
-/time 4/4
-/tempo 84
-
-/track snare
-/channel 1
-/f
-
-/marker Beginner March
-1r
-/marker Part1
-/f
-^8T 24Z . .  _8t  24Z . .  ^8t  T t T
-^8T 24Z . .  _8t  24Z . .  ^8t  T t T
-^8T 24Z . .  _8t  24Z . .  ^8t  T t T
-^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
-/marker P1Rpt
-/f
-^8T 24Z . .  _8t  24Z . .  ^8t  T t T
-^8T 24Z . .  _8t  24Z . .  ^8t  T t T
-^8T 24Z . .  _8t  24Z . .  ^8t  T t T
-^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
-
-//marker Part2
-^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
-24Z . . . . . 8T t 24Z . . . . . 8T t
-^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
-^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
-//marker P2Rpt
-^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
-24Z . . . . . 8T t 24Z . . . . . 8T t
-^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
-^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
-
 
 
 /track met
-/channel 2
-/p
-^8M . ^8M . ^8M ^8M ^8M .
+/channel 0
+/time 4/4
+/tempo 84
+
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+
 /pp
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -65,3 +43,48 @@ _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _4M
+
+
+
+/track snare
+/channel 1
+/f
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+/marker Pt1
+/f
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
+
+/marker P1Rpt
+/f
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^8T 24Z . .  _8t  24Z . .  ^8t  T t T
+^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
+
+/marker Part2
+^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
+24Z . . . . . 8T t 24Z . . . . . 8T t
+^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
+^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
+
+/marker P2Rpt
+^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
+24Z . . . . . 8T t 24Z . . . . . 8T t
+^8T 24Z . . 8t ^t ^12T 24t 12T 24t 8T t
+^4t /mp /cresc 24Z . . . . .  ^4T /ff  4r
+
+
+
