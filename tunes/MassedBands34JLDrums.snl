@@ -1,9 +1,7 @@
 // Massed Band Setting, by James Laughlin
-// From "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
-// Page 59, audio recording track 40
-// Section Fourteen -  Drum Scores, Massed Band Setting in 4/4
-// Some rolls are marked with crescendos.  Most not
-
+// not sure what number it is that has the 3/4
+// And so far, I've only transcribed the first 2 parts, because that's what Peter wants in Castle Dangerous
+// But this thing should have all 4 parts evantually
 
 /time 3/4
 /tempo 84
@@ -20,45 +18,46 @@ _4M _. _8M . _4M
 _4M _. _8M . _. .  _4M _. _8M . _4M
 
 /p
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . 4r
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _8M .
+_8M . _8M . _4M
+
 
 
 
@@ -77,3 +76,54 @@ _8M . _8M . _8M . 4r
 
 /marker Pt1
 /f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .  . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt1Rpt
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2Rpt
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+
+// Repeat the above
+/marker Pt1
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .  . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt1Rpt
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2Rpt
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f

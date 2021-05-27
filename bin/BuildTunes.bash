@@ -140,8 +140,13 @@ bandTunesPipesAndDrums() {
 }
 
 declare -a bandTunesPipesAndDrumsNameArray=(
+  TheHauntingSimple
+  HauntingCastleSetSimpleAndMassedBands
   HauntingCastleSetSimple
   HauntingCastleSet
+  TheHaunting
+  CaptEwingMassedBands
+  CastleDangerousMassedBands
   Lochanside
   24MarchSet
   CaptEwing
@@ -151,17 +156,18 @@ declare -a bandTunesPipesAndDrumsNameArray=(
   BadgeSet
   AmazingGrace
   TheHaunting
-  CastleDangerous
-  HawaiiAloha
   FlettFromFlotta
   BattleOfWaterloo
   MurdosWedding
   RowanTree
   BadgeOfScotland
-  ScotlandTheBrave
   BrownHairedMaiden
   HighlandLaddie
   24MarchSet
+  HawaiiAloha
+  ScotlandTheBraveMassedBands
+  ScotlandTheBraveMarch44
+  ScotlandTheBrave
 )
 
 # There could be stray files in these various dirs, so might want to check time stamps
@@ -181,6 +187,7 @@ declare -a massedBandsDrumsNameArray=(
   BeginnerMarch
   March44
   MassedBands24JL
+  MassedBands34JL
   MassedBands44JL
   MassedBandsJig
   Reel
@@ -291,7 +298,7 @@ popd
 # ForDrummers/BandTunes
 pushd ${learnWithMidi}/ForDrummers/BandTunes/Midis
 rm -f *.zip
-zip BandTunesDrumsChanterAndDrumsMidis.zip *.mid ${soundFontName}
+zip BandTunesDrumsMidis.zip *.mid ${soundFontName}
 cp ${soundFontFile} .
 popd
 

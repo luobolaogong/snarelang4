@@ -3,7 +3,7 @@
 /track metronome
 /channel 0
 /time 2/4 // yes both of these lines can be here and in snare score
-/tempo 70    // not sure
+/tempo 76    // not sure
 
 // Sync:
 /ff

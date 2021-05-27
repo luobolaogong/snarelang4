@@ -1,0 +1,71 @@
+// The Haunting - Drums (actually, just metronome since no drums have been written
+
+/time 6/4
+/tempo 4=80
+
+/track met
+/channel 0
+/mp
+// Count in
+>4M . 8M . _4M . 8M .
+
+/marker B1-4
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+
+/marker B5-8
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+/marker B9-12
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+/marker B13-16
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+
+
+/track snare5
+/channel 5
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+////////////// The Haunting
+// There are no flams, drags, ruffs.  Just taps and simple rolls and some tap rolls.
+// Ravel's Bolero was extremely simple but effective.
+// Can we play this cleanly?  This is a good exercise.
+
+/time 6/4
+/tempo 84
+/f
+
+
+2:3r
+2:3r
+2:3r
+4:3r    /ff ^4F /mf /cresc 24Z . . . . .     >40T 20z . >24t . .
+
+
+_8T  /ff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
+_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _8T  24t . .   _8T 24t . .  _24T . . _24t . .
+_8T  24t . .   _8T 24t . .  _8T _8t             _8T  24t . .   _8T 24t . .  _8T _8t
+_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .     >40T 20z . >24t . .
+
+
+_8T  /ff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
+_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _8T  24t . .   _8T 24t . .  _24T . . _24t . .
+_8T  24t . .   _8T 24t . .  _8T _8t             _8T  24t . .   _8T 24t . .  _8T _8t
+_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .     >40T 20z . >24t . .
+
+
+_8T  /ff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
+_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _8T  24t . .   _8T 24t . .  _24T . . _24t . .
+_8T  24t . .   _8T 24t . .  _8T _8t             _8T  24t . .   _8T 24t . .  _8T _8t
+/time 5/4
+_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .
+//time 1/4
+>40T 20z . 24t . .
+1T /fff

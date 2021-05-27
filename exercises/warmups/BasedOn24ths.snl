@@ -1,0 +1,32 @@
+// Based on 6 notes per beat, or 24th notes in 4/4, it can be subdivided evenly by 2 and 3, and if you double it out to two beats, then you can
+// subdivide by 4 evenly.  This might be good for getting correct 12th and 24th notes, besides working on rolls based on 24ths.
+// Can go between 6/8 feel and triplet feel, and straight.
+// For now, set tempo to 84
+
+// These are just some random ideas for now
+
+/track snare5
+/channel 5
+
+/time 4/4    // keep it in 4/4 to make math a bit easier
+/tempo 84
+
+>12T T T   >12T T T   >12T T T   >12T T T
+>12T T T   >12T T T   >12T T T   >12T T T
+>12t t t   >12t t t   >12t t t   >12t t t
+>12t t t   >12t t t   >12t t t   >12t t t
+
+>24T . . . . .   >24T . . . . .   >24T . . . . .   >24T . . . . .
+>24T . . . . .   >24T . . . . .   >24T . . . . .   >24T . . . . .
+// 6/8 feel
+>24T . . >. >. .   >24T . . >. >. .   >24T . . >. >. .   >24T . . >. >. .
+>8T 24t _12T   >8t 24T _12t    >8T 24t _12T   >8t 24T _12t
+
+12T 24t  12T 12t    12T 24t  12T 12t    12T 24t  12T 12t    12T 24t  12T 12t
+/time 3/4
+>12T 24t  12T >24t    12T 24t  >12T 24t    12T >24t  12T 24t
+>12T 24t  12T >24t    12T 24t  >12T 24t    12T >24t  12T 24t
+>12F 24t  12T >24f    12T 24t  >12F 24t    12T >24f  12T 24t
+>12F 24t  12T >24f    12T 24t  >12F 24t    12T >24f  12T 24t
+
+/time 4/4

@@ -1,0 +1,176 @@
+// Castle Dangerous -- with James Laughlin's Massed Band Setting for March 3/4, but only parts 1 & 3, repeated.  At 66bpm or something
+// This is because the young drummers cannot play parts 2 and 4, I guess.
+// James Laughlin
+// Copyright 2012
+// March
+/time 3/4
+/tempo 80
+
+/track met
+/channel 0
+// Sync:
+/time 4/4
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+/time 3/4
+/p
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
+
+
+
+/track snare
+
+//mf  // assuming this dynamic as default /dd
+// Should allow /dd=mf or something like that.
+// Then every time you see /dd you stick in /mf
+// And maybe dynamics should be more "relative", as in "/+2" or "/-1" for relative dynamic levels
+// rather than absolute levels like /ff  because it all depends on the default dynamic
+
+// sync
+//time 4/4
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+//time 3/4
+
+/tempo 84  // should be 66???????
+
+/track met
+/channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+/p
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . 4r
+
+
+
+/track snare5
+/channel 5
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+/marker Pt1
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .  . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt1Rpt
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2Rpt
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+
+// Repeat the above
+/marker Pt1
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .  . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt1Rpt
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2Rpt
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f

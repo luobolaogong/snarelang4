@@ -63,7 +63,13 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 //track met    // should have two tones for metronome
 
 /mp
-//^8M . >8M . >8M .
+// the "feel" of the downbeat is one beat off from the written score for some dumbe traditional reason
+// The drum score here is written as it sounds.  The pipe score is not.  Should have made them the same.
+// Try to compensate by throwing in one extra count to make up for the previous tune.
+// Won't be able to make Midi Voyager work right though.
+/time 1/4
+4M
+/time 3/4
 ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
 ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
 ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
@@ -136,67 +142,62 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .    
 /time 3/4
 /tempo 84
 /time 1/4
->40T 20z . 24t . .
+>40T 20z . 24t . . /ff /f
 /time 3/4
 
-// marker P1
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
->12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
+/marker Pt1
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .  . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt1Rpt
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+
+/marker Pt2Rpt
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
 
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
-//>12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-//_4T /mf /cresc 24Z . . . . .     24T . . 12t 24t
-// /f /cresc 24Z . . 12t 24t 24Z . . 12t 24t
-_4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
+// Repeat the above
+/marker Pt1
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .  . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
+/marker Pt1Rpt
+/f
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
-// marker P1Rpt
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
->12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
+/marker Pt2
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
-//>12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-_4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
-
-
-
-// marker P2
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
->12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
-//>12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-_4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
-
-
-
-
-// marker P2Rpt
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
->12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-
-
-// second ending, same as P1 ending
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .   /cresc 24T . . . . .
->24T . . >. . . >4T /fff 4r
-
+/marker Pt2Rpt
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /fff /f
 
 
 
@@ -250,47 +251,13 @@ _4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
 
 
 /////////// Castle Dangerous
-/time 1/4
-4N
+
 /time 3/4
 /tempo 84
 /mf
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-2N 4r
-
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-2N 4r
-
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-2N 4r
-
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-8r 4n 8N . .
-2N 4r
-
+/time 1/4
+4r
+/time 3/4
 
 
 
@@ -350,25 +317,9 @@ _4:3B 2B
 
 
 /////////// Castle Dangerous
-/time 1/4
-4r
+
 /time 3/4
 /tempo 84
-
-
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 4r
-
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 4r
-
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 4r
-
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 16B 16:3r
-
-
 
 
 

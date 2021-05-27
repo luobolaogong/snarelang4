@@ -1,0 +1,101 @@
+// Scotland the Brave - drums, with the James Laughlin Massed Band Setting for a 2/4 March, believe it or not
+
+/track metronome
+/channel 0
+/time 4/4 // yes both of these lines can be here and in snare score
+/tempo 80    // not sure
+
+/track met
+/channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+
+/mp
+/marker L1
+4M . . .   . . . .   . . . .   . . . .
+/marker L2
+4M . . .   . . . .   . . . .   . . . .
+/marker L3
+4M . . .   . . . .   . . . .   . . . .
+/marker L4
+4M . . .   . . . .   . . . .   . . .
+
+
+/////////////// Snare ///////////////////
+
+/track snare5
+/channel 5
+//time 4/4
+//tempo 80
+
+
+// sync
+1r
+// "pipes and drums, One Two"
+// "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r 4F .
+// Roll-off
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff /ff
+
+
+/f
+
+8r 24Z . .
+/marker P1L1
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /ff /mf 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker P1L2
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /ff /mf 8r 24Z . .
+
+/marker P1L1Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /ff /mf 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker P1L2Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /ff /mf 8r 12T 24t
+
+/marker P2L3
+_40T 20z .  _40t 20Z . ^12T 24t 12T 24t
+_40T 20z .  _40t 20Z . 8T t
+/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+12T 24t ^8F ^f /mf 12T 24t
+
+/marker P2L4
+_40T 20z .  _40t 20Z . ^12T 24t 12T 24t
+_40T 20z .  _40t 20Z . 8T 24Z . .
+^4t /cresc 24Z . . . . .
+^4T /ff 8r 12T 24t
+
+/marker P2L3Rpt
+_40T 20z .  _40t 20Z . ^12T 24t 12T 24t
+_40T 20z .  _40t 20Z . 8T t
+/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+12T 24t ^8F ^f /mf 12T 24t
+
+/marker P2L4Rpt
+_40T 20z .  _40t 20Z . ^12T 24t 12T 24t
+_40T 20z .  _40t 20Z . 8T 24Z . .
+^4t /cresc 24Z . . . . .
+^8T /fff 8f F
+
