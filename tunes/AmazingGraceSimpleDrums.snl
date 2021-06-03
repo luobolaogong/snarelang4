@@ -1,0 +1,433 @@
+// Amazing Grace with "simple drums", same as in The Haunting, but ...
+
+// Recording:  https://youtu.be/lpZiPZwwXhM
+// shows the figures are these:
+// 6 12 | 2  8 24 12 |
+// And the tempo is slow, as in 64 bpm.  But I've seen it as slow as 56, and when singing as fast as 72
+// But based on true triplets as in 12ths and 24ths.
+
+// I think Peter took the drum part from this:  https://youtu.be/zLfkDvz9wUE   because it's rolls all the way, wih crescendos.
+
+/time 3/4
+//tempo 4=70
+//tempo 4=64
+/tempo 4=60
+
+/track met
+/channel 0
+/mp
+// Count in and pickup
+^8M . _. . _. .
+^12M _. . ^12M _. . ^4M
+
+
+>8M . _. . _. 24M 12M   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. 24M 12M   >8M . _. . >12M . .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. 24M 12M   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. 24M 12M   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+
+>8M . _. . _. .   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. .   >8M . _. . >12M . .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. .   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. .   >8M . _. . _. .   >8M . _. . _. .   4M . .
+
+
+
+
+/track snare5
+/channel 5
+
+
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+// 1st time through
+4:3r . . .
+4:3r . . .
+4:3r . . .
+4:3r .
+/mp
+/cresc
+//24Z . . . . .    24Z . . . . .    24Z . . . . .    >40T 20z . 24Z . .         >40T 20z . 24Z . .        12T 12f 12f
+//32Z . . . . . . .  . . . . . . . .  . . . . . . . .  >32T 32z . . . . . .       >32T 32z . . . . . .      12T 12f 12f  /ff /f
+32Z . . . . . . .  . . . . . . . .  . . . . . . . .  >4T >4f 24Z . . . 12T  /ff /f
+
+// new test
+// 2nd time through
+// 8 bar phrase
+4F . 24Z . . _24t >12T                    >4F .  40T 20z . 40t 20Z .                 4T 4f 12T 24T 12t 24t                                >4F .  24Z . . . 12T
+4F . 24Z . . _24t >12T                    >4F .  24Z . . . 12T                       4T 4f 12T 24T 12t 24t                                >4F .  24Z . . . 12T
+// 8 bar phrase repeated
+4F . 24Z . . _24t >12T                    >4F .  40T 20z . 40t 20Z .                 4T 4f 12T 24T 12t 24t                                >4F .  24Z . . . 12T
+4F . 24Z . . _24t >12T                    >4F .  24Z . . . 12T                       4T 4f 12T 24T 12t 24t                                >4F .  24Z . . . 12T
+
+// 3rd time through
+// 8 bar phrase
+>8T 24t . . >8T >8f 24T . . >24t ^12T     >8T 24t . . >8T >8f >24T . . >. . .        >8T 24t . . >8T >8f 12T 24T 12t 24t                  >8T 24t . . >8T >8f 24T . . . >12T
+>8T 24t . . >8T >8f 24T . . >24t ^12T     >8T 24t . . >8T >8f 24T . . . >12T         >8T 24t . . >8T >8f 12T 24T 12t 24t                  >8T 24t . . >8T >8f 24T . . . >12T
+// different 8 bar phrase
+>8T 24z . . >8T >8f 24Z . . >24t ^12T     >8T 24z . . >8T >8f >40T 20z . >40t 20Z .  >8T 24z . . >8T >8f >36T 18z >24T >36t 18Z >24t      >8T 24t . . >8T >8f 24Z . . . >12T
+>8T 24z . . >8T >8f 24Z . . >24t ^12T     >8T 24z . . >8T >8f 24Z . . . >12T         >8T 24z . . >8T >8f >36T 18z >24T >36t 18Z >24t      >8T 24t . . >4T
+
+
+// end of tune
+4:3r
+
+// 2nd time through
+// 8 bar phrase
+4F . 24Z . . _24t >12T                    >4F .  40T 20z . 40t 20Z .                 4T 4f 12T 24T 12t 24t                                >4F .  24Z . . . 12T
+4F . 24Z . . _24t >12T                    >4F .  24Z . . . 12T                       4T 4f 12T 24T 12t 24t                                >4F .  24Z . . . 12T
+// 8 bar phrase repeated
+4F . 24Z . . _24t >12T                    >4F .  40T 20z . 40t 20Z .                 4T 4f 12T 24T 12t 24t                                >4F .  24Z . . . 12T
+4F . 24Z . . _24t >12T                    >4F .  24Z . . . 12T                       4T 4f 12T 24T 12t 24t                                >4F .  24Z . . . 12T
+
+// 3rd time through
+// 8 bar phrase
+>8T 24t . . >8T >8f 24T . . >24t ^12T     >8T 24t . . >8T >8f >24T . . >. . .        >8T 24t . . >8T >8f 12T 24T 12t 24t                  >8T 24t . . >8T >8f 24T . . . >12T
+>8T 24t . . >8T >8f 24T . . >24t ^12T     >8T 24t . . >8T >8f 24T . . . >12T         >8T 24t . . >8T >8f 12T 24T 12t 24t                  >8T 24t . . >8T >8f 24T . . . >12T
+// different 8 bar phrase
+>8T 24z . . >8T >8f 24Z . . >24t ^12T     >8T 24z . . >8T >8f >40T 20z . >40t 20Z .  >8T 24z . . >8T >8f >36T 18z >24T >36t 18Z >24t      >8T 24t . . >8T >8f 24Z . . . >12T
+>8T 24z . . >8T >8f 24Z . . >24t ^12T     >8T 24z . . >8T >8f 24Z . . . >12T         >8T 24z . . >8T >8f >36T 18z >24T >36t 18Z >24t      >8T 24t . . >4T
+
+
+
+
+
+
+
+
+
+
+// 2nd time through
+4F . 24Z . . _24t >12T    >4F .  24Z . . . . .    4T 4f 12F . .              >4F .  24Z . . . 12T
+4F . 24Z . . _24t >12T    >4F .  24Z . . . . .    4T 4f 12F 12f 12f          >4F .  24Z . . . 12T
+
+>8T 24t . . >8T >8f 24T . . >24t ^12T             >8T 24t . . >8T >8f >24T . . >. . .
+>8T 24t . . >8T >8f 12T 24t 12T 24t               >8T 24t . . >8T >8f 24T . . . >12T
+
+
+// 3rd time through
+/f
+
+>8T 32Z . . . >8T >8f 24Z . .  >24t ^12T          >8T 32Z . . . >8T >8f >40T 20z . >40t 20Z .
+>8T 32Z . . . >8T >8f 12T 24t 12T 24t             >8T 32Z . . . >8T >8f _42T 21z . .  >12T
+
+>8T 32Z . . . >8T >8f 24Z . .  >24t ^12T          >8T 32Z . . . >8T >8f _42T 21z . . >24T .
+>8T 32Z . . . >8T >8f 12T 24t 12T 24t             12T 12f 12f ^40T 20z . 24z . . >4T
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Taps first half of 3rd time through
+>8T 24t . . >8T >8f 24T . . >24t ^12T
+>8T 24t . . >8T >8f >24T . . >. . .
+>8T 24t . . >8T >8f 12T 24t 12T 24t
+>8T 24t . . >8T >8f 24T . . . >12T
+
+>8T 24t . . >8T >8f 24T . . >24t ^12T
+>8T 24t . . >8T >8f >24T . . . >. .
+>8T 24t . . >8T >8f 12T 24t 12T 24t
+>8T 24t . . >8T >8f 24T . . . >12T
+
+// Rolls second half of 3rd time through
+>8T 32Z . . . >8T >8f 24Z . .  >24t ^12T
+>8T 32Z . . . >8T >8f >40T 20z . >40t 20Z .
+>8T 32Z . . . >8T >8f 12T 24t 12T 24t
+>8T 32Z . . . >8T >8f _42T 21z . .  >12T
+
+>8T 32Z . . . >8T >8f 24Z . .  >24t ^12T
+>8T 32Z . . . >8T >8f _42T 21z . . >24T .
+>8T 32Z . . . >8T >8f 12T 24t 12T 24t
+12T 12f 12f ^40T 20z . 24z . . >4T
+
+
+
+
+
+
+
+4F . 24Z . . _24t >12T    >4F .  24Z . . . . .    4T 4f 12F . .              >4F .  24Z . . . 12T
+4F . 24Z . . _24t >12T    >4F .  24Z . . . . .    4T 4f 12F 12f 12f          >4F .  24Z . . . 12T
+
+4F . 24Z . . _24t >12T    >4F .  24Z . . . . .    4T 4f 12F . .              >4F .  24Z . . . 12T
+4F . 24Z . . _24t >12T    >4F .  24Z . . . . .    4T 4f 12F 12f 12f          >4F .  24Z . . . 12T
+
+
+
+
+
+32Z . . . 8t 8F 32Z . . . 8t 8F    8F 32Z . . . 8t  8F 32Z . . . 8t
+32Z . . . 8t 8F 32Z . . . 8t 8F    8F 32Z . . . 8t  8F 32Z . . . 8t
+32Z . . . 8t 8F 32Z . . . 8t 8F    8F 32Z . . . 8t  8F 32Z . . . 8t
+32Z . . . 8t 8F 32Z . . . 8t 8F    8F 32Z . . . 8t  8F 32Z . . . 8t
+
+
+
+
+
+
+//4T . . 8T 24t . . 4T .         4T 8t 24t . . 4T        4t 4t 12t 24t 12t 24t
+//4T . 8T 24t . . 4T 4t 4t       4t 8t 24t . . 4T        4t 4t 8t 12t 24t
+//4T . . 24T . . 12T 24t         4t 4t  8t 24t . .       4T 4t  4t 4t 8t 12t 24t
+//4T . .      8T 24t . . 4T 4t   4t 12t 24t 12t 24t      4t 4t 8t 24t . . 4T
+
+//32Z . . . . . . . 4T 4f   8T 24t . . 4T  4r
+//32Z . . . . . . . 4T 4f   8T 24t . . 4T  4r
+//32Z . . . . . . . 4T 4f   8T 24t . . 4T  4r
+//24Z . . . . .     12T 24t 12T 24t  24Z . . 8t  8F 24t . . 12T . . 4T
+
+
+24Z . . 8t 8F 24Z . . 8t 8F    8F 24Z . . 8t  8F 24Z . . 8t
+24Z . . 8t 8F 24Z . . 8t 8F    8F 24Z . . 8t  8F 24Z . . 8t
+24Z . . 8t 8F 24Z . . 8t 8F    8F 24Z . . 8t  8F 24Z . . 8t
+24Z . . 8t 8F 24Z . . 8t 8F    8F 24Z . . 8t  8F 24Z . . 8t
+
+
+///mf 4F /mp /cresc 24Z . . . . .    . . . . . .
+//>40T 20z . 24Z . .     >40T 20z . 24Z . .       >12T 12f _12f /ff
+
+// Just ideas.
+4T 24Z . . . . .  40T 20z . 24t 12T
+4f 24Z . . 8t  40T 20z . 40t 20Z .
+
+
+8T 24z . .    8T 24z . .  40T 20z . 24t 12T
+8F 32Z . . .  8T 24z . .  40T 20z . 24t 12T
+8F 32Z . . .  8T 24z . .  40T 20z . 24t 12T
+8F 32Z . . .  8T 24z . .  40T 20z . 24t 12T
+
+
+4F 4f  24Z . . 24t 12T
+8F 32Z . . .  4T 40T 20z . 40t 20Z .
+4T 4f  12T 24t 12T 24t
+8F 32Z . . .  12t >36Z >. >. 12t 12t >36Z >. >. 12t
+
+
+
+
+
+
+
+
+
+
+/mp
+// Taps first half of 2nd time through
+>8T 24t . . >8T >8f 24T . . >24t ^12T
+>8T 24t . . >8T >8f >24T . . >. . .
+>8T 24t . . >8T >8f 12T 24t 12T 24t
+>8T 24t . . >8T >8f 24T . . . >12T
+
+>8T 24t . . >8T >8f 24T . . >24t ^12T
+>8T 24t . . >8T >8f >24T . . . >. .
+>8T 24t . . >8T >8f 12T 24t 12T 24t
+>8T 24t . . >8T >8f 24T . . . >12T
+
+// Rolls second half of 2nd time through
+>8T 24z . . >8T >8f 24Z . .  >24t ^12T
+>8T 24z . . >8T >8f >40T 20z . >40t 20Z .
+>8T 24z . . >8T >8f 12T 24t 12T 24t
+>8T 24z . . >8T >8f _42T 21z . .  >12T
+
+>8T 24z . . >8T >8f 24Z . .  >24t ^12T
+>8T 24z . . >8T >8f _42T 21z . . >24T .
+
+
+>8T 24z . . >8T >8f 12T 24t 12T 24t
+12T 12f 12f ^40T 20z . 24z . . >4T
+
+
+
+
+/track tenor
+/channel 6
+/mp
+// Count in and pickup
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+
+
+4:3r . . .
+4:3r . . .
+4:3r . . .
+/mp /cresc
+//4:3r                                                      32N . . . . . . .   32N . . . . . . .  32N . . . . . . .
+//32N . . . . . . .  32N . . . . . . .   32N . . . . . . .  32N . . . . . . .   32N . . . . . . .  12N . .   /f /mf
+4:3r                                                    48N . . . . . . . . . . .   48N . . . . . . . . . . .  48N . . . . . . . . . . .
+48N . . . . . . . . . . .   48N . . . . . . . . . . .   48N . . . . . . . . . . .   4N .   12N . .   /f /mf
+
+// experiment
+// 2nd Time through
+/mf
+4N . 8N .          4N . .        4N . 8N .               4N . 12N . .
+4N . 8N .          4N . .        4N . 8N .               4N . 12N . .
+
+4N . 8N .          4N . .        4N . 8N .               4N . 12N . .
+4N . 8N .          4N . .        4N . 8N .               4N . 12N . .
+
+// 3rd time through
+4N 8N . 12N . .   4N 8N . 4N   4N 8N . 4N             4N 8N . 12N . .
+4N 8N . 12N . .   4N 8N . 4N   4N 8N . 4N             4N 8N . 12N . .
+
+4N 8N . 12N . .   4N 8N . 4N   4N 8N . 4N             4N 8N . 12N . .
+4N 8N . 12N . .   4N 8N . 4N   4N 8N . 4N             4N . 1r
+
+// end of tune
+
+/mf
+4N . 8N .          4N . .        4N . 8N .               4N . 12N . .
+4N . 8N .          4N . .        4N . 8N .               4N . 12N . .
+
+4N . 8N .          4N . .        4N . 8N .               4N . 12N . .
+4N . 8N .          4N . .        4N . 8N .               4N . 12N . .
+
+// 3rd time through
+4N 8N . 12N . .   4N 8N . 4N   4N 8N . 4N             4N 8N . 12N . .
+4N 8N . 12N . .   4N 8N . 4N   4N 8N . 4N             4N 8N . 12N . .
+
+4N 8N . 12N . .   4N 8N . 4N   4N 8N . 4N             4N 8N . 12N . .
+4N 8N . 12N . .   4N 8N . 4N   4N 8N . 4N             4N . 1r
+
+4:3r
+
+
+// This is a direct copy from that recording
+///mf
+//4N . .             8N 24N . .  4N .           4N 8N 24N . . 4N        4N 4N 12N 24N 12N 24N
+//4N . 8N 24N . .    4N  4N  4N                 4N 8N  24N . . 4N       4N 4N  8N 12N 24N
+//4N 4N 4N           24N . . 12N 24N  4N  4N    8N 24N . . 4N 4N        4N 4N  8N 12N 24N
+//4N 4N 4N           8N 24N . . 4N 4N           4N 12N 24N 12N 24N 4N   4N 8N 24N . . 4N
+
+// Repeat it for fun
+///mf
+//4N . .             8N 24N . .  4N .           4N 8N 24N . . 4N        4N 4N 12N 24N 12N 24N
+//4N . 8N 24N . .    4N  4N  4N                 4N 8N  24N . . 4N       4N 4N  8N 12N 24N
+//4N 4N 4N           24N . . 12N 24N  4N  4N    8N 24N . . 4N 4N        4N 4N  8N 12N 24N
+//4N 4N 4N           8N 24N . . 4N 4N           4N 12N 24N 12N 24N 4N   4N 8N 24N . . 4N
+
+4r 8N . 4N           4r 8N . 4N           4r 8N . 4N           4r 8N . 4N
+4r 8N . 4N           4r 8N . 4N           4r 12N . . 4M        4r 12N . . 4M
+4r 8N . 4N           4r 8N . 4N           4r 8N . 4N           4r 8N . 4N
+4r 8N . 4N           4r 8N . 4N           4r 12N . . 4M        4r 12N . . 4M
+
+4r 8N . 4N           4r 8N . 4N           4r 8N . 4N           4r 8N . 4N
+4r 8N . 4N           4r 8N . 4N           4r 12N . . 4M        4r 12N . . 4M
+4r 8N . 4N           4r 8N . 4N           4r 8N . 4N           4r 8N . 4N
+4r 8N . 4N           4r 8N . 4N           4r 12N . . 4M        4r 12N . . 4M
+
+// triplet interplay between bass and tenor?
+4N 12N . . 4N         4N 12N . . 4N         4N 12N . . 4N         4N 12N . . 4N
+4N 12N . . 4N         4N 12N . . 4N         4N 12N . . 4N         4N 12N . . 4N
+4N 12N . . 4N         4N 12N . . 4N         4N 12N . . 4N         4N 12N . . 4N
+4N 12N . . 4N         4N 12N . . 4N         4N 12N . . 4N         4N 12N . . 4N
+
+// triplet interplay between bass and tenor?
+12N . . 4N 12N . .    12N . . 4N 12N . .    12N . . 4N 12N . .    12N . . 4N 12N . .
+12N . . 4N 12N . .    12N . . 4N 12N . .    12N . . 4N 12N . .    12N . . 4N 12N . .
+12N . . 4N 12N . .    12N . . 4N 12N . .    12N . . 4N 12N . .    12N . . 4N 12N . .
+12N . . 4N 12N . .    12N . . 4N 12N . .    12N . . 4N 12N . .    12N . . 4N 12N . .
+
+
+
+
+
+
+/track bass
+/channel 4
+
+// Count in and pickup
+4r . 12r . .
+4r .
+// pickup:
+4r
+
+/mp
+4:3r . . .
+4:3r . . .
+4:3B . . .
+/p /cresc
+48B . . . . . . . . . . .   48B . . . . . . . . . . .   48B . . . . . . . . . . .   48B . . . . . . . . . . .   48B . . . . . . . . . . .  48B . . . . . . . . . . .
+48B . . . . . . . . . . .   48B . . . . . . . . . . .   48B . . . . . . . . . . .   4B .  12B . .
+
+/mp
+// 2nd time through
+4:3B /ff /mf  2B 4B     4:3B   2B 4B         4:3B   2B 4B     4:3B   2B 4B
+4:3B   2B 4B     4:3B   2B 4B               4:3B   2B 4B     4:3B   2B 12B . .
+
+// 3rd time through
+// experiment
+4B _12B . . 4B     4B _12B . . 4B     4B _12B . . 4B     4B _12B . . 4B
+4B _12B . . 4B     4B _12B . . 4B     4B _12B . . 4B     4B _12B . . 4B
+4B _12B . . 4B     4B _12B . . 4B     4B _12B . . 4B     4B _12B . . 4B
+4B _12B . . 4B     4B _12B . . 4B     4B _12B . . 4B     4B _12B . . 4B
+
+// end of tune
+
+4:3r
+
+
+// 2nd time through
+4:3B /ff /mf  2B 4B     4:3B   2B 4B         4:3B   2B 4B     4:3B   2B 4B
+4:3B   2B 4B     4:3B   2B 4B               4:3B   2B 4B     4:3B   2B 12B . .
+
+// 3rd time through
+// experiment
+_12B . . 2B        _12B . . 2B        _12B . . 2B        _12B . . 2B
+_12B . . 2B        _12B . . 2B        _12B . . 2B        _12B . . 2B
+_12B . . 2B        _12B . . 2B        _12B . . 2B        _12B . . 2B
+_12B . . 2B        _12B . . 2B        _12B . . 2B        _12B . . 2B
+
+
+
+4:3r
+
+
+4B 12B . . 4B    4B 12B . . 4B    4B 12B . . 4B    4B 12B . . 4B
+4B 12B . . 4B    4B 12B . . 4B    4B 12B . . 4B    4B 12B . . 4B
+
+4B 12B . . 4B    4B 12B . . 4B    4B 12B . . 4B    4B 12B . . 4B
+4B 12B . . 4B    4B 12B . . 4B    4B 12B . . 4B    4B 12B . . 4B
+
+
+
+
+4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B
+4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 12B . .
+
+4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B
+4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 12B . .
+
+
+
+
+
+
+2B 12B . .      2B 12B . .      2B 12B . .      2B 12B . .
+2B 12B . .      2B 12B . .      2B 12B . .      2B 12B . .
+2B 12B . .      2B 12B . .      2B 12B . .      2B 12B . .
+2B 12B . .      2B 12B . .      2B 12B . .      2B 12B . .
+
+
+4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B
+4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B
+4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B
+4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B     4:3B   2B 4B
+
+16B 16:3r
+
+

@@ -1,24 +1,22 @@
 
 // The Haunting / Castle Dangerous Set Massed Bands version - Drums
+// make these available to a MIDI reader to display, or maybe just make as markers?
+//name HauntingCastleSetMassed
+//date May 25, 2021
 
 // metronome first for both tunes
 
 /track met
 /channel 0
-/time 4/4
-/tempo 84
+/time 3/4
+/tempo 78
 
-// Sync:
+// Count off, 2 bars of 3/4
 /ff
-_4M _. _8M . _4M
-/f
-// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
-4M . . .
-// Roll-off
-_4M _. _8M . _. .  _4M _. _8M . _4M
+^4M >. _8M .    ^4M >. _8M .
 
-/time 6/4
-/tempo 84
+/time 3/4
+/tempo 78
 
 /mp
 >4M . .  _4M . .
@@ -58,7 +56,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 // March
 
 /time 3/4
-/tempo 84
+/tempo 78
 
 //track met    // should have two tones for metronome
 
@@ -76,33 +74,26 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 
 //////////////// Snare  //////////////////////////////////////
 
-// Roll Off, even if not nec.
-/time 4/4
-/tempo 84
+
+//time 3/4
+//tempo 78
 
 
 /track snare5
 /channel 5
 
-// sync
-1r
-// "pipes and drums, One Two" or "By the right, quick march"
+// Count off, 2 bars of 3/4
 /ff
-/marker P&D 1,2
-32:3T 32t 8F 4r ^4F ^.
-// Roll-off
-/ff /< 24Z . . . . .    . . . . . .   2T /fff
-/ff /< 24Z . . . . .    . . . . . .   2T /fff
+4r . 8r .    4r . 8r .
 
 ////////////// The Haunting
 // There are no flams, drags, ruffs.  Just taps and simple rolls and some tap rolls.
 // Ravel's Bolero was extremely simple but effective.
 // Can we play this cleanly?  This is a good exercise.
 
-/time 6/4
-/tempo 84
+//time 3/4
+//tempo 78
 /f
-
 
 2:3r
 2:3r
@@ -133,71 +124,62 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .    
 
 /////////// Castle Dangerous
 // This has the 3/4 bar lines shifted left one beat, making the pickups on beat 1
-/time 3/4
-/tempo 84
+//time 3/4
+//tempo 78
 /time 1/4
->40T 20z . 24t . .
+>40T 20z . 24t . .    // continuation of theme from previous tune
+//time 1/4
+//24:5F 24t    // solo, only played when done as a single tune, not as a set
 /time 3/4
 
 // marker P1
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
->12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>12T /cresc 24t >12T >24f   >24T . . 12t >24F    24t . . 12T _24t   // this line is a "solo", play it if you can
 
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>4F /f                    24Z . . 12t ^24F   24t . . 12T _24t   // this line is a "solo", play it if you can
 
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
-//>12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-//_4T /mf /cresc 24Z . . . . .     24T . . 12t 24t
-// /f /cresc 24Z . . 12t 24t 24Z . . 12t 24t
-_4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
 
 
 // marker P1Rpt
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
->12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>12T /cresc 24t >12T >24f   >24T . . 12t >24F    24t . . 12T _24t   // this line is a "solo", play it if you can
 
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
-//>12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-_4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
-
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>4F /f                    24Z . . 12t ^24F   24t . . 12T _24t   // this line is a "solo", play it if you can
 
 
-// marker P2
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
->12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
+// marker P1Rpt
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>12T /cresc 24t >12T >24f   >24T . . 12t >24F    24t . . 12T _24t   // this line is a "solo", play it if you can
 
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
-//>12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-_4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
-
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>4F /f                    24Z . . 12t ^24F   24t . . 12T _24t   // this line is a "solo", play it if you can
 
 
+// marker P1Rpt
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>12T /cresc 24t >12T >24f   >24T . . 12t >24F    24t . . 12T _24t   // this line is a "solo", play it if you can
 
-// marker P2Rpt
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . . . .
->12T /cresc 24t >12T 24t   >24T . . 12t ^24t    24T . . 12t 24t
-
-
-// second ending, same as P1 ending
->40T /ff /f 20z . 8t      >8T 24z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .          24T . . 12t 24t
->40T 20z . 8t             >8T 24Z . .   /cresc 24T . . . . .
->24T . . >. . . >4T /fff 4r
-
-
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+//>40T 20z . >40t 20Z . >4T /fff 4r
+>40T 20z . 24z . . >12T ^12f ^. ^4f
 
 
 
@@ -207,25 +189,18 @@ _4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
 /track tenor
 /channel 2
 
-// Sync:
-1r
-// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
-1r
-
-/mf
-
-// Roll off
-4N . 2N
-4N . 2N
+// time 3/4
+// Count off, 2 bars of 3/4
+4r . 8r .    4r . 8r .
 
 
 ////////////// The Haunting
-/time 6/4
-/tempo 84
+//time 3/4
+//tempo 78
 /mp
 
 
-2:3r .   // 2 bars of 6/4
+4:3r . . .   // 4 bars of 3/4
 /pp /cresc
 48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .  /mp /decresc 48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .
 48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .  48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .
@@ -252,44 +227,54 @@ _4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
 /////////// Castle Dangerous
 /time 1/4
 4N
-/time 3/4
-/tempo 84
+//time 3/4
+//tempo 78
 /mf
 8r 4n 8N . .
 8r 4n 8N . .
 8r 4n 8N . .
-8r 4n 8N . .
+//8r 4n 8N . .
+8r 12N 6n 12N 6n 8N
+
 8r 4n 8N . .
 8r 4n 8N . .
 8r 4n 8N . .
 2N 4r
 
+
 8r 4n 8N . .
 8r 4n 8N . .
 8r 4n 8N . .
-8r 4n 8N . .
+8r 12N 6n 12N 6n 8N
+
 8r 4n 8N . .
 8r 4n 8N . .
 8r 4n 8N . .
 2N 4r
 
+
 8r 4n 8N . .
 8r 4n 8N . .
 8r 4n 8N . .
-8r 4n 8N . .
+8r 12N 6n 12N 6n 8N
+
 8r 4n 8N . .
 8r 4n 8N . .
 8r 4n 8N . .
 2N 4r
 
+
 8r 4n 8N . .
 8r 4n 8N . .
 8r 4n 8N . .
+8r 12N 6n 12N 6n 8N
+
 8r 4n 8N . .
 8r 4n 8N . .
 8r 4n 8N . .
-8r 4n 8N . .
-2N 4r
+//2N 4r
+4N 12N . . 4N
+
 
 
 
@@ -304,22 +289,14 @@ _4T /f      /cresc 24Z . . . . >24t      24T . . 12t 24t
 /track bass
 /channel 8
 
-// Sync:
-1r
-// Commands: "By the Right, quick march", or "Pipes & Drums, One, Bwo"
-1r
-
-
-/f
-
-// Roll off
-4B . 2B
-4B . 2B
+// Count off, 2 bars of 3/4
+/ff
+4r . 8r .     4r . 8r .
 
 
 ////////////// The Haunting
-/time 6/4
-/tempo 84
+//time 3/4
+//tempo 78
 
 4:3r . . .
 
@@ -352,21 +329,22 @@ _4:3B 2B
 /////////// Castle Dangerous
 /time 1/4
 4r
-/time 3/4
-/tempo 84
+//time 3/4
+//tempo 78
 
+/mf
+_2B 8r 8b   _2B 8r 8b   _2B 8r 8b   _2B _4B
+_2B 8r 8b   _2B 8r 8b   _2B 8r  8b   _2B 4r
 
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 4r
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B _4B
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B 4r
 
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 4r
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B _4B
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B 4r
 
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 4r
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B _4B
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B 16B 16:3r
 
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b
-/mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 8r /mp 8b   /mf _2B 16B 16:3r
 
 
 

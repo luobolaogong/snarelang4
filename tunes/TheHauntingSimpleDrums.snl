@@ -1,45 +1,39 @@
 // The Haunting - Drums (actually, just metronome since no drums have been written
 
-/time 6/4
+/time 3/4   // was 6/4
 /tempo 4=80
 
 /track met
 /channel 0
-/mp
-// Count in
->4M . 8M . _4M . 8M .
+/time 3/4
+// Count off, 2 bars of 3/4
+/ff
+^4M >. _8M .    ^4M >. _8M .
 
-/marker B1-4
+/time 3/4
+
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+>4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
 >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
 
-/marker B5-8
->4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
-/marker B9-12
->4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
-/marker B13-16
->4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .   >4M . .  _4M . .
+
 
 
 /track snare5
 /channel 5
 
-// sync
-1r
-// "pipes and drums, One Two" or "By the right, quick march"
+// Count off, 2 bars of 3/4
 /ff
-/marker P&D 1,2
-32:3T 32t 8F 4r ^4F ^.
-// Roll-off
-/ff /< 24Z . . . . .    . . . . . .   2T /fff
-/ff /< 24Z . . . . .    . . . . . .   2T /fff
+4r . 8r .    4r . 8r .
 
 ////////////// The Haunting
 // There are no flams, drags, ruffs.  Just taps and simple rolls and some tap rolls.
 // Ravel's Bolero was extremely simple but effective.
 // Can we play this cleanly?  This is a good exercise.
 
-/time 6/4
-/tempo 84
+//time 3/4
+//tempo 84
 /f
 
 
@@ -49,23 +43,107 @@
 4:3r    /ff ^4F /mf /cresc 24Z . . . . .     >40T 20z . >24t . .
 
 
-_8T  /ff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
+_8T  /fff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
 _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _8T  24t . .   _8T 24t . .  _24T . . _24t . .
 _8T  24t . .   _8T 24t . .  _8T _8t             _8T  24t . .   _8T 24t . .  _8T _8t
 _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .     >40T 20z . >24t . .
 
 
-_8T  /ff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
+_8T  /fff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
 _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _8T  24t . .   _8T 24t . .  _24T . . _24t . .
 _8T  24t . .   _8T 24t . .  _8T _8t             _8T  24t . .   _8T 24t . .  _8T _8t
 _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .     >40T 20z . >24t . .
 
 
-_8T  /ff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
+_8T  /fff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
 _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _8T  24t . .   _8T 24t . .  _24T . . _24t . .
 _8T  24t . .   _8T 24t . .  _8T _8t             _8T  24t . .   _8T 24t . .  _8T _8t
 /time 5/4
-_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .
+_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T  /mf /cresc 24Z . . . . .
 //time 1/4
->40T 20z . 24t . .
-1T /fff
+4T /fff
+
+
+
+
+////////////// Tenor ////////////////////////////////////
+
+/track tenor
+/channel 2
+
+// Count off, 2 bars of 3/4
+4r . 8r .  4r . 8r .
+
+
+////////////// The Haunting
+//time 3/4
+//tempo 84
+/mf
+
+
+2:3r .   // 2 bars of 6/4
+/pp /cresc
+48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .  /mp /decresc 48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .
+48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .  48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .
+/p
+/mp
+4r 4N 8N .   4r 4N 8N .
+4r 4N 8N .   4r 4N 8N .
+4r 4N 8N .   4r 4N 8N .
+4r 8N . . .  4N 8N . 4N
+
+4r 4N 8N .   4r 4N 8N .
+4r 4N 8N .   4r 4N 8N .
+4r 4N 8N .   4r 4N 8N .
+4r 8N . . .  4N 8N . 4N
+
+4r 4N 8N .   4r 4N 8N .
+4r 4N 8N .   4r 4N 8N .
+4r 4N 8N .   4r 4N 8N .
+//4r 8N . . .  4N 8N . 4N
+/time 5/4
+4r   8N .   . .  4N   8N .
+/time 1/4
+
+
+//////////////// Bass  //////////////////////////////////////
+
+/track bass
+/channel 8
+
+// Count off, 2 bars of 3/4
+4r . 8r .  4r . 8r .
+
+
+////////////// The Haunting
+//time 3/4
+//tempo 84
+
+4:3r . . .
+
+/p /cresc
+24N . . . . .    . . . . . .   . . . . . .  /mp /decresc 24N . . . . .    . . . . . .   . . . . . .
+24N . . . . .    . . . . . .   . . . . . .   24N . . . . .    . . . . . .   . . . . . .
+/p
+/mf
+
+
+_4:3B .
+_4:3B .
+_4:3B .
+_4:3B .
+
+_4:3B .
+_4:3B .
+_4:3B .
+_4:3B .
+
+//4:3B . . .  . . . .
+
+_4:3B .
+_4:3B .
+_4:3B .
+/time 5/4
+_4:3B 2B
+/time 1/4
+16B 16:3r

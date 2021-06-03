@@ -235,14 +235,17 @@ class Midi {
   ///   Create a MidiHeader object, which I did not define, which is part of MidiFile, and return it.
   ///   I don't think there's anything much in this header.  I don't know how it relates to a real
   ///   midi file.
-  MidiHeader createMidiHeader() {
+  // MidiHeader createMidiHeader() { // Hey, pass in the number of tracks and other stuff?
+  MidiHeader createMidiHeader(int nTracks) { // Hey, pass in the number of tracks and other stuff?
     // Construct a header with values for name, and whatever else
     // var midiHeaderOut = MidiHeader(ticksPerBeat: Midi.ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
     log.finest('hey watch that numTracks thing in header (default 2), and also format (default 1).');
     // var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:3); // puts this in header with prop "ppq"  What would 2 do?
     // Format of 1 seems the only value that works.  See midi spec somewhere about this.
     // numTracks doesn't seem to matter???
-    var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format:1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
+    // var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format:1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
+    // Could figure out how many tracks there are, but maybe just say there are up to 16?????????????
+    var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format:1, numTracks:nTracks); // I think format 1 is default and it means "multiple track file".  And numTracks isn't used from the header, so doesn't matter, at least in VLC player.
     return midiHeaderOut;
   }
 
@@ -626,7 +629,7 @@ class Midi {
         log.finest('Not putting comment into track event list: ${element.comment}');
         continue;
       }
-      if (element is Text) {
+      if (element is Text) { // and what does this do?
         var textEvent = TextEvent();
         textEvent.deltaTime = 0; // nec?  Ignored?
         textEvent.text = element.text;

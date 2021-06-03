@@ -1,12 +1,13 @@
 // Captain Norman Orr Ewing -- massed bands drums
 // The massed bands snare part is by James Laughlin.  A 2/4 March.
-// That's because this is a 2/4.  So, probably that's what should be played.
-// But because we're a sub grade 5 band, that's too hard and maybe try the
-// 4/4 massed band by Laughlin????
+//
+// But this is the 4/4 massed bands setting by Laughlin
+
+
 /track metronome
 /channel 0
-/time 2/4 // yes both of these lines can be here and in snare score
-/tempo 76    // not sure, was 70
+/time 2/4 // While we use a 4/4 setting, keep this marked as 2/4 to match the pipe score
+/tempo 70    // for B'day party gig
 
 // Sync:
 /ff
@@ -94,6 +95,8 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /f
 
 // This is the 4/4 massed bands setting by Laughlin, even though the tune is a 2/4
+// Prob should check to see that this is the same as the score in MassedBands24JLDrums
+// And it's not but should be, right?
 
 /marker Pt1
 /f
@@ -110,29 +113,29 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt2
-/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff 8t
+/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff 8t
+/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt2Rpt
-/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff 8t
+/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff  /f8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff 8t
+/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff  /f8t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt3
 /f
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff  /f^f t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff  /f^f t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt3Rpt
 /f
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff  /f^f t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff  /f^f t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt4
@@ -140,7 +143,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 ^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
 ^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t
-^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+^4F /mp /cresc 24Z . . . . . >4T /ff  /f8r t
 
 /marker Pt4Rpt
 /f

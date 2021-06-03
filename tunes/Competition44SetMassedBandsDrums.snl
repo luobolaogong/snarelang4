@@ -5,7 +5,7 @@
 /track met
 /channel 4
 /time 4/4
-/tempo 84
+/tempo 76   // for b'day gig
 
 // Sync:
 /ff
@@ -95,15 +95,15 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt2
-/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+/mp /cresc 24Z . . . . . 8T /ff /f 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+/mp /cresc 24Z . . . . . 8T /ff /f 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt2Rpt
-/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+/mp /cresc 24Z . . . . . 8T /ff /f 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 
@@ -112,16 +112,16 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 // 16 bars
 /marker Pt3
 /f
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff /f ^f t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff /f ^f t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt3Rpt
 /f
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff /f ^f t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff /f ^f t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt4
@@ -156,15 +156,15 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt2
-/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt2Rpt
-/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+/mp /cresc 24Z . . . . . 8T /ff /f 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /f 8t  /mp /cresc 24Z . . . . . 8T /f 8t
+/mp /cresc 24Z . . . . . 8T /ff /f 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 
@@ -172,16 +172,16 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /marker MurdoWedd
 /marker Pt3
 /f
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff /f ^f t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff /f ^f t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt3Rpt
 /f
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff /f ^f t
 ^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /f ^f t
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff /f ^f t
 ^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
 
 /marker Pt4

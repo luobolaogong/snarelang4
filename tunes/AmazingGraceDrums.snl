@@ -3,7 +3,7 @@
 // Sounds to me like it should be 9/8 time
 // And the subdivisions should be 20th notes
 /time 3/4
-/tempo 4=70
+/tempo 4=68
 
 /track met
 /channel 0
@@ -13,7 +13,7 @@
 >4M 10M 20M 10M
 // pickup:
 4M
-
+/text Frip Doodle
 //marker B1-4
 >4M . .  >4M . .  >4M . .  >4M . .
 //marker B5-8
@@ -35,6 +35,8 @@
 
 /track snare5
 /channel 5
+// I think this drum part is a waste of opportunity.
+// Change it to a Bolero.  And fix the intro/sync whateve.
 // Count in and pickup
 >4r . 12r . .
 >4r .
@@ -46,7 +48,7 @@
 4:3r . . .
 4:3r . . .
 
-/p
+/mp
 24Z . . . . .  24Z . . . . .  24Z . . . . .
 24Z . . . . .  24Z . . . . .  24Z . . . . .
 24Z . . . . .  24Z . . . . .  24Z . . . . .
@@ -54,8 +56,8 @@
 
 24Z . . . . .  24Z . . . . .  24Z . . . . .
 24Z . . . . .  24Z . . . . .  24Z . . . . .
-/cresc 24Z . . . . .  24Z . . . . .  24Z . . . . .  /f
-/decresc 24Z . . . . .  24Z . . . . .  24Z . . . . . /p
+/cresc 24Z . . . . .  24Z . . . . .  24Z . . . . .  /ff
+/decresc 24Z . . . . .  24Z . . . . .  24Z . . . . . /mp
 
 24Z . . . . .  24Z . . . . .  24Z . . . . .
 24Z . . . . .  24Z . . . . .  24Z . . . . .
@@ -64,8 +66,8 @@
 
 24Z . . . . .  24Z . . . . .  24Z . . . . .
 24Z . . . . .  24Z . . . . .  24Z . . . . .
-/cresc 24Z . . . . .  24Z . . . . .  24Z . . . . .  /f
-/decresc 24Z . . . . .  24Z . . . . .  /p 4t
+/cresc 24Z . . . . .  24Z . . . . .  24Z . . . . .  /ff
+/decresc 24Z . . . . .  24Z . . . . .  /mp 4t
 
 
 

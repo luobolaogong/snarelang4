@@ -85,37 +85,37 @@ _8M . _8M .    _8M . _8M .    _8M . _8M .    _2M
 
 /marker P1L1Rpt
 ^24:5t 24t 24Z . . 8t
-^8F 24Z . . 8t t
+^8F 24Z . . >8t t
 /cresc ^8F ^8f  ^12F /ff /mf 24t 12t 24f
 12T 24t ^8F ^f 24Z . .
 
 /marker P1L2Rpt
 ^24:5t 24t 24Z . . 8t
-^8F 24Z . . 8t 24Z . .
+^8F 24Z . . >8t 24Z . .
 ^4T /cresc 24Z . . . . .
 ^4T /ff /mf 8r 12T 24t
 
 /marker P2L3
-^40T 20z .  40t 20Z . ^12T 24t 12T 24t
-^40T 20z .  40t 20Z . 8T t
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . >8T /ff /f t
 /cresc ^8F ^8f  ^12F /ff 24t 12t 24f
 12T 24t ^8F ^f /mf 12T 24t
 
 /marker P2L4
-^40T 20z .  40t 20Z . ^12T 24t 12T 24t
-^40T 20z .  40t 20Z . 8T 24Z . .
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . >8T /ff /f 24Z . .
 ^4t /cresc 24Z . . . . .
 ^4T /ff 8r 12T 24t
 
 /marker P2L3Rpt
-^40T 20z .  40t 20Z . ^12T 24t 12T 24t
-^40T 20z .  40t 20Z . 8T t
-/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . 8T /ff /f t
+^8F ^8f  ^12F 24t 12t 24f
 12T 24t ^8F ^f /mf 12T 24t
 
 /marker P2L4Rpt
-^40T 20z .  40t 20Z . ^12T 24t 12T 24t
-^40T 20z .  40t 20Z . 8T 24Z . .
+/mf /cresc >40T 20z .  40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  40t 20Z . 8T /ff /f 24Z . .
 ^4t /cresc 24Z . . . . .
 ^4T /fff /mf 8r 12T 24t
 

@@ -1,0 +1,259 @@
+// The Black Bear, at a faster tempo (90bpm) intended to be more exciting, and used as an intro
+// to some tune at a slower tempo (84) with a "boom boom" transition to a roll off.
+// This is an experiment by Peter.
+
+
+/time 2/4
+/tempo 94
+
+/track met
+/channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/ff
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+
+/mf
+
+4M .   . .   . .  8M . 4M
+4M .   . .   . .  8M . 4M
+
+4M .   . .   . .  8M . 4M
+4M .   . .   . .  8M . 4M
+
+4M .   . .   . .   . .
+4M .   . .   . .   . .
+
+4M .   . .   . .  8M . 4M
+4M .   . .   . .  8M . 4M
+
+/tempo 84
+/marker BoomBoomRollOff
+/ff
+// boom boom
+8M . . .
+8M . . .
+// Roll-off
+4M . 8M . . .
+4M . 8M . . .
+
+
+
+
+/track snare5
+/channel 5
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^8f
+
+/cresc 24Z . .
+
+/marker AL1
+>8t /ff /f 8t 12T ^24t 12T 24T
+>8t t 12T ^24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker AL2
+>8t /ff /f 8t 12T ^24t 12T 24T
+>8t t 12T ^24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /f >. >.  /cresc 24Z . .
+
+/marker AL1Rpt
+>8t /ff /f 8t 12T ^24t 12T 24T
+>8t t 12T ^24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker AL2Rpt
+>8t /ff /f 8t 12T ^24t 12T 24T
+>8t t 12T ^24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /f . . T
+
+/marker BL3
+>8t /cresc 24Z . .   >8t /ff /f /cresc 24Z . .
+>12t /ff /f 24T 12t 24t  >12T 24t 12T 24T
+>8t /cresc 24Z . .   >8t /ff /f 24Z . .
+>12t 24T 12t 24t  >12T 24t 12T 24t
+
+/marker BL4
+>44T /mf /cresc 22z . . . .  >216:5T  108:5z . . .  >24t
+>40T 20z .  >40t 20Z .  >44T 22z . . . .
+>8T /ff . >12T 24t 12T 24T
+>8t /f /cresc 32Z . . .  >8T /ff /f  /cresc 24Z . .
+
+
+/marker AL1Rpt2
+>8t /ff /f 8t 12T ^24t 12T 24T
+>8t t 12T ^24t 12T 24T
+>8t 8r 4r
+4r 8r /cresc 24Z . .
+
+/marker AL2Rpt2
+>8t /ff /f 8t 12T ^24t 12T 24T
+>8t t 12T ^24t 12T 24T
+>4t /cresc 24Z . . . . .
+>8T /ff /f >. >. 8r
+
+//tempo 84
+//marker BoomBoomRollOff
+8F . 4r
+8F . 4r
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+
+
+//////////////// Tenor //////////////////////
+
+/track tenor
+/channel 3
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+
+/mf
+// line 1
+_8N _N 4r
+_8N _N 4r
+_4N 4r
+2r
+
+// line 2
+_8N _N 4r
+_8N _N 4r
+_4N 4n
+8N _n >4N
+
+// line 1Rpt
+_8N _N 4r
+_8N _N 4r
+_4N 4r
+2r
+
+// line 2Rpt
+_8N _N 4r
+_8N _N 4r
+_4N 4n
+8N _n >4N
+
+// part b, line 3
+_8N . . .
+_8N . . .
+_8N . . .
+_8N . . .
+
+// line 4
+/p /cresc _4N _24:5N _24n
+_8N _. >4N
+/f
+_4N .
+8N _n >4N /mf
+
+
+
+// Part A, line 1 rpt
+_8N _N 4r
+_8N _N 4r
+_4N 4r
+2r
+
+// Part A, line 2 rpt
+_8N _N 4r
+_8N _N 4r
+_4N 4n
+8N _n >4N
+
+
+//tempo 84
+//marker BoomBoomRollOff
+/ff
+8N . 4r
+8N . 4r
+// Roll-off
+/ff /< 4N .  2N /fff
+/ff /< 4N .  2N /fff
+
+
+//////////////// Bass /////////////////////////
+/track bass
+/channel 7
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/mp
+
+// line 1
+_8B _B 4r
+_8B _B 4r
+_4B 4r
+2r
+
+// line 2
+_8B _B 4r
+_8B _B 4r
+_4B 4b
+8B _b >4B
+
+// line 1Rpt
+_8B _B 4r
+_8B _B 4r
+_4B 4r
+2r
+
+// line 2Rpt
+_8B _B 4r
+_8B _B 4r
+_4B 4b
+8B _b >4B
+
+// part b, line 3
+_8B . . .
+_8B . . .
+_8B . . .
+_8B . . .
+
+// line 4
+/p /cresc _4B _24:5B _24b
+_8B _. >4B /f
+/mf
+_4B .
+8B _b >4B /mp
+
+
+
+// Part A, line 1 rpt
+_8B _B 4r
+_8B _B 4r
+_4B 4r
+2r
+
+// Part A, line 2 rpt
+_8B _B 4r
+_8B _B 4r
+_4B 4b
+8B _b >4B
+
+
+
+//tempo 84
+//marker BoomBoomRollOff
+/ff
+8B . 4r
+8B . 4r
+// Roll-off
+/ff /< 4B .  2B /fff
+/ff /< 4B .  2B /fff
+

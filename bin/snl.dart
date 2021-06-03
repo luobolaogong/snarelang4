@@ -100,8 +100,8 @@ Future <void> main(List<String> arguments) async {
   // Create Midi header
   var midi = Midi(); // I guess "midi" is already defined elsewhere
   // var midiHeaderOut = MidiHeader(ticksPerBeat: ticksPerBeat, format: 1, numTracks:2); // puts this in header with prop "ppq"  What would 2 do?
-
-  var midiHeader =  midi.createMidiHeader(); // 840 ticks per beat seems good
+  //print('stop here, what is score?' + score.toString());
+  //var midiHeader =  midi.createMidiHeader(); // 840 ticks per beat seems good
 
   // Create Midi tracks.
   var midiTracks = <List<MidiEvent>>[];
@@ -114,6 +114,8 @@ Future <void> main(List<String> arguments) async {
   // but what happened to the processing phases before that?
   //
   midi.addMidiEventsToTracks(midiTracks, score.elements, commandLine);
+  // Now we know how many tracks there are.  Update header?
+  var midiHeader =  midi.createMidiHeader(midiTracks.length); // 840 ticks per beat seems good
 
   // Add the header and tracks list into a MidiFile, and write it
   var midiFile = MidiFile(midiTracks, midiHeader);

@@ -1,0 +1,220 @@
+// Castle Dangerous -- simple repetitious drum parts by me.  Written to be easily memorized, and dumbed down if necessary, by removing flams and "solo" parts optional by those who cannot play it clean
+// And if you can't play the flams, play taps.
+// March
+
+/track met
+/channel 0
+// Sync:
+/time 4/4
+/tempo 84
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+/time 1/4
+4r
+/time 3/4
+/mp
+^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .
+^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .
+^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .
+^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .
+
+^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .
+^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .
+^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .
+^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . _8M .   ^8M . _8M . 4M
+
+
+/track snare
+
+
+// sync
+//time 4/4
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// Roll-off
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+
+/////////// Castle Dangerous
+// This has the 3/4 bar lines shifted left one beat, making the pickups on beat 1
+/time 3/4
+/tempo 84
+/time 1/4
+24:5F 24t    // solo
+/time 3/4
+
+// marker P1
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>12T /cresc 24t >12T >24f   >24T . . 12t >24F    24t . . 12T _24t   // this line is a "solo", play it if you can
+
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+//>4T /f                    >24T . . 12t >24F    24t . . 12T 24t   // this line is a "solo", play it if you can
+//>4T /f                    >40T 20z . 12t ^24F   24t . . 12T _24t   // this line is a "solo", play it if you can
+>4F /f                    24Z . . 12t ^24F   24t . . 12T _24t   // this line is a "solo", play it if you can
+
+
+
+// marker P1Rpt
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>12T /cresc 24t >12T >24f   >24T . . 12t >24F    24t . . 12T _24t   // this line is a "solo", play it if you can
+
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>4F /f                    24Z . . 12t ^24F   24t . . 12T _24t   // this line is a "solo", play it if you can
+
+
+// marker P1Rpt
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>12T /cresc 24t >12T >24f   >24T . . 12t >24F    24t . . 12T _24t   // this line is a "solo", play it if you can
+
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>4F /f                    24Z . . 12t ^24F   24t . . 12T _24t   // this line is a "solo", play it if you can
+
+
+// marker P1Rpt
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>12T /cresc 24t >12T >24f   >24T . . 12t >24F    24t . . 12T _24t   // this line is a "solo", play it if you can
+
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+>40T /ff /f 20z . 8t      >8F 24Z . .          24t . . 12T 24t
+//>40T 20z . >40t 20Z . >4T /fff 4r
+>40T 20z . 24z . . >12T ^12f ^. ^4f
+
+
+
+
+////////////// Tenor ////////////////////////////////////
+
+/track tenor
+/channel 2
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+
+/mf
+
+// Roll off
+4N . 2N
+4N . 2N
+
+
+
+/////////// Castle Dangerous
+/time 1/4
+4r
+/time 3/4
+/tempo 84
+/mf
+8r 4n 8N . .
+8r 4n 8N . .
+8r 4n 8N . .
+//8r 4n 8N . .
+8r 12N 6n 12N 6n 8N
+
+8r 4n 8N . .
+8r 4n 8N . .
+8r 4n 8N . .
+2N 4r
+
+
+8r 4n 8N . .
+8r 4n 8N . .
+8r 4n 8N . .
+8r 12N 6n 12N 6n 8N
+
+8r 4n 8N . .
+8r 4n 8N . .
+8r 4n 8N . .
+2N 4r
+
+
+8r 4n 8N . .
+8r 4n 8N . .
+8r 4n 8N . .
+8r 12N 6n 12N 6n 8N
+
+8r 4n 8N . .
+8r 4n 8N . .
+8r 4n 8N . .
+2N 4r
+
+
+8r 4n 8N . .
+8r 4n 8N . .
+8r 4n 8N . .
+8r 12N 6n 12N 6n 8N
+
+8r 4n 8N . .
+8r 4n 8N . .
+8r 4n 8N . .
+//2N 4r
+4N 12N . . 4N
+
+
+
+
+//////////////// Bass  //////////////////////////////////////
+
+/track bass
+/channel 8
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Bwo"
+1r
+
+
+/f
+
+// Roll off
+4B . 2B
+4B . 2B
+
+
+/////////// Castle Dangerous
+/time 1/4
+4r
+/time 3/4
+/tempo 84
+/mf
+_2B 8r 8b   _2B 8r 8b   _2B 8r 8b   _2B _4B
+_2B 8r 8b   _2B 8r 8b   _2B 8r  8b   _2B 4r
+
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B _4B
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B 4r
+
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B _4B
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B 4r
+
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B _4B
+_2B 8r  8b   _2B 8r  8b   _2B 8r  8b   _2B 16B 16:3r
+
+
+
+
+
