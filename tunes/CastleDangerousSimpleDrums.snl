@@ -6,7 +6,7 @@
 /channel 0
 // Sync:
 /time 4/4
-/tempo 84
+/tempo 75
 /ff
 _4M _. _8M . _4M
 /f
@@ -47,7 +47,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /////////// Castle Dangerous
 // This has the 3/4 bar lines shifted left one beat, making the pickups on beat 1
 /time 3/4
-/tempo 84
+/tempo 75
 /time 1/4
 24:5F 24t    // solo
 /time 3/4
@@ -128,7 +128,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /time 1/4
 4r
 /time 3/4
-/tempo 84
+/tempo 75
 /mf
 8r 4n 8N . .
 8r 4n 8N . .
@@ -200,7 +200,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /time 1/4
 4r
 /time 3/4
-/tempo 84
+/tempo 75
 /mf
 _2B 8r 8b   _2B 8r 8b   _2B 8r 8b   _2B _4B
 _2B 8r 8b   _2B 8r 8b   _2B 8r  8b   _2B 4r

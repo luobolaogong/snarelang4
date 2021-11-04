@@ -1,13 +1,11 @@
 // Captain Norman Orr Ewing -- massed bands drums
 // The massed bands snare part is by James Laughlin.  A 2/4 March.
-//
-// But this is the 4/4 massed bands setting by Laughlin
-
+// That's because this is a 2/4.
 
 /track metronome
 /channel 0
-/time 2/4 // While we use a 4/4 setting, keep this marked as 2/4 to match the pipe score
-/tempo 70    // for B'day party gig
+/time 2/4 // yes both of these lines can be here and in snare score
+/tempo 76    // not sure, was 70
 
 // Sync:
 /ff
@@ -89,66 +87,349 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /f
 // Roll-off
 /cresc 24Z . . . . .    . . . . . .   2T /fff /f
-/cresc 24Z . . . . .    . . . . . .   2T /fff
+/cresc 24Z . . . . .    . . . . . .   4T /fff
 
 
 /f
 
-// This is the 4/4 massed bands setting by Laughlin, even though the tune is a 2/4
-// Prob should check to see that this is the same as the score in MassedBands24JLDrums
-// And it's not but should be, right?
+// This is the 2/4 massed bands setting by Laughlin.
 
-/marker Pt1
+8r 24Z . .
+/marker P1L1
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /ff /mf 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker P1L2
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /ff /mf 8r 24Z . .
+
+/marker P1L1Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /ff /mf 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker P1L2Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /ff /mf 8r 12T 24t
+
+/marker P2L3
+^40T 20z .  ^40t 20Z . ^12T 24t 12T 24t
+^40T 20z .  ^40t 20Z . 8T t
+/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+12T 24t ^8F ^f /mf 12T 24t
+
+/marker P2L4
+^40T 20z .  ^40t 20Z . ^12T 24t 12T 24t
+^40T 20z .  ^40t 20Z . 8T 24Z . .
+^4t /cresc 24Z . . . . .
+^4T /ff 8r 12T 24t
+
+/marker P2L3Rpt
+^40T 20z .  ^40t 20Z . ^12T 24t 12T 24t
+^40T 20z .  ^40t 20Z . 8T t
+/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+12T 24t ^8F ^f /mf 12T 24t
+
+/marker P2L4Rpt
+^40T 20z .  ^40t 20Z . ^12T 24t 12T 24t
+^40T 20z .  ^40t 20Z . 8T 24Z . .
+^4t /cresc 24Z . . . . .
+^4T /fff /mf 8r 12T 24t
+
+/marker P3L5
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F t
+^8F ^f  ^12F 24t 12T 24f
+12T 24t ^8F  ^f 12T 24t
+
+/marker P3L6
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+4T /fff /mf 8r 12T 24t
+
+/marker Pt3L5Rpt
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F t
+^8F ^f  ^12F 24t 12T 24f
+12T 24t ^8F  ^f 12T 24t
+
+/marker Pt3L6Rpt
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+4T /fff /mf 8r 12T 24t
+
+/marker P4L7
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F t
+^8F ^f ^12F 24t 12T 24f
+12T 24t ^8F ^f 12T 24t
+
+/marker P4L8
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+^4T /fff /mf 8r 12T 24t
+
+/marker P4L7Rpt
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F t
+^8F ^f ^12F 24t 12T 24f
+12T 24t ^8F ^f 12T 24t
+
+/marker P4L8Rpt
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+^4T /fff /mf 4r
+
+
+
+// Is the following right????
+
+
+
+////////// Tenor /////////////////////////
+/track tenor
+/channel 3
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+1r
+// Roll-off
+/ff 4N . 2N    4N . 2N
+
+// This is taken from the JL Massed Bands 2/4 setting
 /f
-^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
-^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+// Line 1
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
 
-/marker Pt1Rpt
+// Line 2
+4N .
+4N .
+4N .
+2N
+
+// Line 1Rpt
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
+
+// Line 2Rpt
+4N .
+4N .
+4N .
+2N
+
+// Line 3
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+   8N 4n
+
+// Line 4
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
+
+// Line 3Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+    8N 4n
+
+// Line 4Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
+
+
+// WHAT??? JUST REPEAT THE ABOVE?????
+// This is taken from the JL Massed Bands 2/4 setting
 /f
-^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
-^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+// Line 1
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
 
-/marker Pt2
-/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff /f 8t
-^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+// Line 2
+4N .
+4N .
+4N .
+2N
 
-/marker Pt2Rpt
-/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff  /f8t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /ff 8t  /mp /cresc 24Z . . . . . 8T /ff  /f8t
-^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+// Line 1Rpt
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
 
-/marker Pt3
-/f
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff  /f^f t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff  /f^f t
-^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+// Line 2Rpt
+4N .
+4N .
+4N .
+2N
 
-/marker Pt3Rpt
-/f
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff  /f^f t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /ff  /f^f t
-^4F /mp /cresc 24Z . . . . . >4T /ff 8r t
+// Line 3
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+   8N 4n
 
-/marker Pt4
-/f
-^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t
-^4F /mp /cresc 24Z . . . . . >4T /ff  /f8r t
+// Line 4
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
 
-/marker Pt4Rpt
-/f
-^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t
-^4F /mp /cresc 24Z . . . . . >4T /ff 4r
+// Line 3Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+    8N 4n
+
+// Line 4Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
+
+
+
+
+
+
+
+
+
+////////////// Bass /////////////////////
+/track bass
+/channel 7
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/mf
+/marker P&D 1,2
+1r
+// Roll-off
+/mf 4B . 2B    4B . 2B
+
+/mf
+// Line 1
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2
+4B .
+4B .
+4B .
+2B
+
+// Line 1Rpt
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2Rpt
+4B .
+4B .
+4B .
+2B
+
+// Line 3
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4
+8B . 4B
+8b . 4b
+4B .
+2B
+
+// Line 3Rpt
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4Rpt
+8B . 4B
+8b . 4b
+4B .
+2B
+
+
+// WHAT???? JUST REPEAT ABOVE???
+// Line 1
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2
+4B .
+4B .
+4B .
+2B
+
+// Line 1Rpt
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2Rpt
+4B .
+4B .
+4B .
+2B
+
+// Line 3
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4
+8B . 4B
+8b . 4b
+4B .
+2B
+
+// Line 3Rpt
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4Rpt
+8B . 4B
+8b . 4b
+4B .
+2B
+
 

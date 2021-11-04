@@ -10,10 +10,11 @@
 /mp
 // Count in and pickup
 >4M . 20:3M 10M
->4M 10M 20M 10M
+//>4M . 20:3M 10M
+>4M .
 // pickup:
 4M
-/text Frip Doodle
+/text Amazing Grace
 //marker B1-4
 >4M . .  >4M . .  >4M . .  >4M . .
 //marker B5-8
@@ -67,7 +68,7 @@
 24Z . . . . .  24Z . . . . .  24Z . . . . .
 24Z . . . . .  24Z . . . . .  24Z . . . . .
 /cresc 24Z . . . . .  24Z . . . . .  24Z . . . . .  /ff
-/decresc 24Z . . . . .  24Z . . . . .  /mp 4t
+/decresc 24Z . . . . .    /mp 4t
 
 
 
@@ -88,7 +89,7 @@
 4:3B . . .
 4:3B . /cresc 4B . .  /f /decresc 4b . . /mf
 4:3B . . .
-4:3B . /cresc 4B . .  /f /decresc 4b . 4b /mp
+4:3B . /cresc 4B . .  /f /decresc 4b . 4r /mp
 
 
 /track tenor
@@ -110,4 +111,4 @@
 
 4r 4N . 4r 4N . 4r 4N . 4r 4N .
 //4r 4N . 4r 4N . /cresc 24N . . . . .  . . . . . .  . . . . . . /f /decresc 24N . . . . .  . . . . . . /mp 4N
-4r 4N . 4r 4N . /cresc 32N . . . . . . .  . . . . . . . .  . . . . . . . . /f /decresc 32N . . . . . . .  . . . . . . . . /mp 4N
+4r 4N . 4r 4N . /cresc 32N . . . . . . .  . . . . . . . .  . . . . . . . . /f /decresc 32N . . . . . . .   /mp 4N

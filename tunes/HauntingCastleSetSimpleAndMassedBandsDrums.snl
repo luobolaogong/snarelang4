@@ -1,4 +1,4 @@
-
+// This is a kinda shifted version, though not obviously
 // The Haunting / Castle Dangerous Set Massed Bands version - Drums
 
 // metronome first for both tunes
@@ -11,7 +11,8 @@
 
 // Count off, 2 bars of 3/4
 /ff
-^4M >. _8M .    ^4M >. _8M .
+//^4M >. _8M .    ^4M >. _8M .
+^4M _8M . 4M  ^4M _8M . 4M
 
 
 
@@ -38,8 +39,9 @@
 >4M . .  _4M . .
 >4M . .  _4M . .
 >4M . .  _4M . .
-/time 5/4
->4M . .  _4M . // make this into a 5/4 bar
+>4M . .  _4M . .
+//time 5/4
+//>4M . .  _4M . // make this into a 5/4 bar
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -65,8 +67,8 @@
 // The drum score here is written as it sounds.  The pipe score is not.  Should have made them the same.
 // Try to compensate by throwing in one extra count to make up for the previous tune.
 // Won't be able to make Midi Voyager work right though.
-/time 1/4
-4M
+//time 1/4
+//4M
 /time 3/4
 ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
 ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M   ^8M . _8M . _4M
@@ -80,7 +82,7 @@
 
 //////////////// Snare  //////////////////////////////////////
 
-//time 3/4
+/time 3/4
 //tempo 78
 
 
@@ -95,7 +97,7 @@
 // Ravel's Bolero was extremely simple but effective.
 // Can we play this cleanly?  This is a good exercise.
 
-//time 3/4
+/time 3/4
 //tempo 78
 /f
 
@@ -121,23 +123,18 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .    
 _8T  /fff /f 24t . .   _8T 24t . .  _8T _8t      _8T  24t . .   _8T 24t . .  _8T _8t
 _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _8T  24t . .   _8T 24t . .  _24T . . _24t . .
 _8T  24t . .   _8T 24t . .  _8T _8t             _8T  24t . .   _8T 24t . .  _8T _8t
-// _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .     >40T 20z . 24t . .
-/time 5/4
-_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .    // made into a 5/4
+_8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .   >40T 20z . 24t . . /ff /f
 
-// HEY, is that last bar supposed to be in 5/4????????????????????????????????????????????????????????????????????????
 
 /////////// Castle Dangerous
 // This has the 3/4 bar lines shifted left one beat, making the pickups on beat 1
 //time 3/4
 //tempo 78
-//time 1/4
->40T 20z . 24t . . /ff /f
-//time 3/4
+/time 3/4
 
 /marker Pt1
 /f
->8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
+>8T 24Z . . 8t /mf /< 24Z . .   . . . 8T
 >8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
 >8F 24Z . . 8t /mf /< 24Z . .  . . . 8T
 >4f /ff /mf /< 24Z . . . . .   4T /ff /f
@@ -150,16 +147,16 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .    
 >4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
 ///marker Pt2
-//>8F 24Z . . 8t >F  12T >24:3f 24t
-//>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
-//>8F 24Z . . 8t >F  12T >24:3f 24t
-//>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
 ///marker Pt2Rpt
-//>8F 24Z . . 8t >F  12T >24:3f 24t
-//>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
-//>8F 24Z . . 8t >F  12T >24:3f 24t
-//>4f /ff /mf /< 24Z . . . . .   4T /ff /f
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >F  12T >24:3f 24t
+>4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
 /marker Pt3
 >8F 24Z . . 8t >8F /mf /< 24Z . . 8t /ff /f
@@ -173,44 +170,20 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .    
 >8F 24Z . . 8t >8F /mf /< 24Z . . 8t /ff /f
 >4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
-// Repeat the above
-/marker Pt1
-/f
->8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
->8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
->8F 24Z . . 8t /mf /< 24Z . .  . . . 8T
->4f /ff /mf /< 24Z . . . . .   4T /ff /f
+/marker Pt4
+>8F 24Z . . 8t >12F 24t 12T /cresc ^30t . . . .
+>8T /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >12F 24t 12T /cresc ^30t . . . .
+>4T /ff /mf /< 24Z . . . . .   4T /ff /f
 
-/marker Pt1Rpt
-/f
->8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
->8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
->8F 24Z . . 8t /mf /< 24Z . .   . . . 8T
->4f /ff /mf /< 24Z . . . . .   4T /ff /f
+/marker Pt4
+>8F 24Z . . 8t >12F 24t 12T /cresc ^30t . . . .
+>8T /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
+>8F 24Z . . 8t >12F 24t 12T /cresc ^30t . . . .
+//>4T /ff /mf /< 24Z . . . . .   4T /ff /f
+>4T /f
 
-///marker Pt2
-//>8F 24Z . . 8t >F  12T >24:3f 24t
-//>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
-//>8F 24Z . . 8t >F  12T >24:3f 24t
-//>4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
-///marker Pt2Rpt
-//>8F 24Z . . 8t >F  12T >24:3f 24t
-//>8f  /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
-//>8F 24Z . . 8t >F  12T >24:3f 24t
-//>4f /ff /mf /< 24Z . . . . .   4T /fff /f
-
-/marker Pt3
->8F 24Z . . 8t >8F /mf /< 24Z . . 8t /ff /f
->8f  /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
->8F 24Z . . 8t >8F /mf /< 24Z . . 8t /ff /f
->4f /ff /mf /< 24Z . . . . .   4T /ff /f
-
-/marker Pt3Rpt
->8F 24Z . . 8t >8F /mf /< 24Z . . 8t /ff /f
->8f  /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
->8F 24Z . . 8t >8F /mf /< 24Z . . 8t /ff /f
->4f /ff /mf /< 24Z . . . . .   4T /ff /f
 
 
 
@@ -247,7 +220,7 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .    
 48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .  /mp /decresc 48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .
 48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .  48N . . . . . . . . . . .    48N . . . . . . . . . . .    48N . . . . . . . . . . .
 /p
-/mp
+/mf
 4r 4N 8N .   4r 4N 8N .
 4r 4N 8N .   4r 4N 8N .
 4r 4N 8N .   4r 4N 8N .
@@ -261,21 +234,67 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T /mf /cresc 24Z . . . . .    
 4r 4N 8N .   4r 4N 8N .
 4r 4N 8N .   4r 4N 8N .
 4r 4N 8N .   4r 4N 8N .
-//4r 8N . . .  4N 8N . 4N
-/time 5/4
-4r 8N . . .  4N 8N .
+4r 8N . . .  4N 8N . 4N
 
 
 /////////// Castle Dangerous
 
-//time 3/4
-//tempo 78
+
+// this is from the 3/4 JL massed bands
+
 /mf
-//time 1/4
-4r
-//time 3/4
+// Line 1
+4N 8N 8:3N
+4N 24n . . 8N  12N 6N
+4N 8N 8:3n
+2N 4r
+
+// Line 1Rpt
+4N 8N 8:3N
+4N 24n . . 8N  12N 6N
+4N 8N 8:3n
+2N 4r
 
 
+// Line 3
+4N 8N >8:3N
+4N 24n . . 8N  12N 6N
+4N 8N >8:3n
+2N 4r
+
+// Line 3Rpt
+4N 8N 8:3N
+4N 24n . . 8N  12N 6N
+4N 8N >8:3n
+2N 4r
+
+
+// Repeat the above
+
+// Line 1
+4N 8N 8:3N
+4N 24n . . 8N  12N 6N
+4N 8N 8:3n
+2N 4r
+
+// Line 1Rpt
+4N 8N 8:3N
+4N 24n . . 8N  12N 6N
+4N 8N 8:3n
+2N 4r
+
+
+// Line 3
+4N 8N 8:3N
+4N 24n . . 8N  12N 6N
+4N 8N 8:3n
+2N 4r
+
+// Line 3Rpt
+4N 8N 8:3N
+4N 24n . . 8N  12N 6N
+4N 8N 8:3n
+2N 4r
 
 
 
@@ -314,19 +333,75 @@ _4:3B .
 _4:3B .
 _4:3B .
 
-//4:3B . . .  . . . .
 
 _4:3B .
 _4:3B .
 _4:3B .
-/time 5/4
-_4:3B 2B
+_4:3B .
 
 
 /////////// Castle Dangerous
 
-//time 3/4
-//tempo 78
+/mf
+// Line 1
+>4B 8B 4b 8B
+>4b . .
+>4B 8B 4b 8B
+>4b . .
+
+// Line 1Rpt
+>4B 8B 4b 8B
+>4b . .
+>4B 8B 4b 8B
+>4b . .
+
+
+
+// Line 3
+>4B . .
+>4b . .
+>4B . .
+>4b . .
+
+// Line 3Rpt
+>4B . .
+>4b . .
+>4B . .
+>4b . .
+
+
+// repeat the above
+
+// Line 1
+>4B 8B 4b 8B
+>4b . .
+>4B 8B 4b 8B
+>4b . .
+
+// Line 1Rpt
+>4B 8B 4b 8B
+>4b . .
+>4B 8B 4b 8B
+>4b . .
+
+
+
+// Line 3
+>4B . .
+>4b . .
+>4B . .
+>4b . .
+
+// Line 3Rpt
+>4B . .
+>4b . .
+>4B . .
+>4b 2r    // shortened ending
+
+
+
+
+
 
 
 

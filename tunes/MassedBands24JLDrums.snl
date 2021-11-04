@@ -167,3 +167,240 @@ _8M . _8M .    _8M . _8M .    _8M . _8M .    _2M
 4t /cresc 24Z . . . . .
 ^4T /fff /mf 4r
 
+
+
+////////// Tenor /////////////////////////
+/track tenor
+/channel 3
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+1r
+// Roll-off
+/ff 4N . 2N    4N . 2N
+
+/f
+// Line 1
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
+
+// Line 2
+4N .
+4N .
+4N .
+2N
+
+// Line 1Rpt
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
+
+// Line 2Rpt
+4N .
+4N .
+4N .
+2N
+
+// Line 3
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+   8N 4n
+
+// Line 4
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
+
+// Line 3Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+    8N 4n
+
+// Line 4Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
+
+
+// Line 5
+4N .
+12r >6N >4n
+8N . 24:5N 6n
+   8N 4n
+
+// Line 6
+4N .
+12r >6N >4n
+4N .
+2N
+
+// Line 5Rpt
+4N .
+12r >6N >4n
+8N . 24:5N 6n
+   8N 4n
+
+// Line 6Rpt
+4N .
+12r >6N >4n
+4N .
+2N
+
+// Line 7
+/mp /cresc
+8N . . .
+8N . 4N /ff
+8N . 24:5N 6n
+   8N 4n
+
+// Line 8
+/mp /cresc
+8N . . .
+8N . 4N /ff
+4N .
+2N
+
+// Line 7Rpt
+/mp /cresc
+8N . . .
+8N . 4N /ff
+8N . 24:5N 6n
+   8N 4n
+
+// Line 8Rpt
+/mp /cresc
+8N . . .
+8N . 4N /ff
+4N .
+2N
+
+
+
+
+////////////// Bass /////////////////////
+/track bass
+/channel 7
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+1r
+// Roll-off
+/ff 4B . 2B    4B . 2B
+
+/f
+// Line 1
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2
+4B .
+4B .
+4B .
+2B
+
+// Line 1Rpt
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2Rpt
+4B .
+4B .
+4B .
+2B
+
+// Line 3
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4
+8B . 4B
+8b . 4b
+4B .
+2B
+
+// Line 3Rpt
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4Rpt
+8B . 4B
+8b . 4b
+4B .
+2B
+
+
+
+// Line 5
+4B .
+12r >6B >4b
+8B . 4B
+2b
+
+// Line 6
+4B .
+12r >6B >4b
+4B .
+2B
+
+// Line 5Rpt
+4B .
+12r >6B >4b
+8B . 4B
+2b
+
+// Line 6Rpt
+4B .
+12r >6B >4b
+4B .
+2B
+
+
+// Line 7
+/mp /cresc
+4B .
+4B . /ff
+8B . 4B
+2b
+
+// Line 8
+/mp /cresc
+4B .
+4B . /ff
+4B .
+2B
+
+// Line 7Rpt
+/mp /cresc
+4B .
+4B . /ff
+8B . 4B
+2b
+
+// Line 8Rpt
+/mp /cresc
+4B .
+4B . /ff
+4B .
+2B
+

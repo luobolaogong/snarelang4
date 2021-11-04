@@ -1,7 +1,7 @@
 // The Haunting - Drums (actually, just metronome since no drums have been written
 
 /time 6/4
-/tempo 4=80
+/tempo 4=75
 
 /track met
 /channel 0

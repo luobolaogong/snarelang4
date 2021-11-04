@@ -1,7 +1,8 @@
 // The Haunting - Drums (actually, just metronome since no drums have been written
 
 /time 3/4   // was 6/4
-/tempo 4=80
+// /tempo 4=80
+/tempo 4=75
 
 /track met
 /channel 0
@@ -33,7 +34,7 @@
 // Can we play this cleanly?  This is a good exercise.
 
 //time 3/4
-//tempo 84
+//tempo 75
 /f
 
 
@@ -77,7 +78,7 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T  /mf /cresc 24Z . . . . .
 
 ////////////// The Haunting
 //time 3/4
-//tempo 84
+//tempo 75
 /mf
 
 
@@ -117,7 +118,7 @@ _8T  24t . .   _8T 24t . .  _24T . . _24t . .   _4T  /mf /cresc 24Z . . . . .
 
 ////////////// The Haunting
 //time 3/4
-//tempo 84
+//tempo 75
 
 4:3r . . .
 

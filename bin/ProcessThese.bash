@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Processing .snl and .ppl files, to create .mid and audio files under ~/MyHobby/ which can be copied into Google Drive for the .org website use."
+echo "There's also the file BuildTunes.bash, which I think is old, so be careful to choose correctly"
 #echo This is being run out of the bin directory of the snarelang4 project, and not the pipelang project, so later pipes wont work right
 #echo We are here: `pwd`
 
@@ -21,7 +22,7 @@ declare soundFontName=DrumsChanterMelody20210407.sf2
 cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${myHobby}/SoundFonts
 declare soundFontFile=${myHobby}/SoundFonts/${soundFontName}
 #cp /home/rob/Desktop/MySoundFonts/PipesAndDrums202011060735.sf2 ${myHobby}/MySoundFonts
-echo soundfont is $soundFontFile
+echo "soundfont is $soundFontFile"
 #cd /home/rob/WebstormProjects/snarelang4/bin
 
 # There should be a way to tell fluidsynth or ffmpeg to make a stereo image like you can do with Rosegarden with the mixer
@@ -32,9 +33,9 @@ echo soundfont is $soundFontFile
 
 
 
-echo Starting to process drum salutes/fanfares ...
+echo "Starting to process drum salutes/fanfares ..."
 declare -a FanfaresSalutesNameArray=( \
-DrumSaluteIoMPB
+DrumSaluteIoMPB \
 )
 rm -f ${myHobby}/FanfaresSalutes/Midis/*.mid
 rm -f ${myHobby}/FanfaresSalutes/Midis/*.sf2
@@ -87,13 +88,12 @@ popd
 # both reference the same area on the Google Drive.
 
 
-
-echo Starting to process metronomes ...
+echo ""
+echo "Starting to process metronomes ..."
 declare -a metronomeNameArray=( \
-QuarterNotes44
-EighthNotes44
-TwelfthNotes44
-)
+QuarterNotes44Met \
+EighthNotes44Met \
+TwelfthNotes44Met )
 rm -f ${myHobby}/Metronomes/Midis/*.mid
 rm -f ${myHobby}/Metronomes/Midis/*.sf2
 # rm -f ${myHobby}/Metronomes/Mp3s/*.mp3
@@ -133,26 +133,28 @@ popd > /dev/null
 
 
 
+echo "I think BanjoBreakdownDrums.snl is missing???"
 
-
-echo Starting to process tunes snare scores that have only one file ...
+echo "Starting to process tunes snare scores that have only one file ..."
 declare -a tuneNameArray=( \
 44MarchSnare \
 #BadgeOfScotland \
 BanjoBreakdownDrums \
 BattleOfWaterlooDrums \
-BattleOfWaterlooMcWhirterDrums \
-BeginnerMarch \
+#BattleOfWaterlooMcWhirterDrums \
+BeginnerMarchDrums \
 BlackBear \
 CastleDangerousDrums \
-JigSnare \
+CastleDangerousMassedBandsShiftedDrums \
+CastleDangerousMassedBandsDrums \
+#JigSnare \
 # March44 \ Fix/check this one
-MassedBand24JLV1P60 \
-MassedBand44JLV1P59 \
-SlowMarchNo1 \
-SlowMarchNo2 \
+#MassedBand24JLV1P60 \
+#MassedBand44JLV1P59 \
+SlowMarchNo1Drums \
+SlowMarchNo2Drums \
 Strath1SnareMet \
-SuperSlowMarchNo2 )
+SuperSlowMarchNo2Drums )
 
 rm -f ${myHobby}/BandTunes/Midis/*.mid
 rm -f ${myHobby}/BandTunes/Mp3s/*.mp3
@@ -267,20 +269,20 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Wavs/BattleOfWaterlooChanterAndDrums.wav
 
 
-dart $snareLangExecutable -i tunes/BattleOfWaterlooMcWhirterDrums.snl -o ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Mp3s/BattleOfWaterlooMcWhirterDrums.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Oggs/BattleOfWaterlooMcWhirterDrums.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Wavs/BattleOfWaterlooMcWhirterDrums.wav
+#dart $snareLangExecutable -i tunes/BattleOfWaterlooMcWhirterDrums.snl -o ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Mp3s/BattleOfWaterlooMcWhirterDrums.mp3
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Oggs/BattleOfWaterlooMcWhirterDrums.ogg
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Wavs/BattleOfWaterlooMcWhirterDrums.wav
 
 dart $pipeLangDartFile -i ${pipeLangDir}/tunes/BattleOfWaterlooChanter.ppl -o ${myHobby}/Pipes/Midis/BattleOfWaterlooChanter.mid
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/BattleOfWaterlooChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/Pipes/Mp3s/BattleOfWaterlooChanter.mp3
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/BattleOfWaterlooChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/Pipes/Oggs/BattleOfWaterlooChanter.ogg
 fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/Pipes/Midis/BattleOfWaterlooChanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/Pipes/Wavs/BattleOfWaterlooChanter.wav
 
-dart $tracksFile -l WARNING -i ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid,${myHobby}/Pipes/Midis/BattleOfWaterlooChanter.mid -o ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Mp3s/BattleOfWaterlooChanterAndMcWhirterDrums.mp3
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Oggs/BattleOfWaterlooChanterAndMcWhirterDrums.ogg
-fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Wavs/BattleOfWaterlooChanterAndMcWhirterDrums.wav
+#dart $tracksFile -l WARNING -i ${myHobby}/BandTunes/Midis/BattleOfWaterlooMcWhirterDrums.mid,${myHobby}/Pipes/Midis/BattleOfWaterlooChanter.mid -o ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Mp3s/BattleOfWaterlooChanterAndMcWhirterDrums.mp3
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Oggs/BattleOfWaterlooChanterAndMcWhirterDrums.ogg
+#fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/BattleOfWaterlooChanterAndMcWhirterDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Wavs/BattleOfWaterlooChanterAndMcWhirterDrums.wav
 
 
 dart $snareLangExecutable -i tunes/MurdosWeddingDrums.snl -o ${myHobby}/BandTunes/Midis/MurdosWeddingDrums.mid
@@ -348,7 +350,7 @@ fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes
 
 
 
-echo Starting to process Non-Band tunes
+echo "Starting to process Non-Band tunes"
 
 
 declare -a nonBandTunes=( \
@@ -462,8 +464,7 @@ JlV1P58-39 \
 JlV1P59-40 \
 JlV1P60-41 \
 JlV1P61-42 \
-JlV1P62-43 \
-)
+JlV1P62-43 )
 
 rm -f ${myHobby}/Books/JLV1/Midis/*.mid
 rm -f ${myHobby}/Books/JLV1/Midis/*.sf2
@@ -576,7 +577,7 @@ popd
 # exercises no one's interested in:
 
 # Leo Browne exercises.  These are not really warmups, but just technique builders.  Move later.
-echo Starting to process Leo Brown exercises
+echo "Starting to process Leo Brown exercises"
 declare -a leoBrowneExercises=( \
 8s \
 Accents \
@@ -733,7 +734,7 @@ popd
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TireeDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Oggs/TireeDrums.ogg
 #fluidsynth -q -a alsa -g 2.0 -T raw  -F - ${soundFontFile}  ${myHobby}/BandTunes/Midis/TireeDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.3" ${myHobby}/BandTunes/Wavs/TireeDrums.wav
 
-echo Done processing files
+echo "Done processing files"
 exit 0
 
 

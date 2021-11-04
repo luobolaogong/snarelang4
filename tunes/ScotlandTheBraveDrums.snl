@@ -81,6 +81,32 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 4F /f /< 24Z . . . . 24t 8t /fff /f . /< 24Z . . 24t . .
 4F /fff /f /< 24Z . . . . 24t  _40T /fff 20z . 24z . . 4T
 
+
+// They want it twice through, so play it all again
+/marker L1
+/f /< 24Z . . . . . 8T /fff /f  12r 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24Z . 24t  _40T /fff /f 20z . 8t 24Z . . 8t
+4F /f /< 24Z . . . . 24t 8T /fff /f . /< 24Z . . 24t . .
+4F /f /< 24Z . . . . . 8T /fff /f 12r 24t  12f ^24T 12t 24
+
+/marker L2
+/f /< 24Z . . . . . 8T /fff /f 12r 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24Z . 24t  _40T /fff /f 20z . 8t 24Z . . 8t
+4F /f /< 24Z . . . . t 8T /fff /f . /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . 24t _40T 20z . 24z . . 8T /fff /f .
+
+/marker L3
+4F /f /< 24Z . . . . 24t _40T /fff /f 20z . 8t /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . . 8T /fff /f . 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24z . 24t 4T /fff /f /< 24Z . . . . 24t
+>8T /fff /f /< 24Z . . 8T 8F 24T . . 8f 24Z . . 8t
+
+/marker L4
+/f /< 24Z . . . . . 24:5T /fff /f 24t 8F 8t 24Z . . 8t
+/f /< 24Z . . . . . _40T 20z . 24z . 24t  _40T /fff /f 20z .  8t  24Z . . 8t
+4F /f /< 24Z . . . . 24t 8t /fff /f . /< 24Z . . 24t . .
+4F /fff /f /< 24Z . . . . 24t  _40T /fff 20z . 24z . . 4T
+
 ////////////////// Tenor //////////////////////////
 
 /track tenor
@@ -125,6 +151,30 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 4N 24:5N 24n  4N 8N 24n . .
 4N . . .
 
+// Line 1
+4N . 2N
+4N . 2N
+4N . . 8N 24n . .
+1N
+
+// Line 2
+4N . 2N
+4N . 2N
+4N 24:5N 24n 4N 8N 24n . .
+4N . . .
+
+// Line 3
+2N 8N . 8N 24n . .
+2N 8N . . .
+2N 4r 8N 24n . .
+2N 24N . . 8:3n
+
+// Line 4
+4N . 2N
+4N . 2N
+4N 24:5N 24n  4N 8N 24n . .
+4N . . .
+
 ///////////// Bass ///////////////////////////////
 /track bass
 /channel 3
@@ -137,12 +187,36 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 // "By the right, quick march"
 1r
 // Roll off
-/f
+/mf
 4B . . 4r
 4B . . 4r
 
 
-/f
+/mf
+// Line 1
+4B . 8B . . .
+4B . 8B . . .
+2B 4b 8B .
+4B . 2B
+
+// Line 2
+4B . 8B . . .
+4B . 8B . . .
+2B 4b 8B .
+4B . . 4r
+
+// Line 3
+4B . 8B . . .
+4B . . 8B .
+4B . 2B
+8B . . 8:3b 8B .
+
+// Line 4
+4B . 8B . . .
+4B . 8B . . .
+2B 4B 8B .
+4B 2B 4b
+
 // Line 1
 4B . 8B . . .
 4B . 8B . . .

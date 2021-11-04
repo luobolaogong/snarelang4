@@ -1,0 +1,158 @@
+// Reel Set Drums
+// tune type: straight reel
+
+/track met
+/channel 0
+// Sync:
+/time 4/4
+/tempo 136
+/ff
+_4M _. _8M . _4M
+
+// 8 bars of intro
+^4M . . .  ^. . . .   ^. . . .   ^. . . .
+^4M . . .  ^. . . .   ^. . . .   ^. . . .
+
+// Each of the 3 tunes has 16 bars
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+
+
+
+
+/track snare
+/channel 1
+
+/time 4/4
+/tempo 136
+
+//// sync
+1r
+//// "pipes and drums, One Two" or "By the right, quick march"
+///ff
+///marker P&D 1,2
+//32:3T 32t 8F 4r ^4F ^.
+//// Roll-off
+///ff /< 24Z . . . . .    . . . . . .   2T /fff
+///ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+// Drum Intro, 8 bars, same as Forrest Lodge
+/marker Intro
+16T t ^T t  ^8T . T f 16T . . .
+8T 16t . 8t . ^16t . . . ^t . . .
+8t t F t F . 16T . . .
+8T ^t 16T . . .  12Z . . 4t
+
+/marker IntroRpt
+16T t ^T t  ^8T . T f 16T . . .
+8T 16t . 8t . ^16t . . . ^t . . .
+8t t F t F . 16T . . .
+8T ^t 16T . . .  12Z . . 4t
+
+
+/ff
+
+//
+// Malt on the Optics
+//
+
+/marker L1
+8F t 4F 8d ^T t t
+8F t T D >16T . . . >16T . . .
+8F t 4F 8d ^T t t
+8F t T f 16T . . . 4T
+
+/marker L1Rpt
+8F t 4F 8d ^T t t
+8F t T D >16T . . . >16T . . .
+8F t 4F 8d ^T t t
+8F t T f 16T . . . 4T
+
+/marker L2
+8F T t t /cresc 12Z . . 8t /fff /ff t
+/cresc 12Z . . 8t /fff /ff t T T f t
+8T ^t 16T . . . /cresc 12Z . . 16t /ff . . .
+8t ^t T f 16 T . . . 4T
+
+/marker L3
+8F T t t /cresc 12Z . . 8t /fff /ff t
+/cresc 12Z . . 8t /fff /ff t T T f t
+8T ^16t . . .  ^. . . . ^8t  12Z . .
+8t ^t T f 16T . . . 4T
+
+
+//
+// Forest Lodge
+//
+
+/marker L1
+16T t ^T t  ^8T . T f 16T . . .
+8T 16t . 8t . ^16t . . . ^t . . .
+8t t F t F . 16T . . .
+8T ^t 16T . . .  12Z . . 4t
+
+
+/marker L1Rpt
+16T t ^T t  ^8T . T f 16T . . .
+8T 16t . 8t . ^16t . . . ^t . . .
+8t t F t F . 16T . . .
+8T ^t 16T . . .  12Z . . 4t
+
+/marker L2
+8F t 16T . . . 8t f T .
+8F 16t . 8t . >16t . . . ^T . . .
+12z . . 8T ^t T f 16T . . .
+8T D 16T . . . 12Z . . 4t
+
+/marker L3
+8F t 16T . . . 8t f T .
+8F 16t . 8t . >16t . . . ^T . . .
+^8t . F t f t F t
+8F . >16T . . .  >20T 10z . 4t
+
+//
+// Primrose Girl
+//
+
+
+// pickup:
+// not played
+
+// This is Forrest Lodge from above, since we don't have Primrose Girl part yet
+/marker L1
+16T t ^T t  ^8T . T f 16T . . .
+8T 16t . 8t . ^16t . . . ^t . . .
+8t t F t F . 16T . . .
+8T ^t 16T . . .  12Z . . 4t
+
+
+/marker L1Rpt
+16T t ^T t  ^8T . T f 16T . . .
+8T 16t . 8t . ^16t . . . ^t . . .
+8t t F t F . 16T . . .
+8T ^t 16T . . .  12Z . . 4t
+
+/marker L2
+8F t 16T . . . 8t f T .
+8F 16t . 8t . >16t . . . ^T . . .
+12z . . 8T ^t T f 16T . . .
+8T D 16T . . . 12Z . . 4t
+
+/marker L3
+8F t 16T . . . 8t f T .
+8F 16t . 8t . >16t . . . ^T . . .
+^8t . F t f t F t
+8F . >16T . . .  >20T 10z . 4t
+

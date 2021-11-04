@@ -1,0 +1,239 @@
+// Cameronian Rant, as played by Alex Duthart in the YouTube video https://youtu.be/pW39X9Rh_78
+// Dave Henry https://youtu.be/954lUq5xqys at 128 bpm
+// Strathclyde Police: https://www.youtube.com/watch?v=Pq_5Hr6zEBo  at 124
+// Another strathclyde: https://youtu.be/FI83Wak43bc?t=148
+// Two drummers: https://youtu.be/JuAt-SMlNbU?t=131  at 126bpm
+// Stephen McWhirter:  https://youtu.be/_HlxIJQ3P9A?t=107  at 125
+// Bobby Rea version:  https://youtu.be/TzXgRWUwwDk
+// Andre Scullion  (tune 2 of 3): https://youtu.be/qqQJ8X2QCkc
+
+// Alex playing Donald Cameron, on pad:  https://www.youtube.com/watch?v=0bxJlZfDbEk
+
+// Breakdown:
+// Part 1: https://youtu.be/oKC-2yisPMc
+// Part 2: https://youtu.be/vDuBBpbWxK8
+// Part 3: https://youtu.be/3IfiwVV6Y2I
+// Part 4: https://youtu.be/7R_CKTja5ag    https://www.youtube.com/watch?v=7R_CKTja5ag&t=28s
+// Part 5: https://youtu.be/pCO3Zbld0NI
+// Part 6: https://youtu.be/z17JH9rvgSU
+// Part 7: https://youtu.be/K60bjNG7jns
+// Part 8: https://youtu.be/_OvBs5Phs-E
+
+// Wow, there's such a thing as a short single crush note
+// And a flammed roll, and a flammed tap roll
+
+/time 4/4
+//tempo 128  // Dave Henry of Pryde of East Lothian
+//tempo 140  //Duthart playing
+//tempo 124  // Strathclyde Police, and McWhirter
+//tempo 112 // for Hawaiians
+//tempo 100 // just for easy computation in Midi Voyager
+/tempo 110
+/track met
+/channel 0
+
+// why does metronome sometimes come out so loud?
+/mp
+
+// Need time to sync audio and video with 8 quarter notes (4 for nothing then 4 quarters)
+// Then 4 for nothing.
+// Then roll off for pipers to pump up.
+//
+
+_4M _. _12M . . _4M    _4M _. _. _.   // sync audio and video, 4 + 4
+_20M . . . .   _. . . . .   _4M _.   // 4 for nothing
+_4M _. _20M . . . .   _. . . . .    _4M _. _10M 20M 10M _4M  // roll off   8 counts
+
+/mp
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+
+
+
+
+
+// should have shorthand to list all snares and their tracks that should be unison.
+// Maybe also specify their inaccuracy levels somehow
+/track snare5
+/channel 5
+
+//time 4/4
+//tempo 112 // for Hawaiians
+
+
+/f
+
+1r 1r
+1r
+/marker RollOff
+>20Z . . . .   . . . . .  >2T   >20Z . . . .   . . . . .  >2T
+
+/marker P1
+/marker L1
+/marker B1
+/fff ^12D /f 24T . 12T  . . .      /fff ^12D /f 12t .   . /cresc 18Z . .
+^12t /fff /f 24T . 12T    12t 12T t   /f /cresc >20Z . . . .   ^12t /fff /f  . .
+/marker B3
+^24Z ^24z 12T .     12T 12t ^24Z ^24z   24T . . . 12T  12t . .
+^6D ^24T .  24T . . . >12D  12t . . >4d
+
+/marker L2
+/marker B5
+/fff ^12D /f 24T . >12T  . . .      /fff ^12D /f 12t .   . /cresc 18Z . .
+^12t /fff /f 24T . >12T    12t 12T t  /f /cresc >20Z . . . .   ^12t /fff /f  . .
+/marker B7
+/mp /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _36t 18Z . . .  ^4T /ff
+
+/marker P2
+/marker L3
+/marker B9
+/ff 20Z . . . .  _6t /f ^12f 12T . _12F ^6f >24Z >.
+^6T 12t 6F >12f 12r >24Z >. >12T _6t 12t
+/marker B11
+^24T . . . . .   ^24T . . .   ^24T . . . . . ^12T  ^6t 12t
+//>14Z >14z 28T . .  ^6t ^24Z ^24z 24T . . . _12T ^6t 12t
+//>16Z >16z 24T . .  ^6t ^24Z ^24z 24T . . . _12T ^6t 12t
+//18Z 18z 36T . ^12T  ^6t ^24Z ^24z 24T . . . _12T ^6t 12t
+24Z 24z 24T . ^12T  ^6t ^24Z ^24z 24T . . . _12T ^6t 12t
+
+/marker L4
+/marker B13
+^6D /cresc 20t 20t   20T . _20T ^12t /ff /f 12T . >12F >6f 12t
+>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+/marker B15
+>24T . . . >. .    ^. . . . . .   . . ^. . . .   ^. . . . . .
+>24T . . . ^. .     . . ^. . . .     /cresc >30T 15z . . . . . .
+
+/marker P3
+/marker L5
+/marker B17
+^24T /fff /f  . . . . .   ^12D 24T . . .    ^24T . . . >12T  >12t . .
+>24T >. _. _. >12T  12t . .    >20Z >. >. >. >.  >12t . .
+/marker B19
+>24Z >. 12T .   12T . ^24Z ^.   24T . . . 12T  12t . .
+>6D >24T .   24T . . . >12D   12t . . >4D
+
+/marker L6
+/marker B21
+>24T . . . . .   >12D 24T . . .   >. . . . >12T  >12t . .
+>24T >. _. _. _12T  12t . .   _20Z _. _. _. _. /f 12t . .
+/marker B23
+// /f /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
+/f /cresc _30T 15z Z    _30t 15Z z       _12T _36t 18Z     _12t _36T 18z    _12T _36t 18Z   _12t _36T 18z
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _36t 18Z . . .  ^4T  /ff /f
+
+/marker P4
+/marker L7
+/marker B25
+^6F 24z .  12t . .  >24Z >. 12T .   6T 12t
+>24Z >. 24T . 12T  6t >24Z >.  24T . . .  12T  6t 12t
+/marker B27
+>6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+27:2z     ^12T ^36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+
+/marker L8
+/marker B29
+^6T /cresc 20t 20t   20T . _20T ^12t /ff /f 12T . >12F >6f 12t
+>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+/marker B31
+>24T . . . >. .    ^. . . . . .   . . ^. . . .   ^. . . . . .
+>24T . . . ^. .     . . ^. . . .     >28T /mf /cresc 14z . . 16Z . . .
+
+
+/marker P5
+/marker L9
+/marker B33
+>30T /fff /mf /cresc 15z . 18Z . . . . .    >36t 18Z . . .   >36T 18z . . .
+>30t 15Z . 18z . . . . .    >36T 18z . . .   >36t 18Z . . .
+/marker B35
+12T /fff /f 12t . . . >d >t . . >D 24T . . .
+12T . >D 24T . . . 12T 12t . >f T . >F      // watch out for errors in parsing in this line 9
+
+/marker L10
+/marker B37
+/mp /cresc
+>30T 15z . 18Z . . . . .    >36t 18Z . . .   >36T 18z . . .
+>30t 15Z . 18z . . . . .    >36T 18z . . .   >36t 18Z . . .
+/marker B39
+12T /fff /f 12t >D 24T . . . >12T 12t . >. >12D 24T . . .
+12T . >D 24T . . . >12T 12t . >. >4F
+
+/marker P6
+/marker L11
+/marker B41
+^6F 24z .  12t . .  >24Z >. >12T >.   6T 12t
+_24Z _. 24T . >12T  ^6t >24Z >.  24T . . .  >12T  ^6t 12t
+/marker B43
+6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+27:2z     ^12T ^36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+
+/marker L12
+/marker B45
+^6T /cresc 20t 20t   20T . _20T ^12t /ff /f 12T . >12F >6f 12t
+>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+/marker B47
+>24T . >. . >. .    >. . . . >. .   . . >. . >. .   >. . . . . .
+>24T . . . >. .     . . >. . . .     /cresc >28T 14z . . 16Z . . . // good way to do this roll?
+
+/marker P7
+/marker L13
+/marker B49
+/ff >6T 18Z . . . . . 16:3t /f  16T >16:3f 16t
+/ff >6F 18Z . . . . . 16:3t /f  16T >16:3f 16t
+// Dave henry plays it like this, which I think is an improvement:
+//^80:3T 40:3z . ^80:3t 40:3Z . 16T .      ^28T 14z . . 16Z . . .
+//^80:3T 40:3z . ^80:3t 40:3Z . 16T .      ^28T 14z . . 16Z . . .
+/marker B51
+// I think Duthart made a mistake here, but this is what he played:
+//^30T 15z . 21t 21Z . . . 21T 21T  ^34t 17Z . . . . . . .
+// or maybe this
+^30T 15z . 24t 24Z . . . 16T 16T  /cresc ^34t 17Z . . . . . . .
+// rather than playing this:
+//^30T 15z . >30t 15Z . >12T >12T  ^34t 17Z . . . . . . .
+^30T /fff /ff 15z . >30t 15Z . >12T >12T  /cresc ^34t 17Z . . . . . . .
+
+/marker L14
+/marker B53
+/ff >6T 18Z . . . . . 16:3t /f  16T >16:3f 16t
+/ff >6F 18Z . . . . . 16:3t /f  16T >16:3f 16t
+/marker B55
+>30T 15z .  >30t 15Z .  >12T   >36t 18Z 12t   >36T 18z 12T   >36t 18Z 12t  >36T 18z
+>36T 18z 12T  >36t 18Z  >30t 15Z .   >30T   15z .   >12t  >36T 18z    >28T 14z . .
+
+/marker P8
+/marker L15
+/marker B57
+/f /cresc 18T . . ^12t /fff /f  12T . >12T  12t >12T .  >16Z >. >. >.
+/f /cresc 18T . . ^12t /fff /f  12T . >12T  12t >12T .  >16Z >. >. >.
+/marker B59
+12T . >12D  24T . . . 12T  12t . .  >12D 24T . . .
+12T . >12D  24T . . . 12T  12t . .  >16Z >. >. >.
+
+/marker L16
+/marker B61
+/f /cresc 18T . . ^12t /fff /f 12T . >12T  12t >12T .  >24Z >. 12T .
+>12D T t   12T _12d >12t  12T . _12D   >6T 12t
+/marker B63
+>24T . . . >. .    ^24T . . . . .   24T . >. . . .   ^24t . . . . .
+>24T . . . >. .  24T . >. . . .  /cresc ^30T 15z . . . . . .
+
+>1T  /fff
+
+
+

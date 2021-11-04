@@ -1,0 +1,279 @@
+// Captain Norman Orr Ewing -- massed bands drums
+// The massed bands snare part is by James Laughlin.  A 2/4 March.
+//
+// But this is the 4/4 massed bands setting by Laughlin
+// But this is the 4/4 massed bands setting by Laughlin
+// But this is the 4/4 massed bands setting by Laughlin
+
+
+/track metronome
+/channel 0
+/time 2/4 // While we use a 4/4 setting, keep this marked as 2/4 to match the pipe score
+/tempo 70    // for B'day party gig
+/text Capt Norman Orr Ewing
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+/text Pipes & Drums, One, Two
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+
+/mp
+// Line 1
+4M . . . . . . .
+
+// Line 2
+4M . . . . . . .
+
+// Repeat of Line 1
+4M . . . . . . .
+
+// Repat of Line 2
+4M . . . . . . .
+
+
+// Line 3
+4M . . . . . . .
+
+// Line 4
+4M . . . . . . .
+
+
+// Repeat of Line 3
+4M . . . . . . .
+
+// Repeat of Line 2
+4M . . . . . . .
+
+
+// Line 5
+4M . . . . . . .
+
+// Line 6
+4M . . . . . . .
+
+
+// Repeat of Line 5
+4M . . . . . . .
+
+// Repeat of Line 6
+4M . . . . . . .
+
+
+// Line 7
+4M . . . . . . .
+
+// Line 8
+4M . . . . . . .
+
+
+// Repeat of Line 7
+4M . . . . . . .
+
+// Repeat of Line 8
+4M . . .  . . 8M . 4M
+
+/////////////////////////////////////////
+
+/track snare
+/channel 5
+
+
+// sync
+1r
+// "pipes and drums, One Two", or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r 4F .
+/f
+// Roll-off
+/cresc 24Z . . . . .    . . . . . .   2T /fff /f
+/cresc 24Z . . . . .    . . . . . .   2T /fff
+
+
+/f
+
+// This is the 4/4 massed bands setting by Laughlin, even though the tune is a 2/4
+// Prob should check to see that this is the same as the score in MassedBands24JLDrums
+// And it's not but should be, right?
+
+/marker Pt1
+/f
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt1Rpt
+/f
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt2
+/mp /cresc 24Z . . . . . 8T /fff /mf 8t  /mp /cresc 24Z . . . . . 8T /fff /f 8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+/mp /cresc 24Z . . . . . 8T /fff /mf 8t  /mp /cresc 24Z . . . . . 8T /fff /f 8t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt2Rpt
+/mp /cresc 24Z . . . . . 8T /fff /mf 8t  /mp /cresc 24Z . . . . . 8T /fff  /f8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+/mp /cresc 24Z . . . . . 8T /fff /mf 8t  /mp /cresc 24Z . . . . . 8T /fff  /f8t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt3
+/f
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /fff  /f ^f t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /fff  /f ^f t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt3Rpt
+/f
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /fff  /f ^f t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . . 8t /mp /cresc 24Z . . . . . 8T /fff  /f ^f t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt4
+/f
+^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t
+^4F /mp /cresc 24Z . . . . . >4T /fff  /f 8r t
+
+/marker Pt4Rpt
+/f
+^24:5F 24t 24Z . . >24t T t 8F 24Z . . >8t t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^24:5F 24t 24Z . . 24t T t 8F 24Z . . >8t t
+^4F /mp /cresc 24Z . . . . . >8T /fff 8f 8F
+
+
+// Is the following right?  Kinda taken from the 4/4 massed bands setting by JL, arr by Peter
+
+
+/track tenor
+/channel 8
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/ff
+// Roll off
+4N . 2N
+4N . 2N
+
+
+/f
+4N . . .
+24:5N 6n 8n   24:5N 6n 8n
+4N . . .
+4N . 2N
+
+4N . . .
+24:5N 6n 8n   24:5N 6n 8n
+4N . . .
+4N . 2N
+
+
+4N 8N . 4N 8N .
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N . 4N 8N .
+4N . 2N
+
+4N 8N . 4N 8N .
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N . 4N 8N .
+4N . 2N
+
+
+4N 8N 8:5N
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N 8:5N
+4N . 2N
+
+4N 8N 8:5N
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N 8:5N
+4N . 2N
+
+
+4N 8N 24n . . 2N
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N 24n . . 2N
+4N . . 4r
+
+
+4N 8N 24n . . 2N
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N 24n . . 2N
+4N . 8N . 8N 8r
+
+
+
+
+/track bass
+/channel 1
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/ff
+// Roll off
+4B . 2B
+4B . 2B
+
+
+/f
+4B . . .
+24:5B 6b 8b   24:5B 6b 8b
+4B . . .
+4B . 2B
+
+4B . . .
+24:5B 6b 8b   24:5B 6b 8b
+4B . . .
+4B . 2B
+
+
+8B . 4B 8B . 4B
+24:5B 6b 8b   24:5B 6b 8b
+8B . 4B 8B . 4B
+4B . 2B
+
+8B . 4B 8B . 4B
+24:5B 6b 8b   24:5B 6b 8b
+8B . 4B 8B . 4B
+4B . 2B
+
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 2B
+
+2B 8r 8b 4B
+24:5B 6b 8b   24:5B 6b 8b
+2B 8r 8b 4B
+4B . 8B . . 8r
+
+

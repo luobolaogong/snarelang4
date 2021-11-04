@@ -61,10 +61,11 @@ class Score {
     //
     var scoresStringBuffer = StringBuffer();
     for (var filePath in scoresPaths) {
-      log.info('Loading file $filePath');
+      log.fine('Loading file $filePath');
       var inputFile = File(filePath);
       if (!inputFile.existsSync()) {
-        log.severe('File does not exist at "${inputFile.path}", exiting...');
+        //log.severe('File does not exist at "${inputFile.path}", exiting...');
+        log.severe('File does not exist at "${inputFile.absolute}", exiting...');
         exit(42);
         continue;
       }

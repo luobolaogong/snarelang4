@@ -1,0 +1,161 @@
+// Competition 4/4 Massed Bands Set - Drums
+// Flett From Flotta, Battle of Waterloo, Cockney Jocks (parts 1&3), Murdo's Wedding
+// This version IS the massed bands snare settings
+
+// All this stuff is supposedly from the JL Massed Bands 4/4 drum parts
+
+/track met
+/channel 4
+/time 4/4
+/tempo 76   // for b'day gig
+
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+4M . . .
+// Roll-off
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+
+
+// Cockney Jocks 1,3 - met
+
+4M . . .  . . . .  . . . .  . . . .
+4M . . .  . . . .  . . . .  . . . .
+
+4M . . .  . . . .  . . . .  . . . .
+4M . . .  . . . .  . . . .  . . . .
+
+
+/////////////////// Snare ///////////////////////////////////
+
+/track snare5
+/channel 5
+
+
+// sync
+1r
+// "pipes and drums, One Two", or "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r 4F .
+/f
+// Roll-off
+/cresc 24Z . . . . .    . . . . . .   2T /fff /f
+/cresc 24Z . . . . .    . . . . . .   2T /fff /f
+
+
+
+// Cockney Jocks - snare but probably from massed bands score
+/marker Cockney Jocks (Massed Bands)
+// 16 bars
+/marker Pt1
+/f
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt1Rpt
+/f
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt2
+/mp /cresc 24Z . . . . . 8T /fff /f 8t  /mp /cresc 24Z . . . . . 8T /fff /mf 8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+/mp /cresc 24Z . . . . . 8T /fff /f 8t  /mp /cresc 24Z . . . . . 8T /fff /mf 8t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+/marker Pt2Rpt
+/mp /cresc 24Z . . . . . 8T /fff /mf 8t  /mp /cresc 24Z . . . . . 8T /fff /mf 8t
+^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
+/mp /cresc 24Z . . . . . 8T /fff /mf 8t  /mp /cresc 24Z . . . . . 8T /fff /mf 8t
+^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
+
+
+
+
+/////////////////// Tenor ///////////////////////////////////
+
+/track tenor
+/channel 3
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/mf
+// Roll off
+4N . 2N
+4N . 2N
+
+
+/mf
+
+/mf
+4N . . .
+24:5N 6n 8n   24:5N 6n 8n
+4N . . .
+4N . 2N
+
+4N . . .
+24:5N 6n 8n   24:5N 6n 8n
+4N . . .
+4N . 2N
+
+
+4N 8N . 4N 8N .
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N . 4N 8N .
+4N . 2N
+
+4N 8N . 4N 8N .
+24:5N 6n 8n   24:5N 6n 8n
+4N 8N . 4N 8N .
+4N . 2N
+
+
+
+
+/track bass
+/channel 7
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/mf
+// Roll off
+4B . 2B
+4B . 2B
+
+
+
+/mf
+4B . . .
+24:5B 6b 8b   24:5B 6b 8b
+4B . . .
+4B . 2B
+
+4B . . .
+24:5B 6b 8b   24:5B 6b 8b
+4B . . .
+4B . 2B
+
+
+8B . 4B 8B . 4B
+24:5B 6b 8b   24:5B 6b 8b
+8B . 4B 8B . 4B
+4B . 2B
+
+8B . 4B 8B . 4B
+24:5B 6b 8b   24:5B 6b 8b
+8B . 4B 8B . 4B
+4B . 2B
+
+
+

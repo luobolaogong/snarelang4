@@ -1,0 +1,151 @@
+// Amazing Grace with "simple drums", same as in The Haunting, but ...
+
+// Recording:  https://youtu.be/lpZiPZwwXhM
+// shows the figures are these:
+// 6 12 | 2  8 24 12 |
+// And the tempo is slow, as in 64 bpm.  But I've seen it as slow as 56, and when singing as fast as 72
+// But based on true triplets as in 12ths and 24ths.
+
+// I think Peter took the drum part from this:  https://youtu.be/zLfkDvz9wUE   because it's rolls all the way, wih crescendos.
+
+/time 3/4
+//tempo 4=70
+//tempo 4=64
+/tempo 4=60
+
+/track met
+/channel 0
+/mp
+// Count in and pickup
+^8M . _. . _. .
+^12M _. . ^12M _. . ^4M
+
+
+>8M . _. . _. 24M 12M   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. 24M 12M   >8M . _. . >12M . .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. 24M 12M   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. 24M 12M   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+
+>8M . _. . _. .   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. .   >8M . _. . >12M . .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. .   >8M . _. . _. .   >8M . _. . _. .   >8M . _. . >12M . .
+>8M . _. . _. .   >8M . _. . _. .   >8M . _. . _. .   4M . .
+
+
+
+
+/track snare5
+/channel 5
+
+
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+// 1st time through
+4:3r . . .
+4:3r . . .
+4:3r . . .
+4:3r .
+/mp
+/cresc
+32Z . . . . . . .  . . . . . . . .  . . . . . . . .   . . . . . . . .  >4f 24Z . . . 12T  /ff /f
+
+// 2nd time through
+4F . 24Z . . _24t >12T                    >4F .  _40T 20z . _40t 20Z .               4T 4f 12T 24T 12t 24t                                >4F .  /cresc 24Z . . . 12T /ff /f
+4F . 24Z . . _24t >12T                    >4F .  24Z . . . 12T                       4F 4f 12T 24T 12t 24t                                >4F .  /cresc 24Z . . . 12T /ff /f
+4F . 24Z . . _24t >12T                    >4F .  _40T 20z . _40t 20Z .               4T 4f 12T 24T 12t 24t                                >4F .  /cresc 24Z . . . 12T /ff /f
+4F . 24Z . . _24t >12T                    >4F .  24Z . . . 12T                       4F 4f 12T 24T 12t 24t                                >4F .  /cresc 24Z . . . 12T /ff /f
+
+// 3rd time through
+>8T 24t . . >8T >8f 24T . . >24t ^12T     >8T 24t . . >8T >8f >24T . . >. . .        >8T 24t . . >8T >8f 12T 24T 12t 24t                  >8T 24t . . >8T >8f 24T . . . >12T
+>8T 24t . . >8T >8f 24T . . >24t ^12T     >8T 24t . . >8T >8f 24T . . . >12T         >8T 24t . . >8T >8f 12T 24T 12t 24t                  >8T 24t . . >8T >8f 24T . . . >12T
+// different 8 bar phrase
+>8T 24z . . >8T >8f 24Z . . >24t ^12T     >8T 24z . . >8T >8f >40T 20z . >40t 20Z .  >8T 24z . . >8T >8f >36T 18z >24T >36t 18Z >24t      >8T 24z . . >8T >8f 24Z . . . >12T
+>8T 24z . . >8T >8f 24Z . . >24t ^12T     >8T 24z . . >8T >8f 24Z . . . >12T         >8T 24z . . >8T >8f >36T 18z >24T >36t 18Z >24t      >8T 24z . . >12T . . 4F
+
+
+// end of tune
+4:3r
+
+
+
+
+
+/track tenor
+/channel 6
+/mp
+// Count in and pickup
+>4r . 12r . .
+>4r .
+// pickup:
+4r
+
+
+// First time through
+4:3r . . .
+4:3r . . .
+4:3r . . .
+/p /cresc
+4:3r                        48N . . . . . . . . . . .   48N . . . . . . . . . . .  48N . . . . . . . . . . .
+48N . . . . . . . . . . .   48N . . . . . . . . . . .   48N . . . . . . . . . . .   48N . . . . . . . . . . .    4N   12N . . /f
+
+// 2nd Time through
+
+/mf/decresc 8N .   4N /mp /cresc 8N .         /mf/decresc 8N .   4N /mp /cresc 8N .           /mf/decresc 8N .   4N /mp /cresc 8N .         /ff  /decresc 12N 24n 12N 24n /mf /cresc 4N 12N . . /f
+/mf/decresc 8N .   4N /mp /cresc 8N .         /mf/decresc 8N .   4N /mp /cresc 8N .           /mf/decresc 8N .   4N /mp /cresc 8N .         /ff  /decresc 12N 24n 12N 24n /mf /cresc 4N 12N . . /f
+
+/mf/decresc 8N .   4N /mp /cresc 8N .         /mf/decresc 8N .   4N /mp /cresc 8N .           /mf/decresc 8N .   4N /mp /cresc 8N .         /ff  /decresc 12N 24n 12N 24n /mf /cresc 4N 12N . . /f
+/mf/decresc 8N .   4N /mp /cresc 8N .         /mf/decresc 8N .   4N /mp /cresc 8N .           /mf/decresc 8N .   4N /mp /cresc 8N .         /ff  /decresc 12N 24n 12N 24n /mf /cresc 4N 12N . . /f
+
+//4N . 8N .          4N . 8N .       4N . 8N .               4N . 12N . .
+//4N . 8N .          4N . 12N . .    4N . 8N .               4N . 12N . .
+
+
+// 3rd time through
+/mf /decresc 24N . . . . . 4N /mp /cresc  8N . /mf /decresc  24N . . . . . 4N /mp /cresc  8N .  /mf /decresc     24N . . . . . 4N /mp /cresc 8N .    /mf /decresc   24N . . . . . 4N /mp /cresc 12N . . /mf
+/mf /decresc 24N . . . . . 4N /mp /cresc  8N . /mf /decresc  24N . . . . . 4N /mp /cresc  8N .  /mf /decresc     24N . . . . . 4N /mp /cresc 8N .    /mf /decresc   24N . . . . . 4N /mp /cresc 12N . . /mf
+/mf /decresc 24N . . . . . 4N /mp /cresc  8N . /mf /decresc  24N . . . . . 4N /mp /cresc  8N .  /mf /decresc     24N . . . . . 4N /mp /cresc 8N .    /mf /decresc   24N . . . . . 4N /mp /cresc 12N . . /mf
+/mf /decresc 24N . . . . . 4N /mp /cresc  8N . /mf /decresc  24N . . . . . 4N /mp /cresc  8N .  /mf /decresc     24N . . . . . 4N /mp /cresc 8N .    /mf /decresc   8N . 12N . . 16N 16:3r
+
+// end of tune
+
+
+4:3r
+
+
+/track bass
+/channel 4
+
+// Count in and pickup
+4r . 12r . .
+4r .
+// pickup:
+4r
+
+// 1st time through
+/mp
+4:3r . . .
+4:3r . . .
+_4:3B _. _. _.
+
+_4B   /p /cresc             48B . . . . . . . . . . .          48B . . . . . . . . . . .        _8B 48B . . . . .       48B . . . . . . . . . . .         48B . . . . . . . . . . .
+_8B 48B . . . . .   48B . . . . . . . . . . .   48B . . . . . . . . . . .   _8B 48B . . . . .   _4B  12B . . /f
+
+/mp
+// 2nd time through
+_4:3B /ff /mf      2B 4B         _4:3B       2B 4B        _4:3B      2B 4B      _4:3B       2B 4B
+_4:3B              2B 4B         _4:3B       2B 4B        _4:3B      2B 4B      _4:3B       2B 4B
+
+// 3rd time through
+_12B . . 2B    2B 4B    _4:3B          2B 4B
+_12B . . 2B    2B 4B    _12B . . 2B    2B 4B
+_12B . . 2B    2B 4B    _4:3B          2B 4B
+_12B . . 2B    2B 4B    _12B . . 2B    4B  4B 32B 32:7r
+
+// end of tune
+
+4:3r
+
+

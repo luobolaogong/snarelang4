@@ -13,7 +13,7 @@
 
 // Count off, 2 bars of 3/4
 /ff
-^4M >. _8M .    ^4M >. _8M .
+^4M _8M . 4M   ^4M _8M . 4M
 
 /time 3/4
 /tempo 78
