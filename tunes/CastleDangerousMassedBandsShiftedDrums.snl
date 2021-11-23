@@ -98,9 +98,9 @@ _8M . _8M . _8M .   _8M . _8M . _8M .   _8M . _8M . _8M .   _8M . _8M . _4M
 >8F 24Z . . 8t >12F 24t 12T /cresc ^30t . . . .
 >8T /ff /mf /< 24Z . .  24t . . 8F /ff /f 12f >24T 12t 24t
 >8F 24Z . . 8t >12F 24t 12T /cresc ^30t . . . .
->4T /ff /mf /< 24Z . . . . .   4T /ff /f
+//>4T /ff /mf /< 24Z . . . . .   4T /ff /f
 //>4T /f
-
+>8T 24z . . 4T /ff /f
 
 
 // Tenor and bass parts are for the JL massed band setting in 3/4
@@ -182,7 +182,7 @@ _8M . _8M . _8M .   _8M . _8M . _8M .   _8M . _8M . _8M .   _8M . _8M . _4M
 // sync
 1r
 // "pipes and drums, One Two" or "By the right, quick march"
-/f
+/mf
 /marker P&D 1,2
 1r
 // Roll-off

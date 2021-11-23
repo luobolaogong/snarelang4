@@ -29,6 +29,16 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /marker L4
 4M . . .   . . . .   . . . .   . . .
 
+// repeat
+/marker L1
+4M . . .   . . . .   . . . .   . . . .
+/marker L2
+4M . . .   . . . .   . . . .   . . . .
+/marker L3
+4M . . .   . . . .   . . . .   . . . .
+/marker L4
+4M . . .   . . . .   . . . .   . . .
+
 
 /////////////// Snare ///////////////////
 
@@ -99,57 +109,57 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /mf /cresc >40T 20z .  40t 20Z . ^12T 24t 12T 24t
 >40T 20z .  40t 20Z . 8T /ff /f 24Z . .
 ^4t /cresc 24Z . . . . .
-^8T /ff /mf 8r
+^4T /fff
+// They want this twice through, but they want parts 3 and 4 of the massed band score!  So, the pickups...
+/mf 8r 12T 24t
 
 
-// They want this twice through, so repeat, with pickup
-8r 24Z . .
-/marker P1L1
-^24:5t 24t 24Z . . 8t
-^8F 24Z . . 8t t
-/cresc ^8F ^8f  ^12F /ff /mf 24t 12t 24f
-12T 24t ^8F ^f 24Z . .
+/marker P3L5
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F t
+^8F ^f  ^12F 24t 12T 24f
+12T 24t ^8F  ^f 12T 24t
 
-/marker P1L2
-^24:5t 24t 24Z . . 8t
-^8F 24Z . . 8t 24Z . .
-^4T /cresc 24Z . . . . .
-^4T /ff /mf 8r 24Z . .
+/marker P3L6
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+4T /fff /mf 8r 12T 24t
 
-/marker P1L1Rpt
-^24:5t 24t 24Z . . 8t
-^8F 24Z . . 8t t
-/cresc ^8F ^8f  ^12F /ff /mf 24t 12t 24f
-12T 24t ^8F ^f 24Z . .
+/marker Pt3L5Rpt
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F t
+^8F ^f  ^12F 24t 12T 24f
+12T 24t ^8F  ^f 12T 24t
 
-/marker P1L2Rpt
-^24:5t 24t 24Z . . 8t
-^8F 24Z . . 8t 24Z . .
-^4T /cresc 24Z . . . . .
-^4T /ff /mf 8r 12T 24t
+/marker Pt3L6Rpt
+8D 12T 24T 8d 12T 24t
+12r ^24T 12t 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+4T /fff /mf 8r 12T 24t
 
-/marker P2L3
-/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
->40T 20z .  >40t 20Z . >8T /ff /f t
-/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
-12T 24t ^8F ^f /mf 12T 24t
+/marker P4L7
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F t
+^8F ^f ^12F 24t 12T 24f
+12T 24t ^8F ^f 12T 24t
 
-/marker P2L4
-/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
->40T 20z .  >40t 20Z . >8T /ff /f 24Z . .
-^4t /cresc 24Z . . . . .
-^4T /ff 8r 12T 24t
+/marker P4L8
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
+^4T /fff /mf 8r 12T 24t
 
-/marker P2L3Rpt
-/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
->40T 20z .  >40t 20Z . 8T /ff /f t
-^8F ^8f  ^12F 24t 12t 24f
-12T 24t ^8F ^f /mf 12T 24t
+/marker P4L7Rpt
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F t
+^8F ^f ^12F 24t 12T 24f
+12T 24t ^8F ^f 12T 24t
 
-/marker P2L4Rpt
-/mf /cresc >40T 20z .  40t 20Z . ^12T 24t 12T 24t
->40T 20z .  40t 20Z . 8T /ff /f 24Z . .
-^4t /cresc 24Z . . . . .
+/marker P4L8Rpt
+24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
+12t 48Z . 12T 24t ^8F 24Z . .
+4t /cresc 24Z . . . . .
 ^8T /fff 8f 8F
 
 
@@ -219,7 +229,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 2N
 
 
-
+// So even though we're doing the snare parts 3 and 4, the tenor parts just repeat 1 and 2?
 // Line 1
 4N .
 4N .
@@ -266,7 +276,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 4r 12N 24n 12N 24n
 8N . 4N
 4N .
-2N
+8N /ff 8n 8N
 
 
 
@@ -289,7 +299,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 // Roll-off
 /mf 4B . 2B    4B . 2B
 
-/mf
+/f
 // Line 1
 4B .
 4B .
@@ -385,6 +395,6 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 8B . 4B
 8b . 4b
 4B .
-2B
+8B /ff 8b 8B
 
 

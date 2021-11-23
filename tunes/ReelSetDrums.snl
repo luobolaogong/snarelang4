@@ -1,33 +1,42 @@
 // Reel Set Drums
 // tune type: straight reel
 
+/time 4/4
+//tempo 136
+/tempo 140
+
+// The snare part was written with the assumption that the tempo was going to be no faster than 136,
+// and if it keeps on going up the part won't sound right and be hard to play.  Most Irish Reels
+// are considerably faster, I think, but I was told we wouldn't go faster.
+
+
 /track met
 /channel 0
 // Sync:
-/time 4/4
-/tempo 136
+
+
 /ff
 _4M _. _8M . _4M
-
+/mf
 // 8 bars of intro
-^4M . . .  ^. . . .   ^. . . .   ^. . . .
-^4M . . .  ^. . . .   ^. . . .   ^. . . .
+//^4M . . .  ^. . . .   ^. . . .   ^. . . .
+//^4M . . .  ^. . . .   ^. . . .   ^. . . .
 
 // Each of the 3 tunes has 16 bars
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
 
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
 
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
-//>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
 
 
 
@@ -35,124 +44,335 @@ _4M _. _8M . _4M
 /track snare
 /channel 1
 
-/time 4/4
-/tempo 136
+///time 4/4
+///tempo 136
 
 //// sync
 1r
-//// "pipes and drums, One Two" or "By the right, quick march"
-///ff
-///marker P&D 1,2
-//32:3T 32t 8F 4r ^4F ^.
-//// Roll-off
-///ff /< 24Z . . . . .    . . . . . .   2T /fff
-///ff /< 24Z . . . . .    . . . . . .   2T /fff
+
 
 // Drum Intro, 8 bars, same as Forrest Lodge
-/marker Intro
-16T t ^T t  ^8T . T f 16T . . .
-8T 16t . 8t . ^16t . . . ^t . . .
-8t t F t F . 16T . . .
-8T ^t 16T . . .  12Z . . 4t
+//marker Intro
 
-/marker IntroRpt
-16T t ^T t  ^8T . T f 16T . . .
-8T 16t . 8t . ^16t . . . ^t . . .
-8t t F t F . 16T . . .
-8T ^t 16T . . .  12Z . . 4t
+
+//marker IntroRpt
+
 
 
 /ff
 
-//
+
 // Malt on the Optics
-//
+/marker MOL1
+8T . >F t . >f T .
+8T . >F t . >f T .
+8T . >F t . >f T .
+8T . >F t . >f T .
 
-/marker L1
-8F t 4F 8d ^T t t
-8F t T D >16T . . . >16T . . .
-8F t 4F 8d ^T t t
-8F t T f 16T . . . 4T
-
-/marker L1Rpt
-8F t 4F 8d ^T t t
-8F t T D >16T . . . >16T . . .
-8F t 4F 8d ^T t t
-8F t T f 16T . . . 4T
-
-/marker L2
-8F T t t /cresc 12Z . . 8t /fff /ff t
-/cresc 12Z . . 8t /fff /ff t T T f t
-8T ^t 16T . . . /cresc 12Z . . 16t /ff . . .
-8t ^t T f 16 T . . . 4T
-
-/marker L3
-8F T t t /cresc 12Z . . 8t /fff /ff t
-/cresc 12Z . . 8t /fff /ff t T T f t
-8T ^16t . . .  ^. . . . ^8t  12Z . .
-8t ^t T f 16T . . . 4T
+/marker MOL2
+8T . >16F T 8t . >16f f 8T .
+8T . >16F T 8t . >16f f 8T .
+8T . >16F T 8t . >16f f 8T .
+8T . >16F T 8t . >16f f 8T .
 
 
-//
+/marker MOL3
+8T . >16F T t t 8t >16f f T . 8t
+8T . >16F T t t 8t >16f f T . 8t
+8T . >16F T t t 8t >16f f T . 8t
+8T . >16F T t t 8t >16f f T . 8t
+
+
+/marker MOL4
+16T T 8t >16F T t t 8t >16f f T . 8t
+16T T 8t >16F T t t 8t >16f f T . 8t
+16T T 8t >16F T t t 8t >16f f T . 8t
+16T T 8t >16F T t t 8t >16f f T . 8t
+
+
+
+
 // Forest Lodge
-//
 
-/marker L1
-16T t ^T t  ^8T . T f 16T . . .
-8T 16t . 8t . ^16t . . . ^t . . .
-8t t F t F . 16T . . .
-8T ^t 16T . . .  12Z . . 4t
+/marker FLL1
+8T . ^. 24t T T      8t ^. ^. 24T t t
+8T ^. 24T t t 8T     ^24t T T 8t ^24T t t 8T
+8T . ^. 24t T T      8t ^. ^. 24T t t
+8T ^. 24T t t 8T     ^24T t t T T >t ^4T
+//8T ^. 24T t t 8T     ^24t T T 8t ^4T
+
+/marker FLL2
+8T . ^F 24t T T      8t ^F ^f 24T t t
+8T ^f 24T t t 8T     ^24t T T 8t ^24T t t 8T
+8T . ^F 24t T T      8t ^F ^f 24T t t
+8T ^f 24T t t 8T     ^24T t t T T >t ^4T
 
 
-/marker L1Rpt
-16T t ^T t  ^8T . T f 16T . . .
-8T 16t . 8t . ^16t . . . ^t . . .
-8t t F t F . 16T . . .
-8T ^t 16T . . .  12Z . . 4t
+/marker FLL3
+12T 24t 12T 24t    8T ^f     12T 24t  8T   ^8f 12T 24t
+8T ^f  12T 24t  8T           ^12T 24t 12t 24T 8T ^f
+12T 24t 12T 24t    8T ^f     12T 24t  8T   ^8f 12T 24t
+8T ^f  12T 24t  8T           ^12T 24t 12t 24T ^4T
 
-/marker L2
-8F t 16T . . . 8t f T .
-8F 16t . 8t . >16t . . . ^T . . .
-12z . . 8T ^t T f 16T . . .
-8T D 16T . . . 12Z . . 4t
+/marker FLL4
+^24T t t T T t    8T ^f     24T t t  8T   ^8f 24T t t
+8T ^f  24T t t  8T         ^24T t t T T t 8T ^f
+//8T ^f  24T t t  8T  ^24t T T 8t  ^24T t t 8T
+//>24T t t T T t    8T ^f     24T t t  8T   >8f 24T t t
+>24T t t 8T   >24t T T 8t   >24T t t 8T   >24t T T 8t
+8T ^f  24T t t  8T  ^24T t t T T >t   ^4T
 
-/marker L3
-8F t 16T . . . 8t f T .
-8F 16t . 8t . >16t . . . ^T . . .
-^8t . F t f t F t
-8F . >16T . . .  >20T 10z . 4t
 
-//
+
+
 // Primrose Girl
-//
+/marker PGL1
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T ^8t 16t   16T ^8t 16t   8T >f    >4F
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T ^8t 16t   16T ^8t 16t   8T >f    >4F
+
+/marker PGL2
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24T 8t   12T 24T 8t     >12T >24t >12T >24t   >4T
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24T 8t   12T 24T 8t     >12T >24t >12T >24t   8T .
 
 
-// pickup:
-// not played
+/marker PGL3
+/ff
+^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t
+/p /cresc    12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t
+/ff
+^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t
+/p /cresc    12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t     /ff
 
-// This is Forrest Lodge from above, since we don't have Primrose Girl part yet
-/marker L1
-16T t ^T t  ^8T . T f 16T . . .
-8T 16t . 8t . ^16t . . . ^t . . .
-8t t F t F . 16T . . .
-8T ^t 16T . . .  12Z . . 4t
+/marker PGL4
+/ff
+^24T t t 8T   ^24t T T 8t   ^24T t t 8T   ^24t T T 8t
+8T  ^24t T T 8t   ^24T t t 8T   ^24t T T 8t  >8T
+4r 4r  ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  4T
 
 
-/marker L1Rpt
-16T t ^T t  ^8T . T f 16T . . .
-8T 16t . 8t . ^16t . . . ^t . . .
-8t t F t F . 16T . . .
-8T ^t 16T . . .  12Z . . 4t
 
-/marker L2
-8F t 16T . . . 8t f T .
-8F 16t . 8t . >16t . . . ^T . . .
-12z . . 8T ^t T f 16T . . .
-8T D 16T . . . 12Z . . 4t
 
-/marker L3
-8F t 16T . . . 8t f T .
-8F 16t . 8t . >16t . . . ^T . . .
-^8t . F t f t F t
-8F . >16T . . .  >20T 10z . 4t
+
+
+
+
+////////// Tenor /////////////////////////
+/track tenor
+/channel 3
+
+// Sync:
+
+4r . . .
+/f
+
+
+// 8 bars of intro
+
+// Malt on the Optics
+// Marker L1
+4N . 8N 8n 4r // experiment
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N . . .
+
+// Marker L2
+4N . 8N 8n 4r // experiment
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N . . .
+
+// Marker L3
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+// Marker L4
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+
+// Forest Lodge
+// Marker L1
+4N . 8N . 4N
+8N . 4N . .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L2
+4N . 8N . 4N
+8N . 4N . .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L3
+4N . 8N . 4N
+8N . . . 4N .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L4
+4N . 8N . 4N
+8N . . . 4N .
+4N . . .
+8N . . . 4N .
+
+
+
+// Primrose Girl
+// Marker L1
+4r . 8N . 4N
+4N . 8N . 4N
+4r . 8N . 4N
+4N . 8N . 4N
+
+
+// Marker L2
+4r . 8N . 4N
+4N . 8N . 4N
+4r . 8N . 4N
+4N . 8N . 4N
+
+// Marker L3
+/f
+4N . . .
+/mp /cresc
+8N . . . 4N . /f
+4N . . .
+/mp /cresc
+8N . . . 4N . /f
+
+// Marker L4
+8N . . . . . . .
+8N . . . . . . .
+/ff 4r . 8N . 4N
+8N . . . . . 4N
+
+
+
+
+
+
+
+////////// Bass /////////////////////////
+/track bass
+/channel 7
+
+// Sync:
+
+4r . . .
+/f
+
+
+// 8 bars of intro
+
+/f
+// Malt on the Optics
+// L1
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+// L2
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+// L3
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+// L4
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+// Forest Lodge
+// L1
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L2
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L3
+4B . 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L4
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B .
+
+// Primrose Girl
+// L1
+4r . 8B . 4B
+4B . 8B . 4B
+4r . 8B . 4B
+4B . 8B . 4B
+
+
+// L2
+4r . 8B . 4B
+4B . 8B . 4B
+4r . 8B . 4B
+4B . 8B . 4B
+
+// L3
+4B . . .
+/mp /cresc 4B . . . /f
+4B . . .
+/mp /cresc 4B . . . /f
+
+// L4
+4B . . .
+4B . . .
+/ff 4r . 8B . 4B
+8B . . . . . 16B 16:3r
+
+
 

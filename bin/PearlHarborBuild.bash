@@ -40,6 +40,9 @@ declare soundFontFile=${learnWithMidiDir}/SoundFonts/${soundFontName}
 # Capt Norman Orr (2/4 JL Massed Band)
 # Reel Set (Undetermined)
 declare -a pearlHarborBandTunesPipesAndDrumsNameArray=(
+  ReelSet
+
+
   # Use only one of these, not sure which yet
   # AmazingGrace3x  this is my cool version
   AmazingGrace2x
@@ -62,8 +65,7 @@ declare -a pearlHarborBandTunesPipesAndDrumsNameArray=(
   TheHauntingSimple
 
 
-  # No drum settings yet.  Check for JL Reel version
-  ReelSet
+  #ReelSet
 
   ScotlandTheBrave
   # ScotlandTheBrave2XMassedBands
@@ -84,28 +86,22 @@ function compileDrumsChanterTracksOneTune() {
   # And whoever calls this should report the error, but keep going.
   echo "dart $snareLangExecutable -i tunes/${tune}Drums.snl -o ${forDrummersDir}/BandTunes/PearlHarbor/Midis/${tune}Drums.mid"
   dart $snareLangExecutable -i tunes/${tune}Drums.snl -o ${forDrummersDir}/BandTunes/PearlHarbor/Midis/${tune}Drums.mid && (
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummersDir}/BandTunes/PearlHarbor/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.35" ${forDrummersDir}/BandTunes/PearlHarbor/Mp3s/${tune}Drums.mp3
+    fluidsynth -q -a alsa -g 1.5 -T raw -F - ${soundFontFile} ${forDrummersDir}/BandTunes/PearlHarbor/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.5" ${forDrummersDir}/BandTunes/PearlHarbor/Mp3s/${tune}Drums.mp3
     echo "Created ${forDrummersDir}/BandTunes/PearlHarbor/Mp3s/${tune}Drums.mp3"
-    #fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummersDir}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forDrummersDir}/BandTunes/Oggs/${tune}Drums.ogg
-    #fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummersDir}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forDrummersDir}/BandTunes/Wavs/${tune}Drums.wav
   )
     echo ""
   #    echo "Hey, that drum processing returned this: ${?}"
   echo "dart $pipeLangExecutable -i ${pipeLangDir}/tunes/${tune}Chanter.ppl -o ${forPipersDir}/BandTunes/PearlHarbor/Midis/${tune}Chanter.mid"
   dart $pipeLangExecutable -i ${pipeLangDir}/tunes/${tune}Chanter.ppl -o ${forPipersDir}/BandTunes/PearlHarbor/Midis/${tune}Chanter.mid && (
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipersDir}/BandTunes/PearlHarbor/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.35" ${forPipersDir}/BandTunes/PearlHarbor/Mp3s/${tune}Chanter.mp3
+    fluidsynth -q -a alsa -g 1.5 -T raw -F - ${soundFontFile} ${forPipersDir}/BandTunes/PearlHarbor/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.5" ${forPipersDir}/BandTunes/PearlHarbor/Mp3s/${tune}Chanter.mp3
     echo "Created ${forPipersDir}/BandTunes/PearlHarbor/Mp3s/${tune}Chanter.mp3"
-    #fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipersDir}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forPipersDir}/BandTunes/Oggs/${tune}Chanter.ogg
-    #fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipersDir}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forPipersDir}/BandTunes/Wavs/${tune}Chanter.wav
   )
     echo ""
   #    echo "Hey, that pipe processing returned this: ${?}"
   echo "dart $tracksExecutable -l WARNING -i ${forDrummersDir}/BandTunes/PearlHarbor/Midis/${tune}Drums.mid,${forPipersDir}/BandTunes/PearlHarbor/Midis/${tune}Chanter.mid -o ${learnWithMidiDir}/BandTunes/PearlHarbor/Midis/${tune}ChanterAndDrums.mid"
   dart $tracksExecutable -l WARNING -i ${forDrummersDir}/BandTunes/PearlHarbor/Midis/${tune}Drums.mid,${forPipersDir}/BandTunes/PearlHarbor/Midis/${tune}Chanter.mid -o ${learnWithMidiDir}/BandTunes/PearlHarbor/Midis/${tune}ChanterAndDrums.mid && (
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidiDir}/BandTunes/PearlHarbor/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.35" ${learnWithMidiDir}/BandTunes/PearlHarbor/Mp3s/${tune}ChanterAndDrums.mp3
+    fluidsynth -q -a alsa -g 1.5 -T raw -F - ${soundFontFile} ${learnWithMidiDir}/BandTunes/PearlHarbor/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.5" ${learnWithMidiDir}/BandTunes/PearlHarbor/Mp3s/${tune}ChanterAndDrums.mp3
     echo "Created ${learnWithMidiDir}/BandTunes/PearlHarbor/Mp3s/${tune}ChanterAndDrums.mp3"
-    #fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidiDir}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${learnWithMidiDir}/BandTunes/Oggs/${tune}ChanterAndDrums.ogg
-    #fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidiDir}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${learnWithMidiDir}/BandTunes/Wavs/${tune}ChanterAndDrums.wav
   )
     echo ""
   #    echo "Hey, that track processing returned this: ${?}"
@@ -115,9 +111,9 @@ function compileDrumsChanterTracksOneTune() {
 
 # Execution begins here, I guess
 
-echo cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${learnWithMidiDir}/SoundFonts
+#echo cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${learnWithMidiDir}/SoundFonts
 cp /home/rob/Desktop/MySoundFonts/${soundFontName} ${learnWithMidiDir}/SoundFonts
-echo ls ${learnWithMidiDir}/SoundFonts
+#echo ls ${learnWithMidiDir}/SoundFonts
 ls ${learnWithMidiDir}/SoundFonts
 #cp /home/rob/Desktop/MySoundFonts/PipesAndDrums202011060735.sf2 ${learnWithMidiDir}/MySoundFonts
 echo soundfont is $soundFontFile

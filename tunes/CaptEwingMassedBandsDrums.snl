@@ -189,8 +189,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
 12t 48Z . 12T 24t ^8F 24Z . .
 4t /cresc 24Z . . . . .
-^4T /fff /mf 4r
-
+^8T /fff /ff 8f F 8r
 
 
 // Is the following right????
@@ -310,9 +309,7 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 4r 12N 24n 12N 24n
 8N . 4N
 4N .
-2N
-
-
+8N /f 8n N 8r
 
 
 
@@ -327,13 +324,13 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 // sync
 1r
 // "pipes and drums, One Two" or "By the right, quick march"
-/mf
+/f
 /marker P&D 1,2
 1r
 // Roll-off
 /mf 4B . 2B    4B . 2B
 
-/mf
+/f
 // Line 1
 4B .
 4B .
@@ -430,6 +427,5 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 8B . 4B
 8b . 4b
 4B .
-2B
-
+8B /f 8b B 8r
 
