@@ -70,24 +70,24 @@ _4M _. _8M . _4M
 8T . >F t . >f T .
 
 /marker MOL2
-8T . >16F T 8t . >16f f 8T .
-8T . >16F T 8t . >16f f 8T .
-8T . >16F T 8t . >16f f 8T .
-8T . >16F T 8t . >16f f 8T .
+8T . >16F T 8t . >16f t 8T .
+8T . >16F T 8t . >16f t 8T .
+8T . >16F T 8t . >16f t 8T .
+8T . >16F T 8t . >16f t 8T .
 
 
 /marker MOL3
-8T . >16F T t t 8t >16f f T . 8t
-8T . >16F T t t 8t >16f f T . 8t
-8T . >16F T t t 8t >16f f T . 8t
-8T . >16F T t t 8t >16f f T . 8t
+8T . >16F T t t 8t >16f t T . 8t
+8T . >16F T t t 8t >16f t T . 8t
+8T . >16F T t t 8t >16f t T . 8t
+8T . >16F T t t 8t >16f t T . 8t
 
 
 /marker MOL4
-16T T 8t >16F T t t 8t >16f f T . 8t
-16T T 8t >16F T t t 8t >16f f T . 8t
-16T T 8t >16F T t t 8t >16f f T . 8t
-16T T 8t >16F T t t 8t >16f f T . 8t
+16T T 8t >16F T t t 8t >16f t T . 8t
+16T T 8t >16F T t t 8t >16f t T . 8t
+16T T 8t >16F T t t 8t >16f t T . 8t
+16T T 8t >16F T t t 8t >16f t T . 8t
 
 
 

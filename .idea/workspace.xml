@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Too many changes to remember.">
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/BluecoatsForMauiPipeBand.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PearlHarborBuild.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PearlHarborBuild.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CaptEwingMassedBandsDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CaptEwingMassedBandsDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CastleDangerousMassedBandsShiftedDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CastleDangerousMassedBandsShiftedDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/HauntingCastleSetSimpleAndMassedBandsDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/HauntingCastleSetSimpleAndMassedBandsDrums.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tunes/ReelSetDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ReelSetDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/ScotlandTheBraveMassedBandsDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ScotlandTheBraveMassedBandsDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +75,7 @@
       <recent name="$PROJECT_DIR$/exercises/warmups/LeoBrowne" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.PearlHarborBuild">
+  <component name="RunManager" selected="Dart Command Line App.BluecoatsWarmupsForYoungSnares">
     <configuration name="24MarchSetDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/24MarchSetDrums.snl -o midifiles/24MarchSetDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -127,6 +123,11 @@
     </configuration>
     <configuration name="BlackBearIntro" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/BlackBearIntroDrums.snl -o midifiles/BlackBearIntroDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BluecoatsWarmupsForYoungSnares" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/BluecoatsForMauiPipeBand.snl -o midifiles/Bluecoats.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -451,6 +452,7 @@
       <item itemvalue="Dart Command Line App.Rant2BarPhrases" />
       <item itemvalue="Dart Command Line App.Rant2BarRepeats" />
       <item itemvalue="Dart Command Line App.ReelSnareMet" />
+      <item itemvalue="Dart Command Line App.BluecoatsWarmupsForYoungSnares" />
       <item itemvalue="Dart Command Line App.ReelStraightSnareMet" />
       <item itemvalue="Dart Command Line App.RowanTreeJL" />
       <item itemvalue="Dart Command Line App.RowanTree" />
@@ -782,14 +784,10 @@
       <workItem from="1636152767436" duration="593000" />
       <workItem from="1636153637287" duration="46270000" />
       <workItem from="1636838564288" duration="616000" />
-      <workItem from="1637547004182" duration="23597000" />
-    </task>
-    <task id="LOCAL-00052" summary="Updates to snl files and creations of more exercises.">
-      <created>1606978335264</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1606978335266</updated>
+      <workItem from="1637547004182" duration="24564000" />
+      <workItem from="1637986739866" duration="709000" />
+      <workItem from="1638036227276" duration="78000" />
+      <workItem from="1644037138863" duration="26813000" />
     </task>
     <task id="LOCAL-00053" summary="Added more JL exercises.">
       <created>1607062168477</created>
@@ -1127,7 +1125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636055488667</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Too many changes to remember.">
+      <created>1637647592245</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1637647592246</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1174,34 +1179,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Too many changes to remember." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2083" y="677" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1635903929936">
+    <state x="2083" y="677" width="1084" height="732" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644042617090">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2083" y="677" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1635903929936" />
-    <state x="2408" y="789" width="424" height="478" key="FileChooserDialogImpl" timestamp="1633378649220">
+    <state x="2083" y="677" width="1084" height="732" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1644042617090" />
+    <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1644042410167">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2408" y="789" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1633378649220" />
-    <state width="2845" height="457" key="GridCell.Tab.0.bottom" timestamp="1635903892508">
+    <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1644042410167" />
+    <state width="3132" height="457" key="GridCell.Tab.0.bottom" timestamp="1644128384345">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2845" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1635903892508" />
-    <state width="2845" height="457" key="GridCell.Tab.0.center" timestamp="1635903892508">
+    <state width="3132" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1644128384345" />
+    <state width="3132" height="457" key="GridCell.Tab.0.center" timestamp="1644128384345">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2845" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1635903892508" />
-    <state width="2845" height="457" key="GridCell.Tab.0.left" timestamp="1635903892508">
+    <state width="3132" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1644128384345" />
+    <state width="3132" height="457" key="GridCell.Tab.0.left" timestamp="1644128384344">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2845" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1635903892508" />
-    <state width="2845" height="457" key="GridCell.Tab.0.right" timestamp="1635903892508">
+    <state width="3132" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1644128384344" />
+    <state width="3132" height="457" key="GridCell.Tab.0.right" timestamp="1644128384345">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2845" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1635903892508" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1636055515830">
+    <state width="3132" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1644128384345" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1637647604313">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1636055515830" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1637647604313" />
     <state x="1955" y="768" width="587" height="502" key="find.popup" timestamp="1635904218063">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
