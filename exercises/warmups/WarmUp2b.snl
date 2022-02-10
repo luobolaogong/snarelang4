@@ -1,0 +1,202 @@
+/time 4/4
+/tempo 109
+
+
+/track met
+/channel 0
+// Sync:
+
+^8M M ^M M ^16M . 8M ^4M
+
+// Sanford
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+
+/ff
+_4M _. _8M . _4M
+/mf
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+
+
+/track snare
+// Hey, is channel 1 on the left?
+/channel 1
+
+//// sync
+1r
+/ff
+// Salnford Doubles
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
+
+
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
+
+1T
+
+
+/ff
+
+/marker MOL1
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
+
+/marker MOL2
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+
+
+/marker MOL3
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+
+
+/marker MOL4
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+
+
+
+
+
+
+
+
+////////// Tenor /////////////////////////
+/track tenor
+/channel 3
+/mf
+// Sync:
+4N 4r . .
+// Sanford Doubles
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+4N 4r . .
+/f
+
+
+// Malt on the Optics
+// Marker L1
+4N . 8N 8n 4r // experiment
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+
+// Marker L2
+4N . 8N 8n 4r // experiment
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+
+// Marker L3
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+// Marker L4
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+
+
+
+
+
+
+
+////////// Bass /////////////////////////
+/track bass
+/channel 7
+
+// Sync:
+4B 4r . .
+
+// Sanford Doubles
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+4B 4r . .
+
+// 8 bars of intro
+
+/f
+// Malt on the Optics
+// L1
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+// L2
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+// L3
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+// L4
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+

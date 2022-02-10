@@ -1,0 +1,205 @@
+// Warmup #1
+// Set 1
+////////////// METRONOME ////////////////
+/track met
+/channel 0
+
+// We'll be switching from a 12/8 feel to a 4/4 but want to keep 8th notes constant.
+// The 12/8 feel should be a common tempo for most pipe band tunes.  Maybe 76?  But
+// we want to go slower here.  If we have 72 bpm for the dotted quarter in a 12/8, then
+// for the 4/4 we'd have 109 bpm.  The ratio is 3/2.
+
+// SET 1
+/tempo 72
+
+// Set 1, Exercise 1 is just stretch and get in mood.
+
+// Set 1, Exercise 2   1:09 on recording
+// Sync with 2 bars
+// May want some kind of obvious cue, like something with 24th notes
+^24M . . 8M  ^24M . . 8M  ^24M . . >. . .  24M . >. >8M
+4M . 8M . . .
+/mf
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// with buzzes this time
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+
+
+//////////////// SNARE ////////////////////////
+/track snare
+/channel 5
+
+// probably should be /time 12/8
+/time 4/4
+
+
+
+// Set 1
+
+//tempo 72
+
+// Exercise 1 is free form warm up, but leader decides when to stop.  Some kind of hand signal.
+
+
+// Exercise 2 is people play whatever they want, as long as it fits in
+// with 24th notes.  Nothing faster than 24th notes.  Anything slower
+// or in any phrasing is okay.  But everyone should end together,
+// by starting into Exercise 3.
+
+// It starts out with 24th notes, quiet for 4 bars, and then for the next many bars
+// anything goes.  I don't know what the signal is for everyone to come together, starting #3
+// This currently sits at 4 bars, even though it should go for 16 to 64
+
+// 1:09 on first recording listed above
+/marker S1E2
+// play near rim, quietly
+
+4r . . .
+4r . 8T T T T
+/mf
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+
+// basses solo
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    /cresc 24T . . . . .
+
+// anything goes here, any volume, any taps, doubles, flams, or rests
+// while basses do their thing, and then tenors do their thing
+/ff
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+// Cue comes 2 bars from end from tenors that this is ending
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+
+// This could go on longer.
+
+
+/fff
+12T T T   T T T   t t t  t t t
+12T T T   T T T   T T T  T T T
+12t t t   t t t   T T T  T T T
+12t t t   t t t   t t t  t t t
+
+//12Z Z Z   Z Z Z   z z z  z z z
+//12Z Z Z   Z Z Z   Z Z Z  Z Z Z
+//12z z z   z z z   Z Z Z  Z Z Z
+//12z z z   z z z   z z z  z z z
+1T
+
+
+///////////////// TENOR //////////////////////////////////
+/track tenor
+/channel 2
+/p
+1r
+1r
+8N . . . . . . .
+8N . . . . . . .
+
+/mp
+_12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
+_12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
+
+/mf
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
+
+/f
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24n  24N . .
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24n  24N . .
+/ff
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _8n
+24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N
+
+12N N N   N N N   n n n   n n n
+12N N N   N N N   N N N   N N N
+12n n n   n n n   N N N   N N N
+12n n n   n n n   n n n   n n n
+
+// added buzzes for snare
+//12N N N   N N N   n n n   n n n
+//12N N N   N N N   N N N   N N N
+//12n n n   n n n   N N N   N N N
+//12n n n   n n n   n n n   n n n
+/fff
+12N 12r . . . .
+
+/////////////// BASS ////////////////////////////////////
+/track bass
+/channel 8
+/f
+1r
+1r
+2B .
+2B .
+
+// Bass solo
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+
+/f
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+
+/ff
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+
+// added buzzes for snares
+//12B . .   . . .    . . .    . . .
+//12B . .   . . .    . . .    . . .
+//12B . .   . . .    . . .    . . .
+//12B . .   . . .    . . .    . . .
+/fff
+12B 12r . . . .

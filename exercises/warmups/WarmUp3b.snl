@@ -1,0 +1,20 @@
+// Some more roll development
+// Mostly triplet based, but some
+// 7 stroke
+
+
+//////////// SNARE ///////////
+/track snare
+/channel 5
+// sync
+1r
+
+>8T 24t . .   >8T 24t . .   >8T 24z . .   >8T 24z . .
+>8T 24t . .   >8T 24t . .   >8T 24z . .   >8T 24z . .
+>8T 24t . .   >8T 24t . .   >8T 24z . .   >8T 24z . .
+>8T 24z . .   >8T 24z . .   >8T 24z . .   >8T 24z . .
+
+>8t 24T . .   >8t 24T . .   >8t 24Z . .   >8t 24Z . .
+>8t 24T . .   >8t 24T . .   >8t 24Z . .   >8t 24Z . .
+>8t 24T . .   >8t 24T . .   >8t 24Z . .   >8t 24Z . .
+>8t 24Z . .   >8t 24Z . .   >8t 24Z . .   >8t 24Z . .

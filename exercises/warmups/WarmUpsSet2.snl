@@ -1,0 +1,263 @@
+// Warmups #2
+
+////////////// METRONOME SET 2 ////////////////
+/track met
+/channel 0
+
+/time 4/4
+/tempo 110
+
+// ----------- Set 2 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync
+^8M M ^M M ^16M . 8M ^4M
+
+^4M . >. .
+ ^. . >. .
+^4M . >. .   . . . .
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
+
+
+
+// ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+^4M . >. .
+>4M . >. .
+^4M . >. .   >. . >. .
+^4M . >. .
+>4M . >. .
+^4M . >. .   >. . >. .
+
+
+// ----------- From The Reel Set
+// ----------- The Reel set goes faster, so tempo is increased here
+/tempo 136
+/ff
+_4M _. _8M . _4M
+/mf
+
+
+
+// ----------- Set 2 Exercise 3 is (1) doubles part 1
+// -----------
+>4M . . .
+>4M . . .
+>4M . . .
+>4M . . .
+
+
+// ----------- Set 2 Exercise 4 is (2) doubles part 2
+// -----------
+>4M . . .
+>4M . . .
+>4M . . .
+>4M . . .
+
+// ----------- Set 2 Exercise 5 is (3) doubles part 3
+// -----------
+>4M . . .
+>4M . . .
+>4M . . .
+>4M . . .
+
+
+// more to come, I guess.  Maybe add some stuff for timing attacks
+// Maybe some work out abbreviated "3 Camps" Back to previous slow tempo for 12/8 time.
+
+
+
+
+
+
+//////////////// SNARE SET 2 ////////////////////////
+/track snare
+/channel 5
+
+
+//time 4/4
+//tempo 110
+
+// ----------- Set 2 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// sync
+^1T
+/ff
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
+
+
+// ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
+
+
+// ----------- From The Reel Set
+// ----------- The Reel set goes faster, so tempo is increased here
+// tempo 136
+4T
+4r // sticks down or in
+4r
+4r // up or out
+
+/ff
+// ----------- Set 2 Exercise 3 is (1) doubles part 1
+// -----------
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+
+
+// ----------- Set 2 Exercise 4 is (2) doubles part 2
+// -----------
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+
+// ----------- Set 2 Exercise 5 is (3) doubles part 3
+// -----------
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+
+
+
+///////////////// TENOR SET 2 //////////////////////////////////
+/track tenor
+/channel 2
+
+//time 4/4
+//tempo 110
+
+
+// ----------- Set 2 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync:
+4N 4r . .
+/mf
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+
+// ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+
+// ----------- From The Reel Set
+// ----------- The Reel set goes faster, so tempo is increased here
+// tempo 136
+4N 4r . .
+/f
+
+
+
+
+// ----------- Set 2 Exercise 3 is (1) doubles part 1
+// -----------
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+
+
+// ----------- Set 2 Exercise 4 is (2) doubles part 2
+// -----------
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+// ----------- Set 2 Exercise 5 is (3) doubles part 3
+// -----------
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+
+
+/////////////// BASS SET 2 ////////////////////////////////////
+/track bass
+/channel 8
+
+//time 4/4
+//tempo 110
+
+
+// ----------- Set 2 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync:
+4B 4r . .
+/f
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+
+// ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+
+// ----------- From The Reel Set
+// ----------- The Reel set goes faster, so tempo is increased here
+// tempo 136
+4B 4r . .
+
+
+
+
+
+// ----------- Set 2 Exercise 3 is (1) doubles part 1
+// -----------
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+
+// ----------- Set 2 Exercise 4 is (2) doubles part 2
+// -----------
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+// ----------- Set 2 Exercise 5 is (3) doubles part 3
+// -----------
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+

@@ -1,0 +1,215 @@
+/time 4/4
+/tempo 109
+
+/////////// METRONOME ///////////
+/track met
+/channel 0
+// Sync:
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////// SNARE //////////////////////
+/track snare
+/channel 1
+
+/marker FLL1
+8T . ^. 24t T T      8t ^. ^. 24T t t
+8T ^. 24T t t 8T     ^24t T T 8t ^24T t t 8T
+8T . ^. 24t T T      8t ^. ^. 24T t t
+8T ^. 24T t t 8T     ^24T t t T T >t ^4T
+
+/marker FLL2
+8T . ^t 24t T T      8t ^t ^t 24T t t
+8T ^t 24T t t 8T     ^24t T T 8t ^24T t t 8T
+8T . ^t 24t T T      8t ^t ^t 24T t t
+8T ^t 24T t t 8T     ^24T t t T T >t ^4T
+
+
+/marker FLL3
+12T 24t 12T 24t    8T ^t     12T 24t  8T   ^8t 12T 24t
+8T ^t  12T 24t  8T           ^12T 24t 12t 24T 8T ^t
+12T 24t 12T 24t    8T ^t     12T 24t  8T   ^8t 12T 24t
+8T ^t  12T 24t  8T           ^12T 24t 12t 24T ^4T
+
+/marker FLL4
+^24T t t T T t    8T ^t     24T t t  8T   ^8t 24T t t
+8T ^t  24T t t  8T         ^24T t t T T t 8T ^t
+>24T t t 8T   >24t T T 8t   >24T t t 8T   >24t T T 8t
+8T ^t  24T t t  8T  ^24T t t T T >t   ^4T
+
+
+
+
+/marker PGL1
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T ^8t 16t   16T ^8t 16t   8T >t    >4t
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T ^8t 16t   16T ^8t 16t   8T >t    >4t
+
+/marker PGL2
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24T 8t   12T 24T 8t     >12T >24t >12T >24t   >4T
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24T 8t   12T 24T 8t     >12T >24t >12T >24t   8T .
+
+
+/marker PGL3
+/ff
+^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t
+/p /cresc    12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t
+/ff
+^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t
+/p /cresc    12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t     /ff
+
+/marker PGL4
+/ff
+^24T t t 8T   ^24t T T 8t   ^24T t t 8T   ^24t T T 8t
+8T  ^24t T T 8t   ^24T t t 8T   ^24t T T 8t  >8T
+4r 4r  ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  4T
+
+
+
+
+////////// Tenor /////////////////////////
+/track tenor
+/channel 3
+
+
+// Forest Lodge
+// Marker L1
+4N . 8N . 4N
+8N . 4N . .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L2
+4N . 8N . 4N
+8N . 4N . .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L3
+4N . 8N . 4N
+8N . . . 4N .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L4
+4N . 8N . 4N
+8N . . . 4N .
+4N . . .
+8N . . . 4N .
+
+
+
+// Primrose Girl
+// Marker L1
+4r . 8N . 4N
+4N . 8N . 4N
+4r . 8N . 4N
+4N . 8N . 4N
+
+
+// Marker L2
+4r . 8N . 4N
+4N . 8N . 4N
+4r . 8N . 4N
+4N . 8N . 4N
+
+// Marker L3
+/f
+4N . . .
+/mp /cresc
+8N . . . 4N . /f
+4N . . .
+/mp /cresc
+8N . . . 4N . /f
+
+// Marker L4
+8N . . . . . . .
+8N . . . . . . .
+/ff 4r . 8N . 4N
+8N . . . . . 4N
+
+
+
+
+////////// Bass /////////////////////////
+/track bass
+/channel 7
+
+
+
+// Forest Lodge
+// L1
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L2
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L3
+4B . 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L4
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B .
+
+// Primrose Girl
+// L1
+4r . 8B . 4B
+4B . 8B . 4B
+4r . 8B . 4B
+4B . 8B . 4B
+
+
+// L2
+4r . 8B . 4B
+4B . 8B . 4B
+4r . 8B . 4B
+4B . 8B . 4B
+
+// L3
+4B . . .
+/mp /cresc 4B . . . /f
+4B . . .
+/mp /cresc 4B . . . /f
+
+// L4
+4B . . .
+4B . . .
+/ff 4r . 8B . 4B
+8B . . . . . 16B 16:3r
+
+

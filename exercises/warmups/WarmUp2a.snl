@@ -1,0 +1,202 @@
+
+//////////////// METRONOME ////////////////
+/track met
+/channel 0
+
+/tempo 109
+
+4M . 8M . 4M
+
+//Exercise 4
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . 8M . 4M
+
+//Exercise 5
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+// Bump it up by about 10bpm
+/tempo 120
+4M . 8M . 4M
+
+//Exercise 5 repeat
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+// 4M . 8M . 4M
+^8M M ^M M M ^M M ^M
+
+//Exercise 7
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+// 4M . 8M . 4M
+
+// Bump it up by about 10bpm
+/tempo 130
+^8M M ^M M M ^M M ^M
+
+//Exercise 7 repeat
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+
+
+///////////////// SNARE //////////////////
+/track snare
+/channel 5
+
+
+//tempo 109
+1T
+
+// Exercise 4 shifts to 8 notes per phrase, keeping the same speed of notes,
+// and the time keeper switches into 4/4 time.  This essentially changes
+// the tempo to be 3/2 faster, as just previously set.
+/marker S1E4
+8T T T T T T T T    t t t t t t t t
+8T T T T T T T T    T T T T T T T T
+8t t t t t t t t    T T T T T T T T
+8t t t t t t t t    t t t t t t t t
+1T
+
+
+// Exercise 5, loud and soft contrast
+/marker S1E5
+/ff
+^8T T ^T T ^T T ^T T   ^t t ^t t ^t t ^t t
+^8T T ^T T ^T T ^T T    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^t t ^t t ^t t ^t t
+^1T
+
+// Exercise 5, repeat
+/marker S1E5Rpt
+^8T T ^T T ^T T ^T T   ^t t ^t t ^t t ^t t
+^8T T ^T T ^T T ^T T    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^t t ^t t ^t t ^t t
+^1T
+
+// Exercise 7
+/marker S1E7
+^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
+^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
+^1T
+
+// Exercise 7 Repeat
+/marker S1E7Rpt
+^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
+^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
+^1T
+
+
+
+///////////////// TENOR //////////////////
+/track tenor
+/channel 2
+
+
+/tempo 109
+1N
+/mp
+// ex4
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+4N 4r . .
+
+// ex5
+/mf
+_8N N _N N _N N _N N   _n n _n n _n n _n n
+_8N N _N N _N N _N N    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _n n _n n _n n _n n
+4N 4r . .
+
+// Exercise 5, repeat
+/marker S1E5Rpt
+_8N N _N N _N N _N N   _n n _n n _n n _n n
+_8N N _N N _N N _N N    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _n n _n n _n n _n n
+4N 4r . .
+
+// Exercise 7
+/marker S1E7
+_8N N _N N N _N N _N   _n n _n n n _n _n N
+_8N N _N N N _N N _N    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _n n _n n n _n n _n
+4N 4r . .
+
+// Exercise 7 Repeat
+/marker S1E7Rpt
+_8N N _N N N _N N _N   _n n _n n n _n _n N
+_8N N _N N N _N N _N    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _n n _n n n _n n _n
+
+4N 4r . .
+
+
+
+
+///////////////// BASS ////////////////////
+/track bass
+/channel 8
+/f
+
+/tempo 109
+4B 4r . .
+// ex4
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B 4r . .
+
+// ex5
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B 4r . .
+
+// ex5 rpt
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B 4r . .
+
+
+// Exercise 7
+/marker S1E7
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 4B 8B
+4B 4r . .
+
+// Exercise 7 Repeat
+/marker S1E7Rpt
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 4B 8B
+
+4B 4r . .
+

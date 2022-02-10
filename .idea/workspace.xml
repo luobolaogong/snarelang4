@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Too many changes to remember.">
-      <change afterPath="$PROJECT_DIR$/exercises/warmups/BluecoatsForMauiPipeBand.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUp1.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUp2a.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUp2b.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUp2c.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUp3a.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUp3b.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpReel.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSet1.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSet2.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSet3.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/ReelSetDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ReelSetDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,25 +65,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tunes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/exercises/warmups" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/exercises" />
-      <recent name="$PROJECT_DIR$/bin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exercises/warmups" />
       <recent name="$PROJECT_DIR$/tunes" />
       <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/FanfaresSalutes" />
       <recent name="$PROJECT_DIR$/exercises/warmups/LeoBrowne" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/exercises" />
+      <recent name="$PROJECT_DIR$/bin" />
+    </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.BluecoatsWarmupsForYoungSnares">
+  <component name="RunManager" selected="Dart Command Line App.WarmUpsSet3">
     <configuration name="24MarchSetDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/24MarchSetDrums.snl -o midifiles/24MarchSetDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -371,6 +380,56 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="WarmUp1" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUp1.snl -o midifiles/WarmUp1.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmUp2a" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUp2a.snl -o midifiles/WarmUp2a.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmUp2b" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUp2b.snl -o midifiles/WarmUp2b.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmUp2c" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUp2c.snl -o midifiles/WarmUp2c.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmUp3" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUp3.snl -o midifiles/WarmUp3.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmUpSequence" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUpSequence20220209.snl -o midifiles/WarmUpSequence20220209.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmUpsSet1" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUpsSet1.snl -o midifiles/WarmUpsSet1.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmUpsSet2" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUpsSet2.snl -o midifiles/WarmUpsSet2.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmUpsSet3" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUpsSet3.snl -o midifiles/WarmUpsSet3.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarmupReel" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/WarmUpReel.snl -o midifiles/WarmUpReel.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="SnareLang4Test" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <option name="filePath" value="$PROJECT_DIR$/test/snarelang4_test.dart" />
       <method v="2" />
@@ -453,6 +512,16 @@
       <item itemvalue="Dart Command Line App.Rant2BarRepeats" />
       <item itemvalue="Dart Command Line App.ReelSnareMet" />
       <item itemvalue="Dart Command Line App.BluecoatsWarmupsForYoungSnares" />
+      <item itemvalue="Dart Command Line App.WarmUp1" />
+      <item itemvalue="Dart Command Line App.WarmUp2a" />
+      <item itemvalue="Dart Command Line App.WarmUpSequence" />
+      <item itemvalue="Dart Command Line App.WarmUpsSet1" />
+      <item itemvalue="Dart Command Line App.WarmUpsSet2" />
+      <item itemvalue="Dart Command Line App.WarmUpsSet3" />
+      <item itemvalue="Dart Command Line App.WarmUp3" />
+      <item itemvalue="Dart Command Line App.WarmupReel" />
+      <item itemvalue="Dart Command Line App.WarmUp2b" />
+      <item itemvalue="Dart Command Line App.WarmUp2c" />
       <item itemvalue="Dart Command Line App.ReelStraightSnareMet" />
       <item itemvalue="Dart Command Line App.RowanTreeJL" />
       <item itemvalue="Dart Command Line App.RowanTree" />
@@ -787,14 +856,7 @@
       <workItem from="1637547004182" duration="24564000" />
       <workItem from="1637986739866" duration="709000" />
       <workItem from="1638036227276" duration="78000" />
-      <workItem from="1644037138863" duration="26813000" />
-    </task>
-    <task id="LOCAL-00053" summary="Added more JL exercises.">
-      <created>1607062168477</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1607062168478</updated>
+      <workItem from="1644037138863" duration="72989000" />
     </task>
     <task id="LOCAL-00054" summary="5 new JL exercises from first book.">
       <created>1607132329762</created>
@@ -1132,7 +1194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637647592246</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Too many changes to remember.">
+      <created>1644128764198</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1644128764199</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1179,34 +1248,38 @@
     <option name="LAST_COMMIT_MESSAGE" value="Too many changes to remember." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2083" y="677" width="1084" height="732" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644042617090">
+    <state x="2083" y="677" width="1084" height="756" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644476081863">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2083" y="677" width="1084" height="732" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1644042617090" />
-    <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1644042410167">
+    <state x="2083" y="677" width="1084" height="756" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1644476081863" />
+    <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1644213811391">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1644042410167" />
-    <state width="3132" height="457" key="GridCell.Tab.0.bottom" timestamp="1644128384345">
+    <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1644213811391" />
+    <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl" timestamp="1644256580683">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3132" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1644128384345" />
-    <state width="3132" height="457" key="GridCell.Tab.0.center" timestamp="1644128384345">
+    <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1644256580683" />
+    <state width="3248" height="457" key="GridCell.Tab.0.bottom" timestamp="1644475781844">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3132" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1644128384345" />
-    <state width="3132" height="457" key="GridCell.Tab.0.left" timestamp="1644128384344">
+    <state width="3248" height="457" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1644475781844" />
+    <state width="3248" height="457" key="GridCell.Tab.0.center" timestamp="1644475781844">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3132" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1644128384344" />
-    <state width="3132" height="457" key="GridCell.Tab.0.right" timestamp="1644128384345">
+    <state width="3248" height="457" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1644475781844" />
+    <state width="3248" height="457" key="GridCell.Tab.0.left" timestamp="1644475781844">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3132" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1644128384345" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1637647604313">
+    <state width="3248" height="457" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1644475781844" />
+    <state width="3248" height="457" key="GridCell.Tab.0.right" timestamp="1644475781844">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1637647604313" />
+    <state width="3248" height="457" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1644475781844" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1644128775830">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1644128775830" />
     <state x="1955" y="768" width="587" height="502" key="find.popup" timestamp="1635904218063">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

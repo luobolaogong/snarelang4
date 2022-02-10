@@ -1,0 +1,1259 @@
+// Warmup #1
+// Set 1 Taps and Singles
+/marker TapsSinglesSet
+////////////// METRONOME SET 1 ////////////////
+/track met
+/channel 0
+
+// We'll be switching between 12/8 and 4/4 but keeping 8th notes constant which
+// means tempo will go between 1x and 3x/2.
+// If we have 72 bpm for the dotted quarter in a 12/8, then
+// for the 4/4 we'd have 110 bpm.
+
+
+
+// ----------- Set 1 Exercise 0 is free form warm up
+// ----------- but leader decides when to stop.
+// ----------- Some kind of hand signal.
+
+
+
+// ----------- Set 1 Exercise 1 is alternating single stroke
+// ----------- 24th notes
+// -----------
+/time 4/4
+/tempo 72
+// Sync
+^24M . . 8M  ^24M . . 8M  ^24M . . >. . .  24M . >. >8M
+^4M ^. ^8M ^. ^24M . . ^8M
+/mf
+4M . . .
+4M . . .
+
+
+
+// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- while snares continue
+// -----------
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+
+
+// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.  Anything goes here,
+// ----------- any volume, any taps, doubles, flams, or rests.
+// -----------
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+
+// ----------- Set 1 Exercise 4 is unison 12th notes for all
+// -----------
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- keeping 8ths constant.  This means a tempo change.
+// ----------- Groups of 8 notes for snares.
+/tempo 110
+4M . 8M . 4M
+
+
+
+
+
+
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . 8M . 4M
+
+// ------------ Set 1 Exercise 6, loud and soft contrast
+// ------------
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+// Bump it up by about 10bpm
+/tempo 120
+4M . 8M . 4M
+
+//repeat
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+
+
+
+
+
+// ----------- Set 1 Exercise 7 is mixed accents
+// -----------
+// Sync
+^8M M ^M M M ^M M ^M
+
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+
+// rpt, but faster, bump it up by 10
+/tempo 130
+^8M M ^M M M ^M M ^M
+
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+
+/tempo 110
+
+
+
+
+
+
+
+
+
+
+
+
+// 2b
+
+^8M M ^M M ^16M . 8M ^4M
+
+// Sanford
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+^4M . >. .   ^. . >. .
+
+/ff
+_4M _. _8M . _4M
+/mf
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+
+// 2c
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+//>4M . . .  _. . . .  _. . . .  _. . . .
+
+
+// 3a
+/tempo 72
+//Sync
+>4M >. >24M . .  >. . .   >8M >.
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+>4M >. >24M . .  >. . .   >8M >.
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+
+>4M >. >24M . .  >. . .   >8M >.
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+>4M >. >24M . .  >. . .   >8M >.
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+4M . 8M . . .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_4M . _8M . _. .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_4M . _8M . _. .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_4M . _8M . _. .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_4M . _8M . _. .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+_4M . _8M . _. .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+
+
+//////////////// SNARE SET 1 ////////////////////////
+/track snare
+/channel 5
+
+
+
+// ----------- Set 1 Exercise 0 is free form warm up
+// ----------- but leader decides when to stop.
+// ----------- Some kind of hand signal.
+
+
+
+// ----------- Set 1 Exercise 1 is alternating single stroke
+// ----------- 24th notes for snares, played near rim, quietly.
+// -----------
+//time 4/4
+//tempo 72
+
+// Sync
+// One snare, or metronome, attention cue, and sync:
+///fff
+//^24T . . 8T  ^24T . . 8T  ^24T . . >. . .  24T . >. >8T
+
+//4T .
+/marker Dut
+//>8T >T >T >T
+
+1r
+4r 4r
+8r . . .
+
+/mf
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+
+
+// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// basses solo
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+// tenors solo
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    /cresc 24T . . . . .
+
+
+
+// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.  Anything goes here,
+// ----------- any volume, any taps, doubles, flams, or rests.
+// -----------
+/ff
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+// Cue comes 2 bars from end from tenors that this is ending
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+
+
+// ----------- Set 1 Exercise 4 is unison 12th notes for all
+// -----------
+/fff
+/marker Taps 12ths
+12T T T   T T T   t t t  t t t
+12T T T   T T T   T T T  T T T
+12t t t   t t t   T T T  T T T
+12t t t   t t t   t t t  t t t
+
+
+// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- keeping 8ths constant.  This means a tempo change.
+// ----------- Groups of 8 notes for snares.
+//tempo 110
+// Sync
+4T
+4r // sticks down or in
+4r
+4r // sticks up or out
+
+
+8T T T T T T T T    t t t t t t t t
+8T T T T T T T T    T T T T T T T T
+8t t t t t t t t    T T T T T T T T
+8t t t t t t t t    t t t t t t t t
+1T
+
+// ------------ Set 1 Exercise 6, loud and soft contrast
+// ------------
+/marker Taps 8ths Accents
+/ff
+^8T T ^T T ^T T ^T T   ^t t ^t t ^t t ^t t
+^8T T ^T T ^T T ^T T    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^t t ^t t ^t t ^t t
+//tempo 120
+^1T
+
+// repeat  should this go faster?
+^8T T ^T T ^T T ^T T   ^t t ^t t ^t t ^t t
+^8T T ^T T ^T T ^T T    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^t t ^t t ^t t ^t t
+
+
+
+
+
+// ----------- Set 1 Exercise 7 is mixed accents
+// -----------
+// Sync
+^1T
+
+^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
+^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
+
+// rpt, but faster
+//Sync
+//tempo 130
+^1T
+
+^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
+^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Set 2 Doubles
+
+// ----------- Set 2 Exercise 1 is
+// -----------
+
+//// sync
+^1T
+/ff
+// Sanford 2 strokes
+/marker San2Strk
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
+
+
+// ----------- Set 2 Exercise 2 is
+// -----------
+// Sanford 3 strokes
+/marker San3Strk
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
+
+
+// ----------- Set 2 Exercise  is
+// -----------
+1T
+
+
+/ff
+// I wonder if this could go faster?  But triplet rolls stuff can't
+//marker MOL1
+/marker DblesPat
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
+
+
+// ----------- Set 2 Exercise
+// -----------
+//marker MOL2
+/marker Dbls1
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+8T . >16T >16T 8t . >16t >16t 8T .
+
+
+// ----------- Set 2 Exercise
+// -----------
+//marker MOL3
+/marker Dbls2
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . >16T >16T t t 8t >16t >16t T . 8t
+
+// ----------- Set 2 Exercise
+// -----------
+//marker MOL4
+/marker Dbls3
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+
+// ----------- Set 2 Exercise
+// -----------
+///marker FLL1
+//8T . ^. 24t T T      8t ^. ^. 24T t t
+//8T ^. 24T t t 8T     ^24t T T 8t ^24T t t 8T
+//8T . ^. 24t T T      8t ^. ^. 24T t t
+//8T ^. 24T t t 8T     ^24T t t T T >t ^4T
+//
+///marker FLL2
+//8T . ^t 24t T T      8t ^t ^t 24T t t
+//8T ^t 24T t t 8T     ^24t T T 8t ^24T t t 8T
+//8T . ^t 24t T T      8t ^t ^t 24T t t
+//8T ^t 24T t t 8T     ^24T t t T T >t ^4T
+//
+//
+///marker FLL3
+//12T 24t 12T 24t    8T ^t     12T 24t  8T   ^8t 12T 24t
+//8T ^t  12T 24t  8T           ^12T 24t 12t 24T 8T ^t
+//12T 24t 12T 24t    8T ^t     12T 24t  8T   ^8t 12T 24t
+//8T ^t  12T 24t  8T           ^12T 24t 12t 24T ^4T
+//
+///marker FLL4
+//^24T t t T T t    8T ^t     24T t t  8T   ^8t 24T t t
+//8T ^t  24T t t  8T         ^24T t t T T t 8T ^t
+//>24T t t 8T   >24t T T 8t   >24T t t 8T   >24t T T 8t
+//8T ^t  24T t t  8T  ^24T t t T T >t   ^4T
+//
+//
+//
+//
+///marker PGL1
+//4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+//16T ^8t 16t   16T ^8t 16t   8T >t    >4t
+//4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+//16T ^8t 16t   16T ^8t 16t   8T >t    >4t
+//
+///marker PGL2
+//4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+//12T 24T 8t   12T 24T 8t     >12T >24t >12T >24t   >4T
+//4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+//12T 24T 8t   12T 24T 8t     >12T >24t >12T >24t   8T .
+//
+//
+///marker PGL3
+///ff
+//^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t
+///p /cresc    12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t
+///ff
+//^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t
+///p /cresc    12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t     /ff
+//
+///marker PGL4
+///ff
+//^24T t t 8T   ^24t T T 8t   ^24T t t 8T   ^24t T T 8t
+//8T  ^24t T T 8t   ^24T t t 8T   ^24t T T 8t  >8T
+//4r 4r  ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+//12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  4T
+
+
+///////////////////////// SET 3 - ROLLS ////////////////
+
+// 3a
+//tempo 72
+1r
+
+// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// Set 4 Ex 0: Buzz Rolls with pulses
+/mp
+//marker S4E0
+/marker bzzPulses
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+1T
+
+//marker S4E0Rpt
+//marker rpt
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+1T
+
+// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// Set 4 Ex 1: Buzz Rolls
+/mp
+//marker S4E1
+/marker BzzNoplse
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+1T
+
+//marker rpt
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+1T
+
+// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// Set 4 Ex 3: Cresc/Descresc Rolls
+/marker BuzDyn
+/mp
+24T . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
+24T /ff  . . . . .    . . . . . .    /decresc 24Z . . . . .    . . . . . .
+24T /mp . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
+24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+1T /ff
+
+//marker rpt
+/mp
+24T . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
+24T /ff  . . . . .    . . . . . .    /decresc 24Z . . . . .    . . . . . .
+24T /mp . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
+24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+1T /ff
+
+// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// Tap Rolls
+// Set 4 Ex 2: Tap Rolls
+/marker TapRls
+/mf
+24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+1T
+
+//marker rpt
+/mf
+24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+1T
+
+
+// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// More Tap Rolls
+/marker TapRllsDyn
+/mp
+24T . . . . .    . . . . . .   /cresc  ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+24T /ff . . . . .    . . . . . .   /decresc ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+24T /mp . . . . .    . . . . . .   /cresc ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^1T /ff
+
+//marker rpt
+/mp
+24T . . . . .    . . . . . .   /cresc  ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+24T /ff . . . . .    . . . . . .   /decresc ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+24T /mp . . . . .    . . . . . .   /cresc ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^1T /ff
+
+
+
+///////////////// TENOR SET 1 //////////////////////////////////
+// 1
+/track tenor
+/channel 2
+
+// ----------- Set 1 Exercise 0 is free form warm up
+// ----------- but leader decides when to stop.
+// ----------- Some kind of hand signal.
+
+// ----------- Set 1 Exercise 1 is alternating single stroke
+// ----------- 24th notes for snares, tenors keep rhythm with 8ths, quietly.
+// -----------
+//time 4/4
+//tempo 72
+
+// Sync
+1r
+4r 4r
+8r . . .
+
+/p
+8N . . . . . . .
+8N . . . . . . .
+
+// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// (basses solo)
+/mp
+_12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
+// (tenors solo)
+/mf
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
+
+// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.
+// -----------
+/mf
+_12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
+// (tenors solo again)
+/f
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _8n
+/ff
+24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N
+
+// ----------- Set 1 Exercise 4 is unison 12th notes for all
+// -----------
+
+/ff
+12N N N   N N N   n n n   n n n
+12N N N   N N N   N N N   N N N
+12n n n   n n n   N N N   N N N
+12n n n   n n n   n n n   n n n
+
+
+// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- keeping 8ths constant.  This means a tempo change.
+// ----------- Groups of 8 notes for snares.
+//tempo 110
+8N 8r
+4r // sticks down or in
+4r
+4r // sticks up or out
+
+/mf
+
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+4N 4r . .
+
+// ------------ Set 1 Exercise 6, loud and soft contrast
+// ------------
+/mf
+_8N N _N N _N N _N N   _n n _n n _n n _n n
+_8N N _N N _N N _N N    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _n n _n n _n n _n n
+//tempo 120
+4N 4r . .
+
+// repeat // should this go faster?
+_8N N _N N _N N _N N   _n n _n n _n n _n n
+_8N N _N N _N N _N N    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _n n _n n _n n _n n
+
+
+
+
+
+// ----------- Set 1 Exercise 7 is mixed accents
+// -----------
+// Sync
+4N 4r . .
+
+_8N N _N N N _N N _N   _n n _n n n _n _n N
+_8N N _N N N _N N _N    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _n n _n n n _n n _n
+
+// rpt, but faster
+//Sync
+//tempo 130
+4N 4r . .
+
+_8N N _N N N _N N _N   _n n _n n n _n _n N
+_8N N _N N N _N N _N    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _n n _n n n _n n _n
+
+
+
+
+
+
+
+
+
+
+
+
+// 2b
+/mf
+// Sync:
+4N 4r . .
+// Sanford
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+4N 4r . .
+/f
+
+
+// Malt on the Optics
+// Marker L1
+4N . 8N 8n 4r // experiment
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+
+// Marker L2
+4N . 8N 8n 4r // experiment
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+
+// Marker L3
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+// Marker L4
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+// 2c
+//
+//// Forest Lodge
+//// Marker L1
+//4N . 8N . 4N
+//8N . 4N . .
+//4N . 8N . 4N
+//8N . . . 4N .
+//
+//// Marker L2
+//4N . 8N . 4N
+//8N . 4N . .
+//4N . 8N . 4N
+//8N . . . 4N .
+//
+//// Marker L3
+//4N . 8N . 4N
+//8N . . . 4N .
+//4N . 8N . 4N
+//8N . . . 4N .
+//
+//// Marker L4
+//4N . 8N . 4N
+//8N . . . 4N .
+//4N . . .
+//8N . . . 4N .
+//
+//
+//
+//// Primrose Girl
+//// Marker L1
+//4r . 8N . 4N
+//4N . 8N . 4N
+//4r . 8N . 4N
+//4N . 8N . 4N
+//
+//
+//// Marker L2
+//4r . 8N . 4N
+//4N . 8N . 4N
+//4r . 8N . 4N
+//4N . 8N . 4N
+//
+//// Marker L3
+///f
+//4N . . .
+///mp /cresc
+//8N . . . 4N . /f
+//4N . . .
+///mp /cresc
+//8N . . . 4N . /f
+//
+//// Marker L4
+//8N . . . . . . .
+//8N . . . . . . .
+///ff 4r . 8N . 4N
+//8N . . . . . 4N
+
+// 3a
+//tempo 72
+/mp
+//Setx Ex0
+1r
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N 4r . .
+
+// Ex0 repeat
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N 4r . .
+
+// Ex1
+/p
+8N . . .  24N . .  . . .  . . .  . . .
+8N . . .  24N . .  . . .  . . .  . . .
+8N . . .  24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N 4r . .
+
+// Ex1 rpt
+8N . . .  24N . .  . . .  . . .  . . .
+8N . . .  24N . .  . . .  . . .  . . .
+8N . . .  24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N 4r . .
+
+
+// Ex    cresce/decresc
+/mp
+8N . . .  /cresc 24N . .  . . .  . . .  . . .
+8N /ff . . .  /decresc 24N . .  . . .  . . .  . . .
+8N /mp . . .  /cresc 24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N /ff /mp 4r . .
+
+// Ex
+/mp
+8N . . .  /cresc 24N . .  . . .  . . .  . . .
+8N /ff . . .  /decresc 24N . .  . . .  . . .  . . .
+8N /mp . . .  /cresc 24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N /ff /mp 4r . .
+
+// Ex
+8N . . .  _24N . .  . . .  . . .  . . .
+8N . . .  _24N . .  . . .  . . .  . . .
+8N . . .  _24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N 4r . .
+
+// Ex
+8N . . .  _24N . .  . . .  . . .  . . .
+8N . . .  _24N . .  . . .  . . .  . . .
+8N . . .  _24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N 4r . .
+
+// Ex
+8N . . .  /cresc _24N . .  . . .  . . .  . . .
+8N /ff . . .  /decresc _24N . .  . . .  . . .  . . .
+8N /mp . . .  /cresc _24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N /ff /mp 4r . .
+
+// Ex
+8N . . .  /cresc _24N . .  . . .  . . .  . . .
+8N /ff . . .  /decresc _24N . .  . . .  . . .  . . .
+8N /mp . . .  /cresc _24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N /ff /mp 4r . .
+
+
+
+/////////////// BASS ////////////////////////////////////
+/track bass
+/channel 8
+
+// ----------- Set 1 Exercise 0 is free form warm up
+// ----------- but leader decides when to stop.
+// ----------- Some kind of hand signal.
+
+// ----------- Set 1 Exercise 1 is alternating single stroke
+// ----------- 24th notes for snares, bases keep rhythm with half notes, quietly.
+// -----------
+//time 4/4
+//tempo 72
+
+// Sync
+1r
+4r 4r
+8r . . .
+
+/mf
+2B .
+2B .
+
+// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- while snares continue
+// -----------
+/ff
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+/mf
+2B .
+2B .
+
+
+
+// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.
+// -----------
+/ff
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+/mf
+2B .
+2B .
+
+
+
+// ----------- Set 1 Exercise 4 is unison 12th notes for all
+// -----------
+
+/ff
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+
+
+// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- keeping 8ths constant.  This means a tempo change.
+// ----------- Groups of 8 notes for snares.
+//tempo 110
+/f
+8B 8r
+4r // sticks down or in
+4r
+4r // sticks up or out
+
+
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B 4r . .
+
+// ------------ Set 1 Exercise 6, loud and soft contrast
+// ------------
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+//tempo 120
+4B 4r . .
+
+// rpt // faster?
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+
+
+
+
+
+
+// ----------- Set 1 Exercise 7 is mixed accents
+// -----------
+// Sync
+4B 4r . .
+
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 4B 8B
+
+// rpt, but faster
+//Sync
+//tempo 130
+4B 4r . .
+
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 4B 8B
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 2b
+
+// Sync:
+4B 4r . .
+
+// Sanford
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+4B 4r . .
+
+// 8 bars of intro
+
+/f
+// Malt on the Optics
+// L1
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+// L2
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+// L3
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+// L4
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+
+// 2c
+//
+//// Forest Lodge
+//// L1
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+//
+//// L2
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+//
+//// L3
+//4B . 4B 4r
+//4B 4r 4B 4b
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+//
+//// L4
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+//4B 4r 4B 4r
+//4B 4r 4B .
+//
+//// Primrose Girl
+//// L1
+//4r . 8B . 4B
+//4B . 8B . 4B
+//4r . 8B . 4B
+//4B . 8B . 4B
+//
+//
+//// L2
+//4r . 8B . 4B
+//4B . 8B . 4B
+//4r . 8B . 4B
+//4B . 8B . 4B
+//
+//// L3
+//4B . . .
+///mp /cresc 4B . . . /f
+//4B . . .
+///mp /cresc 4B . . . /f
+//
+//// L4
+//4B . . .
+//4B . . .
+///ff 4r . 8B . 4B
+//8B . . . . . 16B 16:3r
+
+
+// 3a
+//tempo 72
+1B
+
+// Set 4
+
+// Set 4 Ex 0: Buzz Rolls with pulses
+/mf
+//marker S4E0
+2B . . . . . . .
+4B 4r . .
+
+//marker S4E0Rpt
+2B . . . . . . .
+4B 4r . .
+
+
+// Set 4 Ex 1: Buzz Rolls
+/mp
+//marker S4E1
+2B . . . . . . .
+4B 4r . .
+
+//marker S4E1Rpt
+2B . . . . . . .
+4B 4r . .
+
+
+// Set 4 Ex 3: Cresc/Descresc Rolls
+//marker S4E3
+/mp /cresc
+2B .
+/f /decresc
+. .
+/mp /cresc
+. .
+. .
+4B /f 4r . .
+
+//marker S4E3Rpt
+/mp /cresc
+2B .
+/f /decresc
+. .
+/mp /cresc
+. .
+. .
+4B /f 4r . .
+
+
+// Tap Rolls
+// Set 4 Ex 2: Tap Rolls
+//marker S4E2
+/mf
+2B . . . . . . .
+4B 4r . .
+
+//marker S4E2Rpt
+/mf
+2B . . . . . . .
+4B 4r . .
+
+
+
+// More Tap Rolls  (5's)
+//marker S4E5
+/mp /cresc
+2B .
+/f /decresc
+. .
+/mp /cresc
+. .
+. .
+4B /f 4r . .
+
+//marker S4E5Rpt
+/mp /cresc
+2B .
+/f /decresc
+. .
+/mp /cresc
+. .
+. .
+4B /f 4r . .
