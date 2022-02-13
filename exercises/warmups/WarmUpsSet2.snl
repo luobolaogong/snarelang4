@@ -19,15 +19,53 @@
 ^4M . >. .   . . . .
 
 
+// Throw in some doubles between accents
+// maybe too fast
+//^4M . >. .
+//^4M . >. .
+//^4M . >. .   . . . .
+//^4M . >. .
+//^4N . >. .
+//^4M . >. .   . . . .
+
+// all of this was to prepare for tap rolls without gap
+//^4M . >. .
+//^4M . >. .
+//^4M . >. .   . . . .
+//^4M . >. .
+//^4N . >. .
+//^4M . >. .   . . . .
+
+//^4M . >. .
+//^4M . >. .
+//^4M . >. .   . . . .
+//^4M . >. .
+//^4N . >. .
+//^4M . >. .   . . . .
+
+
+
+
+
+
 
 // ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke
 // -----------
 ^4M . >. .
->4M . >. .
+^4M . >. .
 ^4M . >. .   >. . >. .
 ^4M . >. .
->4M . >. .
+^4M . >. .
 ^4M . >. .   >. . >. .
+
+
+
+
+
+
+
+
+
 
 
 // ----------- From The Reel Set
@@ -91,6 +129,38 @@ _4M _. _8M . _4M
 16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
 
 
+
+
+// Experiment.  Not sure where to put this next stuff before Sanford's triple stroke exercise.  Maybe in the buzz roll development set.
+// Throw in some doubles between accents
+// This may be too fast.  Instead of 16th, maybe 12ths
+//^16T t t   ^16T t t   ^16T t t   ^16T t t   ^8T ^T
+//^16t T T   ^16t T T   ^16t T T   ^16t T T   ^8t ^t
+//^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t        ^16T t t   ^16T ^8t   ^8T
+//^16t T T   ^16t T T   ^16t T T   ^16t T T   ^8t ^t
+//^16T t t   ^16T t t   ^16T t t   ^16T t t   ^8T ^T
+//^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T        ^16t T T   ^16t ^8T   ^8t
+
+
+// all of this was to prepare for tap rolls without gap
+//^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^8T ^T
+//^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^8t ^t
+//^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z        ^16T 8z   ^16T 8z   ^8T
+//^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^8t ^t
+//^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^8T ^T
+//^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z        ^16t 8Z   ^16t 8Z   ^8t
+
+//^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T  ^8t ^T
+//^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t  ^8T ^t
+//^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t   ^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T  ^8t ^T
+//^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t  ^8T ^t
+//^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T  ^8t ^T
+//^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T   ^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t  ^8T ^t
+
+
+
+
+
 // ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke
 // -----------
 16T T 8T   16T T 8T   16T T 8T   8T T
@@ -99,6 +169,19 @@ _4M _. _8M . _4M
 16t t 8t   16t t 8t   16t t 8t   8t t
 16T T 8T   16T T 8T   16T T 8T   8T T
 16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ----------- From The Reel Set
@@ -112,25 +195,25 @@ _4M _. _8M . _4M
 /ff
 // ----------- Set 2 Exercise 3 is (1) doubles part 1
 // -----------
-8T . >16T >16T 8t . >16t >16t 8T .
-8T . >16T >16T 8t . >16t >16t 8T .
-8T . >16T >16T 8t . >16t >16t 8T .
-8T . >16T >16T 8t . >16t >16t 8T .
+8T . ^16T >16T 8t . ^16t >16t 8T .
+8T . ^16T >16T 8t . ^16t >16t 8T .
+8T . ^16T >16T 8t . ^16t >16t 8T .
+8T . ^16T >16T 8t . ^16t >16t 8T .
 
 
 // ----------- Set 2 Exercise 4 is (2) doubles part 2
 // -----------
-8T . >16T >16T t t 8t >16t >16t T . 8t
-8T . >16T >16T t t 8t >16t >16t T . 8t
-8T . >16T >16T t t 8t >16t >16t T . 8t
-8T . >16T >16T t t 8t >16t >16t T . 8t
+8T . ^16T >16T t t 8t ^16t >16t T . 8t
+8T . ^16T >16T t t 8t ^16t >16t T . 8t
+8T . ^16T >16T t t 8t ^16t >16t T . 8t
+8T . ^16T >16T t t 8t ^16t >16t T . 8t
 
 // ----------- Set 2 Exercise 5 is (3) doubles part 3
 // -----------
-16T T 8t >16T >16T t t 8t >16t >16t T . 8t
-16T T 8t >16T >16T t t 8t >16t >16t T . 8t
-16T T 8t >16T >16T t t 8t >16t >16t T . 8t
-16T T 8t >16T >16T t t 8t >16t >16t T . 8t
+16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
+16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
+16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
+16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
 
 
 
@@ -153,6 +236,30 @@ _4M _. _8M . _4M
 4n n n  8n n
 4N N N  8N N
 4n n n n n n n 8n n
+
+// Throw in some doubles between accents
+// This may be too fast.  Instead of 16th, maybe 12ths
+16:3N . . . 4N
+16:3n . . . 4n
+16:3N . . . . . . .   . . _8N
+16:3n . . . 4n
+16:3N . . . 4N
+16:3n . . . . . . .   . . _8n
+
+// all of this was to prepare for tap rolls without gap
+16:3N . . . 4N
+16:3n . . . 4n
+16:3N . . . . . . .   . . 8N
+16:3n . . . 4n
+16:3N . . . 4N
+16:3n . . . . . . .   . . 8n
+
+16:3N 16n  16:3N 16n  16:3N 16n  8N N
+16:3n 16N  16:3n 16N  16:3n 16N  8n n
+16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  8N N
+16:3n 16N  16:3n 16N  16:3n 16N  8n n
+16:3N 16n  16:3N 16n  16:3N 16n  8N N
+16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  8n n
 
 
 // ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke
@@ -217,6 +324,33 @@ _4M _. _8M . _4M
 2b 4b 8r 8b
 2B 4B 8r 8B
 2b b b 4b 8r 8b
+
+// Throw in some doubles between accents
+// This may be too fast.  Instead of 16th, maybe 12ths
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B . . 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b . . 4b 8r 8b
+
+// all of this was to prepare for tap rolls without gap
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B . . 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b . . 4b 8r 8b
+
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B . . 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b . . 4b 8r 8b
+
+
+
 
 
 // ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke

@@ -9,6 +9,9 @@
 //Sync
 >4M >. >24M . .  >. . .   >8M >.
 
+// ----------- Set 3 Exercise 1 is long Buzz Rolls with pulses
+// -----------
+//marker bzzPulses
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -16,14 +19,12 @@ _8M . _8M . _8M . _8M .
 
 >4M >. >24M . .  >. . .   >8M >.
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
 
 
->4M >. >24M . .  >. . .   >8M >.
 
+// ----------- Set 3 Exercise 2 is long Buzz Rolls no pulses
+// -----------
+//marker BzzNoPlse
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -31,13 +32,10 @@ _8M . _8M . _8M . _8M .
 
 >4M >. >24M . .  >. . .   >8M >.
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
 
-4M . 8M . . .
-
+// ----------- Set 3 Exercise 3 is cresc/decres rolls
+// -----------
+//marker BuzDyn
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -45,6 +43,10 @@ _8M . _8M . _8M . _8M .
 
 _4M . _8M . _. .
 
+
+// ----------- Set 3 Exercise 4 is long Tap Rolls
+// -----------
+//marker TapRls
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -52,6 +54,9 @@ _8M . _8M . _8M . _8M .
 
 _4M . _8M . _. .
 
+// ----------- Set 3 Exercise 5 is long Tap Rolls with Dynamics
+// -----------
+//marker TapRllsDyn
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -59,26 +64,51 @@ _8M . _8M . _8M . _8M .
 
 _4M . _8M . _. .
 
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+// ----------- Set 3 Exercise 6 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+/marker TapRlShrt
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
 
 _4M . _8M . _. .
 
+// ----------- Set 3 Exercise 6 is 5 stroke Tap Rolls soft
+// -----------
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 
-_4M . _8M . _. .
-
+// ----------- Set 3 Exercise 7 is 5 stroke Tap Rolls with Dynamics
+// -----------
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 
 
+// ----------- Set 3 Exercise 8 is 7 stroke roll something
+// -----------
+>4M >. >8M >. . >.
+/marker 7Strk
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+
+// tempo change
+//tempo 110
+//>4M . >8M . >8M .
 
 //////////////// SNARE SET 3 - Rolls ////////////////////////
 /track snare
@@ -88,48 +118,39 @@ _8M . _8M . _8M . _8M .
 //tempo 72
 1r
 
-// ----------- Set 3 Exercise 1 is
+// ----------- Set 3 Exercise 1 is long Buzz Rolls with pulses
 // -----------
-// Set 4 Ex 0: Buzz Rolls with pulses
 /mp
-//marker S4E0
 /marker bzzPulses
 >24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
 >24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
 >24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
 >24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
-1T
+4T
+/marker Dwn
+4r
+4r
+/marker Up
+4r
 
-//marker S4E0Rpt
-//marker rpt
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
-1T
 
-// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- Set 3 Exercise 2 is long Buzz Rolls no pulses
 // -----------
-// Set 4 Ex 1: Buzz Rolls
 /mp
-//marker S4E1
-/marker BzzNoplse
+/marker BzzNoPlse
 24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
 24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
 24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
 24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-1T
+4T
+/marker Dwn
+4r
+4r
+/marker Up
+4r
 
-//marker rpt
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-1T
-
-// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- Set 3 Exercise 3 is cresc/decres rolls
 // -----------
-// Set 4 Ex 3: Cresc/Descresc Rolls
 /marker BuzDyn
 /mp
 24T . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
@@ -138,53 +159,141 @@ _8M . _8M . _8M . _8M .
 24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
 1T /ff
 
-//marker rpt
-/mp
-24T . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
-24T /ff  . . . . .    . . . . . .    /decresc 24Z . . . . .    . . . . . .
-24T /mp . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
-24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-1T /ff
 
-// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- Set 3 Exercise 4 is long Tap Rolls
 // -----------
-// Tap Rolls
-// Set 4 Ex 2: Tap Rolls
 /marker TapRls
 /mf
-24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^44T 22z .  . . .    24Z . . . . .    ^44T 22z .  . . .    24Z . . . . .
 1T
 
-//marker rpt
-/mf
-24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-1T
-
-
-// ----------- Set 3 Exercise  is bass and tenor solos
+// ----------- Set 3 Exercise 5 is long Tap Rolls with Dynamics
 // -----------
-// More Tap Rolls
-/marker TapRllsDyn
+/marker TapRlsDyn
+/mp
+^24T . . . . .    . . . . . .    /cresc ^44T 22z .  . . .    24Z . . . . .
+^24T /ff . . . . .    . . . . . .  /decresc  ^44T 22z .  . . .    24Z . . . . .
+^24T /mp . . . . .    . . . . . .   /cresc  ^44T 22z .  . . .    24Z . . . . .
+^44T 22z .  . . .    24Z . . . . .    ^44T 22z .  . . .    24Z . . . . .
+1T /ff
+
+// ----------- Set 3 Exercise 6 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+// Make this better some how.  Maybe add dynamics.  But this should be more interesting.
+// switch hands too.
+/marker TapRlShrt
+^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^8T
+^24t T T   ^24t T T   ^24t T T   ^8t    ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24T t t   ^24T t t   ^24T t t   ^24T t t   ^24T t t   ^24T t t   ^24T t t   ^8T
+^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^8T
+
+^24t T T   ^24t T T   ^24t T T   ^8t    ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^8T
+^24t T T   ^24t T T   ^24t T T   ^24t T T   ^24t T T   ^24t T T   ^24t T T   ^8t
+^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^8t
+4T
+/marker StkDwn
+4r
+4r
+/marker StkUp
+4r
+
+
+// ----------- Set 3 Exercise 6 is 5 stroke Tap Rolls soft
+// -----------
+/marker 5StrkSoft
+/mp
+>24T . . . . .    . . . . . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+>24T . . . . .    . . . . . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+>24T . . . . .    . . . . . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+4T
+/marker StkDwn
+4r
+4r
+/marker StkUp
+4r
+
+
+
+
+
+
+
+// ----------- Set 3 Exercise 7 is 5 stroke Tap Rolls with Dynamics
+// -----------
+/marker 5StrkDyn
 /mp
 24T . . . . .    . . . . . .   /cresc  ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
 24T /ff . . . . .    . . . . . .   /decresc ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
 24T /mp . . . . .    . . . . . .   /cresc ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
 ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+
 ^1T /ff
 
-//marker rpt
-/mp
-24T . . . . .    . . . . . .   /cresc  ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
-24T /ff . . . . .    . . . . . .   /decresc ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
-24T /mp . . . . .    . . . . . .   /cresc ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
-^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
-^1T /ff
+// ----------- Set 3 Exercise 8 is 7 stroke roll something
+// -----------
+/marker 7Strk
+>8T 24t . .  >8T 24t . .   >8T >. 24T . . >8t
+24T . . >8t   >8T 24t . .  >8T >.  24T . . >8t
+>8T 24z . .  >8T 24z . .   >8T >. 24Z . . >8t
+24Z . . >8t   >8T 24z . .  >8T >.  24Z . . >8t
+
+// maybe start mixing in 12 24 12 24 stuff?  Prob not here in roll section
+
+4T
+/marker StkDwn
+4r
+4r
+/marker StkUp
+4r
+
+
+
+
+
+//^24T 8z ^24T  ^24t 8Z ^24t  ^24T 8z ^24T  ^8t
+//^24t 8Z ^24t  ^24T 8z ^24T  ^24t 8Z ^24t  ^8T
+//^24T 8z ^24T  ^24t 8Z ^24t  ^24T 8z ^24T  ^24t 8Z ^24t   ^24T 8z ^24T  ^T
+//^24t 8Z ^24t  ^24T 8z ^24T  ^24t 8Z ^24t  ^8T
+//^24T 8z ^24T  ^24t 8Z ^24t  ^24T 8z ^24T  ^8t
+//^24t 8Z ^24t  ^24T 8z ^24T  ^24t 8Z ^24t  ^24T 8z ^24T   ^24t 8Z ^24t  ^t
+
+
+
+
+
+// tempo change
+//tempo 110
+//^1T /ff
+
+// Throw in some doubles between accents
+// This may be too fast.  Instead of 24th, maybe 12ths
+//^16T t t   ^16T t t   ^16T t t   ^16T t t   ^8T ^T
+//^16t T T   ^16t T T   ^16t T T   ^16t T T   ^8t ^t
+//^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t        ^16T t t   ^16T ^8t   ^8T
+//^16t T T   ^16t T T   ^16t T T   ^16t T T   ^8t ^t
+//^16T t t   ^16T t t   ^16T t t   ^16T t t   ^8T ^T
+//^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T        ^16t T T   ^16t ^8T   ^8t
+
+
+// all of this was to prepare for tap rolls without gap
+//^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^8T ^T
+//^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^8t ^t
+//^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z        ^16T 8z   ^16T 8t   ^8T
+//^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^8t ^t
+//^16T 8z   ^16T 8z   ^16T 8z   ^16T 8z   ^8T ^T
+//^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z   ^16t 8Z        ^16t 8Z   ^16t 8T   ^8t
+
+//^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T  ^8t ^T
+//^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t  ^8T ^t
+//^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t   ^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T  ^8t ^T
+//^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t  ^8T ^t
+//^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T  ^8t ^T
+//^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t  ^16T 8z ^16T   ^16t 8Z ^16t  ^16T 8z ^16T  ^16t 8Z ^16t  ^8T ^t
 
 
 
@@ -196,30 +305,26 @@ _8M . _8M . _8M . _8M .
 
 //tempo 72
 /mp
-//Setx Ex0
+
 1r
+// ----------- Set 3 Exercise 1 is long Buzz Rolls with pulses
+// -----------
+//marker bzzPulses
 8N . . .  _24N . .  _. . .  _. . .  _. . .
 8N . . .  _24N . .  _. . .  _. . .  _. . .
 8N . . .  _24N . .  _. . .  _. . .  _. . .
 _24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
 _4N 4r . .
 
-// Ex0 repeat
-8N . . .  _24N . .  _. . .  _. . .  _. . .
-8N . . .  _24N . .  _. . .  _. . .  _. . .
-8N . . .  _24N . .  _. . .  _. . .  _. . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-_4N 4r . .
 
-// Ex1
-/p
-8N . . .  24N . .  . . .  . . .  . . .
-8N . . .  24N . .  . . .  . . .  . . .
-8N . . .  24N . .  . . .  . . .  . . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-_4N 4r . .
 
-// Ex1 rpt
+
+
+
+
+// ----------- Set 3 Exercise 2 is long Buzz Rolls no pulses
+// -----------
+/mp
 8N . . .  24N . .  . . .  . . .  . . .
 8N . . .  24N . .  . . .  . . .  . . .
 8N . . .  24N . .  . . .  . . .  . . .
@@ -227,7 +332,14 @@ _24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
 _4N 4r . .
 
 
-// Ex    cresce/decresc
+
+
+
+
+
+// ----------- Set 3 Exercise 3 is cresc/decres rolls
+// -----------
+//marker BuzDyn
 /mp
 8N . . .  /cresc 24N . .  . . .  . . .  . . .
 8N /ff . . .  /decresc 24N . .  . . .  . . .  . . .
@@ -235,42 +347,101 @@ _4N 4r . .
 _24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
 _4N /ff /mp 4r . .
 
-// Ex
+// ----------- Set 3 Exercise 4 is long Tap Rolls
+// -----------
+//marker TapRls
+8N . . .  _24N . .  . . .  . . .  . . .
+8N . . .  _24N . .  . . .  . . .  . . .
+8N . . .  _24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N 4r . .
+
+
+// ----------- Set 3 Exercise 5 is long Tap Rolls with Dynamics
+// -----------
+//marker TapRllsDyn
+8N . . .  /cresc _24N . .  . . .  . . .  . . .
+8N /ff . . .  /decresc _24N . .  . . .  . . .  . . .
+8N /mp . . .  /cresc _24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N /ff /mp 4r . .
+
+
+// ----------- Set 3 Exercise 6 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+/marker TapRlShrt
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+
+4T
+/marker StkDwn
+4r
+4r
+/marker StkUp
+4r
+
+
+
+// ----------- Set 3 Exercise 6 is 5 stroke Tap Rolls soft
+// -----------
 /mp
-8N . . .  /cresc 24N . .  . . .  . . .  . . .
-8N /ff . . .  /decresc 24N . .  . . .  . . .  . . .
-8N /mp . . .  /cresc 24N . .  . . .  . . .  . . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-_4N /ff /mp 4r . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
 
-// Ex
-8N . . .  _24N . .  . . .  . . .  . . .
-8N . . .  _24N . .  . . .  . . .  . . .
-8N . . .  _24N . .  . . .  . . .  . . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-_4N 4r . .
 
-// Ex
-8N . . .  _24N . .  . . .  . . .  . . .
-8N . . .  _24N . .  . . .  . . .  . . .
-8N . . .  _24N . .  . . .  . . .  . . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-_4N 4r . .
+// ----------- Set 3 Exercise 7 is 5 stroke Tap Rolls with Dynamics
+// -----------
+/mp
+8N . . .    /cresc 8N . . .
+8N /ff . . .   /decresc  8N . . .
+8N /mp . . .  /cresc . . . .
+8N . . . . . . .
 
-// Ex
-8N . . .  /cresc _24N . .  . . .  . . .  . . .
-8N /ff . . .  /decresc _24N . .  . . .  . . .  . . .
-8N /mp . . .  /cresc _24N . .  . . .  . . .  . . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-_4N /ff /mp 4r . .
+4N /ff /mf 4r . .
 
-// Ex
-8N . . .  /cresc _24N . .  . . .  . . .  . . .
-8N /ff . . .  /decresc _24N . .  . . .  . . .  . . .
-8N /mp . . .  /cresc _24N . .  . . .  . . .  . . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-_4N /ff /mp 4r . .
 
+// ----------- Set 3 Exercise 8 is 7 stroke roll something
+// -----------
+/marker 7Strk
+4N . 8N 4n 8N
+8r 8n 4N 8n 4N 8n
+4N . 8N 4n 8N
+8r 8n 4N 8n 4N 8n
+
+
+
+// Throw in some doubles between accents
+// This may be too fast.  Instead of 16th, maybe 12ths
+//16:3N . . . 4N
+//16:3n . . . 4n
+//16:3N . . . . . . .   . . _8N
+//16:3n . . . 4n
+//16:3N . . . 4N
+//16:3n . . . . . . .   . . _8n
+
+// all of this was to prepare for tap rolls without gap
+//16:3N . . . 4N
+//16:3n . . . 4n
+//16:3N . . . . . . .   . . 8N
+//16:3n . . . 4n
+//16:3N . . . 4N
+//16:3n . . . . . . .   . . 8n
+
+//16:3N 16n  16:3N 16n  16:3N 16n  8N N
+//16:3n 16N  16:3n 16N  16:3n 16N  8n n
+//16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  8N N
+//16:3n 16N  16:3n 16N  16:3n 16N  8n n
+//16:3N 16n  16:3N 16n  16:3N 16n  8N N
+//16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  8n n
 
 
 /////////////// BASS SET 3 ////////////////////////////////////
@@ -280,44 +451,35 @@ _4N /ff /mp 4r . .
 //time 4/4
 
 //tempo 72
-1B
+1r
 
 // Set 4
 
-// Set 4 Ex 0: Buzz Rolls with pulses
+// ----------- Set 3 Exercise 1 is Buzz Rolls with pulses
+// -----------
+//marker bzzPulses
 /mf
-//marker S4E0
-2B . . . . . . .
-4B 4r . .
-
-//marker S4E0Rpt
 2B . . . . . . .
 4B 4r . .
 
 
-// Set 4 Ex 1: Buzz Rolls
+//2B . . . . . . .
+//4B 4r . .
+
+
+// ----------- Set 3 Exercise 2 is smooth Buzz Rolls no pulses
+// -----------
+//marker BzzNoPlse
 /mp
-//marker S4E1
-2B . . . . . . .
-4B 4r . .
-
-//marker S4E1Rpt
 2B . . . . . . .
 4B 4r . .
 
 
-// Set 4 Ex 3: Cresc/Descresc Rolls
-//marker S4E3
-/mp /cresc
-2B .
-/f /decresc
-. .
-/mp /cresc
-. .
-. .
-4B /f 4r . .
 
-//marker S4E3Rpt
+
+// ----------- Set 3 Exercise 3 is cresc/decres rolls
+// -----------
+//marker BuzDyn
 /mp /cresc
 2B .
 /f /decresc
@@ -328,22 +490,18 @@ _4N /ff /mp 4r . .
 4B /f 4r . .
 
 
-// Tap Rolls
-// Set 4 Ex 2: Tap Rolls
-//marker S4E2
-/mf
-2B . . . . . . .
-4B 4r . .
 
-//marker S4E2Rpt
+// ----------- Set 3 Exercise 4 is long Tap Rolls
+// -----------
+//marker TapRls
 /mf
 2B . . . . . . .
 4B 4r . .
 
 
-
-// More Tap Rolls  (5's)
-//marker S4E5
+// ----------- Set 3 Exercise 5 is long Tap Rolls with Dynamics
+// -----------
+//marker TapRllsDyn
 /mp /cresc
 2B .
 /f /decresc
@@ -353,7 +511,40 @@ _4N /ff /mp 4r . .
 . .
 4B /f 4r . .
 
-//marker S4E5Rpt
+
+// ----------- Set 3 Exercise 6 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+/marker TapRlShrt
+2B .
+2B .
+2B .
+2B .
+
+2B .
+2B .
+2B .
+2B .
+
+4T
+/marker StkDwn
+4r
+4r
+/marker StkUp
+4r
+
+// ----------- Set 3 Exercise 6 is 5 stroke Tap rolls soft
+// -----------
+//marker TapRlShrt
+
+2B .
+2B .
+2B .
+2B .
+
+
+// ----------- Set 3 Exercise 7 is 5 stroke Tap Rolls with Dynamics
+// -----------
+
 /mp /cresc
 2B .
 /f /decresc
@@ -362,3 +553,41 @@ _4N /ff /mp 4r . .
 . .
 . .
 4B /f 4r . .
+
+// ----------- Set 3 Exercise 8 is 7 stroke roll something
+// -----------
+/marker 7Strk
+2B 8B 4b 8r
+4r 4B 8B 4b 8r
+2B 8B 4b 8r
+4r 4B 8B 4b 8r
+
+
+// tempo change
+//tempo 110
+//4B /f 4r . .
+
+// Throw in some doubles between accents
+// This may be too fast.  Instead of 16th, maybe 12ths
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B . . 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b . . 4b 8r 8b
+
+// all of this was to prepare for tap rolls without gap
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B . . 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b . . 4b 8r 8b
+
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B . . 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b . . 4b 8r 8b
+
