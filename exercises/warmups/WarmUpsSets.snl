@@ -1,0 +1,2392 @@
+// Warmup #1
+// Set 1 Taps and Singles
+//marker TapsSinglesSet
+////////////// METRONOME SET 1 ////////////////
+/track met
+/channel 0
+
+// Switching between 12/8 and 4/4 but keeping 8th notes constant
+// means tempo will go between 1x and 3x/2.
+// If we have 72 bpm for the dotted quarter in a 12/8, then
+// for the 4/4 we'd have 110 bpm.
+
+// ----------- Set 1 Exercise 0 is free form warm up
+// ----------- but leader decides when to stop.
+// ----------- Some kind of hand signal.
+
+
+
+// ----------- Set 1 Exercise 1 is alternating single stroke
+// ----------- 24th notes
+// -----------
+/time 4/4
+/tempo 72
+// Sync
+^24M . . 8M  ^24M . . 8M  ^24M . . >. . .  24M . >. >8M
+^4M ^. ^8M ^. ^24M . . ^8M
+/mf
+4M . . .
+4M . . .
+
+
+
+// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- while snares continue
+// -----------
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+
+
+// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.  Anything goes here,
+// ----------- any volume, any taps, doubles, flams, or rests.
+// -----------
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+
+// ----------- Set 1 Exercise 4 is unison 12th notes for all
+// -----------
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- keeping 8ths constant.  This means a tempo change.
+// ----------- Groups of 8 notes for snares.
+/tempo 110
+4M . 8M . 4M
+
+
+
+
+
+
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . 8M . 4M
+
+// ------------ Set 1 Exercise 6, loud and soft contrast
+// ------------
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+// Bump it up by about 10bpm
+///tempo 120
+//4M . 8M . 4M
+
+//repeat
+//4M . . .   . . . .
+//4M . . .   . . . .
+//4M . . .   . . . .
+//4M . . .   . . . .
+
+
+
+
+
+// ----------- Set 1 Exercise 7 is mixed accents
+// -----------
+// Sync
+^8M M ^M M M ^M M ^M
+
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+
+
+
+
+
+
+
+// rpt, but faster, bump it up by 12
+/tempo 132
+^8M M ^M M M ^M M ^M
+
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+
+
+
+
+
+
+//////  SET 2  ////////
+/time 4/4
+/tempo 72
+/f
+// ----------- Set 2 Exercise 0 is single pulse buzzes
+// -----------
+//Sync
+>8M . >8M . >8M >. >8M .
+
+
+
+
+
+>8M . >8M . >8M . >8M .
+>8M . >8M . >8M . >8M .
+>8M . >8M . >8M . >8M .
+>8M . >8M . >8M . >8M .
+>8M . >8M . >8M . >8M .
+>8M . >8M . >8M . >8M .
+
+
+// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
+// -----------
+//Sync
+>8M . >. . >24M . .  >24M . .  >24M . . >8M
+
+
+
+
+
+//marker bzzPulses
+>8M . >8M . >8M . >8M .
+>8M . >8M . >8M . >8M .
+>8M . >8M . >8M . >8M .
+>8M . >8M . >8M . >8M .
+
+
+
+// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
+// -----------
+//Sync
+>4M >4M >24M . .  >24M . .  >24M . . >8M
+
+//marker BzzNoPlse
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+
+
+
+// ----------- Set 2 Exercise 3 is cresc/decres rolls
+// -----------
+//Sync
+//>4M >4M >24M . .  >24M . .  >24M . . >8M
+
+//marker BuzDyn
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+
+
+
+
+// new stuff
+// ----------- Set 2 Exercise 3.1 is
+// -----------
+//Sync
+>24M . .  >24M . .  >8M .   >24M . .  >24M . .  >8M .
+
+_8M . _8M .  _8M . _8M .
+_8M . _8M .  _8M . _8M .
+_8M . _8M .  _8M . _8M .
+_8M . _8M .  _8M . _8M .
+
+
+
+
+
+
+// ----------- Set 2 Exercise 3.2 is
+// -----------
+//Sync
+//>24M . .  >24M . .  >8M .   >24M . .  >24M . .  >8M .
+
+//_8M . _8M .  _8M . _8M .
+//_8M . _8M .  _8M . _8M .
+//_8M . _8M .  _8M . _8M .
+//_8M . _8M .  _8M . _8M .
+
+
+// ----------- Set 2 Exercise 3.3 is
+// -----------
+// 7 stroke stuff
+//Sync
+>8M 24M . .  >8M 24M . .  >8M .  >8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+
+
+
+// ----------- Set 2 Exercise 3.4 is
+// -----------
+//Sync
+>24M . . 8M  >24M . . 8M  >24M . . 8M  >8M .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+//Sync
+>24M . .  >24M . .  >24M . .  >8M   >24M 12M   >24M 12M   >24M 12M   >8M
+
+8M . . .  . . . .
+8M . . .  . . . .
+8M . . .  . . . .
+8M . . .  . . . .
+
+8M . . .  . . . .
+8M . . .  . . . .
+8M . . .  . . . .
+8M . . .  . . . .
+
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 5 is long Tap Rolls
+// -----------
+//Sync
+//_4M . _8M . _. .
+^24M . . . . .  . . . . . . ^8M . . .
+//marker TapRls
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+
+
+
+
+// ----------- Set 2 Exercise 6 is long Tap Rolls with Dynamics
+// -----------
+//Sync
+//_4M . _8M . _. .
+
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+
+
+
+// ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
+// -----------
+//Sync
+^24M . . . . .  ^. . . . . . ^8M . ^. .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 6.6 is shorter Tap Rolls with Dynamics
+// -----------
+//Sync
+//_4M . _8M . _. .
+
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+
+
+
+// ----------- Set 2 Exercise 7 is 5 stroke Tap Rolls soft
+// -----------
+//Sync
+^24M . . ^. . .  ^. . . ^. . . ^8M . ^. .
+
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+_8M . _8M . _8M . _8M .
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 8 is 5 stroke Tap Rolls with Dynamics
+// -----------
+//>24M . . . . .   >24M . . . . .   >8M >. >. >.
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+
+//4M 4r . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 9 is 7 stroke roll something
+// -----------
+//Sync
+//>4M >. >8M >. . >.
+
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+
+
+
+
+
+
+//////  SET 3  ////////
+/tempo 110
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync  need better cues on exercises in this set
+^8M M ^M M ^16M . 8M ^4M
+
+
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
+
+// Expand here.  More stuff before hit Reel Set.
+// maybe
+// 16th note groups of 3 with doubles
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
+
+
+
+// new stuff
+// transition to 12ths
+^4M . .
+^4M . .
+^4M . .
+^4M . .
+
+// Sync with change of tempo 8 == 12?
+// new tempo
+/tempo 76
+^8M . ^. . ^8M ^. ^. .
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+
+// sync
+^8M . ^. . ^8M ^. ^. .
+
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+_4M . _4M .
+
+
+/tempo 110
+>4M >. >8M . >. .
+
+
+// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+^4M . >. .
+^4M . >. .
+^4M . >. .   >. . >. .
+^4M . >. .
+^4M . >. .
+^4M . >. .   >. . >. .
+
+
+
+
+
+
+
+
+
+
+// ----------- From The Reel Set
+// ----------- The Reel set goes faster, so tempo is increased here
+/tempo 136
+/ff
+_4M _. _8M . _4M
+/mf
+
+
+
+// ----------- Set 3 Exercise 3 is (1) doubles part 1
+// -----------
+//>4M . . .
+//>4M . . .
+//>4M . . .
+//>4M . . .
+
+
+// ----------- Set 3 Exercise 4 is (2) doubles part 2
+// -----------
+//>4M . . .
+//>4M . . .
+//>4M . . .
+//>4M . . .
+
+// ----------- Set 3 Exercise 5 is (3) doubles part 3
+// -----------
+//>4M . . .
+//>4M . . .
+//>4M . . .
+//>4M . . .
+
+
+
+// This is the Reel
+// Each of the 3 tunes has 16 bars
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// more to come, I guess.  Maybe add some stuff for timing attacks
+// Maybe some work out abbreviated "3 Camps" Back to previous slow tempo for 12/8 time.
+
+
+
+
+// tempo change
+//tempo 110
+//>4M . >8M . >8M .
+
+
+
+
+
+
+//////////////// SNARE SET 1 ////////////////////////
+/track snare
+/channel 5
+
+
+// Switching between 12/8 and 4/4 but keeping 8th notes constant
+// means tempo will go between 1x and 3x/2.
+// If we have 72 bpm for the dotted quarter in a 12/8, then
+// for the 4/4 we'd have 110 bpm.
+
+// ----------- Set 1 Exercise 0 is free form warm up
+// ----------- but leader decides when to stop.
+// ----------- Some kind of hand signal.
+
+
+// ----------- Set 1 Exercise 1 is alternating single stroke
+// ----------- 24th notes for snares, played near rim, quietly.
+// -----------
+//time 4/4
+//tempo 72
+
+// Sync
+// One snare, or metronome, attention cue, and sync:
+///fff
+//^24T . . 8T  ^24T . . 8T  ^24T . . >. . .  24T . >. >8T
+
+//4T .
+/marker Dut
+//>8T >T >T >T
+
+1r
+4r 4r
+8r . . .
+// 0:05
+/mf
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+
+
+// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// basses solo
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+// tenors solo
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    /cresc 24T . . . . .
+
+
+
+// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.  Anything goes here,
+// ----------- any volume, any taps, doubles, flams, or rests.
+// ----------- 0:28
+/ff
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+// Cue comes 2 bars from end from tenors that this is ending
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
+
+
+// ----------- Set 1 Exercise 4 is unison 12th notes for all
+// ----------- 0:40
+/fff
+/marker 12ths
+12T T T   T T T   t t t  t t t
+12T T T   T T T   T T T  T T T
+12t t t   t t t   T T T  T T T
+12t t t   t t t   t t t  t t t
+
+
+// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- keeping 8ths constant.  This means a tempo change.
+// ----------- Groups of 8 notes for snares. 0:53
+//tempo 110
+// Sync
+4T
+4r // sticks down or in
+4r
+4r // sticks up or out
+
+
+8T T T T T T T T    t t t t t t t t
+8T T T T T T T T    T T T T T T T T
+8t t t t t t t t    T T T T T T T T
+8t t t t t t t t    t t t t t t t t
+// Sync
+4T
+//marker Dwn
+4r
+4r
+//marker Up
+4r
+
+// ------------ Set 1 Exercise 6, loud and soft contrast
+// ------------ 1:14
+/marker 8thsAcc
+/ff
+^8T T ^T T ^T T ^T T   ^t t ^t t ^t t ^t t
+^8T T ^T T ^T T ^T T    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^T T ^T T ^T T ^T T
+^8t t ^t t ^t t ^t t    ^t t ^t t ^t t ^t t
+//tempo 120
+//^1T
+
+//^8T T ^T T ^T T ^T T   ^t t ^t t ^t t ^t t
+//^8T T ^T T ^T T ^T T    ^T T ^T T ^T T ^T T
+//^8t t ^t t ^t t ^t t    ^T T ^T T ^T T ^T T
+//^8t t ^t t ^t t ^t t    ^t t ^t t ^t t ^t t
+
+
+
+
+
+// ----------- Set 1 Exercise 7 is mixed accents
+// -----------
+// Sync
+4T
+/marker D
+4r 4r
+/marker U
+4r
+
+^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
+^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^t t ^t t t ^t ^t t
+
+// rpt, but faster
+//Sync
+//tempo 132
+4T
+/marker D
+4r 4r
+/marker U
+4r
+
+^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
+^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
+^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
+
+
+//////  SET 2  ////////
+//tempo 72
+/f
+// ----------- Set 2 Exercise 0 is single pulse buzzes
+// -----------
+//Sync
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+
+4Z Z Z Z
+4z z z z
+8Z Z Z Z Z Z Z Z
+8z z z z z z z z
+12Z Z Z  Z Z Z  Z Z Z  Z Z Z
+12z z z  z z z  z z z  z z z
+
+
+// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
+// -----------
+4T
+//marker Dwn
+4r
+4r
+//marker Up
+4r
+/mp
+/marker bzzPulses
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+
+
+
+// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
+// -----------
+4T
+//marker Dwn
+4r
+4r
+//marker Up
+4r/mp
+/marker BzzNoPlse
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+
+// MAYBE GET RID OF ALL DYNAMIC EXERCISES FOR NOW TO MAKE THIS SHORTER
+// ----------- Set 2 Exercise 3 is cresc/decres rolls
+// -----------
+///marker BuzDyn
+///mp
+//24T . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
+//24T /ff  . . . . .    . . . . . .    /decresc 24Z . . . . .    . . . . . .
+//24T /mp . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
+//24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+//1T /ff
+
+
+
+
+
+// new stuff
+// ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
+// -----------
+4T
+//marker Dwn
+4r
+4r
+//marker Up
+4r
+24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
+24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
+24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+
+
+// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
+// -----------
+///mp /cresc 24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
+//24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+//24T /fff /decresc . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
+//24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+//4T /mp /f
+//marker Dwn
+//4r
+//4r
+//marker Up
+//4r
+
+// ----------- Set 2 Exercise 3.3 is development of 8th note rolls, starting left (3 pulse, or "7's")
+// -----------
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
+/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
+/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
+/fff 8T /f /cresc 24z . .  8T /fff /f /cresc 24z . .   8T /fff /f /cresc 24z . . 8T /fff /f /cresc 24z . .
+
+
+// ----------- Set 2 Exercise 3.4 is more 8th note rolls, starting right
+// -----------
+4T /fff /f
+/marker D
+4r
+4r
+/marker U
+4r
+/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t /fff /f /cresc 24Z . . 8t /fff
+/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t /fff /f /cresc 24Z . . 8t /fff
+/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t  24Z . . 8t
+          24Z . . 8t  24Z . . 8t  24Z . . 8t  24Z . . 8t /ff /f
+
+
+
+
+
+// ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+/marker D
+4r
+4r
+4r
+/marker U
+4r
+// Make this better some how.  Maybe add dynamics.  But this should be more interesting.
+// switch hands too.
+/marker TapRlShrt
+^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^8T
+^24t T T   ^24t T T   ^24t T T   ^8t    ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24t T T   ^24t T T   ^24t T T   ^8t    ^24t 12Z   ^24t 12Z   ^24t 12Z  ^24t 12Z
+^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^8T
+
+^24t T T   ^24t T T   ^24t T T   ^8t    ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^8T
+^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z
+^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z
+
+
+// ----------- Set 2 Exercise 5 is long Tap Rolls
+// -----------
+/marker TapRls
+4t
+/marker D
+4r
+4r
+/marker U
+4r
+/mf
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^44T 22z .  . . .    24Z . . . . .    ^44T 22z .  . . .    24Z . . . . .
+
+
+// ----------- Set 2 Exercise 6 is long Tap Rolls with Dynamics
+// -----------
+///marker TapRlsDyn
+///mp
+//^24T . . . . .    . . . . . .    /cresc ^44T 22z .  . . .    24Z . . . . .
+//^24T /ff . . . . .    . . . . . .  /decresc  ^44T 22z .  . . .    24Z . . . . .
+//^24T /mp . . . . .    . . . . . .   /cresc  ^44T 22z .  . . .    24Z . . . . .
+//^44T 22z .  . . .    24Z . . . . .    ^44T 22z .  . . .    24Z . . . . .
+
+
+
+// ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
+// -----------
+/marker TapRls2
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+/mf
+^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
+^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
+^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
+^44T 22z .  . . .    ^44T 22z .  . . .   ^44T 22z .  . . .    ^44T 22z .  . . .
+
+
+// ----------- Set 2 Exercise 6.6 is shorter Tap Rolls with Dynamics
+// -----------
+///marker TapRlsDyn2
+///mp
+//^24T . . . . .    ^. . . . . .    /cresc ^44T 22z .  . . .    ^44T 22z .  . . .
+//^24T /ff . . . . .    ^. . . . . .  /decresc  ^44T 22z .  . . .    ^44T 22z .  . . .
+//^24T /mp . . . . .    ^. . . . . .   /cresc  ^44T 22z .  . . .    ^44T 22z .  . . .
+//^44T 22z .  . . .    ^44T 22z .  . . .      ^44T 22z .  . . .    24Z . . . . .
+
+
+
+
+// ----------- Set 2 Exercise 7 is 5 stroke Tap Rolls soft
+// -----------
+^4T
+/marker D
+4r
+4r
+/marker U
+4r
+/marker 5StrkSoft
+/mp
+>24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+>24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+>24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+>40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+
+
+// ----------- Set 2 Exercise 8 is 5 stroke Tap Rolls with Dynamics
+// -----------
+//4T
+//marker Dwn
+//4r
+//4r
+//marker Up
+//4r
+///marker 5StrkDyn
+///mp
+//>24T . . >. . .    >. . . >. . .   /cresc  >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+//>24T /ff . . >. . .    >. . . >. . .   /decresc >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+//>24T /mp . . >. . .    >. . . >. . .   /cresc >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+//>40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+
+//>4T /ff 4r . .
+
+////marker Dwn
+//4r
+//4r
+////marker Up
+//4r
+
+// ----------- Set 2 Exercise 9 is 7 stroke roll something
+// kinda cool, but maybe too hard to memorize
+// -----------
+///marker 7Strk
+//>8T 24t . .  >8T 24t . .   >8T >. 24T . . >8t
+//24T . . >8t   >8T 24t . .  >8T >.  24T . . >8t
+//>8T 24z . .  >8T 24z . .   >8T >. 24Z . . >8t
+//24Z . . >8t   >8T 24z . .  >8T >.  24Z . . >8t
+
+
+
+
+
+
+//////  SET 3  ////////
+//tempo 110
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// sync
+4T
+//marker Dwn
+4r
+4r
+//marker Up
+4r
+/ff
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
+
+
+
+// Expand here.  More stuff before hit Reel Set.
+// maybe
+// 16th note groups of 3 with doubles
+^16T t t   ^16T t t   ^16T t t   ^16T t t   8T T
+^16t T T   ^16t T T   ^16t T T   ^16t T T   8t t
+^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   ^16T t t   8T
+^16t T T   ^16t T T   ^16t T T   ^16t T T   8t t
+^16T t t   ^16T t t   ^16T t t   ^16T t t   8T T
+^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   8t
+
+
+// Not sure I like this transition!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+// new stuff
+// Sync with change of tempo 8 == 12?
+// 3/4 time
+16T ^8T   16T ^8T  16T ^8T  16T ^8T
+16t ^8t   16t ^8t  16t ^8t  16t ^8t
+^8T 16t   ^8T 16t  ^8T 16t  ^8T 16t
+^8T 16t   ^8T 16t  ^8T 16t  ^8T 16t
+
+
+
+
+// new tempo
+//tempo 76
+4T 4r . .
+
+
+
+^12T 24t   12T 24t   ^12T 24t   12T 24T      ^12t 24T   12t 24T   ^12t 24T   12t 24T
+^12T 24t   12T 24T   ^12t 24T   12t 24t      ^12T ^24T   ^12t ^24t   ^12T 24t   12T 24T
+^12t 24T   12t 24t   ^12t 24T   12t 24t      ^12T 24t   12T 24t   ^12T 24t   12T 24t
+^12t 24T   12t 24t   ^12T 24t   12T 24T      ^12t ^24t   ^12T ^24T   ^12t 24T   12t 24t
+
+//sync
+4T 4r . .
+
+^12T 24t   12T 24t   ^12t 24t   24T . .     ^12t 24T   12t 24T   ^12t 24T   24t . .
+12T ^24t   . . .    12t ^24T  . . .    12T  ^24t  . . .  ^24T . .  ^24t . .
+^12t 24T   12t 24T   ^12T 24T   24t . .     ^12T 24t   12T 24t   ^12T 24t   24T . .
+12t ^24T   . . .    12T ^24t  . . .    12t  ^24T  . . .  ^24t . .  ^24T . .
+
+
+//temp 110
+4T 4r . .
+
+
+
+
+// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
+
+
+
+
+
+
+
+
+
+
+// ----------- From The Reel Set
+// ----------- The Reel set goes faster, so tempo is increased here
+// tempo 136
+4T
+/marker D
+4r // sticks down or in
+4r
+/marker U
+4r // up or out
+
+/ff
+// ----------- Set 3 Exercise 3 is (1) doubles part 1
+// -----------
+//8T . ^16T >16T 8t . ^16t >16t 8T .
+//8T . ^16T >16T 8t . ^16t >16t 8T .
+//8T . ^16T >16T 8t . ^16t >16t 8T .
+//8T . ^16T >16T 8t . ^16t >16t 8T .
+
+
+// ----------- Set 3 Exercise 4 is (2) doubles part 2
+// -----------
+//8T . ^16T >16T t t 8t ^16t >16t T . 8t
+//8T . ^16T >16T t t 8t ^16t >16t T . 8t
+//8T . ^16T >16T t t 8t ^16t >16t T . 8t
+//8T . ^16T >16T t t 8t ^16t >16t T . 8t
+
+// ----------- Set 3 Exercise 5 is (3) doubles part 3
+// -----------
+//16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
+//16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
+//16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
+//16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
+
+
+
+
+
+
+/ff
+
+// The following is from "ReelSetDrums.snl", but flams removed
+// This is probably a bad idea to stick a tune setting into a drum exercise
+// I don't think it should be in here, but maybe some of the idioms would fit
+//
+// Malt on the Optics
+/marker MOL1
+8T . >T t . >t T .
+8T . >T t . >t T .
+8T . >T t . >t T .
+8T . >T t . >t T .
+
+/marker MOL2
+8T . >16T T 8t . >16t t 8T .
+8T . >16T T 8t . >16t t 8T .
+8T . >16T T 8t . >16t t 8T .
+8T . >16T T 8t . >16t t 8T .
+
+
+/marker MOL3
+8T . >16T T t t 8t >16t t T . 8t
+8T . >16T T t t 8t >16t t T . 8t
+8T . >16T T t t 8t >16t t T . 8t
+8T . >16T T t t 8t >16t t T . 8t
+
+
+/marker MOL4
+16T T 8t >16T T t t 8t >16t t T . 8t
+16T T 8t >16T T t t 8t >16t t T . 8t
+16T T 8t >16T T t t 8t >16t t T . 8t
+16T T 8t >16T T t t 8t >16t t T . 8t
+
+
+
+
+// Forest Lodge
+
+/marker FLL1
+8T . ^. 24t T T      8t ^. ^. 24T t t
+8T ^. 24T t t 8T     ^24t T T 8t ^24T t t 8T
+8T . ^. 24t T T      8t ^. ^. 24T t t
+8T ^. 24T t t 8T     ^24T t t T T >t ^4T
+//8T ^. 24T t t 8T     ^24t T T 8t ^4T
+
+/marker FLL2
+8T . ^T 24t T T      8t ^T ^t 24T t t
+8T ^t 24T t t 8T     ^24t T T 8t ^24T t t 8T
+8T . ^T 24t T T      8t ^T ^t 24T t t
+8T ^t 24T t t 8T     ^24T t t T T >t ^4T
+
+
+/marker FLL3
+12T 24t 12T 24t    8T ^t     12T 24t  8T   ^8t 12T 24t
+8T ^t  12T 24t  8T           ^12T 24t 12t 24T 8T ^t
+12T 24t 12T 24t    8T ^t     12T 24t  8T   ^8t 12T 24t
+8T ^t  12T 24t  8T           ^12T 24t 12t 24T ^4T
+
+/marker FLL4
+^24T t t T T t    8T ^t     24T t t  8T   ^8t 24T t t
+8T ^t  24T t t  8T         ^24T t t T T t 8T ^t
+//8T ^t  24T t t  8T  ^24t T T 8t  ^24T t t 8T
+//>24T t t T T t    8T ^t     24T t t  8T   >8t 24T t t
+>24T t t 8T   >24t T T 8t   >24T t t 8T   >24t T T 8t
+8T ^t  24T t t  8T  ^24T t t T T >t   ^4T
+
+
+
+
+// Primrose Girl
+/marker PGL1
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T ^8t 16t   16T ^8t 16t   8T >t    >4T
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T ^8t 16t   16T ^8t 16t   8T >t    >4T
+
+/marker PGL2
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24T 8t   12T 24T 8t     >12T >24t >12T >24t   >4T
+4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24T 8t   12T 24T 8t     >12T >24t >12T >24t   8T .
+
+
+/marker PGL3
+/ff
+^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t
+/p /cresc    12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t
+/ff
+^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t   ^12T 24T 8t
+/p /cresc    12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t     /ff
+
+/marker PGL4
+/ff
+^24T t t 8T   ^24t T T 8t   ^24T t t 8T   ^24t T T 8t
+8T  ^24t T T 8t   ^24T t t 8T   ^24t T T 8t  >8T
+4r 4r  ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  4T
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// more to come, I guess.  Maybe add some stuff for timing attacks
+// Maybe some work out abbreviated "3 Camps" Back to previous slow tempo for 12/8 time.
+
+
+// HEY SET 2 SHOULD BE SET 3.  CHANGE ORDER IF CAN.  Rolls should be 2nd.
+
+
+
+
+///////////////// TENOR SET 1 //////////////////////////////////
+// 1
+/track tenor
+/channel 2
+
+// Switching between 12/8 and 4/4 but keeping 8th notes constant
+// means tempo will go between 1x and 3x/2.
+// If we have 72 bpm for the dotted quarter in a 12/8, then
+// for the 4/4 we'd have 110 bpm.
+
+// ----------- Set 1 Exercise 0 is free form warm up
+// ----------- but leader decides when to stop.
+// ----------- Some kind of hand signal.
+
+// ----------- Set 1 Exercise 1 is alternating single stroke
+// ----------- 24th notes for snares, tenors keep rhythm with 8ths, quietly.
+// -----------
+//time 4/4
+//tempo 72
+
+// Sync
+1r
+4r 4r
+8r . . .
+
+/p
+8N . . . . . . .
+8N . . . . . . .
+
+// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- while snares continue
+// -----------
+// (basses solo)
+/mp
+_12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
+// (tenors solo)
+/mf
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
+24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
+
+// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.
+// -----------
+/mf
+_12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
+// (tenors solo again)
+/f
+_12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _8n
+/ff
+24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N
+
+// ----------- Set 1 Exercise 4 is unison 12th notes for all
+// -----------
+
+/ff
+12N N N   N N N   n n n   n n n
+12N N N   N N N   N N N   N N N
+12n n n   n n n   N N N   N N N
+12n n n   n n n   n n n   n n n
+
+
+// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- keeping 8ths constant.  This means a tempo change.
+// ----------- Groups of 8 notes for snares.
+//tempo 110
+8N 8r
+4r // sticks down or in
+4r
+4r // sticks up or out
+
+/mf
+
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+4N 4r . .
+
+// ------------ Set 1 Exercise 6, loud and soft contrast
+// ------------
+/mf
+_8N N _N N _N N _N N   _n n _n n _n n _n n
+_8N N _N N _N N _N N    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _N N _N N _N N _N N
+_8n n _n n _n n _n n    _n n _n n _n n _n n
+//tempo 120
+//4N 4r . .
+
+// repeat // should this go faster?
+//_8N N _N N _N N _N N   _n n _n n _n n _n n
+//_8N N _N N _N N _N N    _N N _N N _N N _N N
+//_8n n _n n _n n _n n    _N N _N N _N N _N N
+//_8n n _n n _n n _n n    _n n _n n _n n _n n
+
+
+
+// ----------- Set 1 Exercise 7 is mixed accents
+// -----------
+// Sync
+4N 4r . .
+
+_8N N _N N N _N N _N   _n n _n n n _n _n N
+_8N N _N N N _N N _N    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _n n _n n n _n n _n
+
+// rpt, but faster
+//Sync
+//tempo 132
+4N 4r . .
+
+_8N N _N N N _N N _N   _n n _n n n _n _n N
+_8N N _N N N _N N _N    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _N N _N N N _N _N n
+_8n n _n n n _n n _n    _n n _n n n _n n _n
+
+
+
+//////  SET 2  ////////
+//tempo 72
+/mp
+//Sync
+_4n
+4r
+4r
+4r
+/f
+// ----------- Set 2 Exercise 0 is single pulse buzzes
+// -----------
+4N N N N
+4n n n n
+8N N N N N N N N
+8n n n n n n n n
+12N N N  N N N  N N N  N N N
+12n n n  n n n  n n n  n n n
+
+
+
+
+
+// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
+// -----------
+_4N
+4r
+4r
+4r
+//marker bzzPulses
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+8N . . .  _24N . .  _. . .  _. . .  _. . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+
+
+
+
+
+// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
+// -----------
+_4N
+4r
+.
+.
+/mp
+8N . . .  24N . .  . . .  . . .  . . .
+8N . . .  24N . .  . . .  . . .  . . .
+8N . . .  24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+
+
+
+
+// ----------- Set 2 Exercise 3 is cresc/decres rolls
+// -----------
+//marker BuzDyn
+///mp
+//8N . . .  /cresc 24N . .  . . .  . . .  . . .
+//8N /ff . . .  /decresc 24N . .  . . .  . . .  . . .
+//8N /mp . . .  /cresc 24N . .  . . .  . . .  . . .
+//_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+//_4N /ff /mp 4r . .
+
+
+
+
+
+// new stuff
+// ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
+// -----------
+_4N
+4r
+.
+.
+/mf
+24N . . . . .   4N   24N . . . . .   4N
+24N . . . . .   8N . . . . .
+24N . . . . .   4N   24N . . . . .   4N
+24N . . . . .   8N . . . . .
+
+
+
+// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
+// -----------
+///mp /cresc 24N . . . . .   4N   24N . . . . .   4N
+//24N . . . . .   8N . . . . .
+//24N /f /decresc . . . . .   4N   24N . . . . .   4N
+//24N . . . . .   8N . . . . .
+//4N /mp /mf
+///marker Dwn
+//4r
+//4r
+///marker Up
+//4r
+
+// ----------- Set 2 Exercise 3.3 is development of 8th note rolls, starting left (3 pulse, or "7's")
+// -----------
+// 7 stroke stuff
+4N
+4r
+4r
+4r
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+
+
+// ----------- Set 2 Exercise 3.4 is more 8th note rolls, starting right
+// -----------
+4n
+///marker Dwn
+4r
+4r
+///marker Up
+4r
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+4r
+4r
+4r
+4r
+//marker TapRlShrt
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+
+
+
+// ----------- Set 2 Exercise 5 is long Tap Rolls
+// -----------
+4r
+4r
+4r
+4r
+//marker TapRls
+8N . . .  _24N . .  . . .  . . .  . . .
+8N . . .  _24N . .  . . .  . . .  . . .
+8N . . .  _24N . .  . . .  . . .  . . .
+_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+_4N 4r . .
+
+
+// ----------- Set 2 Exercise 6 is long Tap Rolls with Dynamics
+// -----------
+//marker TapRllsDyn
+//8N . . .  /cresc _24N . .  . . .  . . .  . . .
+//8N /ff . . .  /decresc _24N . .  . . .  . . .  . . .
+//8N /mp . . .  /cresc _24N . .  . . .  . . .  . . .
+//_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+
+
+
+
+// ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
+// -----------
+//marker TapRls2
+4N /ff /mp
+4r
+4r
+4r
+/mf
+_8N .  _. .  _. .  _. .
+_8N .  _. .  _. .  _. .
+_8N .  _. .  _. .  _. .
+_8N .  _. .  _. .  _. .
+
+
+
+
+// ----------- Set 2 Exercise 6.6 is shorter Tap Rolls with Dynamics
+// -----------
+//_4N 4r . .
+//marker TapRlsDyn2
+///mp /cresc
+//_8N .  _. .  _. .  _. .
+//_8N /ff .  _. /decresc .  _. .  _. .
+//_8N /mp .  _. .  /cresc _. .  _. .
+//_8N .  _. .  _. .  _. .
+
+
+
+// ----------- Set 2 Exercise 7 is 5 stroke Tap Rolls soft
+// -----------
+_4N
+4r
+.
+.
+/mp
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+
+
+
+
+
+// ----------- Set 2 Exercise 8 is 5 stroke Tap Rolls with Dynamics
+// -----------
+//4N
+///marker Dwn
+//4r
+//4r
+///marker Up
+//4r
+///mp
+//8N . . .    /cresc 8N . . .
+//8N /ff . . .   /decresc  8N . . .
+//8N /mp . . .  /cresc . . . .
+//8N . . . . . . .
+
+4N /ff /mf 4r . .
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 9 is 7 stroke roll something
+// -----------
+//Sync
+//4N /ff /mf 4r . .
+///marker 7Strk
+//4N . 8N 4n 8N
+//8r 8n 4N 8n 4N 8n
+//4N . 8N 4n 8N
+//8r 8n 4N 8n 4N 8n
+
+
+
+
+
+
+
+//////  SET 3  ////////
+//tempo 110
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync:
+4N 4r . .
+/mf
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+
+// Expand here.  More stuff before hit Reel Set.
+// maybe
+// 16th note groups of 3 with doubles
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+
+// HEY FINISH THE TENOR AND BASS PARTS
+
+// new stuff
+// sync 8 == 12
+// time 3/4
+4r . .
+4r . .
+4r . .
+4r . .
+
+
+
+//tempo 76
+// sync
+4r . . .
+
+4r . . .
+4r . . .
+4r . . .
+4r . . .
+
+// sync
+4r . . .
+
+4r . . .
+4r . . .
+4r . . .
+4r . . .
+
+
+//temp 110
+// sync
+
+
+
+
+// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+4r . . .
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+
+// ----------- From The Reel Set
+// ----------- The Reel set goes faster, so tempo is increased here
+// tempo 136
+//4N 4r . .
+//f
+
+
+
+
+// ----------- Set 3 Exercise 3 is (1) doubles part 1
+// -----------
+//4N . 8N 8n 4r
+//4N . 8N 8n 4r
+//4N . 8N 8n 4r
+//4N . 8N . . .
+
+
+// ----------- Set 3 Exercise 4 is (2) doubles part 2
+// -----------
+//8N . 4N 8n . 4n
+//8N . 4N 8n . 4n
+//8N . 4N 8n . 4n
+//4N . 8N . . .
+
+// ----------- Set 3 Exercise 5 is (3) doubles part 3
+// -----------
+//8N . 4N 8n . 4n
+//8N . 4N 8n . 4n
+//8N . 4N 8n . 4n
+//4N . 8N . . .
+
+
+
+
+4N
+4r
+.
+.
+
+// Malt on the Optics
+// Marker L1
+4N . 8N 8n 4r // experiment
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N . . .
+
+// Marker L2
+4N . 8N 8n 4r // experiment
+4N . 8N 8n 4r
+4N . 8N 8n 4r
+4N . 8N . . .
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N . . .
+
+// Marker L3
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+// Marker L4
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+
+// Forest Lodge
+// Marker L1
+4N . 8N . 4N
+8N . 4N . .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L2
+4N . 8N . 4N
+8N . 4N . .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L3
+4N . 8N . 4N
+8N . . . 4N .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L4
+4N . 8N . 4N
+8N . . . 4N .
+4N . . .
+8N . . . 4N .
+
+
+
+// Primrose Girl
+// Marker L1
+4r . 8N . 4N
+4N . 8N . 4N
+4r . 8N . 4N
+4N . 8N . 4N
+
+
+// Marker L2
+4r . 8N . 4N
+4N . 8N . 4N
+4r . 8N . 4N
+4N . 8N . 4N
+
+// Marker L3
+///f
+//4N . . .
+///mp /cresc
+//8N . . . 4N . /f
+//4N . . .
+///mp /cresc
+//8N . . . 4N . /f
+
+// Marker L4
+8N . . . . . . .
+8N . . . . . . .
+/ff 4r . 8N . 4N
+8N . . . . . 4N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// more to come, I guess.  Maybe add some stuff for timing attacks
+// Maybe some work out abbreviated "3 Camps" Back to previous slow tempo for 12/8 time.
+
+/////////////// BASS ////////////////////////////////////
+/track bass
+/channel 8
+
+// Switching between 12/8 and 4/4 but keeping 8th notes constant
+// means tempo will go between 1x and 3x/2.
+// If we have 72 bpm for the dotted quarter in a 12/8, then
+// for the 4/4 we'd have 110 bpm.
+
+// ----------- Set 1 Exercise 0 is free form warm up
+// ----------- but leader decides when to stop.
+// ----------- Some kind of hand signal.
+
+// ----------- Set 1 Exercise 1 is alternating single stroke
+// ----------- 24th notes for snares, bases keep rhythm with half notes, quietly.
+// -----------
+//time 4/4
+//tempo 72
+
+// Sync
+1r
+4r 4r
+8r . . .
+
+/mf
+2B .
+2B .
+
+// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- while snares continue
+// -----------
+/ff
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+/mf
+2B .
+2B .
+
+
+
+// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.
+// -----------
+/ff
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+/mf
+2B .
+2B .
+
+
+
+// ----------- Set 1 Exercise 4 is unison 12th notes for all
+// -----------
+
+/ff
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+12B . .   . . .    . . .    . . .
+
+
+// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- keeping 8ths constant.  This means a tempo change.
+// ----------- Groups of 8 notes for snares.
+//tempo 110
+/f
+8B 8r
+4r // sticks down or in
+4r
+4r // sticks up or out
+
+
+2B .   . .
+2B .   . .
+2B .   . .
+2B .   . .
+4B 4r . .
+
+// ------------ Set 1 Exercise 6, loud and soft contrast
+// ------------
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+4B . . .   . . . .
+//tempo 120
+//4B 4r . .
+
+// rpt // faster?
+//4B . . .   . . . .
+//4B . . .   . . . .
+//4B . . .   . . . .
+//4B . . .   . . . .
+
+
+
+
+// ----------- Set 1 Exercise 7 is mixed accents
+// -----------
+// Sync
+4B 4r . .
+
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 4B 8B
+
+// rpt, but faster
+//Sync
+//tempo 132
+4B 4r . .
+
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 8B 4B
+4B . 8r 4B 8B   4B . 8r 4B 8B
+
+
+
+
+//////  SET 2  ////////
+//tempo 72
+// ----------- Set 2 Exercise 1 is Buzz Rolls with pulses
+// -----------
+//Sync
+4B
+4r
+.
+.
+// ----------- Set 2 Exercise 0 is single pulse buzzes
+// -----------
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+
+
+
+// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
+// -----------
+_4N
+4r
+4r
+4r
+//marker bzzPulses
+/f
+2B .
+. .
+. .
+. .
+
+
+
+
+
+// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
+// -----------
+//Sync
+4B
+4r
+4r
+4r
+//marker BzzNoPlse
+/mf
+2B .
+. .
+. .
+. .
+
+
+// ----------- Set 2 Exercise 3 is cresc/decres rolls
+// -----------
+//Sync
+//4B /mp /mf 4r . .
+//marker BuzDyn
+///mp /cresc
+//2B .
+///ff /decresc
+//. .
+///mp /cresc
+//. .
+//. .
+
+
+// new stuff
+// ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
+// -----------
+//Sync
+4B
+4r
+.
+.
+/f
+4B . . .
+4B . 8B . . .
+4B . . .
+4B . 8B . . .
+
+
+// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
+// -----------
+//Sync
+//4B /mp /mf 4r . .
+///mp /cresc 4B . . .
+//4B . 8B . . .
+//4B /f /decresc . . .
+//4B . 8B . . .
+//Sync
+
+
+
+// ----------- Set 2 Exercise 3.3 is development of 8th note rolls, starting left (3 pulse, or "7's")
+// -----------
+4B
+4r
+.
+.
+// 7 stroke stuff
+/f
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+
+// ----------- Set 2 Exercise 3.4 is more 8th note rolls, starting right
+// -----------
+//Sync
+4B
+4r
+.
+.
+/f
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+
+
+
+
+// ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+//Sync
+4r 4r . .
+2B .
+2B .
+2B .
+2B .
+
+2B .
+2B .
+2B .
+2B .
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 5 is long Tap Rolls
+// -----------
+//Sync
+4B
+4r
+.
+.
+//marker TapRls
+/f
+2B . . . . . . .
+
+
+
+
+// ----------- Set 2 Exercise 6 is long Tap Rolls with Dynamics
+// -----------
+//Sync
+//4B 4r . .
+///mp /cresc
+//2B .
+///f /decresc
+//. .
+///mp /cresc
+//. .
+//. .
+
+// ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
+// -----------
+4B /ff /mp
+4r . .
+
+/mf
+2B .
+2B .
+2B .
+2B .
+
+
+
+
+
+
+// ----------- Set 2 Exercise 6.6 is shorter Tap Rolls with Dynamics
+// -----------
+//_4B
+//4r
+//.
+//.
+///mp 2B /mf .
+///f 2B /mf .
+///mp 2B /mf .
+///f 2B /ff .
+
+
+// ----------- Set 2 Exercise 7 is 5 stroke Tap rolls soft
+// -----------
+//Sync
+4B
+4r
+.
+.
+2B .
+2B .
+2B .
+2B .
+
+
+
+
+
+// ----------- Set 2 Exercise 8 is 5 stroke Tap Rolls with Dynamics
+// -----------
+//Sync
+//4B 4r . .
+///mp /cresc
+//2B .
+///f /decresc
+//. .
+///mp /cresc
+//. .
+//. .
+
+//4B /f 4r . .
+
+
+
+
+
+
+
+
+// ----------- Set 2 Exercise 9 is 7 stroke roll something
+// -----------
+//Sync
+//4B /f 4r . .
+///marker 7Strk
+//2B 8B 4b 8r
+//4r 4B 8B 4b 8r
+//2B 8B 4b 8r
+//4r 4B 8B 4b 8r
+
+
+
+
+
+
+
+//////  SET 3  ////////
+//tempo 110
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync:
+4B 4r . .
+/f
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+
+// Expand here.  More stuff before hit Reel Set.
+// maybe
+// 16th note groups of 3 with doubles
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+
+
+
+// new stuff
+// sync 8 == 12
+// time 3/4
+4r . .
+4r . .
+4r . .
+4r . .
+
+//tempo 76
+// sync
+4r . . .
+
+4r . . .
+4r . . .
+4r . . .
+4r . . .
+
+// sync
+4r . . .
+
+4r . . .
+4r . . .
+4r . . .
+4r . . .
+
+
+//temp 110
+// sync
+4r . . .
+
+
+
+
+
+
+// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+
+// ----------- From The Reel Set
+// ----------- The Reel set goes faster, so tempo is increased here
+// tempo 136
+4B 4r . .
+
+
+
+
+
+// ----------- Set 3 Exercise 3 is (1) doubles part 1
+// -----------
+//4B 4r 8B . 4r   // experiment
+//4B 4r 8B . 4r
+//4B 4r 8B . 4r
+//4B 4r 8B . 4B
+
+
+// ----------- Set 3 Exercise 4 is (2) doubles part 2
+// -----------
+//4B 4r 8B . 4r   // experiment
+//4B 4r 8B . 4r
+//4B 4r 8B . 4r
+//4B 4r 8B . 4B
+
+// ----------- Set 3 Exercise 5 is (3) doubles part 3
+// -----------
+//4B 4r 8B . 4r   // experiment
+//4B 4r 8B . 4r
+//4B 4r 8B . 4r
+//4B 4r 8B . 4B
+
+
+
+
+
+/f
+// Malt on the Optics
+// L1
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+// L2
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+// L3
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+// L4
+4B 4r 8B . 4r   // experiment
+4B 4r 8B . 4r
+4B 4r 8B . 4r
+4B 4r 8B . 4B
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+// Forest Lodge
+// L1
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L2
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L3
+4B . 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L4
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B .
+
+// Primrose Girl
+// L1
+4r . 8B . 4B
+4B . 8B . 4B
+4r . 8B . 4B
+4B . 8B . 4B
+
+
+// L2
+4r . 8B . 4B
+4B . 8B . 4B
+4r . 8B . 4B
+4B . 8B . 4B
+
+// L3
+4B . . .
+/mp /cresc 4B . . . /f
+4B . . .
+/mp /cresc 4B . . . /f
+
+// L4
+4B . . .
+4B . . .
+/ff 4r . 8B . 4B
+8B . . . . . 16B 16:3r
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// more to come, I guess.  Maybe add some stuff for timing attacks
+// Maybe some work out abbreviated "3 Camps" Back to previous slow tempo for 12/8 time.
+
+//////  SET 2  ////////
+//tempo 72
+1r
+/ff
+// ----------- Set 2 Exercise 0 is single pulse buzzes
+// -----------
+4B B B B
+4b b b b
+4B B B B
+4b b b b
+4B B B B
+4b b b b
+
+
