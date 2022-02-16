@@ -239,27 +239,27 @@ _4M _. _8M . _4M
 
 // Throw in some doubles between accents
 // This may be too fast.  Instead of 16th, maybe 12ths
-16:3N . . . 4N
-16:3n . . . 4n
-16:3N . . . . . . .   . . _8N
-16:3n . . . 4n
-16:3N . . . 4N
-16:3n . . . . . . .   . . _8n
+//16:3N . . . 4N
+//16:3n . . . 4n
+//16:3N . . . . . . .   . . _8N
+//16:3n . . . 4n
+//16:3N . . . 4N
+//16:3n . . . . . . .   . . _8n
 
 // all of this was to prepare for tap rolls without gap
-16:3N . . . 4N
-16:3n . . . 4n
-16:3N . . . . . . .   . . 8N
-16:3n . . . 4n
-16:3N . . . 4N
-16:3n . . . . . . .   . . 8n
+//16:3N . . . 4N
+//16:3n . . . 4n
+//16:3N . . . . . . .   . . 8N
+//16:3n . . . 4n
+//16:3N . . . 4N
+//16:3n . . . . . . .   . . 8n
 
-16:3N 16n  16:3N 16n  16:3N 16n  8N N
-16:3n 16N  16:3n 16N  16:3n 16N  8n n
-16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  8N N
-16:3n 16N  16:3n 16N  16:3n 16N  8n n
-16:3N 16n  16:3N 16n  16:3N 16n  8N N
-16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  8n n
+//16:3N 16n  16:3N 16n  16:3N 16n  8N N
+//16:3n 16N  16:3n 16N  16:3n 16N  8n n
+//16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  16:3N 16n  8N N
+//16:3n 16N  16:3n 16N  16:3n 16N  8n n
+//16:3N 16n  16:3N 16n  16:3N 16n  8N N
+//16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  16:3n 16N  8n n
 
 
 // ----------- Set 2 Exercise 2 is Fred Sanford's triple stroke
@@ -327,27 +327,27 @@ _4M _. _8M . _4M
 
 // Throw in some doubles between accents
 // This may be too fast.  Instead of 16th, maybe 12ths
-2B 4B 8r 8B
-2b 4b 8r 8b
-2B . . 4B 8r 8B
-2b 4b 8r 8b
-2B 4B 8r 8B
-2b . . 4b 8r 8b
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B . . 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b . . 4b 8r 8b
 
 // all of this was to prepare for tap rolls without gap
-2B 4B 8r 8B
-2b 4b 8r 8b
-2B . . 4B 8r 8B
-2b 4b 8r 8b
-2B 4B 8r 8B
-2b . . 4b 8r 8b
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B . . 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b . . 4b 8r 8b
 
-2B 4B 8r 8B
-2b 4b 8r 8b
-2B . . 4B 8r 8B
-2b 4b 8r 8b
-2B 4B 8r 8B
-2b . . 4b 8r 8b
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B . . 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b . . 4b 8r 8b
 
 
 
