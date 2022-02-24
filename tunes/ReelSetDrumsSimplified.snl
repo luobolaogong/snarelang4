@@ -1,10 +1,11 @@
-// Reel Set Drums
+// Reel Set Drums -- Simplified, To be used along with the nonsimplified version.  2 sets of snares.
+// Unfortunately, the tenors like doing their dance, and they've already worked out their parts.  Fun for them.
+// So, I'm not too serious about this one for now.  But it could be a good goal for snares.
 // tune type: straight reel
 
 /time 4/4
 //tempo 136
 /tempo 140
-//tempo 152
 
 // The snare part was written with the assumption that the tempo was going to be no faster than 136,
 // and if it keeps on going up the part won't sound right and be hard to play.  Most Irish Reels

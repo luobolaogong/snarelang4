@@ -1,0 +1,400 @@
+// Scotland the Brave - drums, with the James Laughlin Massed Band Setting for a 2/4 March, believe it or not
+
+/track metronome
+/channel 0
+/time 4/4 // yes both of these lines can be here and in snare score
+/tempo 72    // for the b'day gig it's slower than usual
+
+/track met
+/channel 0
+// Sync:
+/ff
+_4M _. _8M . _4M
+/f
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+/text By the Right, quick march!
+4M . . .
+// Roll-off
+/text (Roll off)
+_4M _. _8M . _. .  _4M _. _8M . _4M
+
+/text Scotland the Brave, twice through.
+
+/mf
+/marker L1
+4M . . .   . . . .   . . . .   . . . .
+/marker L2
+4M . . .   . . . .   . . . .   . . . .
+/marker L3
+4M . . .   . . . .   . . . .   . . . .
+/marker L4
+4M . . .   . . . .   . . . .   . . .
+
+
+/////////////// Snare ///////////////////
+
+/track snare5
+/channel 5
+//time 4/4
+//tempo 72
+
+
+// sync
+1r
+// "pipes and drums, One Two"
+// "By the right, quick march"
+/ff
+/marker P&D 1,2
+32:3T 32t 8F 4r 4F .
+// Roll-off
+/f /< 24Z . . . . .    . . . . . .   2T /fff /ff
+/f /< 24Z . . . . .    . . . . . .   4T /fff /ff
+
+
+/f
+
+8r 24Z . .
+/marker P1L1
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /fff /mf 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker P1L2
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /fff /f 8r 24Z . .
+
+/marker P1L1Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /fff /f 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker P1L2Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /fff /f 8r 12T 24t
+
+/marker P2L3
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . >8T /ff /f t
+/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+12T 24t ^8F ^f /mf 12T 24t
+
+/marker P2L4
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . >8T /ff /f 24Z . .
+^4t /cresc 24Z . . . . .
+^4T /ff 8r 12T 24t
+
+/marker P2L3Rpt
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . 8T /ff /f t
+^8F ^8f  ^12F 24t 12t 24f
+12T 24t ^8F ^f /mf 12T 24t
+
+/marker P2L4Rpt
+/mf /cresc >40T 20z .  40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  40t 20Z . 8T /ff /f 24Z . .
+^4t /cresc 24Z . . . . .
+^4T /fff /f           8r 24Z . .
+
+
+
+
+
+// 2nd time through
+
+
+
+/marker 2XP1L1
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /fff /f 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker 2XP1L2
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /fff /f 8r 24Z . .
+
+/marker 2XP1L1Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t t
+/cresc ^8F ^8f  ^12F /fff /f 24t 12t 24f
+12T 24t ^8F ^f 24Z . .
+
+/marker 2XP1L2Rpt
+^24:5t 24t 24Z . . 8t
+^8F 24Z . . 8t 24Z . .
+^4T /cresc 24Z . . . . .
+^4T /fff /f 8r 12T 24t
+
+/marker 2XP2L3
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . >8T /ff /f t
+/cresc ^8F ^8f  ^12F /ff 24t 12t 24f
+12T 24t ^8F ^f /mf 12T 24t
+
+/marker 2XP2L4
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . >8T /ff /f 24Z . .
+^4t /cresc 24Z . . . . .
+^4T /ff 8r 12T 24t
+
+/marker 2XP2L3Rpt
+/mf /cresc >40T 20z .  >40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  >40t 20Z . 8T /ff /f t
+^8F ^8f  ^12F 24t 12t 24f
+12T 24t ^8F ^f /mf 12T 24t
+
+/marker 2XP2L4Rpt
+/mf /cresc >40T 20z .  40t 20Z . ^12T 24t 12T 24t
+>40T 20z .  40t 20Z . 8T /ff /f 24Z . .
+^4t /cresc 24Z . . . . .
+^8T /fff 8f 8F
+
+
+
+
+////////// Tenor /////////////////////////
+/track tenor
+/channel 3
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+1r
+// Roll-off
+/ff 4N . 2N    4N . 2N
+
+// This is taken from the JL Massed Bands 2/4 setting
+/f
+// Line 1
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
+
+// Line 2
+4N .
+4N .
+4N .
+2N
+
+// Line 1Rpt
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
+
+// Line 2Rpt
+4N .
+4N .
+4N .
+2N
+
+// Line 3
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+   8N 4n
+
+// Line 4
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
+
+// Line 3Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+    8N 4n
+
+// Line 4Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
+
+
+
+///////// Repeat whole thing ////////
+/f
+// Line 1
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
+
+// Line 2
+4N .
+4N .
+4N .
+2N
+
+// Line 1Rpt
+4N .
+4N .
+8N . 24:5N 6n
+   8N 4n
+
+// Line 2Rpt
+4N .
+4N .
+4N .
+2N
+
+// Line 3
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+   8N 4n
+
+// Line 4
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+2N
+
+// Line 3Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+8N . 24:5N 6n
+    8N 4n
+
+// Line 4Rpt
+4r 12N 24n 12N 24n
+8N . 4N
+4N .
+8N /ff 8n 8N
+
+
+
+
+
+
+////////////// Bass /////////////////////
+/track bass
+/channel 7
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+/marker P&D 1,2
+1r
+// Roll-off
+/ff 4B . 2B    4B . 2B
+
+/f
+// Line 1
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2
+4B .
+4B .
+4B .
+2B
+
+// Line 1Rpt
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2Rpt
+4B .
+4B .
+4B .
+2B
+
+// Line 3
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4
+8B . 4B
+8b . 4b
+4B .
+2B
+
+// Line 3Rpt
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4Rpt
+8B . 4B
+8b . 4b
+4B .
+2B
+
+
+
+
+///////// Repeat whole thing ////////////////
+/f
+// Line 1
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2
+4B .
+4B .
+4B .
+2B
+
+// Line 1Rpt
+4B .
+4B .
+8B . 4B
+2b
+
+// Line 2Rpt
+4B .
+4B .
+4B .
+2B
+
+// Line 3
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4
+8B . 4B
+8b . 4b
+4B .
+2B
+
+// Line 3Rpt
+8B . 4B
+8b . 4b
+8B . 4B
+2b
+
+// Line 4Rpt
+8B . 4B
+8b . 4b
+4B .
+8B /ff . 4B
+
+
+

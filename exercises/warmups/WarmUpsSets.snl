@@ -5,6 +5,120 @@
 /track met
 /channel 0
 
+/time 4/4
+/tempo 36
+
+>4M >. >. >.
+
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+>8M . >. . >. . >. .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Switching between 12/8 and 4/4 but keeping 8th notes constant
 // means tempo will go between 1x and 3x/2.
 // If we have 72 bpm for the dotted quarter in a 12/8, then
@@ -388,7 +502,80 @@ _8M . _8M . _8M . _8M .
 
 
 //////  SET 3  ////////
+
+// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
+// feels faster.  Start this way because the previous set ends on that tempo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /tempo 110
+// ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
+// -----------
+^4M ^4M ^8M 16M  8M 16M  8M
+
+>4M . _. .
+>4M . _. .
+>4M . _. .  >. . . .
+>4M . _. .
+>4M . _. .
+>4M . _. .  >. . . .
+
+
+
+
+
+
+
+/tempo 82
+//sync
+12M 24 12 24 8 8 12 24 12 24 8 8
+
+>8M . _. .  >8M . _. _.
+>8M . _. .  >8M . _. _.
+>8M . _. .  >8M . _. _.
+>8M . _. .  >8M . _. _.
+
+
+
+
+
+
+
+
 // ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
 // -----------
 // Sync  need better cues on exercises in this set
@@ -399,6 +586,16 @@ _8M . _8M . _8M . _8M .
 ^4M . >. .   . . . .
 ^4M . >. .   ^. . >. .
 ^4M . >. .   . . . .
+
+
+
+
+
+
+
+// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
+// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
+
 
 // Expand here.  More stuff before hit Reel Set.
 // maybe
@@ -544,6 +741,154 @@ _4M _. _8M . _4M
 //////////////// SNARE SET 1 ////////////////////////
 /track snare
 /channel 5
+
+
+
+// Need a whole fricken section for the 12-24 stuff
+// What did I learn from last night's sectional?
+// When we don't use a metronome we get worse.
+// Things are pretty inaccurate, and therefore slower tempos are still needed
+// Pretty bad technique
+// Not at all ready for flams with 12-24, so first set without flams, next set play same but with flams?
+// The name ABAA BABB doesn't apply well because hand orders are not like RRRRRRR LLLLLLL  RRRRRRRR  RRRRRRRRRR
+
+//time 4/4
+//tempo ??
+4T . . .
+
+// Experimental here.  Will create ownset for this 12 24 stuff
+>24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
+>24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
+>24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
+>12T 24T  >12t 24t  >12T 24T  >12t 24t    >12T 24T  >12t 24t  >12T 24T  >12t 24t
+
+>4T
+/marker D
+4r
+4r
+/marker U
+4r
+
+>24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
+>24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
+>24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
+>12 24   12 >24   >12 24   12 >24  >12 24   12 >24   >12 24   12 >24
+
+>4T
+/marker D
+4r
+4r
+/marker U
+4r
+
+>24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
+>24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
+>24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
+>12 24   12 >24   12 24   >8    >12 24   12 >24   12 24   >8
+
+
+>24T t t T T >t T T t  >8T    >12T 24  12 >24  12 24 >8T
+>24T t t T T >t T T t  >24T t t T T >t T T t   >8T >.
+>12T 24t  12 >24  12 24  >12 24  12 >24  12 24  >8 >.
+
+
+
+
+>8T 12t 24T  >8t 12T 24t    >12T 24t 12T >24t 12T 24t >8
+8 8 12 24 12 24 12 24  8   12 24 8
+
+
+
+>12T 24t 12T >24t 12T 24t >8
+
+
+
+>24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
+>24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
+>24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . >T
+>24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . .
+
+>24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
+>24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
+>24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . >t
+>24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . .
+
+
+
+>24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
+>24t . . >24T . . >24t . . >24T . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
+>24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
+>12t >24T   >12t >24T   >12t >24T   >12t >24t      >12T >24t   >12T >24t   >12T >24t   12T 24T
+
+>24t . . >24t . . >24t . . >24t . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
+>24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
+>24T . . >24t . . >24T . . >24t . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
+>12T >24t   >12T >24t   >12T >24t   >12T >24T      >12t >24T   >12t >24T   >12t >24T   >12t 24t
+
+
+
+
+>24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
+>24t . . >24T . . >24t . . >24T . .    >12t 24T   12t 24T   12t 24T   12t 24t
+>24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
+12t 24T   12t 24T   12t 24T   12t 24t  >12T 24t   12T 24t   12T 24t   12T 24T
+
+>24t . . >24t . . >24t . . >24t . .    >12t 24T   12t 24T   12t 24T   12t 24t
+>24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
+>24T . . >24t . . >24T . . >24t . .    >12t 24T   12t 24T   12t 24T   12t 24t
+12T 24t   12T 24t   12T 24t   12T 24T  >12t 24T   12t 24T   12t 24T   12t 24t
+
+
+
+
+>24T . .  >. . .   >12T 24t 12T 24T     >24t . . >. . .       >12t 24T 12t 24t
+>24T . .  >. . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
+>24t . .  >. . .   >12t 24T 12t 24t     >24T . .  >. . .      >12T 24t 12T 24T
+>24t . .  >. . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
+
+
+
+
+
+
+
+
+>24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . .
+
+>24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
+>24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
+>24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . >t
+>24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . .
+
+
+
+
+
+
+
+
+>24T . . >24t . . >24T . . >24t . .    12T 24T  12t 24t  12T 24T  12t 24t
+
+
+^12T 24t   12T 24t   ^12T 24t   12T 24T      ^12t 24T   12t 24T   ^12t 24T   12t 24T
+^12T 24t   12T 24T   ^12t 24T   12t 24t      ^12T ^24T   ^12t ^24t   ^12T 24t   12T 24T
+^12t 24T   12t 24t   ^12t 24T   12t 24t      ^12T 24t   12T 24t   ^12T 24t   12T 24t
+^12t 24T   12t 24t   ^12T 24t   12T 24T      ^12t ^24t   ^12T ^24T   ^12t 24T   12t 24t
+
+//sync
+4T 4r . .
+
+^12T 24t   12T 24t   ^12t 24t   24T . .     ^12t 24T   12t 24T   ^12t 24T   24t . .
+12T ^24t   . . .    12t ^24T  . . .    12T  ^24t  . . .  ^24T . .  ^24t . .
+^12t 24T   12t 24T   ^12T 24T   24t . .     ^12T 24t   12T 24t   ^12T 24t   24T . .
+12t ^24T   . . .    12T ^24t  . . .    12t  ^24T  . . .  ^24t . .  ^24T . .
+
+
+
+
+
+
+
 
 
 // Switching between 12/8 and 4/4 but keeping 8th notes constant
@@ -922,14 +1267,9 @@ _4M _. _8M . _4M
 
 //>4T /ff 4r . .
 
-////marker Dwn
-//4r
-//4r
-////marker Up
-//4r
-
 // ----------- Set 2 Exercise 9 is 7 stroke roll something
-// kinda cool, but maybe too hard to memorize
+// kinda cool, but maybe too hard to memorize.
+// Still, it's kinda useful.
 // -----------
 ///marker 7Strk
 //>8T 24t . .  >8T 24t . .   >8T >. 24T . . >8t
@@ -943,15 +1283,54 @@ _4M _. _8M . _4M
 
 
 //////  SET 3  ////////
+
+// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
+// feels faster.  Start this way because the previous set ends on that tempo.
+// And need to work on that 12 24 12 24 idiom.
+// Maybe the 12/24 12 24 idiom should be after doing doubles.  These two things should not be in the same set.
+
+>4T
+/marker D
+4r
+4r
+/marker U
+4r
+
+
+
+
+
+
+
 //tempo 110
+// ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
+// -----------
+// sync
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+8T 16T   8T 16T   8T 16T   8T 16T   8T T
+8t 16t   8t 16t   8t 16t   8t 16t   8t t
+8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T
+8t 16t   8t 16t   8t 16t   8t 16t   8t t
+8T 16T   8T 16T   8T 16T   8T 16T   8T T
+8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t
+
+// tempo change so 8 16 == 12 24,  so this slows the tempo.  0.75 * prev tempo?  110*0.75=82.50
+//
+
+
 // ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
 // -----------
 // sync
 4T
-//marker Dwn
+/marker D
 4r
 4r
-//marker Up
+/marker U
 4r
 /ff
 16T 8T  16T 8T  16T 8T  16T 8T  8T T
@@ -960,6 +1339,55 @@ _4M _. _8M . _4M
 16t 8t  16t 8t  16t 8t  16t 8t  8t t
 16T 8T  16T 8T  16T 8T  16T 8T  8T T
 16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
+
+// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
+// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
+
+
+
+
+
+
+
+
+
+// sync
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+12T 24T 12T 24T  8T T   12t 24t 12t 24t  8t t
+12T 24T 12T 24T  12T 24T 12T 24T  12T 24T 12T 24T  8T T
+12t 24t 12t 24t  8t t   12T 24T 12T 24T  8T T
+12t 24t 12t 24t  12t 24t 12t 24t  12t 24t 12t 24t  8t t
+
+
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t
+  8T T   12t 24t 12t 24t  8t t
+12T 24T 12T 24T  12T 24T 12T 24T  12T 24T 12T 24T  8T T
+12t 24t 12t 24t  8t t   12T 24T 12T 24T  8T T
+12t 24t 12t 24t  12t 24t 12t 24t  12t 24t 12t 24t  8t t
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -990,20 +1418,6 @@ _4M _. _8M . _4M
 //tempo 76
 4T 4r . .
 
-
-
-^12T 24t   12T 24t   ^12T 24t   12T 24T      ^12t 24T   12t 24T   ^12t 24T   12t 24T
-^12T 24t   12T 24T   ^12t 24T   12t 24t      ^12T ^24T   ^12t ^24t   ^12T 24t   12T 24T
-^12t 24T   12t 24t   ^12t 24T   12t 24t      ^12T 24t   12T 24t   ^12T 24t   12T 24t
-^12t 24T   12t 24t   ^12T 24t   12T 24T      ^12t ^24t   ^12T ^24T   ^12t 24T   12t 24t
-
-//sync
-4T 4r . .
-
-^12T 24t   12T 24t   ^12t 24t   24T . .     ^12t 24T   12t 24T   ^12t 24T   24t . .
-12T ^24t   . . .    12t ^24T  . . .    12T  ^24t  . . .  ^24T . .  ^24t . .
-^12t 24T   12t 24T   ^12T 24T   24t . .     ^12T 24t   12T 24t   ^12T 24t   24T . .
-12t ^24T   . . .    12T ^24t  . . .    12t  ^24T  . . .  ^24t . .  ^24T . .
 
 
 //temp 110
@@ -1568,11 +1982,42 @@ _4N
 
 
 //////  SET 3  ////////
+
+// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
+// feels faster.  Start this way because the previous set ends on that tempo.
+
+//time 4/4
+//tempo 36
+4T . . .
+
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+
+
+
+
+
+
 //tempo 110
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// ----------- Set 3 Exercise 1 is MODIFICATION OF Fred Sanford's double stroke
 // -----------
 // Sync:
-4N 4r . .
+4N
+4r
+.
+.
 /mf
 4N N N  8N N
 4n n n  8n n
@@ -1580,6 +2025,41 @@ _4N
 4n n n  8n n
 4N N N  8N N
 4n n n n n n n 8n n
+
+
+
+//
+// sync tempo change
+4n
+4r
+4r
+4r
+
+4N 8N N  4n 8n n
+8N N N N N N N N
+4n 8n n  4N 8N N
+8n n n n n n n n
+
+
+
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync:
+4N
+4r
+.
+.
+/mf
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+
+// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
+// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
 
 
 // Expand here.  More stuff before hit Reel Set.
@@ -2159,11 +2639,47 @@ _4N
 
 
 //////  SET 3  ////////
+
+
+// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
+// feels faster.  Start this way because the previous set ends on that tempo.
+
+
+//time 4/4
+//tempo 36
+4T . . .
+
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+1r . . .
+
+
+
+
+
+
+
+
+
 //tempo 110
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
 // -----------
 // Sync:
-4B 4r . .
+4B
+4r
+.
+.
 /f
 2B 4B 8r 8B
 2b 4b 8r 8b
@@ -2171,6 +2687,41 @@ _4N
 2b 4b 8r 8b
 2B 4B 8r 8B
 2b b b 4b 8r 8b
+
+
+
+//
+// sync tempo change
+4n
+4r
+4r
+4r
+
+4B 8B B 4b 8b b
+8B B B B B B B B
+4b 8b b 4B 8B B
+8b b b b b b b b
+
+
+
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync:
+4B
+4r
+.
+.
+/f
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+
+// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
+// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
 
 
 // Expand here.  More stuff before hit Reel Set.
