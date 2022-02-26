@@ -38,16 +38,12 @@
 12t t t t t t   6t 12t 6t 12t
 6t 12t 6t 12t 6t 12t 6t 12t
 
-
-//////  stuff from bottom.
-//////  stuff from bottom.
-//////  stuff from bottom.
-
 /tempo 60
 8T . 16T . 8T
 
-// 1 bar phrases is okay
-// But don't start with paradiddles.
+// 1 bar phrases
+// 1 bar phrases
+// 1 bar phrases
 
 /f
 // doubles on the 12-24.  Hopefully learned from playing it slowly above
@@ -64,7 +60,7 @@
 
 
 // Paradiddles on the 12-24.  This is okay
-^24T . . . . .    ^12T 24t 12T 24T
+^24T . . . . .   ^12T 24t 12T 24T
 ^24T . . . . .   ^12t 24T 12t 24t
 ^24T . . . . .   ^12T 24t 12T 24T
 ^12t 24T 12t 24t ^12T 24t 12T 24T
@@ -74,165 +70,20 @@
 ^24T . . . . .   ^12t 24T 12t 24t
 ^12T 24t 12T 24T ^12t 24T 12t 24t
 
-// Same as before, but move the accent on the paradiddle to be 2nd
-^24T . . 24t . .   12T ^24t 12T 24T
-^24t . . 24T . .   12t ^24T 12t 24t
-^24T . . 24t . .   12T ^24t 12T 24T
-12t ^24T 12t 24t    12T ^24t 12T 24T
-// Reverse hand order of above
-^24t . . 24T . .   12t ^24T 12t 24t
-^24T . . 24t . .   12T ^24t 12T 24T
-^24t . . 24T . .   12t ^24T 12t 24t
-12T ^24t 12T 24T    12t ^24T 12t 24t
 
 
-
-
-
-
-/f
-// Do we want to be 1 or 2 bar phrases?  This is 1.
-// This is paradiddle 12-24.
-// This is a 1 bar phrase
->24T . .  . . .   >12T 24t 12T 24T     >24t . . . . .       >12t 24T 12t 24t
->24T . .  . . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
->24t . .  . . .   >12t 24T 12t 24t     >24T . .  . . .      >12T 24t 12T 24T
->24t . .  . . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
-
-//>24T . .  >. . .   >12T 24t 12T 24T     >24t . . >. . .       >12t 24T 12t 24t
-//>24T . .  >. . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
-//>24t . .  >. . .   >12t 24T 12t 24t     >24T . .  >. . .      >12T 24t 12T 24T
-//>24t . .  >. . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
-
-// Paradiddles on the 12-24.
-//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
-//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
-//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
-//^12T 24t 12T 24T ^12t 24T 12t 24t ^12T 24t 12T 24T ^12t 24T 12t 24t
 
 // Same as before, but move the accent on the paradiddle to be 2nd
-// This is a 1 bar phrase
-^24T . ^. . . .    12T ^24t 12T 24T   ^24t . ^. . . .    12t ^24T 12t 24t
-^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t  12T ^24t 12T 24T
-^24t . ^. . . .    12t ^24T 12t 24t   ^24T . ^. . . .    12T ^24t 12T 24T
-^24t . ^. . . .    12t ^24T 12t 24t   12T ^24t 12T 24T   12t ^24T 12t 24t
-
-// Same as before, but move the accent on the paradiddle to be 2nd
-//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
-//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
-//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
-//12T ^24t 12T 24T  12t ^24T 12t 24t  12T ^24t 12T 24T    12t ^24T 12t 24t
-
-
-
-
-
-
-
-
-/f
-// doubles on the 12-24.  Hopefully learned from playing it slowly above
-// Two bar phrase
-// Okay.  But it's a bit long
-24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
-24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
-24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
-12T 24T 12t 24t 12T 24T 12t 24t 12T 24T 12t 24t 12T 24T 12t 24t
-
-// singles on the 12-24
-// Okay
-24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
-24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
-24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
-12T 24t 12T 24t 12T 24t 12T 24t 12T 24t 12T 24t   12T 24t 12T 24t
-
-
-
-
-
-// Accent Second note of the 12-24, but with doubles.  Maybe a bit hard.
-// Requies some control.  If can't do it, then forget about accents.
-// Probably good.  Maybe okay.  After paradiddles, prob okay.
-// Not 100% sure it's useful
-^24T . . ^24t . . ^24T . . ^24t . .    12T ^24t   12T ^24T   12t ^24t   12T ^24T
-^24t . . ^24T . . ^24t . . ^24T . .    12t ^24T   12t ^24t   12t ^24T   12t ^24t
-^24T . . ^24t . . ^24T . . ^24t . .    12T ^24t   12T ^24T   12t ^24t   12T ^24T
-12t ^24T   12t ^24t   12t ^24T   12t ^24t   12t ^24T   12t ^24t   12t ^24T   12t ^24t
-
-
-
-
-
-
-
-//
-// 2-bar repeat 12-24 stuff, with alternating, but with a paradiddle at the end to reverse hand order
-// But first one should be doubles
-//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
-//^24t . . ^24T . . ^24t . . ^24T . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
-//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
-//^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t ^24t      ^12T ^24t   ^12T ^24t   ^12T ^24t   12T 24T
-
-//^24t . . ^24t . . ^24t . . ^24t . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
-//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
-//^24T . . ^24t . . ^24T . . ^24t . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
-//^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T ^24T      ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
-
-/tempo 60
-4T . 8T . 4T
-
-
-
-
-///tempo 60
-//4T . 8T . 4T
-
-
-//>24T . . >24t . . >24T . . >24t . .    12T 24T  12t 24t  12T 24T  12t 24t
-
-/tempo 60
-4T . 8T . 4T
-
-^12T 24t   12T 24t   ^12T 24t   12T 24T      ^12t 24T   12t 24T   ^12t 24T   12t 24T
-^12T 24t   12T 24T   ^12t 24T   12t 24t      ^12T ^24T   ^12t ^24t   ^12T 24t   12T 24T
-^12t 24T   12t 24t   ^12t 24T   12t 24t      ^12T 24t   12T 24t   ^12T 24t   12T 24t
-^12t 24T   12t 24t   ^12T 24t   12T 24T      ^12t ^24t   ^12T ^24T   ^12t 24T   12t 24t
-
-/tempo 60
-4T . 8T . 4T
-// Is this anything special?  Give anything extra?  Not really.
-^12T 24t   12T 24t   ^12t 24t   24T . .     ^12t 24T   12t 24T   ^12t 24T   24t . .
-12T ^24t   . . .    12t ^24T  . . .    12T  ^24t  . . .  ^24T . .  ^24t . .
-^12t 24T   12t 24T   ^12T 24T   24t . .     ^12T 24t   12T 24t   ^12T 24t   24T . .
-12t ^24T   . . .    12T ^24t  . . .    12t  ^24T  . . .  ^24t . .  ^24T . .
-//////  Done with moving stuff from bottom.
-//////  Done with moving stuff from bottom.
-//////  Done with moving stuff from bottom.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// This is okay
+^24T . ^. . . .    12T ^24t 12T 24T
+^24t . ^. . . .    12t ^24T 12t 24t
+^24T . ^. . . .    12T ^24t 12T 24T
+12t ^24T 12t 24t  12T ^24t 12T 24T
+// reverse hand order
+^24t . ^. . . .    12t ^24T 12t 24t
+^24T . ^. . . .    12T ^24t 12T 24T
+^24t . ^. . . .    12t ^24T 12t 24t
+12T ^24t 12T 24T   12t ^24T 12t 24t
 
 
 
@@ -248,41 +99,55 @@
 4T . 8T . 8T .
 
 // two bar phrases for the longer accent patterns
+// two bar phrases for the longer accent patterns
+// two bar phrases for the longer accent patterns
+// two bar phrases for the longer accent patterns
 
 // 12-24 long pickup timing
 >4T 8r 12t 24T              >4t 8r 12T 24t
 ^8T 12t 24T  ^8t 12T 24t    12r ^24T 12t 24t 12T 24T >8t
-
 >4T 8r 12t 24T              >4t 8r 12T 24t
 ^8T 12t 24T  ^8t 12T 24t    12r ^24T 12t 24t 12T 24T >8t
 
 
 // shorter pickup timing, 24-12
-^8T 12r ^24t 12T 24T 8t       ^8T 12r ^24t 12T 24T 8t
+// check hand orders
+^8T >12r ^24t 12T 24T 8t       ^8T >12r ^24t 12T 24T 8t
 ^8T 12t 24T  ^8t 12T 24t       12r ^24T 12t 24t 12T 24T >8t
-^8T 12r ^24t 12T 24T 8t       ^8T 12r ^24t 12T 24T 8t
-^8T 12t 24T  ^8t 12T 24t       12r ^24T 12t 24t 12T 24T >8t
+^8t >12r ^24T 12t 24t 8T       ^8t >12r ^24T 12t 24t 8T
+^8t 12T 24t  ^8T 12t 24T       12r ^24t 12T 24T 12t 24t >8T
+
+// heavy syncopation
+//^8T 12 24  ^8t 12 24   12r ^24T 12r ^24t 12r ^24T >12t 24t
+//^8T 12 24  ^8t 12 24   12r ^24T 12r ^24t 12r ^24T >12t 24t
+//^8T 12 24  ^8t 12 24   12r ^24T 12r ^24t 12r ^24T >12t 24t
+//12r ^24T 12r ^24t 12r ^24T >12t 24t   12r ^24T 12r ^24t 12r ^24T >12t 24t
+
+
+// Going into sequences of 24th notes, triplets and more
+>8T 12T ^24t _12T ^24t 24T . .    >8T 12T ^24t _12T ^24t 24T . .
+>8T ^24t . .  >8T ^24t . .    _12T ^24t  _12T ^24t  _12t ^24t 24T . .
+>8T 12T ^24t _12T ^24t 24T . .    >8T 12T ^24t _12T ^24t 24T . .
+>8T ^24t . .  >8T ^24t . .    _12T ^24t  _12T ^24t  _12t ^24t 24T . .
+
+
+
+//>8T ^12T 24 12 24 >8T    >8T ^12T 24 12 24 >8T
+//>8T ^24t . .  >8T ^24t . .    >12T ^24t  24T . .  12t 24t ^8T
+
+
+
+//>12t 24 12 >24 12 24 >8t    >12t 24 12 >24 12 24 >8t
+//^8t 12T 24t  ^8T 12t 24T       12r ^24t 12T 24T 12t 24t >8T
 
 
 
 
-//>12T >24t >12T >24t   12r >24t  12r >24t  12r >24t  12r  >24t     24t . . >8t   // this syncopation isn't necessary for new drummers
-
-
-
-//^8T 12r ^24t 24T . . 8t       ^8T 12r ^24t 24T . . 8t
-//^24T . .  12t 24T    ^24t . . 12T >24t    12r >24T  12t >24T  24t . . >8t
 
 
 
 
-// Kinda fun to keep going with this stuff, even if repeat?
 
-// some up beat, with 24th trips, but is this just repeat now?
-^8T 12T ^24t 12T 24t ^8T       ^12T 24 12 ^24 24 24 24 ^8T
-^8T 12T ^24t 12T 24t ^8T       ^12T 24 12 ^24 12 24 ^8T
-^12T 24 12 ^24 12 24 ^8T       ^12T 24 12 ^24 24 24 24 ^8T
-^12T 24 12 ^24 12 24 ^8T       ^12T 24 12 ^24 12 24 ^8T
 
 // this is a cool feel, right?
 ^8T 12r ^24t 12T 24t ^8T       ^12T 24 12 ^24 12 24 ^8T
@@ -298,6 +163,10 @@
 
 
 
+
+
+
+// Mistake somewhere in here?
 // pickup timing with 24ths (triplets)   Too hard for new drummers?
 ^8T 12r ^24t 24T . . 8t       ^8T 12r ^24t 24T . . 8t
 ^8T 12t 24T  ^8t 12T 24t       12r ^24T 12t >24t  24T . . >8t
@@ -383,6 +252,19 @@ _8t _24T . . . . . _8  12t >24T 12t 24t
 >12T 24t  12 >24  12 24  >12 24  12 >24  12 24  >8 >.
 
 
+// Accent Second note of the 12-24, but with doubles.  Maybe a bit hard.
+// Requies some control.  If can't do it, then forget about accents.
+// Probably good.  Maybe okay.  After paradiddles, prob okay.
+// Not 100% sure it's useful
+^24T . . ^24t . . ^24T . . ^24t . .    12T ^24t   12T ^24T   12t ^24t   12T ^24T
+^24t . . ^24T . . ^24t . . ^24T . .    12t ^24T   12t ^24t   12t ^24T   12t ^24t
+^24T . . ^24t . . ^24T . . ^24t . .    12T ^24t   12T ^24T   12t ^24t   12T ^24T
+12t ^24T   12t ^24t   12t ^24T   12t ^24t   12t ^24T   12t ^24t   12t ^24T   12t ^24t
+
+
+
+
+
 
 32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
 32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
@@ -402,16 +284,6 @@ _8t _24T . . . . . _8  12t >24T 12t 24t
 // Garbage:
 
 
->24T . . >. . .  >. . .  >. . .      >8T 12T 24T  >8t 12T 24t
->24T . . >. . .  >. . .  >. . .      >8T 12T 24T  >8t 12T 24t
->24T . . >. . .  >. . .  >. . .      >8T 12T 24T  >8t 12T 24t
->8T 12T 24T  >8t 12T 24t             >8T 12T 24T  >8t 12T 24t
-
-// ??? why here?, not above?
->24T . . >. . .  >. . .  >. . .      >12T 24 12 >24 12 24 >8T
->24T . . >. . .  >. . .  >. . .      >12T 24 12 >24 12 24 >8T
->24T . . >. . .  >. . .  >. . .      >12T 24 12 >24 12 24 >8T
->12T 24 12 >24 12 24 >8T          >12T 24 12 >24 12 24 >8T
 
 // Accent the start of the 12-24
 //>24T . . . . .   >12T 24t 12T 24t
@@ -678,6 +550,79 @@ _8t _24T . . . . . _8  12t >24T 12t 24t
 //^24T . . ^24t . . ^24T . . ^24t . .    ^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . .
 //^24t . . ^24t . . ^24t . . ^24t . .    ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t
 //^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . .
+
+
+
+/f
+// Do we want to be 1 or 2 bar phrases?  This is 1.
+// This is paradiddle 12-24.
+// This is a 1 bar phrase
+//>24T . .  . . .   >12T 24t 12T 24T     >24t . . . . .       >12t 24T 12t 24t
+//>24T . .  . . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
+//>24t . .  . . .   >12t 24T 12t 24t     >24T . .  . . .      >12T 24t 12T 24T
+//>24t . .  . . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
+
+//>24T . .  >. . .   >12T 24t 12T 24T     >24t . . >. . .       >12t 24T 12t 24t
+//>24T . .  >. . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
+//>24t . .  >. . .   >12t 24T 12t 24t     >24T . .  >. . .      >12T 24t 12T 24T
+//>24t . .  >. . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
+
+// Paradiddles on the 12-24.
+//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
+//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
+//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
+//^12T 24t 12T 24T ^12t 24T 12t 24t ^12T 24t 12T 24T ^12t 24T 12t 24t
+
+
+// Same as before, but move the accent on the paradiddle to be 2nd
+//^24T . . 24t . .   12T ^24t 12T 24T
+//^24t . . 24T . .   12t ^24T 12t 24t
+//^24T . . 24t . .   12T ^24t 12T 24T
+//12t ^24T 12t 24t    12T ^24t 12T 24T
+// Reverse hand order of above
+//^24t . . 24T . .   12t ^24T 12t 24t
+//^24T . . 24t . .   12T ^24t 12T 24T
+//^24t . . 24T . .   12t ^24T 12t 24t
+//12T ^24t 12T 24T    12t ^24T 12t 24t
+
+// Same as before, but move the accent on the paradiddle to be 2nd
+//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
+//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
+//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
+//12T ^24t 12T 24T  12t ^24T 12t 24t  12T ^24t 12T 24T    12t ^24T 12t 24t
+
+///f
+// doubles on the 12-24.  Hopefully learned from playing it slowly above
+// Two bar phrase
+// Okay.  But it's a bit long
+//24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
+//24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
+//24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
+//12T 24T 12t 24t 12T 24T 12t 24t 12T 24T 12t 24t 12T 24T 12t 24t
+
+// singles on the 12-24
+// Okay
+//24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
+//24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
+//24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
+//12T 24t 12T 24t 12T 24t 12T 24t 12T 24t 12T 24t   12T 24t 12T 24t
+
+
+
+
+//
+// 2-bar repeat 12-24 stuff, with alternating, but with a paradiddle at the end to reverse hand order
+// But first one should be doubles
+//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
+//^24t . . ^24T . . ^24t . . ^24T . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
+//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
+//^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t ^24t      ^12T ^24t   ^12T ^24t   ^12T ^24t   12T 24T
+
+//^24t . . ^24t . . ^24t . . ^24t . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
+//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
+//^24T . . ^24t . . ^24T . . ^24t . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
+//^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T ^24T      ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
+
 
 
 /track met
