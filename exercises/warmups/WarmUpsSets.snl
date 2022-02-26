@@ -5,120 +5,6 @@
 /track met
 /channel 0
 
-/time 4/4
-/tempo 36
-
->4M >. >. >.
-
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
->8M . >. . >. . >. .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Switching between 12/8 and 4/4 but keeping 8th notes constant
 // means tempo will go between 1x and 3x/2.
 // If we have 72 bpm for the dotted quarter in a 12/8, then
@@ -175,6 +61,10 @@
 4M . . .
 4M . . .
 4M . . .
+
+
+
+
 
 
 
@@ -507,68 +397,17 @@ _8M . _8M . _8M . _8M .
 // feels faster.  Start this way because the previous set ends on that tempo.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /tempo 110
 // ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
 // -----------
-^4M ^4M ^8M 16M  8M 16M  8M
+//^4M ^4M ^8M 16M  8M 16M  8M
 
->4M . _. .
->4M . _. .
->4M . _. .  >. . . .
->4M . _. .
->4M . _. .
->4M . _. .  >. . . .
-
-
-
-
-
-
-
-/tempo 82
-//sync
-12M 24 12 24 8 8 12 24 12 24 8 8
-
->8M . _. .  >8M . _. _.
->8M . _. .  >8M . _. _.
->8M . _. .  >8M . _. _.
->8M . _. .  >8M . _. _.
-
+//>4M . _. .
+//>4M . _. .
+//>4M . _. .  >. . . .
+//>4M . _. .
+//>4M . _. .
+//>4M . _. .  >. . . .
 
 
 
@@ -607,51 +446,27 @@ _8M . _8M . _8M . _8M .
 
 
 
+
+
 // new stuff
 // transition to 12ths
-^4M . .
-^4M . .
-^4M . .
-^4M . .
-
-// Sync with change of tempo 8 == 12?
-// new tempo
-/tempo 76
-^8M . ^. . ^8M ^. ^. .
-
-_4M . _4M .
-_4M . _4M .
-_4M . _4M .
-_4M . _4M .
-
-// sync
-^8M . ^. . ^8M ^. ^. .
-
-_4M . _4M .
-_4M . _4M .
-_4M . _4M .
-_4M . _4M .
+//time 3/4
+//^4M . .
+//^4M . .
+//^4M . .
+//^4M . .
 
 
-/tempo 110
->4M >. >8M . >. .
-
-
+/time 4/4
 // ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
 // -----------
+^4M ^. ^16M . 8M ^16M . 8M   // sync
 ^4M . >. .
 ^4M . >. .
 ^4M . >. .   >. . >. .
 ^4M . >. .
 ^4M . >. .
 ^4M . >. .   >. . >. .
-
-
-
-
-
-
-
 
 
 
@@ -664,27 +479,12 @@ _4M _. _8M . _4M
 
 
 
-// ----------- Set 3 Exercise 3 is (1) doubles part 1
-// -----------
-//>4M . . .
-//>4M . . .
-//>4M . . .
-//>4M . . .
 
 
-// ----------- Set 3 Exercise 4 is (2) doubles part 2
-// -----------
-//>4M . . .
-//>4M . . .
-//>4M . . .
-//>4M . . .
 
-// ----------- Set 3 Exercise 5 is (3) doubles part 3
-// -----------
-//>4M . . .
-//>4M . . .
-//>4M . . .
-//>4M . . .
+
+
+
 
 
 
@@ -695,15 +495,76 @@ _4M _. _8M . _4M
 >4M . . .  _. . . .  _. . . .  _. . . .
 >4M . . .  _. . . .  _. . . .  _. . . .
 
->4M . . .  _. . . .  _. . . .  _. . . .
->4M . . .  _. . . .  _. . . .  _. . . .
->4M . . .  _. . . .  _. . . .  _. . . .
->4M . . .  _. . . .  _. . . .  _. . . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Forest Lodge
 
 >4M . . .  _. . . .  _. . . .  _. . . .
 >4M . . .  _. . . .  _. . . .  _. . . .
 >4M . . .  _. . . .  _. . . .  _. . . .
 >4M . . .  _. . . .  _. . . .  _. . . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Primrose Girl
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+
+
+
+
+
+
+
 
 
 
@@ -727,11 +588,21 @@ _4M _. _8M . _4M
 // Maybe some work out abbreviated "3 Camps" Back to previous slow tempo for 12/8 time.
 
 
+// HEY SET 2 SHOULD BE SET 3.  CHANGE ORDER IF CAN.  Rolls should be 2nd.
 
 
-// tempo change
-//tempo 110
-//>4M . >8M . >8M .
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -741,154 +612,6 @@ _4M _. _8M . _4M
 //////////////// SNARE SET 1 ////////////////////////
 /track snare
 /channel 5
-
-
-
-// Need a whole fricken section for the 12-24 stuff
-// What did I learn from last night's sectional?
-// When we don't use a metronome we get worse.
-// Things are pretty inaccurate, and therefore slower tempos are still needed
-// Pretty bad technique
-// Not at all ready for flams with 12-24, so first set without flams, next set play same but with flams?
-// The name ABAA BABB doesn't apply well because hand orders are not like RRRRRRR LLLLLLL  RRRRRRRR  RRRRRRRRRR
-
-//time 4/4
-//tempo ??
-4T . . .
-
-// Experimental here.  Will create ownset for this 12 24 stuff
->24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
->24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
->24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
->12T 24T  >12t 24t  >12T 24T  >12t 24t    >12T 24T  >12t 24t  >12T 24T  >12t 24t
-
->4T
-/marker D
-4r
-4r
-/marker U
-4r
-
->24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
->24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
->24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
->12 24   12 >24   >12 24   12 >24  >12 24   12 >24   >12 24   12 >24
-
->4T
-/marker D
-4r
-4r
-/marker U
-4r
-
->24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
->24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
->24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
->12 24   12 >24   12 24   >8    >12 24   12 >24   12 24   >8
-
-
->24T t t T T >t T T t  >8T    >12T 24  12 >24  12 24 >8T
->24T t t T T >t T T t  >24T t t T T >t T T t   >8T >.
->12T 24t  12 >24  12 24  >12 24  12 >24  12 24  >8 >.
-
-
-
-
->8T 12t 24T  >8t 12T 24t    >12T 24t 12T >24t 12T 24t >8
-8 8 12 24 12 24 12 24  8   12 24 8
-
-
-
->12T 24t 12T >24t 12T 24t >8
-
-
-
->24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
->24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . >T
->24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . .
-
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
->24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . >t
->24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . .
-
-
-
->24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
->24t . . >24T . . >24t . . >24T . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
->24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
->12t >24T   >12t >24T   >12t >24T   >12t >24t      >12T >24t   >12T >24t   >12T >24t   12T 24T
-
->24t . . >24t . . >24t . . >24t . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
->24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
->24T . . >24t . . >24T . . >24t . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
->12T >24t   >12T >24t   >12T >24t   >12T >24T      >12t >24T   >12t >24T   >12t >24T   >12t 24t
-
-
-
-
->24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
->24t . . >24T . . >24t . . >24T . .    >12t 24T   12t 24T   12t 24T   12t 24t
->24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
-12t 24T   12t 24T   12t 24T   12t 24t  >12T 24t   12T 24t   12T 24t   12T 24T
-
->24t . . >24t . . >24t . . >24t . .    >12t 24T   12t 24T   12t 24T   12t 24t
->24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
->24T . . >24t . . >24T . . >24t . .    >12t 24T   12t 24T   12t 24T   12t 24t
-12T 24t   12T 24t   12T 24t   12T 24T  >12t 24T   12t 24T   12t 24T   12t 24t
-
-
-
-
->24T . .  >. . .   >12T 24t 12T 24T     >24t . . >. . .       >12t 24T 12t 24t
->24T . .  >. . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
->24t . .  >. . .   >12t 24T 12t 24t     >24T . .  >. . .      >12T 24t 12T 24T
->24t . .  >. . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
-
-
-
-
-
-
-
-
->24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . .
-
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
->24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . >t
->24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . .
-
-
-
-
-
-
-
-
->24T . . >24t . . >24T . . >24t . .    12T 24T  12t 24t  12T 24T  12t 24t
-
-
-^12T 24t   12T 24t   ^12T 24t   12T 24T      ^12t 24T   12t 24T   ^12t 24T   12t 24T
-^12T 24t   12T 24T   ^12t 24T   12t 24t      ^12T ^24T   ^12t ^24t   ^12T 24t   12T 24T
-^12t 24T   12t 24t   ^12t 24T   12t 24t      ^12T 24t   12T 24t   ^12T 24t   12T 24t
-^12t 24T   12t 24t   ^12T 24t   12T 24T      ^12t ^24t   ^12T ^24T   ^12t 24T   12t 24t
-
-//sync
-4T 4r . .
-
-^12T 24t   12T 24t   ^12t 24t   24T . .     ^12t 24T   12t 24T   ^12t 24T   24t . .
-12T ^24t   . . .    12t ^24T  . . .    12T  ^24t  . . .  ^24T . .  ^24t . .
-^12t 24T   12t 24T   ^12T 24T   24t . .     ^12T 24t   12T 24t   ^12T 24t   24T . .
-12t ^24T   . . .    12T ^24t  . . .    12t  ^24T  . . .  ^24t . .  ^24T . .
-
-
-
-
-
-
-
 
 
 // Switching between 12/8 and 4/4 but keeping 8th notes constant
@@ -957,6 +680,11 @@ _4M _. _8M . _4M
 12T T T   T T T   T T T  T T T
 12t t t   t t t   T T T  T T T
 12t t t   t t t   t t t  t t t
+
+
+
+
+
 
 
 // ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
@@ -1182,7 +910,7 @@ _4M _. _8M . _4M
 // ----------- Set 2 Exercise 5 is long Tap Rolls
 // -----------
 /marker TapRls
-4t
+4r
 /marker D
 4r
 4r
@@ -1248,7 +976,7 @@ _4M _. _8M . _4M
 >24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
 >24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
 >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
-
+/f
 
 // ----------- Set 2 Exercise 8 is 5 stroke Tap Rolls with Dynamics
 // -----------
@@ -1289,38 +1017,23 @@ _4M _. _8M . _4M
 // And need to work on that 12 24 12 24 idiom.
 // Maybe the 12/24 12 24 idiom should be after doing doubles.  These two things should not be in the same set.
 
->4T
-/marker D
-4r
-4r
-/marker U
-4r
-
-
-
-
-
-
-
 //tempo 110
 // ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
 // -----------
 // sync
-4T
-/marker D
-4r
-4r
-/marker U
-4r
-8T 16T   8T 16T   8T 16T   8T 16T   8T T
-8t 16t   8t 16t   8t 16t   8t 16t   8t t
-8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T
-8t 16t   8t 16t   8t 16t   8t 16t   8t t
-8T 16T   8T 16T   8T 16T   8T 16T   8T T
-8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t
-
-// tempo change so 8 16 == 12 24,  so this slows the tempo.  0.75 * prev tempo?  110*0.75=82.50
-//
+//4T
+///marker D
+//4r
+//4r
+///marker U
+//4r
+///ff
+//8T 16T   8T 16T   8T 16T   8T 16T   8T T
+//8t 16t   8t 16t   8t 16t   8t 16t   8t t
+//8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T 16T   8T
+//8t 16t   8t 16t   8t 16t   8t 16t   8t t
+//8T 16T   8T 16T   8T 16T   8T 16T   8T T
+//8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t 16t   8t
 
 
 // ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
@@ -1344,55 +1057,8 @@ _4M _. _8M . _4M
 // AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
 
 
-
-
-
-
-
-
-
-// sync
-4T
-/marker D
-4r
-4r
-/marker U
-4r
-12T 24T 12T 24T  8T T   12t 24t 12t 24t  8t t
-12T 24T 12T 24T  12T 24T 12T 24T  12T 24T 12T 24T  8T T
-12t 24t 12t 24t  8t t   12T 24T 12T 24T  8T T
-12t 24t 12t 24t  12t 24t 12t 24t  12t 24t 12t 24t  8t t
-
-
-4T
-/marker D
-4r
-4r
-/marker U
-4r
-12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t  12T 24T 12t 24t
-  8T T   12t 24t 12t 24t  8t t
-12T 24T 12T 24T  12T 24T 12T 24T  12T 24T 12T 24T  8T T
-12t 24t 12t 24t  8t t   12T 24T 12T 24T  8T T
-12t 24t 12t 24t  12t 24t 12t 24t  12t 24t 12t 24t  8t t
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Expand here.  More stuff before hit Reel Set.
-// maybe
+// maybe.  Not sure how valuable this is
 // 16th note groups of 3 with doubles
 ^16T t t   ^16T t t   ^16T t t   ^16T t t   8T T
 ^16t T T   ^16t T T   ^16t T T   ^16t T T   8t t
@@ -1402,45 +1068,26 @@ _4M _. _8M . _4M
 ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   ^16t T T   8t
 
 
-// Not sure I like this transition!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+// Not sure I like this transition!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // new stuff
 // Sync with change of tempo 8 == 12?
 // 3/4 time
-16T ^8T   16T ^8T  16T ^8T  16T ^8T
-16t ^8t   16t ^8t  16t ^8t  16t ^8t
-^8T 16t   ^8T 16t  ^8T 16t  ^8T 16t
-^8T 16t   ^8T 16t  ^8T 16t  ^8T 16t
+//16T ^8T   16T ^8T  16T ^8T  16T ^8T
+//16t ^8t   16t ^8t  16t ^8t  16t ^8t
+//^8T 16t   ^8T 16t  ^8T 16t  ^8T 16t
+//^8T 16t   ^8T 16t  ^8T 16t  ^8T 16t
 
 
-
-
-// new tempo
-//tempo 76
-4T 4r . .
-
-
-
-//temp 110
-4T 4r . .
-
-
-
-
+//time 4/4
 // ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
 // -----------
+4r . . . // Sync
 16T T 8T   16T T 8T   16T T 8T   8T T
 16t t 8t   16t t 8t   16t t 8t   8t t
 16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   8T T
 16t t 8t   16t t 8t   16t t 8t   8t t
 16T T 8T   16T T 8T   16T T 8T   8T T
 16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
-
-
-
-
-
-
-
 
 
 
@@ -1455,45 +1102,18 @@ _4M _. _8M . _4M
 4r // up or out
 
 /ff
-// ----------- Set 3 Exercise 3 is (1) doubles part 1
-// -----------
-//8T . ^16T >16T 8t . ^16t >16t 8T .
-//8T . ^16T >16T 8t . ^16t >16t 8T .
-//8T . ^16T >16T 8t . ^16t >16t 8T .
-//8T . ^16T >16T 8t . ^16t >16t 8T .
-
-
-// ----------- Set 3 Exercise 4 is (2) doubles part 2
-// -----------
-//8T . ^16T >16T t t 8t ^16t >16t T . 8t
-//8T . ^16T >16T t t 8t ^16t >16t T . 8t
-//8T . ^16T >16T t t 8t ^16t >16t T . 8t
-//8T . ^16T >16T t t 8t ^16t >16t T . 8t
-
-// ----------- Set 3 Exercise 5 is (3) doubles part 3
-// -----------
-//16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
-//16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
-//16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
-//16T T 8t ^16T >16T t t 8t ^16t >16t T . 8t
-
-
-
-
-
-
-/ff
 
 // The following is from "ReelSetDrums.snl", but flams removed
 // This is probably a bad idea to stick a tune setting into a drum exercise
 // I don't think it should be in here, but maybe some of the idioms would fit
-//
+// All these exercises, 12-24 especially, should help with Reel Set.
+// So, I don't think this goes here.
 // Malt on the Optics
 /marker MOL1
-8T . >T t . >t T .
-8T . >T t . >t T .
-8T . >T t . >t T .
-8T . >T t . >t T .
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
+8T . ^T t . ^t T .
 
 /marker MOL2
 8T . >16T T 8t . >16t t 8T .
@@ -1550,7 +1170,6 @@ _4M _. _8M . _4M
 
 
 
-
 // Primrose Girl
 /marker PGL1
 4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
@@ -1579,21 +1198,6 @@ _4M _. _8M . _4M
 8T  ^24t T T 8t   ^24T t t 8T   ^24t T T 8t  >8T
 4r 4r  ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
 12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  12T 24t  4T
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1661,6 +1265,29 @@ _12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _8n
 /ff
 24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ----------- Set 1 Exercise 4 is unison 12th notes for all
 // -----------
 
@@ -1669,6 +1296,9 @@ _12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _8n
 12N N N   N N N   N N N   N N N
 12n n n   n n n   N N N   N N N
 12n n n   n n n   n n n   n n n
+
+
+
 
 
 // ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
@@ -1885,7 +1515,6 @@ _4N
 8N . . .  _24N . .  . . .  . . .  . . .
 8N . . .  _24N . .  . . .  . . .  . . .
 _24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-_4N 4r . .
 
 
 // ----------- Set 2 Exercise 6 is long Tap Rolls with Dynamics
@@ -1902,7 +1531,7 @@ _4N 4r . .
 // ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
 // -----------
 //marker TapRls2
-4N /ff /mp
+4N
 4r
 4r
 4r
@@ -1933,7 +1562,7 @@ _4N
 4r
 .
 .
-/mp
+/mf
 8N . . .  . . . .
 8N . . .  . . . .
 8N . . .  . . . .
@@ -1957,7 +1586,7 @@ _4N
 //8N /mp . . .  /cresc . . . .
 //8N . . . . . . .
 
-4N /ff /mf 4r . .
+//4N /ff /mf 4r . .
 
 
 
@@ -1986,59 +1615,23 @@ _4N
 // TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
 // feels faster.  Start this way because the previous set ends on that tempo.
 
-//time 4/4
-//tempo 36
-4T . . .
-
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-
-
-
-
 
 
 //tempo 110
-// ----------- Set 3 Exercise 1 is MODIFICATION OF Fred Sanford's double stroke
+// ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
 // -----------
 // Sync:
-4N
-4r
-.
-.
-/mf
-4N N N  8N N
-4n n n  8n n
-4N N N N N N N 8N N
-4n n n  8n n
-4N N N  8N N
-4n n n n n n n 8n n
-
-
-
-//
-// sync tempo change
-4n
-4r
-4r
-4r
-
-4N 8N N  4n 8n n
-8N N N N N N N N
-4n 8n n  4N 8N N
-8n n n n n n n n
+//4N
+//4r
+//.
+//.
+///mf
+//4N N N  8N N
+//4n n n  8n n
+//4N N N N N N N 8N N
+//4n n n  8n n
+//4N N N  8N N
+//4n n n n n n n 8n n
 
 
 
@@ -2049,6 +1642,9 @@ _4N
 4r
 .
 .
+
+
+
 /mf
 4N N N  8N N
 4n n n  8n n
@@ -2056,7 +1652,6 @@ _4N
 4n n n  8n n
 4N N N  8N N
 4n n n n n n n 8n n
-
 
 // OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
 // AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
@@ -2072,46 +1667,20 @@ _4N
 4N N N  8N N
 4n n n n n n n 8n n
 
-
 // HEY FINISH THE TENOR AND BASS PARTS
 
 // new stuff
 // sync 8 == 12
 // time 3/4
-4r . .
-4r . .
-4r . .
-4r . .
+//4r . .
+//4r . .
+//4r . .
+//4r . .
 
-
-
-//tempo 76
-// sync
-4r . . .
-
-4r . . .
-4r . . .
-4r . . .
-4r . . .
-
-// sync
-4r . . .
-
-4r . . .
-4r . . .
-4r . . .
-4r . . .
-
-
-//temp 110
-// sync
-
-
-
-
+//time 4/4
 // ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
 // -----------
-4r . . .
+4r . . .   // sync
 4N N N  8N N
 4n n n  8n n
 4N N N N N N N 8N N
@@ -2126,38 +1695,16 @@ _4N
 //4N 4r . .
 //f
 
-
-
-
-// ----------- Set 3 Exercise 3 is (1) doubles part 1
-// -----------
-//4N . 8N 8n 4r
-//4N . 8N 8n 4r
-//4N . 8N 8n 4r
-//4N . 8N . . .
-
-
-// ----------- Set 3 Exercise 4 is (2) doubles part 2
-// -----------
-//8N . 4N 8n . 4n
-//8N . 4N 8n . 4n
-//8N . 4N 8n . 4n
-//4N . 8N . . .
-
-// ----------- Set 3 Exercise 5 is (3) doubles part 3
-// -----------
-//8N . 4N 8n . 4n
-//8N . 4N 8n . 4n
-//8N . 4N 8n . 4n
-//4N . 8N . . .
-
-
-
-
 4N
 4r
 .
 .
+
+
+
+
+
+
 
 // Malt on the Optics
 // Marker L1
@@ -2165,20 +1712,14 @@ _4N
 4N . 8N 8n 4r
 4N . 8N 8n 4r
 4N . 8N . . .
-//4N . 8N 8n 4n
-//4N . 8N 8n 4n
-//4N . 8N 8n 4n
-//4N . 8N . . .
+
 
 // Marker L2
 4N . 8N 8n 4r // experiment
 4N . 8N 8n 4r
 4N . 8N 8n 4r
 4N . 8N . . .
-//4N . 8N 8n 4n
-//4N . 8N 8n 4n
-//4N . 8N 8n 4n
-//4N . 8N . . .
+
 
 // Marker L3
 8N . 4N 8n . 4n
@@ -2191,6 +1732,10 @@ _4N
 8N . 4N 8n . 4n
 8N . 4N 8n . 4n
 4N . 8N . . .
+
+
+
+
 
 
 // Forest Lodge
@@ -2220,6 +1765,10 @@ _4N
 
 
 
+
+
+
+
 // Primrose Girl
 // Marker L1
 4r . 8N . 4N
@@ -2235,30 +1784,19 @@ _4N
 4N . 8N . 4N
 
 // Marker L3
-///f
-//4N . . .
-///mp /cresc
-//8N . . . 4N . /f
-//4N . . .
-///mp /cresc
-//8N . . . 4N . /f
+/f
+4N . . .
+/mp /cresc
+8N . . . 4N . /f
+4N . . .
+/mp /cresc
+8N . . . 4N . /f
 
 // Marker L4
 8N . . . . . . .
 8N . . . . . . .
 /ff 4r . 8N . 4N
 8N . . . . . 4N
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2326,6 +1864,8 @@ _4N
 12B . .   . . .    . . .    . . .
 12B . .   . . .    . . .    . . .
 12B . .   . . .    . . .    . . .
+
+
 
 
 // ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
@@ -2534,7 +2074,7 @@ _4N
 // ----------- Set 2 Exercise 5 is long Tap Rolls
 // -----------
 //Sync
-4B
+4r
 4r
 .
 .
@@ -2559,7 +2099,7 @@ _4N
 
 // ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
 // -----------
-4B /ff /mp
+4B
 4r . .
 
 /mf
@@ -2645,62 +2185,22 @@ _4N
 // feels faster.  Start this way because the previous set ends on that tempo.
 
 
-//time 4/4
-//tempo 36
-4T . . .
-
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-1r . . .
-
-
-
-
-
-
-
-
 
 //tempo 110
 // ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
 // -----------
 // Sync:
-4B
-4r
-.
-.
-/f
-2B 4B 8r 8B
-2b 4b 8r 8b
-2B B B 4B 8r 8B
-2b 4b 8r 8b
-2B 4B 8r 8B
-2b b b 4b 8r 8b
-
-
-
-//
-// sync tempo change
-4n
-4r
-4r
-4r
-
-4B 8B B 4b 8b b
-8B B B B B B B B
-4b 8b b 4B 8B B
-8b b b b b b b b
+//4B
+//4r
+//.
+//.
+///f
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B B B 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b b b 4b 8r 8b
 
 
 
@@ -2711,6 +2211,8 @@ _4N
 4r
 .
 .
+
+
 /f
 2B 4B 8r 8B
 2b 4b 8r 8b
@@ -2736,50 +2238,25 @@ _4N
 
 
 
-
 // new stuff
 // sync 8 == 12
 // time 3/4
-4r . .
-4r . .
-4r . .
-4r . .
+//4r . .
+//4r . .
+//4r . .
+//4r . .
 
-//tempo 76
-// sync
-4r . . .
-
-4r . . .
-4r . . .
-4r . . .
-4r . . .
-
-// sync
-4r . . .
-
-4r . . .
-4r . . .
-4r . . .
-4r . . .
-
-
-//temp 110
-// sync
-4r . . .
-
-
-
-
-
-
+//time 4/4
 // ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
 // -----------
+4r . . .  // sync
 2B 4B 8r 8B
 2b 4b 8r 8b
 2B B B 4B 8r 8B
 2b 4b 8r 8b
 2B 4B 8r 8B
 2b b b 4b 8r 8b
+
 
 
 // ----------- From The Reel Set
@@ -2791,27 +2268,7 @@ _4N
 
 
 
-// ----------- Set 3 Exercise 3 is (1) doubles part 1
-// -----------
-//4B 4r 8B . 4r   // experiment
-//4B 4r 8B . 4r
-//4B 4r 8B . 4r
-//4B 4r 8B . 4B
 
-
-// ----------- Set 3 Exercise 4 is (2) doubles part 2
-// -----------
-//4B 4r 8B . 4r   // experiment
-//4B 4r 8B . 4r
-//4B 4r 8B . 4r
-//4B 4r 8B . 4B
-
-// ----------- Set 3 Exercise 5 is (3) doubles part 3
-// -----------
-//4B 4r 8B . 4r   // experiment
-//4B 4r 8B . 4r
-//4B 4r 8B . 4r
-//4B 4r 8B . 4B
 
 
 
@@ -2824,40 +2281,31 @@ _4N
 4B 4r 8B . 4r
 4B 4r 8B . 4r
 4B 4r 8B . 4B
-//4B 4r 4B 4r
-//4B 4r 4B 4r
-//4B 4r 4B 4r
-//4B 4r 4B 4b
+
 
 // L2
 4B 4r 8B . 4r   // experiment
 4B 4r 8B . 4r
 4B 4r 8B . 4r
 4B 4r 8B . 4B
-//4B 4r 4B 4r
-//4B 4r 4B 4r
-//4B 4r 4B 4r
-//4B 4r 4B 4b
+
 
 // L3
 4B 4r 8B . 4r   // experiment
 4B 4r 8B . 4r
 4B 4r 8B . 4r
 4B 4r 8B . 4B
-//4B 4r 4B 4r
-//4B 4r 4B 4r
-//4B 4r 4B 4r
-//4B 4r 4B 4b
+
 
 // L4
 4B 4r 8B . 4r   // experiment
 4B 4r 8B . 4r
 4B 4r 8B . 4r
 4B 4r 8B . 4B
-//4B 4r 4B 4r
-//4B 4r 4B 4r
-//4B 4r 4B 4r
-//4B 4r 4B 4b
+
+
+
+
 
 // Forest Lodge
 // L1
@@ -2883,6 +2331,12 @@ _4N
 4B 4r 4B 4b
 4B 4r 4B 4r
 4B 4r 4B .
+
+
+
+
+
+
 
 // Primrose Girl
 // L1
@@ -2915,29 +2369,5 @@ _4N
 
 
 
-
-
-
-
-
-
-
-
-
-// more to come, I guess.  Maybe add some stuff for timing attacks
-// Maybe some work out abbreviated "3 Camps" Back to previous slow tempo for 12/8 time.
-
-//////  SET 2  ////////
-//tempo 72
-1r
-/ff
-// ----------- Set 2 Exercise 0 is single pulse buzzes
-// -----------
-4B B B B
-4b b b b
-4B B B B
-4b b b b
-4B B B B
-4b b b b
 
 

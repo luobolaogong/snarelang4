@@ -1,23 +1,33 @@
 // Need a whole fricken section for the 12-24 stuff
+//
+// Consider making this the first set.  It is a warmup.
+// And rolls might be the 2nd set.
+// Then flams as the 3rd set.
+// Then combinations as the 4th.
+//
+
 // What did I learn from last night's sectional?
 // When we don't use a metronome we get worse.
 // Things are pretty inaccurate, and therefore slower tempos are still needed
 // Pretty bad technique
 // Not at all ready for flams with 12-24, so first set without flams, next set play same but with flams?
-// The name ABAA BABB doesn't apply well because hand orders are not like RRRRRRR LLLLLLL  RRRRRRRR  RRRRRRRRRR
 
 /track snare
 /channel 5
 
 /time 4/4
-/tempo 80
+//tempo 80
+/tempo 84
 // Sync
 4T . 12T . . 4T
 
 /time 2/4
 /ff
-// Single hand exercises with 12-24, mostly just for warmups
-// This is pretty boring slow like this
+
+
+// Single hand exercises with 12-24, mostly just for warmups.
+// Slow but probably important.  Snare and Tenor unison
+// Important to start with something like this.
 12T T T T T T   6T 12T 6T 12T
 12t t t t t t   6t 12t 6t 12t
 12T T T T T T   6T 12T 6T 12T
@@ -29,13 +39,18 @@
 6t 12t 6t 12t 6t 12t 6t 12t
 
 
-// make some kind of mathematical tempo transition
-/tempo 60
-8T . 8T . 24T . . . . .  8t .
+//////  stuff from bottom.
+//////  stuff from bottom.
+//////  stuff from bottom.
 
+/tempo 60
+8T . 16T . 8T
+
+// 1 bar phrases is okay
+// But don't start with paradiddles.
 
 /f
-// doubles on the 12-24
+// doubles on the 12-24.  Hopefully learned from playing it slowly above
 24T . . . . .   12T 24T 12t 24t
 24T . . . . .   12T 24T 12t 24t
 24T . . . . .   12T 24T 12t 24t
@@ -48,372 +63,120 @@
 12T 24t 12T 24t 12T 24t 12T 24t
 
 
-
-
-// Paradiddles on the 12-24
-^24T . . . . .   ^12T 24t 12T 24T
-^24t . . . . .   ^12t 24T 12t 24t
+// Paradiddles on the 12-24.  This is okay
+^24T . . . . .    ^12T 24t 12T 24T
+^24T . . . . .   ^12t 24T 12t 24t
 ^24T . . . . .   ^12T 24t 12T 24T
 ^12t 24T 12t 24t ^12T 24t 12T 24T
 // Reverse hand order of above
-^24t . . . . .   ^12t 24T 12t 24t
+^24T . . . . .   ^12t 24T 12t 24t
 ^24T . . . . .   ^12T 24t 12T 24T
-^24t . . . . .   ^12t 24T 12t 24t
+^24T . . . . .   ^12t 24T 12t 24t
 ^12T 24t 12T 24T ^12t 24T 12t 24t
 
+// Same as before, but move the accent on the paradiddle to be 2nd
+^24T . . 24t . .   12T ^24t 12T 24T
+^24t . . 24T . .   12t ^24T 12t 24t
+^24T . . 24t . .   12T ^24t 12T 24T
+12t ^24T 12t 24t    12T ^24t 12T 24T
+// Reverse hand order of above
+^24t . . 24T . .   12t ^24T 12t 24t
+^24T . . 24t . .   12T ^24t 12T 24T
+^24t . . 24T . .   12t ^24T 12t 24t
+12T ^24t 12T 24T    12t ^24T 12t 24t
 
 
-// Paradiddle Upbeat Accent (on the 2nd) of 12-24
-// A little hard for new drummers
-_24T . ^. 24t . .  12T ^24t 12T 24T
-_24t . ^. 24T . .  12t ^24T 12t 24t
-_24T . ^. 24t . .  12T ^24t 12T 24T
-12t ^24T 12t 24t   12T ^24t 12T 24T
-// reverse hand order of above, a little hard
-_24t . ^. 24T . .  12t ^24T 12t 24t
-_24T . ^. 24t . .  12T ^24t 12T 24T
-_24t . ^. 24T . .  12t ^24T 12t 24t
-12T ^24t 12T 24T   12t ^24T 12t 24t
 
 
 
 
+/f
+// Do we want to be 1 or 2 bar phrases?  This is 1.
+// This is paradiddle 12-24.
+// This is a 1 bar phrase
+>24T . .  . . .   >12T 24t 12T 24T     >24t . . . . .       >12t 24T 12t 24t
+>24T . .  . . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
+>24t . .  . . .   >12t 24T 12t 24t     >24T . .  . . .      >12T 24t 12T 24T
+>24t . .  . . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
 
+//>24T . .  >. . .   >12T 24t 12T 24T     >24t . . >. . .       >12t 24T 12t 24t
+//>24T . .  >. . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
+//>24t . .  >. . .   >12t 24T 12t 24t     >24T . .  >. . .      >12T 24t 12T 24T
+//>24t . .  >. . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
 
+// Paradiddles on the 12-24.
+//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
+//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
+//^24T . . . . .    ^24T . . . . .    ^12T 24t 12T 24T    ^12t 24T 12t 24t
+//^12T 24t 12T 24T ^12t 24T 12t 24t ^12T 24t 12T 24T ^12t 24T 12t 24t
 
-// make some kind of mathematical tempo transition
-/time 4/4
-/tempo 80
-4T . 8T . 8T .
+// Same as before, but move the accent on the paradiddle to be 2nd
+// This is a 1 bar phrase
+^24T . ^. . . .    12T ^24t 12T 24T   ^24t . ^. . . .    12t ^24T 12t 24t
+^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t  12T ^24t 12T 24T
+^24t . ^. . . .    12t ^24T 12t 24t   ^24T . ^. . . .    12T ^24t 12T 24T
+^24t . ^. . . .    12t ^24T 12t 24t   12T ^24t 12T 24T   12t ^24T 12t 24t
 
-// two bar phrases for the longer accent patterns
+// Same as before, but move the accent on the paradiddle to be 2nd
+//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
+//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
+//^24T . ^. . . .    ^24T . ^. . . .    12T ^24t 12T 24T    12t ^24T 12t 24t
+//12T ^24t 12T 24T  12t ^24T 12t 24t  12T ^24t 12T 24T    12t ^24T 12t 24t
 
-^24T . . . . ^.  . . .  ^8t      ^12T 24 12 ^24 12 24 ^8T
-^24T . . . . ^.  . . .  ^8t      ^12T 24 12 ^24 12 24 ^8T
-^24T . . . . ^.  . . .  ^8t      ^12T 24 12 ^24 12 24 ^8T
-^12T 24 12 ^24 12 24 ^8T         ^12T 24 12 ^24 12 24 ^8T
 
 
 
-// pickups on the 6th note of 6, similar to above
-8t 12r ^24t  24T . . 8t     8r 12r ^24T  24t . . 8T
-12r ^24t 24T . .      12t ^24T 24t . .  12T ^24T 24t . .  12t ^24T 24t . .
-8t 12r ^24t  24T . . 8t  8r 12r ^24T  24t . . 8T
-12r ^24t 24T . .      12t ^24T 24t . .  12T ^24T 24t . .  12t ^24T 24t . .
 
-// 12-24 pickup timing
-4T 8r 12t 24T   4t 8r 12T 24t
-8T 12 24  8 12 24  8 12 24  8 12 24
-4T 8r 12t 24T   4t 8r 12T 24t
-8T 12 24  8 12 24  8 12 24  8 12 24
 
 
 
+/f
+// doubles on the 12-24.  Hopefully learned from playing it slowly above
+// Two bar phrase
+// Okay.  But it's a bit long
+24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
+24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
+24T . . . . .   24T . . . . .   12T 24T 12t 24t   12T 24T 12t 24t
+12T 24T 12t 24t 12T 24T 12t 24t 12T 24T 12t 24t 12T 24T 12t 24t
 
-// Another one from massed bands  --- does this fit here?  Redundant a little bit?
-//^8T 12T 24T  ^8t 12T 24t       12r ^24T 12t 24t  8T .
-//^8T 12T 24T  ^8t 12T 24t       12r ^24T 12t 24t  8T .
-//^8T 12T 24T  ^8t 12T 24t       12r ^24T 12t 24t  8T .
-//12r ^24T 12t 24t  8T .   12r ^24T 12t 24t  8T .
+// singles on the 12-24
+// Okay
+24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
+24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
+24T . . . . .   24T . . . . .   12T 24t 12T 24t   12T 24t 12T 24t
+12T 24t 12T 24t 12T 24t 12T 24t 12T 24t 12T 24t   12T 24t 12T 24t
 
 
 
-4T . 8T . 8T 24T . .
-// 24ths in preparation of filling in rolls.  So hey, this should be in roll section?
-//8T 24T . . 8t  24T . .  8t >8t   24T . . 8t
-//8t 12r 24t  24T . . 8t  8r 12r 24t  24T . . 8t
 
 
+// Accent Second note of the 12-24, but with doubles.  Maybe a bit hard.
+// Requies some control.  If can't do it, then forget about accents.
+// Probably good.  Maybe okay.  After paradiddles, prob okay.
+// Not 100% sure it's useful
+^24T . . ^24t . . ^24T . . ^24t . .    12T ^24t   12T ^24T   12t ^24t   12T ^24T
+^24t . . ^24T . . ^24t . . ^24T . .    12t ^24T   12t ^24t   12t ^24T   12t ^24t
+^24T . . ^24t . . ^24T . . ^24t . .    12T ^24t   12T ^24T   12t ^24t   12T ^24T
+12t ^24T   12t ^24t   12t ^24T   12t ^24t   12t ^24T   12t ^24t   12t ^24T   12t ^24t
 
-//8T 24T . . 8t  24T . .  8t >8t   24T . . 8t
-//8t 12r 24t  24T . . 8t  8r 24T . .  8t   24T . .
 
 
-//8T 24T . . 8t  24T . .   . . .  8T  >8t 8t
 
 
 
 
-//time 3/4
-//8T 24T . .  8t  24T . .   . . .  8T
+//
+// 2-bar repeat 12-24 stuff, with alternating, but with a paradiddle at the end to reverse hand order
+// But first one should be doubles
+//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
+//^24t . . ^24T . . ^24t . . ^24T . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
+//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
+//^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t ^24t      ^12T ^24t   ^12T ^24t   ^12T ^24t   12T 24T
 
-
-
-// stopped reviewing here
-
-/tempo 80
-4T . 8T . 24T . . 8t
-
-
-
-// Come in on the last 24th
->8T     12r >24t 24T . . . . .    >12T 24 12 >24 12 24 >12T 24
->8T     12r >24t 24T . . . . .    >12T 24 12 >24 12 24 >12T 24
->8T     12r >24t 24T . . . . .    >12T 24 12 >24 12 24 >12T 24
->12T 24 12 >24 12 24 >12T 24     >12T 24 12 >24 12 24 >12T 24
-
-
-
-// make some kind of mathematical tempo transition
-/tempo 60
-4T . 8T . 24T . . 8t
-
-// just some ideas for sound for working on that roll thing, maybe go faster???
-// How do we structure this?  Try to do ABAA BABB  ??
-// And is 3/4 confusing?
-/time 3/4
-24T . .  12t _24T _12T 24t      24T . .  12t _24T _12T 24t
-24T . .  12t 48T .  12T 24t      24T . .  12t 48T .  12T 24t
-24T . .  12t _24T _12T 24t      24T . .  12t _24T _12T 24t
-24T . .  12t 48T .  12T 24t      24T . .  12t 48T .  12T 24t
-
-
-// No, no rolls for this set
-//24T . .  12t _24T _12T 24t      24T . .  12t _24T _12T 24t
-//24T . .  12t 48Z .  12T 24t      24T . .  12t 48Z .  12T 24t
-//24T . .  12t _24T _12T 24t      24T . .  12t _24T _12T 24t
-//24T . .  12t 48Z .  12T 24t      24T . .  12t 48Z .  12T 24t
-
-//24Z . 24T  12t 48Z .  12T 24t      24Z . 24T  12t 48Z .  12T 24t
-//24Z . 24T  12t 48Z .  12T 24t      24Z . 24T  12t 48Z .  12T 24t
-
-
-//>12T >24T 12t >24T >12T 24t    >12T >24T 12t >24T >12T 24t     _8T .
-//>24T >. >.  12t 24t >12T 24t   >24T >. >.  12t 24t >12T 24t           _8T .
-//>24T >. >.  12t 48T . >12T 24t   >24T >. >.  >12t 48T . >12T 24t        8T .
-//>24Z >. >T  >12t 48Z . >12T 24t   >24Z >. >T  >12t 48Z . >12T 24t        8T .
-
-
-// repeat, but faster?
-///tempo 90
-//4T . 8T . 24T . . 8t
-
-//>12T >24T 12t >24T >12T 24t    >12T >24T 12t >24T >12T 24t     _8T .
-//>24T >. >.  12t 24t >12T 24t   >24T >. >.  12t 24t >12T 24t           _8T .
-//>24T >. >.  12t 48T . >12T 24t   >24T >. >.  >12t 48T . >12T 24t        8T .
-//>24Z >. >T  >12t 48Z . >12T 24t   >24Z >. >T  >12t 48Z . >12T 24t        8T .
-
-
-/tempo 80
-4T . 8T . . .
-
-
-/time 3/4
-_8t _24T . . . . . _8  12t >24T 12t 24t
-_8t _24T . . . . . _8  12t >24T 12t 24t
-_8t _24T . . . . . _8  12t >24T 12t 24t
-12t >24T 12t 24t  12t >24T 12t 24t  12t >24T 12t 24t
-
-
-8T _.  12T >24t 12r 24t >8T 24t . .
-8T _.  12T >24t 12r 24t >8T 24t . .
-8T _.  12T >24t 12r 24t >8T 24t . .
-12T >24t 12r 24t >8T 24t . .   12T >24t 12r 24t
-
-
-8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
-8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
-8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
-12T ^30t  . . . .  12T ^30t  . . . .  12T ^30t  . . . .
-
-
-
-//12T 24T 12t 24T 12T 24t    12T 24T 12t 24T 12T 24t     8T .
-//24T . >.  >12t 24T >12T 24t   24T . >.  >12t 24T >12T 24t        8T .
-//24T . >.  >12t 48T . >12T 24t   24T . >.  >12t 48T . >12T 24t        8T .
-//24Z . >T  >12t 48Z . >12T 24t   24Z . >T  >12t 48Z . >12T 24t        8T .
-
-
-
-
-
-
-// Wrong but cool?
-12t t t t t t   12t 24t 12t 24t
-12T T T T T T   12T 24T 12T 24T
-12T 24T 12T 24T 12T 24T 12T 24T
-
-12t t t t t t   12t 24t 12t 24t
-12T T T T T T   12T 24T 12T 24T
-12t t t t t t   12t 24t 12t 24t
-12t 24t 12t 24t 12t 24t 12t 24t
-
-
-
-// Wrong but cool.  Sounds like going into the Sanford exercises, so maybe they should follow this 12 24 stuff
-/time 4/4
-// make some kind of mathematical tempo transition
-//tempo 60
-/tempo 90
-4T . 8T . 4T
-
-
-12T T T T T T   12T 24T 12T 24T
-12t t t t t t   12t 24t 12t 24t
-12T T T T T T   12T 24T 12T 24T
-12T 24T 12T 24T 12T 24T 12T 24T
-
-12t t t t t t   12t 24t 12t 24t
-12T T T T T T   12T 24T 12T 24T
-12t t t t t t   12t 24t 12t 24t
-12t 24t 12t 24t 12t 24t 12t 24t
-
-
-
-/time 3/4
-_8t _24T . . . . . _8  12t >24T 12t 24t
-_8t _24T . . . . . _8  12t >24T 12t 24t
-_8t _24T . . . . . _8  12t >24T 12t 24t
-12t >24T 12t 24t  12t >24T 12t 24t  12t >24T 12t 24t
-
-
-8T _.  12T >24t 12r 24t >8T 24t . .
-8T _.  12T >24t 12r 24t >8T 24t . .
-8T _.  12T >24t 12r 24t >8T 24t . .
-12T >24t 12r 24t >8T 24t . .   12T >24t 12r 24t
-
-
-8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
-8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
-8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
-12T ^30t  . . . .  12T ^30t  . . . .  12T ^30t  . . . .
-
-
-// make some kind of mathematical tempo transition
-/tempo 100
-4T . 8T . 4T
-
-// 3/4 time because of mistake
-/time 3/4
-12T . . . . .   12T 24T 12t 24t
-12T . . . . .   12T 24T 12t 24t
-12T . . . . .   12T 24T 12t 24t
-12T 24T 12t 24t 12T 24T 12t 24t
-
-12T . . . . .   12T 24t 12T 24t
-12T . . . . .   12T 24t 12T 24t
-12T . . . . .   12T 24t 12T 24t
-12T 24t 12T 24t 12T 24t 12T 24t
-
-^12T . . . . .   ^12T 24t 12T 24t
-^12T . . . . .   ^12T 24t 12T 24t
-^12T . . . . .   ^12T 24t 12T 24t
-^12T 24t 12T 24t ^12T 24t 12T 24t
-
-^12T . . . . .   ^12T 24t 12T 24T
-^12t . . . . .   ^12t 24T 12t 24t
-^12T . . . . .   ^12T 24t 12T 24T
-^12t 24T 12t 24t ^12T 24t 12T 24T
-
-^12t . . . . .   ^12t 24T 12t 24t
-^12T . . . . .   ^12T 24t 12T 24T
-^12t . . . . .   ^12t 24T 12t 24t
-^12T 24t 12T 24T ^12t 24T 12t 24t
-
->12T . . >12t . .  12T ^24t 12T 24T
->12t . . >12T . .  12t ^24T 12t 24t
->12T . . >12t . .  12T ^24t 12T 24T
-12t ^24T 12t 24t   12T ^24t 12T 24T
-
->12t . . >12T . .  12t ^24T 12t 24t
->12T . . >12t . .  12T ^24t 12T 24T
->12t . . >12T . .  12t ^24T 12t 24t
-12T ^24t 12T 24T   12t ^24T 12t 24t
-
-
-
-
-
-/time 4/4
-
-// Experimental here.  Will create own set for this 12 24 stuff
->24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
->24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
->24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
->12T 24T  >12t 24t  >12T 24T  >12t 24t    >12T 24T  >12t 24t  >12T 24T  >12t 24t
-
-4T . 8T . 4T
-
-// This sounds cool.  Starts getting into swing feel.  Could do more.
->24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
->24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
->24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
->12 24   12 >24   >12 24   12 >24  >12 24   12 >24   >12 24   12 >24
-
-4T . 8T . 4T
-
->24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
->24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
->24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
->12 24   12 >24   12 24   >8    >12 24   12 >24   12 24   >8
-
-
->24T t t T T >t T T t  >8T    >12T 24  12 >24  12 24 >8T
->24T t t T T >t T T t  >24T t t T T >t T T t   >8T >.
->12T 24t  12 >24  12 24  >12 24  12 >24  12 24  >8 >.
-
-
-
-
->8T 12t 24T  >8t 12T 24t    >12T 24t 12T >24t 12T 24t >8
-8 8 12 24 12 24 12 24  8   12 24 8
-
-
-
->12T 24t 12T >24t 12T 24t >8
-
-
-// maybe helpful if a lot slower for the new drummers
-/tempo 60
-4T . 8T . 4T
-
->24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
->24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . >T
->24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . .
-
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
->24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . >t
->24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . .
-
-/tempo 60
-4T . 8T . 4T
-
->24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
->24t . . >24T . . >24t . . >24T . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
->24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
->12t >24T   >12t >24T   >12t >24T   >12t >24t      >12T >24t   >12T >24t   >12T >24t   12T 24T
-
->24t . . >24t . . >24t . . >24t . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
->24T . . >24t . . >24T . . >24t . .    >12T >24t   >12T >24t   >12T >24t   >12T 24T
->24T . . >24t . . >24T . . >24t . .    >12t >24T   >12t >24T   >12t >24T   >12t 24t
->12T >24t   >12T >24t   >12T >24t   >12T >24T      >12t >24T   >12t >24T   >12t >24T   >12t 24t
-
-/tempo 60
-4T . 8T . 4T
-
-
->24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
->24t . . >24T . . >24t . . >24T . .    >12t 24T   12t 24T   12t 24T   12t 24t
->24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
-12t 24T   12t 24T   12t 24T   12t 24t  >12T 24t   12T 24t   12T 24t   12T 24T
-
->24t . . >24t . . >24t . . >24t . .    >12t 24T   12t 24T   12t 24T   12t 24t
->24T . . >24t . . >24T . . >24t . .    >12T 24t   12T 24t   12T 24t   12T 24T
->24T . . >24t . . >24T . . >24t . .    >12t 24T   12t 24T   12t 24T   12t 24t
-12T 24t   12T 24t   12T 24t   12T 24T  >12t 24T   12t 24T   12t 24T   12t 24t
-
-
-/tempo 60
-4T . 8T . 4T
-
->24T . .  >. . .   >12T 24t 12T 24T     >24t . . >. . .       >12t 24T 12t 24t
->24T . .  >. . .   >12T 24t 12T 24T     >12t 24T 12t 24t      >12T 24t 12T 24T
->24t . .  >. . .   >12t 24T 12t 24t     >24T . .  >. . .      >12T 24t 12T 24T
->24t . .  >. . .   >12t 24T 12t 24t     >12T 24t 12T 24T      >12t 24T 12t 24t
-
-
+//^24t . . ^24t . . ^24t . . ^24t . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
+//^24T . . ^24t . . ^24T . . ^24t . .    ^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T 24T
+//^24T . . ^24t . . ^24T . . ^24t . .    ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
+//^12T ^24t   ^12T ^24t   ^12T ^24t   ^12T ^24T      ^12t ^24T   ^12t ^24T   ^12t ^24T   ^12t 24t
 
 /tempo 60
 4T . 8T . 4T
@@ -421,25 +184,11 @@ _8t _24T . . . . . _8  12t >24T 12t 24t
 
 
 
->24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . >T  >24T . .
-
-/tempo 60
-4T . 8T . 4T
-
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . .
->24T . . >24t . . >24T . . >24t . .    >24T . >T  >24T . >T  >24T . >T  >24T . .
->24t . . >24t . . >24t . . >24t . .    >24t . >t  >24t . >t  >24t . >t  >24t . >t
->24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . >t  >24t . .
+///tempo 60
+//4T . 8T . 4T
 
 
-
-
-
-/tempo 60
-4T . 8T . 4T
-
-
->24T . . >24t . . >24T . . >24t . .    12T 24T  12t 24t  12T 24T  12t 24t
+//>24T . . >24t . . >24T . . >24t . .    12T 24T  12t 24t  12T 24T  12t 24t
 
 /tempo 60
 4T . 8T . 4T
@@ -451,13 +200,200 @@ _8t _24T . . . . . _8  12t >24T 12t 24t
 
 /tempo 60
 4T . 8T . 4T
-
+// Is this anything special?  Give anything extra?  Not really.
 ^12T 24t   12T 24t   ^12t 24t   24T . .     ^12t 24T   12t 24T   ^12t 24T   24t . .
 12T ^24t   . . .    12t ^24T  . . .    12T  ^24t  . . .  ^24T . .  ^24t . .
 ^12t 24T   12t 24T   ^12T 24T   24t . .     ^12T 24t   12T 24t   ^12T 24t   24T . .
 12t ^24T   . . .    12T ^24t  . . .    12t  ^24T  . . .  ^24t . .  ^24T . .
+//////  Done with moving stuff from bottom.
+//////  Done with moving stuff from bottom.
+//////  Done with moving stuff from bottom.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  duplicate from above:
+
+
+/time 4/4
+/tempo 80
+4T . 8T . 8T .
+
+// two bar phrases for the longer accent patterns
+
+// 12-24 long pickup timing
+>4T 8r 12t 24T              >4t 8r 12T 24t
+^8T 12t 24T  ^8t 12T 24t    12r ^24T 12t 24t 12T 24T >8t
+
+>4T 8r 12t 24T              >4t 8r 12T 24t
+^8T 12t 24T  ^8t 12T 24t    12r ^24T 12t 24t 12T 24T >8t
+
+
+// shorter pickup timing, 24-12
+^8T 12r ^24t 12T 24T 8t       ^8T 12r ^24t 12T 24T 8t
+^8T 12t 24T  ^8t 12T 24t       12r ^24T 12t 24t 12T 24T >8t
+^8T 12r ^24t 12T 24T 8t       ^8T 12r ^24t 12T 24T 8t
+^8T 12t 24T  ^8t 12T 24t       12r ^24T 12t 24t 12T 24T >8t
+
+
+
+
+//>12T >24t >12T >24t   12r >24t  12r >24t  12r >24t  12r  >24t     24t . . >8t   // this syncopation isn't necessary for new drummers
+
+
+
+//^8T 12r ^24t 24T . . 8t       ^8T 12r ^24t 24T . . 8t
+//^24T . .  12t 24T    ^24t . . 12T >24t    12r >24T  12t >24T  24t . . >8t
+
+
+
+
+// Kinda fun to keep going with this stuff, even if repeat?
+
+// some up beat, with 24th trips, but is this just repeat now?
+^8T 12T ^24t 12T 24t ^8T       ^12T 24 12 ^24 24 24 24 ^8T
+^8T 12T ^24t 12T 24t ^8T       ^12T 24 12 ^24 12 24 ^8T
+^12T 24 12 ^24 12 24 ^8T       ^12T 24 12 ^24 24 24 24 ^8T
+^12T 24 12 ^24 12 24 ^8T       ^12T 24 12 ^24 12 24 ^8T
+
+// this is a cool feel, right?
+^8T 12r ^24t 12T 24t ^8T       ^12T 24 12 ^24 12 24 ^8T
+^8T 12T ^24t 12T 24t ^8T       ^12T 24 12 ^24 24 24 24 ^8T
+^8T 12T ^24t 12T 24t ^8T       ^12T 24 12 ^24 12 24 ^8T
+^12T 24 12 ^24 12 24 ^8T       ^12T 24 12 ^24 24 24 24 ^8T
+
+// Is this a repeat from somewhere?
+^8T 12r ^24t 12T 24t >8T       ^12T 24 12 ^24 12 . . >8T
+^8T 12r ^24t 12T 24t >8T       ^12T 24 12 ^24 12 . . >8T
+^8T 12r ^24t 12T 24t >8T       ^12T 24 12 ^24 12 . . >8T
+^12T 24 12 ^24 12 . . >8T      ^12T 24 12 ^24 12 . . >8T
+
+
+
+// pickup timing with 24ths (triplets)   Too hard for new drummers?
+^8T 12r ^24t 24T . . 8t       ^8T 12r ^24t 24T . . 8t
+^8T 12t 24T  ^8t 12T 24t       12r ^24T 12t >24t  24T . . >8t
+//>12T ^24t 24T . .   >12T ^24t 24T . .    12r >24T  12t >24T  24t . . >8t
+^8T 12r ^24t 24T . . 8t       ^8T 12r ^24t 24T . . 8t
+^8T 12t 24T  ^8t 12T 24t       12r ^24T 12t 24t ^24T . . >8t
+//>12T ^24t 24T . .   >12T ^24t 24T . .    12r >24T  12t >24T  24t . . >8t
+
+
+// then into the 30th stuff?  If can't play, hold out
+// maybe too hard for new drummers
+^24T . .  12t 24T    ^24t . . 12T >24t    12r >24T  12t >24T  24t . . >8t
+>12T 24t  12r  24t    >12T 24t  12r  >24t    12r ^30t . . . .  12T 24t  8T  // surprise surprise, 30th notes!
+^24T . .  12t 24T    ^24t . . 12T >24t    12r >24T  12t >24T  24t . . >8t
+>12T 24t  12r  24t    >12T 24t  12r  >24t    12r ^30t . . . .  12T 24t  8T
+
+
+
+
+
+/tempo 60
+4T . 8T . 24T . . 8t
+
+// just some ideas for sound for working on that roll thing.
+// How do we structure this?  Try to do ABAA BABB  ??  Go faster?
+// And is 3/4 confusing?  Probably not worth the confusion to others.
+/time 3/4
+24T . .  12t _24T _12T 24t      24T . .  12t _24T _12T 24t
+24T . .  12t 48T .  12T 24t      24T . .  12t 48T .  12T 24t
+24T . .  12t _24T _12T 24t      24T . .  12t _24T _12T 24t
+24T . .  12t 48T .  12T 24t      24T . .  12t 48T .  12T 24t
+
+
+
+/tempo 80
+4T . 8T . . .
+
+// I THINK THE FOLLOWING SHOULD BE BOILED DOWN TO A FEW LINES MAYBE
+/time 3/4    // Probably not worth the confusion
+// What's this?  What for?  To help with rolls later?
+// Starts sextuplet on the upbeat.  Does paradiddle accent on 2nd note
+// I don't see a need for this.  Probably delete?
+// Maybe in prep for that syncopated thing, on count 2 below?
+_8t _24T . . . . . _8  12t >24T 12t 24t
+_8t _24T . . . . . _8  12t >24T 12t 24t
+_8t _24T . . . . . _8  12t >24T 12t 24t
+12t >24T 12t 24t  12t >24T 12t 24t  12t >24T 12t 24t
+
+// This is in preparation of the 30th note thing.
+// This is just a phrase in one of the massed bands settings.
+// Syncopated thing.  On the 2nd beat.  It's important to work on it, but here?
+8T _.  12T >24t 12r 24t >8T 24t . .
+8T _.  12T >24t 12r 24t >8T 24t . .
+8T _.  12T >24t 12r 24t >8T 24t . .
+12T >24t 12r 24t >8T 24t . .   12T >24t 12r 24t
+
+// This is the thing with the 30th notes
+8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
+8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
+8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
+12T ^30t  . . . .  12T ^30t  . . . .  12T ^30t  . . . .
+
+/time 4/4
+
+4T . 8T . 4T
+
+// This sounds cool.  Starts getting into swing feel.  Could do more.
+>24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
+>24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
+>24T . . . . >   >24T . . . . >    >12 24   12 >24   >12 24   12 >24
+>12 24   12 >24   >12 24   12 >24  >12 24   12 >24   >12 24   12 >24
+
+4T . 8T . 4T
+// Hey, is this a repeat of that 6th of 6 stuff above?
+>24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
+>24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
+>24T . . . . >.   24T . . >8    >12 24   12 >24   12 24   >8
+>12 24   12 >24   12 24   >8    >12 24   12 >24   12 24   >8
+
+// Maybe fun for advanced snares, but new ones, no.
+>24T t t T T >t T T t  >8T    >12T 24  12 >24  12 24 >8T
+>24T t t T T >t T T t  >24T t t T T >t T T t   >8T >.
+>12T 24t  12 >24  12 24  >12 24  12 >24  12 24  >8 >.
+
+
+
+32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
+32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
+32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
+32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
+//32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
+//32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
+//32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
+//32T . . . . . . .   32T . . . . . . .   32T . . . . . . .   32T . . . . . . .
+
+// Seems there's a lot below here that is a repeat of above.  But a lot sounds solid.
 
 
 
@@ -497,6 +433,251 @@ _8t _24T . . . . . _8  12t >24T 12t 24t
 //^12T 24 12 ^24 ^12 24 _8T          ^12T 24 12 ^24 ^12 24 _8T
 
 
+// Another one from massed bands  --- does this fit here?  Redundant a little bit?
+//^8T 12T 24T  ^8t 12T 24t       12r ^24T 12t 24t  8T .
+//^8T 12T 24T  ^8t 12T 24t       12r ^24T 12t 24t  8T .
+//^8T 12T 24T  ^8t 12T 24t       12r ^24T 12t 24t  8T .
+//12r ^24T 12t 24t  8T .   12r ^24T 12t 24t  8T .
+
+
+
+4T . 8T . 8T 24T . .
+// 24ths in preparation of filling in rolls.  So hey, this should be in roll section?
+//8T 24T . . 8t  24T . .  8t >8t   24T . . 8t
+//8t 12r 24t  24T . . 8t  8r 12r 24t  24T . . 8t
+
+
+
+//8T 24T . . 8t  24T . .  8t >8t   24T . . 8t
+//8t 12r 24t  24T . . 8t  8r 24T . .  8t   24T . .
+
+
+//8T 24T . . 8t  24T . .   . . .  8T  >8t 8t
+
+
+
+
+//time 3/4
+//8T 24T . .  8t  24T . .   . . .  8T
+
+// No, no rolls for this set
+//24T . .  12t _24T _12T 24t      24T . .  12t _24T _12T 24t
+//24T . .  12t 48Z .  12T 24t      24T . .  12t 48Z .  12T 24t
+//24T . .  12t _24T _12T 24t      24T . .  12t _24T _12T 24t
+//24T . .  12t 48Z .  12T 24t      24T . .  12t 48Z .  12T 24t
+
+//24Z . 24T  12t 48Z .  12T 24t      24Z . 24T  12t 48Z .  12T 24t
+//24Z . 24T  12t 48Z .  12T 24t      24Z . 24T  12t 48Z .  12T 24t
+
+
+//>12T >24T 12t >24T >12T 24t    >12T >24T 12t >24T >12T 24t     _8T .
+//>24T >. >.  12t 24t >12T 24t   >24T >. >.  12t 24t >12T 24t           _8T .
+//>24T >. >.  12t 48T . >12T 24t   >24T >. >.  >12t 48T . >12T 24t        8T .
+//>24Z >. >T  >12t 48Z . >12T 24t   >24Z >. >T  >12t 48Z . >12T 24t        8T .
+
+
+// repeat, but faster?
+///tempo 90
+//4T . 8T . 24T . . 8t
+
+//>12T >24T 12t >24T >12T 24t    >12T >24T 12t >24T >12T 24t     _8T .
+//>24T >. >.  12t 24t >12T 24t   >24T >. >.  12t 24t >12T 24t           _8T .
+//>24T >. >.  12t 48T . >12T 24t   >24T >. >.  >12t 48T . >12T 24t        8T .
+//>24Z >. >T  >12t 48Z . >12T 24t   >24Z >. >T  >12t 48Z . >12T 24t        8T .
+
+
+
+//12T 24T 12t 24T 12T 24t    12T 24T 12t 24T 12T 24t     8T .
+//24T . >.  >12t 24T >12T 24t   24T . >.  >12t 24T >12T 24t        8T .
+//24T . >.  >12t 48T . >12T 24t   24T . >.  >12t 48T . >12T 24t        8T .
+//24Z . >T  >12t 48Z . >12T 24t   24Z . >T  >12t 48Z . >12T 24t        8T .
+
+
+//time 3/4
+//_8t _24T . . . . . _8  12t >24T 12t 24t
+//_8t _24T . . . . . _8  12t >24T 12t 24t
+//_8t _24T . . . . . _8  12t >24T 12t 24t
+//12t >24T 12t 24t  12t >24T 12t 24t  12t >24T 12t 24t
+
+
+//8T _.  12T >24t 12r 24t >8T 24t . .
+//8T _.  12T >24t 12r 24t >8T 24t . .
+//8T _.  12T >24t 12r 24t >8T 24t . .
+//12T >24t 12r 24t >8T 24t . .   12T >24t 12r 24t
+
+
+//8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
+//8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
+//8T 24T . .   8t  >12T 24t  12T ^30t  . . . .
+//12T ^30t  . . . .  12T ^30t  . . . .  12T ^30t  . . . .
+
+
+// make some kind of mathematical tempo transition
+//tempo 100
+//4T . 8T . 4T
+
+// 3/4 time because of mistake
+//time 3/4
+//12T . . . . .   12T 24T 12t 24t
+//12T . . . . .   12T 24T 12t 24t
+//12T . . . . .   12T 24T 12t 24t
+//12T 24T 12t 24t 12T 24T 12t 24t
+
+//12T . . . . .   12T 24t 12T 24t
+//12T . . . . .   12T 24t 12T 24t
+//12T . . . . .   12T 24t 12T 24t
+//12T 24t 12T 24t 12T 24t 12T 24t
+
+//^12T . . . . .   ^12T 24t 12T 24t
+//^12T . . . . .   ^12T 24t 12T 24t
+//^12T . . . . .   ^12T 24t 12T 24t
+//^12T 24t 12T 24t ^12T 24t 12T 24t
+
+//^12T . . . . .   ^12T 24t 12T 24T
+//^12t . . . . .   ^12t 24T 12t 24t
+//^12T . . . . .   ^12T 24t 12T 24T
+//^12t 24T 12t 24t ^12T 24t 12T 24T
+
+//^12t . . . . .   ^12t 24T 12t 24t
+//^12T . . . . .   ^12T 24t 12T 24T
+//^12t . . . . .   ^12t 24T 12t 24t
+//^12T 24t 12T 24T ^12t 24T 12t 24t
+
+//>12T . . >12t . .  12T ^24t 12T 24T
+//>12t . . >12T . .  12t ^24T 12t 24t
+//>12T . . >12t . .  12T ^24t 12T 24T
+//12t ^24T 12t 24t   12T ^24t 12T 24T
+
+//>12t . . >12T . .  12t ^24T 12t 24t
+//>12T . . >12t . .  12T ^24t 12T 24T
+//>12t . . >12T . .  12t ^24T 12t 24t
+//12T ^24t 12T 24T   12t ^24T 12t 24t
+
+
+
+//8T 12r ^24T   ^8t
+
+
+
+// pickups on the 6th of 6
+//12 24 12 24   24 . . 8     8T 12r ^24  24 . .   8
+//8t 12r ^24t  24T . . 8t     8r 12r ^24T  24t . . 8T
+
+
+
+//8t 12r ^24t  24T . . 8t     8r 12r ^24T  24t . . 8T
+//12r ^24t 24T . .      12t ^24T 24t . .  12T ^24T 24t . .  12t ^24T 24t . .
+//8t 12r ^24t  24T . . 8t  8r 12r ^24T  24t . . 8T
+//12r ^24t 24T . .      12t ^24T 24t . .  12T ^24T 24t . .  12t ^24T 24t . .
+
+
+
+
+/tempo 80
+//4T . 8T . 24T . . 8t
+
+// Come in on the 6th of 6
+//>8T     12r >24t 24T . . . . .    >12T 24 12 >24 12 24 >12T 24
+//>8T     12r >24t 24T . . . . .    >12T 24 12 >24 12 24 >12T 24
+//>8T     12r >24t 24T . . . . .    >12T 24 12 >24 12 24 >12T 24
+//>12T 24 12 >24 12 24 >12T 24     >12T 24 12 >24 12 24 >12T 24
+
+
+
+//>24T >. >.  >24t >. >.  >24T >. >.  >24t >. >.  >24T >. >.  >24t >. >.  >24T >. >.  >24t >. >.
+
+// Experiment
+//12T T T T T T   6T 12T 6T 12T  >24T . . >. >. .   >24T . . >. >. .   >8T 24 12   >8t 24 12
+//12t t t t t t   6t 12t 6t 12t  >24T . . >. >. .   >24T . . >. >. .   >24T . . >. >. .   >24T . . >. >. .
+//12T T T T T T   6T 12T 6T 12T  >24T . . >. >. .   >24T . . >. >. .   >8T 24 12   >8t 24 12
+//6T 12T 6T 12T 6T 12T 6T 12T    >24T . . >. >. .   >24T . . >. >. .   >24T . . >. >. .   >24T . . >. >. .
+
+
+// so let's double time it
+//24T T T T T T   12T 24T 12T 24T
+//24t t t t t t   12t 24t 12t 24t
+//24T T T T T T   12T 24T 12T 24T
+//12T 24T 12T 24T 12T 24T 12T 24T
+// Reverse hand order of above
+//24t t t t t t   12t 24t 12t 24t
+//24T T T T T T   12T 24T 12T 24T
+//24t t t t t t   12t 24t 12t 24t
+//12t 24t 12t 24t 12t 24t 12t 24t
+
+
+// experiment Mix slow with double time
+//12T T T T T T   6T 12T 6T 12T  >24T 24t >24T   >24T 24t >24T   >24T 24t >24T   >24T 24t >24T  >12T >24T >12T >24T  >12T >24T >12T >24T
+//12t t t t t t   6t 12t 6t 12t  >24t 24T >24t   >24t 24T >24t   >24t 24T >24t   >24t 24T >24t  >12t >24t >12t >24t  >12t >24t >12t >24t
+
+// Accents on 6th of 6
+// Too hard, I think
+//^24T . . . . ^.  . . .  ^8t      ^12T 24 12 ^24 12 24 ^8T
+//^24T . . . . ^.  . . .  ^8t      ^12T 24 12 ^24 12 24 ^8T
+//^24T . . . . ^.  . . .  ^8t      ^12T 24 12 ^24 12 24 ^8T
+//^12T 24 12 ^24 12 24 ^8T         ^12T 24 12 ^24 12 24 ^8T
+
+
+// This was a mistake from above, which was fixed, but the timing is cool.
+// The timing is probably over the heads of others.
+// I should ask myself if the new snare drummers could handle this after working
+// individually with them for 30 minutes.  The answer is no, here.
+// So, get rid of this, I think.  Maybe something for advanced snares later.
+//12t t t t t t   12t 24t 12t 24t
+//12T T T T T T   12T 24T 12T 24T
+//12T 24T 12T 24T 12T 24T 12T 24T
+//
+//12t t t t t t   12t 24t 12t 24t
+//12T T T T T T   12T 24T 12T 24T
+//12t t t t t t   12t 24t 12t 24t
+//12t 24t 12t 24t 12t 24t 12t 24t
+
+
+
+// Wrong but cool.  Sounds like going into the Sanford exercises, so maybe they should follow this 12 24 stuff
+//time 4/4
+//tempo 90
+//4T . 8T . 4T
+
+
+//12T T T T T T   12T 24T 12T 24T
+//12t t t t t t   12t 24t 12t 24t
+//12T T T T T T   12T 24T 12T 24T
+//12T 24T 12T 24T 12T 24T 12T 24T
+//
+//12t t t t t t   12t 24t 12t 24t
+//12T T T T T T   12T 24T 12T 24T
+//12t t t t t t   12t 24t 12t 24t
+//12t 24t 12t 24t 12t 24t 12t 24t
+
+// Experimental here.  Will create own set for this 12 24 stuff
+// Too hard for new drummers
+//>24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
+//>24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
+//>24T . >.   >24T . >.   >24T . >.   >24T . >.   >12T 24T  >12t 24t  >12T 24T  >12t 24t
+//>12T 24T  >12t 24t  >12T 24T  >12t 24t    >12T 24T  >12t 24t  >12T 24T  >12t 24t
+
+
+//>8T 12t 24T  >8t 12T 24t    >12T 24t 12T >24t 12T 24t >8
+//8 8 12 24 12 24 12 24  8   12 24 8
+
+//>12T 24t 12T >24t 12T 24t >8
+
+// This stuff was below, because it was kinda repeat.
+// So if not a good intro here, then put it back below, and cull out only good/interesting/new stuff
+// maybe helpful if a lot slower for the new drummers
+///tempo 60
+//4T . 8T . 4T
+
+// This is accenting 1 & 3 of a triplet is all, to get muscle memory kinda
+//^24T . . ^24t . . ^24T . . ^24t . .    ^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . .
+//^24t . . ^24t . . ^24t . . ^24t . .    ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . .
+//^24T . . ^24t . . ^24T . . ^24t . .    ^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . ^T
+//^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . .
+
+//^24t . . ^24t . . ^24t . . ^24t . .    ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . .
+//^24T . . ^24t . . ^24T . . ^24t . .    ^24T . ^T  ^24T . ^T  ^24T . ^T  ^24T . .
+//^24t . . ^24t . . ^24t . . ^24t . .    ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t
+//^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . ^t  ^24t . .
 
 
 /track met
@@ -665,73 +846,8 @@ _8t _24T . . . . . _8  12t >24T 12t 24t
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 
 
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
 
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
 
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
 
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
 
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
 

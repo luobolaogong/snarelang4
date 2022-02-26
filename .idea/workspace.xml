@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="End of day, swapped 2 and 3.  Syncs off in 3rd set.">
-      <change afterPath="$PROJECT_DIR$/exercises/warmups/1224s.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/CastleDangerousJL34MassedBandsDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/ReelSetDrumsSimplified.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/RowanTreeJL24MassedBandsDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/ScotlandTheBraveJL24MassedBandsDrums.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/warmups/1224s.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/warmups/1224s.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/ReelSetDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ReelSetDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,23 +57,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tunes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/exercises/warmups" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exercises/warmups" />
+      <recent name="$PROJECT_DIR$/tunes" />
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/FanfaresSalutes" />
+      <recent name="$PROJECT_DIR$/exercises/warmups/LeoBrowne" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/exercises" />
       <recent name="$PROJECT_DIR$/bin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tunes" />
-      <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/exercises/warmups" />
-      <recent name="$PROJECT_DIR$/FanfaresSalutes" />
-      <recent name="$PROJECT_DIR$/exercises/warmups/LeoBrowne" />
     </key>
   </component>
   <component name="RunManager" selected="Dart Command Line App.1224s">
@@ -189,6 +184,11 @@
     </configuration>
     <configuration name="Experiments" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="--input=experiments/TrackTimings.snl -o midifiles/eba.mid -S 1.0" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FindBug" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/warmups/FindBug.snl -o midifiles/FindBug.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -530,6 +530,7 @@
       <item itemvalue="Dart Command Line App.WarmUpSequence" />
       <item itemvalue="Dart Command Line App.WarmUpsSet1" />
       <item itemvalue="Dart Command Line App.WarmUpsSets" />
+      <item itemvalue="Dart Command Line App.FindBug" />
       <item itemvalue="Dart Command Line App.1224s" />
       <item itemvalue="Dart Command Line App.WarmUpsSet2" />
       <item itemvalue="Dart Command Line App.WarmUpsSet3" />
@@ -874,14 +875,7 @@
       <workItem from="1644037138863" duration="72989000" />
       <workItem from="1644692757056" duration="21614000" />
       <workItem from="1644775506058" duration="67350000" />
-      <workItem from="1645233519975" duration="47782000" />
-    </task>
-    <task id="LOCAL-00057" summary="Last two exercise pages plus 1st score.">
-      <created>1607229376394</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1607229376394</updated>
+      <workItem from="1645233519975" duration="88076000" />
     </task>
     <task id="LOCAL-00058" summary="Added last 4 pages of the book.">
       <created>1607316634826</created>
@@ -1219,7 +1213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644995500768</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="End of day, swapped 2 and 3.  Syncs off in 3rd set.">
+      <created>1645682935925</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1645682935926</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1266,10 +1267,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="End of day, swapped 2 and 3.  Syncs off in 3rd set." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2083" y="677" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1645594185759">
+    <state x="2083" y="677" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1645730870550">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2083" y="677" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1645594185759" />
+    <state x="2083" y="677" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1645730870550" />
     <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1644213811391">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -1278,26 +1279,26 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1644256580683" />
-    <state width="1392" height="242" key="GridCell.Tab.0.bottom" timestamp="1645682426518">
+    <state width="3063" height="242" key="GridCell.Tab.0.bottom" timestamp="1645852023304">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1392" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1645682426518" />
-    <state width="1392" height="242" key="GridCell.Tab.0.center" timestamp="1645682426516">
+    <state width="3063" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1645852023304" />
+    <state width="3063" height="242" key="GridCell.Tab.0.center" timestamp="1645852023304">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1392" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1645682426516" />
-    <state width="1392" height="242" key="GridCell.Tab.0.left" timestamp="1645682426516">
+    <state width="3063" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1645852023304" />
+    <state width="3063" height="242" key="GridCell.Tab.0.left" timestamp="1645852023304">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1392" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1645682426516" />
-    <state width="1392" height="242" key="GridCell.Tab.0.right" timestamp="1645682426517">
+    <state width="3063" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1645852023304" />
+    <state width="3063" height="242" key="GridCell.Tab.0.right" timestamp="1645852023304">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1392" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1645682426517" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1644733319112">
+    <state width="3063" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1645852023304" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1645682950048">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1644733319112" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1645682950048" />
     <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup" timestamp="1645645874151">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
