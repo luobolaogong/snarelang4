@@ -907,6 +907,20 @@ _4M _. _8M . _4M
 ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z
 
 
+
+// How about some upbeat starting rolls?
+// Base it on this pattern, but not the 30th note parts, that's for elsewhere
+//
+//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
+//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
+//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
+//^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . .
+
+
+
+
+
+
 // ----------- Set 2 Exercise 5 is long Tap Rolls
 // -----------
 /marker TapRls
