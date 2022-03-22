@@ -1,27 +1,34 @@
-// Need a whole fricken section for the 12-24 stuff
+// This is mostly 12-24 stuff
 //
-// Consider making this the first set.  It is a warmup.
-// And rolls might be the 2nd set.
-// Then flams as the 3rd set.
-// Then combinations as the 4th.
+// The purpose of "warm-up exercises" is to help solidify the correct
+// interpretation of idoms used in the drum music for tunes, and to
+// improve technique, and to increase accuracy.  These warmups will
+// get harder after the initial "warm-up" phase, and then actually be
+// more demanding and more fun than the regular music.
+// It should sound interesting (especially to drummers) and cool.
+// It shouldn't be too hard to memorize, but should not be overly
+// repetitious.
+//
+// We unfortunately cannot afford to play these warm-up exercises for too long.
+// I'd guess we would have less than 10 minutes total for all sets combined.
+//
+// Consider making this the first set.
+// Or maybe that tap stuff.  But that tap stuff also has Sanford in it,
+// and that would move us into 12-24, maybe.
+//
+// And rolls would be after this, because 12-24 moves into triplets
+// Then flams.
+// Then combinations.
+//
+// So maybe 2 minutes each set?
 //
 
-// What did I learn from last night's sectional?
-// When we don't use a metronome we get worse.
-// Things are pretty inaccurate, and therefore slower tempos are still needed
-// Pretty bad technique
-// Not at all ready for flams with 12-24, so first set without flams, next set play same but with flams?
 
-
-
-// DRUMMING FOR THE MASSES.  THAT'S WHAT PIPE BAND DRUMMING WAS SET UP FOR AND THEY
-// WANT TO KEEP IT THAT WAY.  CERTAIN FORMS DON'T CHANGE, SO THAT EVERYONE
-// CAN PICK IT UP FASTER.
-// U.S. DRUMMING DOESN'T PROMOTE THE OLD STANDARDS ANY MORE.  WABASH AND ALL THAT.
-// THEY'VE ADVANCED.  LOOK AT THE HIGH SCHOOLS NOW.  IT'S DRUM AND BUGLE CORPS STUFF
-//
-// SO WHAT ARE WE DOING HERE?  JUST TRYING TO RAISE THE ACCURACY OF OUR DRUMMERS.
-// NOT PUSHING NEW STUFF TOOOOOOOO MUCH.
+// Pipe band drumming is generally DRUMMING FOR THE MASSES, and they intentionally
+// keep the same forms, and hardly advance.  They copy the lead drummer,
+// because that's what they all used to do before they could read, or knew anything
+// about how computers could help.  But we should be different.  After all
+// we're in Hawaii, not Scotland.
 
 
 
@@ -30,7 +37,6 @@
 /channel 5
 
 /time 4/4
-//tempo 80
 /tempo 84
 // Sync
 4r . . .
@@ -103,46 +109,229 @@
 //Sync
 4T 4r . .
 
-// 1:21
-// 12-24 long pickup timing.  Too much dead air here?  Maybe it's good for internal counting
-// Check with the JL setting to see where the accents are
-// TIMING OF PICKUPS
+// 1:18
+// 12-24 long pickup timing.  Check with the JL setting to see where the accents are
 ^4T 8r 12t 24T              ^4t 8r >12T 24t
 ^8T _12t 24T  ^8t _12T 24t    12r ^24T _12t 24t _12T 24T _8t
 ^4T 8r >12t 24T              ^4t 8r >12T 24t
 ^8T _12t 24T  ^8t _12T 24t    12r ^24T _12t 24t _12T 24T _8t
 
+
 // 1:31
-// shorter pickup timing, 24-12
-// check hand orders
-^8T >12r ^24t 12T 24T 8t       ^8T >12r ^24t 12T 24T 8t
+// shorter pickup timing, 24-12  // check hand orders
+^8T 12r ^24t 12T 24T 8t       ^8T 12r ^24t 12T 24T 8t
 12T >24t 12r 24t   12T >24t 12r 24t   12T >24t 12r 24t  12T 24T 8t
-^8t >12r ^24T 12t 24t 8T       ^8t >12r ^24T 12t 24t 8T
+^8t 12r ^24T 12t 24t 8T       ^8t 12r ^24T 12t 24t 8T
 12T >24t 12r 24t   12T >24t 12r 24t   12T >24t 12r 24t  12T 24T 8t
 
 // 1:43
-// This is in prep for the 30th notes
-
-// fix this so that the focus is on the triplets or the 30th notes starting on the first 24th of the beat after the first 12th
-// not on the upbeat, and ending on the upbeat.  But maybe try to have both.  Prob not.
-
-//^12T 24t  12T ^24t  4r   ^12T 24t  12T ^24t 24T . . >8t
-^12T 24t  12T ^24t  4r   ^12T 24t  12T 24t 12T 24t 24T . .
-^12T 24t  12T ^24t  4r   ^12T 24t  12T ^24t 24T . . >8t
-^12T 24t  12T ^24t  4r   ^12T 24t  12T ^24t 24T . . >8t
-^12T 24t  12T ^24t 24T . . >8t   ^12T 24t  12T ^24t 24T . . >8t
-
-// 12:57
-// This is for the 30th notes
-^12T 24t  12T ^24t  8r ^8t   >12T 24t  12T ^30t  . . . .  ^8T
-^12T 24t  12T ^24t  8r ^8t   >12T 24t  12T ^30t  . . . .  ^8T
-^12T 24t  12T ^24t  8r ^8t   >12T 24t  12T ^30t  . . . .  ^8T
->12T 24t  12T ^30t  . . . .  ^8T  >12T 24t  12T ^30t  . . . .  ^8T
-12 24 12 24 12 ^30t  . . . .
+// 30th stuff
+>12 24 12 24 12 ^30t . . . .  >12 24 12 24 12 ^30t . . . .
+>12T 24 12 ^30t . . . .  >12T 24 12 ^30t . . . .  >12T 24 8T
+>12 24 12 24 12 ^30t . . . .  >12 24 12 24 12 ^30t . . . .
+12 ^30t . . . .  12 ^30t . . . .  12 ^30t . . . .  >12T 24 8T
 
 
 
+// Can I transition into Sanford from the 12 24?  Or 24 12?
 
+
+/track tenor
+/channel 2
+
+//time 4/4
+//tempo 84
+// Sync
+4r . . .
+
+
+
+
+
+
+12N N N N N N   6N 12N 6N 12N
+12n n n n n n   6n 12n 6n 12n
+12N N N N N N   6N 12N 6N 12N
+6N 12N 6N 12N 6N 12N 6N 12N
+// Reverse hand order of above
+12n n n n n n   6n 12n 6n 12n
+12N N N N N N   6N 12N 6N 12N
+12n n n n n n   6n 12n 6n 12n
+6n 12n 6n 12n 6n 12n 6n 12n
+
+
+//time 2/4
+//tempo 60
+// Sync 2 counts
+8N 8r . .
+
+
+
+
+// doubles on the 12-24
+4N 8N .
+4N 8N .
+4N 8N .
+8N . . .
+
+// singles on the 12-24
+4N 8N .
+4N 8N .
+4N 8N .
+8N . . .
+
+
+// Paradiddles on the 12-24
+>8N . >8N .
+>8N . >8N .
+>8N . >8N .
+>8N . >8N .
+// Reverse
+>8N . >8N .
+>8N . >8N .
+>8N . >8N .
+>8N . >8N .
+
+
+
+12N 6n  12N >24n 12N 24n
+12N 6n  12N >24n 12N 24n
+12N 6n  12N >24n 12N 24n
+12N >24n 12N 24n  12N >24n 12N 24n
+// reverse
+12N 6n  12N >24n 12N 24n
+12N 6n  12N >24n 12N 24n
+12N 6n  12N >24n 12N 24n
+12N >24n 12N 24n  12N >24n 12N 24n
+
+
+//time 4/4
+//tempo 80
+//Sync
+4N 4r . .
+
+
+
+
+8N 24n . . 8N 8n   8N 24n . . 8N 8n
+8N .  8N .     12r ^24N 8n . .
+8N 24n . . 8N 8n   8N 24n . . 8N 8n
+8N .  8N .     12r ^24N 8n . .
+
+
+
+
+8N 24n . . 8N 8n   8N 24n . . 8N 8n
+12N 6n     12N 6n   12r ^24N 8n . .
+8N 24n . . 8N 8n   8N 24n . . 8N 8n
+12N 6n     12N 6n   12r ^24N 8n . .
+
+
+
+12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
+>8N 4r  >8n 4r >8N .
+12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
+12N >6n   12N >6n   12N >6n   12N 24 8N
+
+
+
+
+/track bass
+/channel 8
+/f
+//time 4/4
+//tempo 84
+// Sync
+4r . . .
+
+
+
+
+
+
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+
+//time 2/4
+//tempo 60
+// Sync 2 counts
+8B 8r . .
+
+
+
+
+// doubles on the 12-24
+4B .
+4B .
+4B .
+4B .
+
+// singles on the 12-24
+4B .
+4B .
+4B .
+4B .
+
+
+// Paradiddles on the 12-24
+4B .
+4B .
+4B .
+4B .
+// Reverse
+4B .
+4B .
+4B .
+4B .
+
+
+
+12B 6b  12B 6b
+12B 6b  12B 6b
+12B 6b  12B 6b
+12B 6b  12B 6b
+// reverse
+12B 6b  12B 6b
+12B 6b  12B 6b
+12B 6b  12B 6b
+12B 6b  12B 6b
+
+
+//time 4/4
+//tempo 80
+//Sync
+4B 4r . .
+
+
+
+
+4B 8r 8b   4B 8r 8b
+4B . 4r 8B .
+4B 8r 8b   4B 8r 8b
+4B . 4r 8B .
+
+
+
+
+4B 8B .   4B 8B .
+4B .  8r 8B . .
+4B 8B .   4B 8B .
+4B .  8r 8B . .
+
+
+
+>4B . >. .
+>8B 4r  >8B 4r >8B .
+>4B . >. .
+>4B . >. 8b 8r
 
 
 
@@ -630,6 +819,25 @@
 //12T ^30t  . . . .  12T ^30t  . . . .      12T ^30t  . . . .  12T ^30t  . . . .
 
 
+//^12T 24t  12T ^24t  4r   ^12T 24t  12T ^24t 24T . . >8t
+//^12T 24t  12T ^24t  4r   ^12T 24t  12T 24t 12T 24t 24T . .
+//^12T 24t  12T ^24t  4r   ^12T 24t  12T ^24t 24T . . >8t
+//^12T 24t  12T ^24t  4r   ^12T 24t  12T ^24t 24T . . >8t
+//^12T 24t  12T ^24t 24T . . >8t   ^12T 24t  12T ^24t 24T . . >8t
+
+// 12:57
+// This is for the 30th notes
+//^12T 24t  12T ^24t  8r ^8t   >12T 24t  12T ^30t  . . . .  ^8T
+//^12T 24t  12T ^24t  8r ^8t   >12T 24t  12T ^30t  . . . .  ^8T
+//^12T 24t  12T ^24t  8r ^8t   >12T 24t  12T ^30t  . . . .  ^8T
+//>12T 24t  12T ^30t  . . . .  ^8T  >12T 24t  12T ^30t  . . . .  ^8T
+//12 24 12 24 12 ^30t  . . . .
+
+// work on this idea, whatever it is...
+//^4T 12r >24 12r >24    ^4T 12r >24 12r 24
+//^12T 24 12 24 12 ^24 ^12 ^24    ^12T 24 12 24 12 ^24 ^12 ^24
+//^4T 12r >24 12r >24    ^4T 12r >24 12r 24
+//^12T 24 12 ^24  ^12T 24 12 ^24  ^12T 24 12 ^24  ^12T 24 12 ^24
 
 
 
@@ -640,6 +848,13 @@
 //tempo 84
 //sync
 12M . . . . .   6M 12M 6M 12M
+
+
+
+
+
+
+
 
 >4M . . .
 >4M . . .
@@ -652,20 +867,10 @@
 >4M . . .
 
 
-
-
-
-
-
-
-
-
-
 //time 2/4
 //tempo 60
 //sync 2 counts only
 24M . . . . .   12M 24M 12M 24M
-
 
 
 // doubles
@@ -708,9 +913,6 @@
 ^8M 8M 8M ^12M ^24M  ^8M 8M 8M ^12M ^24M
 
 
-
-
-
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
@@ -722,20 +924,11 @@
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 
 
-
-
-
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 
-
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
 
 
 

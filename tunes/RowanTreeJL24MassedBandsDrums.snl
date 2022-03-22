@@ -2,7 +2,9 @@
 // From "James Laughlin's Guide to Pipe Band Drumming, Volume One, the Essentials"
 // Page 60, audio recording track 41
 // Section Fourteen -  Drum Scores, Massed Band Setting in 2/4
-
+//
+// Rowan Tree is supposed to be a 4/4, but we play a 2/4 because it precedes Scotland the Brave
+// which we're playing as a 2/4 even though it's a 4/4
 
 
 /time 2/4
@@ -36,18 +38,6 @@ _8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
 _8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
 
 
-_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
-_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
-
-_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
-_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
-
-
-_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
-_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
-
-_8M . _8M .    _8M . _8M .    _8M . _8M .    _8M . _8M .
-_8M . _8M .    _8M . _8M .    _8M . _8M .    _2M
 
 
 
@@ -117,55 +107,9 @@ _8M . _8M .    _8M . _8M .    _8M . _8M .    _2M
 /mf /cresc >40T 20z .  40t 20Z . ^12T 24t 12T 24t
 >40T 20z .  40t 20Z . 8T /ff /f 24Z . .
 ^4t /cresc 24Z . . . . .
-^4T /fff /mf 8r 12T 24t
+//^4T /fff /mf 8r 12T 24t
+^4T /fff /mf 8r 12r 24r
 
-/marker P3L5
-8D 12T 24T 8d 12T 24t
-12r ^24T 12t 24t ^8F t
-^8F ^f  ^12F 24t 12T 24f
-12T 24t ^8F  ^f 12T 24t
-
-/marker P3L6
-8D 12T 24T 8d 12T 24t
-12r ^24T 12t 24t ^8F 24Z . .
-4t /cresc 24Z . . . . .
-4T /fff /mf 8r 12T 24t
-
-/marker Pt3L5Rpt
-8D 12T 24T 8d 12T 24t
-12r ^24T 12t 24t ^8F t
-^8F ^f  ^12F 24t 12T 24f
-12T 24t ^8F  ^f 12T 24t
-
-/marker Pt3L6Rpt
-8D 12T 24T 8d 12T 24t
-12r ^24T 12t 24t ^8F 24Z . .
-4t /cresc 24Z . . . . .
-4T /fff /mf 8r 12T 24t
-
-/marker P4L7
-24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
-12t 48Z . 12T 24t ^8F t
-^8F ^f ^12F 24t 12T 24f
-12T 24t ^8F ^f 12T 24t
-
-/marker P4L8
-24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
-12t 48Z . 12T 24t ^8F 24Z . .
-4t /cresc 24Z . . . . .
-^4T /fff /mf 8r 12T 24t
-
-/marker P4L7Rpt
-24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
-12t 48Z . 12T 24t ^8F t
-^8F ^f ^12F 24t 12T 24f
-12T 24t ^8F ^f 12T 24t
-
-/marker P4L8Rpt
-24Z . 24T 12t 48Z . 12T 24t 24Z . 24T
-12t 48Z . 12T 24t ^8F 24Z . .
-4t /cresc 24Z . . . . .
-^4T /fff /mf 4r
 
 
 
@@ -232,57 +176,6 @@ _8M . _8M .    _8M . _8M .    _8M . _8M .    _2M
 2N
 
 
-// Line 5
-4N .
-12r >6N >4n
-8N . 24:5N 6n
-   8N 4n
-
-// Line 6
-4N .
-12r >6N >4n
-4N .
-2N
-
-// Line 5Rpt
-4N .
-12r >6N >4n
-8N . 24:5N 6n
-   8N 4n
-
-// Line 6Rpt
-4N .
-12r >6N >4n
-4N .
-2N
-
-// Line 7
-/mp /cresc
-8N . . .
-8N . 4N /ff
-8N . 24:5N 6n
-   8N 4n
-
-// Line 8
-/mp /cresc
-8N . . .
-8N . 4N /ff
-4N .
-2N
-
-// Line 7Rpt
-/mp /cresc
-8N . . .
-8N . 4N /ff
-8N . 24:5N 6n
-   8N 4n
-
-// Line 8Rpt
-/mp /cresc
-8N . . .
-8N . 4N /ff
-4N .
-2N
 
 
 
@@ -349,58 +242,4 @@ _8M . _8M .    _8M . _8M .    _8M . _8M .    _2M
 4B .
 2B
 
-
-
-// Line 5
-4B .
-12r >6B >4b
-8B . 4B
-2b
-
-// Line 6
-4B .
-12r >6B >4b
-4B .
-2B
-
-// Line 5Rpt
-4B .
-12r >6B >4b
-8B . 4B
-2b
-
-// Line 6Rpt
-4B .
-12r >6B >4b
-4B .
-2B
-
-
-// Line 7
-/mp /cresc
-4B .
-4B . /ff
-8B . 4B
-2b
-
-// Line 8
-/mp /cresc
-4B .
-4B . /ff
-4B .
-2B
-
-// Line 7Rpt
-/mp /cresc
-4B .
-4B . /ff
-8B . 4B
-2b
-
-// Line 8Rpt
-/mp /cresc
-4B .
-4B . /ff
-4B .
-2B
 

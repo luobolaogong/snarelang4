@@ -1,0 +1,668 @@
+// The Jig Set has two tunes: Banjo Breakdown and Skyman's Jig
+// With Peter's General Jig drum setting, the same thing is just repeated.
+// So, I just doubled the settings.
+
+/track snare
+/channel 5
+
+
+/time 6/8
+//tempo 8:3=104
+/tempo 104
+
+8:3r . . .
+
+/f
+
+/marker L1
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+^8T . . ^t . .
+16T . . . ^8T ^8t . .
+
+/marker L2
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+
+/marker L3
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+^8T . . ^t . .
+16T . . . ^8T ^8t . .
+
+/marker L4
+^8T . . ^8t . .
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+/cresc 16Z . . . . . 4T /fff /dd 8t
+
+/marker L1Rpt
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+^8T . . ^t . .
+16T . . . ^8T ^8t . .
+
+/marker L2Rpt
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+
+/marker L3Rpt
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+^8T . . ^t . .
+16T . . . ^8T ^8t . .
+
+/marker L4Rpt
+^8T . . ^8t . .
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+/cresc 16Z . . . . . 4T /fff /dd 8t
+
+
+
+/marker L5
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+/cresc 16Z . . . . . 4T /fff /dd 8t
+16T . . . ^8T  ^8t . .
+
+/marker L6
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+
+/marker L7
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+/cresc 16Z . . . . . 4T /fff /dd 8t
+16T . . . ^8T  ^8t . .
+
+/marker L8
+^8T . . ^8t . .
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+/cresc 16Z . . . . . 4T /fff /dd 8t
+
+/marker L5Rpt
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+/cresc 16Z . . . . . 4T /fff /dd 8t
+16T . . . ^8T  ^8t . .
+
+/marker L6Rpt
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+
+/marker L7Rpt
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+/cresc 16Z . . . . . 4T /fff /dd 8t
+16T . . . ^8T  ^8t . .
+
+/marker L8Rpt
+^8T . . ^8t . .
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+/cresc 16Z . . . . . 4T /fff /dd 8r
+
+
+/marker L1
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+^8T . . ^t . .
+16T . . . ^8T ^8t . .
+
+/marker L2
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+
+/marker L3
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+^8T . . ^t . .
+16T . . . ^8T ^8t . .
+
+/marker L4
+^8T . . ^8t . .
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+/cresc 16Z . . . . . 4T /fff /dd 8t
+
+/marker L1Rpt
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+^8T . . ^t . .
+16T . . . ^8T ^8t . .
+
+/marker L2Rpt
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+
+/marker L3Rpt
+^8T . .  ^4t  ^8T
+8t . . ^4T 8t
+^8T . . ^t . .
+16T . . . ^8T ^8t . .
+
+/marker L4Rpt
+^8T . . ^8t . .
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+/cresc 16Z . . . . . 4T /fff /dd 8t
+
+
+
+/marker L5
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+/cresc 16Z . . . . . 4T /fff /dd 8t
+16T . . . ^8T  ^8t . .
+
+/marker L6
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+
+/marker L7
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+/cresc 16Z . . . . . 4T /fff /dd 8t
+16T . . . ^8T  ^8t . .
+
+/marker L8
+^8T . . ^8t . .
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+/cresc 16Z . . . . . 4T /fff /dd 8t
+
+/marker L5Rpt
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+/cresc 16Z . . . . . 4T /fff /dd 8t
+16T . . . ^8T  ^8t . .
+
+/marker L6Rpt
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+
+/marker L7Rpt
+/cresc 16Z . . . . . 4T /fff /dd ^8t
+8T . . ^4t 8t
+/cresc 16Z . . . . . 4T /fff /dd 8t
+16T . . . ^8T  ^8t . .
+
+/marker L8Rpt
+^8T . . ^8t . .
+16T . . . ^8T ^8t . .
+16T . . . ^8T ^8t . .
+/cresc 16Z . . . . . 4T /fff /dd 8r
+
+
+
+/track tenor
+/channel 2
+//time 6/8
+//tempo 104
+
+8:3r . . .
+
+/f
+
+//marker L1
+8:3N 4N 8n
+8:3r 8:3r
+8:3N .
+4r 8n . 4r
+
+//marker L2
+8:3N 4N 8n
+8:3r .
+4r 8n . 4r
+4r 8n . 4r
+
+//marker L3
+8:3N 4N 8n
+8:3r .
+8:3N .
+4r 8n . 4r
+
+//marker L4
+8:3N .
+4r 8n . 4r
+4r 8n . 4r
+8N . . . 4r
+
+//marker L1Rpt
+8:3N 4N 8n
+8:3r 8:3r
+8:3N .
+4r 8n . 4r
+
+//marker L2Rpt
+8:3N 4N 8n
+8:3r .
+4r 8n . 4r
+4r 8n . 4r
+
+//marker L3Rpt
+8:3N 4N 8n
+8:3r .
+8:3N .
+4r 8n . 4r
+
+//marker L4Rpt
+8:3N .
+4r 8n . 4r
+4r 8n . 4r
+8N . . . 4r
+
+
+
+
+//marker L5
+8:3r .
+8N . . . 4r
+8:3r .
+4r 8n . 4r
+
+//marker L6
+8:3r .
+8N . . . 4r
+4r 8n . 4r
+4r 8n . 4r
+
+//marker L7
+8:3r .
+8N . . . 4r
+8:3r .
+4r 8n . 4r
+
+//marker L8
+8:3N .
+4r 8n . 4r
+4r 8n . 4r
+8N . . . 4r
+
+//marker L5Rpt
+8:3r .
+8N . . . 4r
+8:3r .
+4r 8n . 4r
+
+//marker L6Rpt
+8:3r .
+8N . . . 4r
+4r 8n . 4r
+4r 8n . 4r
+
+//marker L7Rpt
+8:3r .
+8N . . . 4r
+8:3r .
+4r 8n . 4r
+
+//marker L8Rpt
+8:3N .
+4r 8n . 4r
+4r 8n . 4r
+8N . . . 4r
+
+
+//marker L1
+8:3N 4N 8n
+8:3r 8:3r
+8:3N .
+4r 8n . 4r
+
+//marker L2
+8:3N 4N 8n
+8:3r .
+4r 8n . 4r
+4r 8n . 4r
+
+//marker L3
+8:3N 4N 8n
+8:3r .
+8:3N .
+4r 8n . 4r
+
+//marker L4
+8:3N .
+4r 8n . 4r
+4r 8n . 4r
+8N . . . 4r
+
+//marker L1Rpt
+8:3N 4N 8n
+8:3r 8:3r
+8:3N .
+4r 8n . 4r
+
+//marker L2Rpt
+8:3N 4N 8n
+8:3r .
+4r 8n . 4r
+4r 8n . 4r
+
+//marker L3Rpt
+8:3N 4N 8n
+8:3r .
+8:3N .
+4r 8n . 4r
+
+//marker L4Rpt
+8:3N .
+4r 8n . 4r
+4r 8n . 4r
+8N . . . 4r
+
+
+
+
+//marker L5
+8:3r .
+8N . . . 4r
+8:3r .
+4r 8n . 4r
+
+//marker L6
+8:3r .
+8N . . . 4r
+4r 8n . 4r
+4r 8n . 4r
+
+//marker L7
+8:3r .
+8N . . . 4r
+8:3r .
+4r 8n . 4r
+
+//marker L8
+8:3N .
+4r 8n . 4r
+4r 8n . 4r
+8N . . . 4r
+
+//marker L5Rpt
+8:3r .
+8N . . . 4r
+8:3r .
+4r 8n . 4r
+
+//marker L6Rpt
+8:3r .
+8N . . . 4r
+4r 8n . 4r
+4r 8n . 4r
+
+//marker L7Rpt
+8:3r .
+8N . . . 4r
+8:3r .
+4r 8n . 4r
+
+//marker L8Rpt
+8:3N .
+4r 8n . 4r
+4r 8n . 4r
+8N . . . 4r
+
+
+
+/track bass
+/channel 8
+//time 6/8
+//tempo 104
+
+8:3r . . .
+
+/f
+
+//marker L1
+8:3B .
+8:3B .
+8:3B .
+8:3B 8:3r
+
+//marker L2
+8:3B .
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+
+//marker L3
+8:3B .
+8:3B .
+8:3B .
+8:3B .
+
+//marker L4
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+8:3B 8:3B
+
+//marker L1Rpt
+8:3B .
+8:3B .
+8:3B .
+8:3B 8:3r
+
+//marker L2Rpt
+8:3B .
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+
+//marker L3Rpt
+8:3B .
+8:3B .
+8:3B .
+8:3B .
+
+//marker L4Rpt
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+8:3B .
+
+
+//marker L5
+8:3B .
+8:3r .
+8:3B .
+8:3B 8:3r
+
+//marker L6
+8:3B .
+8:3r .
+8:3B 8:3r
+8:3B 8:3r
+
+//marker L7
+8:3B .
+8:3r .
+8:3B .
+8:3B 8:3r
+
+//marker L8
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+8:3B 8:3B
+
+//marker L5Rpt
+8:3B .
+8:3r .
+8:3B .
+8:3B 8:3r
+
+//marker L6Rpt
+8:3B .
+8:3r .
+8:3B 8:3r
+8:3B 8:3r
+
+//marker L7Rpt
+8:3B .
+8:3r .
+8:3B .
+8:3B 8:3r
+
+//marker L8Rpt
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+8:3B 8:3B
+
+
+//marker L1
+8:3B .
+8:3B .
+8:3B .
+8:3B 8:3r
+
+//marker L2
+8:3B .
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+
+//marker L3
+8:3B .
+8:3B .
+8:3B .
+8:3B .
+
+//marker L4
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+8:3B 8:3B
+
+//marker L1Rpt
+8:3B .
+8:3B .
+8:3B .
+8:3B 8:3r
+
+//marker L2Rpt
+8:3B .
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+
+//marker L3Rpt
+8:3B .
+8:3B .
+8:3B .
+8:3B .
+
+//marker L4Rpt
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+8:3B .
+
+
+//marker L5
+8:3B .
+8:3r .
+8:3B .
+8:3B 8:3r
+
+//marker L6
+8:3B .
+8:3r .
+8:3B 8:3r
+8:3B 8:3r
+
+//marker L7
+8:3B .
+8:3r .
+8:3B .
+8:3B 8:3r
+
+//marker L8
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+8:3B 8:3B
+
+//marker L5Rpt
+8:3B .
+8:3r .
+8:3B .
+8:3B 8:3r
+
+//marker L6Rpt
+8:3B .
+8:3r .
+8:3B 8:3r
+8:3B 8:3r
+
+//marker L7Rpt
+8:3B .
+8:3r .
+8:3B .
+8:3B 8:3r
+
+//marker L8Rpt
+8:3B .
+8:3B 8:3r
+8:3B 8:3r
+8:3B 8:3B
+
+
+
+/track metronome
+/mf
+8:3M . 8M . . 8:3M
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   4:3M
+
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   . .
+8:3M .   . .   . .   4:3M
+

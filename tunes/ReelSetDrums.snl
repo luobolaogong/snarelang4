@@ -128,10 +128,17 @@ _4M _. _8M . _4M
 
 // Primrose Girl
 /marker PGL1
+//4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+//16T ^8t 16t   16T ^8t 16t   8T >f    >4F
+//4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+//16T ^8t 16t   16T ^8t 16t   8T >f    >4F
+
+
 4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
-16T ^8t 16t   16T ^8t 16t   8T >f    >4F
+12T ^8t 24t   12T ^8t 24t   8T >f    >4F
 4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
-16T ^8t 16t   16T ^8t 16t   8T >f    >4F
+12T ^8t 24t   12T ^8t 24t   8T >f    >4F
+
 
 /marker PGL2
 4r .                        ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
