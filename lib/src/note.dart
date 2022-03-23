@@ -1,6 +1,51 @@
 import 'package:petitparser/petitparser.dart';
 import '../snarelang4.dart';
 
+/// I gotta put this somewhere, because I keep losing it.
+/// How do you figure out the note duration name 'D', like "8th note", or "30th note" when
+/// you're subdividing a duration into a number of equally spaced notes?
+///
+/// First you figure out the name of the note duration that will be subdivided.  Call that 'Z'.
+///
+/// Then you multiply it by the number of equally spaced notes, 'X', to get 'D'.
+///
+/// That is, D = X * Z
+///
+/// So, if you're subdividing an 8th note duration into 5 equal notes, then the equation is
+/// D = 5 * 8
+/// which means you've got 5 40th notes.
+///
+/// That's the simple way to look at it.  But usually the note duration that will be subdivided
+/// is not a simple note like a 8th note, but rather something like the duration of 4 24th notes.
+///
+/// In that case 'Z' would be the note duration designated by '24:4', which is a 6th note.  And
+/// if you wanted to put 5 equally spaced notes in that 6th note duration, then each of those notes
+/// would be 30th notes.
+///
+/// So you can think of the duration as 'Z/Y', where 'Y' is the number of 'Z' notes.
+///
+/// And therefore, D = X * (Z/Y)
+///
+/// An easy way to remember this is
+/// "(Note durations name is) X notes in Y Z's"
+///
+/// There's a special technique that seems to work okay when dealing with short tap rolls so as not
+/// to make too much of a gap between the tap and the first buzz, for example for 3, 5, 7, 9 stroke buzz rolls
+/// (and 4, 6, 8, 10 are just additions of taps, so that doesn't count in the calculations).
+/// A tap roll starts with a tap "T" rather than a buzz "B" but the subsequent strokes are buzzes.
+/// However, to reduce the gap, you make the tap half the duration of the subsequent buzz strokes,
+/// or rather, each buzz duration is twice as long as the tap duration.
+///
+/// So you take the "stroke" number 'S', which works like 'X'
+/// T = S * (Z/Y)
+/// and then
+/// B = T/2
+///
+/// So, for a 5 stroke roll, taking a duration of 3 24th notes (same as an 8th note), you'd have
+/// T = 5 * (24/3)  ==> 40th note for the tap, and then each buzz is a 20th note, and in snare notation
+/// it would be "40T 20z 20Z", or "40T 20z ."
+///
+///
 enum NoteArticulation {
   tenuto, // '_' small accent
   accent, // '>' normal accent

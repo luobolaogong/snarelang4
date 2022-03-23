@@ -147,33 +147,34 @@
 
 
 
-// ----------- Set 1 Exercise 7 is mixed accents
-// -----------
-// Sync
-4T
-/marker D
-4r 4r
-/marker U
-4r
-
-^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
-^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
-^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
-^8t t ^t t t ^t t ^t    ^t t ^t t t ^t ^t t
-
-// rpt, but faster
-//Sync
-//tempo 132
-4T
-/marker D
-4r 4r
-/marker U
-4r
-
-^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
-^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
-^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
-^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
+//// ----------- Set 1 Exercise 7 is mixed accents
+//// ----------- This is of questionable value for us
+//// ----------- since the previous exercise is similar.
+//// Sync
+//4T
+///marker D
+//4r 4r
+///marker U
+//4r
+//
+//^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
+//^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
+//^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
+//^8t t ^t t t ^t t ^t    ^t t ^t t t ^t ^t t
+//
+//// rpt, but faster
+////Sync
+////tempo 132
+//4T
+///marker D
+//4r 4r
+///marker U
+//4r
+//
+//^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
+//^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
+//^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
+//^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
 
 
 //////  SET 2  ////////
@@ -196,6 +197,9 @@
 8z z z z z z z z
 12Z Z Z  Z Z Z  Z Z Z  Z Z Z
 12z z z  z z z  z z z  z z z
+// New:
+24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
 
 
 // ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
@@ -316,12 +320,12 @@
 /marker TapRlShrt
 ^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^8T
 ^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
-^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^8T
+^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z
 ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^8T
 
 ^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
 ^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^8T
-^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
+^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z
 ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
 
 //^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^8T
@@ -333,6 +337,7 @@
 //^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^8T
 //^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z
 //^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z
+
 
 
 
@@ -450,8 +455,17 @@
 
 
 // FILL THIS IN LATER
-// FILL THIS IN LATER
-// FILL THIS IN LATER
+// How about 3 stroke roll development?  Nice, but we don't have any in our music
+4T 4r . .
+^24T t >T  ^24T t >T  ^24T t >T  ^8T     ^36T 18z >24T   ^36T 18z >24T   ^36T 18z >24T   ^8T
+^24t T >t  ^24t T >t  ^24t T >t  ^8t     ^36t 18Z >24t   ^36t 18Z >24t   ^36t 18Z >24t   ^8t
+^24T t >T  ^24t T >t  ^24T t >T  ^8t     ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t
+^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36T 18z >24T   ^36t 18Z >24t   ^8t
+
+// Maybe should do that silly black bear thing here
+// 10 stroke roll stuff?
+
+
 // 5:16
 // More roll stuff.  Need pickup rolls, off beat rolls, mixed and tap, and no tap, and maybe 3 Camps
 //24z . .  8T 24z . . 8T . 8r 24Z . .  . . . 8T
@@ -1063,7 +1077,7 @@ _12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
 
 // ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
 // ----------- while snares improv within 24th notes.
-// -----------
+// ----------- Probably need to change these rhythms so easier to understand
 /mf
 _12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
 _12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
@@ -1144,25 +1158,25 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 
 
 
-// ----------- Set 1 Exercise 7 is mixed accents
-// -----------
-// Sync
-4N 4r . .
-
-_8N N _N N N _N N _N   _n n _n n n _n _n N
-_8N N _N N N _N N _N    _N N _N N N _N _N n
-_8n n _n n n _n n _n    _N N _N N N _N _N n
-_8n n _n n n _n n _n    _n n _n n n _n n _n
-
-// rpt, but faster
-//Sync
-//tempo 132
-4N 4r . .
-
-_8N N _N N N _N N _N   _n n _n n n _n _n N
-_8N N _N N N _N N _N    _N N _N N N _N _N n
-_8n n _n n n _n n _n    _N N _N N N _N _N n
-_8n n _n n n _n n _n    _n n _n n n _n n _n
+//// ----------- Set 1 Exercise 7 is mixed accents
+//// -----------
+//// Sync
+//4N 4r . .
+//
+//_8N N _N N N _N N _N   _n n _n n n _n _n N
+//_8N N _N N N _N N _N    _N N _N N N _N _N n
+//_8n n _n n n _n n _n    _N N _N N N _N _N n
+//_8n n _n n n _n n _n    _n n _n n n _n n _n
+//
+//// rpt, but faster
+////Sync
+////tempo 132
+//4N 4r . .
+//
+//_8N N _N N N _N N _N   _n n _n n n _n _n N
+//_8N N _N N N _N N _N    _N N _N N N _N _N n
+//_8n n _n n n _n n _n    _N N _N N N _N _N n
+//_8n n _n n n _n n _n    _n n _n n n _n n _n
 
 
 
@@ -1183,6 +1197,9 @@ _4n
 8n n n n n n n n
 12N N N  N N N  N N N  N N N
 12n n n  n n n  n n n  n n n
+// New:
+24N . . . . .   24N . . . . .   24N . . . . .   24N . . . . .
+24N . . . . .   24N . . . . .   24N . . . . .   24N . . . . .
 
 
 
@@ -1190,7 +1207,7 @@ _4n
 
 // ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
 // -----------
-_4N
+8N 8r
 4r
 4r
 4r
@@ -1206,7 +1223,7 @@ _24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
 
 // ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
 // -----------
-_4N
+_8N 8r
 4r
 .
 .
@@ -1214,7 +1231,7 @@ _4N
 8N . . .  24N . .  . . .  . . .  . . .
 8N . . .  24N . .  . . .  . . .  . . .
 8N . . .  24N . .  . . .  . . .  . . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
+24N . .  . . .  . . .  . . .      . . .  . . .  . . .  . . .
 
 
 
@@ -1236,7 +1253,7 @@ _24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
 // new stuff
 // ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
 // -----------
-_4N
+8N 8r
 4r
 .
 .
@@ -1411,6 +1428,18 @@ _4N
 //8r 8n 4N 8n 4N 8n
 //4N . 8N 4n 8N
 //8r 8n 4N 8n 4N 8n
+
+
+// FILL THIS IN LATER
+// How about 3 stroke roll development?  Nice, but we don't have any in our music
+4r . . .
+8N . . .  12N 24n  12N 24n  12N 24n  8N
+8N . . .  12N 24n  12N 24n  12N 24n  8N
+8N . . .  12N 24n  12N 24n  12N 24n  12N 24n
+12N 24n  12N 24n  12N 24n  12N 24n 12N 24n  12N 24n  12N 24n  8N
+
+// Maybe should do that silly black bear thing here
+// 10 stroke roll stuff?
 
 
 ///////////// 12-24  12-24  12-24  12-24  //////////////
@@ -1808,25 +1837,25 @@ _4N
 
 
 
-// ----------- Set 1 Exercise 7 is mixed accents
-// -----------
-// Sync
-4B 4r . .
-
-4B . 8r 4B 8B   4B . 8r 8B 4B
-4B . 8r 4B 8B   4B . 8r 8B 4B
-4B . 8r 4B 8B   4B . 8r 8B 4B
-4B . 8r 4B 8B   4B . 8r 4B 8B
-
-// rpt, but faster
-//Sync
-//tempo 132
-4B 4r . .
-
-4B . 8r 4B 8B   4B . 8r 8B 4B
-4B . 8r 4B 8B   4B . 8r 8B 4B
-4B . 8r 4B 8B   4B . 8r 8B 4B
-4B . 8r 4B 8B   4B . 8r 4B 8B
+//// ----------- Set 1 Exercise 7 is mixed accents
+//// -----------
+//// Sync
+//4B 4r . .
+//
+//4B . 8r 4B 8B   4B . 8r 8B 4B
+//4B . 8r 4B 8B   4B . 8r 8B 4B
+//4B . 8r 4B 8B   4B . 8r 8B 4B
+//4B . 8r 4B 8B   4B . 8r 4B 8B
+//
+//// rpt, but faster
+////Sync
+////tempo 132
+//4B 4r . .
+//
+//4B . 8r 4B 8B   4B . 8r 8B 4B
+//4B . 8r 4B 8B   4B . 8r 8B 4B
+//4B . 8r 4B 8B   4B . 8r 8B 4B
+//4B . 8r 4B 8B   4B . 8r 4B 8B
 
 
 
@@ -1844,17 +1873,20 @@ _4N
 // -----------
 4B . . .
 4B . . .
+8B . . . . . . .
+8B . . . . . . .
 4B . . .
 4B . . .
-4B . . .
-4B . . .
+// New:
+8B . . . . . . .
+8B . . . . . . .
 
 
 
 
 // ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
 // -----------
-_4N
+4r
 4r
 4r
 4r
@@ -1902,7 +1934,7 @@ _4N
 // ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
 // -----------
 //Sync
-4B
+4r
 4r
 .
 .
@@ -2077,6 +2109,16 @@ _4N
 //2B 8B 4b 8r
 //4r 4B 8B 4b 8r
 
+// FILL THIS IN LATER
+// How about 3 stroke roll development?  Nice, but we don't have any in our music
+4r . . .
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+// Maybe should do that silly black bear thing here
+// 10 stroke roll stuff?
 
 ///////////// 12-24  12-24  12-24  12-24  //////////////
 ///////////// 12-24  12-24  12-24  12-24  //////////////
@@ -2496,30 +2538,30 @@ _4N
 
 
 
-// ----------- Set 1 Exercise 7 is mixed accents
-// -----------
-// Sync
-^8M M ^M M M ^M M ^M
-
-4M . . .   . . . .
-4M . . .   . . . .
-4M . . .   . . . .
-4M . . .   . . . .
-
-
-
-
-
-
-
-// rpt, but faster, bump it up by 12
-/tempo 132
-^8M M ^M M M ^M M ^M
-
-4M . . .   . . . .
-4M . . .   . . . .
-4M . . .   . . . .
-4M . . .   . . . .
+//// ----------- Set 1 Exercise 7 is mixed accents
+//// -----------
+//// Sync
+//^8M M ^M M M ^M M ^M
+//
+//4M . . .   . . . .
+//4M . . .   . . . .
+//4M . . .   . . . .
+//4M . . .   . . . .
+//
+//
+//
+//
+//
+//
+//
+//// rpt, but faster, bump it up by 12
+///tempo 132
+//^8M M ^M M M ^M M ^M
+//
+//4M . . .   . . . .
+//4M . . .   . . . .
+//4M . . .   . . . .
+//4M . . .   . . . .
 
 
 
@@ -2534,23 +2576,21 @@ _4N
 // -----------
 //Sync
 //>8M . >8M . >8M >. >8M .
-/f /decresc >96M . . . . . . . /p  24r
-8r
-/f /decresc >96M . . . . . . . /p  24r
-8r
+/f /decresc >96M . . . . . . . /p  24r  8r
+/f /decresc >96M . . . . . . . /p  24r  8r
 /f /decresc >96M . . . . . . . /p  24r
 /f /decresc >96M . . . . . . . /p  24r
-/f /decresc >96M . . . . . . . /p  24r
-8r
-
-
+/f /decresc >96M . . . . . . . /p  24r 8r
 
 >8M . >8M . >8M . >8M .
 >8M . >8M . >8M . >8M .
->8M . >8M . >8M . >8M .
->8M . >8M . >8M . >8M .
->8M . >8M . >8M . >8M .
->8M . >8M . >8M . >8M .
+>8M >. >8M >. >8M >. >8M >.
+>8M >. >8M >. >8M >. >8M >.
+>12M . .  >12M . .  >12M . .  >12M . .
+>12M . .  >12M . .  >12M . .  >12M . .
+// New:
+>8M >. >8M >. >8M >. >8M >.
+>8M >. >8M >. >8M >. >8M >.
 
 
 // ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
@@ -2742,8 +2782,9 @@ _8M . _8M . _8M . _8M .
 // ----------- Set 2 Exercise 7 is 5 stroke Tap Rolls soft
 // -----------
 //Sync
+/mf
 ^24M . . ^. . .  ^. . . ^. . . ^8M . ^. .
-
+/mp
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -2788,6 +2829,18 @@ _8M . _8M . _8M . _8M .
 //4M . . .
 //4M . . .
 //4M . . .
+
+// FILL THIS IN LATER
+// How about 3 stroke roll development?  Nice, but we don't have any in our music
+>12M 24M >12M 24M >12M 24M >8M   >24M . >.  >. . >.  >. . >.  >8M
+8M . . .  . . . .
+8M . . .  . . . .
+8M . . .  . . . .
+8M . . .  . . . .
+
+
+// Maybe should do that silly black bear thing here
+// 10 stroke roll stuff?
 
 ///////////// 12-24  12-24  12-24  12-24  //////////////
 ///////////// 12-24  12-24  12-24  12-24  //////////////

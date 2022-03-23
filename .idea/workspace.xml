@@ -19,19 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Keep rearranging and shortening.">
-      <change afterPath="$PROJECT_DIR$/tunes/BanjoBreakdownGeneralJigDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/GeneralJigDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/JigSetGeneralJigDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/RowanTreeScotBrave2xJL24MassedBandsDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/SkymansJigDrums.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Updates for St. Patrick's Day.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/warmups/1224s.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/warmups/1224s.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CameronianRantDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CameronianRantDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/ReelSetDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ReelSetDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/RowanTreeJL24MassedBandsDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/RowanTreeJL24MassedBandsDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/ScotlandTheBrave2XMassedBands24Drums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/ScotlandTheBrave2XMassedBands24Drums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +76,7 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.JackLee">
+  <component name="RunManager" selected="Dart Command Line App.WarmUpsSets">
     <configuration name="1224s" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i exercises/warmups/1224s.snl -o midifiles/1224s.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -148,6 +139,11 @@
     </configuration>
     <configuration name="BluecoatsWarmupsForYoungSnares" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i exercises/warmups/BluecoatsForMauiPipeBand.snl -o midifiles/Bluecoats.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Boneshaker" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/BoneshakerDrums.snl -o midifiles/BoneshakerDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -526,6 +522,7 @@
       <item itemvalue="Dart Command Line App.8s" />
       <item itemvalue="Dart Command Line App.AmazingGraceDrums" />
       <item itemvalue="Dart Command Line App.BanjoBreakdown" />
+      <item itemvalue="Dart Command Line App.Boneshaker" />
       <item itemvalue="Dart Command Line App.BarrenRocks" />
       <item itemvalue="Dart Command Line App.BattleOfWaterloo" />
       <item itemvalue="Dart Command Line App.BattleWaterMcWhirter" />
@@ -924,14 +921,7 @@
       <workItem from="1646345036586" duration="707000" />
       <workItem from="1646504829577" duration="673000" />
       <workItem from="1646702696050" duration="1944000" />
-      <workItem from="1646790074664" duration="13521000" />
-    </task>
-    <task id="LOCAL-00061" summary="Added a few new files, but also changed default&#10;dynamic level to mf.">
-      <created>1607670045484</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1607670045485</updated>
+      <workItem from="1646790074664" duration="35326000" />
     </task>
     <task id="LOCAL-00062" summary="Adjusted embellishment shifts for x/2 time.  &#10;Not sure how x/8 time works.  Plus added a few more&#10;from volume 2.">
       <created>1607844882955</created>
@@ -1269,7 +1259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645949561950</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Updates for St. Patrick's Day.">
+      <created>1647931060508</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1647931060534</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1288,7 +1285,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Just a kinda time stamp on files.  Not really doing anything &#10;as planned." />
     <MESSAGE value="Mostly worked on the TapRolls thing." />
     <MESSAGE value="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded." />
     <MESSAGE value="Slowly working on Cameronian Rant." />
@@ -1313,13 +1309,14 @@
     <MESSAGE value="End of day, swapped 2 and 3.  Syncs off in 3rd set." />
     <MESSAGE value="Keep rearranging." />
     <MESSAGE value="Keep rearranging and shortening." />
-    <option name="LAST_COMMIT_MESSAGE" value="Keep rearranging and shortening." />
+    <MESSAGE value="Updates for St. Patrick's Day." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates for St. Patrick's Day." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1646164550717">
+    <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647981510958">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1646164550717" />
+    <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1647981510958" />
     <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1644213811391">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -1328,26 +1325,30 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1644256580683" />
-    <state width="2584" height="242" key="GridCell.Tab.0.bottom" timestamp="1646337885946">
+    <state width="3411" height="242" key="GridCell.Tab.0.bottom" timestamp="1648016066054">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2584" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1646337885946" />
-    <state width="2584" height="242" key="GridCell.Tab.0.center" timestamp="1646337885940">
+    <state width="3411" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1648016066054" />
+    <state width="3411" height="242" key="GridCell.Tab.0.center" timestamp="1648016066053">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2584" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1646337885940" />
-    <state width="2584" height="242" key="GridCell.Tab.0.left" timestamp="1646337885929">
+    <state width="3411" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1648016066053" />
+    <state width="3411" height="242" key="GridCell.Tab.0.left" timestamp="1648016066053">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2584" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1646337885929" />
-    <state width="2584" height="242" key="GridCell.Tab.0.right" timestamp="1646337885940">
+    <state width="3411" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1648016066053" />
+    <state width="3411" height="242" key="GridCell.Tab.0.right" timestamp="1648016066053">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="2584" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1646337885940" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1645858933066">
+    <state width="3411" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1648016066053" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1647931073949">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1645858933066" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1647931073949" />
+    <state x="1899" y="768" width="587" height="502" key="find.popup" timestamp="1647984234580">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1899" y="768" width="587" height="502" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1647984234580" />
     <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup" timestamp="1645645874151">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
