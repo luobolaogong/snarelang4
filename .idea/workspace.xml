@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Updates for St. Patrick's Day.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Adding and subtracting from warmups.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -921,14 +920,7 @@
       <workItem from="1646345036586" duration="707000" />
       <workItem from="1646504829577" duration="673000" />
       <workItem from="1646702696050" duration="1944000" />
-      <workItem from="1646790074664" duration="35326000" />
-    </task>
-    <task id="LOCAL-00062" summary="Adjusted embellishment shifts for x/2 time.  &#10;Not sure how x/8 time works.  Plus added a few more&#10;from volume 2.">
-      <created>1607844882955</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1607844882955</updated>
+      <workItem from="1646790074664" duration="63094000" />
     </task>
     <task id="LOCAL-00063" summary="Added one or two new workouts, started working on fixing embellishments, but not done.">
       <created>1607925826075</created>
@@ -1266,7 +1258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647931060534</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Adding and subtracting from warmups.">
+      <created>1648016090659</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1648016090659</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1285,7 +1284,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mostly worked on the TapRolls thing." />
     <MESSAGE value="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded." />
     <MESSAGE value="Slowly working on Cameronian Rant." />
     <MESSAGE value="Score close to final." />
@@ -1310,7 +1308,8 @@
     <MESSAGE value="Keep rearranging." />
     <MESSAGE value="Keep rearranging and shortening." />
     <MESSAGE value="Updates for St. Patrick's Day." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates for St. Patrick's Day." />
+    <MESSAGE value="Adding and subtracting from warmups." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding and subtracting from warmups." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647981510958">
@@ -1325,22 +1324,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1644256580683" />
-    <state width="3411" height="242" key="GridCell.Tab.0.bottom" timestamp="1648016066054">
+    <state width="3411" height="242" key="GridCell.Tab.0.bottom" timestamp="1648106231530">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3411" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1648016066054" />
-    <state width="3411" height="242" key="GridCell.Tab.0.center" timestamp="1648016066053">
+    <state width="3411" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1648106231530" />
+    <state width="3411" height="242" key="GridCell.Tab.0.center" timestamp="1648106231529">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3411" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1648016066053" />
-    <state width="3411" height="242" key="GridCell.Tab.0.left" timestamp="1648016066053">
+    <state width="3411" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1648106231529" />
+    <state width="3411" height="242" key="GridCell.Tab.0.left" timestamp="1648106231529">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3411" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1648016066053" />
-    <state width="3411" height="242" key="GridCell.Tab.0.right" timestamp="1648016066053">
+    <state width="3411" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1648106231529" />
+    <state width="3411" height="242" key="GridCell.Tab.0.right" timestamp="1648106231530">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3411" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1648016066053" />
+    <state width="3411" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1648106231530" />
     <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1647931073949">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
