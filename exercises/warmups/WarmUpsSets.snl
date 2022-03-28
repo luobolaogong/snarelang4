@@ -68,6 +68,155 @@
 
 
 
+//Tap roll development should focus on the first buzz after the tap.  Mostly 3
+//stroke development, then 5.  Anything longer requires proper pulse speeds
+//which can often not be based on 12ths or 8ths.  But after 3 stroke rolls,
+//can then work on how to use some longer ones, like 5's and even 7's.
+
+// Consider integrating tap rolls with regular buzz rolls in development.
+
+// There really should be a new rudiment, similar to a flam, where there's an
+// absolute, not relative, timing between two notes.  For a flam, the grace note
+// timing prior to the principle note is absolute, and it does not depend on the
+// tempo.  That also means that two flams together cannot go faster than a certain
+// tempo without changing the sounnd of the flams into 4 equally spaced notes, or worse.
+// Similarly, the space between the tap, and the first buzz of a tap roll may need
+// to also be absolute and not dependent upon tempo.  Maybe like a reverse flam where
+// the first note is the principle, and the first buzz comes after it with a timing
+// about the same as a flam's timing from grace to principle.
+//
+// I need to record this new rudiment, because I can't simulate it unless I always
+// know the tempo.
+
+// One possibility for 3 stroke tap rolls, though maybe long and boring...
+// The buzzes might be a little short in duration and maybe should start after a shorter gap
+// Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes
+
+/tempo 72
+
+
+// 3 stroke tap roll, simulated
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p
+/ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p /ff ^8T
+// Same thing, but reverse hand order, to give left hand equal time:
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^24t /> 60T T T T T /p
+/ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^8t
+
+// 4 stroke tap roll, simulated
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
+/ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^24T t ^T        /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^24T /> 72t t t /p /ff ^24T
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
+/ff ^24t /> 72T T T /p /ff ^24t     /ff ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^8t
+
+/ff
+// 5 stroke tap rolls, not simulated
+^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .     ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+
+
+
+4T . . .
+
+// Different speed, based on 12th note tempo
+// This sounds okay, but it's not simulated.  Should it be?  Is simulated better for learning?  Maybe because it's faster, it's okay, because previously was simulated
+^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z
+^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z    ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+
+^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z
+^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+
+
+4T . . .
+
+
+
+
+
+
+
+
+
+
+4T . . .
+
+// This answers the question about how different tap roll lengths might fit into some music...
+// All this roll stuff is based on what sounds right at a particular tempo.
+// At fast temp it would be different.
+
+// Essentially 12th notes.  Must develop into something musical and timing exercise.
+^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z // "3 stroke"
+^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z
+
+^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t  // "4 stroke"
+^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+
+^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .   // "5 stroke"
+^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+
+// Back on beat every 3 cycles.
+^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t  // "6 stroke"
+^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+
+
+// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
+^42T 21z . .   ^42T 21z . .   ^42T 21z . .     // "7 stroke"
+^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+
+
+//// Really, probably don't need to focus on anything longer than a 7 stroke roll.
+//// So forget about the following for practice.
+//// The focus really is on the first few buzzes after the tap.
+//// doesn't sound good
+//^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t   // "8 stroke"
+//^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t
+//
+//// huh?  hand order?
+//^36T 18z . . .   ^36t 18Z . . .   ^36T 18z . . .   ^36t 18Z . . .      // "9 stroke", but with gap between tap and first buzz
+//^36T 18z . . .   ^36t 18Z . . .   ^36T 18z . . .   ^36t 18Z . . .
+//
+////^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   // "10 stroke with gap after tap"
+////^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t
+//
+//// Maybe hard to play accurately because the last 24th is not in time with the 108:5 pulse
+//^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t  // "10 stroke"
+//^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t
+
+
+/ff
+// This is the rhythm foundation for doing some roll combinations, maybe
+8T 16 8 8 16 8 8 16 8 16   8T 16 8 8 16 8 8 16 8 16
+6T . 12 6 6 6 12   6T . 12 6 6 6 12   6T . 12 6 6 6 12
+
+// huh?
+//16:3T 18 16 16:3 . 8 16   16:3T 18 16 16:3 . 8 16   16:3T 18 16 16:3 . 8 16
+
+
+^12T . ^. . . ^. . . ^.    ^12T . ^. . . ^. . . ^.    ^12T . ^. . . ^. . . ^.    ^12T . ^. . . ^. . . ^.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -204,441 +353,54 @@
 /marker U
 4r
 
-// Simulate loose buzzes, and tightening up?  Like quart note buzz should last a quarter note, not a 16th
-//4Z Z Z Z
-//4z z z z
-//8Z Z Z Z Z Z Z Z
-//8z z z z z z z z
-//12Z Z Z  Z Z Z  Z Z Z  Z Z Z
-//12z z z  z z z  z z z  z z z
-// New:  Why does this sound so bad?  Should be smooth:
-//24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-//24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-
-
-// Simulate loose buzzes, and tightening up?  Like quart note buzz should last a quarter note, not a 16th
+// Simulate loose buzzes.
+//
 // QUARTER NOTE BUZZES RIGHT HAND  1 bar of 4/4
-/ff
-/decresc 48T T T T T T   T T T T T T
-/ppp
-/ff
-/decresc 48T T T T T T   T T T T T T
-/ppp
-/ff
-/decresc 48T T T T T T   T T T T T T
-/ppp
-/ff
-/decresc 48T T T T T T   T T T T T T
-/ppp
+/ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp
 
 // QUARTER NOTE BUZZES LEFT HAND, 1 bar 4/4
-/ff
-/decresc 48t t t t t t   t t t t t t
-/ppp
-/ff
-/decresc 48t t t t t t   t t t t t t
-/ppp
-/ff
-/decresc 48t t t t t t   t t t t t t
-/ppp
-/ff
-/decresc 48t t t t t t   t t t t t t
-/ppp
+/ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp
 
 // EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-/ff
-/decresc 48T T T T T T
-/p
-/ff
-/decresc 48t t t t t t
-/p
-/ff
-/decresc 48T T T T T T
-/p
-/ff
-/decresc 48t t t t t t
-/p
-/ff
-/decresc 48T T T T T T
-/p
-/ff
-/decresc 48t t t t t t
-/p
-/ff
-/decresc 48T T T T T T
-/p
-/ff
-/decresc 48t t t t t t
-/p
-
-/ff
-/decresc 48T T T T T T
-/p
-/ff
-/decresc 48t t t t t t
-/p
-/ff
-/decresc 48T T T T T T
-/p
-/ff
-/decresc 48t t t t t t
-/p
-/ff
-/decresc 48T T T T T T
-/p
-/ff
-/decresc 48t t t t t t
-/p
-/ff
-/decresc 48T T T T T T
-/p
-/ff
-/decresc 48t t t t t t
-/p
-
+/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
+/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
+/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
+/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
 
 // TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-/ff
-//12Z . . . . . . . . . . .
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
 
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-
-
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-/ff
-/decresc 48T T T T
-/mp
-/ff
-/decresc 48t t t t
-/mp
-
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
 
 // SIXTEENTH NOTE BUZZES, 2 bar 4/4
-//16Z . . .   . . . .   . . . .   . . . .
-
-
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-
-
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-/ff
-/decresc 64T T T T
-/mf
-/ff
-/decresc 64t t t t
-/mf
-
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 
 // TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
-//24Z . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-
-
-
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-/ff
-/decresc 72T T T
-/f
-/ff
-/decresc 72t t t
-/f
-
-
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
 
 
 // ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
@@ -780,10 +542,23 @@
 
 
 
+
+
+
+// --------- Set 2 Exercise 4.1 playing with different tap roll durations --
+
+/marker D
+4r
+4r
+4r
+/marker U
+4r
+
+
 // All this roll stuff is based on what sounds right at a particular tempo.
 // At fast temp it would be different.
 
-// Essentially 12th notes
+// Essentially 12th notes.  Must develop into something musical and timing exercise.
 ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z // "3 stroke"
 ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z
 
@@ -822,81 +597,6 @@
 // Maybe hard to play accurately because the last 24th is not in time with the 108:5 pulse
 ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t  // "10 stroke"
 ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t
-
-
-
-
-
-
-
-
-
-
-
-// back on beat every 3 beats, or every line.  Every fourth cycle.  So 4 lines is 3 bars, I think.  12 counts.
-//^32T 16z  ^32T 16z  ^32T 16z  ^32T 16z // 3 stroke
-//^32T 16z  ^32T 16z  ^32T 16z  ^32T 16z
-//^32T 16z  ^32T 16z  ^32T 16z  ^32T 16z
-//^32T 16z  ^32T 16z  ^32T 16z  ^32T 16z
-
-
-// cut it back by 2/7  This one doesn't repeat well
-//^40T 20z . .   ^40T 20z . .   ^40T 20z . .   ^40T 20z . .       // "7 stroke"
-//^40T 20z . .   ^40T 20z . .   ^40T 20z . .   ^40T 20z . .
-//^40T 20z . .   ^40T 20z . .   ^40T 20z . .   ^40T 20z . .
-//^40T 20z . .   ^40T 20z . .   ^40T 20z . .   ^40T 20z . .
-// cut it back by 1/7  doesn't cycle well
-//^48T 24z . .   ^48T 24z . .   ^48T 24z . .   ^48T 24z . .     // "7 stroke"
-//^48T 24z . .   ^48T 24z . .   ^48T 24z . .   ^48T 24z . .
-//^48T 24z . .   ^48T 24z . .   ^48T 24z . .   ^48T 24z . .
-//^48T 24z . .   ^48T 24z . .   ^48T 24z . .   ^48T 24z . .
-
-// too fast
-//^56T 28z . .   ^56T 28z . .   ^56T 28z . .   ^56T 28z . .  // "7 stroke"
-//^56T 28z . .   ^56T 28z . .   ^56T 28z . .   ^56T 28z . .
-//^56T 28z . .   ^56T 28z . .   ^56T 28z . .   ^56T 28z . .
-//^56T 28z . .   ^56T 28z . .   ^56T 28z . .   ^56T 28z . .
-
-
-// cut back by 2/5 cycle??????????????   This probably doesn't cycle
-//^42T 21z . . ^24T   ^42t 21Z . . ^24t  ^42T 21z . . ^24T   ^42t 21Z . . ^24t  // "8 stroke"
-//^42T 21z . . ^24T   ^42t 21Z . . ^24t  ^42T 21z . . ^24T   ^42t 21Z . . ^24t
-//^42T 21z . . ^24T   ^42t 21Z . . ^24t  ^42T 21z . . ^24T   ^42t 21Z . . ^24t
-//^42T 21z . . ^24T   ^42t 21Z . . ^24t  ^42T 21z . . ^24T   ^42t 21Z . . ^24t
-
-
-// cut back by 1/5 doesn't cycle???????????
-//^56T 28z . . ^32T   ^56t 28Z . . ^32t   ^56T 28z . . ^32T   ^56t 28Z . . ^32t  // "8 stroke"
-//^56T 28z . . ^32T   ^56t 28Z . . ^32t   ^56T 28z . . ^32T   ^56t 28Z . . ^32t
-//^56T 28z . . ^32T   ^56t 28Z . . ^32t   ^56T 28z . . ^32T   ^56t 28Z . . ^32t
-//^56T 28z . . ^32T   ^56t 28Z . . ^32t   ^56T 28z . . ^32T   ^56t 28Z . . ^32t
-
-
-
-// too fast
-//^70T 35z . . ^40T   ^70t 35Z . . ^40t   ^70T 35z . . ^40T   ^70t 35Z . . ^40t  // "8 stroke"
-//^70T 35z . . ^40T   ^70t 35Z . . ^40t   ^70T 35z . . ^40T   ^70t 35Z . . ^40t
-//^70T 35z . . ^40T   ^70t 35Z . . ^40t   ^70T 35z . . ^40T   ^70t 35Z . . ^40t
-//^70T 35z . . ^40T   ^70t 35Z . . ^40t   ^70T 35z . . ^40T   ^70t 35Z . . ^40t
-
-// too fast
-//^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   // "9 stroke"
-//^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .
-//^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .
-//^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .
-
-// sounds okay, quarter note triplets, which are 6th notes.  4 cycles in 3 beats!
-//^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   // "9 stroke" at 2/3 speed
-//^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   //
-//^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   //
-//^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   //
-
-// sounds okay, but when gets back on beat?  Repeats at 3/4 of a bar?  Too fast
-//^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   // "9 stroke" at 3/4 speed
-//^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   //
-//^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   //
-
-
 
 
 
@@ -1766,7 +1466,6 @@ _4n
 12N . .  . . .  . . .  . . .
 16N . . .  . . . .  . . . .   . . . .
 16N . . .  . . . .  . . . .   . . . .
-// New:
 24N . . . . .   24N . . . . .   24N . . . . .   24N . . . . .
 24N . . . . .   24N . . . . .   24N . . . . .   24N . . . . .
 
@@ -1895,6 +1594,21 @@ _8N 8r
 8N . . .  . . . .
 8N . . .  . . . .
 8N . . .  . . . .
+
+// --------- Set 2 Exercise 4.1 playing with different tap roll durations --
+1r
+4N . . .
+4N . . .
+4N . . .
+4N . . .
+4N . . .
+4N . . .
+4N . . .
+4N . . .
+4N . . .
+4N . . .
+
+
 
 
 
@@ -2448,7 +2162,6 @@ _4N
 4B . . .
 4B . . .
 4B . . .
-// New:
 8B . . . . . . .
 8B . . . . . . .
 
@@ -2573,7 +2286,18 @@ _4N
 2B .
 2B .
 
-
+// --------- Set 2 Exercise 4.1 playing with different tap roll durations --
+1r
+2B .
+2B .
+2B .
+2B .
+2B .
+2B .
+2B .
+2B .
+2B .
+2B .
 
 
 
@@ -3167,17 +2891,16 @@ _4N
 ///f /decresc >96M . . . . . . . /p  24r 8r
 /p
 /f
->8M . >8M . >8M . >8M .
->8M . >8M . >8M . >8M .
->8M >. >8M >. >8M >. >8M >.
->8M >. >8M >. >8M >. >8M >.
->12M . .  >12M . .  >12M . .  >12M . .
->12M . .  >12M . .  >12M . .  >12M . .
->8M >. >8M >. >8M >. >8M >.
->8M >. >8M >. >8M >. >8M >.
-// New:
->8M >. >8M >. >8M >. >8M >.
->8M >. >8M >. >8M >. >8M >.
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
 
 
 // ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
@@ -3309,8 +3032,18 @@ _8M . _8M . _8M . _8M .
 8M . . .  . . . .
 
 
-
-
+// --------- Set 2 Exercise 4.1 playing with different tap roll durations --
+4M . 12M . . . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
 
 
 
@@ -3711,6 +3444,297 @@ _4M _. _8M . _4M
 >4M . . .  _. . . .  _. . . .  _. . . .
 
 
+
+
+// Notes:
+
+
+
+
+
+
+
+// back on beat every 3 beats, or every line.  Every fourth cycle.  So 4 lines is 3 bars, I think.  12 counts.
+//^32T 16z  ^32T 16z  ^32T 16z  ^32T 16z // 3 stroke
+//^32T 16z  ^32T 16z  ^32T 16z  ^32T 16z
+//^32T 16z  ^32T 16z  ^32T 16z  ^32T 16z
+//^32T 16z  ^32T 16z  ^32T 16z  ^32T 16z
+
+
+// cut it back by 2/7  This one doesn't repeat well
+//^40T 20z . .   ^40T 20z . .   ^40T 20z . .   ^40T 20z . .       // "7 stroke"
+//^40T 20z . .   ^40T 20z . .   ^40T 20z . .   ^40T 20z . .
+//^40T 20z . .   ^40T 20z . .   ^40T 20z . .   ^40T 20z . .
+//^40T 20z . .   ^40T 20z . .   ^40T 20z . .   ^40T 20z . .
+// cut it back by 1/7  doesn't cycle well
+//^48T 24z . .   ^48T 24z . .   ^48T 24z . .   ^48T 24z . .     // "7 stroke"
+//^48T 24z . .   ^48T 24z . .   ^48T 24z . .   ^48T 24z . .
+//^48T 24z . .   ^48T 24z . .   ^48T 24z . .   ^48T 24z . .
+//^48T 24z . .   ^48T 24z . .   ^48T 24z . .   ^48T 24z . .
+
+// too fast
+//^56T 28z . .   ^56T 28z . .   ^56T 28z . .   ^56T 28z . .  // "7 stroke"
+//^56T 28z . .   ^56T 28z . .   ^56T 28z . .   ^56T 28z . .
+//^56T 28z . .   ^56T 28z . .   ^56T 28z . .   ^56T 28z . .
+//^56T 28z . .   ^56T 28z . .   ^56T 28z . .   ^56T 28z . .
+
+
+// cut back by 2/5 cycle??????????????   This probably doesn't cycle
+//^42T 21z . . ^24T   ^42t 21Z . . ^24t  ^42T 21z . . ^24T   ^42t 21Z . . ^24t  // "8 stroke"
+//^42T 21z . . ^24T   ^42t 21Z . . ^24t  ^42T 21z . . ^24T   ^42t 21Z . . ^24t
+//^42T 21z . . ^24T   ^42t 21Z . . ^24t  ^42T 21z . . ^24T   ^42t 21Z . . ^24t
+//^42T 21z . . ^24T   ^42t 21Z . . ^24t  ^42T 21z . . ^24T   ^42t 21Z . . ^24t
+
+
+// cut back by 1/5 doesn't cycle???????????
+//^56T 28z . . ^32T   ^56t 28Z . . ^32t   ^56T 28z . . ^32T   ^56t 28Z . . ^32t  // "8 stroke"
+//^56T 28z . . ^32T   ^56t 28Z . . ^32t   ^56T 28z . . ^32T   ^56t 28Z . . ^32t
+//^56T 28z . . ^32T   ^56t 28Z . . ^32t   ^56T 28z . . ^32T   ^56t 28Z . . ^32t
+//^56T 28z . . ^32T   ^56t 28Z . . ^32t   ^56T 28z . . ^32T   ^56t 28Z . . ^32t
+
+
+
+// too fast
+//^70T 35z . . ^40T   ^70t 35Z . . ^40t   ^70T 35z . . ^40T   ^70t 35Z . . ^40t  // "8 stroke"
+//^70T 35z . . ^40T   ^70t 35Z . . ^40t   ^70T 35z . . ^40T   ^70t 35Z . . ^40t
+//^70T 35z . . ^40T   ^70t 35Z . . ^40t   ^70T 35z . . ^40T   ^70t 35Z . . ^40t
+//^70T 35z . . ^40T   ^70t 35Z . . ^40t   ^70T 35z . . ^40T   ^70t 35Z . . ^40t
+
+// too fast
+//^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   // "9 stroke"
+//^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .
+//^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .
+//^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .   ^72T 36z . . .
+
+// sounds okay, quarter note triplets, which are 6th notes.  4 cycles in 3 beats!
+//^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   // "9 stroke" at 2/3 speed
+//^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   //
+//^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   //
+//^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   ^48T 24z . . .   //
+
+// sounds okay, but when gets back on beat?  Repeats at 3/4 of a bar?  Too fast
+//^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   // "9 stroke" at 3/4 speed
+//^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   //
+//^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   ^54T 27z . . .   //
+
+
+
+
+// 5 stroke tap roll, simulated
+//^24T . .   ^. . .   ^. . .   ^. . .   ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f   ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f
+//^24T . .   ^. . .   ^. . .   ^. . .   ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f   ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f
+//^24T . .   ^. . .   ^. . .   ^. . .   ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f   ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f
+//^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f   ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f    ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f   ^24T /ff /> 72t t t /f /ff /> 72T T T /f    ^24t /ff /> 72T T T /f /ff /> 72t t t /f
+
+
+// 5 bounces, prob best:
+/tempo 72
+/ff
+//  think this one sounds best... 5 bounces for this range of tempos
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+// But a 4 stroke uses only 3 bounces, is that enough?  Maybe 4 96ths?
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+// 4 stroke with 4 96ths in each hand.  No.  Too many
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 96t t t t /p /ff ^24T     ^24t /> 96T T T T /p /ff ^24t     ^24T /> 96t t t t /p /ff ^24T   ^8t
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 96t t t t /p /ff ^24T     ^24t /> 96T T T T /p /ff ^24t     ^24T /> 96t t t t /p /ff ^24T   ^8t
+// And the 5 stroke uses 3 bounces per hand/stroke.  Is that enough?
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+
+/tempo 60
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+// But a 4 stroke uses only 3 bounces, is that enough?  Maybe 4 96ths?
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+// And the 5 stroke uses 3 bounces per hand/stroke.  Is that enough?
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+
+/tempo 50
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+// But a 4 stroke uses only 3 bounces, is that enough?  Maybe 4 96ths?
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+// And the 5 stroke uses 3 bounces per hand/stroke.  Is that enough?
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+
+/tempo 40
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+// But a 4 stroke uses only 3 bounces, is that enough?  Maybe 4 96ths?
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+// And the 5 stroke uses 3 bounces per hand/stroke.  Is that enough? Wrong dynamics!!!!!!!!!!!!!!!!!!!!
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+
+
+
+// 5 bounces, prob best for some, and mayb 4 for others rather than 3?:
+/tempo 72
+/ff
+//  think this one sounds best... 5 bounces for this range of tempos
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+//// But a 4 stroke uses only 3 bounces, is that enough?  Maybe 4 96ths?
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+// 4 stroke with 4 96ths in each hand.  No?  Too many?
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 96t t t t /p /ff ^24T     ^24t /> 96T T T T /p /ff ^24t     ^24T /> 96t t t t /p /ff ^24T   ^8t
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 96t t t t /p /ff ^24T     ^24t /> 96T T T T /p /ff ^24t     ^24T /> 96t t t t /p /ff ^24T   ^8t
+// And the 5 stroke uses 3 bounces per hand/stroke.  Is that enough?
+/ff ^24T t T  ^24t T t T  ^24T t T  ^8t       /ff ^24T /> 96t t t t T T T T /p     /ff ^24t /> 96T T T T t t t t /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+/ff ^24T t T  ^24t T t T  ^24T t T  ^8t       /ff ^24T /> 96t t t t T T T T /p     /ff ^24t /> 96T T T T t t t t /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+
+/tempo 60
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+// But a 4 stroke uses only 3 bounces, is that enough?  Maybe 4 96ths?
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+// And the 5 stroke uses 3 bounces per hand/stroke.  Is that enough?
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+
+/tempo 50
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+// But a 4 stroke uses only 3 bounces, is that enough?  Maybe 4 96ths?
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+// And the 5 stroke uses 3 bounces per hand/stroke.  Is that enough?
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+
+/tempo 40
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+// But a 4 stroke uses only 3 bounces, is that enough?  Maybe 4 96ths?
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^8t       /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^8t
+// And the 5 stroke uses 3 bounces per hand/stroke.  Is that enough?
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72t t t T T T /p     /ff ^24T /> 72t t t T T T /p  /ff ^24T /> 72t t t T T T /p   /ff ^8t
+
+
+
+
+/tempo 72
+
+// 4 bounces, 5, 6
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T      /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+// this next is the best of the 3:
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+
+// 6 bounces:
+///ff
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+///tempo 60
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+///tempo 50
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+///tempo 40
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 72T T T T T T /p    /ff ^24T /> 72T T T T T T /p  /ff ^24T /> 72T T T T T T /p   /ff ^8T
+
+// 5 bounces, prob best:
+/tempo 72
+/ff
+//  think this one sounds best... 5 bounces for this range of tempos
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/tempo 60
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/tempo 50
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/tempo 40
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60T T T T T /p    /ff ^24T /> 60T T T T T /p  /ff ^24T /> 60T T T T T /p   /ff ^8T
+
+// 4 bounces:
+///tempo 72
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+///tempo 60
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+///tempo 50
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+///tempo 40
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+///ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 48T T T T /p    /ff ^24T /> 48T T T T /p  /ff ^24T /> 48T T T T /p   /ff ^8T
+
+
+// buzzes, not bounces
+/tempo 72
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+/tempo 60
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+/tempo 50
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+/tempo 40
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+
+
+
+/tempo 72
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24T t t  ^24T t t  ^24T t t  ^8T       ^24T 12z   ^24T 12z   ^24T 12z  ^24T 12z
+^24T 12z  ^24T 12z  ^24T 12z  ^24T 12z  ^24T 12z   ^24T 12z   ^24T 12z  ^8T
+
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+^24T t t  ^24T t t  ^24T t t  ^8T       ^24T 12z   ^24T 12z   ^24T 12z  ^8T
+^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^24t 12Z
+^24t 12Z  ^24t 12Z  ^24t 12Z  ^24t 12Z  ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+
+
+///ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^12T ^24T      /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^12T ^24t
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^12t ^24t      /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^12t ^24T
+///ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^12T ^24T      /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^24T /> 72t t t /p /ff ^24T
+///ff ^24t /> 72T T T /p /ff ^24t     /ff  ^24T /> 72t t t /p /ff ^24T    ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^8T
+
+//// 4 stroke tap roll, simulated
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^12t ^24t      /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^12t ^24T
+///ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^12T ^24T      /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^12T ^24t
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^12t ^24t      /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24T /> 72t t t /p /ff ^24T
+///ff ^24t /> 72T T T /p /ff ^24t     /ff ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^8t
+
+///ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^12T ^24T      /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^12T ^24t
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^12t ^24t      /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^12t ^24T
+///ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^12T ^24T      /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^24T /> 72t t t /p /ff ^24T
+///ff ^24t /> 72T T T /p /ff ^24t     /ff  ^24T /> 72t t t /p /ff ^24T    ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^8T
+
+
+//4T . . .
+//^36T t t  ^36T t t  ^36T t t  ^36T t t  ^36T t t   ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+//^36t T T  ^36t T T  ^36t T T  ^36t T T  ^36t T T   ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+//^36T t t  ^36T t t  ^36T t t  ^36T t t  ^36T t t   ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z
+//^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z    ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+
+//^36t T T  ^36t T T  ^36t T T  ^36t T T  ^36t T T   ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+//^36T t t  ^36T t t  ^36T t t  ^36T t t  ^36T t t   ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+//^36t T T  ^36t T T  ^36t T T  ^36t T T  ^36t T T   ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z
+//^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
 
 
 
