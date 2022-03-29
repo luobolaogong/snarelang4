@@ -10,7 +10,10 @@
 //
 // We unfortunately cannot afford to play these warm-up exercises for too long.
 // I'd guess we would have less than 10 minutes total for all sets combined.
-//
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// To make this less boring, give the tenors and bass more fun parts to play.
+// Something that makes people want to move their bodies.
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // Consider making this the first set.
 // Or maybe that tap stuff.  But that tap stuff also has Sanford in it,
 // and that would move us into 12-24, maybe.
@@ -32,7 +35,73 @@
 
 
 
-//////////////// SNARE SET 1 ////////////////////////
+//////////////// Experiment SNARE 2 Channel 3 SET 1 ////////////////////////
+/track snare
+/channel 3
+
+
+/time 4/4
+/tempo 72
+
+1r  // sync
+1r
+// Do double stop stuff to increase control, warm up, check heights.
+// 12th notes.
+512r   // offset
+/mf
+8t t t t t t t t
+8t t t t t t t t
+/cresc
+8t t t t t t t t
+/fff
+8t t t t t t t t
+12t t t t t t t t t t t t
+12t t t t t t t t t t t t
+12t t t t t t t t t t t t
+12t t t t t t t t t t t t
+
+
+
+//////////////// Experiment SNARE 3 Channel 7 SET 1 ////////////////////////
+/track snare
+/channel 7
+
+
+/time 4/4
+/tempo 72
+
+// Sync
+// One snare, or metronome, attention cue, and sync:
+///fff
+//^24T . . 8T  ^24T . . 8T  ^24T . . >. . .  24T . >. >8T
+
+//4T .
+/marker Dut
+//>8T >T >T >T
+
+1r
+1r
+// Do double stop stuff to increase control, warm up, check heights.
+// 12th notes.
+/mf
+8T T T T T T T T
+8T T T T T T T T
+/cresc
+8T T T T T T T T
+/fff
+8T T T T T T T T
+12T T T T T T T T T T T T
+12T T T T T T T T T T T T
+12T T T T T T T T T T T T
+12T T T T T T T T T T T T
+
+
+
+
+
+
+
+//////////////// SNARE 1 Channel 5 SET 1 ////////////////////////
 /track snare
 /channel 5
 
@@ -62,167 +131,11 @@
 /marker Dut
 //>8T >T >T >T
 
+1r . . .    . . . .
+
+// Do double stop stuff to increase control, warm up, check heights.
+// 12th notes.
 1r
-
-
-
-
-
-//Tap roll development should focus on the first buzz after the tap.  Mostly 3
-//stroke development, then 5.  Anything longer requires proper pulse speeds
-//which can often not be based on 12ths or 8ths.  But after 3 stroke rolls,
-//can then work on how to use some longer ones, like 5's and even 7's.
-
-// Consider integrating tap rolls with regular buzz rolls in development.
-
-// There really should be a new rudiment, similar to a flam, where there's an
-// absolute, not relative, timing between two notes.  For a flam, the grace note
-// timing prior to the principle note is absolute, and it does not depend on the
-// tempo.  That also means that two flams together cannot go faster than a certain
-// tempo without changing the sounnd of the flams into 4 equally spaced notes, or worse.
-// Similarly, the space between the tap, and the first buzz of a tap roll may need
-// to also be absolute and not dependent upon tempo.  Maybe like a reverse flam where
-// the first note is the principle, and the first buzz comes after it with a timing
-// about the same as a flam's timing from grace to principle.
-//
-// I need to record this new rudiment, because I can't simulate it unless I always
-// know the tempo.
-
-// One possibility for 3 stroke tap rolls, though maybe long and boring...
-// The buzzes might be a little short in duration and maybe should start after a shorter gap
-// Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes
-
-/tempo 72
-
-
-// 3 stroke tap roll, simulated
-/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
-/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
-/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p
-/ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p /ff ^8T
-// Same thing, but reverse hand order, to give left hand equal time:
-/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
-/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
-/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^24t /> 60T T T T T /p
-/ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^8t
-
-// 4 stroke tap roll, simulated
-/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
-/ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^24T t ^T        /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^24T /> 72t t t /p /ff ^24T
-/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
-/ff ^24t /> 72T T T /p /ff ^24t     /ff ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^8t
-
-/ff
-// 5 stroke tap rolls, not simulated
-^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .     ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-
-
-
-4T . . .
-
-// Different speed, based on 12th note tempo
-// This sounds okay, but it's not simulated.  Should it be?  Is simulated better for learning?  Maybe because it's faster, it's okay, because previously was simulated
-^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
-^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
-^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z
-^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z    ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
-
-^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
-^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
-^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z
-^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
-
-
-4T . . .
-
-
-
-
-
-
-
-
-
-
-4T . . .
-
-// This answers the question about how different tap roll lengths might fit into some music...
-// All this roll stuff is based on what sounds right at a particular tempo.
-// At fast temp it would be different.
-
-// Essentially 12th notes.  Must develop into something musical and timing exercise.
-^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z // "3 stroke"
-^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z
-
-^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t  // "4 stroke"
-^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
-
-^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .   // "5 stroke"
-^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-
-// Back on beat every 3 cycles.
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t  // "6 stroke"
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-
-
-// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .     // "7 stroke"
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-
-
-//// Really, probably don't need to focus on anything longer than a 7 stroke roll.
-//// So forget about the following for practice.
-//// The focus really is on the first few buzzes after the tap.
-//// doesn't sound good
-//^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t   // "8 stroke"
-//^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t
-//
-//// huh?  hand order?
-//^36T 18z . . .   ^36t 18Z . . .   ^36T 18z . . .   ^36t 18Z . . .      // "9 stroke", but with gap between tap and first buzz
-//^36T 18z . . .   ^36t 18Z . . .   ^36T 18z . . .   ^36t 18Z . . .
-//
-////^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   // "10 stroke with gap after tap"
-////^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t
-//
-//// Maybe hard to play accurately because the last 24th is not in time with the 108:5 pulse
-//^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t  // "10 stroke"
-//^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t
-
-
-/ff
-// This is the rhythm foundation for doing some roll combinations, maybe
-8T 16 8 8 16 8 8 16 8 16   8T 16 8 8 16 8 8 16 8 16
-6T . 12 6 6 6 12   6T . 12 6 6 6 12   6T . 12 6 6 6 12
-
-// huh?
-//16:3T 18 16 16:3 . 8 16   16:3T 18 16 16:3 . 8 16   16:3T 18 16 16:3 . 8 16
-
-
-^12T . ^. . . ^. . . ^.    ^12T . ^. . . ^. . . ^.    ^12T . ^. . . ^. . . ^.    ^12T . ^. . . ^. . . ^.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 4r 4r
@@ -339,410 +252,8 @@
 //^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
 
 
-//////  SET 2  ////////
-/time 4/4
-/tempo 72
-/f
-// ----------- Set 2 Exercise 0 is single pulse buzzes
-// -----------
-//Sync
-4T
-/marker D
-4r
-4r
-/marker U
-4r
 
-// Simulate loose buzzes.
-//
-// QUARTER NOTE BUZZES RIGHT HAND  1 bar of 4/4
-/ff /> 48T T T T T T   T T T T T T /ppp
-/ff /> 48T T T T T T   T T T T T T /ppp
-/ff /> 48T T T T T T   T T T T T T /ppp
-/ff /> 48T T T T T T   T T T T T T /ppp
-
-// QUARTER NOTE BUZZES LEFT HAND, 1 bar 4/4
-/ff /> 48t t t t t t   t t t t t t /ppp
-/ff /> 48t t t t t t   t t t t t t /ppp
-/ff /> 48t t t t t t   t t t t t t /ppp
-/ff /> 48t t t t t t   t t t t t t /ppp
-
-// EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-
-// TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-
-// SIXTEENTH NOTE BUZZES, 2 bar 4/4
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-
-// TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
-/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
-/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
-/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
-/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
-/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
-/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
-/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
-/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
-
-
-// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
-// -----------
-4T
-//marker Dwn
-4r
-4r
-//marker Up
-4r
-/mp
-/marker bzzPulses
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
-
-
-
-// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
-// -----------
-4T
-//marker Dwn
-4r
-4r
-//marker Up
-4r/mp
-/marker BzzNoPlse
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-
-// MAYBE GET RID OF ALL DYNAMIC EXERCISES FOR NOW TO MAKE THIS SHORTER
-// ----------- Set 2 Exercise 3 is cresc/decres rolls
-// -----------
-///marker BuzDyn
-///mp
-//24T . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
-//24T /ff  . . . . .    . . . . . .    /decresc 24Z . . . . .    . . . . . .
-//24T /mp . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
-//24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-//1T /ff
-
-
-
-
-
-// new stuff
-// ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
-// -----------
-4T
-//marker Dwn
-4r
-4r
-//marker Up
-4r
-24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
-24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
-24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-
-
-// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
-// -----------
-///mp /cresc 24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
-//24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-//24T /fff /decresc . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
-//24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-//4T /mp /f
-//marker Dwn
-//4r
-//4r
-//marker Up
-//4r
-
-// ----------- Set 2 Exercise 3.3 is development of 8th note rolls, starting left (3 pulse, or "7's")
-// -----------
-4T
-/marker D
-4r
-4r
-/marker U
-4r
-/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
-/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
-/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
-/fff 8T /f /cresc 24z . .  8T /fff /f /cresc 24z . .   8T /fff /f /cresc 24z . . 8T /fff /f /cresc 24z . .
-
-
-// ----------- Set 2 Exercise 3.4 is more 8th note rolls, starting right
-// -----------
-4T /fff /f
-/marker D
-4r
-4r
-/marker U
-4r
-/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t /fff /f /cresc 24Z . . 8t /fff
-/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t /fff /f /cresc 24Z . . 8t /fff
-/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t  24Z . . 8t
-          24Z . . 8t  24Z . . 8t  24Z . . 8t  24Z . . 8t /ff /f
-
-
-
-
-
-// ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
-// ----------- but it's fast enough to not have noticeable gaps
-/marker D
-4r
-4r
-4r
-/marker U
-4r
-// Make this better some how.  Maybe add dynamics.  But this should be more interesting.
-// switch hands too.  Actually this timing leaves a gap, not what I want.
-/marker TapRlShrt
-^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^8T
-^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
-^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z
-^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^8T
-
-^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
-^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^8T
-^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z
-^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
-
-//^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^8T
-//^24t T T   ^24t T T   ^24t T T   ^8t    ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-//^24t T T   ^24t T T   ^24t T T   ^8t    ^24t 12Z   ^24t 12Z   ^24t 12Z  ^24t 12Z
-//^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z   ^8T
-
-//^24t T T   ^24t T T   ^24t T T   ^8t    ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-//^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^8T
-//^24T t t   ^24T t t   ^24T t t   ^8T    ^24T 12z   ^24T 12z   ^24T 12z   ^24T 12z
-//^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z   ^24t 12Z
-
-
-
-
-
-
-
-// --------- Set 2 Exercise 4.1 playing with different tap roll durations --
-
-/marker D
-4r
-4r
-4r
-/marker U
-4r
-
-
-// All this roll stuff is based on what sounds right at a particular tempo.
-// At fast temp it would be different.
-
-// Essentially 12th notes.  Must develop into something musical and timing exercise.
-^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z // "3 stroke"
-^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z
-
-^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t  // "4 stroke"
-^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
-
-^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .   // "5 stroke"
-^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-
-// Back on beat every 3 cycles.
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t  // "6 stroke"
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-
-
-// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .     // "7 stroke"
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-
-// doesn't sound good
-^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t   // "8 stroke"
-^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t
-
-
-^36T 18z . . .   ^36T 18z . . .   ^36T 18z . . .   ^36T 18z . . .   // "9 stroke", but with gap between tap and first buzz
-^36T 18z . . .   ^36T 18z . . .   ^36T 18z . . .   ^36T 18z . . .
-
-
-
-//^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   // "10 stroke with gap after tap"
-//^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t
-
-// Maybe hard to play accurately because the last 24th is not in time with the 108:5 pulse
-^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t  // "10 stroke"
-^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t
-
-
-
-
-
-
-
-
-
-
-
-// How about some upbeat starting rolls?
-// Base it on this pattern, but not the 30th note parts, that's for elsewhere
-//
-//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
-//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
-//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
-//^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . .
-
-
-
-
-
-
-// ----------- Set 2 Exercise 5 is long Tap Rolls
-// -----------
-/marker TapRls
-4r
-/marker D
-4r
-4r
-/marker U
-4r
-/mf
-^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
-^44T 22z .  . . .    24Z . . . . .    ^44T 22z .  . . .    24Z . . . . .
-
-
-// ----------- Set 2 Exercise 6 is long Tap Rolls with Dynamics
-// -----------
-///marker TapRlsDyn
-///mp
-//^24T . . . . .    . . . . . .    /cresc ^44T 22z .  . . .    24Z . . . . .
-//^24T /ff . . . . .    . . . . . .  /decresc  ^44T 22z .  . . .    24Z . . . . .
-//^24T /mp . . . . .    . . . . . .   /cresc  ^44T 22z .  . . .    24Z . . . . .
-//^44T 22z .  . . .    24Z . . . . .    ^44T 22z .  . . .    24Z . . . . .
-
-
-
-// ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
-// -----------
-/marker TapRls2
-4T
-/marker D
-4r
-4r
-/marker U
-4r
-/mf
-^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
-^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
-^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
-^44T 22z .  . . .    ^44T 22z .  . . .   ^44T 22z .  . . .    ^44T 22z .  . . .
-
-
-// ----------- Set 2 Exercise 6.6 is shorter Tap Rolls with Dynamics
-// -----------
-///marker TapRlsDyn2
-///mp
-//^24T . . . . .    ^. . . . . .    /cresc ^44T 22z .  . . .    ^44T 22z .  . . .
-//^24T /ff . . . . .    ^. . . . . .  /decresc  ^44T 22z .  . . .    ^44T 22z .  . . .
-//^24T /mp . . . . .    ^. . . . . .   /cresc  ^44T 22z .  . . .    ^44T 22z .  . . .
-//^44T 22z .  . . .    ^44T 22z .  . . .      ^44T 22z .  . . .    24Z . . . . .
-
-
-
-
-// ----------- Set 2 Exercise 7 is 5 stroke Tap Rolls soft
-// -----------
-^4T
-/marker D
-4r
-4r
-/marker U
-4r
-/marker 5StrkSoft
-/mp
->24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
->24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
->24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
->40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
-/f
-
-// ----------- Set 2 Exercise 8 is 5 stroke Tap Rolls with Dynamics
-// -----------
-//4T
-//marker Dwn
-//4r
-//4r
-//marker Up
-//4r
-///marker 5StrkDyn
-///mp
-//>24T . . >. . .    >. . . >. . .   /cresc  >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
-//>24T /ff . . >. . .    >. . . >. . .   /decresc >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
-//>24T /mp . . >. . .    >. . . >. . .   /cresc >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
-//>40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
-
-//>4T /ff 4r . .
-
-// ----------- Set 2 Exercise 9 is 7 stroke roll something
-// kinda cool, but maybe too hard to memorize.
-// Still, it's kinda useful.
-// -----------
-///marker 7Strk
-//>8T 24t . .  >8T 24t . .   >8T >. 24T . . >8t
-//24T . . >8t   >8T 24t . .  >8T >.  24T . . >8t
-//>8T 24z . .  >8T 24z . .   >8T >. 24Z . . >8t
-//24Z . . >8t   >8T 24z . .  >8T >.  24Z . . >8t
-
-
-
-// FILL THIS IN LATER
-// How about 3 stroke roll development?  Nice, but we don't have any in our music
-4T 4r . .
-^24T t >T  ^24T t >T  ^24T t >T  ^8T     ^36T 18z >24T   ^36T 18z >24T   ^36T 18z >24T   ^8T
-^24t T >t  ^24t T >t  ^24t T >t  ^8t     ^36t 18Z >24t   ^36t 18Z >24t   ^36t 18Z >24t   ^8t
-^24T t >T  ^24t T >t  ^24T t >T  ^8t     ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t
-^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36T 18z >24T   ^36t 18Z >24t   ^8t
-
-// Maybe should do that silly black bear thing here
-// 10 stroke roll stuff?
-
-
-// 5:16
-// More roll stuff.  Need pickup rolls, off beat rolls, mixed and tap, and no tap, and maybe 3 Camps
-//24z . .  8T 24z . . 8T . 8r 24Z . .  . . . 8T
-//24Z . . . . .  8T  24Z . . 8t  24Z . . . . .  24T 24z .
-// then tap version
-// then mixed with triplets
-
-
-
-
+// move the 12/24 and Sanford stuff here, since it's not rolls
 
 
 
@@ -753,9 +264,9 @@
 // This is mostly 12-24 stuff
 
 /time 4/4
-/tempo 84
+//tempo 84
 // Sync
-4r . . .
+4T 4r . .
 
 /ff
 // 0:00
@@ -918,6 +429,553 @@
 16t t 8t   16t t 8t   16t t 8t   8t t
 16T T 8T   16T T 8T   16T T 8T   8T T
 16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
+
+
+
+
+
+
+
+
+
+
+
+//////  SET 2  ////////
+/time 4/4
+/tempo 72
+/f
+// ----------- Set 2 Exercise 0 is single pulse buzzes
+// -----------
+//Sync
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+
+// Simulate loose buzzes.
+//
+// QUARTER NOTE BUZZES RIGHT HAND  1 bar of 4/4
+/ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp
+
+// QUARTER NOTE BUZZES LEFT HAND, 1 bar 4/4
+/ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp
+
+// EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
+/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
+/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
+/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
+/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
+
+// TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+
+// SIXTEENTH NOTE BUZZES, 2 bar 4/4
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+
+// TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+/ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
+
+
+// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
+// -----------
+4T
+//marker Dwn
+4r
+4r
+//marker Up
+4r
+/mp
+/marker bzzPulses
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+
+
+
+// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses, soft
+// -----------
+4T
+//marker Dwn
+4r
+4r
+//marker Up
+4r/mp
+/marker BzzNoPlse
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+
+// MAYBE GET RID OF ALL DYNAMIC EXERCISES FOR NOW TO MAKE THIS SHORTER
+// ----------- Set 2 Exercise 3 is cresc/decres rolls
+// -----------
+///marker BuzDyn
+///mp
+//24T . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
+//24T /ff  . . . . .    . . . . . .    /decresc 24Z . . . . .    . . . . . .
+//24T /mp . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
+//24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
+//1T /ff
+
+
+
+
+
+// new stuff
+// ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
+// -----------
+4T
+//marker Dwn
+4r
+4r
+//marker Up
+4r
+24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
+24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
+24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+
+
+// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
+// -----------
+///mp /cresc 24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
+//24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+//24T /fff /decresc . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
+//24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
+//4T /mp /f
+//marker Dwn
+//4r
+//4r
+//marker Up
+//4r
+
+// ----------- Set 2 Exercise 3.3 is development of 8th note rolls, starting left (3 pulse, or "7's")
+// -----------
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
+/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
+/fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
+/fff 8T /f /cresc 24z . .  8T /fff /f /cresc 24z . .   8T /fff /f /cresc 24z . . 8T /fff /f /cresc 24z . .
+
+
+// ----------- Set 2 Exercise 3.4 is more 8th note rolls, starting right
+// -----------
+4T /fff /f
+/marker D
+4r
+4r
+/marker U
+4r
+/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t /fff /f /cresc 24Z . . 8t /fff
+/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t /fff /f /cresc 24Z . . 8t /fff
+/f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t  24Z . . 8t
+          24Z . . 8t  24Z . . 8t  24Z . . 8t  24Z . . 8t /ff /f
+
+
+
+
+// OH IS THIS THE TAP ROLL DEVELOPMENT?
+
+//Tap roll development should focus on the first buzz after the tap.  Mostly 3
+//stroke development, then 5.  Anything longer requires proper pulse speeds
+//which can often not be based on 12ths or 8ths.  But after 3 stroke rolls,
+//can then work on how to use some longer ones, like 5's and even 7's.
+
+// Consider integrating tap rolls with regular buzz rolls in development.
+
+// There really should be a new rudiment, similar to a flam, where there's an
+// absolute, not relative, timing between two notes.  For a flam, the grace note
+// timing prior to the principle note is absolute, and it does not depend on the
+// tempo.  That also means that two flams together cannot go faster than a certain
+// tempo without changing the sounnd of the flams into 4 equally spaced notes, or worse.
+// Similarly, the space between the tap, and the first buzz of a tap roll may need
+// to also be absolute and not dependent upon tempo.  Maybe like a reverse flam where
+// the first note is the principle, and the first buzz comes after it with a timing
+// about the same as a flam's timing from grace to principle.
+//
+// I need to record this new rudiment, because I can't simulate it unless I always
+// know the tempo.
+
+// One possibility for 3 stroke tap rolls, though maybe long and boring...
+// The buzzes might be a little short in duration and maybe should start after a shorter gap
+// Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes Perhaps try simulated buzzes
+
+/tempo 72
+// sync
+1r
+
+// 3 stroke tap roll, simulated
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p
+/ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p /ff ^8T
+// Same thing, but reverse hand order, to give left hand equal time:
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+/ff ^24T t t  ^24T t t  ^24T t t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t T T  ^24t T T  ^24t T T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^24t /> 60T T T T T /p
+/ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^8t
+
+// 4 stroke tap roll, simulated
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
+/ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^24T t ^T        /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^24T /> 72t t t /p /ff ^24T
+/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
+/ff ^24t /> 72T T T /p /ff ^24t     /ff ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^8t
+
+/ff
+// 5 stroke tap rolls, not simulated
+^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .     ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+
+
+// sync
+4T . . .
+
+// Different speed, based on 12th note tempo
+// This sounds okay, but it's not simulated.  Should it be?  Is simulated better for learning?  Maybe because it's faster, it's okay, because previously was simulated
+^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z
+^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z    ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+
+^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z
+^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+
+
+4T . . .
+
+
+
+
+
+
+
+
+
+// This answers the question about how different tap roll lengths might fit into some music...
+// All this roll stuff is based on what sounds right at a particular tempo.
+// At fast temp it would be different.
+
+// Essentially 12th notes.  Must develop into something musical and timing exercise.
+^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z // "3 stroke"
+^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z
+
+^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t  // "4 stroke"
+^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+
+^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .   // "5 stroke"
+^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+
+// Back on beat every 3 cycles.
+^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t  // "6 stroke"
+^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+
+
+// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
+^42T 21z . .   ^42T 21z . .   ^42T 21z . .     // "7 stroke"
+^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+
+
+//// Really, probably don't need to focus on anything longer than a 7 stroke roll.
+//// So forget about the following for practice.
+//// The focus really is on the first few buzzes after the tap.
+//// doesn't sound good
+//^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t   // "8 stroke"
+//^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t
+//
+//// huh?  hand order?
+//^36T 18z . . .   ^36t 18Z . . .   ^36T 18z . . .   ^36t 18Z . . .      // "9 stroke", but with gap between tap and first buzz
+//^36T 18z . . .   ^36t 18Z . . .   ^36T 18z . . .   ^36t 18Z . . .
+//
+////^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   // "10 stroke with gap after tap"
+////^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t
+//
+//// Maybe hard to play accurately because the last 24th is not in time with the 108:5 pulse
+//^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t  // "10 stroke"
+//^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t
+
+
+/ff
+//sync
+4T 4r . .
+// This is the rhythm foundation for doing some roll combinations, maybe
+//16T 32 16 16 32 16 16 32 16 32   16T 32 16 16 32 16 16 32 16 32
+//16T 32 16 16 32 16 16 32 16 32   16T 32 16 16 32 16 16 32 16 32
+8T 16 8 8 16 8 8 16 8 16   8T 16 8 8 16 8 8 16 8 16
+12T . 24 12 12 12 24   12T . 24 12 12 12 24   12T . 24 12 12 12 24   12T . 24 12 12 12 24
+//12T . 24 12 12 12 24   12T . 24 12 12 12 24   12T . 24 12 12 12 24   12T . 24 12 12 12 24
+//6T . 12 6 6 6 12   6T . 12 6 6 6 12
+
+// huh?
+//16:3T 18 16 16:3 . 8 16   16:3T 18 16 16:3 . 8 16   16:3T 18 16 16:3 . 8 16
+
+// 3/4 time
+^24T . ^. . . ^. . . ^.    ^24T . ^. . . ^. . . ^.    ^24T . ^. . . ^. . . ^.    ^24T . ^. . . ^. . . ^.
+
+
+// ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
+// ----------- but it's fast enough to not have noticeable gaps
+//  IS THIS DUPLICATE FROM ABOVE????
+///marker D
+//4r
+//4r
+//4r
+///marker U
+//4r
+//// Make this better some how.  Maybe add dynamics.  But this should be more interesting.
+//// switch hands too.  Actually this timing leaves a gap, not what I want.
+///marker TapRlShrt
+//^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^8T
+//^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
+//^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z
+//^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^40T 10z   ^8T
+//
+//^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
+//^40T 10t   ^40T 10t   ^40T 10t   ^8T    ^40T 10z   ^40T 10z   ^40T 10z   ^8T
+//^40t 10T   ^40t 10T   ^40t 10T   ^8T    ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z
+//^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^40t 10Z   ^8T
+
+
+// --------- Set 2 Exercise 4.1 playing with different tap roll durations --
+
+///marker D
+//4r
+//4r
+//4r
+///marker U
+//4r
+
+
+// All this roll stuff is based on what sounds right at a particular tempo.
+// At fast temp it would be different.
+
+// Essentially 12th notes.  Must develop into something musical and timing exercise.
+//^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z // "3 stroke"
+//^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z  ^36T 18z
+//
+//^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t  // "4 stroke"
+//^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+//
+//^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .   // "5 stroke"
+//^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+//
+//// Back on beat every 3 cycles.
+//^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t  // "6 stroke"
+//^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+//^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+//^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+//
+//
+//// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
+//^42T 21z . .   ^42T 21z . .   ^42T 21z . .     // "7 stroke"
+//^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+//^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+//^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+//
+//// doesn't sound good
+//^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t   // "8 stroke"
+//^32T 16z . . ^32T    ^32t 16Z . . ^32t   ^32T 16z . . ^32T    ^32t 16Z . . ^32t
+//
+//
+//^36T 18z . . .   ^36T 18z . . .   ^36T 18z . . .   ^36T 18z . . .   // "9 stroke", but with gap between tap and first buzz
+//^36T 18z . . .   ^36T 18z . . .   ^36T 18z . . .   ^36T 18z . . .
+//
+//
+//
+////^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   // "10 stroke with gap after tap"
+////^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t   ^24T 24z . . . ^24t
+//
+//// Maybe hard to play accurately because the last 24th is not in time with the 108:5 pulse
+//^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t  // "10 stroke"
+//^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t
+
+
+
+
+
+
+
+
+
+
+
+// How about some upbeat starting rolls?
+// Base it on this pattern, but not the 30th note parts, that's for elsewhere
+//
+//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
+//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
+//_8T _24t . . . . . _8t  _24T . . . . . _12T  ^30t . . . .
+//^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . . ^30t . . . .
+
+
+
+
+
+
+// ----------- Set 2 Exercise 5 is long Tap Rolls
+// -----------
+/marker TapRls
+4r
+/marker D
+4r
+4r
+/marker U
+4r
+/mf
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^24T . . . . .    . . . . . .    ^44T 22z .  . . .    24Z . . . . .
+^44T 22z .  . . .    24Z . . . . .    ^44T 22z .  . . .    24Z . . . . .
+
+
+// ----------- Set 2 Exercise 6 is long Tap Rolls with Dynamics
+// -----------
+///marker TapRlsDyn
+///mp
+//^24T . . . . .    . . . . . .    /cresc ^44T 22z .  . . .    24Z . . . . .
+//^24T /ff . . . . .    . . . . . .  /decresc  ^44T 22z .  . . .    24Z . . . . .
+//^24T /mp . . . . .    . . . . . .   /cresc  ^44T 22z .  . . .    24Z . . . . .
+//^44T 22z .  . . .    24Z . . . . .    ^44T 22z .  . . .    24Z . . . . .
+
+
+
+// ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
+// -----------
+/marker TapRls2
+4T
+/marker D
+4r
+4r
+/marker U
+4r
+/mf
+^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
+^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
+^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
+^44T 22z .  . . .    ^44T 22z .  . . .   ^44T 22z .  . . .    ^44T 22z .  . . .
+
+
+// ----------- Set 2 Exercise 6.6 is shorter Tap Rolls with Dynamics
+// -----------
+///marker TapRlsDyn2
+///mp
+//^24T . . . . .    ^. . . . . .    /cresc ^44T 22z .  . . .    ^44T 22z .  . . .
+//^24T /ff . . . . .    ^. . . . . .  /decresc  ^44T 22z .  . . .    ^44T 22z .  . . .
+//^24T /mp . . . . .    ^. . . . . .   /cresc  ^44T 22z .  . . .    ^44T 22z .  . . .
+//^44T 22z .  . . .    ^44T 22z .  . . .      ^44T 22z .  . . .    24Z . . . . .
+
+
+
+
+// ----------- Set 2 Exercise 7 is 5 stroke Tap Rolls soft
+// -----------
+^4T
+/marker D
+4r
+4r
+/marker U
+4r
+/marker 5StrkSoft
+/mp
+>24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+>24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+>24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+>40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+/f
+
+// ----------- Set 2 Exercise 8 is 5 stroke Tap Rolls with Dynamics
+// -----------
+//4T
+//marker Dwn
+//4r
+//4r
+//marker Up
+//4r
+///marker 5StrkDyn
+///mp
+//>24T . . >. . .    >. . . >. . .   /cresc  >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+//>24T /ff . . >. . .    >. . . >. . .   /decresc >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+//>24T /mp . . >. . .    >. . . >. . .   /cresc >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+//>40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
+
+//>4T /ff 4r . .
+
+// ----------- Set 2 Exercise 9 is 7 stroke roll something
+// kinda cool, but maybe too hard to memorize.
+// Still, it's kinda useful.
+// -----------
+///marker 7Strk
+//>8T 24t . .  >8T 24t . .   >8T >. 24T . . >8t
+//24T . . >8t   >8T 24t . .  >8T >.  24T . . >8t
+//>8T 24z . .  >8T 24z . .   >8T >. 24Z . . >8t
+//24Z . . >8t   >8T 24z . .  >8T >.  24Z . . >8t
+
+
+
+// FILL THIS IN LATER
+// How about 3 stroke roll development?  Nice, but we don't have any in our music
+4T 4r . .
+^24T t >T  ^24T t >T  ^24T t >T  ^8T     ^36T 18z >24T   ^36T 18z >24T   ^36T 18z >24T   ^8T
+^24t T >t  ^24t T >t  ^24t T >t  ^8t     ^36t 18Z >24t   ^36t 18Z >24t   ^36t 18Z >24t   ^8t
+^24T t >T  ^24t T >t  ^24T t >T  ^8t     ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t
+^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36T 18z >24T   ^36t 18Z >24t   ^8t
+
+// Maybe should do that silly black bear thing here
+// 10 stroke roll stuff?
+
+
+// 5:16
+// More roll stuff.  Need pickup rolls, off beat rolls, mixed and tap, and no tap, and maybe 3 Camps
+//24z . .  8T 24z . . 8T . 8r 24Z . .  . . . 8T
+//24Z . . . . .  8T  24Z . . 8t  24Z . . . . .  24T 24z .
+// then tap version
+// then mixed with triplets
+
+
+
+
+
 
 
 ////////////// JIG  ///////////////////
@@ -1323,10 +1381,24 @@ _24Z _. 24T . >12T  ^6t >24Z >.  24T . . .  >12T  ^6t 12t
 
 // Sync
 1r
-4r 4r
-8r . . .
+4r 4r 8r . . .
 
-/p
+
+/mp
+8N . . . . . . .
+8N . . . . . . .
+/cresc
+8N . . . . . . .
+/f
+8N . . . . . . .
+12N . . . . . . . . . . .
+12N . . . . . . . . . . .
+/ff
+12N . 24N 12N . . 24N    12N . 24N 12N . . 24N
+12N . 24N 12N . . 24N    12N . 24N 12N . . 24N
+
+
+/mp
 8N . . . . . . .
 8N . . . . . . .
 
@@ -1445,6 +1517,173 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 //_8n n _n n n _n n _n    _N N _N N N _N _N n
 //_8n n _n n n _n n _n    _n n _n n n _n n _n
 
+///////////// 12-24  12-24  12-24  12-24  //////////////
+///////////// 12-24  12-24  12-24  12-24  //////////////
+///////////// 12-24  12-24  12-24  12-24  //////////////
+
+
+//time 4/4
+//tempo 84
+// Sync
+4r . . .
+
+
+
+
+
+
+12N N N N N N   6N 12N 6N 12N
+12n n n n n n   6n 12n 6n 12n
+12N N N N N N   6N 12N 6N 12N
+6N 12N 6N 12N 6N 12N 6N 12N
+// Reverse hand order of above
+12n n n n n n   6n 12n 6n 12n
+12N N N N N N   6N 12N 6N 12N
+12n n n n n n   6n 12n 6n 12n
+6n 12n 6n 12n 6n 12n 6n 12n
+
+
+//time 2/4
+//tempo 60
+// Sync 2 counts
+8N 8r . .
+
+// wow tenor parsing is bad.  have to add the name of the note, no 12n 24 12 24
+
+
+// doubles on the 12-24
+8N . >12N 24N 12n 24n    //  4N 8N .
+8N . >12N 24N 12n 24n    //  4N 8N .
+8N . >12N 24N 12n 24n    //  4N 8N .
+>12N 24N 12n 24n  >12N 24N 12n 24n
+
+// singles on the 12-24
+8N . >12N 24n 12N 24n   // 4N 8N .
+8N . >12N 24n 12N 24n   // 4N 8N .
+8N . >12N 24n 12N 24N   // 4N 8N .
+>12N 24n 12N 24n  >12N 24n 12N 24n
+
+
+// Paradiddles on the 12-24
+>8N . >12N 24n 12N 24N
+>8n . >12n 24N 12n 24n
+>8N . >12N 24n 12N 24N
+>12n 24N 12n 24n  >12N 24n 12N 24N
+// Reverse
+>8n . >12n 24N 12n 24n
+>8N . >12N 24n 12N 24N
+>8n . >12n 24N 12n 24n
+>12N 24n 12N 24N  >12n 24N 12n 24n
+
+
+
+12N 6n  12N >24n 12N 24n
+12N 6n  12N >24n 12N 24n
+12N 6n  12N >24n 12N 24n
+12N >24n 12N 24n  12N >24n 12N 24n
+// reverse
+12N 6n  12N >24n 12N 24n
+12N 6n  12N >24n 12N 24n
+12N 6n  12N >24n 12N 24n
+12N >24n 12N 24n  12N >24n 12N 24n
+
+
+//time 4/4
+//tempo 80
+//Sync
+4N 4r . .
+
+
+
+
+8N 24n . . 8N 8n   8N 24n . . 8N 8n
+8N .  8N .     12r ^24N 8n . .
+8N 24n . . 8N 8n   8N 24n . . 8N 8n
+8N .  8N .     12r ^24N 8n . .
+
+
+8N 24n . . 8N 8n   8N 24n . . 8N 8n
+12N 6n     12N 6n   12r ^24N 8n . .
+8N 24n . . 8N 8n   8N 24n . . 8N 8n
+12N 6n     12N 6n   12r ^24N 8n . .
+
+
+
+12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
+>8N 4r  >8n 4r >8N .
+12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
+12N >6n   12N >6n   12N >6n   12N 24 8N
+
+// new
+//24N . . 8N 4r 24N . . 8n 4r
+//24N . . 8N 8r 24N . . 8n 24N . . 12n 24n 8N
+//24N . . 8N 4r 24N . . 8n 4r
+//24N . . 8N 8r 24N . . 8n 24N . . 12n 24n 8N
+// end new
+
+//////  SET 3  ////////
+
+// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
+// feels faster.  Start this way because the previous set ends on that tempo.
+
+
+
+//tempo 110
+
+
+
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync:
+4N
+4r
+.
+.
+
+
+
+/mf
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
+// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
+
+
+// Expand here.  More stuff before hit Reel Set.
+// maybe
+// 16th note groups of 3 with doubles
+//4N N N  8N N
+//4n n n  8n n
+//4N N N N N N N 8N N
+//4n n n  8n n
+//4N N N  8N N
+//4n n n n n n n 8n n
+
+
+// new stuff
+// sync 8 == 12
+// time 3/4
+//4r . .
+//4r . .
+//4r . .
+//4r . .
+
+//time 4/4
+// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+//4r . . .   // sync
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
 
 
 //////  SET 2  ////////
@@ -1489,7 +1728,7 @@ _24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
 
 
 
-// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
+// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses, soft
 // -----------
 _8N 8r
 4r
@@ -1574,39 +1813,115 @@ _8N 8r
 
 
 
+// OH IS THIS THE TAP ROLL DEVELOPMENT?
+
+//tempo 72
+// sync
+1r
+
+// 3 stroke tap roll, simulated
+
+1N
+1r
+1r
+1r
+
+1N
+1r
+1r
+1r
+
+// 4 stroke tap roll, simulated
+1N
+1r
+1r
+1r
+
+/ff
+// 5 stroke tap rolls, not simulated
+1N
+1r
+1r
+1r
 
 
+// sync
+1N
+
+// Different speed, based on 12th note tempo
+1N
+1r
+1r
+1r
+
+1N
+1r
+1r
+1r
+
+
+4r . . .
+
+// This answers the question about how different tap roll lengths might fit into some music...
+
+// 12ths, 3 stroke
+1N
+
+// 4 stroke
+1N
+
+// 5 stroke
+1N
+
+// 6 stroke
+1N
+1r
+
+// 7 stroke
+1N
+1r
+
+// sync
+1r
+// This is the rhythm foundation for doing roll combinations, maybe
+1N
+1r
+1r
+1r
+
+// 3/4 time
+4r . .   . . .
 
 
 // ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
 // ----------- but it's fast enough to not have noticeable gaps
-4r
-4r
-4r
-4r
-//marker TapRlShrt
-8N . . .  . . . .
-8N . . .  . . . .
-8N . . .  . . . .
-8N . . .  . . . .
-
-8N . . .  . . . .
-8N . . .  . . . .
-8N . . .  . . . .
-8N . . .  . . . .
+//4r
+//4r
+//4r
+//4r
+////marker TapRlShrt
+//8N . . .  . . . .
+//8N . . .  . . . .
+//8N . . .  . . . .
+//8N . . .  . . . .
+//
+//8N . . .  . . . .
+//8N . . .  . . . .
+//8N . . .  . . . .
+//8N . . .  . . . .
 
 // --------- Set 2 Exercise 4.1 playing with different tap roll durations --
-1r
-4N . . .
-4N . . .
-4N . . .
-4N . . .
-4N . . .
-4N . . .
-4N . . .
-4N . . .
-4N . . .
-4N . . .
+//1r
+//4N . . .
+//4N . . .
+//4N . . .
+//4N . . .
+//4N . . .
+//4N . . .
+//4N . . .
+//4N . . .
+//4N . . .
+//4N . . .
 
 
 
@@ -1725,174 +2040,7 @@ _4N
 // 10 stroke roll stuff?
 
 
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
 
-
-//time 4/4
-//tempo 84
-// Sync
-4r . . .
-
-
-
-
-
-
-12N N N N N N   6N 12N 6N 12N
-12n n n n n n   6n 12n 6n 12n
-12N N N N N N   6N 12N 6N 12N
-6N 12N 6N 12N 6N 12N 6N 12N
-// Reverse hand order of above
-12n n n n n n   6n 12n 6n 12n
-12N N N N N N   6N 12N 6N 12N
-12n n n n n n   6n 12n 6n 12n
-6n 12n 6n 12n 6n 12n 6n 12n
-
-
-//time 2/4
-//tempo 60
-// Sync 2 counts
-8N 8r . .
-
-// wow tenor parsing is bad.  have to add the name of the note, no 12n 24 12 24
-
-
-// doubles on the 12-24
-8N . >12N 24N 12n 24n    //  4N 8N .
-8N . >12N 24N 12n 24n    //  4N 8N .
-8N . >12N 24N 12n 24n    //  4N 8N .
->12N 24N 12n 24n  >12N 24N 12n 24n
-
-// singles on the 12-24
-8N . >12N 24n 12N 24n   // 4N 8N .
-8N . >12N 24n 12N 24n   // 4N 8N .
-8N . >12N 24n 12N 24N   // 4N 8N .
->12N 24n 12N 24n  >12N 24n 12N 24n
-
-
-// Paradiddles on the 12-24
->8N . >12N 24n 12N 24N
->8n . >12n 24N 12n 24n
->8N . >12N 24n 12N 24N
->12n 24N 12n 24n  >12N 24n 12N 24N
-// Reverse
->8n . >12n 24N 12n 24n
->8N . >12N 24n 12N 24N
->8n . >12n 24N 12n 24n
->12N 24n 12N 24N  >12n 24N 12n 24n
-
-
-
-12N 6n  12N >24n 12N 24n
-12N 6n  12N >24n 12N 24n
-12N 6n  12N >24n 12N 24n
-12N >24n 12N 24n  12N >24n 12N 24n
-// reverse
-12N 6n  12N >24n 12N 24n
-12N 6n  12N >24n 12N 24n
-12N 6n  12N >24n 12N 24n
-12N >24n 12N 24n  12N >24n 12N 24n
-
-
-//time 4/4
-//tempo 80
-//Sync
-4N 4r . .
-
-
-
-
-8N 24n . . 8N 8n   8N 24n . . 8N 8n
-8N .  8N .     12r ^24N 8n . .
-8N 24n . . 8N 8n   8N 24n . . 8N 8n
-8N .  8N .     12r ^24N 8n . .
-
-
-8N 24n . . 8N 8n   8N 24n . . 8N 8n
-12N 6n     12N 6n   12r ^24N 8n . .
-8N 24n . . 8N 8n   8N 24n . . 8N 8n
-12N 6n     12N 6n   12r ^24N 8n . .
-
-
-
-12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
->8N 4r  >8n 4r >8N .
-12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
-12N >6n   12N >6n   12N >6n   12N 24 8N
-
-// new
-//24N . . 8N 4r 24N . . 8n 4r
-//24N . . 8N 8r 24N . . 8n 24N . . 12n 24n 8N
-//24N . . 8N 4r 24N . . 8n 4r
-//24N . . 8N 8r 24N . . 8n 24N . . 12n 24n 8N
-// end new
-
-
-
-//////  SET 3  ////////
-
-// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
-// feels faster.  Start this way because the previous set ends on that tempo.
-
-
-
-//tempo 110
-
-
-
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
-// -----------
-// Sync:
-4N
-4r
-.
-.
-
-
-
-/mf
-4N N N  8N N
-4n n n  8n n
-4N N N N N N N 8N N
-4n n n  8n n
-4N N N  8N N
-4n n n n n n n 8n n
-
-// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
-// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
-
-
-// Expand here.  More stuff before hit Reel Set.
-// maybe
-// 16th note groups of 3 with doubles
-//4N N N  8N N
-//4n n n  8n n
-//4N N N N N N N 8N N
-//4n n n  8n n
-//4N N N  8N N
-//4n n n n n n n 8n n
-
-
-// new stuff
-// sync 8 == 12
-// time 3/4
-//4r . .
-//4r . .
-//4r . .
-//4r . .
-
-//time 4/4
-// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
-// -----------
-//4r . . .   // sync
-4N N N  8N N
-4n n n  8n n
-4N N N N N N N 8N N
-4n n n  8n n
-4N N N  8N N
-4n n n n n n n 8n n
 
 ////////////// JIG  ///////////////////
 ////////////// JIG  ///////////////////
@@ -2042,8 +2190,24 @@ _4N
 
 // Sync
 1r
-4r 4r
-8r . . .
+4r 4r 8r . . .
+
+
+
+/mf
+8B . . . . . . .
+8B . . . . . . .
+/cresc
+8B . . . . . . .
+/ff
+8B . . . . . . .
+4B . . .
+4B . . .
+2B .
+12B . 24B 12B . . 24B    12B . 24B 12B . . 24B
+
+
+
 
 /mf
 2B .
@@ -2140,6 +2304,195 @@ _4N
 //4B . 8r 4B 8B   4B . 8r 8B 4B
 //4B . 8r 4B 8B   4B . 8r 4B 8B
 
+///////////// 12-24  12-24  12-24  12-24  //////////////
+///////////// 12-24  12-24  12-24  12-24  //////////////
+///////////// 12-24  12-24  12-24  12-24  //////////////
+
+/f
+//time 4/4
+//tempo 84
+// Sync
+4r . . .
+
+
+
+
+
+
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+
+//time 2/4
+//tempo 60
+// Sync 2 counts
+8B 8r . .
+
+
+
+
+// doubles on the 12-24
+8B . . .
+8B . . .
+8B . . .
+8B . . .
+
+// singles on the 12-24
+8B . . .
+8B . . .
+8B . . .
+8B . . .
+
+
+// Paradiddles on the 12-24
+8B . . .
+8B . . .
+8B . . .
+8B . . .
+
+// Reverse
+8B . . .
+8B . . .
+8B . . .
+8B . . .
+
+
+
+
+12B 6b  12B 6b
+12B 6b  12B 6b
+12B 6b  12B 6b
+12B 6b  12B 6b
+// reverse
+12B 6b  12B 6b
+12B 6b  12B 6b
+12B 6b  12B 6b
+12B 6b  12B 6b
+
+
+//time 4/4
+//tempo 80
+//Sync
+4B 4r . .
+
+
+
+
+4B 8r 8b   4B 8r 8b
+4B . 4r 8B .
+4B 8r 8b   4B 8r 8b
+4B . 4r 8B .
+
+
+
+
+4B 8B .   4B 8B .
+4B .  8r 8B . .
+4B 8B .   4B 8B .
+4B .  8r 8B . .
+
+
+
+>4B . >. .
+>8B 4r  >8B 4r >8B .
+>4B . >. .
+>4B . >. 8b 8r
+
+// new
+
+//1r
+//1r
+//1r
+//1r
+// end new
+
+
+//////  SET 3  ////////
+
+
+// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
+// feels faster.  Start this way because the previous set ends on that tempo.
+
+
+
+//tempo 110
+// ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
+// -----------
+// Sync:
+//4B
+//4r
+//.
+//.
+///f
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B B B 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b b b 4b 8r 8b
+
+
+
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync:
+4B
+4r
+.
+.
+
+
+/f
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+
+// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
+// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
+
+
+// Expand here.  More stuff before hit Reel Set.
+// maybe
+// 16th note groups of 3 with doubles
+//2B 4B 8r 8B
+//2b 4b 8r 8b
+//2B B B 4B 8r 8B
+//2b 4b 8r 8b
+//2B 4B 8r 8B
+//2b b b 4b 8r 8b
+
+
+
+// new stuff
+// sync 8 == 12
+// time 3/4
+//4r . .
+//4r . .
+//4r . .
+//4r . .
+
+//time 4/4
+// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+//4r . . .  // sync
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
 
 
 
@@ -2185,7 +2538,7 @@ _4N
 
 
 
-// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
+// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses, soft
 // -----------
 //Sync
 4B
@@ -2269,35 +2622,112 @@ _4N
 4B . . .
 
 
+// OH IS THIS THE TAP ROLL DEVELOPMENT?
+
+//tempo 72
+// sync
+1r
+
+// 3 stroke tap roll, simulated
+
+1B
+1r
+1r
+1r
+
+1B
+1r
+1r
+1r
+
+// 4 stroke tap roll, simulated
+1B
+1r
+1r
+1r
+
+/ff
+// 5 stroke tap rolls, not simulated
+1B
+1r
+1r
+1r
 
 
+// sync
+1B
 
-// ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
-// ----------- but it's fast enough to not have noticeable gaps
-//Sync
-4r 4r . .
-2B .
-2B .
-2B .
-2B .
+// Different speed, based on 12th note tempo
+1B
+1r
+1r
+1r
 
-2B .
-2B .
-2B .
-2B .
+1B
+1r
+1r
+1r
+
+
+// sync
+4r . . .
+
+// This answers the question about how different tap roll lengths might fit into some music...
+
+// 12ths, 3 stroke
+1B
+
+// 4 stroke
+1B
+
+// 5 stroke
+1B
+
+// 6 stroke
+1B
+1r
+
+// 7 stroke
+1B
+1r
+
+// sync
+1r
+// This is the rhythm foundation for doing roll combinations, maybe
+1B
+1r
+1r
+1r
+
+// 3/4 time
+4r . .   . . .
+
+//// ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
+//// ----------- but it's fast enough to not have noticeable gaps
+////Sync
+//4r 4r . .
+//2B .
+//2B .
+//2B .
+//2B .
+//
+//2B .
+//2B .
+//2B .
+//2B .
 
 // --------- Set 2 Exercise 4.1 playing with different tap roll durations --
-1r
-2B .
-2B .
-2B .
-2B .
-2B .
-2B .
-2B .
-2B .
-2B .
-2B .
+//1r
+//2B .
+//2B .
+//2B .
+//2B .
+//2B .
+//2B .
+//2B .
+//2B .
+//2B .
+//2B .
 
 
 
@@ -2415,195 +2845,6 @@ _4N
 // Maybe should do that silly black bear thing here
 // 10 stroke roll stuff?
 
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-
-/f
-//time 4/4
-//tempo 84
-// Sync
-4r . . .
-
-
-
-
-
-
-4B . . .
-4B . . .
-4B . . .
-4B . . .
-
-4B . . .
-4B . . .
-4B . . .
-4B . . .
-
-
-//time 2/4
-//tempo 60
-// Sync 2 counts
-8B 8r . .
-
-
-
-
-// doubles on the 12-24
-8B . . .
-8B . . .
-8B . . .
-8B . . .
-
-// singles on the 12-24
-8B . . .
-8B . . .
-8B . . .
-8B . . .
-
-
-// Paradiddles on the 12-24
-8B . . .
-8B . . .
-8B . . .
-8B . . .
-
-// Reverse
-8B . . .
-8B . . .
-8B . . .
-8B . . .
-
-
-
-
-12B 6b  12B 6b
-12B 6b  12B 6b
-12B 6b  12B 6b
-12B 6b  12B 6b
-// reverse
-12B 6b  12B 6b
-12B 6b  12B 6b
-12B 6b  12B 6b
-12B 6b  12B 6b
-
-
-//time 4/4
-//tempo 80
-//Sync
-4B 4r . .
-
-
-
-
-4B 8r 8b   4B 8r 8b
-4B . 4r 8B .
-4B 8r 8b   4B 8r 8b
-4B . 4r 8B .
-
-
-
-
-4B 8B .   4B 8B .
-4B .  8r 8B . .
-4B 8B .   4B 8B .
-4B .  8r 8B . .
-
-
-
->4B . >. .
->8B 4r  >8B 4r >8B .
->4B . >. .
->4B . >. 8b 8r
-
-// new
-
-//1r
-//1r
-//1r
-//1r
-// end new
-
-
-
-//////  SET 3  ////////
-
-
-// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
-// feels faster.  Start this way because the previous set ends on that tempo.
-
-
-
-//tempo 110
-// ----------- Set 3 Exercise 0 is MODIFICATION OF Fred Sanford's double stroke
-// -----------
-// Sync:
-//4B
-//4r
-//.
-//.
-///f
-//2B 4B 8r 8B
-//2b 4b 8r 8b
-//2B B B 4B 8r 8B
-//2b 4b 8r 8b
-//2B 4B 8r 8B
-//2b b b 4b 8r 8b
-
-
-
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
-// -----------
-// Sync:
-4B
-4r
-.
-.
-
-
-/f
-2B 4B 8r 8B
-2b 4b 8r 8b
-2B B B 4B 8r 8B
-2b 4b 8r 8b
-2B 4B 8r 8B
-2b b b 4b 8r 8b
-
-
-// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
-// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
-
-
-// Expand here.  More stuff before hit Reel Set.
-// maybe
-// 16th note groups of 3 with doubles
-//2B 4B 8r 8B
-//2b 4b 8r 8b
-//2B B B 4B 8r 8B
-//2b 4b 8r 8b
-//2B 4B 8r 8B
-//2b b b 4b 8r 8b
-
-
-
-// new stuff
-// sync 8 == 12
-// time 3/4
-//4r . .
-//4r . .
-//4r . .
-//4r . .
-
-//time 4/4
-// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
-// -----------
-//4r . . .  // sync
-2B 4B 8r 8B
-2b 4b 8r 8b
-2B B B 4B 8r 8B
-2b 4b 8r 8b
-2B 4B 8r 8B
-2b b b 4b 8r 8b
 
 ////////////// JIG  ///////////////////
 ////////////// JIG  ///////////////////
@@ -2759,8 +3000,20 @@ _4N
 //time 4/4
 //tempo 72
 // Sync
+/ff
 ^24M . . 8M  ^24M . . 8M  ^24M . . >. . .  24M . >. >8M
 ^4M ^. ^8M ^. ^24M . . ^8M
+
+/mf
+2M .
+2M .
+2M .
+2M .
+2M .
+2M .
+2M .
+2M .
+
 /mf
 4M . . .
 4M . . .
@@ -2809,8 +3062,9 @@ _4N
 // ----------- keeping 8ths constant.  This means a tempo change.
 // ----------- Groups of 8 notes for snares.
 //tempo 110
+/ff
 4M . 8M . 4M
-
+/mf
 
 
 
@@ -2858,6 +3112,175 @@ _4N
 //4M . . .   . . . .
 //4M . . .   . . . .
 
+
+///////////// 12-24  12-24  12-24  12-24  //////////////
+///////////// 12-24  12-24  12-24  12-24  //////////////
+///////////// 12-24  12-24  12-24  12-24  //////////////
+
+
+//time 4/4
+//tempo 84
+//sync
+/ff
+12M . . . . .   6M 12M 6M 12M
+/mf
+
+
+
+
+
+
+
+>4M . . .
+>4M . . .
+>4M . . .
+>4M . . .
+// reverse
+>4M . . .
+>4M . . .
+>4M . . .
+>4M . . .
+
+
+//time 2/4
+//tempo 60
+//sync 2 counts only
+/ff
+24M . . . . .   12M 24M 12M 24M
+/mf
+
+// doubles
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+
+// Singles
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+
+// Paradiddles
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+// reverse
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+
+
+//time 4/4
+//tempo 80
+//Sync
+/ff
+^8M 8M 8M ^12M ^24M  ^8M 8M 8M ^12M ^24M
+/mf
+
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+
+
+
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+
+
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+
+// new
+//>8M 8M  >8M 8M  >8M 8M  >8M 8M
+//>8M 8M  >8M 8M  >8M 8M  >8M 8M
+//>8M 8M  >8M 8M  >8M 8M  >8M 8M
+//>8M 8M  >8M 8M  >8M 8M  >8M 8M
+// end new
+
+
+
+//////  SET 3  ////////
+
+// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
+// feels faster.  Start this way because the previous set ends on that tempo.
+
+
+//tempo 110
+
+
+
+
+// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
+// -----------
+// Sync  need better cues on exercises in this set
+/ff
+^8M M ^M M ^16M . 8M ^4M
+/mf
+
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
+
+
+
+
+
+
+
+// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
+// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
+
+
+// Expand here.  More stuff before hit Reel Set.
+// maybe
+// 16th note groups of 3 with doubles
+//^4M . >. .   ^. . >. .
+//^4M . >. .   . . . .
+//^4M . >. .   ^. . >. .
+//^4M . >. .   . . . .
+
+
+
+
+
+// new stuff
+// transition to 12ths
+//time 3/4
+//^4M . .
+//^4M . .
+//^4M . .
+//^4M . .
+
+
+//time 4/4
+// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
+// -----------
+//^4M ^. ^16M . 8M ^16M . 8M   // sync
+^4M . >. .
+^4M . >. .
+^4M . >. .   >. . >. .
+^4M . >. .
+^4M . >. .
+^4M . >. .   >. . >. .
 
 
 
@@ -2929,10 +3352,12 @@ _4N
 
 
 
-// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses
+// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses, soft
 // -----------
 //Sync
+/ff
 >4M >4M >24M . .  >24M . .  >24M . . >8M
+/mf
 
 //marker BzzNoPlse
 _8M . _8M . _8M . _8M .
@@ -2988,7 +3413,9 @@ _8M . _8M .  _8M . _8M .
 // -----------
 // 7 stroke stuff
 //Sync
+/ff
 >8M 24M . .  >8M 24M . .  >8M .  >8M .
+/mf
 
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -3001,7 +3428,9 @@ _8M . _8M . _8M . _8M .
 // ----------- Set 2 Exercise 3.4 is
 // -----------
 //Sync
+/ff
 >24M . . 8M  >24M . . 8M  >24M . . 8M  >8M .
+/mf
 
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -3011,39 +3440,122 @@ _8M . _8M . _8M . _8M .
 
 
 
+// OH IS THIS THE TAP ROLL DEVELOPMENT?
+
+//tempo 72
+// sync
+/ff ^24M M M  ^24M M M  ^24M M M  ^8M       /ff ^24M /> 60M M M M M /p    /ff ^24M /> 60M M M M M /p  /ff ^24M /> 60M M M M M /p   /ff ^8M
 
 
+// 3 stroke tap roll, simulated
+
+1M
+1M
+1M
+1M
+
+1M
+1M
+1M
+1M
+
+// 4 stroke tap roll, simulated
+1M
+1M
+1M
+1M
+
+/ff
+// 5 stroke tap rolls, not simulated
+1M
+1M
+1M
+1M
+
+
+// sync
+8M . . . . . . .
+
+// Different speed, based on 12th note tempo
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// sync
+8M . . . . . . .
+
+
+// This answers the question about how different tap roll lengths might fit into some music...
+
+// 12ths, 3 stroke
+4M . . .
+
+// 4 stroke
+4M . . .
+
+// 5 stroke
+4M . . .
+
+// 6 stroke
+4M . . .
+4M . . .
+
+// 7 stroke
+4M . . .
+4M . . .
+
+// sync
+8M 16M 8M 8M 16M 8M 8M 16M 8M 16M
+// This is the rhythm foundation for doing roll combinations, maybe
+1M
+1M
+1M
+1M
+
+// 3/4 time
+4M . .   . . .
 
 
 // ----------- Set 2 Exercise 4 is short Tap roll development, kinda, but probably bad way to teach this
 // ----------- but it's fast enough to not have noticeable gaps
 //Sync
+/ff
 //>24M . .  >24M . .  >24M . .  >8M   >24M 12M   >24M 12M   >24M 12M   >8M
-40M 10M 40M 10M 40M 10M 8M   40M 10M 40M 10M 40M 10M 8M
-
-8M . . .  . . . .
-8M . . .  . . . .
-8M . . .  . . . .
-8M . . .  . . . .
-
-8M . . .  . . . .
-8M . . .  . . . .
-8M . . .  . . . .
-8M . . .  . . . .
+//40M 10M 40M 10M 40M 10M 8M   40M 10M 40M 10M 40M 10M 8M
+//4M . . .
+///mf
+//
+//8M . . .  . . . .
+//8M . . .  . . . .
+//8M . . .  . . . .
+//8M . . .  . . . .
+//
+//8M . . .  . . . .
+//8M . . .  . . . .
+//8M . . .  . . . .
+//8M . . .  . . . .
 
 
 // --------- Set 2 Exercise 4.1 playing with different tap roll durations --
-4M . 12M . . . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
+///ff
+//4M . 12M . . . . .
+///mf
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
 
 
 
@@ -3052,7 +3564,9 @@ _8M . _8M . _8M . _8M .
 // -----------
 //Sync
 //_4M . _8M . _. .
+/ff
 ^24M . . . . .  . . . . . . ^8M . . .
+/mf
 //marker TapRls
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -3078,7 +3592,9 @@ _8M . _8M . _8M . _8M .
 // ----------- Set 2 Exercise 6.5 is shorter Tap Rolls
 // -----------
 //Sync
+/ff
 ^24M . . . . .  ^. . . . . . ^8M . ^. .
+/mf
 
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
@@ -3106,7 +3622,7 @@ _8M . _8M . _8M . _8M .
 // ----------- Set 2 Exercise 7 is 5 stroke Tap Rolls soft
 // -----------
 //Sync
-/mf
+/f
 ^24M . . ^. . .  ^. . . ^. . . ^8M . ^. .
 /mp
 _8M . _8M . _8M . _8M .
@@ -3156,7 +3672,9 @@ _8M . _8M . _8M . _8M .
 
 // FILL THIS IN LATER
 // How about 3 stroke roll development?  Nice, but we don't have any in our music
+/ff
 >12M 24M >12M 24M >12M 24M >8M   >24M . >.  >. . >.  >. . >.  >8M
+/mf
 8M . . .  . . . .
 8M . . .  . . . .
 8M . . .  . . . .
@@ -3166,178 +3684,15 @@ _8M . _8M . _8M . _8M .
 // Maybe should do that silly black bear thing here
 // 10 stroke roll stuff?
 
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
 
-
-//time 4/4
-//tempo 84
-//sync
-12M . . . . .   6M 12M 6M 12M
-
-
-
-
-
-
-
-
->4M . . .
->4M . . .
->4M . . .
->4M . . .
-// reverse
->4M . . .
->4M . . .
->4M . . .
->4M . . .
-
-
-//time 2/4
-//tempo 60
-//sync 2 counts only
-24M . . . . .   12M 24M 12M 24M
-
-
-// doubles
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
-
-// Singles
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
-
-// Paradiddles
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
-// reverse
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
-
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
-
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
-
-
-//time 4/4
-//tempo 80
-//Sync
-^8M 8M 8M ^12M ^24M  ^8M 8M 8M ^12M ^24M
-
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
-
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
-// new
-//>8M 8M  >8M 8M  >8M 8M  >8M 8M
-//>8M 8M  >8M 8M  >8M 8M  >8M 8M
-//>8M 8M  >8M 8M  >8M 8M  >8M 8M
-//>8M 8M  >8M 8M  >8M 8M  >8M 8M
-// end new
-
-
-
-
-
-//////  SET 3  ////////
-
-// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
-// feels faster.  Start this way because the previous set ends on that tempo.
-
-
-//tempo 110
-
-
-
-
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
-// -----------
-// Sync  need better cues on exercises in this set
-^8M M ^M M ^16M . 8M ^4M
-
-
-^4M . >. .   ^. . >. .
-^4M . >. .   . . . .
-^4M . >. .   ^. . >. .
-^4M . >. .   . . . .
-
-
-
-
-
-
-
-// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
-// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
-
-
-// Expand here.  More stuff before hit Reel Set.
-// maybe
-// 16th note groups of 3 with doubles
-//^4M . >. .   ^. . >. .
-//^4M . >. .   . . . .
-//^4M . >. .   ^. . >. .
-//^4M . >. .   . . . .
-
-
-
-
-
-// new stuff
-// transition to 12ths
-//time 3/4
-//^4M . .
-//^4M . .
-//^4M . .
-//^4M . .
-
-
-//time 4/4
-// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
-// -----------
-//^4M ^. ^16M . 8M ^16M . 8M   // sync
-^4M . >. .
-^4M . >. .
-^4M . >. .   >. . >. .
-^4M . >. .
-^4M . >. .
-^4M . >. .   >. . >. .
 
 
 ////////////// JIG  ///////////////////
 ////////////// JIG  ///////////////////
 ////////////// JIG  ///////////////////
+/ff
 ^12M . .  ^12M . .   24M . . . ^12M  ^12M . .
+/mf
 
 >4M . _. .
 >4M . _. .
@@ -3681,31 +4036,31 @@ _4M _. _8M . _4M
 
 
 // buzzes, not bounces
-/tempo 72
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-/tempo 60
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-/tempo 50
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-/tempo 40
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//tempo 72
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+///tempo 60
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+///tempo 50
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+///tempo 40
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
 
 
 
-/tempo 72
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-^24T t t  ^24T t t  ^24T t t  ^8T       ^24T 12z   ^24T 12z   ^24T 12z  ^24T 12z
-^24T 12z  ^24T 12z  ^24T 12z  ^24T 12z  ^24T 12z   ^24T 12z   ^24T 12z  ^8T
+///tempo 72
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//^24T t t  ^24T t t  ^24T t t  ^8T       ^24T 12z   ^24T 12z   ^24T 12z  ^24T 12z
+//^24T 12z  ^24T 12z  ^24T 12z  ^24T 12z  ^24T 12z   ^24T 12z   ^24T 12z  ^8T
 
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
-^24T t t  ^24T t t  ^24T t t  ^8T       ^24T 12z   ^24T 12z   ^24T 12z  ^8T
-^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^24t 12Z
-^24t 12Z  ^24t 12Z  ^24t 12Z  ^24t 12Z  ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
+//^24T t t  ^24T t t  ^24T t t  ^8T       ^24T 12z   ^24T 12z   ^24T 12z  ^8T
+//^24t T T  ^24t T T  ^24t T T  ^8t       ^24t 12Z   ^24t 12Z   ^24t 12Z  ^24t 12Z
+//^24t 12Z  ^24t 12Z  ^24t 12Z  ^24t 12Z  ^24t 12Z   ^24t 12Z   ^24t 12Z  ^8t
 
 
 ///ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^12T ^24T      /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^12T ^24t
