@@ -7,6 +7,12 @@
 // It should sound interesting (especially to drummers) and cool.
 // It shouldn't be too hard to memorize, but should not be overly
 // repetitious.
+
+// Switching between 12/8 and 4/4 but keeping 8th notes constant
+// means tempo will go between 1x and 3x/2.
+// If we have 72 bpm for the dotted quarter in a 12/8, then
+// for the 4/4 we'd have 110 bpm.
+
 //
 // We unfortunately cannot afford to play these warm-up exercises for too long.
 // I'd guess we would have less than 10 minutes total for all sets combined.
@@ -14,140 +20,71 @@
 // To make this less boring, give the tenors and bass more fun parts to play.
 // Something that makes people want to move their bodies.
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// Consider making this the first set.
-// Or maybe that tap stuff.  But that tap stuff also has Sanford in it,
-// and that would move us into 12-24, maybe.
-//
-// And rolls would be after this, because 12-24 moves into triplets
-// Then flams.
-// Then combinations.
-//
-// So maybe 2 minutes each set?
-//
 
 
-// Pipe band drumming is generally DRUMMING FOR THE MASSES, and they intentionally
-// keep the same forms, and hardly advance.  They copy the lead drummer,
-// because that's what they all used to do before they could read, or knew anything
-// about how computers could help.  But we should be different.  After all
-// we're in Hawaii, not Scotland.
-
-
-
-
-//////////////// Experiment SNARE 2 Channel 3 SET 1 ////////////////////////
+//////////////// Experiment SNARE 2 Channel 3 ////////////////////////
 /track snare
 /channel 3
 
-
-/time 4/4
-/tempo 72
-
-1r  // sync
-1r
+// ------------ Snare 2 Set 0 Exercise 0.0, double stops -----------------
+//time 4/4
+//tempo 72
+// sync
+1r 1r
 // Do double stop stuff to increase control, warm up, check heights.
-// 12th notes.
-512r   // offset
+512r   // offset to make it sound imperfect accuracy
 /mf
 8t t t t t t t t
 8t t t t t t t t
 /cresc
 8t t t t t t t t
-/fff
 8t t t t t t t t
-12t t t t t t t t t t t t
-12t t t t t t t t t t t t
-12t t t t t t t t t t t t
-12t t t t t t t t t t t t
-
-
-
-//////////////// Experiment SNARE 3 Channel 7 SET 1 ////////////////////////
-/track snare
-/channel 7
-
-
-/time 4/4
-/tempo 72
-
-// Sync
-// One snare, or metronome, attention cue, and sync:
-///fff
-//^24T . . 8T  ^24T . . 8T  ^24T . . >. . .  24T . >. >8T
-
-//4T .
-/marker Dut
-//>8T >T >T >T
-
-1r
-1r
-// Do double stop stuff to increase control, warm up, check heights.
-// 12th notes.
-/mf
-8T T T T T T T T
-8T T T T T T T T
-/cresc
-8T T T T T T T T
 /fff
-8T T T T T T T T
-12T T T T T T T T T T T T
-12T T T T T T T T T T T T
-12T T T T T T T T T T T T
-12T T T T T T T T T T T T
+12t t t t t t t t t t t t
+12t t t t t t t t t t t t
+/decresc
+12t t t t t t t t t t t t
+12t t t t t t t t t t t t
+/mf
+// /// End of track ////////
 
 
-
-
-
-
-
-//////////////// SNARE 1 Channel 5 SET 1 ////////////////////////
+//////////////// SNARE 1 Channel 5 SET 0 ////////////////////////
 /track snare
 /channel 5
 
-
-// Switching between 12/8 and 4/4 but keeping 8th notes constant
-// means tempo will go between 1x and 3x/2.
-// If we have 72 bpm for the dotted quarter in a 12/8, then
-// for the 4/4 we'd have 110 bpm.
-
-// ----------- Set 1 Exercise 0 is free form warm up
-// ----------- but leader decides when to stop.
-// ----------- Some kind of hand signal.
-
-
-// ----------- Set 1 Exercise 1 is alternating single stroke
-// ----------- 24th notes for snares, played near rim, quietly.
-// -----------
 /time 4/4
 /tempo 72
 
-// Sync
-1r
-4r 4r 8r . . .
+// ------------ Snare 1 Set 0 Exercise 0.0, double stops -----------------
+/time 4/4
+/tempo 72
+// sync
+1r 1r
+// Do double stop stuff to increase control, warm up, check heights.
 
-// This next stuff is placeholder for double stops, handled by 2 other snares
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-
+/mf
+8T T T T T T T T
+8T T T T T T T T
+/cresc
+8T T T T T T T T
+/fff
+8T T T T T T T T
+12T T T T T T T T T T T T
+12T T T T T T T T T T T T
+/decresc
+12T T T T T T T T T T T T
+12T T T T T T T T T T T T
+/mf
 
 // 0:05
+// ----------- Exercise 0.1 is bass and tenor solos
+// ----------- while snares continue
+// -----------
 /mf
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
 
-
-// ----------- Set 1 Exercise 2 is bass and tenor solos
-// ----------- while snares continue
-// -----------
 // basses solo
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
@@ -157,10 +94,11 @@
 
 
 
-// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
+
+
+// ----------- Exercise 0.2 is bass and tenor continued solos alternating
 // ----------- while snares improv within 24th notes.  Anything goes here,
 // ----------- any volume, any taps, doubles, flams, or rests.
-// ----------- 0:28
 /ff
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
@@ -169,8 +107,7 @@
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
 
 
-// ----------- Set 1 Exercise 4 is unison 12th notes for all
-// ----------- 0:40
+// ----------- Exercise 0.3 is unison 12th notes for all
 /fff
 /marker 12ths
 12T T T   T T T   t t t  t t t
@@ -181,10 +118,9 @@
 
 
 
+// ------ SET 1 -- Single hands
 
-
-
-// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- Exercise 1.0 is shifting to a 4/4 feel from 12/8
 // ----------- keeping 8ths constant.  This means a tempo change.
 // ----------- Groups of 8 notes for snares. 0:53
 /tempo 110
@@ -194,21 +130,16 @@
 4r
 4r // sticks up or out
 
-
+/ff
 8T T T T T T T T    t t t t t t t t
 8T T T T T T T T    T T T T T T T T
 8t t t t t t t t    T T T T T T T T
 8t t t t t t t t    t t t t t t t t
-// Sync
-4T
-//marker Dwn
-4r
-4r
-//marker Up
-4r
 
-// ------------ Set 1 Exercise 6, loud and soft contrast
-// ------------ 1:14
+// Sync
+4T 4r . .
+
+// ------------ Exercise 1.1, loud and soft contrast
 /marker 8thsAcc
 /ff
 ^8T T ^T T ^T T ^T T   ^t t ^t t ^t t ^t t
@@ -219,60 +150,47 @@
 
 
 
-
-
-//// ----------- Set 1 Exercise 7 is mixed accents
+//// ----------- Exercise 1.2 is mixed accents
 //// ----------- This is of questionable value for us
 //// ----------- since the previous exercise is similar.
 //// Sync
-//4T
-///marker D
-//4r 4r
-///marker U
-//4r
-//
+//4T 4r . .
 //^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
 //^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
 //^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
 //^8t t ^t t t ^t t ^t    ^t t ^t t t ^t ^t t
-//
-//// rpt, but faster
-////Sync
-////tempo 132
-//4T
-///marker D
-//4r 4r
-///marker U
-//4r
-//
-//^8T T ^T T T ^T T ^T   ^t t ^t t t ^t ^t T
-//^8T T ^T T T ^T T ^T    ^T T ^T T T ^T ^T t
-//^8t t ^t t t ^t t ^t    ^T T ^T T T ^T ^T t
-//^8t t ^t t t ^t t ^t    ^t t ^t t t ^t t ^t
 
 
-
-// move the 12/24 and Sanford stuff here, since it's not rolls
-
-
-
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-
-// This is mostly 12-24 stuff
+/tempo 110
+// ----------- Exercise 1.3 is Fred Sanford's double stroke
+// sync
+4T 4r . .
+/ff
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  T
+16t 8t  16t 8t  16t 8t  16t 8t  8t t
+16T 8T  16T 8T  16T 8T  16T 8T  8T T
+16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
 
 /time 4/4
-//tempo 84
+// ----------- Exercise 1.4 is Fred Sanford's triple stroke
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   8t t
+16T T 8T   16T T 8T   16T T 8T   8T T
+16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
+
+
+///////////// SET 2  Dot/Cut  12/24 stuff  //////////////
+
+/time 4/4
+/tempo 110  // ?? //tempo 84
+// ----------- Exercise 2.0, Establish 2:1 relationship for dot/cut
 // Sync
 4T 4r . .
-
 /ff
-// 0:00
-// Single hand exercises with 12-24, mostly just for warmups.
-// Slow but important.  Snare and Tenor unison
-// Important to start with something like this.
-// ESTABLISH THE 2:1 RELATIONSHIP
 12T T T T T T   6T 12T 6T 12T
 12t t t t t t   6t 12t 6t 12t
 12T T T T T T   6T 12T 6T 12T
@@ -284,7 +202,7 @@
 6t 12t 6t 12t 6t 12t 6t 12t
 
 
-
+// ----------- Exercise 2.1, doubles on the 12/24
 /time 2/4
 /tempo 60
 // Sync 2 counts
@@ -292,20 +210,19 @@
 
 // 0:28
 /f
-// doubles on the 12-24.
 24T . . . . .   12T 24T 12t 24t
 24T . . . . .   12T 24T 12t 24t
 24T . . . . .   12T 24T 12t 24t
 12T 24T 12t 24t 12T 24T 12t 24t
 
+// ----------- Exercise 2.2, singles
 // singles on the 12-24
 24T . . . . .   12T 24t 12T 24t
 24T . . . . .   12T 24t 12T 24t
 24T . . . . .   12T 24t 12T 24t
 12T 24t 12T 24t 12T 24t 12T 24t
 
-// 0:44
-// Paradiddles on the 12-24.  This is okay
+// ----------- Exercise 2.3, Paradiddles
 ^24T . . . . .   ^12T 24t 12T 24T
 ^24t . . . . .   ^12t 24T 12t 24t
 ^24T . . . . .   ^12T 24t 12T 24T
@@ -316,8 +233,7 @@
 ^24t . . . . .   ^12t 24T 12t 24t
 ^12T 24t 12T 24T ^12t 24T 12t 24t
 
-// 1:00
-// Same as before, but move the accent on the paradiddle to be 2nd
+// ----------- Exercise 2.4, move the accent on the paradiddle to be 2nd
 // This is okay
 ^24T . ^. . . .    12T ^24t 12T 24T
 ^24t . ^. . . .    12t ^24T 12t 24t
@@ -329,122 +245,56 @@
 ^24t . ^. . . .    12t ^24T 12t 24t
 12T ^24t 12T 24T   12t ^24T 12t 24t
 
-
+// ----------- Exercise 2.5, 12-24 long pickup timing.  Check JL for accent placement
 /time 4/4
 /tempo 80
 //Sync
 4T 4r . .
-
-// 12-24 long pickup timing.  Check with the JL setting to see where the accents are
 ^4T 8r 12t 24T              ^4t 8r >12T 24t
 ^8T _12t 24T  ^8t _12T 24t    12r ^24T _12t 24t _12T 24T _8t
 ^4T 8r >12t 24T              ^4t 8r >12T 24t
 ^8T _12t 24T  ^8t _12T 24t    12r ^24T _12t 24t _12T 24T _8t
 
 
-// 1:31
-// shorter pickup timing, 24-12  // check hand orders
+// ----------- Exercise 2.6, 12-24 shorter pickup timing, check hand orders
 ^8T 12r ^24t 12T 24T 8t       ^8T 12r ^24t 12T 24T 8t
 12T >24t 12r 24t   12T >24t 12r 24t   12T >24t 12r 24t  12T 24T 8t
 ^8t 12r ^24T 12t 24t 8T       ^8t 12r ^24T 12t 24t 8T
 12T >24t 12r 24t   12T >24t 12r 24t   12T >24t 12r 24t  12T 24T 8t
 
-// 1:43
-// 30th stuff
+// ----------- Exercise 2.7, 30th stuff
 >12 24 12 24 12 ^30t . . . .  >12 24 12 24 12 ^30t . . . .
 >12T 24 12 ^30t . . . .  >12T 24 12 ^30t . . . .  >12T 24 8T
 >12 24 12 24 12 ^30t . . . .  >12 24 12 24 12 ^30t . . . .
 12 ^30t . . . .  12 ^30t . . . .  12 ^30t . . . .  >12T 24 8T
 
 
-//////  SET 3  ////////
+//////  SET 3 - BUZZ ROLL DEVELOPMENT ////////
 
-// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
-// feels faster.  Start this way because the previous set ends on that tempo.
-// And need to work on that 12 24 12 24 idiom.
-// Maybe the 12/24 12 24 idiom should be after doing doubles.  These two things should not be in the same set.
-
-/tempo 110
-
-
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
-// -----------
-// sync
-4T
-/marker D
-4r
-4r
-/marker U
-4r
-/ff
-16T 8T  16T 8T  16T 8T  16T 8T  8T T
-16t 8t  16t 8t  16t 8t  16t 8t  8t t
-16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  16T 8T  T
-16t 8t  16t 8t  16t 8t  16t 8t  8t t
-16T 8T  16T 8T  16T 8T  16T 8T  8T T
-16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
-
-// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
-// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
-
-
-
-/time 4/4
-// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
-// -----------
-//4r . . . // Sync
-16T T 8T   16T T 8T   16T T 8T   8T T
-16t t 8t   16t t 8t   16t t 8t   8t t
-16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   16T T 8T   8T T
-16t t 8t   16t t 8t   16t t 8t   8t t
-16T T 8T   16T T 8T   16T T 8T   8T T
-16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   16t t 8t   8t t
-
-
-
-
-
-
-
-
-
-
-
-//////  SET 2  ////////
+// ----------- Exercise 3.0, simulated pulse buzzes, quarter notes, right
 /time 4/4
 /tempo 72
 /f
-// ----------- Set 2 Exercise 0 is single pulse buzzes
-// -----------
 //Sync
-4T
-/marker D
-4r
-4r
-/marker U
-4r
-
-// Simulate loose buzzes.
-//
-// QUARTER NOTE BUZZES RIGHT HAND  1 bar of 4/4
+4T 4r . .
 /ff /> 48T T T T T T   T T T T T T /ppp
 /ff /> 48T T T T T T   T T T T T T /ppp
 /ff /> 48T T T T T T   T T T T T T /ppp
 /ff /> 48T T T T T T   T T T T T T /ppp
 
-// QUARTER NOTE BUZZES LEFT HAND, 1 bar 4/4
+// ----------- Exercise 3.1, simulated pulse buzzes, quarter notes, left
 /ff /> 48t t t t t t   t t t t t t /ppp
 /ff /> 48t t t t t t   t t t t t t /ppp
 /ff /> 48t t t t t t   t t t t t t /ppp
 /ff /> 48t t t t t t   t t t t t t /ppp
 
-// EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
+// ----------- Exercise 3.2, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
 /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
 /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
 /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
 
-// TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
+// ----------- Exercise 3.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 /ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
 /ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
 /ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
@@ -453,7 +303,7 @@
 /ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
 /ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
 
-// SIXTEENTH NOTE BUZZES, 2 bar 4/4
+// ----------- Exercise 3.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
 /ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 /ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 /ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
@@ -463,7 +313,7 @@
 /ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 /ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 
-// TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
+// ----------- Exercise 3.5, simulated TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
 /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
 /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
 /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
@@ -474,14 +324,8 @@
 /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f /ff /> 72T T T /f /ff /> 72t t t /f
 
 
-// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
-// -----------
-4T
-//marker Dwn
-4r
-4r
-//marker Up
-4r
+// ----------- Exercise 3.6, long Buzz Rolls with pulses, soft
+4T 4r . .
 /mp
 /marker bzzPulses
 >24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
@@ -491,85 +335,43 @@
 
 
 
-// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses, soft
-// -----------
-4T
-//marker Dwn
-4r
-4r
-//marker Up
-4r/mp
-/marker BzzNoPlse
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24T . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-
-// MAYBE GET RID OF ALL DYNAMIC EXERCISES FOR NOW TO MAKE THIS SHORTER
-// ----------- Set 2 Exercise 3 is cresc/decres rolls
-// -----------
-///marker BuzDyn
-///mp
-//24T . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
-//24T /ff  . . . . .    . . . . . .    /decresc 24Z . . . . .    . . . . . .
-//24T /mp . . . . .    . . . . . .    /cresc 24Z . . . . .    . . . . . .
-//24Z . . . . .    . . . . . .    24Z . . . . .    . . . . . .
-//1T /ff
+// ----------- Exercise 3.7, 24 stroke Buzz Rolls soft to loud
+// Sync
+4T 4r . .
+/mp
+^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . . /fff
+^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . . /fff
+^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . .
+24Z . . . . .    . . . . . .          24Z . . . . .    . . . . . . /fff
 
 
 
+// ----------- Exercise 3.8, 12 stroke Buzz Rolls soft to loud
+// Sync
+4T 4r . .
+/fff
+^24T /mp . . . . .  /< 24Z . . . . . /fff  24T /mp. . . . .  /< 24Z . . . . . /fff
+^24T /mp . . . . .  /< 24Z . . . . .  24Z . . . . .   24Z . . . . . /fff
+^24T /mp . . . . .  /< 24Z . . . . . /fff  24T /mp. . . . .  /< 24Z . . . . . /fff
+^24T /mp . . . . .  /< 24Z . . . . .  24Z . . . . .   24Z . . . . . /fff
+
+// ----------- Exercise 3.9, 11 stroke Buzz Rolls soft to loud
+//^24T /mp . . . . .   /< 24Z . . . . ^24t  /fff ^24T  /mp  . . . . .   /< 24Z . . . . 24t /fff
+//^24T /mp . . . . .   /< 24Z . . . . .   24Z . . . . .   24Z . . . . 24t /fff
 
 
-// new stuff
-// ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
-// -----------
-4T
-//marker Dwn
-4r
-4r
-//marker Up
-4r
-24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
-24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
-24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-
-
-// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
-// -----------
-///mp /cresc 24T . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
-//24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-//24T /fff /decresc . . . . .   24Z . . . . .   24T . . . . .   24Z . . . . .
-//24T . . . . .   24Z . . . . .   24Z . . . . .   24Z . . . . .
-//4T /mp /f
-//marker Dwn
-//4r
-//4r
-//marker Up
-//4r
-
-// ----------- Set 2 Exercise 3.3 is development of 8th note rolls, starting left (3 pulse, or "7's")
-// -----------
-4T
-/marker D
-4r
-4r
-/marker U
-4r
+// ----------- Exercise 3.10, 7 stroke Buzz Rolls, starting left into beat
+// Sync
+4T 4r . .
 /fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
 /fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
 /fff 8T /f /cresc 24t . .  8T /fff /f /cresc 24t . .   8T /fff /f /cresc 24z . .  8T /fff /f /cresc 24z . .
 /fff 8T /f /cresc 24z . .  8T /fff /f /cresc 24z . .   8T /fff /f /cresc 24z . . 8T /fff /f /cresc 24z . .
 
 
-// ----------- Set 2 Exercise 3.4 is more 8th note rolls, starting right
-// -----------
-4T /fff /f
-/marker D
-4r
-4r
-/marker U
-4r
+// ----------- Exercise 3.10, 7 stroke Buzz Rolls, starting right on beat
+// Sync
+4T 4r . .
 /f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t /fff /f /cresc 24Z . . 8t /fff
 /f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t /fff /f /cresc 24Z . . 8t /fff
 /f /cresc 24T . . 8t /fff /f /cresc 24T . . 8t /fff /f /cresc 24Z . . 8t  24Z . . 8t
@@ -824,52 +626,40 @@
 
 
 
-///////////////// TENOR SET 1 //////////////////////////////////
-// 1
+///////////////// TENOR SET 0 //////////////////////////////////
 /track tenor
 /channel 2
 
-
-
-
-
-
-
-
-
-
-
-
-
+// ------------ Set 0 Exercise 0, double stops -----------------
 //time 4/4
 //tempo 72
 
 // Sync
-1r
-4r 4r 8r . . .
+1r  4r 4r 8r . . .
 
 /mp
 8N . . . . . . .
 8N . . . . . . .
 /cresc
 8N . . . . . . .
-/f
 8N . . . . . . .
+/f
 
 12N . . . . . . . . . . .
 12N . . . . . . . . . . .
 /ff
+
 12N . 24N 12N . . 24N    12N . 24N 12N . . 24N
 12N . 24N 12N . . 24N    12N . 24N 12N . . 24N
+/mp
 
-
+// ----------- Exercise 0.1 is bass and tenor solos
+// ----------- while snares continue
+// -----------
 /mp
 8N . . . . . . .
 8N . . . . . . .
 
-// ----------- Set 1 Exercise 2 is bass and tenor solos
-// ----------- while snares continue
-// -----------
 // (basses solo)
 /mp
 _12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
@@ -879,8 +669,9 @@ _12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _12n 24N   _12n 24N  24n . .
 24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
 24N . _12N   24n . _12n   24N . _12N   24n . _12n   24N . _12N   24N . _12N
 
-// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
-// ----------- while snares improv within 24th notes.
+// ----------- Exercise 0.2 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.  Anything goes here,
+// ----------- any volume, any taps, doubles, flams, or rests.
 // ----------- Probably need to change these rhythms so easier to understand
 /mf
 _12N 24n  _12N 24n  _12N 24n  _12N 24n   _12N 24n   _12N 24n   _12N 24n  24N . .
@@ -892,30 +683,8 @@ _12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _8n
 24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N   24N >. . 12N
 
 
+// ----------- Exercise 0.3 is unison 12th notes for all
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ----------- Set 1 Exercise 4 is unison 12th notes for all
-// -----------
 
 /ff
 12N N N   N N N   n n n   n n n
@@ -925,44 +694,40 @@ _12n 24N  _12n 24N  _12n 24N  _12n 24N   _12n 24N   _8n
 
 
 
+// ------ SET 1 -- Single hands
 
 
-// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- Exercise 1.0 is shifting to a 4/4 feel from 12/8
 // ----------- keeping 8ths constant.  This means a tempo change.
 // ----------- Groups of 8 notes for snares.
 //tempo 110
+// Sync
 8N 8r
 4r // sticks down or in
 4r
 4r // sticks up or out
 
 /f
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
+8N N N N N N N N 8n n n n n n n n
 
-8N N N N N N N N 8n n n n n n n n
-8N N N N N N N N 8n n n n n n n n
-8N N N N N N N N 8n n n n n n n n
-8N N N N N N N N 8n n n n n n n n
+// Sync
 4N 4r . .
 
-// ------------ Set 1 Exercise 6, loud and soft contrast
-// ------------
+// ------------ Exercise 1.1, loud and soft contrast
+
 /f
 _8N N _N N _N N _N N   _n n _n n _n n _n n
 _8N N _N N _N N _N N    _N N _N N _N N _N N
 _8n n _n n _n n _n n    _N N _N N _N N _N N
 _8n n _n n _n n _n n    _n n _n n _n n _n n
 //tempo 120
-//4N 4r . .
-
-// repeat // should this go faster?
-//_8N N _N N _N N _N N   _n n _n n _n n _n n
-//_8N N _N N _N N _N N    _N N _N N _N N _N N
-//_8n n _n n _n n _n n    _N N _N N _N N _N N
-//_8n n _n n _n n _n n    _n n _n n _n n _n n
 
 
 
-//// ----------- Set 1 Exercise 7 is mixed accents
+//// ----------- Exercise 1.2 is mixed accents
 //// -----------
 //// Sync
 //4N 4r . .
@@ -971,30 +736,37 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 //_8N N _N N N _N N _N    _N N _N N N _N _N n
 //_8n n _n n n _n n _n    _N N _N N N _N _N n
 //_8n n _n n n _n n _n    _n n _n n n _n n _n
-//
-//// rpt, but faster
-////Sync
-////tempo 132
-//4N 4r . .
-//
-//_8N N _N N N _N N _N   _n n _n n n _n _n N
-//_8N N _N N N _N N _N    _N N _N N N _N _N n
-//_8n n _n n n _n n _n    _N N _N N N _N _N n
-//_8n n _n n n _n n _n    _n n _n n n _n n _n
 
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
 
+//tempo 110
+// ----------- Exercise 1.3 is Fred Sanford's double stroke
+// Sync:
+4N 4r . .
+/mf
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
 
 //time 4/4
-//tempo 84
+// ----------- Exercise 1.4 is Fred Sanford's triple stroke
+4N N N  8N N
+4n n n  8n n
+4N N N N N N N 8N N
+4n n n  8n n
+4N N N  8N N
+4n n n n n n n 8n n
+
+
+///////////// SET 2  Dot/Cut  12/24 stuff  //////////////
+
+//time 4/4
+//tempo 110 // ? 84
+// ----------- Exercise 2.0, Establish 2:1 relationship for dot/cut
 // Sync
 4r . . .
-
-
-
-
 
 
 12N N N N N N   6N 12N 6N 12N
@@ -1007,29 +779,25 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 12n n n n n n   6n 12n 6n 12n
 6n 12n 6n 12n 6n 12n 6n 12n
 
-
+// ----------- Exercise 2.1, doubles on the 12/24
 //time 2/4
 //tempo 60
 // Sync 2 counts
 8N 8r . .
-
 // wow tenor parsing is bad.  have to add the name of the note, no 12n 24 12 24
-
-
-// doubles on the 12-24
 8N . >12N 24N 12n 24n    //  4N 8N .
 8N . >12N 24N 12n 24n    //  4N 8N .
 8N . >12N 24N 12n 24n    //  4N 8N .
 >12N 24N 12n 24n  >12N 24N 12n 24n
 
-// singles on the 12-24
+// ----------- Exercise 2.2, singles
 8N . >12N 24n 12N 24n   // 4N 8N .
 8N . >12N 24n 12N 24n   // 4N 8N .
 8N . >12N 24n 12N 24N   // 4N 8N .
 >12N 24n 12N 24n  >12N 24n 12N 24n
 
 
-// Paradiddles on the 12-24
+// ----------- Exercise 2.3, Paradiddles
 >8N . >12N 24n 12N 24N
 >8n . >12n 24N 12n 24n
 >8N . >12N 24n 12N 24N
@@ -1041,7 +809,7 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 >12N 24n 12N 24N  >12n 24N 12n 24n
 
 
-
+// ----------- Exercise 2.4, move the accent on the paradiddle to be 2nd
 12N 6n  12N >24n 12N 24n
 12N 6n  12N >24n 12N 24n
 12N 6n  12N >24n 12N 24n
@@ -1052,99 +820,54 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 12N 6n  12N >24n 12N 24n
 12N >24n 12N 24n  12N >24n 12N 24n
 
-
+// ----------- Exercise 2.5, 12-24 long pickup timing.
 //time 4/4
 //tempo 80
 //Sync
 4N 4r . .
-
-
-
-
 8N 24n . . 8N 8n   8N 24n . . 8N 8n
 8N .  8N .     12r ^24N 8n . .
 8N 24n . . 8N 8n   8N 24n . . 8N 8n
 8N .  8N .     12r ^24N 8n . .
 
-
+// ----------- Exercise 2.6, 12-24 shorter pickup timing
 8N 24n . . 8N 8n   8N 24n . . 8N 8n
 12N 6n     12N 6n   12r ^24N 8n . .
 8N 24n . . 8N 8n   8N 24n . . 8N 8n
 12N 6n     12N 6n   12r ^24N 8n . .
 
-
-
+// ----------- Exercise 2.7, 30th stuff
 12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
 >8N 4r  >8n 4r >8N .
 12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
 12N >6n   12N >6n   12N >6n   12N 24 8N
 
 
-//////  SET 3  ////////
-
-// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
-// feels faster.  Start this way because the previous set ends on that tempo.
-
-
-
-//tempo 110
-
-
-
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
-// -----------
-// Sync:
-4N
-4r
-.
-.
-
-
-
-/mf
-4N N N  8N N
-4n n n  8n n
-4N N N N N N N 8N N
-4n n n  8n n
-4N N N  8N N
-4n n n n n n n 8n n
-
-// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
-// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
-
-
-//time 4/4
-// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
-// -----------
-//4r . . .   // sync
-4N N N  8N N
-4n n n  8n n
-4N N N N N N N 8N N
-4n n n  8n n
-4N N N  8N N
-4n n n n n n n 8n n
-
-
-
-//////  SET 2  ////////
-//tempo 72
-/mp
-//Sync
-_4n
-4r
-4r
-4r
+//////  SET 3 - BUZZ ROLL DEVELOPMENT ////////
+// ----------- Exercise 3.0, simulated pulse buzzes, quarter notes, right
+/time 4/4
+/tempo 72
 /f
-// ----------- Set 2 Exercise 0 is single pulse buzzes
-// -----------
+//Sync
+_8N 8r 4r . .
 4N N N N
+
+// ----------- Exercise 3.1, simulated pulse buzzes, quarter notes, left
 4n n n n
+
+// ----------- Exercise 3.2, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 8N . . . . . . .
 8N . . . . . . .
+
+// ----------- Exercise 3.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 12N . .  . . .  . . .  . . .
 12N . .  . . .  . . .  . . .
+
+// ----------- Exercise 3.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
 16N . . .  . . . .  . . . .   . . . .
 16N . . .  . . . .  . . . .   . . . .
+
+// ----------- Exercise 3.5, simulated TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
 24N . . . . .   24N . . . . .   24N . . . . .   24N . . . . .
 24N . . . . .   24N . . . . .   24N . . . . .   24N . . . . .
 
@@ -1152,12 +875,11 @@ _4n
 
 
 
-// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
-// -----------
-8N 8r
-4r
-4r
-4r
+
+
+
+// ----------- Exercise 3.6, long Buzz Rolls with pulses, soft
+8N 8r 4r . .
 //marker bzzPulses
 8N . . .  _24N . .  _. . .  _. . .  _. . .
 8N . . .  _24N . .  _. . .  _. . .  _. . .
@@ -1168,88 +890,47 @@ _24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
 
 
 
-// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses, soft
-// -----------
-_8N 8r
-4r
-.
-.
+// ----------- Exercise 3.7, 24 stroke Buzz Rolls no pulses, soft to loud
+// Sync
+_8N 8r 4r . .
 /mp
-8N . . .  24N . .  . . .  . . .  . . .
-8N . . .  24N . .  . . .  . . .  . . .
-8N . . .  24N . .  . . .  . . .  . . .
-24N . .  . . .  . . .  . . .      . . .  . . .  . . .  . . .
+8N /p . . .  /< 24N . .  . . .  . . .  . . . /ff
+8N /p . . .  /< 24N . .  . . .  . . .  . . . /ff
+8N /p . . .  /< 24N . .  . . .  . . .  . . .
+24N . .  . . .  . . .  . . .      . . .  . . .  . . .  . . . /ff
 
 
-
-
-// ----------- Set 2 Exercise 3 is cresc/decres rolls
-// -----------
-//marker BuzDyn
-///mp
-//8N . . .  /cresc 24N . .  . . .  . . .  . . .
-//8N /ff . . .  /decresc 24N . .  . . .  . . .  . . .
-//8N /mp . . .  /cresc 24N . .  . . .  . . .  . . .
-//_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-//_4N /ff /mp 4r . .
-
-
-
-
-
-// new stuff
-// ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
-// -----------
-8N 8r
-4r
-.
-.
+// ----------- Exercise 3.8, 12 stroke Buzz Rolls soft to loud
+// Sync
+8N 8r 4r . .
 /mf
 24N . . . . .   4N   24N . . . . .   4N
 24N . . . . .   8N . . . . .
 24N . . . . .   4N   24N . . . . .   4N
 24N . . . . .   8N . . . . .
 
-
-
-// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
-// -----------
-///mp /cresc 24N . . . . .   4N   24N . . . . .   4N
+// ----------- Exercise 3.9, 11 stroke Buzz Rolls soft to loud
+//24N . . . . .   4N   24N . . . . .   4N
 //24N . . . . .   8N . . . . .
-//24N /f /decresc . . . . .   4N   24N . . . . .   4N
-//24N . . . . .   8N . . . . .
-//4N /mp /mf
-///marker Dwn
-//4r
-//4r
-///marker Up
-//4r
 
-// ----------- Set 2 Exercise 3.3 is development of 8th note rolls, starting left (3 pulse, or "7's")
-// -----------
-// 7 stroke stuff
-4N
-4r
-4r
-4r
+
+// ----------- Exercise 3.10, 7 stroke Buzz Rolls, starting left into beat
+// Sync
+8N 8r 4r . .
 8N . . . . . . .
 8N . . . . . . .
 8N . . . . . . .
 8N . . . . . . .
 
 
-// ----------- Set 2 Exercise 3.4 is more 8th note rolls, starting right
-// -----------
-4n
-///marker Dwn
-4r
-4r
-///marker Up
-4r
+// ----------- Exercise 3.10, 7 stroke Buzz Rolls, starting right on beat
+// Sync
+8N 8r 4r . .
 8N . . . . . . .
 8N . . . . . . .
 8N . . . . . . .
 8N . . . . . . .
+
 
 
 
@@ -1456,47 +1137,48 @@ _4N
 /channel 8
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// ------------ Set 0 Exercise 0, double stops -----------------
 //time 4/4
 //tempo 72
 
 // Sync
-1r
-4r 4r 8r . . .
+1r  4r 4r 8r . . .
+
 
 /mf
 8B . . . . . . .
 8B . . . . . . .
 /cresc
 8B . . . . . . .
-/ff
 8B . . . . . . .
+/ff
 
 4B . . .
 4B . . .
 2B .
 12B . 24B 12B . . 24B    12B . 24B 12B . . 24B
-
-
-
 /mf
-2B .
-2B .
 
-// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- Exercise 0.1 is bass and tenor solos
 // ----------- while snares continue
 // -----------
+/mf
+2B .
+2B .
+
+// basses solo
+/ff
+12B . .  8B 12B 24B  12B . .  4B
+12B . .  8B 12B 24B  12B . .  4B
+// (tenors solo)
+/mf
+2B .
+2B .
+
+
+// ----------- Exercise 0.2 is bass and tenor continued solos alternating
+// ----------- while snares improv within 24th notes.  Anything goes here,
+// ----------- any volume, any taps, doubles, flams, or rests.
 /ff
 12B . .  8B 12B 24B  12B . .  4B
 12B . .  8B 12B 24B  12B . .  4B
@@ -1506,20 +1188,8 @@ _4N
 
 
 
-// ----------- Set 1 Exercise 3 is bass and tenor continued solos alternating
-// ----------- while snares improv within 24th notes.
-// -----------
-/ff
-12B . .  8B 12B 24B  12B . .  4B
-12B . .  8B 12B 24B  12B . .  4B
-/mf
-2B .
-2B .
+// ----------- Exercise 0.3 is unison 12th notes for all
 
-
-
-// ----------- Set 1 Exercise 4 is unison 12th notes for all
-// -----------
 
 /ff
 12B . .   . . .    . . .    . . .
@@ -1528,44 +1198,39 @@ _4N
 12B . .   . . .    . . .    . . .
 
 
+// ------ SET 1 -- Single hands
 
 
-// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- Exercise 1.0 is shifting to a 4/4 feel from 12/8
 // ----------- keeping 8ths constant.  This means a tempo change.
 // ----------- Groups of 8 notes for snares.
 //tempo 110
+// Sync
 /f
 8B 8r
 4r // sticks down or in
 4r
 4r // sticks up or out
 
+2B .   . .
+2B .   . .
+2B .   . .
+2B .   . .
 
-2B .   . .
-2B .   . .
-2B .   . .
-2B .   . .
+// Sync
 4B 4r . .
 
-// ------------ Set 1 Exercise 6, loud and soft contrast
-// ------------
+// ------------ Exercise 1.1, loud and soft contrast
+
 4B . . .   . . . .
 4B . . .   . . . .
 4B . . .   . . . .
 4B . . .   . . . .
 //tempo 120
-//4B 4r . .
-
-// rpt // faster?
-//4B . . .   . . . .
-//4B . . .   . . . .
-//4B . . .   . . . .
-//4B . . .   . . . .
 
 
 
-
-//// ----------- Set 1 Exercise 7 is mixed accents
+//// ----------- Exercise 1.2 is mixed accents
 //// -----------
 //// Sync
 //4B 4r . .
@@ -1574,70 +1239,71 @@ _4N
 //4B . 8r 4B 8B   4B . 8r 8B 4B
 //4B . 8r 4B 8B   4B . 8r 8B 4B
 //4B . 8r 4B 8B   4B . 8r 4B 8B
-//
-//// rpt, but faster
-////Sync
-////tempo 132
-//4B 4r . .
-//
-//4B . 8r 4B 8B   4B . 8r 8B 4B
-//4B . 8r 4B 8B   4B . 8r 8B 4B
-//4B . 8r 4B 8B   4B . 8r 8B 4B
-//4B . 8r 4B 8B   4B . 8r 4B 8B
 
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
+
+//tempo 110 ???
+// ----------- Exercise 1.3 is Fred Sanford's double stroke
+// Sync:
+4r . . .
+/f
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+//time 4/4
+// ----------- Exercise 1.4 is Fred Sanford's triple stroke
+2B 4B 8r 8B
+2b 4b 8r 8b
+2B B B 4B 8r 8B
+2b 4b 8r 8b
+2B 4B 8r 8B
+2b b b 4b 8r 8b
+
+///////////// SET 2  Dot/Cut  12/24 stuff  //////////////
 
 /f
 //time 4/4
-//tempo 84
+//tempo 110 // ? 84
+// ----------- Exercise 2.0, Establish 2:1 relationship for dot/cut
 // Sync
 4r . . .
 
 
-
-
-
-
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+// reverse
 4B . . .
 4B . . .
 4B . . .
 4B . . .
 
-4B . . .
-4B . . .
-4B . . .
-4B . . .
-
-
+// ----------- Exercise 2.1, doubles on the 12/24
 //time 2/4
 //tempo 60
 // Sync 2 counts
 8B 8r . .
-
-
-
-
-// doubles on the 12-24
 8B . . .
 8B . . .
 8B . . .
 8B . . .
 
-// singles on the 12-24
+// ----------- Exercise 2.2, singles
 8B . . .
 8B . . .
 8B . . .
 8B . . .
 
 
-// Paradiddles on the 12-24
+// ----------- Exercise 2.3, Paradiddles
 8B . . .
 8B . . .
 8B . . .
 8B . . .
-
 // Reverse
 8B . . .
 8B . . .
@@ -1645,8 +1311,7 @@ _4N
 8B . . .
 
 
-
-
+// ----------- Exercise 2.4, move the accent on the paradiddle to be 2nd
 12B 6b  12B 6b
 12B 6b  12B 6b
 12B 6b  12B 6b
@@ -1657,30 +1322,23 @@ _4N
 12B 6b  12B 6b
 12B 6b  12B 6b
 
-
+// ----------- Exercise 2.5, 12-24 long pickup timing.
 //time 4/4
 //tempo 80
 //Sync
 4B 4r . .
-
-
-
-
 4B 8r 8b   4B 8r 8b
 4B . 4r 8B .
 4B 8r 8b   4B 8r 8b
 4B . 4r 8B .
 
-
-
-
+// ----------- Exercise 2.6, 12-24 shorter pickup timing
 4B 8B .   4B 8B .
 4B .  8r 8B . .
 4B 8B .   4B 8B .
 4B .  8r 8B . .
 
-
-
+// ----------- Exercise 2.7, 30th stuff
 >4B . >. .
 >8B 4r  >8B 4r >8B .
 >4B . >. .
@@ -1688,84 +1346,44 @@ _4N
 
 
 
-//////  SET 3  ////////
-
-
-// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
-// feels faster.  Start this way because the previous set ends on that tempo.
-
-
-
-
-
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
-// -----------
-// Sync:
-4B
-4r
-.
-.
-
-
+//////  SET 3 - BUZZ ROLL DEVELOPMENT ////////
+// ----------- Exercise 3.0, simulated pulse buzzes, quarter notes, right
+/time 4/4
+/tempo 72
 /f
-2B 4B 8r 8B
-2b 4b 8r 8b
-2B B B 4B 8r 8B
-2b 4b 8r 8b
-2B 4B 8r 8B
-2b b b 4b 8r 8b
-
-
-// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
-// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
-
-
-
-//time 4/4
-// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
-// -----------
-//4r . . .  // sync
-2B 4B 8r 8B
-2b 4b 8r 8b
-2B B B 4B 8r 8B
-2b 4b 8r 8b
-2B 4B 8r 8B
-2b b b 4b 8r 8b
-
-
-
-
-//////  SET 2  ////////
-//tempo 72
-// ----------- Set 2 Exercise 1 is Buzz Rolls with pulses
-// -----------
 //Sync
-4B
-4r
-.
-.
-// ----------- Set 2 Exercise 0 is single pulse buzzes
-// -----------
+_8B 8r 4r . .
 4B . . .
+
+// ----------- Exercise 3.1, simulated pulse buzzes, quarter notes, left
 4B . . .
+
+// ----------- Exercise 3.2, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 8B . . . . . . .
 8B . . . . . . .
+
+// ----------- Exercise 3.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 4B . . .
 4B . . .
+
+// ----------- Exercise 3.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
 4B . . .
 4B . . .
+
+// ----------- Exercise 3.5, simulated TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
 8B . . . . . . .
 8B . . . . . . .
 
 
 
 
-// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
-// -----------
-4r
-4r
-4r
-4r
+
+
+
+
+
+// ----------- Exercise 3.6, long Buzz Rolls with pulses, soft
+8B 8r 4r . .
 //marker bzzPulses
 /f
 2B .
@@ -1777,14 +1395,9 @@ _4N
 
 
 
-// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses, soft
-// -----------
-//Sync
-4B
-4r
-4r
-4r
-//marker BzzNoPlse
+// ----------- Exercise 3.7, 24 stroke Buzz Rolls no pulses, soft to loud
+// Sync
+_8B 8r 4r . .
 /mf
 2B .
 . .
@@ -1792,54 +1405,23 @@ _4N
 . .
 
 
-// ----------- Set 2 Exercise 3 is cresc/decres rolls
-// -----------
-//Sync
-//4B /mp /mf 4r . .
-//marker BuzDyn
-///mp /cresc
-//2B .
-///ff /decresc
-//. .
-///mp /cresc
-//. .
-//. .
-
-
-// new stuff
-// ----------- Set 2 Exercise 3.1 is quarter note and dotted half buzz rolls (6 and 18 pulses, or if open, then 13's & 37's)
-// -----------
-//Sync
-4r
-4r
-.
-.
+// ----------- Exercise 3.8, 12 stroke Buzz Rolls soft to loud
+// Sync
+8B 8r 4r . .
 /f
 4B . . .
 4B . 8B . . .
 4B . . .
 4B . 8B . . .
 
-
-// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
-// -----------
-//Sync
-//4B /mp /mf 4r . .
-///mp /cresc 4B . . .
+// ----------- Exercise 3.9, 11 stroke Buzz Rolls soft to loud
+//4B . . .
 //4B . 8B . . .
-//4B /f /decresc . . .
-//4B . 8B . . .
-//Sync
 
 
-
-// ----------- Set 2 Exercise 3.3 is development of 8th note rolls, starting left (3 pulse, or "7's")
-// -----------
-4B
-4r
-.
-.
-// 7 stroke stuff
+// ----------- Exercise 3.10, 7 stroke Buzz Rolls, starting left into beat
+// Sync
+8B 8r 4r . .
 /f
 4B . . .
 4B . . .
@@ -1847,13 +1429,10 @@ _4N
 4B . . .
 
 
-// ----------- Set 2 Exercise 3.4 is more 8th note rolls, starting right
-// -----------
-//Sync
-4B
-4r
-.
-.
+// ----------- Exercise 3.10, 7 stroke Buzz Rolls, starting right on beat
+// Sync
+8B 8r 4r . .
+
 /f
 4B . . .
 4B . . .
@@ -2068,19 +1647,10 @@ _4N
 /channel 0
 
 
-
-
-
-
-
-
-
-
-
-
-
+// ------------ Set 0 Exercise 0, double stops -----------------
 //time 4/4
 //tempo 72
+
 // Sync
 /ff
 ^24M . . 8M  ^24M . . 8M
@@ -2099,17 +1669,18 @@ _4N
 2M .
 
 
-4M . . .
-4M . . .
-
-// ----------- Set 1 Exercise 2 is bass and tenor solos
+// ----------- Exercise 0.1 is bass and tenor solos
 // ----------- while snares continue
 // -----------
 4M . . .
 4M . . .
-4M . . .
-4M . . .
 
+// (bases solo)
+4M . . .
+4M . . .
+// (tenors solo)
+4M . . .
+4M . . .
 
 
 
@@ -2126,8 +1697,8 @@ _4N
 
 
 
-// ----------- Set 1 Exercise 4 is unison 12th notes for all
-// -----------
+// ----------- Exercise 0.3 is unison 12th notes for all
+
 
 4M . . .
 4M . . .
@@ -2136,30 +1707,29 @@ _4N
 
 
 
+// ------ SET 1 -- Single hands
 
 
-
-
-// ----------- Set 1 Exercise 5 is shifting to a 4/4 feel from 12/8
+// ----------- Exercise 1.0 is shifting to a 4/4 feel from 12/8
 // ----------- keeping 8ths constant.  This means a tempo change.
 // ----------- Groups of 8 notes for snares.
 //tempo 110
+// Sync
 /ff
 4M . 8M . 4M
 /mf
 
 
 
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
+4M . . .   . . . .
 
-
-4M . . .   . . . .
-4M . . .   . . . .
-4M . . .   . . . .
-4M . . .   . . . .
+//Sync
 4M . 8M . 4M
 
-// ------------ Set 1 Exercise 6, loud and soft contrast
-// ------------
+// ------------ Exercise 1.1, loud and soft contrast
 4M . . .   . . . .
 4M . . .   . . . .
 4M . . .   . . . .
@@ -2168,50 +1738,47 @@ _4N
 
 
 
+//// ----------- Exercise 1.2 is mixed accents
+//
 
-//// ----------- Set 1 Exercise 7 is mixed accents
-//// -----------
-//// Sync
-//^8M M ^M M M ^M M ^M
-//
-//4M . . .   . . . .
-//4M . . .   . . . .
-//4M . . .   . . . .
-//4M . . .   . . . .
-//
-//
-//
-//
-//
-//
-//
-//// rpt, but faster, bump it up by 12
-///tempo 132
-//^8M M ^M M M ^M M ^M
-//
-//4M . . .   . . . .
-//4M . . .   . . . .
-//4M . . .   . . . .
-//4M . . .   . . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
 
 
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
-///////////// 12-24  12-24  12-24  12-24  //////////////
 
+
+//tempo 110 ???
+// ----------- Exercise 1.3 is Fred Sanford's double stroke
+// Sync
+/ff
+^8M M ^M M ^16M . 8M ^4M
+/mf
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
+^4M . >. .   ^. . >. .
+^4M . >. .   . . . .
 
 //time 4/4
-//tempo 84
+// ----------- Exercise 1.4 is Fred Sanford's triple stroke
+^4M . >. .
+^4M . >. .
+^4M . >. .   >. . >. .
+^4M . >. .
+^4M . >. .
+^4M . >. .   >. . >. .
+
+
+///////////// SET 2  Dot/Cut  12/24 stuff  //////////////
+
+//time 4/4
+//tempo 110 // ? 84
+// ----------- Exercise 2.0, Establish 2:1 relationship for dot/cut
 //sync
 /ff
 12M . . . . .   6M 12M 6M 12M
 /mf
-
-
-
-
-
-
 
 >4M . . .
 >4M . . .
@@ -2223,27 +1790,25 @@ _4N
 >4M . . .
 >4M . . .
 
-
+// ----------- Exercise 2.1, doubles on the 12/24
 //time 2/4
 //tempo 60
 //sync 2 counts only
 /ff
 24M . . . . .   12M 24M 12M 24M
 /mf
-
-// doubles
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 
-// Singles
+// ----------- Exercise 2.2, singles
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 
-// Paradiddles
+// ----------- Exercise 2.3, Paradiddles
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
@@ -2254,16 +1819,18 @@ _4N
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 
+// ----------- Exercise 2.4, move the accent on the paradiddle to be 2nd
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+// reverse
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
-
+// ----------- Exercise 2.5, 12-24 long pickup timing.
 
 //time 4/4
 //tempo 80
@@ -2271,7 +1838,18 @@ _4N
 /ff
 ^8M 8M 8M ^12M ^24M  ^8M 8M 8M ^12M ^24M
 /mf
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
 
+// ----------- Exercise 2.6, 12-24 shorter pickup timing
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+>8M 8M  >8M 8M  >8M 8M  >8M 8M
+
+// ----------- Exercise 2.7, 30th stuff
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
 >8M 8M  >8M 8M  >8M 8M  >8M 8M
@@ -2279,119 +1857,56 @@ _4N
 
 
 
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
-
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
->8M 8M  >8M 8M  >8M 8M  >8M 8M
-
-
-
-//////  SET 3  ////////
-
-// TOTALLY NEW.  STARTING WITH SLOW TEMPO TO DO 12 24 12 24, but later going into 8 16 8 16 which
-// feels faster.  Start this way because the previous set ends on that tempo.
-
-
-//tempo 110
-
-
-
-
-// ----------- Set 3 Exercise 1 is Fred Sanford's double stroke
-// -----------
-// Sync  need better cues on exercises in this set
-/ff
-^8M M ^M M ^16M . 8M ^4M
-/mf
-
-^4M . >. .   ^. . >. .
-^4M . >. .   . . . .
-^4M . >. .   ^. . >. .
-^4M . >. .   . . . .
-
-
-
-
-
-
-
-// OKAY OKAY OKAY MAYBE TRANSITION INTO 12 24 12 24, WITH 16 8 == 12 24 TEMPO CHANGE
-// AND INTO THE 12 24 12 24 THING WITH SINGLES, AND THEN DOUBLES, AND THEN INTO FLAMS
-
-
-//time 4/4
-// ----------- Set 3 Exercise 2 is Fred Sanford's triple stroke
-// -----------
-//^4M ^. ^16M . 8M ^16M . 8M   // sync
-^4M . >. .
-^4M . >. .
-^4M . >. .   >. . >. .
-^4M . >. .
-^4M . >. .
-^4M . >. .   >. . >. .
-
-
-
-
-
-//////  SET 2  ////////
-//time 4/4
-//tempo 72
+//////  SET 3 - BUZZ ROLL DEVELOPMENT ////////
+// ----------- Exercise 3.0, simulated pulse buzzes, quarter notes, right
+/time 4/4
+/tempo 72
 /f
-// ----------- Set 2 Exercise 0 is single pulse buzzes
-// -----------
 //Sync
-//>8M . >8M . >8M >. >8M .
-/ff
-/decresc 48M . . . . .   . . . . . .
-/ppp
-/ff
-/decresc 48M . . . . .   . . . . . .
-/ppp
-/ff
-/decresc 48M . . . . .   . . . . . .
-/ppp
-/ff
-/decresc 48M . . . . .   . . . . . .
-/ppp
+/ff /decresc 48M . . . . .   . . . . . . /ppp
+/ff /decresc 48M . . . . .   . . . . . . /ppp
+/ff /decresc 48M . . . . .   . . . . . . /ppp
+/ff /decresc 48M . . . . .   . . . . . . /ppp
+// end sync
 
-///f /decresc >96M . . . . . . . /p  24r  8r
-///f /decresc >96M . . . . . . . /p  24r  8r
-///f /decresc >96M . . . . . . . /p  24r
-///f /decresc >96M . . . . . . . /p  24r
-///f /decresc >96M . . . . . . . /p  24r 8r
-/p
 /f
 4M . . .
+
+// ----------- Exercise 3.1, simulated pulse buzzes, quarter notes, left
+4M . . .
+
+// ----------- Exercise 3.2, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 4M . . .
 4M . . .
+
+// ----------- Exercise 3.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 4M . . .
 4M . . .
+
+// ----------- Exercise 3.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
 4M . . .
 4M . . .
-4M . . .
+
+// ----------- Exercise 3.5, simulated TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
 4M . . .
 4M . . .
 
 
-// ----------- Set 2 Exercise 1 is long Buzz Rolls with pulses
-// -----------
+
+
+
+
+
+
+
+// ----------- Exercise 3.6, long Buzz Rolls with pulses, soft
 //Sync
 >24M . .  >24M . .  >24M . . >8M
 /f /decresc >96M . . . . . . . /p  24r
 /f /decresc >96M . . . . . . . /p  24r
 /f /decresc >96M . . . . . . . /p  24r
 /f 8M
-
-
-
-//marker bzzPulses
+// end sync
 >8M . >8M . >8M . >8M .
 >8M . >8M . >8M . >8M .
 >8M . >8M . >8M . >8M .
@@ -2399,81 +1914,43 @@ _4N
 
 
 
-// ----------- Set 2 Exercise 2 is long Buzz Rolls no pulses, soft
-// -----------
-//Sync
+// ----------- Exercise 3.7, long Buzz Rolls no pulses, soft to loud
+// Sync
 /ff
 >4M >4M >24M . .  >24M . .  >24M . . >8M
 /mf
-
-//marker BzzNoPlse
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 
 
-
-
-// ----------- Set 2 Exercise 3 is cresc/decres rolls
-// -----------
-//Sync
-//>4M >4M >24M . .  >24M . .  >24M . . >8M
-
-//marker BuzDyn
-//_8M . _8M . _8M . _8M .
-//_8M . _8M . _8M . _8M .
-//_8M . _8M . _8M . _8M .
-//_8M . _8M . _8M . _8M .
-
-
-
-
-// new stuff
-// ----------- Set 2 Exercise 3.1 is
-// -----------
-//Sync
+// ----------- Exercise 3.8, 12 stroke Buzz Rolls soft to loud
+// Sync
 >24M . .  >24M . .  >8M .   >24M . .  >24M . .  >8M .
-
 _8M . _8M .  _8M . _8M .
 _8M . _8M .  _8M . _8M .
 _8M . _8M .  _8M . _8M .
 _8M . _8M .  _8M . _8M .
 
-
-
-
-
-
-// ----------- Set 2 Exercise 3.2 is same as above but with dynamics
-// -----------
-//Sync
-//>24M . .  >24M . .  >8M .   >24M . .  >24M . .  >8M .
-
-//_8M . _8M .  _8M . _8M .
-//_8M . _8M .  _8M . _8M .
+// ----------- Exercise 3.9, 11 stroke Buzz Rolls soft to loud
 //_8M . _8M .  _8M . _8M .
 //_8M . _8M .  _8M . _8M .
 
 
-// ----------- Set 2 Exercise 3.3 is
-// -----------
-// 7 stroke stuff
+
+// ----------- Exercise 3.10, 7 stroke Buzz Rolls, starting left into beat
 //Sync
 /ff
 >8M 24M . .  >8M 24M . .  >8M .  >8M .
 /mf
-
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 _8M . _8M . _8M . _8M .
 
+// ----------- Exercise 3.10, 7 stroke Buzz Rolls, starting right on beat
 
-
-
-// ----------- Set 2 Exercise 3.4 is
-// -----------
 //Sync
 /ff
 >24M . . 8M  >24M . . 8M  >24M . . 8M  >8M .
@@ -3097,3 +2574,29 @@ _8M . _8M . _8M . _8M .
 //// Maybe hard to play accurately because the last 24th is not in time with the 108:5 pulse
 //^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t  // "10 stroke"
 //^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t   ^216:5T 108:5z . . . ^24t
+
+
+//////////////// Experiment SNARE 3 Channel 7 SET 1 ////////////////////////
+///track snare
+///channel 7
+
+//// ------------ Snare 3 Set 0 Exercise 0, double stops -----------------
+////time 4/4
+////tempo 72
+//// sync
+//1r 1r
+//// Do double stop stuff to increase control, warm up, check heights.
+//1r
+//1r
+///mf
+//8T T T T T T T T
+//8T T T T T T T T
+///cresc
+//8T T T T T T T T
+///fff
+//8T T T T T T T T
+//12T T T T T T T T T T T T
+//12T T T T T T T T T T T T
+//12T T T T T T T T T T T T
+//12T T T T T T T T T T T T
+
