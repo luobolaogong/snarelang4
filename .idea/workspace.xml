@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="About to move more stuff around.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Nearly done with reorg.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" afterDir="false" />
     </list>
@@ -920,14 +920,7 @@
       <workItem from="1646345036586" duration="707000" />
       <workItem from="1646504829577" duration="673000" />
       <workItem from="1646702696050" duration="1944000" />
-      <workItem from="1646790074664" duration="139866000" />
-    </task>
-    <task id="LOCAL-00067" summary="Started into Max Rayne.">
-      <created>1608193361907</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1608193361907</updated>
+      <workItem from="1646790074664" duration="184454000" />
     </task>
     <task id="LOCAL-00068" summary="More progress on Rayne.">
       <created>1608274065362</created>
@@ -1265,7 +1258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648680452269</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Nearly done with reorg.">
+      <created>1648709147985</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1648709147985</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1284,7 +1284,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rant tweaks." />
     <MESSAGE value="Pretty close to final, for single snare." />
     <MESSAGE value="Adding some new tunes, and fixing a few others." />
     <MESSAGE value="Will process files for website using ProcessThese.bash." />
@@ -1309,7 +1308,8 @@
     <MESSAGE value="Working on tap rolls" />
     <MESSAGE value="Rearranged parts.  Will delete garbage next." />
     <MESSAGE value="About to move more stuff around." />
-    <option name="LAST_COMMIT_MESSAGE" value="About to move more stuff around." />
+    <MESSAGE value="Nearly done with reorg." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nearly done with reorg." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647981510958">
@@ -1324,22 +1324,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1644256580683" />
-    <state width="3209" height="242" key="GridCell.Tab.0.bottom" timestamp="1648707628199">
+    <state width="3209" height="242" key="GridCell.Tab.0.bottom" timestamp="1649120782974">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3209" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1648707628199" />
-    <state width="3209" height="242" key="GridCell.Tab.0.center" timestamp="1648707628199">
+    <state width="3209" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1649120782974" />
+    <state width="3209" height="242" key="GridCell.Tab.0.center" timestamp="1649120782973">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3209" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1648707628199" />
-    <state width="3209" height="242" key="GridCell.Tab.0.left" timestamp="1648707628199">
+    <state width="3209" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1649120782973" />
+    <state width="3209" height="242" key="GridCell.Tab.0.left" timestamp="1649120782971">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3209" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1648707628199" />
-    <state width="3209" height="242" key="GridCell.Tab.0.right" timestamp="1648707628199">
+    <state width="3209" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1649120782971" />
+    <state width="3209" height="242" key="GridCell.Tab.0.right" timestamp="1649120782973">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3209" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1648707628199" />
+    <state width="3209" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1649120782973" />
     <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1648518287982">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -1348,9 +1348,9 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1899" y="768" width="587" height="502" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1647984234580" />
-    <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup" timestamp="1648694690386">
+    <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup" timestamp="1649029609698">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1648694690386" />
+    <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1649029609698" />
   </component>
 </project>
