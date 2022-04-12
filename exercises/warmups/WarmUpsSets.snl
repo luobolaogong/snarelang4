@@ -90,7 +90,7 @@
 
 // ----------- Exercise 0.5 is Fred Sanford's triple stroke.
 // Sync
-//4r 4r . .
+4T 4r . .
 /ff
 _16T T 8T   _16T T 8T   _16T T 8T   8T T       _16t t 8t   _16t t 8t   _16t t 8t   8t t
 _16T T 8T   _16T T 8T   _16T T 8T   _16T T 8T   _16T T 8T   _16T T 8T   _16T T 8T   8T T
@@ -104,6 +104,33 @@ _16t t 8t   _16t t 8t   _16t t 8t   _16t t 8t   _16t t 8t   _16t t 8t   _16t t 8
 16t 8t  16t 8t  16t 8t  16t 8t  8t t         16T 8T  16T 8T  16T 8T  16T 8T  8T T
 16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  t
 
+/tempo 72
+// Sync
+1r
+//////////////  Add Paradiddle and similar stuff here  Prob should be a new set
+// ----------- Exercise 0.7 is single and double paradiddle at 16th notes
+^16T t T T  ^16t T t t   ^16T t T T  ^16t T t t
+^16T t T t T T   ^16t T t T t t    ^16T t T T
+^16t T t t   ^16T t T T  ^16t T t t  ^16T t T T
+^16t T t T t t    ^16T t T t T T   ^4t
+
+// ----------- Exercise 0.8 is double and semi triple paradiddle at 24th notes
+^24T . . . T T  ^24t . . . t t   ^24T . . . T T  ^24t . . . t t
+^24T . . . . . . t t   ^24T . . . . . . t t   ^24T . . . T T
+^24t . . . t t   ^24T . . . T T  ^24t . . . t t  ^24T . . . T T
+^24t . . . . . . T T   ^24t . . . . . . T T   ^4t
+
+// ----------- Exercise 0.9 is single and double paradiddle at 24th notes
+^24T . . . T T  ^24t . . . t t   ^24T . . . T T  ^24t . . . t t
+^24T . T T  ^24t . t t  ^24T . T T    ^24t . t t  ^24T . T T  ^24t . t t
+^24t . . . t t   ^24T . . . T T  ^24t . . . t t  ^24T . . . T T
+^24T . T T  ^24t . t t  ^24T . T T    ^24t . t t  ^24T . T T  ^6t
+
+// ----------- Exercise 0.10 is single and double paradiddle with 12/24th notes
+^12T 24t 12T 24T  ^12t 24T 12t 24t   ^12T 24t 12T 24T  ^12t 24T 12t 24t
+^12T 24t 12T 24t 12T 24T  ^12t 24T 12t 24T 12t 24t   12T ^24t 12T 24T
+^12t 24T 12t 24t   ^12T 24t 12T 24T  ^12t 24T 12t 24t   ^12T 24t 12T 24T
+^12t 24T 12t 24T 12t 24t   ^12T 24t 12T 24t 12T 24T   12t ^24T 12t 24t
 
 
 
@@ -188,55 +215,48 @@ _12T ^24t 12r 24t   _12T ^24t 12r 24t   _12T ^24t 12r 24t  _12T 24T 8t
 
 //////  SET 2 - BUZZ ROLL DEVELOPMENT ////////
 
-
-// ----------- Exercise 2.0, simulated pulse buzzes, quarter notes, right
+// 4:47
+// ----------- Exercise 2.0, simulated pulse buzzes, quarter notes, 8 bars, ABAA BABB
 /tempo 72
 //Sync
 1r
+/ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp
 
-/ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp
-/ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp
-/ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp
-/ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp
+/ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp
 
-/ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp
-/ff /> 48T T T T T T   T T T T T T /ppp /ff /> 48T T T T T T   T T T T T T /ppp
-/ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp
-/ff /> 48t t t t t t   t t t t t t /ppp /ff /> 48t t t t t t   t t t t t t /ppp
+// 5:17
+// ----------- Exercise 2.1, simulated EIGHTH NOTE BUZZES 8 bar 4/4
+/ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p
+/ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p
+/ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p
+/ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p
 
-// ----------- Exercise 2.1, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-/ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-
-///ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-///ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-///ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-///ff /> 48T T T T T T /p /ff /> 48t t t t t t /p /ff /> 48T T T T T T /p /ff /> 48t t t t t t /p
-
-// ----------- Exercise 2.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p    /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p    /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p    /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-/ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p    /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-
-///ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p    /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-///ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p    /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-///ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p    /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
-///ff /> 48T T T T /p /ff /> 48t t t t /p /ff /> 48T T T T /p    /ff /> 48t t t t /p /ff /> 48T T T T /p /ff /> 48t t t t /p
+/ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p
+/ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p  /ff /> 48T T T T T T /p
+/ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p
+/ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p  /ff /> 48t t t t t t /p
 
 
-// ----------- Exercise 2.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
-/ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
+// 5:44
+// ----------- Exercise 2.2, simulated TWELFTH NOTE BUZZES, 8 bar 4/4  Doesn't sound right..  too long too?
+/ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p
+/ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p
+/ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p
+/ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p
 
+/ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p
+/ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p   /ff /> 48T T T T /p
+/ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p
+/ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p   /ff /> 48t t t t /p
+
+
+//// ----------- Exercise xxx, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
 ///ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 ///ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 ///ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
@@ -246,50 +266,123 @@ _12T ^24t 12r 24t   _12T ^24t 12r 24t   _12T ^24t 12r 24t  _12T 24T 8t
 ///ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 ///ff /> 64T T T T /mf /ff /> 64t t t t /mf /ff /> 64T T T T /mf /ff /> 64t t t t /mf
 
+// 6:10
+// ----------- Exercise 2.3, Single pulse buzzes with 24th's
+// Sync
+1r
+/ff
+>24Z 24t >24Z 24t >24Z 24t   >24Z 24t >24Z 24t _12T        >24z 24T >24z 24T >24z 24T   >24z 24T >24z 24T _12t
+>24Z 24t >24Z 24t >24Z 24t   >24Z 24t >24Z 24t >24Z 24t    >24Z 24t >24Z 24t >24Z 24t   >24Z 24t >24Z 24t _12T
 
+>24z 24T >24z 24T >24z 24T   >24z 24T >24z 24T _12t        >24Z 24t >24Z 24t >24Z 24t   >24Z 24t >24Z 24t _12T
+>24z 24T >24z 24T >24z 24T   >24z 24T >24z 24T >24z 24T    >24z 24T >24z 24T >24z 24T   >24z 24T >24z 24T _12t
 
+// 6:27
+// Sync
+1r
+// ----------- Exercise 2.4, 2 pulse buzzes with 24th's
+>24Z >24z 24T .   >24Z >24z 24T .   >24Z >24z _12T    >24z >24Z 24t .   >24z >24Z 24t .   >24z >24Z _12t
+>24Z >24z 24T .   >24Z >24z 24T .    >24Z >24z 24T .  >24Z >24z 24T .   >24Z >24z 24T .   >24Z >24z _12T
 
-// ----------- Exercise 2.6, long Buzz Rolls with pulses, soft
-4T 4r . .
-/mp
-/marker bzzPulses
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
->24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+>24z >24Z 24t .   >24z >24Z 24t .   >24z >24Z _12t    >24Z >24z 24T .   >24Z >24z 24T .   >24Z >24z _12T
+>24Z >24z 24T .   >24Z >24z 24T .   >24Z >24z 24T .   >24z >24Z 24t .   >24z >24Z 24t .   >24z >24Z _12t
 
+// 6:40
+// ----------- Exercise 2.5, 2 pulse buzzes with 12th's
+>24Z >24z 12T  >24z >24z 12t  >24Z >24z 12T  >24z >24z 12t  >24Z >24z 12T   >24z >24z 12t
+>24Z >24z 12T  >24z >24z 12t  >24Z >24z 12T  >24z >24z 12t  >24Z >24z 12T   >24z >24z 12t
+// accents experimental
+24Z 24z ^12T  24z 24z ^12t   24Z 24z ^12T  24z 24z ^12t   24Z 24z ^12T  24z 24z ^12t
+24Z 24z ^12T  24z 24z ^12t   24Z 24z ^12T  24z 24z ^12t   24Z 24z ^12T  24z 24z ^12t
 
-// Change the next set, because rolls longer than 2 counts are not necessary
-// Change the next set, because rolls longer than 2 counts are not necessary
-// Change the next set, because rolls longer than 2 counts are not necessary
-// Change the next set, because rolls longer than 2 counts are not necessary
-// Change the next set, because rolls longer than 2 counts are not necessary
-// Change the next set, because rolls longer than 2 counts are not necessary
-// Combine the following 3 or 4 exercises into one longer one, maybe.
+// 6:54
+// ----------- Exercise 2.6, 3 pulse buzzes with 24th's
+^24T . . 24z . .   ^24T . . 24z . .   ^24T . . 24z . .   ^24T . . . . .
+24Z . . ^24t . .   24Z . . ^24t . .   24Z . . ^24t . .   ^12T 24t 8T
+^24t . . 24Z . .   ^24t . . 24Z . .   ^24t . . 24Z . .   ^24t . . . . .
+24z . . ^24T . .   24z . . ^24T . .   24z . . ^24T . .   ^12t 24T 8t
 
-// ----------- Exercise 2.7, 24 stroke Buzz Rolls soft to loud
+// 7:20
+// ----------- Exercise 2.7, 3 pulse buzzes with 8th's
+8T 24z . .   8T 24z . .   8T 24z . .   8T .
+24Z . . 8t   24Z . . 8t   24Z . . 8t   12T 24t 8T
+8t 24Z . .   8t 24Z . .   8t 24Z . .   8t .
+24z . . 8T   24z . . 8T   24z . . 8T   12t 24T 8t
+
+// 7:47
+// Sync
+1r
+
+// ----------- Exercise 2.8, 4 pulse buzzes with 24th's   This one is weird.  Fix it and match bass to it.
+24T . . . . .  24Z . . . 12T    24t . . . . .  24z . . . 12t
+24T . . . . .  24Z . . . 12T    24t . . . . .  24z . . . 12t
+24T . . . . .  24Z . . . 12T    24t . . . . .  24z . . . 12t
+24z . . . 12t  24z . . . 12t  24z . . . 12t  24z . . . 12t
+
+24T . . . . .  12T 24z . . .   24t . . . . .  12t 24Z . . .
+24T . . . . .  12T 24z . . .   24t . . . . .  12t 24Z . . .
+24T . . . . .  12T 24z . . .   24t . . . . .  12t 24Z . . .
+12T 24z . . .  12t 24Z . . .   12T 24z . . .  12t 24Z . . .
+
+// 8:14
+// ----------- Exercise 2.9, Accented 24th note buzzes
+^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
+^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
+^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
+^24Z . . ^24z . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
+// too long?
+^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
+^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
+^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
+^24Z . . ^24z . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
+
+// 8:41
+// ----------- Exercise 2.10, Roll-off rest timing
 // Sync
 4T 4r . .
-/mp
-^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . . /fff
-^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . . /fff
-^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . .
-24Z . . . . .    . . . . . .          24Z . . . . .    . . . . . . /fff
+^24T . . ^24t . .  24Z . . . . . 4T 4r
+24Z . . . . .   . . . . . .  4T 4r
+^24T . . ^24t . .  24Z . . . . . 4T 4r
+24Z . . . . .   . . . . . .  4T 4r
+^24T . . ^24t . .  24Z . . . . . 4T 4r
+24Z . . . . .   . . . . . .  4T 4r
+^24T . . ^24t . .  24Z . . . . . 4T 4r
+24Z . . . . .   . . . . . .  4T 4r
+
+// tag ending
+/p 24Z . . . . . 4T
 
 
+//// ----------- Exercise 2.6, long Buzz Rolls with pulses, soft
+//4T 4r . .
+///mp
+///marker bzzPulses
+//>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+//>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+//>24T . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
+//>24Z . . >. . .    >. . . >. . .    >24Z . . >. . .    >. . . >. . .
 
-// ----------- Exercise 2.8, 12 stroke Buzz Rolls soft to loud
-// Sync
-4T 4r . .
-/fff
-^24T /mp . . . . .  /< 24Z . . . . . /fff  24T /mp. . . . .  /< 24Z . . . . . /fff
-^24T /mp . . . . .  /< 24Z . . . . .  24Z . . . . .   24Z . . . . . /fff
-^24T /mp . . . . .  /< 24Z . . . . . /fff  24T /mp. . . . .  /< 24Z . . . . . /fff
-^24T /mp . . . . .  /< 24Z . . . . .  24Z . . . . .   24Z . . . . . /fff
+//// ----------- Exercise 2.7, 24 stroke Buzz Rolls soft to loud
+//// Sync
+//4T 4r . .
+///mp
+//^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . . /fff
+//^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . . /fff
+//^24T /mp . . . . .    . . . . . .   /< 24Z . . . . .    . . . . . .
+//24Z . . . . .    . . . . . .          24Z . . . . .    . . . . . . /fff
 
-// ----------- Exercise 2.9, 11 stroke Buzz Rolls soft to loud
-//^24T /mp . . . . .   /< 24Z . . . . ^24t  /fff ^24T  /mp  . . . . .   /< 24Z . . . . 24t /fff
-//^24T /mp . . . . .   /< 24Z . . . . .   24Z . . . . .   24Z . . . . 24t /fff
+//// ----------- Exercise 2.8, 12 stroke Buzz Rolls soft to loud
+//// Sync
+//4T 4r . .
+///fff
+//^24T /mp . . . . .  /< 24Z . . . . . /fff  24T /mp. . . . .  /< 24Z . . . . . /fff
+//^24T /mp . . . . .  /< 24Z . . . . .  24Z . . . . .   24Z . . . . . /fff
+//^24T /mp . . . . .  /< 24Z . . . . . /fff  24T /mp. . . . .  /< 24Z . . . . . /fff
+//^24T /mp . . . . .  /< 24Z . . . . .  24Z . . . . .   24Z . . . . . /fff
+//
+//// ----------- Exercise 2.9, 11 stroke Buzz Rolls soft to loud
+////^24T /mp . . . . .   /< 24Z . . . . ^24t  /fff ^24T  /mp  . . . . .   /< 24Z . . . . 24t /fff
+////^24T /mp . . . . .   /< 24Z . . . . .   24Z . . . . .   24Z . . . . 24t /fff
 
 
 //following is totally screwed it seems.  very tire.  tomorrow
@@ -303,13 +396,13 @@ _12T ^24t 12r 24t   _12T ^24t 12r 24t   _12T ^24t 12r 24t  _12T 24T 8t
 ///fff 8T /f /cresc 24z . .  8T /fff /f /cresc 24z . .   8T /fff /f /cresc 24z . . 8T /fff /f /cresc 24z . .
 
 
-// ----------- Exercise 2.10, 7 stroke Buzz Rolls, starting left into beat
-// Sync
-4T 4r . .
-/fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .   24z . .  . . .
-/fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .   24z . .  . . .
-/fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .   24z . .  . . .
-24Z . . . . .    24Z . . . . .    24Z . . . . .    24Z . . . . .    /fff
+//// ----------- Exercise 2.10, 7 stroke Buzz Rolls, starting left into beat
+//// Sync
+//4T 4r . .
+///fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .   24z . .  . . .
+///fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .   24z . .  . . .
+///fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .     /fff ^24t /f . .   /cresc 24z . .   24z . .  . . .
+//24Z . . . . .    24Z . . . . .    24Z . . . . .    24Z . . . . .    /fff
 
 //That last roll is way too long.  I think that 7 stroke stuff should be improved.
 // Maybe mixing 7's and 6's and 5's
@@ -710,7 +803,7 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 
 // ----------- Exercise 0.5 is Fred Sanford's triple stroke
 // Sync:
-//4r 4r . .
+8N 8r 4r . .
 /f
 //_8N N _N N _N N _N N   _n n _n n _n n _n n
 //_8N N _N N _N N _N N    _N N _N N _N N _N N
@@ -732,9 +825,35 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 4N N N N N N N 8N N
 4n n n  8n n
 4N N N  8N N
-4n n n n n n n 8n n
+4n n n n n n n 8n 8r
+
+// Sync
+1r
+//////////////  Add Paradiddle and similar stuff here  Prob should be a new set
+// ----------- Exercise 0.7 is single and double paradiddle at 16th notes
+>16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
+>8N . .  >8n . . >16:3N 16n
+>16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
+>8N . .  >8n . . >4N
 
 
+// ----------- Exercise 0.8 is double and semi triple paradiddle at 24th notes
+>12N . .  >12n . .  >12N . .  >12n . .
+>8N . .  >8n . . >4N
+>12N . .  >12n . .  >12N . .  >12n . .
+>8N . .  >8n . . >4N
+
+// ----------- Exercise 0.9 is single and double paradiddle at 24th notes
+>12N . .  >12n . .  >12N . .  >12n . .
+6N . . . . .
+>12N . .  >12n . .  >12N . .  >4n
+6N . . . . .
+
+// ----------- Exercise 0.10 is single and double paradiddle with 12/24th notes
+>8N . >8N . >8N . >8N .
+>8N . . >8N . .  12N >6N
+>8N . >8N . >8N . >8N .
+>8N . . >8N . .  12N >6N
 
 ///////////// SET 1  Dot/Cut  12/24 stuff  //////////////
 
@@ -814,7 +933,7 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 
 
 //////  SET 2 - BUZZ ROLL DEVELOPMENT ////////
-// ----------- Exercise 2.0, simulated pulse buzzes, quarter notes, right
+// ----------- Exercise 2.0, simulated pulse buzzes, quarter notes, 8 bars, ABAA BABB
 //tempo 72
 //Sync
 1r
@@ -824,99 +943,153 @@ _8n n _n n _n n _n n    _n n _n n _n n _n n
 4N N N N
 4n n n n
 
-// ----------- Exercise 2.2, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
+4N N N N
+4n n n n
+4N N N N
+4n n n n
+
+// ----------- Exercise 2.1, simulated EIGHTH NOTE BUZZES 8 bar 4/4
 8N . . . . . . .
 8N . . . . . . .
-//8N . . . . . . .
-//8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
 
-// ----------- Exercise 2.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+
+// ----------- Exercise 2.2, simulated TWELFTH NOTE BUZZES, 8 bar 4/4
 12N . .  . . .  . . .  . . .
 12N . .  . . .  . . .  . . .
-//12N . .  . . .  . . .  . . .
-//12N . .  . . .  . . .  . . .
+12N . .  . . .  . . .  . . .
+12N . .  . . .  . . .  . . .
 
-// ----------- Exercise 2.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
-16N . . .  . . . .  . . . .   . . . .
-16N . . .  . . . .  . . . .   . . . .
+12N . .  . . .  . . .  . . .
+12N . .  . . .  . . .  . . .
+12N . .  . . .  . . .  . . .
+12N . .  . . .  . . .  . . .
+
+// ----------- Exercise xxx, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
+//16N . . .  . . . .  . . . .   . . . .
+//16N . . .  . . . .  . . . .   . . . .
 //16N . . .  . . . .  . . . .   . . . .
 //16N . . .  . . . .  . . . .   . . . .
 
 
+// ----------- Exercise 2.3, Single pulse buzzes with 24th's
+// Sync
+1r
+12N N N N N N 12n n n n n n
+12N N N N N N 12N N N N N N
+
+12n n n n n n 12N N N N N N
+12n n n n n n 12n n n n n n
+
+// Sync
+1r
+// ----------- Exercise 2.4, 2 pulse buzzes with 24th's
+6N . 12N .  6N . 12N .
+6N . .      6N . 12N .
+
+6N . 12N .  6N . 12N .
+6N . .      6N . 12N .
+
+// ----------- Exercise 2.5, 2 pulse buzzes with 12th's
+6N . . 6N . .
+6N . . 6N . .
+// accents experimental
+_12N .  _12N .  _12N .  _12N .  _12N .  _12N .
+_12N .  _12N .  _12N .  _12N .  _12N .  _12N .
+
+
+// ----------- Exercise 2.6, 3 pulse buzzes with 24th's
+24N . . 8n   24N . . 8n   24N . . 8n   8N .
+8N 24n . .   8N 24n . .   8N 24n . .   12N 24n 8N
+24n . . 8N   24n . . 8N   24n . . 8N   8n .
+8n 24N . .   8n 24N . .   8n 24N . .   12n 24N 8n
 
 
 
+// ----------- Exercise 2.7, 3 pulse buzzes with 8th's
+8N 8n   8N 8n   8N 8n   8N .
+8N 8n   8N 8n   8N 8n   12N 24n 8N
+8n 8N   8n 8N   8n 8N   8n .
+8n 8N   8n 8N   8n 8N   12n 24N 8n
+
+
+// Sync
+1r
+
+
+// ----------- Exercise 2.8, 4 pulse buzzes with 24th's
+12N . .  12n . .  12N . .  12n . .
+12N . .  12n . .  12N . .  12n . .
+12N . .  12n . .  12N . .  12n . .
+12N . .  12n . .  12N . .  12n . .
+
+12N . .  12n . .  12N . .  12n . .
+12N . .  12n . .  12N . .  12n . .
+12N . .  12n . .  12N . .  12n . .
+12N . .  12n . .  12N . .  12n . .
+
+// ----------- Exercise 2.9, Accented 24th note buzzes
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+
+// ----------- Exercise 2.10, Roll-off rest timing
+// Sync
+4N 4r . .
+8N . 4N 8N 8r 4r
+4N . 8N 8r 4r
+8N . 4N 8N 8r 4r
+4N . 8N 8r 4r
+8N . 4N 8N 8r 4r
+4N . 8N 8r 4r
+8N . 4N 8N 8r 4r
+4N . 8N 8r 4r
+
+// tag ending
+/p 24N . . . . . 8T 8r
 
 
 
+//// ----------- Exercise 2.6, long Buzz Rolls with pulses, soft
+//8N 8r 4r . .
+////marker bzzPulses
+//8N . . .  _24N . .  _. . .  _. . .  _. . .
+//8N . . .  _24N . .  _. . .  _. . .  _. . .
+//8N . . .  _24N . .  _. . .  _. . .  _. . .
+//_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
 
-/time 4/4
-/tempo 72
-/f
-////Sync
+//// ----------- Exercise 2.7, 24 stroke Buzz Rolls no pulses, soft to loud
+//// Sync
 //_8N 8r 4r . .
-//4N N N N
-//
-//// ----------- Exercise 2.1, simulated pulse buzzes, quarter notes, left
-//4n n n n
-//
-//// ----------- Exercise 2.2, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-//8N . . . . . . .
-//8N . . . . . . .
-//
-//// ----------- Exercise 2.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-//12N . .  . . .  . . .  . . .
-//12N . .  . . .  . . .  . . .
-//
-//// ----------- Exercise 2.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
-//16N . . .  . . . .  . . . .   . . . .
-//16N . . .  . . . .  . . . .   . . . .
-//
-//// ----------- Exercise 2.5, simulated TWENTYFOURTH NOTE BUZZES, 2 bar 4/4
-//24N . . . . .   24N . . . . .   24N . . . . .   24N . . . . .
-//24N . . . . .   24N . . . . .   24N . . . . .   24N . . . . .
+///mp
+//8N /p . . .  /< 24N . .  . . .  . . .  . . . /ff
+//8N /p . . .  /< 24N . .  . . .  . . .  . . . /ff
+//8N /p . . .  /< 24N . .  . . .  . . .  . . .
+//24N . .  . . .  . . .  . . .      . . .  . . .  . . .  . . . /ff
 
-
-
-
-
-
-
-
-// ----------- Exercise 2.6, long Buzz Rolls with pulses, soft
-8N 8r 4r . .
-//marker bzzPulses
-8N . . .  _24N . .  _. . .  _. . .  _. . .
-8N . . .  _24N . .  _. . .  _. . .  _. . .
-8N . . .  _24N . .  _. . .  _. . .  _. . .
-_24N . .  _. . .  _. . .  _. . .      _. . .  _. . .  _. . .  _. . .
-
-
-
-
-
-// ----------- Exercise 2.7, 24 stroke Buzz Rolls no pulses, soft to loud
-// Sync
-_8N 8r 4r . .
-/mp
-8N /p . . .  /< 24N . .  . . .  . . .  . . . /ff
-8N /p . . .  /< 24N . .  . . .  . . .  . . . /ff
-8N /p . . .  /< 24N . .  . . .  . . .  . . .
-24N . .  . . .  . . .  . . .      . . .  . . .  . . .  . . . /ff
-
-
-// ----------- Exercise 2.8, 12 stroke Buzz Rolls soft to loud
-// Sync
-8N 8r 4r . .
-/mf
-24N . . . . .   4N   24N . . . . .   4N
-24N . . . . .   8N . . . . .
-24N . . . . .   4N   24N . . . . .   4N
-24N . . . . .   8N . . . . .
-
-// ----------- Exercise 2.9, 11 stroke Buzz Rolls soft to loud
+//// ----------- Exercise 2.8, 12 stroke Buzz Rolls soft to loud
+//// Sync
+//8N 8r 4r . .
+///mf
 //24N . . . . .   4N   24N . . . . .   4N
 //24N . . . . .   8N . . . . .
+//24N . . . . .   4N   24N . . . . .   4N
+//24N . . . . .   8N . . . . .
+//
+//// ----------- Exercise 2.9, 11 stroke Buzz Rolls soft to loud
+////24N . . . . .   4N   24N . . . . .   4N
+////24N . . . . .   8N . . . . .
 
 
 // ----------- Exercise 2.10, 7 stroke Buzz Rolls, starting left into beat
@@ -929,11 +1102,11 @@ _8N 8r 4r . .
 
 // ----------- Exercise 2.10, 7 stroke Buzz Rolls, starting left into beat
 // Sync
-4N 4r . .
-8N 24n . .  8N 24n . .  8N . . .
-8N 24n . .  8N 24n . .  8N . . .
-8N 24n . .  8N 24n . .  8N . . .
-8N . . . . . . .
+//4N 4r . .
+//8N 24n . .  8N 24n . .  8N . . .
+//8N 24n . .  8N 24n . .  8N . . .
+//8N 24n . .  8N 24n . .  8N . . .
+//8N . . . . . . .
 
 // ----------- Exercise 2.11, 7 stroke Buzz Rolls, starting right on beat
 // Sync
@@ -1226,7 +1399,7 @@ _12b 24B  _12b 24B  _12b 24B  _12b 24B   _12b 24B  _12b 24B  _12b 24B  _12b 24B
 
 // ----------- Exercise 0.5 is Fred Sanford's triple stroke
 // Sync:
-//4r . . .
+8B 8r 4r . .
 /f
 4B . . 8B .   4B . . 8B .
 4B . . .      4B . . 8B .
@@ -1240,7 +1413,34 @@ _12b 24B  _12b 24B  _12b 24B  _12b 24B   _12b 24B  _12b 24B  _12b 24B  _12b 24B
 2B B B 4B 8r 8B
 2b 4b 8r 8b
 2B 4B 8r 8B
-2b b b 4b 8r 8b
+2b b b 4b 8r 8r
+
+// Sync
+1r
+//////////////  Add Paradiddle and similar stuff here  Prob should be a new set
+// ----------- Exercise 0.7 is single and double paradiddle at 16th notes
+/ff
+4B . . .
+8:3B .  4B
+4B . . .
+8:3B .  4B
+
+// ----------- Exercise 0.8 is single and double paradiddle at 24th notes
+4B . . .
+8:3B .  4B
+4B . . .
+8:3B .  4B
+
+// ----------- Exercise 0.9 is single and double paradiddle at 24th notes
+4B . . .
+1B
+4B . . .
+1B
+// ----------- Exercise 0.10 is single and double paradiddle with 12/24th notes
+4B . . .
+8:3B . 4r
+4B . . .
+8:3B . 4r
 
 
 ///////////// SET 1  Dot/Cut  12/24 stuff  //////////////
@@ -1335,35 +1535,134 @@ _12b 24B  _12b 24B  _12b 24B  _12b 24B   _12b 24B  _12b 24B  _12b 24B  _12b 24B
 
 
 //////  SET 2 - BUZZ ROLL DEVELOPMENT ////////
-// ----------- Exercise 2.0, simulated pulse buzzes, quarter notes, right
+// ----------- Exercise 2.0, simulated pulse buzzes, quarter notes, 8 bars, ABAA BABB
 //time 4/4
 //tempo 72
 /f
 //Sync
 1r
+4B B B B
+4b b b b
+4B B B B
+4b b b b
 
 4B B B B
 4b b b b
 4B B B B
 4b b b b
 
-// ----------- Exercise 2.2, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
+// ----------- Exercise 2.1, simulated EIGHTH NOTE BUZZES 8 bar 4/48B . . . . . . .
 8B . . . . . . .
 8B . . . . . . .
-//8B . . . . . . .
-//8B . . . . . . .
+8B . . . . . . .
+8B . . . . . . .
 
-// ----------- Exercise 2.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-12B . .  . . .  . . .  . . .
-12B . .  . . .  . . .  . . .
-//12B . .  . . .  . . .  . . .
-//12B . .  . . .  . . .  . . .
+8B . . . . . . .
+8B . . . . . . .
+8B . . . . . . .
+8B . . . . . . .
 
-// ----------- Exercise 2.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
-16B . . .  . . . .  . . . .   . . . .
-16B . . .  . . . .  . . . .   . . . .
+// ----------- Exercise 2.2, simulated TWELFTH NOTE BUZZES, 8 bar 4/4
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+// ----------- Exercise xxx, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
 //16B . . .  . . . .  . . . .   . . . .
 //16B . . .  . . . .  . . . .   . . . .
+//16B . . .  . . . .  . . . .   . . . .
+//16B . . .  . . . .  . . . .   . . . .
+
+
+// ----------- Exercise 2.3, Single pulse buzzes with 24th's
+// Sync
+1r
+4B . . .
+4B . . .
+
+4B . . .
+4B . . .
+
+
+
+// Sync
+1r
+// ----------- Exercise 2.4, 2 pulse buzzes with 24th's
+4B . . .
+4B . . .
+
+4B . . .
+4B . . .
+
+
+// ----------- Exercise 2.5, 2 pulse buzzes with 12th's
+4B . . .
+4B . . .
+// accents experimental
+4B . . .
+4B . . .
+
+
+// ----------- Exercise 2.6, 3 pulse buzzes with 24th's
+4B . . .
+4B . . 8B .
+4B . . .
+4B . . 8B .
+
+
+// ----------- Exercise 2.7, 3 pulse buzzes with 8th's
+4B . . .
+4B . . 8B .
+4B . . .
+4B . . 8B .
+
+
+// Sync
+1r
+
+
+// ----------- Exercise 2.8, 4 pulse buzzes with 24th's
+/ff
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+4B 12B 6B  4B 12B 6B
+4B 12B 6B  4B 12B 6B
+4B 12B 6B  4B 12B 6B
+12B 6B  12B 6B  12B 6B  12B 6B
+
+// ----------- Exercise 2.9, Accented 24th note buzzes
+8B . . . . . . .
+8B . . . . . . .
+8B . . . . . . .
+8B . . . . . . .
+
+8B . . . . . . .
+8B . . . . . . .
+8B . . . . . . .
+8B . . . . . . .
+
+// ----------- Exercise 2.10, Roll-off rest timing
+// Sync
+4N 4r . .
+4B . . 4r
+4B . . 4r
+4B . . 4r
+4B . . 4r
+4B . . 4r
+4B . . 4r
+4B . . 4r
+4B . . 4r
+// tag ending
+/p 4B 8B 8r
 
 
 /time 4/4
@@ -1392,45 +1691,33 @@ _12b 24B  _12b 24B  _12b 24B  _12b 24B   _12b 24B  _12b 24B  _12b 24B  _12b 24B
 //8B . . . . . . .
 //8B . . . . . . .
 
+//// ----------- Exercise 2.6, long Buzz Rolls with pulses, soft
+//8B 8r 4r . .
+////marker bzzPulses
+///f
+//2B .
+//. .
+//. .
+//. .
+
+//// ----------- Exercise 2.7, 24 stroke Buzz Rolls no pulses, soft to loud
+//// Sync
+//_8B 8r 4r . .
+///mf
+//2B .
+//. .
+//. .
+//. .
 
 
-
-
-
-
-
-
-// ----------- Exercise 2.6, long Buzz Rolls with pulses, soft
-8B 8r 4r . .
-//marker bzzPulses
-/f
-2B .
-. .
-. .
-. .
-
-
-
-
-
-// ----------- Exercise 2.7, 24 stroke Buzz Rolls no pulses, soft to loud
-// Sync
-_8B 8r 4r . .
-/mf
-2B .
-. .
-. .
-. .
-
-
-// ----------- Exercise 2.8, 12 stroke Buzz Rolls soft to loud
-// Sync
-8B 8r 4r . .
-/f
-4B . . .
-4B . 8B . . .
-4B . . .
-4B . 8B . . .
+//// ----------- Exercise 2.8, 12 stroke Buzz Rolls soft to loud
+//// Sync
+//8B 8r 4r . .
+///f
+//4B . . .
+//4B . 8B . . .
+//4B . . .
+//4B . 8B . . .
 
 // ----------- Exercise 2.9, 11 stroke Buzz Rolls soft to loud
 //4B . . .
@@ -1448,12 +1735,12 @@ _8B 8r 4r . .
 
 // ----------- Exercise 2.10, 7 stroke Buzz Rolls, starting left into beat
 // Sync
-8B 8r 4r . .
-/f
-4B . . .
-4B . . .
-4B . . .
-4B . . .
+//8B 8r 4r . .
+///f
+//4B . . .
+//4B . . .
+//4B . . .
+//4B . . .
 
 
 // ----------- Exercise 2.11, 7 stroke Buzz Rolls, starting right on beat
@@ -1741,6 +2028,7 @@ _8B 8r 4r . .
 
 // ----------- Exercise 0.5 is Fred Sanford's triple stroke
 // Sync
+/ff 16M . 8M  16M . 8M  16M . 8M  8M .
 ///ff ^16M 8M  16M ^8M  16M 8M  16M 8M  ^8M ^M  /mf
 4M . . .   . . . .
 4M . . .   . . . .
@@ -1759,6 +2047,33 @@ _8B 8r 4r . .
 ^4M . >. .   ^. . >. .
 ^4M . >. .   . . . .
 
+
+// Sync
+/ff ^16M . 8M  ^16M . 8M  ^16M . . . ^8M . /mf
+//////////////  Add Paradiddle and similar stuff here  Prob should be a new set
+// ----------- Exercise 0.7 is single and double paradiddle at 16th notes
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// ----------- Exercise 0.8 is single and double paradiddle at 24th notes
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// ----------- Exercise 0.9 is single and double paradiddle at 24th notes
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// ----------- Exercise 0.10 is single and double paradiddle with 12/24th notes
+4M . . .
+4M . . .
+4M . . .
+4M . . .
 
 
 ///////////// SET 1  Dot/Cut  12/24 stuff  //////////////
@@ -1860,30 +2175,130 @@ _8B 8r 4r . .
 /ff /decresc 48M . . . . .   . . . . . . /ppp
 /ff /decresc 48M . . . . .   . . . . . . /ppp
 // end sync
-// ----------- Exercise 2.0, simulated pulse buzzes, quarter notes, right
+// ----------- Exercise 2.0, simulated pulse buzzes, quarter notes, 8 bars, ABAA BABB
 /f
 4M . . .
 4M . . .
 4M . . .
 4M . . .
 
-// ----------- Exercise 2.2, simulated EIGHTH NOTE BUZZES ALTERNATING, 2 bar 4/4
 4M . . .
 4M . . .
+4M . . .
+4M . . .
+
+// ----------- Exercise 2.1, simulated EIGHTH NOTE BUZZES 8 bar 4/44M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// ----------- Exercise 2.2, simulated TWELFTH NOTE BUZZES, 8 bar 4/4
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// ----------- Exercise xxx, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
+//4M . . .
+//4M . . .
 //4M . . .
 //4M . . .
 
-// ----------- Exercise 2.3, simulated TWELFTH NOTE BUZZES ALTERNATING, 2 bar 4/4
-4M . . .
-4M . . .
-//4M . . .
-//4M . . .
 
-// ----------- Exercise 2.4, simulated SIXTEENTH NOTE BUZZES, 2 bar 4/4
+// ----------- Exercise 2.3, Single pulse buzzes with 24th's
+// Sync
+/ff ^24M .  ^24M .  ^24M .  ^24M .  ^24M .  ^12M  ^24M .  ^24M .  ^24M .  ^24M .  ^24M .  ^12M  /mf
 4M . . .
 4M . . .
-//4M . . .
-//4M . . .
+
+4M . . .
+4M . . .
+
+
+
+// Sync
+24M . . . . .  8M . 4M .
+// ----------- Exercise 2.4, 2 pulse buzzes with 24th's
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+
+
+// ----------- Exercise 2.5, 2 pulse buzzes with 12th's
+4M . . .
+4M . . .
+// accents experimental
+4M . . .
+4M . . .
+
+// ----------- Exercise 2.6, 3 pulse buzzes with 24th's
+_8M .  _8M .  _8M .  _8M .
+_8M .  _8M .  _8M .  _8M .
+_8M .  _8M .  _8M .  _8M .
+_8M .  _8M .  _8M .  _8M .
+
+
+// ----------- Exercise 2.7, 3 pulse buzzes with 8th's
+_8M .  _8M .  _8M .  _8M .
+_8M .  _8M .  _8M .  _8M .
+_8M .  _8M .  _8M .  _8M .
+_8M .  _8M .  _8M .  _8M .
+
+
+// Sync
+24M . . . . .  8M . 4M .
+
+// ----------- Exercise 2.8, 4 pulse buzzes with 24th's
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// ----------- Exercise 2.9, Accented 24th note buzzes
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// ----------- Exercise 2.10, Roll-off rest timing
+// Sync
+24M . . . . .  8M . 4M .
+4M . 8M . . .
+4M . 8M . . .
+4M . 8M . . .
+4M . 8M . . .
+
+4M . 2M
+4M . 2M
+4M . 2M
+4M . 2M
+// tag ending
+2r
+
+
 
 
 
@@ -1920,49 +2335,39 @@ _8B 8r 4r . .
 //4M . . .
 //4M . . .
 
-
-
-
-
-
-
-
-
 // ----------- Exercise 2.6, long Buzz Rolls with pulses, soft
 //Sync
->24M . .  >24M . .  >24M . . >8M
-/f /decresc >96M . . . . . . . /p  24r
-/f /decresc >96M . . . . . . . /p  24r
-/f /decresc >96M . . . . . . . /p  24r
-/f 8M
-// end sync
->8M . >8M . >8M . >8M .
->8M . >8M . >8M . >8M .
->8M . >8M . >8M . >8M .
->8M . >8M . >8M . >8M .
-
+//>24M . .  >24M . .  >24M . . >8M
+///f /decresc >96M . . . . . . . /p  24r
+///f /decresc >96M . . . . . . . /p  24r
+///f /decresc >96M . . . . . . . /p  24r
+///f 8M
+//// end sync
+//>8M . >8M . >8M . >8M .
+//>8M . >8M . >8M . >8M .
+//>8M . >8M . >8M . >8M .
+//>8M . >8M . >8M . >8M .
 
 
 // ----------- Exercise 2.7, long Buzz Rolls no pulses, soft to loud
 // Sync
-/ff
->4M >4M >24M . .  >24M . .  >24M . . >8M
-/mf
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-
+///ff
+//>4M >4M >24M . .  >24M . .  >24M . . >8M
+///mf
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
 
 // ----------- Exercise 2.8, 12 stroke Buzz Rolls soft to loud
 // Sync
->24M . .  >24M . .  >8M .   >24M . .  >24M . .  >8M .
-_8M . _8M .  _8M . _8M .
-_8M . _8M .  _8M . _8M .
-_8M . _8M .  _8M . _8M .
-_8M . _8M .  _8M . _8M .
+//>24M . .  >24M . .  >8M .   >24M . .  >24M . .  >8M .
+//_8M . _8M .  _8M . _8M .
+//_8M . _8M .  _8M . _8M .
+//_8M . _8M .  _8M . _8M .
+//_8M . _8M .  _8M . _8M .
 
-// ----------- Exercise 2.9, 11 stroke Buzz Rolls soft to loud
+//// ----------- Exercise 2.9, 11 stroke Buzz Rolls soft to loud
 //_8M . _8M .  _8M . _8M .
 //_8M . _8M .  _8M . _8M .
 
@@ -1980,13 +2385,13 @@ _8M . _8M .  _8M . _8M .
 
 // ----------- Exercise 2.10, 7 stroke Buzz Rolls, starting left into beat
 //Sync
-/ff
->8M 24M . .  >8M 24M . .  >8M .  >8M .
-/mf
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
-_8M . _8M . _8M . _8M .
+//ff
+//>8M 24M . .  >8M 24M . .  >8M .  >8M .
+///mf
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
+//_8M . _8M . _8M . _8M .
 
 
 // ----------- Exercise 2.11, 7 stroke Buzz Rolls, starting left into beat
