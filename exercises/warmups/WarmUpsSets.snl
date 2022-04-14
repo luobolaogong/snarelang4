@@ -146,13 +146,6 @@ _16t t 8t   _16t t 8t   _16t t 8t   8t t
 ^16t T t t   ^16T t T T  ^16t T t t  ^16T t T T
 ^16t T t T t t    ^16T t T t T T   ^4t
 
-//marker 0.8
-// ----------- Exercise 0.8 is double and semi-triple paradiddle at 24th notes
-//^24T . . . T T  ^24t . . . t t   ^24T . . . T T  ^24t . . . t t
-//^24T . .   . . .   . t t     ^24T . .   . . .   . t t     ^24T . . . T T
-//^24t . . . t t   ^24T . . . T T  ^24t . . . t t  ^24T . . . T T
-//^24t . . . . . . T T   ^24t . . . . . . T T   ^4t
-// just a repeat of the previous exercise, for now, and to keep same order and timing.
 
 // Sync
 1r
@@ -423,6 +416,9 @@ _12T ^24t 12r 24t   _12T ^24t 12r 24t   _12T ^24t 12r 24t  _12T 24T 8t
 
 // Consider integrating tap rolls with regular buzz rolls in development.
 
+// All this roll stuff is based on what sounds right at a particular tempo.
+// At fast temp it would be different.
+
 // There really should be a new rudiment, similar to a flam, where there's an
 // absolute, not relative, timing between two notes.  For a flam, the grace note
 // timing prior to the principle note is absolute, and it does not depend on the
@@ -443,124 +439,144 @@ _12T ^24t 12r 24t   _12T ^24t 12r 24t   _12T ^24t 12r 24t  _12T 24T 8t
 /tempo 72
 // sync
 1r
-
-// ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, simulated, 8 bars
-//marker simTap
+// ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, SIMULATED buzz lasting 12th note duration, 8 bars
 /marker 3.0
 // 8:58
-/ff ^24T 12t  ^24T 12t  ^24T 12t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
-/ff ^24t 12T  ^24t 12T  ^24t 12T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
-/ff ^24T 12t  ^24T 12t  ^24T 12t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p
+/ff
+/ff ^24T /mf 12t  /ff ^24T /mf 12t  /ff ^24T /mf 12t  /ff ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t /mf 12T  /ff ^24t /mf 12T  /ff ^24t /mf 12T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+/ff ^24T /mf 12t  /ff ^24T /mf 12t  /ff ^24T /mf 12t  ^8T       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p
 /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p /ff ^8T
 // Same thing, but reverse hand order, to give left hand equal time:
-/ff ^24t 12T  ^24t 12T  ^24t 12T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
-/ff ^24t 12T  ^24t 12T  ^24t 12T  ^8t       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
-/ff ^24t 12T  ^24t 12T  ^24t 12T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^24t /> 60T T T T T /p
+/ff ^24t /mf 12T  /ff ^24t /mf 12T  /ff ^24t /mf 12T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^8t
+/ff ^24t /mf 12T  /ff ^24t /mf 12T  /ff ^24t /mf 12T  ^8t       /ff ^24T /> 60t t t t t /p    /ff ^24T /> 60t t t t t /p  /ff ^24T /> 60t t t t t /p   /ff ^8T
+/ff ^24t /mf 12T  /ff ^24t /mf 12T  /ff ^24t /mf 12T  ^8t       /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p  /ff ^24t /> 60T T T T T /p   /ff ^24t /> 60T T T T T /p
 /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^24t /> 60T T T T T /p    /ff ^8t
 
 
-// ----------- Exercise 3.1, 1-buzzPulse, Faster/shorter, based on 12th note tempo, 8 bars
+// Sync
+1r
+// ----------- Exercise 3.1, 1-buzzPulse, 3 stroke tap roll, not simulated, lasting 18th note duration, Faster/shorter, based on 12th note tempo, 8 bars
 /marker 3.1
-// 9:25
-// This sounds okay, but it's not simulated.  Should it be?  Is simulated better for learning?  Maybe because it's faster, it's okay, because previously was simulated
+// 9:28
+/ff
 ^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
 ^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
 ^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z
 ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z    ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
-
+// repeat, reverse hand order
 ^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
 ^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
 ^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z
 ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
 
 
-// ----------- Exercise 3.2, 1-buzzPulse THE SHEDDEN
-// 9:52
-^48T t t 16T   ^48t T T 16t   ^48T t t 16T   ^48t T T 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
-^48T t t 16T   ^48t T T 16t   ^48T t t 16T   ^48t T T 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
-^48T t t 16T   ^48t T T 16t   ^48T t t 16T   ^48t T T 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
-^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
-
-// ----------- Exercise 3.3, 1-buzzPulse even faster/shorter, THE SHEDDEN 2
-^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t    ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t
-^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t    ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t
-^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t    ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t
-^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t    ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t
-
-
-// ----------- Exercise 3.4, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated no final accent, 4 bars
-/marker 3.1
-// 10:06
-/ff ^24T t T  ^24t T t  ^24T t T  ^24t T t        /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p     /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p
-/ff ^24T t T  ^24t T t  ^24T t T  ^24t T t        /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p     /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p
-/ff ^24T t T  ^24t T t  ^24T t T  ^24t T t        /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p     /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p
-/ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p     /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p    /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p    /ff ^24T /> 72t t t _24T /p     ^8t
-
-
-// ----------- Exercise 3.5, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
+// Sync
+1r
+// ----------- Exercise 3.2, tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
 /marker 3.2
-// 10:32
-/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
-/ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^24T t ^T        /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^24T /> 72t t t /p /ff ^24T
-/ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
-/ff ^24t /> 72T T T /p /ff ^24t     /ff ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^8t
+// 9:58
+/ff
+^12T T T T T T   ^36T 18z >12T  ^36T 18z >12T  ^36T 18z >12T
+^12t t t t t t   ^36t 18Z >12t  ^36t 18Z >12t  ^36t 18Z >12t
+^12T T T T T T   ^36T 18z >12T  ^36T 18z >12T  ^36T 18z >12T
+^36T 18z >12T    ^36T 18z >12T  ^36T 18z >12T  ^36T 18z >12T  ^36T 18z >12T  ^36T 18z >12T
+
+^12t t t t t t   ^36t 18Z >12t  ^36t 18Z >12t  ^36t 18Z >12t
+^12T T T T T T   ^36T 18z >12T  ^36T 18z >12T  ^36T 18z >12T
+^12t t t t t t   ^36t 18Z >12t  ^36t 18Z >12t  ^36t 18Z >12t
+^36t 18Z >12t    ^36t 18Z >12t  ^36t 18Z >12t  ^36t 18Z >12t  ^36t 18Z >12t  ^36t 18Z >12t
 
 
-// ----------- Exercise 3.6, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.  Sounds good.
-// 10:45
-^24T t >T  ^24T t >T  ^24T t >T  ^8T     ^36T 18z >24T   ^36T 18z >24T   ^36T 18z >24T   ^8T
-^24t T >t  ^24t T >t  ^24t T >t  ^8t     ^36t 18Z >24t   ^36t 18Z >24t   ^36t 18Z >24t   ^8t
-^24T t >T  ^24t T >t  ^24T t >T  ^8t     ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t
-^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36T 18z >24T   ^36t 18Z >24t   ^8t
+// Sync
+1r
+// 10:28
+// ----------- Exercise 3.3, tap 1-buzzPulse tap,  "4 stroke", but second tap quiet, so maybe not a real 4 stroke?
+/marker 3.3
+/ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+/ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+/ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t    ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+// repeat with NO reverse sticking
+/ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+/ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+/ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t    ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
 
 
-///ff
-// ----------- Exercise 3.7,  2-buzzPulse, 5 stroke tap rolls, not simulated
-// 10:59
-^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
-^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .     ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+// No 3.4 at this time
 
 
-// ----------- Exercise 3.8, 2-buzzPulse, 5 stroke Tap Rolls soft
-// 11:12
-/mp
->24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
->24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
->24T . . >. . .    >. . . >. . .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
->40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .   >40T 20z .  >40t 20Z .
-/f
-
-
-//// Back on beat every 3 cycles.
-// ----------- Exercise 3.9, tap, 2-buzzPulse tap, "6 stroke"
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
-//
-
-//// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
-// ----------- Exercise 3.10, tap 3-buzzPulse, "7 stroke"
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
-^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+// Sync
+4T 4r . .
+// ----------- Exercise 3.5, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.
+/marker 3.5
+// 11:02
+/ff
+//10:59
+^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t       ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t       ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t       ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+// repeat, but same hand order
+^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t       ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t       ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t       ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
+^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
 
 
 
-// ----------- Exercise 3.11, 6-buzzPulse Tap Rolls
+// ----------- Exercise 3.6, tap 2-buzzPulse, 5 stroke Tap Rolls soft
+/marker 3.6
 // 11:25
-/mf
+//mp
+^24T . . ^. . .    ^. . . ^. . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^24T . . ^. . .    ^. . . ^. . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^24T . . ^. . .    ^. . . ^. . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+// repeat, but same hand order
+^24T . . ^. . .    ^. . . ^. . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^24T . . ^. . .    ^. . . ^. . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^24T . . ^. . .    ^. . . ^. . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
+//f
+
+// Sync
+1r
+// 11:55
+// ----------- Exercise 3.7, tap, 2-buzzPulse tap tap, "6 stroke with extra tap at end", 6/8 feel, alternating
+/marker 3.7
+/ff
+
+^24T . . ^. ^12T   ^24t . . ^. ^12t   ^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t
+^24T . . ^. ^12T   ^24t . . ^. ^12t   ^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t
+^24T . . ^. ^12T   ^24t . . ^. ^12t   ^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t
+^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t   ^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t
+
+
+// ----------- Exercise 3.8, tap 3-buzzPulse tap, "7 or 8 stroke depending", 6/8 feel, alternating
+/marker 3.8
+// 12:22
+/ff
+^24T . . . _12T  ^24t . . . _12t   ^42T 21z . . _12T   ^42t 21Z . . _12t
+^24T . . . _12T  ^24t . . . _12t   ^42T 21z . . _12T   ^42t 21Z . . _12t
+^24T . . . _12T  ^24t . . . _12t   ^42T 21z . . _12T   ^42t 21Z . . _12t
+^42T 21z . . _12T   ^42t 21Z . . _12t   ^42T 21z . . _12T   ^42t 21Z . . _12t
+
+
+// ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
+/marker 3.9
+// 11:46
+/ff
 ^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
 ^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
 ^24T . . . . .    ^. . . . . .    ^44T 22z .  . . .    ^44T 22z .  . . .
 ^44T 22z .  . . .    ^44T 22z .  . . .   ^44T 22z .  . . .    ^44T 22z .  . . .
 
+// tag ending
+2T  /mp >44T 22z .  . . . _4T /ff
 
-//// All this roll stuff is based on what sounds right at a particular tempo.
-//// At fast temp it would be different.
+
 
 
 
@@ -957,8 +973,7 @@ _12N .  _12N .  _12N .  _12N .  _12N .  _12N .
 //tempo 72
 // sync
 1r
-
-// ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, simulated, 8 bars
+// ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, SIMULATED buzz lasting 12th note duration, 8 bars
 /f
 8N . . . 2r
 8N . . . 2r
@@ -970,7 +985,14 @@ _12N .  _12N .  _12N .  _12N .  _12N .  _12N .
 8N . . . 2r
 1N
 
-// ----------- Exercise 3.1, 1-buzzPulse, Faster/shorter, based on 12th note tempo, 8 bars
+
+
+
+
+
+// Sync
+1r
+// ----------- Exercise 3.1, 1-buzzPulse, 3 stroke tap roll, not simulated, lasting 18th note duration, Faster/shorter, based on 12th note tempo, 8 bars
 /f
 12N . . . . . 2r
 12N . . . . . 2r
@@ -981,25 +1003,62 @@ _12N .  _12N .  _12N .  _12N .  _12N .  _12N .
 12N . . . . . 2r
 1r
 
-// ----------- Exercise 3.2, 1-buzzPulse THE SHEDDEN
-4N . . .
-4N . . .
-4N . . .
-4N . . .
 
-// ----------- Exercise 3.3, 1-buzzPulse even faster/shorter, THE SHEDDEN 2
-4N . . .
-4N . . .
-4N . . .
-4N . . .
+// Sync
+1r
+// ----------- Exercise 3.2, tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
+12N . . . . . 2r
+12n . . . . . 2r
+12N . . . . . 2r
+1r
+12n . . . . . 2r
+12N . . . . . 2r
+12n . . . . . 2r
+1r
 
-// ----------- Exercise 3.4, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated no final accent, 4 bars
-4N . . .
-4N . . .
-4N . . .
-4N . . .
 
-// ----------- Exercise 3.5, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
+
+
+
+
+// Sync
+1r
+// ----------- Exercise 3.3, tap 1-buzzPulse tap,  "4 stroke"
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+8N . . .  . . . .
+
+
+
+
+
+
+// Sync
+//1r
+// ----------- Exercise 3.4, 1-buzzPulse even faster/shorter, kind of a "4-stroke":  tap, 1-buzzPulse tap -- this is advanced
+//4N . . .
+//4N . . .
+//4N . . .
+//4N . . .
+
+
+
+
+
+// Sync
+1r
+// ----------- Exercise 3.5, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+
 8N . . . . . . .
 8N . . . . . . .
 8N . . . . . . .
@@ -1008,21 +1067,14 @@ _12N .  _12N .  _12N .  _12N .  _12N .  _12N .
 
 
 
-// ----------- Exercise 3.6, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.  Sounds good.
-8N . . . . . . .
-8N . . . . . . .
-8N . . . . . . .
-8N . . . . . . .
 
-///ff
-// ----------- Exercise 3.7,  2-buzzPulse, 5 stroke tap rolls, not simulated
+
+// ----------- Exercise 3.6, 2-buzzPulse, 5 stroke Tap Rolls soft
 4N . . .
 4N . . .
 4N . . .
 4N . . .
 
-
-// ----------- Exercise 3.8, 2-buzzPulse, 5 stroke Tap Rolls soft
 4N . . .
 4N . . .
 4N . . .
@@ -1032,29 +1084,38 @@ _12N .  _12N .  _12N .  _12N .  _12N .  _12N .
 
 
 
-//// Back on beat every 3 cycles.
-// ----------- Exercise 3.9, tap, 2-buzzPulse tap, "6 stroke"
-8N . . .
-8N . . .
+// Sync
+1r
+
+// ----------- Exercise 3.7, tap, 2-buzzPulse tap, "6 stroke"
+12N 24r 24n 12N   12n 24r 24N 12n   12N 24r 24n 12N   12n 24r 24N 12n
+12N 24r 24n 12N   12n 24r 24N 12n   12N 24r 24n 12N   12n 24r 24N 12n
+12N 24r 24n 12N   12n 24r 24N 12n   12N 24r 24n 12N   12n 24r 24N 12n
+12N 24r 24n 12N   12n 24r 24N 12n   12N 24r 24n 12N   12n 24r 24N 12n
 
 
 
 
+// ----------- Exercise 3.8, tap 3-buzzPulse, "7 stroke"
+6N 12N   6n 12n   6N 12N   6n 12n
+6N 12N   6n 12n   6N 12N   6n 12n
+6N 12N   6n 12n   6N 12N   6n 12n
+6N 12N   6n 12n   6N 12N   6n 12n
 
 
-//// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
-// ----------- Exercise 3.10, tap 3-buzzPulse, "7 stroke"
-4N . .
-4N . .
 
 
-
-
-// ----------- Exercise 3.11, 6-buzzPulse Tap Rolls
+// ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
 4N . . .
 4N . . .
 4N . . .
 4N . . .
+
+
+// tag ending
+8N 8r 4r  /mp 4N . /ff
+
+
 
 // Maybe should do that silly black bear thing here
 // 10 stroke roll stuff?
@@ -1411,8 +1472,7 @@ b 4b 8r 8r
 //tempo 72
 // sync
 1r
-
-// ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, simulated, 8 bars
+// ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, SIMULATED buzz lasting 12th note duration, 8 bars
 /f
 2B .
 2B .
@@ -1424,8 +1484,14 @@ b 4b 8r 8r
 2B .
 1B
 
-// ----------- Exercise 3.1, 1-buzzPulse, Faster/shorter, based on 12th note tempo, 8 bars
 
+
+
+
+
+// Sync
+1r
+// ----------- Exercise 3.1, 1-buzzPulse, 3 stroke tap roll, not simulated, lasting 18th note duration, Faster/shorter, based on 12th note tempo, 8 bars
 4B . 2r
 4B . 2r
 4B . 2r
@@ -1436,46 +1502,62 @@ b 4b 8r 8r
 4B . 2r
 1r
 
-// ----------- Exercise 3.2, 1-buzzPulse THE SHEDDEN
+
+// Sync
+1r
+// ----------- Exercise 3.2, tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
+4B . 2r
+4B . 2r
+4B . 2r
+1r
+4B . 2r
+4B . 2r
+4B . 2r
+1r
+
+
+
+
+
+
+// Sync
+1r
+// ----------- Exercise 3.3, tap 1-buzzPulse tap,  "4 stroke"
 4B . . .
 4B . . .
 4B . . .
 4B . . .
 
-// ----------- Exercise 3.3, 1-buzzPulse even faster/shorter, THE SHEDDEN 2
 4B . . .
 4B . . .
 4B . . .
 4B . . .
 
-// ----------- Exercise 3.4, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated no final accent, 4 bars
-1B
-1B
-1B
-1B
 
+
+
+
+
+// Sync
+//1r
+//// ----------- Exercise 3.4, 1-buzzPulse even faster/shorter, kind of a "4-stroke":  tap, 1-buzzPulse tap -- this is advanced
+//4B . . .
+//4B . . .
+//4B . . .
+//4B . . .
+
+
+
+
+
+// Sync
+1r
 // ----------- Exercise 3.5, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
 2B .
 2B .
 2B .
 2B .
 
-
-
-// ----------- Exercise 3.6, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.  Sounds good.
-2B .
-2B .
-2B .
-2B .
-
-///ff
-// ----------- Exercise 3.7,  2-buzzPulse, 5 stroke tap rolls, not simulated
-2B .
-2B .
-2B .
-2B .
-
-// ----------- Exercise 3.8, 2-buzzPulse, 5 stroke Tap Rolls soft
 2B .
 2B .
 2B .
@@ -1485,28 +1567,50 @@ b 4b 8r 8r
 
 
 
-//// Back on beat every 3 cycles.
-// ----------- Exercise 3.9, tap, 2-buzzPulse tap, "6 stroke"
-4B .
-4B .
-
-
-
-
-
-//// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
-// ----------- Exercise 3.10, tap 3-buzzPulse, "7 stroke"
-4B . .
-4B . .
-
-
-
-
-// ----------- Exercise 3.11, 6-buzzPulse Tap Rolls
+// ----------- Exercise 3.6, 2-buzzPulse, 5 stroke Tap Rolls soft
 2B .
 2B .
 2B .
 2B .
+
+2B .
+2B .
+2B .
+2B .
+
+
+
+
+
+
+// Sync
+1r
+
+// ----------- Exercise 3.7, tap, 2-buzzPulse tap, "6 stroke"
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+
+
+// ----------- Exercise 3.8, tap 3-buzzPulse, "7 stroke"
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+
+
+// ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
+2B .
+2B .
+2B .
+2B .
+
+// tag ending
+1r
+
 
 
 
@@ -1855,11 +1959,8 @@ _8M .  _8M .  _8M .  _8M .
 
 //tempo 72
 // sync
-/ff ^24M 12M  ^24M 12M  ^24M 12M  ^8M       /ff ^24M /> 60M M M M M /p    /ff ^24M /> 60M M M M M /p  /ff ^24M /> 60M M M M M /p   /ff ^8M
-///ff ^12M . . . . >. ^4M .
-/mf
-
-// ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, simulated, 8 bars
+/ff ^24M 12M  ^24M 12M  ^24M 12M  ^8M       /ff ^24M /> 60M M M M M /p    /ff ^24M /> 60M M M M M /p  /ff ^24M /> 60M M M M M /p   /ff ^8M /mf
+// ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, SIMULATED buzz lasting 12th note duration, 8 bars
 4M . . .
 4M . . .
 4M . . .
@@ -1870,7 +1971,13 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 4M . . .
 
-// ----------- Exercise 3.1, 1-buzzPulse, Faster/shorter, based on 12th note tempo, 8 bars
+
+
+
+
+// Sync
+/ff ^12M . . ^. . .  ^36M 18M   ^36M 18M   ^36M 18M   ^36M 18M   ^36M 18M   ^36M 18M  /mf
+// ----------- Exercise 3.1, 1-buzzPulse, 3 stroke tap roll, not simulated, lasting 18th note duration, Faster/shorter, based on 12th note tempo, 8 bars
 4M . . .
 4M . . .
 4M . . .
@@ -1881,25 +1988,56 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 4M . . .
 
-// ----------- Exercise 3.2, 1-buzzPulse THE SHEDDEN
+
+// Sync
+/ff ^12M . .  ^12M . .    ^12M .  ^12M .  ^12M .     /mf
+// ----------- Exercise 3.2, tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
 4M . . .
 4M . . .
 4M . . .
 4M . . .
 
-// ----------- Exercise 3.3, 1-buzzPulse even faster/shorter, THE SHEDDEN 2
 4M . . .
 4M . . .
 4M . . .
 4M . . .
 
-// ----------- Exercise 3.4, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated no final accent, 4 bars
+
+
+
+
+
+// Sync
+/ff 8M . . .  16M . . . . . . . /mf
+// ----------- Exercise 3.3, tap 1-buzzPulse tap,  "4 stroke"
 4M . . .
 4M . . .
 4M . . .
 4M . . .
 
-///ff
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+
+
+
+//// Sync
+///ff ^18M 36M  ^18M 36M   ^18M 36M  ^18M 36M   ^18M 36M  ^18M 36M  12M . . . . .   /mf
+//// ----------- Exercise 3.4, 1-buzzPulse even faster/shorter, kind of a "4-stroke":  tap, 1-buzzPulse tap -- this is advanced
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+
+
+
+
+// Sync
+/ff ^24M . .  ^24M . .  ^24M . .  ^24M . .  ^12M ^24M  ^12M ^24M  ^12M ^24M  ^8M
 // ----------- Exercise 3.5, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
 
 4M . . .
@@ -1907,21 +2045,7 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 4M . . .
 
-
-// ----------- Exercise 3.6, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.  Sounds good.
 4M . . .
-4M . . .
-4M . . .
-4M . . .
-
-// ----------- Exercise 3.7,  2-buzzPulse, 5 stroke tap rolls, not simulated
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-
-// ----------- Exercise 3.8, 2-buzzPulse, 5 stroke Tap Rolls soft
-^4M . . .
 4M . . .
 4M . . .
 4M . . .
@@ -1929,31 +2053,50 @@ _8M .  _8M .  _8M .  _8M .
 
 
 
+// ----------- Exercise 3.6, 2-buzzPulse, 5 stroke Tap Rolls soft
+4M . . .
+4M . . .
+4M . . .
+4M . . .
 
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+
+
+
+// Sync
+///ff ^8M ^24M   ^8M ^24M   ^6M   ^8M ^24M   ^8M ^24M   ^6M  /mf
+///ff  12M 24r 24M 12M   12M 24r 24M 12M   12M 24r 24M 12M   12M 24r 24M 12M     /mf
+/ff  ^24M . . ^24M 12M   ^24M . . ^24M 12M   12M 24r 24M 12M   12M 24r 24M 12M     /mf
 //// Back on beat every 3 cycles.
-// ----------- Exercise 3.9, tap, 2-buzzPulse tap, "6 stroke"
-^4M .
-4M .
-
-
-
-
-
-//// cut it back by 1/4.  Cycles every 1.5 beats, so good, but somewhat fast
-// ----------- Exercise 3.10, tap 3-buzzPulse, "7 stroke"
-4M . .
-4M . .
-
-
-
-
-// ----------- Exercise 3.11, 6-buzzPulse Tap Rolls
+// ----------- Exercise 3.7, tap, 2-buzzPulse tap, "6 stroke"
 4M . . .
 4M . . .
 4M . . .
 4M . . .
 
 
+
+// ----------- Exercise 3.8, tap 3-buzzPulse, "7 stroke"
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+// ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+// tag ending
+1r
 
 
 
@@ -1983,10 +2126,6 @@ _8M .  _8M .  _8M .  _8M .
 // FILL THIS IN LATER
 // How about 3 stroke roll development?  Nice, but we don't have any in our music
 ///ff >12M 24M >12M 24M >12M 24M >8M   >24M . >.  >. . >.  >. . >.  >8M /mf
-8M . . .  . . . .
-8M . . .  . . . .
-8M . . .  . . . .
-8M . . .  . . . .
 
 
 // Maybe should do that silly black bear thing here
@@ -2477,4 +2616,108 @@ _8M .  _8M .  _8M .  _8M .
 //^24T /ff . . . . .    ^. . . . . .  /decresc  ^44T 22z .  . . .    ^44T 22z .  . . .
 //^24T /mp . . . . .    ^. . . . . .   /cresc  ^44T 22z .  . . .    ^44T 22z .  . . .
 //^44T 22z .  . . .    ^44T 22z .  . . .      ^44T 22z .  . . .    24Z . . . . .
+
+
+//^12T ^12T   ^12t ^12t   ^36T 18z >12T   ^36t 18Z >12t   ^36T 18z >12T   ^36t 18Z >12t
+//^12T ^12T   ^12t ^12t   ^36T 18z >12T   ^36t 18Z >12t   ^36T 18z >12T   ^36t 18Z >12t
+//^12T ^12T   ^12t ^12t   ^36T 18z >12T   ^36t 18Z >12t   ^36T 18z >12T   ^36t 18Z >12t
+//^36T 18z >12T   ^36t 18Z >12t   ^36T 18z >12T  ^36t 18Z >12t   ^36T 18z >12T   ^36t 18Z >12t
+
+// ----------- Exercise 3.2, 1-buzzPulse THE SHEDDEN kind of a "4-stroke":  tap, 1-buzzPulse tap -- this is advanced
+//
+//^48T t t 16T   ^48t T T 16t   ^48T t t 16T   ^48t T T 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+//^48T t t 16T   ^48t T T 16t   ^48T t t 16T   ^48t T T 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+//^48T t t 16T   ^48t T T 16t   ^48T t t 16T   ^48t T T 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+//^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+
+// Simulated not nec at this tempo
+// ----------- Exercise 3.4, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated no final accent, 4 bars
+///marker 3.1
+//
+///ff ^24T t T  ^24t T t  ^24T t T  ^24t T t        /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p     /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p
+///ff ^24T t T  ^24t T t  ^24T t T  ^24t T t        /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p     /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p
+///ff ^24T t T  ^24t T t  ^24T t T  ^24t T t        /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p     /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p
+///ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p     /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p    /ff ^24T /> 72t t t _24T /p     /ff ^24t /> 72T T T _24t /p    /ff ^24T /> 72t t t _24T /p     ^8t
+
+// same for the following one, which is not simulated.
+// So do something about these two.
+// ----------- Exercise 3.5, 1-buzzPulse 2 tap, 4 stroke tap roll, SIMULATED, 4 bars
+//marker 3.2
+//
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
+///ff ^24t T ^t  ^24T t ^T  ^24t T ^t  ^24T t ^T        /ff ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t   ^24T /> 72t t t /p /ff ^24T
+///ff ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t        /ff ^24T /> 72t t t /p /ff ^24T     ^24t /> 72T T T /p /ff ^24t     ^24T /> 72t t t /p /ff ^24T   ^24t /> 72T T T /p /ff ^24t
+///ff ^24t /> 72T T T /p /ff ^24t     /ff ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^24T /> 72t t t /p /ff ^24T     ^8t
+
+
+
+
+///ff
+// Also this one doesn't teach the correct timings from tap to buzz
+// ----------- Exercise 3.7,  2-buzzPulse, 5 stroke tap rolls, not simulated
+//
+//^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+//^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+//^40T 10t   ^40t 10T    ^40T 10t   ^40t 10T      ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+//^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .     ^40T 20z .   ^40t 20Z .  ^40T 20z .   ^40t 20Z .
+
+//marker 0.8
+// ----------- Exercise 0.8 is double and semi-triple paradiddle at 24th notes
+//^24T . . . T T  ^24t . . . t t   ^24T . . . T T  ^24t . . . t t
+//^24T . .   . . .   . t t     ^24T . .   . . .   . t t     ^24T . . . T T
+//^24t . . . t t   ^24T . . . T T  ^24t . . . t t  ^24T . . . T T
+//^24t . . . . . . T T   ^24t . . . . . . T T   ^4t
+// just a repeat of the previous exercise, for now, and to keep same order and timing.
+
+// NO
+//^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+//^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+//^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+//^40T 20z . ^24t   ^40T 20z . ^24t   ^40T 20z . ^24t
+
+//^24T . . ^. ^12T   ^24T . . ^. ^12T   ^40T 20z . ^24t ^12T   ^40T 20z . ^24t ^12T
+//^24t . . ^. ^12t   ^24t . . ^. ^12t   ^40t 20Z . ^24T ^12t   ^40t 20Z . ^24T ^12t
+//^24T . . ^. ^12T   ^24T . . ^. ^12T   ^40T 20z . ^24t ^12T   ^40T 20z . ^24t ^12T
+//^40T 20z . ^24t ^12T   ^40T 20z . ^24t ^12T   ^40T 20z . ^24t ^12T   ^40T 20z . ^24t ^12T
+//// repeat, reverse sticking
+//^24t . . ^. ^12t   ^24t . . ^. ^12t   ^40t 20Z . ^24T ^12t   ^40t 20Z . ^24T ^12t
+//^24t . . ^. ^12t   ^24t . . ^. ^12t   ^40t 20Z . ^24T ^12t   ^40t 20Z . ^24T ^12t
+//^24t . . ^. ^12t   ^24t . . ^. ^12t   ^40t 20Z . ^24T ^12t   ^40t 20Z . ^24T ^12t
+//^40t 20Z . ^24T ^12t  ^40t 20Z . ^24T ^12t  ^40t 20Z . ^24T ^12t  ^40t 20Z . ^24T ^12t
+
+//^42T 21z . .   ^42T 21z . .   ^42T 21z . .   ^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+//^42T 21z . .   ^42T 21z . .   ^42T 21z . .   ^42T 21z . .   ^42T 21z . .   ^42T 21z . .
+
+//^24T . . ^. ^12T   ^24t . . ^. ^12t   ^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t
+//^24T . . ^. ^12T   ^24t . . ^. ^12t   ^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t
+//^24T . . ^. ^12T   ^24t . . ^. ^12t   ^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t
+//^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t   ^40T 20z . ^24t ^12T   ^40t 20Z . ^24T ^12t
+
+// This is a cool hand order, but we don't need it
+//^24T t >T  ^24T t >T  ^24T t >T  ^8T     ^36T 18z >24T   ^36T 18z >24T   ^36T 18z >24T   ^8T
+//^24t T >t  ^24t T >t  ^24t T >t  ^8t     ^36t 18Z >24t   ^36t 18Z >24t   ^36t 18Z >24t   ^8t
+//^24T t >T  ^24t T >t  ^24T t >T  ^8t     ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t
+//^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36t 18Z >24t   ^36T 18z >24T   ^36T 18z >24T   ^36t 18Z >24t   ^8t
+
+// Sync
+//1r
+//
+// ----------- Exercise 3.4, 1-buzzPulse even faster/shorter, kind of a "4-stroke":  tap, 1-buzzPulse tap -- this is difficult/advanced
+///marker 3.4
+///ff
+//^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t    ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t
+//^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t    ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t
+//^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t   ^18T 36T  ^18t 36t    ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t
+//^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t    ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t   ^54T 27z 36T  ^54t 27Z 36t
+
+/ff
+///ff ^16T /mp 16T  /ff ^16T /mp 16T  /ff ^16T /mp 16T  /ff ^16T /mp 16T   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+///ff ^16T /mp 16T  /ff ^16T /mp 16T  /ff ^16T /mp 16T  /ff ^16T /mp 16T   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+///ff ^16T /mp 16T  /ff ^16T /mp 16T  /ff ^16T /mp 16T  /ff ^16T /mp 16T   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+//^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
+///ff ^16t /mp 16t  /ff ^16T /mp 16T   /ff ^16t /mp 16t  /ff ^16T /mp 16T   /ff  ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T
+///ff ^16t /mp 16t  /ff ^16T /mp 16T   /ff ^16t /mp 16t  /ff ^16T /mp 16T   /ff  ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T
+///ff ^16t /mp 16t  /ff ^16T /mp 16T   /ff ^16t /mp 16t  /ff ^16T /mp 16T   /ff  ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T
+//^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T    ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T
+
 
