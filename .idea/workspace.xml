@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Working on structure for tap rolls.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added another paradiddle exercise">
+      <change afterPath="$PROJECT_DIR$/exercises/ExerciseSets.snl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" afterDir="false" />
     </list>
@@ -56,18 +57,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tunes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/exercises" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exercises" />
       <recent name="$PROJECT_DIR$/tunes" />
       <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/exercises/warmups" />
       <recent name="$PROJECT_DIR$/FanfaresSalutes" />
-      <recent name="$PROJECT_DIR$/exercises/warmups/LeoBrowne" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -75,7 +76,7 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.WarmUpsSets">
+  <component name="RunManager" selected="Dart Command Line App.ExerciseSets">
     <configuration name="1224s" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i exercises/warmups/1224s.snl -o midifiles/1224s.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -193,6 +194,11 @@
     </configuration>
     <configuration name="DrumSaluteMaui" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i FanfaresSalutes/DrumSaluteIoMPB.snl -o midifiles/DrumSaluteIoMPB.mid -S 1.0" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ExerciseSets" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i exercises/ExerciseSets.snl -o midifiles/ExerciseSets.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -451,11 +457,6 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="WarmUpsSets" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i exercises/warmups/WarmUpsSets.snl -o midifiles/WarmUpsSets.mid" />
-      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
-      <method v="2" />
-    </configuration>
     <configuration name="WarmUpsSets20220227" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i exercises/warmups/WarmUpsSets20220227.snl -o midifiles/WarmUpsSets20220227.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -591,7 +592,7 @@
       <item itemvalue="Dart Command Line App.WarmUpsSet2" />
       <item itemvalue="Dart Command Line App.WarmUpsSet3" />
       <item itemvalue="Dart Command Line App.WarmUpsSets20220227" />
-      <item itemvalue="Dart Command Line App.WarmUpsSets" />
+      <item itemvalue="Dart Command Line App.ExerciseSets" />
       <item itemvalue="Dart Command Line App.WarmupReel" />
       <item itemvalue="Dart Test.SnareLang4Test" />
       <item itemvalue="Shell Script.BuildTunes" />
@@ -920,14 +921,7 @@
       <workItem from="1646345036586" duration="707000" />
       <workItem from="1646504829577" duration="673000" />
       <workItem from="1646702696050" duration="1944000" />
-      <workItem from="1646790074664" duration="278116000" />
-    </task>
-    <task id="LOCAL-00073" summary="End of the year, and end of prototype.  Did not&#10;finish vol 2 of the book.  Will redo most everything.">
-      <created>1609621022425</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1609621022426</updated>
+      <workItem from="1646790074664" duration="348945000" />
     </task>
     <task id="LOCAL-00074" summary="Decided to try to support 9 snares with delays.  Started into that.">
       <created>1609808985167</created>
@@ -1265,7 +1259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649916526993</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Added another paradiddle exercise">
+      <created>1650148028187</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1650148028187</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1284,7 +1285,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="More tuning of the bash script." />
     <MESSAGE value="Additions and corrections to several tunes." />
     <MESSAGE value="Added bass part to drum salute." />
     <MESSAGE value="Mostly just new tunes or fixes to tunes I think." />
@@ -1309,13 +1309,14 @@
     <MESSAGE value="First cut at reg buzz rolls." />
     <MESSAGE value="Working on tap rolls." />
     <MESSAGE value="Working on structure for tap rolls." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on structure for tap rolls." />
+    <MESSAGE value="Added another paradiddle exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added another paradiddle exercise" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647981510958">
+    <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650310242060">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1647981510958" />
+    <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1650310242060" />
     <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1644213811391">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -1324,22 +1325,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1644256580683" />
-    <state width="3516" height="242" key="GridCell.Tab.0.bottom" timestamp="1650147009554">
+    <state width="3516" height="242" key="GridCell.Tab.0.bottom" timestamp="1650780763179">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1650147009554" />
-    <state width="3516" height="242" key="GridCell.Tab.0.center" timestamp="1650147009553">
+    <state width="3516" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1650780763179" />
+    <state width="3516" height="242" key="GridCell.Tab.0.center" timestamp="1650780763179">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1650147009553" />
-    <state width="3516" height="242" key="GridCell.Tab.0.left" timestamp="1650147009553">
+    <state width="3516" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1650780763179" />
+    <state width="3516" height="242" key="GridCell.Tab.0.left" timestamp="1650780763179">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1650147009553" />
-    <state width="3516" height="242" key="GridCell.Tab.0.right" timestamp="1650147009553">
+    <state width="3516" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1650780763179" />
+    <state width="3516" height="242" key="GridCell.Tab.0.right" timestamp="1650780763179">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1650147009553" />
+    <state width="3516" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1650780763179" />
     <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1649835517397">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
