@@ -360,42 +360,32 @@ _12T ^8t 24t   _12T ^8t 24t   12r ^24t 12T 24t  _12T 24T 8t
 
 
 // Sync
-1r
+//1r
 // ----------- Exercise 2.7.1, combination 6's  6/8 feel
-/marker 2.7.1
+//marker 2.7.1
 // Scottish style 6/8 rolls are lazy, and how they're played may partly depend on the tempo
 // which could range from 72 to 90 or so for a 6/8 march.  Plus, they're not played as written.
 // Americans seem to try to play it as written, which requires different pulse speeds depending
 // on the roll duration.  But at a faster tempo you might have to change the pulses from what's
 // written.  That's my opinion.  So, I do not agree with James Laughlin's sticking on some of
-// his 6/8 "Massed Band Setting" score.
+// his 6/8 "Massed Band Setting" score.  It's not consistent for slow or faster tempos.  Something
+// has to change.
 
 
 
-///fff ^8F /mp /< 24Z . .    ^8t /fff     /mp /< 24z . .      ^8T /fff /ff 24t 12F     /mp /< 24Z . . . ^12t /fff   // represents a change to the sticking
-//8T _24t >12F  /mf /< 24Z . . . . .   ^8T /fff /ff 24t >12T  ^6t /mf 12t
-///f /< _24Z . . >24t ^12T /fff /f /< _24Z . . >24t ^12T /fff /ff  ^12F 24z . >12t /mf /< _24Z . . >24t ^12T /fff  // acceptable
-///ff ^8F /mf /cresc 24t _24Z .     24Z 24t . . ^12F /ff        ^12t 24Z . >12T  ^6f 12t  // a bit strange, but a bit better than playing it straight 2/4 feel
+// HERE ARE TWO WAYS TO PLAY THE FIRST 2 LINES OF JL's Massed Band Setting in 6/8.  Use this later, or develop from it.
 
-// EXPERIMENT.  Is it closer to subdivisions by 5 or 6 or 7?
-// Here's 5:
-^10T _20t ^10T   ^10t _20T ^10t   ^10T _20t ^10T   ^10t _20T ^10t
-20Z . . 10t  20z . . 10T   20Z . . 10t  20z . . 10T
-^10T _20t >10T   20z . . 10T   ^10t _20T >10t   20Z . . 10t
-^10T _20t 30Z . .  ^10T _20t 30Z . .  ^10T _20t 30Z . .  20t . . 10T
+// Here's the Scottish/Irish way of playing a 6/8
+///fff ^8T /mp /< 24Z . .    ^8t /fff     /mp /< 24z . .      ^8T /fff /f 24t 12T     /mp /< 24Z . . . ^12t /fff   // represents a change to the sticking
+///fff ^8T /mp _24t >12T  /mp /< 24Z . . . . .   ^8T /fff /f 24t >12T  ^6t /mp 12t
+///fff ^8T /mp /< 24Z . .    ^8t /fff     /mp /< 24z . .      ^8T /fff /mf 24t 12T     /mp /< 24Z . . . ^12t /fff   // represents a change to the sticking
+///fff ^12T /mp /cresc 24t _24Z . .  24t . . ^8T /fff       / f ^12t 24Z . >12T  ^6f 12t  // a bit strange, but a bit better than playing it straight 2/4 feel
 
-// Here's 7:  Sounds a bit better than based on 5
-^28:3T _28t ^28:3T   ^28:3t _28T ^28:3t  ^28:3T _28t ^28:3T   ^28:3t _28T ^28:3t
-28Z . . .  _28:3t   28z . . . _28:3T   28Z . . .  _28:3t   28z . . . _28:3T
-^28:3T _28t ^28:3T   ^28:3t _28T ^28:3t  ^28:3T _28t ^28:3T   ^28:3t _28T ^28:3t
-^28:3T _28t 28Z . .   ^28:3t _28T 28z . .   ^28:3T _28t 28Z . .   ^28:3t _28T 28z . .
-
-
-/fff ^8T /mp /< 24Z . .    ^8t /fff     /mp /< 24z . .      ^8T /fff /ff 24t 12T     /mp /< 24Z . . . ^12t /fff   // represents a change to the sticking
-/fff ^8T /mp _24t >12T  /mf /< 24Z . . . . .   ^8T /fff /ff 24t >12T  ^6t /mf 12t
-/fff ^8T /mp /< 24Z . .    ^8t /fff     /mp /< 24z . .      ^8T /fff /ff 24t 12T     /mp /< 24Z . . . ^12t /fff   // represents a change to the sticking
-/fff ^8T /mf /cresc 24t _24Z .     24Z 24t . . ^12T /ff        ^12t 24Z . >12T  ^6f 12t  // a bit strange, but a bit better than playing it straight 2/4 feel
-
+// Here's an American way of playing a 6/8
+///fff ^6F /mp /< 36Z . .    ^6t /fff     /mp /< 36z . .      ^8T /fff /f 24t 12F     /mp /< 24Z . . . ^12t /fff
+///fff ^8F /mp _24t >12T  /mf /< 24Z . . . . .   ^8T /fff /f 24t >12T  ^6f /mf 12t
+///fff ^6F /mp /< 36Z . .    ^6t /fff     /mp /< 36z . .      ^8T /fff /f 24t 12F     /mp /< 24Z . . . ^12t /fff
+///fff ^8T /mf /cresc 24t 24Z .     24Z 24t . . ^12F        ^12t /fff /ff 24Z . >12T  ^6f 12t
 
 
 
@@ -420,7 +410,7 @@ _12T ^8t 24t   _12T ^8t 24t   12r ^24t 12T 24t  _12T 24T 8t
 //^24Z . . ^24z . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
 
 // Sync
-4T 4r . .
+4r 4r . .
 // ----------- Exercise 2.10, Roll-off rest timing, 8 bars
 /marker 2.10
 // 8:53
@@ -1031,7 +1021,7 @@ N N N 8N N
 
 
 // Sync
-1r
+//1r
 // ----------- Exercise 2.7.1, combination 6's  6/8 feel, alternating
 // Scottish style 6/8 rolls are lazy, and how they're played may partly depend on the tempo
 // which could range from 72 to 90 or so for a 6/8 march.  Plus, they're not played as written.
@@ -1039,18 +1029,7 @@ N N N 8N N
 // on the roll duration.  But at a faster tempo you might have to change the pulses from what's
 // written.  That's my opinion.  So, I do not agree with James Laughlin's sticking on some of
 // his 6/8 "Massed Band Setting" score.
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
+//1r 1r 1r 1r   1r 1r 1r 1r
 
 
 
@@ -1083,9 +1062,9 @@ N N N 8N N
 8N . 4N 8N 8r 4r
 4N . 8N 8r 4r
 
-// tag ending
-/p 24N . . . . . 8T 8r
-
+// tag ending  maybe only snares?
+///p 24N . . . . . 8T 8r
+2r
 
 
 
@@ -1231,8 +1210,8 @@ N N N 8N N
 
 
 // tag ending
-8N 8r 4r  /mp 4N . /ff
-
+//8N 8r 4r  /mp 4N . /ff
+1r
 
 
 // Maybe should do that silly black bear thing here
@@ -1580,7 +1559,7 @@ B 4B 8r 8B
 4B . . 8B .
 
 // Sync
-1r
+//1r
 // ----------- Exercise 2.7.1, combination 6's  6/8 feel, alternating
 // Scottish style 6/8 rolls are lazy, and how they're played may partly depend on the tempo
 // which could range from 72 to 90 or so for a 6/8 march.  Plus, they're not played as written.
@@ -1588,18 +1567,7 @@ B 4B 8r 8B
 // on the roll duration.  But at a faster tempo you might have to change the pulses from what's
 // written.  That's my opinion.  So, I do not agree with James Laughlin's sticking on some of
 // his 6/8 "Massed Band Setting" score.
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
+//1r 1r 1r 1r   1r 1r 1r 1r
 
 
 // ----------- Exercise 2.8, 4 pulse buzzes with 24th's
@@ -1629,8 +1597,8 @@ B 4B 8r 8B
 4B . . 4r
 4B . . 4r
 // tag ending
-/p 4B 8B 8r /f
-
+//p 4B 8B 8r /f
+2r
 
 
 ///////////////// SET 3 -- TAP ROLL DEVELOPMENT /////////////////
@@ -2122,7 +2090,7 @@ _8M .  _8M .  _8M .  _8M .
 
 
 // Sync
-/ff ^8M /mf /< 24M . .     ^8M /ff /mf /< 24M . .     ^8M /ff /mf 24M _12M /ff ^8M /mf 24M _12M /mf
+///ff ^8M /mf /< 24M . .     ^8M /ff /mf /< 24M . .     ^8M /ff /mf 24M _12M /ff ^8M /mf 24M _12M /mf
 // ----------- Exercise 2.7.1, combination 6's  6/8 feel, alternating
 // Scottish style 6/8 rolls are lazy, and how they're played may partly depend on the tempo
 // which could range from 72 to 90 or so for a 6/8 march.  Plus, they're not played as written.
@@ -2130,18 +2098,7 @@ _8M .  _8M .  _8M .  _8M .
 // on the roll duration.  But at a faster tempo you might have to change the pulses from what's
 // written.  That's my opinion.  So, I do not agree with James Laughlin's sticking on some of
 // his 6/8 "Massed Band Setting" score.
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
+//1r 1r 1r 1r   1r 1r 1r 1r
 
 
 // Sync
@@ -2318,7 +2275,7 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 4M . . .
 4M . . .
-4M . . .
+4M . 4r 4r
 
 // tag ending
 1r
@@ -2953,6 +2910,29 @@ _8M .  _8M .  _8M .  _8M .
 // roll is too slow  ///fff ^7F /mp /< 28Z . .    /fff ^7T     /mp /< 28z . .      ^8T /fff /ff 24t 12F     /mp /< 18Z . . ^12t /fff
 ///fff ^8F /mp /< 24z . .    /fff ^8T     /mp /< 24z . .      ^8T /fff /ff 24t 12F     /mp /< 24Z . . ^8t /fff
 // sounds good but harder to play accurately: /fff ^7F /mp /< 28Z . .    /fff ^7T     /mp /< 28z . .      ^8T /fff /ff 24t 12F     /mp /< 24Z . . . ^12t /fff
+
+
+
+
+// Here's 5:  It's very lazy.  Don't do this.
+//^10T _20t ^10T   ^10t _20T ^10t   ^10T _20t ^10T   ^10t _20T ^10t
+//20Z . . 10t  20z . . 10T   20Z . . 10t  20z . . 10T
+//^10T _20t >10T   20z . . 10T   ^10t _20T >10t   20Z . . 10t
+//^10T _20t 30Z . .  ^10T _20t 30Z . .  ^10T _20t 30Z . .  20t . . 10T
+
+// Here's 7:  Sounds a bit better than based on 5.  Sound's lopsided
+//^28:3T _28t ^28:3T   ^28:3t _28T ^28:3t  ^28:3T _28t ^28:3T   ^28:3t _28T ^28:3t
+//28Z . . .  _28:3t   28z . . . _28:3T   28Z . . .  _28:3t   28z . . . _28:3T
+//^28:3T _28t ^28:3T   ^28:3t _28T ^28:3t  ^28:3T _28t ^28:3T   ^28:3t _28T ^28:3t
+//^28:3T _28t 28Z . .   ^28:3t _28T 28z . .   ^28:3T _28t 28Z . .   ^28:3t _28T 28z . .
+
+
+
+
+///fff ^8F /mp /< 24Z . .    ^8t /fff     /mp /< 24z . .      ^8T /fff /ff 24t 12F     /mp /< 24Z . . . ^12t /fff   // represents a change to the sticking
+//8T _24t >12F  /mf /< 24Z . . . . .   ^8T /fff /ff 24t >12T  ^6t /mf 12t
+///f /< _24Z . . >24t ^12T /fff /f /< _24Z . . >24t ^12T /fff /ff  ^12F 24z . >12t /mf /< _24Z . . >24t ^12T /fff  // acceptable
+///ff ^8F /mf /cresc 24t _24Z .     24Z 24t . . ^12F /ff        ^12t 24Z . >12T  ^6f 12t  // a bit strange, but a bit better than playing it straight 2/4 feel
 
 
 

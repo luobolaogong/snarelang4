@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added another paradiddle exercise">
-      <change afterPath="$PROJECT_DIR$/exercises/ExerciseSets.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Added a few new ones.  6/8 time stuff.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/warmups/WarmUpsSets.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/ExerciseSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ExerciseSets.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -921,14 +920,7 @@
       <workItem from="1646345036586" duration="707000" />
       <workItem from="1646504829577" duration="673000" />
       <workItem from="1646702696050" duration="1944000" />
-      <workItem from="1646790074664" duration="348945000" />
-    </task>
-    <task id="LOCAL-00074" summary="Decided to try to support 9 snares with delays.  Started into that.">
-      <created>1609808985167</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1609808985167</updated>
+      <workItem from="1646790074664" duration="356137000" />
     </task>
     <task id="LOCAL-00075" summary="Improved snare line using random snare notes.">
       <created>1609894775712</created>
@@ -1266,7 +1258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650148028187</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Added a few new ones.  6/8 time stuff.">
+      <created>1650780977950</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1650780977950</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1285,7 +1284,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Additions and corrections to several tunes." />
     <MESSAGE value="Added bass part to drum salute." />
     <MESSAGE value="Mostly just new tunes or fixes to tunes I think." />
     <MESSAGE value="Mostly just updating tunes for new storage area." />
@@ -1310,7 +1308,8 @@
     <MESSAGE value="Working on tap rolls." />
     <MESSAGE value="Working on structure for tap rolls." />
     <MESSAGE value="Added another paradiddle exercise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added another paradiddle exercise" />
+    <MESSAGE value="Added a few new ones.  6/8 time stuff." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a few new ones.  6/8 time stuff." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650310242060">
@@ -1325,26 +1324,26 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1644256580683" />
-    <state width="3516" height="242" key="GridCell.Tab.0.bottom" timestamp="1650780763179">
+    <state width="3516" height="242" key="GridCell.Tab.0.bottom" timestamp="1650869611049">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1650780763179" />
-    <state width="3516" height="242" key="GridCell.Tab.0.center" timestamp="1650780763179">
+    <state width="3516" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1650869611049" />
+    <state width="3516" height="242" key="GridCell.Tab.0.center" timestamp="1650869611049">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1650780763179" />
-    <state width="3516" height="242" key="GridCell.Tab.0.left" timestamp="1650780763179">
+    <state width="3516" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1650869611049" />
+    <state width="3516" height="242" key="GridCell.Tab.0.left" timestamp="1650869611049">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1650780763179" />
-    <state width="3516" height="242" key="GridCell.Tab.0.right" timestamp="1650780763179">
+    <state width="3516" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1650869611049" />
+    <state width="3516" height="242" key="GridCell.Tab.0.right" timestamp="1650869611049">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1650780763179" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1649835517397">
+    <state width="3516" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1650869611049" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1650780990544">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1649835517397" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1650780990544" />
     <state x="1899" y="768" width="587" height="502" key="find.popup" timestamp="1647984234580">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
