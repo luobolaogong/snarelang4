@@ -112,30 +112,30 @@
 // This paradiddle stuff lacks definition.  Sounds like a long set of 16th notes.
 // ------------ Exercise 0.4.1, The Gabe, in preparation for paradiddles
 /marker 0.4.1
-^16T . . .  ^16T . . .  ^16T . . .  ^16T . T T
-^16t . . .  ^16t . . .  ^16t . . .  ^16t . t t
+^16T . . .  ^16T . . .  ^16T . . .  ^8T T
+^16t . . .  ^16t . . .  ^16t . . .  ^8t t
 ^16T . . .  ^16T . . .  ^16T . . .  ^16T . . .
-^16T . . .  ^16T . . .  ^16T . . .  ^4T
+^16T . . .  ^16T . . .  ^16T . . .  ^8T 8T
 
-^16t . . .  ^16t . . .  ^16t . . .  ^16t . t t
-^16T . . .  ^16T . . .  ^16T . . .  ^16T . T T
+^16t . . .  ^16t . . .  ^16t . . .  ^8t t
+^16T . . .  ^16T . . .  ^16T . . .  ^8T T
 ^16t . . .  ^16t . . .  ^16t . . .  ^16t . . .
-^16t . . .  ^16t . . .  ^16t . . .  ^4t
+^16t . . .  ^16t . . .  ^16t . . .  ^8t 8t
 
 
 //////////////  Add Paradiddle and similar stuff here  Prob should be a new set
-/marker 0.4.2
+//marker 0.4.2
 // 2:13
 // ----------- Exercise 0.4.2 is single and double paradiddle at 16th notes
-^16T t T T  ^16t T t t   ^16T t T T  ^16t T t t
-^16T t T t T T   ^16t T t T t t    ^16T t T T
-^16t T t t  ^16T t T T  ^16t T t t   ^16T t T T
-^16t T t T t t    ^16T t T t T T   ^16t T t t
-
-^16t T t t  ^16T t T T  ^16t T t t   ^16T t T T
-^16t T t T t t      ^16T t T t T T   ^16t T t t
-^16T t T T  ^16t T t t   ^16T t T T  ^16t T t t
-^16T t T t T T   ^16t T t T t t    ^4T
+//^16T t T T  ^16t T t t   ^16T t T T  ^16t T t t
+//^16T t T t T T   ^16t T t T t t    ^16T t T T
+//^16t T t t  ^16T t T T  ^16t T t t   ^16T t T T
+//^16t T t T t t    ^16T t T t T T   ^16t T t t
+//
+//^16t T t t  ^16T t T T  ^16t T t t   ^16T t T T
+//^16t T t T t t      ^16T t T t T T   ^16t T t t
+//^16T t T T  ^16t T t t   ^16T t T T  ^16t T t t
+//^16T t T t T T   ^16t T t T t t    ^4T
 
 
 
@@ -176,7 +176,8 @@ _16t t 8t   _16t t 8t   _16t t 8t   8t t
 
 /tempo 74
 //^12T 24t 12T 24t   ^12T 24t 12T 24t   ^12T 24t 12T 24t   ^12T 24t 12T 24t
-12t 24t 12t 24t   12t 24t 12t 24t   _12T 24t 12T 24t   _12T 24t 12T 24t
+//12t 24t 12t 24t   12t 24t 12t 24t   _12T 24t 12T 24t   _12T 24t 12T 24t
+12t 24t 12t 24t   12t 24t 12t 24t   _12T 24t 12T 24t   _12T 24t 8T
 
 
 ///////////// SET 1  Dot/Cut  12/24 stuff, as in 1:2 stuff //////////////
@@ -187,18 +188,18 @@ _16t t 8t   _16t t 8t   _16t t 8t   8t t
 ///////////////////////////////tempo 72  // ????  This might be a bit fast
 // Sync
 //////////////////////////////8t 8r . . 2r
-/marker 1.0
+//marker 1.0
 // 4:10
 /ff
-24T . . . . .   12T 24t 12T 24t
-24T . . . . .   12T 24t 12T 24t
-24T . . . . .   12T 24t 12T 24t
-12T 24t 12T 24t 12T 24t 12T 24t
+//24T . . . . .   12T 24t 12T 24t
+//24T . . . . .   12T 24t 12T 24t
+//24T . . . . .   12T 24t 12T 24t
+//12T 24t 12T 24t 12T 24t 12T 24t
 // repeat
-24T . . . . .   12T 24t 12T 24t
-24T . . . . .   12T 24t 12T 24t
-24T . . . . .   12T 24t 12T 24t
-12T 24t 12T 24t 12T 24t 12T 24t
+//24T . . . . .   12T 24t 12T 24t
+//24T . . . . .   12T 24t 12T 24t
+//24T . . . . .   12T 24t 12T 24t
+//12T 24t 12T 24t 12T 24t 12T 24t
 
 
 /marker 1.1
@@ -209,19 +210,19 @@ _16t t 8t   _16t t 8t   _16t t 8t   8t t
 ^24T . . . . .   ^12T 24t 12T 24T
 ^12t 24T 12t 24t ^12T 24t 12T 24T
 //// Reverse hand order of above
-//^24t . . . . .   ^12t 24T 12t 24t
-//^24T . . . . .   ^12T 24t 12T 24T
-//^24t . . . . .   ^12t 24T 12t 24t
-//^12T 24t 12T 24T ^12t 24T 12t 24t
+^24t . . . . .   ^12t 24T 12t 24t
+^24T . . . . .   ^12T 24t 12T 24T
+^24t . . . . .   ^12t 24T 12t 24t
+^12T 24t 12T 24T ^12t 24T 12t 24t
 
 
 /marker 1.2
 // 4:37
 // ----------- Exercise 1.2, move the accent on the paradiddle to be 2nd, 4 bars
-//^24T . . . . .    12T ^24t 12T 24T
-//^24t . . . . .    12t ^24T 12t 24t
-//^24T . . . . .    12T ^24t 12T 24T
-//12t ^24T 12t 24t   12T ^24t 12T 24T
+^24T . . . . .    12T ^24t 12T 24T
+^24t . . . . .    12t ^24T 12t 24t
+^24T . . . . .    12T ^24t 12T 24T
+12t ^24T 12t 24t   12T ^24t 12T 24T
 //// reverse hand order
 ^24t . . . . .    12t ^24T 12t 24t
 ^24T . . . . .    12T ^24t 12T 24T
@@ -649,10 +650,129 @@ _12T ^24t 24Z . >24T ^8t   _12T ^24t 24Z . >24T ^8t   24Z . >24T ^8t
 
 
 
+
+
+///////////////////////////  Experiment in 6/8 stuff.
+/////////////// For Diu Regnare the accents should all be off beat, not on beat
+////////////// And they play it very tight.  24th will have to suffice, but it's a bit tighter than that.
+
+/ff
+//6T 12 6 12  6 12 6 12  // Best
+//20:3T 10 20:3 10  20:3  10 20:3 10 // not as good
+
+8T 24 12   8 24 12  8 24 12   8 24 12  // close
+8T 24 ^12F   8t 24 ^12f  8T 24 ^12F   8t 24 ^12f  // close
+
+36:5T 36 ^12F   36:5t 36 ^12f   36:5T 36 ^12F   36:5t 36 ^12f // If for Diu Regnare, this is real close, and based on 36ths, which is good
+36:5T 36 ^12F   36:5t 36 ^12f   36:5T 36 ^12F   36:5t 36 ^12f
+36T . . . . ^. ^12   36t . . . . ^. ^12   36T . . . . ^. ^12   36t . . . . ^. ^12
+36T . . . . ^. ^12   36t . . . . ^. ^12   36T . . . . ^. ^12   36t . . . . ^. ^12
+
+30:4T 30 ^12F   30:4t 30 ^12f   30:4T 30 ^12F   30:4t 30 ^12f   // This is closest to how he plays it, but based on 30th notes
+30:4T 30 ^12F   30:4t 30 ^12f   30:4T 30 ^12F   30:4t 30 ^12f   // This is closest to how he plays it, but based on 30th notes
+30T T t t ^T ^12t   30t t T T ^t ^12T   30T T t t ^T ^12t   30t t T T ^t ^12T
+30T T t t ^T ^12t   30t t T T ^t ^12T   30T T t t ^T ^12t   30t t T T ^t ^12T
+
+//10T 20 10   10 20 10   10 20 10   10 20 10 // not as good
+
+24T 8 12  24T 8 12  24T 8 12  24T 8 12  //best
+24T 8 ^12F  24t 8 ^12f  24T 8 ^12F  24t 8 ^12f  //best
+
+>30T >30:4t ^12F   >30t >30:4T ^12f   >30T >30:4t ^12F   >30t >30:4T ^12f
+>30T >30:4t ^12F   >30t >30:4T ^12f   >30T >30:4t ^12F   >30t >30:4T ^12f
+
+36T t t T T >t ^12   36t T T t t >T ^12    36T t t T T >t ^12   36t T T t t >T ^12
+36T t t T T >t ^12   36t T T t t >T ^12    36T t t T T >t ^12   36t T T t t >T ^12
+>36T ^t T T t t ^12T   >36T ^t T T t t ^12T   >36T ^t T T t t ^12T   >36T ^t T T t t ^12T
+>36T ^t T T t t ^12T   >36T ^t T T t t ^12T   >36T ^t T T t t ^12T   >36T ^t T T t t ^12T
+
+_36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T
+_36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T
+
+//20T 10 10   20T 10 10   20T 10 10   20T 10 10 // ot as good
+
+6T 36Z . .  6T 36Z . .  6T 36Z . .  6T 36Z . .
+6T ^36Z ^. .  6T ^36Z ^. .  6T ^36Z ^. .  6T ^36Z ^. .
+
+20:3T 30Z . .  20:3T 30Z . .  20:3T 30Z . .  20:3T 30Z . .
+20:3T ^30Z ^. .  20:3T ^30Z ^. .  20:3T ^30Z ^. .  20:3T ^30Z ^. .
+
+8T 24Z . .   8T 24Z . .   8T 24Z . .   8T 24Z . .
+8T ^24Z >. .   8T ^24Z >. .   8T ^24Z >. .   8T ^24Z >. .
+
+10T 20z . .  10T 20z . .  10T 20z . .  10T 20z . .
+10T ^20z >. .  10T ^20z >. .  10T ^20z >. .  10T ^20z >. .
+
+
+8T 48Z . 12T    8T 48Z . 12T    8T 48Z . 12T    8T 48Z . 12T
+8T 48Z . ^12T    8T 48Z . ^12T    8T 48Z . ^12T    8T 48Z . ^12T
+
+10T 40Z . 10T   10T 40Z . 10T   10T 40Z . 10T   10T 40Z . 10T
+10T 40Z . ^10T   10T 40Z . ^10T   10T 40Z . ^10T   10T 40Z . ^10T
+
+12T 24Z . 12T   12T 24Z . 12T   12T 24Z . 12T   12T 24Z . 12T
+12T 24Z . ^12T   12T 24Z . ^12T   12T 24Z . ^12T   12T 24Z . ^12T
+
+20:3T 40Z . 20T   20:3T 40Z . 20T   20:3T 40Z . 20T   20:3T 40Z . 20T
+20:3T 40Z . ^20T   20:3T 40Z . ^20T   20:3T 40Z . ^20T   20:3T 40Z . ^20T
+
+16Z . 24T 12   16Z . 24T 12   16Z . 24T 12   16Z . 24T 12
+16Z . 24T ^12   16Z . 24T ^12   16Z . 24T ^12   16Z . 24T ^12
+
+20Z . 20T 10   20Z . 20T 10   20Z . 20T 10   20Z . 20T 10
+20Z . 20T ^10   20Z . 20T ^10   20Z . 20T ^10   20Z . 20T ^10
+
+24Z . . 24T 12   24Z . . 24T 12   24Z . . 24T 12   24Z . . 24T 12
+24Z . . 24T ^12   24Z . . 24T ^12   24Z . . 24T ^12   24Z . . 24T ^12
+
+20Z . . 20T 20   20Z . . 20T 20   20Z . . 20T 20   20Z . . 20T 20
+20Z . . 20T ^20   20Z . . 20T ^20   20Z . . 20T ^20   20Z . . 20T ^20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //////////////// Experiment SNARE 2 Channel 3 ////////////////////////
 /track snare
 /channel 3
-
 // ------------ Snare 2 Set 0 Exercise 0.0, double stops -----------------
 //time 4/4
 //tempo 72
@@ -774,15 +894,15 @@ _n n _n n _n n _n n
 
 //////////////  Add Paradiddle and similar stuff here  Prob should be a new set
 // ----------- Exercise 0.4.2 is single and double paradiddle at 16th notes
->16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
->8N . .  >8n . . >8N .
->16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
->8N . .  >8n . . >8N .
-
->16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
->8N . .  >8n . . >8N .
->16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
->8N . .  >8n . . >4N
+//>16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
+//>8N . .  >8n . . >8N .
+//>16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
+//>8N . .  >8n . . >8N .
+//
+//>16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
+//>8N . .  >8n . . >8N .
+//>16:3N 16n  >16:3N 16n  >16:3N 16n  >16:3N 16n
+//>8N . .  >8n . . >4N
 
 
 
@@ -818,7 +938,7 @@ N N N 8N N
 4N
 
 // new tempo
-4N . . 8N .
+4N . . 4N
 
 // Sync
 //8N 8r 4r . .
@@ -889,16 +1009,16 @@ N N N 8N N
 //tempo 72
 // Sync
 //////////////////////////////////////////8N 8r . . 2r
-/mf
-8N . 12N 24n 12N 24n   // 4N 8N .
-8N . 12N 24n 12N 24n   // 4N 8N .
-8N . 12N 24n 12N 24N   // 4N 8N .
-12N 24n 12N 24n  12N 24n 12N 24n
+///mf
+//8N . 12N 24n 12N 24n   // 4N 8N .
+//8N . 12N 24n 12N 24n   // 4N 8N .
+//8N . 12N 24n 12N 24N   // 4N 8N .
+//12N 24n 12N 24n  12N 24n 12N 24n
 // repeat
-8N . 12N 24n 12N 24n   // 4N 8N .
-8N . 12N 24n 12N 24n   // 4N 8N .
-8N . 12N 24n 12N 24N   // 4N 8N .
-12N 24n 12N 24n  12N 24n 12N 24n
+//8N . 12N 24n 12N 24n   // 4N 8N .
+//8N . 12N 24n 12N 24n   // 4N 8N .
+//8N . 12N 24n 12N 24N   // 4N 8N .
+//12N 24n 12N 24n  12N 24n 12N 24n
 
 
 // ----------- Exercise 1.1, Paradiddles on the 12/24
@@ -907,22 +1027,22 @@ N N N 8N N
 >8N . >12N 24n 12N 24N
 >12n 24N 12n 24n  >12N 24n 12N 24N
 //// Reverse
-//>8n . >12n 24N 12n 24n
-//>8N . >12N 24n 12N 24N
-//>8n . >12n 24N 12n 24n
-//>12N 24n 12N 24N  >12n 24N 12n 24n
+>8n . >12n 24N 12n 24n
+>8N . >12N 24n 12N 24N
+>8n . >12n 24N 12n 24n
+>12N 24n 12N 24N  >12n 24N 12n 24n
 
 
 // ----------- Exercise 1.2, move the accent on the paradiddle to be 2nd
-//12N 6n  12N >24n 12N 24n
-//12N 6n  12N >24n 12N 24n
-//12N 6n  12N >24n 12N 24n
-//12N >24n 12N 24n  12N >24n 12N 24n
+4N  12N >6n
+4N  12N >6n
+4N  12N >6n
+12N >6n  12N >6n
 // reverse
-12N 6n  12N >24n 12N 24n
-12N 6n  12N >24n 12N 24n
-12N 6n  12N >24n 12N 24n
-12N >24n 12N 24n  12N >24n 12N 24n
+4N  12N >6n
+4N  12N >6n
+4N  12N >6n
+12N >6n  12N >6n
 
 
 // ----------- Exercise 1.3, 12-24 long pickup timing.  Check JL for accent placement
@@ -930,7 +1050,7 @@ N N N 8N N
 //tempo 72
 //Sync
 4N 4r . .
-8N 24n . . 8N 8n   8N 24n . . 8N 8n
+8N 24n . . 8N 8n   8N 24n . . 8N 8n  // a little solo here
 8N .  8N .     12r ^24N 8n . .
 8N 24n . . 8N 8n   8N 24n . . 8N 8n
 8N .  8N .     12r ^24N 8n . .
@@ -943,23 +1063,25 @@ N N N 8N N
 12N 6n     12N 6n   12r ^24N 8n . .
 
 // ----------- Exercise 1.5, Prep for 30th stuff (AKA "Single 6's")
-12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
+12N 24n 12N 24n 12N >24n 8r  12N 24n 12N 24n 12N >24n 8r
 >8N 4r  >8n 4r >8N .
-12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
+12N 24n 12N 24n 12N >24n 8r   12N 24n 12N 24n 12N >24n 8r
+//12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
 >8N 4r  >8n 4r >8N .
 
 // ----------- Exercise 1.6, 30th stuff (AKA "Single 6's")
-12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
+12N 24n 12N 24n 12N >24n 8r  12N 24n 12N 24n 12N >24n 8r
 >8N 4r  >8n 4r >8N .
-12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
+12N 24n 12N 24n 12N >24n 8r  12N 24n 12N 24n 12N >24n 8r
+//12N 24n 12N 24n 4N   12N 24n 12N 24n 4N
 >8N 4r  >8n 4r >8N .
 
 
 // ----------- Exercise 1.7, off beat 32nd stuff, 4 bars
+12N 24n 12N >8n 8r 24r   12N 24n 12N >8n 8r 24r
+12N 24n 12N 24n 8r   12N 24n 12N 24n 8r   12N 24n 8N
 12N 24n 12N 8r 8r 24r   12N 24n 12N 8r 8r 24r
->8N 4r  >8n 4r >8N .
-12N 24n 12N 8r 8r 24r   12N 24n 12N 8r 8r 24r
->8N 4r  >8n 4r >8N .
+12N 24n 12N 24n 8r   12N 24n 12N 24n 8r   12N 24n 8N
 
 
 //////  SET 2 - BUZZ ROLL DEVELOPMENT ////////
@@ -1222,6 +1344,67 @@ N N N 8N N
 // more to come, I guess.  Maybe add some stuff for timing attacks
 // Maybe some work out abbreviated "3 Camps" Back to previous slow tempo for 12/8 time.
 
+
+
+//tempo 74
+1r
+1r
+1r
+1r
+
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+1r
+1r
+1r
+1r
+
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /////////////// BASS ////////////////////////////////////
 /track bass
 /channel 8
@@ -1308,16 +1491,16 @@ _12b 24B  _12b 24B  _12b 24B  _12b 24B   _12b 24B  _12b 24B  _12b 24B  _12b 24B
 
 //////////////  Add Paradiddle and similar stuff here  Prob should be a new set
 // ----------- Exercise 0.4.2 is single and double paradiddle at 16th notes
-/ff
-4B . . .
-8:3B .  4B
-4B . . .
-8:3B .  4B
+//ff
+//4B . . .
+//8:3B .  4B
+//4B . . .
+//8:3B .  4B
 
-4B . . .
-8:3B .  4B
-4B . . .
-8:3B .  4B
+//4B . . .
+//8:3B .  4B
+//4B . . .
+//8:3B .  4B
 
 
 // ----------- Exercise 0.5 is Fred Sanford's triple stroke
@@ -1419,12 +1602,12 @@ B 4B 8r 8B
 //tempo 63
 // Sync
 /////////////////////////////////////////8B 8r . . 2r
-/f
-4B . . .
-4B . . .
+///f
+//4B . . .
+//4B . . .
 // repeat
-4B . . .
-4B . . .
+//4B . . .
+//4B . . .
 //8B . . .
 //8B . . .
 //8B . . .
@@ -1441,16 +1624,16 @@ B 4B 8r 8B
 4B . . .
 4B . . .
 //// repeat
-//4B . . .
-//4B . . .
+4B . . .
+4B . . .
 
 
 // ----------- Exercise 1.2, move the accent on the paradiddle to be 2nd
 
-//4B  12B 6b
-//4B  12B 6b
-//4B  12B 6b
-//12B 6b  12B 6b
+4B  12B 6b
+4B  12B 6b
+4B  12B 6b
+12B 6b  12B 6b
 // reverse
 4B  12B 6b
 4B  12B 6b
@@ -1746,6 +1929,59 @@ B 4B 8r 8B
 
 
 
+//tempo 74
+1r
+1r
+1r
+1r
+
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+1r
+1r
+1r
+1r
+
+
+
+
+
+
+
 
 
 // Maybe should do that silly black bear thing here
@@ -1839,15 +2075,15 @@ B 4B 8r 8B
 
 //////////////  Add Paradiddle and similar stuff here  Prob should be a new set
 // ----------- Exercise 0.4.2 is single and double paradiddle at 16th notes
-4M . . .
-4M . . .
-4M . . .
-4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
 
-4M . . .
-4M . . .
-4M . . .
-4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
+//4M . . .
 
 
 
@@ -1880,7 +2116,7 @@ B 4B 8r 8B
 
 // new tempo
 //^4M ^. ^8M . ^. .
-4M >4M 4M ^8M .
+>4M 4M >4M 4M
 
 
 // Sync
@@ -1949,15 +2185,15 @@ B 4B 8r 8B
 //tempo 63
 // Sync
 /////////////////////////////////////////ff ^4M   ^8M .  ^24M . . . . .   ^12M 24M ^8M /mf
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
+//>8M 8M  >8M 8M
+//>8M 8M  >8M 8M
+//>8M 8M  >8M 8M
+//>8M 8M  >8M 8M
 // repeat
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
+//>8M 8M  >8M 8M
+//>8M 8M  >8M 8M
+//>8M 8M  >8M 8M
+//>8M 8M  >8M 8M
 
 
 // ----------- Exercise 1.1, Paradiddles on the 12/24
@@ -1966,16 +2202,16 @@ B 4B 8r 8B
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
 // reverse
-//>8M 8M  >8M 8M
-//>8M 8M  >8M 8M
-//>8M 8M  >8M 8M
-//>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
 
 // ----------- Exercise 1.2, move the accent on the paradiddle to be 2nd
-//>8M 8M  >8M 8M
-//>8M 8M  >8M 8M
-//>8M 8M  >8M 8M
-//>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
+>8M 8M  >8M 8M
 // reverse
 >8M 8M  >8M 8M
 >8M 8M  >8M 8M
@@ -2278,7 +2514,56 @@ _8M .  _8M .  _8M .  _8M .
 4M . 4r 4r
 
 // tag ending
-1r
+2r
+
+
+
+
+
+//tempo 74
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+
+
+
+
+
 
 
 

@@ -357,7 +357,7 @@ class Score {
       // bad sound font recordings, but only as a hack.  Fix the recordings.
       switch (note.noteType) {
         case NoteType.tapLeft:
-          note.velocity += 4; // This is a guess.  I think generally left is softer
+//          note.velocity += 4; // This is a guess adjustment for left hand weaker
           break;
         case NoteType.tapRight:
           break;
@@ -493,6 +493,12 @@ class Score {
   // Note that because we already did note ramp calculations to set velocities, these supplemental velocity boosts might be off.')
   num adjustVelocityByDynamicAndArticulation(Note note) {
     //print('\t\tHEY HEY HEY HERE COMES AN ADJUSTMENT BY ARTICULATION BASED ON CURRENT DYNAMIC!');
+    // Yeah, calculate the new velocity based on the current velocity and articulation.  So, the function should be
+    // based on a number within the range of ppp to fff, and not have it clip.  Even at fff the articulations should be
+    // noticeable.  That means that a fff without an articulation/accent souldn't be so close to the max of 127.  Maybe
+    // it should only be at about 90.  Maybe higher.  A velocity at around the fff level plus tenuto should be 100% of 127.
+    // But a velocity at around ppp plus tenuto should be around 25% of 127
+    // Say you have a note marked as "f".  Maybe we can say that
     // Figure this out later.  Make a function that adds the right amount, or recalculates the velocity.
     //     print('\t\t\t\tnote dynamic: ${note.dynamic}, which has index of ${note.dynamic.index}');
     //     print('\t\t\t\tand that has a dynamic value of ${dynamicToVelocity(note.dynamic)}');
@@ -513,108 +519,127 @@ class Score {
     //     newVelocity = dynamicToVelocity(Dynamic.values[whatever]);
     //     break;
     // }
-    num newVelocity;
-    switch (note.dynamic) {
-      case Dynamic.ppp:
-        if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 24; // was 14
-        }
-        if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 34; // was 24
-        }
-        if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 54; // was 44
-        }
-        log.warning('what happened?');
-        break;
-      case Dynamic.pp:
-        if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 28; // was 20
-        }
-        if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 40; // was 32
-        }
-        if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 52; // was 44
-        }
-        log.warning('what happened?');
-        break;
-      case Dynamic.p:
-        if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 31; // was 25
-        }
-        if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 42; // was 36
-        }
-        if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 54; // was 48
-        }
-        log.warning('what happened?');
-        break;
-      case Dynamic.mp:
-        if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 28; // was 24
-        }
-        if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 38; // was 34
-        }
-        if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 54; // was 50 // was 44, james plays loud
-        }
-        log.warning('what happened?');
-        break;
-      case Dynamic.mf:
-        if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 18; // was 16
-        }
-        if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 28; // was 26
-        }
-        if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 52; // was 50 // was 36
-        }
-        log.warning('what happened?');
-        break;
-      case Dynamic.f:
-        if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 14; // was 12// was 8
-        }
-        if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 22; // was 20 // was 14
-        }
-        if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 36; // was 32, was 30 // was 18,24
-        }
-        log.warning('what happened?');
-        break;
-      case Dynamic.ff:
-        if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 5; // was 3 // was 1
-        }
-        if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 7; // was 5 // was 3
-        }
-        if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 16; // was 12, was 10 // was 5 clips?
-        }
-        log.warning('what happened?');
-        break;
-      case Dynamic.fff: // if fff is at 127 then these numbers will just get clipped:
-        if (note.articulation == NoteArticulation.tenuto) {
-          return note.velocity + 5; // was 3// was 1
-        }
-        if (note.articulation == NoteArticulation.accent) {
-          return note.velocity + 7; // was 5 // was 3
-        }
-        if (note.articulation == NoteArticulation.marcato) {
-          return note.velocity + 10; // was 8 // was 5, clips for sure, right?
-        }
-        log.warning('what happened?');
-        break;
+
+    switch (note.articulation) {
+      case NoteArticulation.tenuto:
+        return note.velocity + 16;
+      case NoteArticulation.accent:
+        return note.velocity + 32;
+      case NoteArticulation.marcato:
+        return note.velocity + 48;
       default:
-        log.warning('uh oh');
+        return note.velocity;
     }
-    return newVelocity;
+    // // Old way
+    // num newVelocity;
+    // switch (note.dynamic) {
+    //   case Dynamic.ppp:
+    //     if (note.articulation == NoteArticulation.tenuto) {
+    //       //return note.velocity + 24; // was 14
+    //       return note.velocity + 16; // new
+    //     }
+    //     if (note.articulation == NoteArticulation.accent) {
+    //       //return note.velocity + 34; // was 24
+    //       return note.velocity + 32; // new
+    //     }
+    //     if (note.articulation == NoteArticulation.marcato) {
+    //       //return note.velocity + 54; // was 44
+    //       return note.velocity + 48; // new
+    //     }
+    //     log.warning('what happened?');
+    //     break;
+    //   case Dynamic.pp:
+    //     if (note.articulation == NoteArticulation.tenuto) {
+    //       return note.velocity + 28; // was 20
+    //     }
+    //     if (note.articulation == NoteArticulation.accent) {
+    //       return note.velocity + 40; // was 32
+    //     }
+    //     if (note.articulation == NoteArticulation.marcato) {
+    //       return note.velocity + 52; // was 44
+    //     }
+    //     log.warning('what happened?');
+    //     break;
+    //   case Dynamic.p:
+    //     if (note.articulation == NoteArticulation.tenuto) {
+    //       return note.velocity + 31; // was 25
+    //     }
+    //     if (note.articulation == NoteArticulation.accent) {
+    //       return note.velocity + 42; // was 36
+    //     }
+    //     if (note.articulation == NoteArticulation.marcato) {
+    //       return note.velocity + 54; // was 48
+    //     }
+    //     log.warning('what happened?');
+    //     break;
+    //   case Dynamic.mp:
+    //     if (note.articulation == NoteArticulation.tenuto) {
+    //       return note.velocity + 28; // was 24
+    //     }
+    //     if (note.articulation == NoteArticulation.accent) {
+    //       return note.velocity + 38; // was 34
+    //     }
+    //     if (note.articulation == NoteArticulation.marcato) {
+    //       return note.velocity + 54; // was 50 // was 44, james plays loud
+    //     }
+    //     log.warning('what happened?');
+    //     break;
+    //   case Dynamic.mf:
+    //     if (note.articulation == NoteArticulation.tenuto) {
+    //       return note.velocity + 18; // was 16
+    //     }
+    //     if (note.articulation == NoteArticulation.accent) {
+    //       return note.velocity + 35; // was 28,26
+    //     }
+    //     if (note.articulation == NoteArticulation.marcato) {
+    //       return note.velocity + 52; // was 50 // was 36
+    //     }
+    //     log.warning('what happened?');
+    //     break;
+    //   case Dynamic.f:
+    //     if (note.articulation == NoteArticulation.tenuto) {
+    //       return note.velocity + 16; // was 14, 12, 8
+    //     }
+    //     if (note.articulation == NoteArticulation.accent) {
+    //       return note.velocity + 27; // was 22, 20, 14
+    //     }
+    //     if (note.articulation == NoteArticulation.marcato) {
+    //       return note.velocity + 38; // was 36, 32, 30, 18, 24
+    //     }
+    //     log.warning('what happened?');
+    //     break;
+    //   case Dynamic.ff:
+    //     if (note.articulation == NoteArticulation.tenuto) {
+    //       return note.velocity + 11; // was 5, 3 // was 1
+    //     }
+    //     if (note.articulation == NoteArticulation.accent) {
+    //       return note.velocity + 17; // was 7, 5 // was 3
+    //     }
+    //     if (note.articulation == NoteArticulation.marcato) {
+    //       return note.velocity + 22; // was 16, 12, was 10 // was 5 clips?
+    //     }
+    //     log.warning('what happened?');
+    //     break;
+    //   case Dynamic.fff: // if fff is at 127 then these numbers will just get clipped:
+    //     if (note.articulation == NoteArticulation.tenuto) {
+    //       return note.velocity + 5; // was 3// was 1
+    //     }
+    //     if (note.articulation == NoteArticulation.accent) {
+    //       return note.velocity + 7; // was 5 // was 3
+    //     }
+    //     if (note.articulation == NoteArticulation.marcato) {
+    //       //print('hey, dynamic is fff and note velocity is ${note.velocity} and marked as marcato, so adding 7.  Will clip?');
+    //       if (note.velocity + 10 > 127) {
+    //         print('Yes, this will clip because note.velocity will be ${note.velocity + 10}');
+    //       }
+    //       return note.velocity + 10; // was 8 // was 5, clips for sure, right?
+    //     }
+    //     log.warning('what happened?');
+    //     break;
+    //   default:
+    //     log.warning('uh oh');
+    // }
+    // return newVelocity;
   }
 
   ///

@@ -64,7 +64,8 @@ int dynamicToVelocity(Dynamic dynamic) {
     print('stop here, do we want to use a Dynamic.dd for a value to convert?');
   }
   // parabolic2
-  num newVelocity = (10 * 0.19 * (dynamic.index + 1) * (dynamic.index + 1)).round();
+  //num newVelocity = (10 * 0.19 * (dynamic.index + 1) * (dynamic.index + 1)).round();
+  num newVelocity = (10 * (dynamic.index + 1)).round();
   log.finest('\t\t\t\tdynamic $dynamic, with index ${dynamic.index} gets a velocity of ${newVelocity}');
   return newVelocity;
 

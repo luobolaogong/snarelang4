@@ -375,7 +375,7 @@ class Note {
 }
 
 ///
-/// ArticulationParser
+/// ArticulationParser  I think maybe articulation stuff should be in its own file.  Although this is parser, so maybe here.
 ///
 Parser articulationParser = (
     char('^') | // maybe change these to pattern('/^>-_')
