@@ -1,6 +1,8 @@
 #!/bin/
 echo "Hey is this BuildTunes.bash script still being used for something?  Maybe, maybe, maybe this one is more current."
-echo "Or should I be using ProcessThese.bash instead?"
+echo "I think this one is probably better for doing tunes in the way that I've set them up, such that there is a base name"
+echo "like DiuRegnare, and then there are the drums version DiuRegnareDrums and pipes version DiuRegnareChanter"
+echo "Maybe this is just a simplified version of the other, targeting tunes?"
 echo "And what about the processing of the pipes tunes?  And what about merging them?"
 echo "Obviously I've gone too long without reviewing this, and making it clear."
 # This bash script works in conjunction with a script that slaps chanter and drums together, I think.
@@ -176,6 +178,7 @@ bandTunesPipesAndDrums() {
 
 declare -a bandTunesPipesAndDrumsNameArray=(
 #  AmazingGraceSimple
+  DiuRegnare
   24MarchSet
   AmazingGrace
   BadgeOfScotland

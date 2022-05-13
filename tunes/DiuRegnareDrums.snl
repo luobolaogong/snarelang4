@@ -1,0 +1,376 @@
+/track snare
+/channel 5
+/time 6/8
+/tempo 74
+
+/ff
+8:5r 8t
+///////////////////////////  Experiment in 6/8 stuff.
+/////////////// For Diu Regnare the accents should all be off beat, not on beat
+////////////// And they play it very tight.  24th will have to suffice, but it's a bit tighter than that.
+
+
+4T 8 24:5T 24 >8F
+24:5T 24 >8F 4T 8
+24:5T 24 >8F 24:5T 24 >8F
+24T >24:5f 8T  24:5T 24 >8F
+
+/marker L2
+4T 8 24:5T 24 >8F
+24:5T 24 >8F 4t 8
+24:5T 24 >8F 24:5T 24 >8F
+8:3T 4 8
+
+/marker L1rpt
+4T 8 24:5T 24 >8F
+24:5T 24 >8F 4 8
+24:5T 24 >8F 24:5T 24 >8F
+24T >24:5f 8T  24:5T 24 >8F
+
+/marker L2rpt
+4T 8 24:5T 24 >8F
+24:5T 24 >8F 4 8
+24:5T 24 >8F 24:5T 24 >8F
+8:3T 4 8
+
+/marker L3
+4T 8 24:5T 24 >8F
+24:5T 24 >8F  24 >24:5f 8T
+24:5T 24 >8F  24:5T 24 >8F
+24T >24:5f 8T  24:5T 24 >8F
+
+/marker L4
+4T 8 24:5T 24 >8F
+24:5T 24 >8F  24 >24:5f 8T
+24:5T 24 >8F  24:5T 24 >8F
+8:3T 4 8
+
+/marker L3rpt
+4T 8 24:5T 24 >8F
+24:5T 24 >8F  24 >24:5f 8T
+24:5T 24 >8F  24:5T 24 >8F
+24T >24:5f 8T  24:5T 24 >8F
+
+/marker L2o2
+4T 8 24:5T 24 >8F
+24:5T 24 >8F 4 8
+24:5T 24 >8F 24:5T 24 >8F
+8:3T 4 8
+
+/marker L5
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24:5T 24 >8F
+24 >24:5f 8T  4 8
+
+/marker L6
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24:5T 24 >8F
+8:3T 4 8
+
+/marker L5rpt
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24:5T 24 >8F
+24T >24:5f 8T  4 8
+
+/marker L6rpt
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24:5T 24 >8F
+8:3T 4 8
+
+/marker L7
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24:5T 24 >8F
+24T >24:5f 8T 4 8
+
+/marker L8
+24:5T 24 >8F 24 >24:5f 8T
+24T >24:5f 8T  24 >24:5f 8T
+24:5T 24 >8F 24:5T 24 >8F
+8:3T 4 8
+
+/marker L7rpt
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24 >24:5f 8T
+24:5T 24 >8F 24:5T 24 >8F
+24T >24:5f 8T 4 8
+
+/marker L9
+24:5T 24 >8F 24 >24:5f 8T
+24T >24:5f 8T  4 8
+24:5T 24 >8F 24:5T 24 >8F
+8:3T 4 8r
+
+
+
+
+
+// Change the following to be in 6/8 timing
+//6T 12 6 12  6 12 6 12  // Best
+//20:3T 10 20:3 10  20:3  10 20:3 10 // not as good
+
+24:5T 24 8   24:5 24 8  24:5 24 8   24:5 24 8  // close
+24:5T 24 ^8F   24:5t 24 ^8f  24:5T 24 ^8F   24:5t 24 ^8f  // close
+
+24:5T 24 ^8F   24:5t 24 ^8f   24:5T 24 ^8F   24:5t 24 ^8f // If for Diu Regnare, this is real close, and based on 24ths, which is good
+24:5T 24 ^8F   24:5t 24 ^8f   24:5T 24 ^8F   24:5t 24 ^8f
+24T . . . . ^. ^8   24t . . . . ^. ^8   24T . . . . ^. ^8   24t . . . . ^. ^8
+24T . . . . ^. ^8   24t . . . . ^. ^8   24T . . . . ^. ^8   24t . . . . ^. ^8
+
+20:4T 20 ^8F   20:4t 20 ^8f   20:4T 20 ^8F   20:4t 20 ^8f   // This is closest to how he plays it, but based on 20th notes
+20:4T 20 ^8F   20:4t 20 ^8f   20:4T 20 ^8F   20:4t 20 ^8f   // This is closest to how he plays it, but based on 20th notes
+20T T t t ^T ^8t   20t t T T ^t ^8T   20T T t t ^T ^8t   20t t T T ^t ^8T
+20T T t t ^T ^8t   20t t T T ^t ^8T   20T T t t ^T ^8t   20t t T T ^t ^8T
+
+//10T 20 10   10 20 10   10 20 10   10 20 10 // not as good
+
+24T 24:5 8  24T 24:5 8  24T 24:5 8  24T 24:5 8  //best
+24T 24:5 ^8F  24t 24:5 ^8f  24T 24:5 ^8F  24t 24:5 ^8f  //best
+
+>20T >20:4t ^8F   >20t >20:4T ^8f   >20T >20:4t ^8F   >20t >20:4T ^8f   // based on 5's
+>20T >20:4t ^8F   >20t >20:4T ^8f   >20T >20:4t ^8F   >20t >20:4T ^8f
+
+24T t t T T >t ^8   24t T T t t >T ^8    24T t t T T >t ^8   24t T T t t >T ^8
+24T t t T T >t ^8   24t T T t t >T ^8    24T t t T T >t ^8   24t T T t t >T ^8
+>24T ^t T T t t ^8T   >24T ^t T T t t ^8T   >24T ^t T T t t ^8T   >24T ^t T T t t ^8T
+>24T ^t T T t t ^8T   >24T ^t T T t t ^8T   >24T ^t T T t t ^8T   >24T ^t T T t t ^8T
+
+_24T 12z . >24t ^8T   _24T 12z . >24t ^8T   _24T 12z . >24t ^8T   _24T 12z . >24t ^8T
+_24T 12z . >24t ^8T   _24T 12z . >24t ^8T   _24T 12z . >24t ^8T   _24T 12z . >24t ^8T
+
+//20T 10 10   20T 10 10   20T 10 10   20T 10 10 // ot as good
+
+4T 24Z . .  4T 24Z . .  4T 24Z . .  4T 24Z . .
+4T ^24Z ^. .  4T ^24Z ^. .  4T ^24Z ^. .  4T ^24Z ^. .
+
+//20:3T 20Z . .  20:3T 20Z . .  20:3T 20Z . .  20:3T 20Z . .
+//20:3T ^20Z ^. .  20:3T ^20Z ^. .  20:3T ^20Z ^. .  20:3T ^20Z ^. .
+
+//24:5T 24Z . .   24:5T 24Z . .   24:5T 24Z . .   24:5T 24Z . .
+//24:5T ^24Z >. .   24:5T ^24Z >. .   24:5T ^24Z >. .   24:5T ^24Z >. .
+
+//10T 20z . .  10T 20z . .  10T 20z . .  10T 20z . .
+//10T ^20z >. .  10T ^20z >. .  10T ^20z >. .  10T ^20z >. .
+
+
+24:5T 48Z . 8T    24:5T 48Z . 8T    24:5T 48Z . 8T    24:5T 48Z . 8T
+24:5T 48Z . ^8T    24:5T 48Z . ^8T    24:5T 48Z . ^8T    24:5T 48Z . ^8T
+
+10T 40Z . 10T   10T 40Z . 10T   10T 40Z . 10T   10T 40Z . 10T
+10T 40Z . ^10T   10T 40Z . ^10T   10T 40Z . ^10T   10T 40Z . ^10T
+
+8T 24Z . 8T   8T 24Z . 8T   8T 24Z . 8T   8T 24Z . 8T
+8T 24Z . ^8T   8T 24Z . ^8T   8T 24Z . ^8T   8T 24Z . ^8T
+
+20:3T 40Z . 20T   20:3T 40Z . 20T   20:3T 40Z . 20T   20:3T 40Z . 20T
+20:3T 40Z . ^20T   20:3T 40Z . ^20T   20:3T 40Z . ^20T   20:3T 40Z . ^20T
+
+16Z . 24T 8   16Z . 24T 8   16Z . 24T 8   16Z . 24T 8
+16Z . 24T ^8   16Z . 24T ^8   16Z . 24T ^8   16Z . 24T ^8
+
+20Z . 20T 10   20Z . 20T 10   20Z . 20T 10   20Z . 20T 10
+20Z . 20T ^10   20Z . 20T ^10   20Z . 20T ^10   20Z . 20T ^10
+
+24Z . . 24T 8   24Z . . 24T 8   24Z . . 24T 8   24Z . . 24T 8
+24Z . . 24T ^8   24Z . . 24T ^8   24Z . . 24T ^8   24Z . . 24T ^8
+
+20Z . . 20T 20   20Z . . 20T 20   20Z . . 20T 20   20Z . . 20T 20
+20Z . . 20T ^20   20Z . . 20T ^20   20Z . . 20T ^20   20Z . . 20T ^20
+
+
+
+
+
+// Looks like the rest of this was written in 4/4 rather than 6/8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/tempo 49
+
+8T 24 12   8 24 12  8 24 12   8 24 12  // close
+8T 24 ^12F   8t 24 ^12f  8T 24 ^12F   8t 24 ^12f  // close
+
+36:5T 36 ^12F   36:5t 36 ^12f   36:5T 36 ^12F   36:5t 36 ^12f // If for Diu Regnare, this is real close, and based on 36ths, which is good
+36:5T 36 ^12F   36:5t 36 ^12f   36:5T 36 ^12F   36:5t 36 ^12f
+36T . . . . ^. ^12   36t . . . . ^. ^12   36T . . . . ^. ^12   36t . . . . ^. ^12
+36T . . . . ^. ^12   36t . . . . ^. ^12   36T . . . . ^. ^12   36t . . . . ^. ^12
+
+30:4T 30 ^12F   30:4t 30 ^12f   30:4T 30 ^12F   30:4t 30 ^12f   // This is closest to how he plays it, but based on 30th notes
+30:4T 30 ^12F   30:4t 30 ^12f   30:4T 30 ^12F   30:4t 30 ^12f   // This is closest to how he plays it, but based on 30th notes
+30T T t t ^T ^12t   30t t T T ^t ^12T   30T T t t ^T ^12t   30t t T T ^t ^12T
+30T T t t ^T ^12t   30t t T T ^t ^12T   30T T t t ^T ^12t   30t t T T ^t ^12T
+
+//10T 20 10   10 20 10   10 20 10   10 20 10 // not as good
+
+24T 8 12  24T 8 12  24T 8 12  24T 8 12  //best
+24T 8 ^12F  24t 8 ^12f  24T 8 ^12F  24t 8 ^12f  //best
+
+>30T >30:4t ^12F   >30t >30:4T ^12f   >30T >30:4t ^12F   >30t >30:4T ^12f
+>30T >30:4t ^12F   >30t >30:4T ^12f   >30T >30:4t ^12F   >30t >30:4T ^12f
+
+36T t t T T >t ^12   36t T T t t >T ^12    36T t t T T >t ^12   36t T T t t >T ^12
+36T t t T T >t ^12   36t T T t t >T ^12    36T t t T T >t ^12   36t T T t t >T ^12
+>36T ^t T T t t ^12T   >36T ^t T T t t ^12T   >36T ^t T T t t ^12T   >36T ^t T T t t ^12T
+>36T ^t T T t t ^12T   >36T ^t T T t t ^12T   >36T ^t T T t t ^12T   >36T ^t T T t t ^12T
+
+_36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T
+_36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T
+
+//20T 10 10   20T 10 10   20T 10 10   20T 10 10 // ot as good
+
+6T 36Z . .  6T 36Z . .  6T 36Z . .  6T 36Z . .
+6T ^36Z ^. .  6T ^36Z ^. .  6T ^36Z ^. .  6T ^36Z ^. .
+
+20:3T 30Z . .  20:3T 30Z . .  20:3T 30Z . .  20:3T 30Z . .
+20:3T ^30Z ^. .  20:3T ^30Z ^. .  20:3T ^30Z ^. .  20:3T ^30Z ^. .
+
+8T 24Z . .   8T 24Z . .   8T 24Z . .   8T 24Z . .
+8T ^24Z >. .   8T ^24Z >. .   8T ^24Z >. .   8T ^24Z >. .
+
+10T 20z . .  10T 20z . .  10T 20z . .  10T 20z . .
+10T ^20z >. .  10T ^20z >. .  10T ^20z >. .  10T ^20z >. .
+
+
+8T 48Z . 12T    8T 48Z . 12T    8T 48Z . 12T    8T 48Z . 12T
+8T 48Z . ^12T    8T 48Z . ^12T    8T 48Z . ^12T    8T 48Z . ^12T
+
+10T 40Z . 10T   10T 40Z . 10T   10T 40Z . 10T   10T 40Z . 10T
+10T 40Z . ^10T   10T 40Z . ^10T   10T 40Z . ^10T   10T 40Z . ^10T
+
+12T 24Z . 12T   12T 24Z . 12T   12T 24Z . 12T   12T 24Z . 12T
+12T 24Z . ^12T   12T 24Z . ^12T   12T 24Z . ^12T   12T 24Z . ^12T
+
+20:3T 40Z . 20T   20:3T 40Z . 20T   20:3T 40Z . 20T   20:3T 40Z . 20T
+20:3T 40Z . ^20T   20:3T 40Z . ^20T   20:3T 40Z . ^20T   20:3T 40Z . ^20T
+
+16Z . 24T 12   16Z . 24T 12   16Z . 24T 12   16Z . 24T 12
+16Z . 24T ^12   16Z . 24T ^12   16Z . 24T ^12   16Z . 24T ^12
+
+20Z . 20T 10   20Z . 20T 10   20Z . 20T 10   20Z . 20T 10
+20Z . 20T ^10   20Z . 20T ^10   20Z . 20T ^10   20Z . 20T ^10
+
+24Z . . 24T 12   24Z . . 24T 12   24Z . . 24T 12   24Z . . 24T 12
+24Z . . 24T ^12   24Z . . 24T ^12   24Z . . 24T ^12   24Z . . 24T ^12
+
+20Z . . 20T 20   20Z . . 20T 20   20Z . . 20T 20   20Z . . 20T 20
+20Z . . 20T ^20   20Z . . 20T ^20   20Z . . 20T ^20   20Z . . 20T ^20
+
+
+
+
