@@ -1,0 +1,470 @@
+// Reel Set Drums
+// tune type: straight reel
+
+/time 4/4
+/tempo 136
+
+
+/track met
+/channel 0
+// Sync:
+
+
+/ff
+_4M _. _8M . _4M
+/mf
+// 8 bars of intro
+//^4M . . .  ^. . . .   ^. . . .   ^. . . .
+//^4M . . .  ^. . . .   ^. . . .   ^. . . .
+
+// Each of the 3 tunes has 16 bars
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+>4M . . .  _. . . .  _. . . .  _. . . .
+
+
+
+
+/track snare
+/channel 1
+
+///time 4/4
+///tempo 136
+
+//// sync
+1r
+//// "pipes and drums, One Two" or "By the right, quick march"
+///ff
+///marker P&D 1,2
+//32:3T 32t 8F 4r ^4F ^.
+//// Roll-off
+///ff /< 24Z . . . . .    . . . . . .   2T /fff
+///ff /< 24Z . . . . .    . . . . . .   2T /fff
+
+// Drum Intro, 8 bars, same as Forrest Lodge
+//marker Intro
+//_8T . ^8F 8t _8T ^8f 8T .
+//_8T . ^8F 8t _8T ^8f 8T .
+//_8T . ^8F 8t _8T ^8f 8T .
+//_8T . ^8F 8t _8T ^8f 8T .
+
+//marker IntroRpt
+//_8T . ^8F 8t _8T ^8f 8T .
+//_8T . ^8F 8t _8T ^8f 8T .
+//_8T . ^8F 8t _8T ^8f 8T .
+//_8T . ^8F 8t _8T ^8f 8T .
+
+
+/ff
+
+
+// Malt on the Optics
+// Marker L1
+8T . >F t . >f T .
+8T . >F t . >f T .
+8T . >F t . >f T .
+8T . >F t . >f T .
+
+// Marker L1Rpt
+8T . >16F T 8t . >16f f 8T .
+8T . >16F T 8t . >16f f 8T .
+8T . >16F T 8t . >16f f 8T .
+8T . >16F T 8t . >16f f 8T .
+
+
+// Marker L2
+8T . >16F T t t 8t >16f f T . 8t
+8T . >16F T t t 8t >16f f T . 8t
+8T . >16F T t t 8t >16f f T . 8t
+8T . >16F T t t 8t >16f f T . 8t
+
+
+// Marker L2Rpt
+16T . 8t >16F T t t 8t >16f f T . 8t
+16T . 8t >16F T t t 8t >16f f T . 8t
+16T . 8t >16F T t t 8t >16f f T . 8t
+16T . 8t >16F T t t 8t >16f f T . 8t
+
+
+
+
+// Forest Lodge
+
+// Marker L1
+8T t F 24T t t    8T f F 24T t t
+8T f F t          24T t t 8T   24t T T 8t
+8F t F 24T t t    8T f F 24T t t
+8T f F t          24T t t 8t 4T    // ?
+
+// Marker L1
+
+// Marker L1Rpt
+8T f F 24T t t    24T T t 8t F 24T t t
+24T T t 8T f t   >24T t t 8T  >24t T T 8t
+8T f F 24T t t   T T t 8t F 24T t t
+24T T t 8T   24t t T 8t    8f . 4T
+
+
+
+
+// Marker L2
+16T . . . 8T f >16T . 8T f >16T .
+8T f >16T . 8T >16T . 8T >16T . 8T
+16T . . . 8T f >16T . 8T f >16T .
+8T f >16T . 8T 16T . . . 4T
+
+
+// Marker L3
+>24T t t T T t  8T f >24T t t 8T f >24T t t
+8T f >24T t t 8T >24t T T 8t >24T . . 8T
+24T t t T T t   8T f >24T t t 8T f >24T t t
+8T f >24T t t 8T 24T t t T T t 4T
+
+//16Z . . . 8T f >16Z . 8T f >16Z .
+//8T f >16Z . 8T >16z . 8t >16Z . 8T
+//16Z . . . 8T f >16Z . 8T f >16Z .
+//8T f >16Z . 8T 16Z . . . 4T
+
+
+
+
+// Primrose Girl
+// Marker L1
+4T 4r ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T 8f 16t   16T 8f 16t   8T f    4F
+4T 4r ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T 8f 16t  16T 8f 16t 8T f 4T
+
+// Marker L1Rpt
+4T 4r ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T 8f 16t   16T 8f 16t   8T f    4F
+4T 4r ^16Z 16r  ^16Z 16r  ^16Z 16r 8r
+16T 8f 16t  16T 8f 16t 8T f 4T
+
+// Marker L2
+^24T t t 8T  ^24t T T 8t  ^24T t t 8T  ^24t T T 8t
+24T t t ^8T  24t T T ^8t  24T t t ^8T  24t T T ^8t
+^24T t t 8T  ^24t T T 8t  ^24T t t 8T  ^24t T T 8t
+24T t t ^8T  24t T T ^8t  24T t t ^8T  24t T T ^8t
+
+
+
+// Marker L3
+>8F . >. . >. . >. .
+>12T 24T  12t 24t  >12T 24T  12t 24t  >12T 24T  12t 24t  >12T 24T  12t 24t
+>8F . >. . >. . >. .
+>12T 24T  12t 24t  >12T 24T  12t 24t  >12T 24T  12t 24t  >4T
+
+
+
+
+
+
+
+
+
+// Stuff that was eliminated
+
+//24T . . 8t 8T f 24T . . 8T f 24T . .
+//8T f 24T . . 8T 24T . . 8T 24T . . 8T
+//24T . . 8t 8T f 24T . . 8T f 24T . .
+//8T f 24T . . 8T 24T . . . . . 4T
+
+
+
+//8T . >8F 16t t T T >8t >8F t
+//8T >16f t 8T .   >16F t 8t >f
+//8T . >8F 16t t T T >8t >8F t
+//8T >16f t 8T .   16Z . . . 4T
+
+//8T . . >16f .    8T . >16F . 8t     . >16f . 8T .     >16F .  8t .   >16f .
+//8T . >16F . 8t   . >16f . 8T .   >16F . 8t . >16f .   4T  >4F
+
+//16Z . . . 8T f >16Z . 8T f >16Z .
+//8T f >16Z . 8T >16Z . 8T >16Z . 8T
+//16Z . . . 8T f >16Z . 8T f >16Z .
+//8T f >16Z . 8T 16Z . . . 4T
+
+
+//8T . >F t T t >T t
+//8T >f T .   >F t t >f
+//8T . >F t T t >T t
+//8T >f T .   16T . . . 4T
+
+//8T . >8F 16t t T T >8t >8F t
+//8T >16f t 8T .   16Z . . . 4T
+
+//8T . . >f   T . >F t   . >f T .     >F t .   >f
+//8T . >F t   . >f T .   >F t . >4f   T  . >4F
+
+
+//4F 8f >16Z . 8T 8f >16Z . 8T
+//8f >16Z . 8T 8f >16Z . 8T >16z . 8t
+//4F 8f >16Z . 8T 8f >16Z . 8T
+//8f >16Z . 8T 8f 16Z . . . 4T
+
+//4F 8f >16Z . 8T 8f >16Z . 8T
+//8f >16Z . 8T 8f >16Z . 8T >16z . 8t
+//4F 8f >16Z . 8T 8f >16Z . 8T
+//8f >16Z . 8T 8f 16Z . . . 4T
+
+
+//8T T >8f 24T t t 8T >8f 24T t t 8T
+//8T T >8f 24T t t 8T >8f 24T t t 8T
+//8T T >8f 24T t t 8T >8f 24T t t 8T
+//>8f 24T t t >8T 24t T T 8t 8F 4f
+
+//8T T >8f 24T t t 8T >8f 24T t t 8T
+//8T T >8f 24T t t 8T >8f 24T t t 8T
+//8T T >8f 24T t t 8T >8f 24T t t 8T
+//>8f 24T t t >8T 24t T T 8t 8F 4f
+
+//8F . 8F 24t T T 8t 8F 8f 24T t t
+//8T 8f 8F 24t T T 8t 24T t t 8T 8f
+//8T . 8T 24t T T 8t 8F 8f 24T t t
+//8T 24t T T 8t 24T t t 8T 8f 4F
+
+//8F . 8F 24t T T 8t 8F 8f 24T t t
+//8T 8f 8F 24t T T 8t 24T t t 8T 8f
+//8T . 8T 24t T T 8t 8F 8f 24T t t
+//8T 24t T T 8t 24T t t 8T 8f 4F
+
+
+//24T . . 8t 8T f 24T . . 8T f 24T . .
+//8T f 24T . . 8T 24T . . 8T 24T . . 8T
+//24T . . 8t 8T f 24T . . 8T f 24T . .
+//8T f 24T . . 8T 24T . . . . . 4T
+
+
+//^24T t t 8T  ^24t T T 8t  ^24T t t 8T  ^24t T T 8t
+//12T 24T  12t 24t  12T 24T  12t 24t  12T 24T  12t 24t  12T 24T  12t 24t
+//^24T t t 8T  ^24t T T 8t  ^24T t t 8T  ^24t T T 8t
+//12T 24T  12t 24t  12T 24T  12t 24t  12T 24T  12t 24t  4T
+
+//16T 32t t >16T  16t 32T T >16t  16T 32t t >16T  16t 32T T >16t
+//32T . T T   >t . t t   32T . T T   >t . t t   32T . T T   >t . t t   32T . T T   >t . t t
+//16T 32t t >16T  16t 32T T >16t  16T 32t t >16T  16t 32T T >16t
+//>32T . T T   >t . t t    >32T . T T   >t . t t    >32T . T T   >t . t t    >32T . T T   >t . t t
+
+
+
+
+
+
+
+
+
+////////// Tenor /////////////////////////
+/track tenor
+/channel 3
+
+// Sync:
+
+4r . . .
+/f
+
+
+// 8 bars of intro
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N . . .
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N 8n 4n
+//4N . 8N . . .
+
+// Malt on the Optics
+// Marker L1
+4N . 8N 8n 4n
+4N . 8N 8n 4n
+4N . 8N 8n 4n
+4N . 8N . . .
+
+// Marker L1Rpt
+4N . 8N 8n 4n
+4N . 8N 8n 4n
+4N . 8N 8n 4n
+4N . 8N . . .
+
+// Marker L2
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+// Marker L2Rpt
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+8N . 4N 8n . 4n
+4N . 8N . . .
+
+
+// Forest Lodge
+// Marker L1
+4N . 8N . 4N
+8N . 4N . .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L1Rpt
+4N . 8N . 4N
+8N . 4N . .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L2
+4N . 8N . 4N
+8N . . . 4N .
+4N . 8N . 4N
+8N . . . 4N .
+
+// Marker L3
+4N . 8N . 4N
+8N . . . 4N .
+4N . . .
+8N . . . 4N .
+
+// Primrose Girl
+// Marker L1
+4r . 8N . 4N
+4N . 8N . 4N
+4r . 8N . 4N
+4N . 8N . 4N
+
+
+// Marker L1Rpt
+4r . 8N . 4N
+4N . 8N . 4N
+4r . 8N . 4N
+4N . 8N . 4N
+
+// Marker L2
+4N . . .
+8N . . . 4N .
+4N . . .
+8N . . . 4N .
+
+// Marker L3
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . . .
+8N . . . . . 4N
+
+
+
+
+
+
+
+////////// Bass /////////////////////////
+/track bass
+/channel 7
+
+// Sync:
+
+4r . . .
+/mf
+
+
+// 8 bars of intro
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4r
+//4B 4r 4B 4b
+
+/mf
+// Malt on the Optics
+// L1
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L1Rpt
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L2
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L2Rpt
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// Forest Lodge
+// L1
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L1Rpt
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L2
+4B . 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B 4b
+
+// L3
+4B 4r 4B 4r
+4B 4r 4B 4b
+4B 4r 4B 4r
+4B 4r 4B .
+
+// Primrose Girl
+// L1
+4r . 8B . 4B
+4B . . .
+4r . 8B . 4B
+4B . . .
+
+
+// L1Rpt
+4r . 8B . 4B
+4B . . .
+4r . 8B . 4B
+4B . . .
+
+// L2
+4B . . .
+4B . . .
+4B . . .
+4B . . .
+
+// L3
+4B . . .
+4B . . .
+4B . . .
+8B . . . . . 16B 16:3r
+
+
+

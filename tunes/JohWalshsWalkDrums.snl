@@ -1,0 +1,164 @@
+// John Walsh's Walk
+// Hornpipe
+// http://trillian.mit.edu/~jc/music/abc/mirror/corneymusers/John_Walshs_Walk_2.abc
+// http://thecaptainscorner.com/images/pics/John.JPG
+// https://www.youtube.com/watch?v=dxmITiQysOI
+// J. Reid Maxwell
+
+// --input=tunes/JohnWalshsWalkSnare.snl,tunes/AnnettesChatterSnare.snl,tunes/JimmyRolloSnare.snl,tunes/JaneCampbellSnare.snl,tunes/JohnWalshsWalkMet.snl,tunes/AnnettesChatterMet.snl,tunes/JimmyRolloMet.snl -o midifiles/Maxwell.mid -l INFO -t -25
+
+
+/marker John Walsh's Walk
+
+
+/track met
+/channel 4
+/time 2/4   // maybe 4/4?
+/tempo 98 // 97-98 on recording
+
+// Roll off
+4M . . .    . . . .
+// Part 1
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+
+// Part 2
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+
+// Part 3
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+
+// Part 4
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+4M . . .    . . . .
+
+
+/track snare
+/channel 5
+//time 2/4   // maybe 4/4?
+//tempo 98 // 98 on recording
+
+
+
+//marker Roll off
+/mf /cresc 24Z . . . . . . . . . . . >2T /fff
+/mf /cresc 24Z . . . . . . . . . . . >2T /fff
+
+/mf
+
+/marker Part 1
+// Line 1
+24Z . _24T _8t 12V >30t . . . >30t
+^8T 24Z . .  12t 24t _12F 24t
+12T >24f 12T 24t 12T 30D 30T . . .
+^16T 32t 32t 32T . . .   ^48T 48:3z 24t  32t . . ^32t
+
+/marker Line 2
+^12T 24T ^8F 12v ^30t  30T . . _30t
+^40T 20z . 12t >24F 12t >24f 12T 24t
+^12F 48t 48t 24T . .  12t >24F 12t ^24f
+>40T 20z . _12t 24T   24z . . _12T 24t
+
+/marker Repeat Line 1
+24Z . _24T _8t 12V >30t . . . >30t
+^8T 24Z . .  12t 24t _12F 24t
+12T >24f 12T 24t 12T 30D 30T . . .
+^16T 32t 32t 32T . . .   ^48T 48:3z 24t  32t . . ^32t
+
+// Repeat Line 2
+^12T 24T ^8F 12v ^30t  30T . . _30t
+^40T 20z . 12t >24F 12t >24f 12T 24t
+^12F 48t 48t 24T . .  12t >24F 12t ^24f
+>40T 20z . _12t 24T   24z . . _12T 24t
+
+/marker Part 2
+// Line 3
+12T _24f _40T 20z . 12t _24f 12T _24f
+_40T 20z .  40t 20Z >20t   32t . . >32t  ^16T  32t 32t
+32T . . . ^8T 12V ^30t . . . ^30t
+32T . . ^32t  ^12T   48Z . 12t  ^24t 32T . . >32t
+
+// Line4, (first ending)
+12T 24t _40T 20z 20z  12t _24f 12T _24F
+>40t 20z .  32t . . >32t  32t . . >32t  32t . . >32t
+^12F 48t 48t 24T . .  12t >24F 12t 24f
+>40T 20z . >12t 24T   24z . . _12T 24t
+
+// Repeat Line 3
+12T _24f _40T 20z . 12t _24f 12T _24f
+_40T 20z .  40t 20Z >20t   32t . . >32t  ^16T  32t 32t
+32T . . . ^8T 12V ^30t . . . ^30t
+32T . . ^32t  ^12T   48Z . 12t  ^24t 32T . . >32t
+
+// Line 5, (second ending, almost line 2)
+>12T 24T >8F 12v >30F  30T . . .
+^40T 20z . 12t >24F 12t ^24f 12T 24t
+^12F 48t 48t 24T . .  12t >24F 12t 24f
+>40T 20z . >12t 24T   24z . . _12T 24t
+
+
+/marker Part 3
+// Line 6
+32T . . _32t  12T _24f  12T >24F 12t _24f
+//>12T 72t 72T 72T 12t >30t . . . >30t >12T 48t 48t
+>8T 12v >30t . . . >30t >12T 48t 48t
+32T . . _32t  >12T _24f  12T 30F 30T . . .
+>32T . . . _16T 32T . . .  >16D 32T . . .
+
+// Line 7
+32T . . >32t ^12T 24F  12T  >24F  12t >24f
+// >12T 72t 72T 72T 12t ^30t . . . >30t >12T 24t
+>8T 12v ^30t . . . >30t >12T 24t
+^12F 48t 48t 24T . .  12t >24F 12t 24f
+>40T 20z . _12t 24T   24z . . _12T 24t
+
+// Repeat Line 6
+32T . . _32t  12T _24f  12T >24F 12t _24f
+>8T 12v >30t . . . >30t >12T 48t 48t
+32T . . _32t  >12T _24f  12T 30F 30T . . .
+>32T . . . _16T 32T . . .  >16D 32T . . .
+
+// Repeat Line 7
+32T . . >32t ^12T 24F  12T  >24F  12t >24f
+>8T 12v ^30t . . . >30t >12T 24t
+^12F 48t 48t 24T . .  12t >24F 12t 24f
+>40T 20z . _12t 24T   24z . . _12T 24t
+
+
+
+/marker Part 4
+// Line 8
+24Z . _40T 20z . >30t . . . _30T >40T 20z 20t
+32T . . >32t      >40T 20z 20T    >36t 18z     >30t . . . >30t
+^12T 24t 12T _30D 30T . . .  >12T 24t
+^40T 20z . 32z . >32T . . . . >30t >40T 20z .
+
+// Line 9
+>12T 24t 12F 24t 12T >30F 30t . . .
+>16T 32T . . . _16D 32T . . _32t >12T 24t
+^12F 48t 48t 24T . . 12t ^24F 12t ^24F
+^40T 20z . 12t 24T   24z . . 12t 24t
+
+// Repeat Line 8
+24Z . _40T 20z . >30t . . . _30T >40T 20z 20t
+32T . . >32t      >40T 20z 20T    >36t 18z     >30t . . . >30t
+^12T 24t 12T _30D 30T . . .  >12T 24t
+^40T 20z . 32z . >32T . . . . >30t >40T 20z .
+
+
+// Line 10
+12T 24t 24F 24T >24t  ^12T 24t 24F 24T _24t
+32T . .     >32t . . 32t     >32T . . 32T   >32t   ^12T 24t
+^12F 48t 48t 24T . . 12t 24F 12t 24f
+_40T 20z .  12t 24T >4f
+

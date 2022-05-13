@@ -1,0 +1,22 @@
+// Jane Campbell
+// Strathspey
+// Part 5 of 6 tunes for snare solo with piper
+// https://pipetunes.ca/tunes/jane-campbell/
+// J. Reid Maxwell
+
+/marker Jane Campbell
+/track snare
+/time 4/4
+/tempo 102 // 102 on recording
+
+
+// Line 1
+16F 16t 16F >16f   16T 16f >16F 16t    16F >16t 16T 16f    16T 16f 32T . . .
+16T >16f 16T >16f  32T . . . 16T 32Z .   16T >16t . .    24T 24z . 24t . .    // fix the tuzz
+
+// Line 2
+16F 16t 16F >16f   16T 16f >16F 16t   16F >16t 16T 16f   16T 16f 32T . . .
+>16T 16z . .       16T 16f 16T 16f    >24T 24z .    >24t 24Z .    8T 16T .
+
+// Line 3
+>16F

@@ -1,0 +1,81 @@
+// "Strathspey" as played by the band on Oahu.
+// I'm basing this version on 20th notes, not 16ths.  It matches the handorder and the feel better.
+// I temporarily changed all "40Z ." to "40Z 40Z", because the short left buzz sucks in my sound font.
+// Fix it later.  Need different recordings for short buzzes from long ones.
+
+/track snare5
+/channel 5
+/time 4/4
+/tempo 100    // not sure
+/ff
+1r
+
+/marker L1
+^5F 40Z 40Z   5T 20t   20Z . . . 20T  5t 20t
+^5F 40Z 40Z   5T 20t   20Z . . . 20t  12T . .
+
+/marker L2
+^5F 40Z 40Z   5T 20t   20Z . . . 20T  5t 20t
+20Z . . . 20T 12t . ^.   . . ^.  4t
+
+/marker L1rpt
+^5F 40Z 40Z   5T 20t   20Z . . . 20T  5t 20t
+^5F 40Z 40Z   5T 20t   20Z . . . 20t  12T . .
+
+/marker L2rpt
+^5F 40Z 40Z   5T 20t   20Z . . . 20T  5t 20t
+20Z . . . 20T 12t . ^.   . . ^.  6t 12t
+
+/marker L3
+^4D  20t 20Z . . .  5t 20T  5f  40Z 40Z
+4T  5t 20F  12t . .  5F 20t
+
+/marker L4
+^5F 40Z 40Z   5T 20t   20Z . . . 20t  5T 20t
+20Z . . . 20T 12t . ^.   . . ^.  6t 12t
+
+/marker L3rpt
+^4D  20t 20Z . . .  5t 20T  5f  40Z 40Z
+4T  5t 20F  12t . .  5F 20t
+
+/marker L4rpt
+^5F 40Z 40Z   5T 20t   20Z . . . 20t  5T 20t
+20Z . . . 20T 12t . ^.   . . ^.  4t
+
+
+
+
+
+
+
+/track met
+/channel 0
+/time 4/4
+/tempo 100
+
+/mf
+4M . 12M . . 4M
+
+/mp
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+4M . . .
+4M . . .
+4M . . .
+4M . . .
+
+
