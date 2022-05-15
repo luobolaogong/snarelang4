@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Changed note velocity calculations&#10;for initial and when applying&#10;articulations.">
-      <change afterPath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Drive failing.  Gotta checkin everything.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/BuildTunes.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BuildTunes.bash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -527,7 +526,6 @@
       <item itemvalue="Dart Command Line App.8s" />
       <item itemvalue="Dart Command Line App.AmazingGraceDrums" />
       <item itemvalue="Dart Command Line App.BanjoBreakdown" />
-      <item itemvalue="Dart Command Line App.Boneshaker" />
       <item itemvalue="Dart Command Line App.BarrenRocks" />
       <item itemvalue="Dart Command Line App.BattleOfWaterloo" />
       <item itemvalue="Dart Command Line App.BattleWaterMcWhirter" />
@@ -535,6 +533,7 @@
       <item itemvalue="Dart Command Line App.BlackBearIntro" />
       <item itemvalue="Dart Command Line App.BlackBear" />
       <item itemvalue="Dart Command Line App.BluecoatsWarmupsForYoungSnares" />
+      <item itemvalue="Dart Command Line App.Boneshaker" />
       <item itemvalue="Dart Command Line App.BrownHairedMaiden" />
       <item itemvalue="Dart Command Line App.Cameronian5Snares" />
       <item itemvalue="Dart Command Line App.Cameronian9Snares" />
@@ -545,6 +544,7 @@
       <item itemvalue="Dart Command Line App.Comp44Set" />
       <item itemvalue="Dart Command Line App.DotCut" />
       <item itemvalue="Dart Command Line App.DrumSaluteMaui" />
+      <item itemvalue="Dart Command Line App.ExerciseSets" />
       <item itemvalue="Dart Command Line App.Experiments" />
       <item itemvalue="Dart Command Line App.FindBug" />
       <item itemvalue="Dart Command Line App.FlettFromFlottaDrums" />
@@ -567,6 +567,7 @@
       <item itemvalue="Dart Command Line App.MsBnd44JL" />
       <item itemvalue="Dart Command Line App.MssdBnds34JL" />
       <item itemvalue="Dart Command Line App.MurdosWeddingDrums" />
+      <item itemvalue="Dart Command Line App.NoteDynamicsTest" />
       <item itemvalue="Dart Command Line App.PipesAndDrums" />
       <item itemvalue="Dart Command Line App.Rant2BarPhrases" />
       <item itemvalue="Dart Command Line App.Rant2BarRepeats" />
@@ -597,8 +598,6 @@
       <item itemvalue="Dart Command Line App.WarmUpsSet2" />
       <item itemvalue="Dart Command Line App.WarmUpsSet3" />
       <item itemvalue="Dart Command Line App.WarmUpsSets20220227" />
-      <item itemvalue="Dart Command Line App.ExerciseSets" />
-      <item itemvalue="Dart Command Line App.NoteDynamicsTest" />
       <item itemvalue="Dart Command Line App.WarmupReel" />
       <item itemvalue="Dart Test.SnareLang4Test" />
       <item itemvalue="Shell Script.BuildTunes" />
@@ -931,20 +930,12 @@
       <workItem from="1651270640202" duration="10880000" />
       <workItem from="1651708526887" duration="13543000" />
       <workItem from="1652134900000" duration="9488000" />
-    </task>
-    <task id="LOCAL-00077" summary="Minor cleanup of old files and commented-out code.">
-      <created>1609977108493</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1609977108494</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Just a kinda time stamp on files.  Not really doing anything &#10;as planned.">
-      <created>1613527800147</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1613527800148</updated>
+      <workItem from="1652472269866" duration="3473000" />
+      <workItem from="1652483104306" duration="1829000" />
+      <workItem from="1652486203861" duration="54000" />
+      <workItem from="1652487577930" duration="23000" />
+      <workItem from="1652488218935" duration="13000" />
+      <workItem from="1652488563247" duration="10395000" />
     </task>
     <task id="LOCAL-00079" summary="Mostly worked on the TapRolls thing.">
       <created>1613695335114</created>
@@ -1275,7 +1266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651737599447</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Drive failing.  Gotta checkin everything.">
+      <created>1652472381668</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1652472381669</updated>
+    </task>
+    <task id="LOCAL-00127" summary="Drive failing.  Gotta checkin everything.">
+      <created>1652472524098</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1652472524098</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1294,7 +1299,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mostly just updating tunes for new storage area." />
     <MESSAGE value="A few new tunes." />
     <MESSAGE value="What the crap, so many changes." />
     <MESSAGE value="Tried incorporating changes due to practice." />
@@ -1319,7 +1323,8 @@
     <MESSAGE value="Added a few new ones.  6/8 time stuff." />
     <MESSAGE value="Removed 6/8 stuff for now." />
     <MESSAGE value="Changed note velocity calculations&#10;for initial and when applying&#10;articulations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed note velocity calculations&#10;for initial and when applying&#10;articulations." />
+    <MESSAGE value="Drive failing.  Gotta checkin everything." />
+    <option name="LAST_COMMIT_MESSAGE" value="Drive failing.  Gotta checkin everything." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2083" y="677" width="1320" height="804" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651734718040">
@@ -1330,10 +1335,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2357" y="836" width="525" height="408" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1644213811391" />
-    <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl" timestamp="1644256580683">
+    <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl" timestamp="1652486106598">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1644256580683" />
+    <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1652486106598" />
     <state width="3516" height="371" key="GridCell.Tab.0.bottom" timestamp="1651817442268">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -1366,10 +1371,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="2429" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442264" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1651737615832">
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652472535483">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1651737615832" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652472535483" />
     <state x="1410" y="1775" width="1084" height="345" key="dock-window-1" timestamp="1651713366484">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
