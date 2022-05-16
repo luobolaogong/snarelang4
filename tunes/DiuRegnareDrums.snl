@@ -1,16 +1,262 @@
+// Diu Regnare -- quick memorize and simple play, because we didn't prepare before now
 /track snare
 /channel 5
 /time 6/8
 //tempo 74
 /tempo 68
 
-/ff
-8:5r 8t
 ///////////////////////////  Experiment in 6/8 stuff.
 /////////////// For Diu Regnare the accents should all be off beat, not on beat
 ////////////// And they play it very tight.  24th will have to suffice, but it's a bit tighter than that.
 
+// The new drummers may possibly only play this:
+/mp
+/marker P1
+8:5r 8r
 
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+8T 16Z . 8T  >4t 8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+8T 16Z . 8T  >4t 8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+8T 16Z . 8T  >4t 8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+8T 16Z . 8T  >4t 8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+8T 16Z . 8T  >4t 8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+8T 16Z . 8T  >4t 8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+8T 16Z . 8T  >4t 8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+
+4T >8T  4t >8t
+4T >8T  4t >8t
+4T >8T  4t >8t
+8T 16Z . 8T  >4t 8t
+
+
+
+
+// The medium snares play this:
+
+/track snare
+/channel 6
+
+/ff
+/marker P1
+8:5r 8t
+
+/marker L1
+/mp /< 16Z . . . >8T /ffd /dd  >24:5f 24t >8T
+24:5t 24T >8f  /mp /< 16Z . . . >8T /ffd /dd
+/mp /< 96:5Z . . . _24T >8t /fff /mp /<  96:5Z . . . _24T >8t /fff /dd
+//4r 8t  96:5Z . . . _24T >8t
+/mp /< 16Z . . . 8t /fff /mp  96:5Z . . . _24T >8t
+
+/marker L2
+16Z . . . >8T   >24:5f 24t >8T
+24:5t 24T >8f  16Z . . . >8T
+96:5Z . . . _24T >8t  96:5Z . . . _24T >8t
+8F 16Z . 8t  >4F 8t
+
+
+/marker L1Rpt
+16Z . . . >8T   >24:5f 24t >8T
+24:5t 24T >8f  16Z . . . >8T
+96:5Z . . . _24T >8t  96:5Z . . . _24T >8t
+4r 8t  96:5Z . . . _24T >8t
+
+/marker L2Rpt
+16Z . . . >8T   >24:5f 24t >8T
+24:5t 24T >8f  16Z . . . >8T
+96:5Z . . . _24T >8t  96:5Z . . . _24T >8t
+8F 16Z . 8t  >4F 8t
+
+
+
+
+/marker Pt2
+
+/marker L3
+16Z . . . >8T   24:5T 24t >8F
+24:5t 24T >8t  4r >8t
+96:5Z . . . _24T >8t  96:5Z . . . _24T >8t
+4r >8t  96:5Z . . . _24T >8t
+
+/marker L4
+16Z . . . >8T   24:5T 24t >8F
+24:5t 24T >8t  4r >8t
+96:5Z . . . _24t >8T  96:5Z . . . _24t >8T
+8F 16Z . 8t  >4F 8t
+
+/marker L3Rpt
+16Z . . . >8T   24:5T 24t >8F
+24:5t 24T >8t  4r >8t
+96:5Z . . . _24T >8t  96:5Z . . . _24T >8t
+4r >8t  96:5Z . . . _24T >8t
+
+/marker L2Rpt
+16Z . . . >8T   >24:5f 24t >8T
+24:5t 24T >8f  16Z . . . >8T
+96:5Z . . . _24T >8t  96:5Z . . . _24T >8t
+8F 16Z . 8t  >4F 8t
+
+
+
+
+/marker P3
+
+/marker L5
+//96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+12T 24 12 >24f >8t  /p /cresc 20Z . . . . >8T /fff /dd
+12T 24 12 >24f >8t  /p /< 20Z . . . . >8T /fff /dd
+//12T 24 12 ^24f ^8t    ^24F ^12T  8r  8t
+/p /< 96:5Z . . . _24T >8t /fff /p /<  96:5Z . . . _24T >8t /fff
+/p /< 20Z . . . . >8T /fff /dd  24:5T >24t ^8T
+//4r 8t  96:5Z . . . _24T >8t
+
+
+//_24T t t T T >t ^8T   ^24F _24:5T _8T  //  >24T ^24t 24T T t t _8T
+//_24T t t T T >t ^8T   >24T ^24t 24T T t t _8T
+////96:5T 96:5z . . ^24t 8T     ^24F _24:5T _8T
+//96:5T 96:5z . . ^24t 8T  24:5T _24t >8T
+//^24F _24:5T _8t      >4F 8t
+
+/marker L6
+12T 24 12 >24f >8t  /p /cresc 20Z . . . . >8T /fff /dd
+12T 24 12 >24f >8t  /p /< 20Z . . . . >8T /fff /dd
+//96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+//96:5T 96:5z . . ^24t 8T     ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T  96:5T 96:5z . . ^24t 8T
+8F 16Z . 8t  >4F 8t
+
+/marker L5Rpt
+12T 24 12 >24f >8t  /p /cresc 20Z . . . . >8T /fff /dd
+12T 24 12 >24f >8t  /p /< 20Z . . . . >8T /fff /dd
+//12T 24 12 ^24f ^8t    ^24F ^12T  8r  8t
+/p /< 96:5Z . . . _24T >8t /fff /p /<  96:5Z . . . _24T >8t /fff
+/p /< 20Z . . . . >8T /fff /dd  24:5T >24t ^8T
+//96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+//96:5T 96:5z . . ^24t 8T     ^24F _24:5T _8T
+//96:5T 96:5z . . ^24t 8T  24:5T _24t >8T
+//^24F _24:5T _8t     >4F 8t
+
+/marker L6Rpt
+12T 24 12 >24f >8t  /p /cresc 20Z . . . . >8T /fff /dd
+12T 24 12 >24f >8t  /p /< 20Z . . . . >8T /fff /dd
+//96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+//96:5T 96:5z . . ^24t 8T     ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T  96:5T 96:5z . . ^24t 8T
+8F 16Z . 8t  >4F 8t
+//96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+//96:5T 96:5z . . ^24t 8T     ^24F _24:5T _8T
+//96:5T 96:5z . . ^24t 8T  96:5T 96:5z . . ^24t 8T
+//8F 16Z . 8t  >4F 8t
+
+
+
+/marker Pt4
+
+/marker L7
+96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T     ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T  96:5T 96:5z . . ^24t 8T
+4r 8t  96:5T 96:5z . . ^24t 8T
+
+/marker L8
+96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+^24F _24:5T _8T         ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T  96:5T 96:5z . . ^24t 8T
+8F 16Z . 8t  >4F 8t
+
+/marker L7rpt
+96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T     ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T  96:5T 96:5z . . ^24t 8T
+4r 8t  96:5T 96:5z . . ^24t 8T
+
+/marker L9
+96:5T 96:5z . . ^24t 8T    ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T     ^24F _24:5T _8T
+96:5T 96:5z . . ^24t 8T  96:5T 96:5z . . ^24t 8T
+8F 16Z . 8t  >4F 8t
+
+
+
+
+_24:5T 24 >8F _24:5T 24 >8F
+8:3T 4 _8fr
+
+
+
+
+
+
+
+
+
+
+/marker L1
 4T _8f 24:5T 24 >8F
 _24:5T 24 >8F 4T _8f
 _24:5T 24 >8F _24:5T 24 >8F
@@ -388,5 +634,44 @@ _36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . >36t ^12T   _36T 18z . 
 20Z . . 20T ^20   20Z . . 20T ^20   20Z . . 20T ^20   20Z . . 20T ^20
 
 
+
+
+
+
+
+//marker P2
+//marker L3
+//16Z . . . >8T   24:5T 24t >8F
+//24:5t 24T >8t  16Z . . . >8T
+//96:5Z . . . _24T >8t  96:5Z . . . _24T >8t
+//>4F 8t  96:5Z . . . _24T >8t
+///marker L4
+//16Z . . . >8T   24:5T 24t >8F
+//24:5t 24T >8t  16Z . . . >8T
+//96:5Z . . . _24t >8T  96:5Z . . . _24t >8T
+//8F 16Z . 8t  >4F 8t
+
+///marker L3rpt
+//4T _8t   24:5T 24t >8F
+//24:5t 24T >8t  >24F _24:5T 8t
+//96:5Z . . . _24T >8t  24:5T _24t >8T
+//_24F _24:5T 8t  96:5Z . . . _24T >8t
+///marker L2Rpt
+//4T _8t   24:5T 24t >8F
+//24:5t 24T >8t  16Z . . . >8T
+//96:5Z . . . _24t >8T  96:5Z . . . _24t >8T
+//8F 16Z . 8t  >4F 8t
+
+
+///marker L1Rpt
+//16Z . . . >8T   24:5T 24t >8F
+//24:5t 24T >8t  16Z . . . >8T
+//96:5Z . . . _24T >8t  96:5Z . . . _24T >8t
+//>4F 8t  96:5Z . . . _24T >8t
+///marker L2Rpt
+//16Z . . . >8T   24:5T 24t >8F
+//24:5t 24T >8t  16Z . . . >8T
+//96:5Z . . . _24t >8T  96:5Z . . . _24t >8T
+//8F 16Z . 8t  >4F 8t
 
 

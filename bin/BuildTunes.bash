@@ -157,57 +157,58 @@ bandTunesPipesAndDrums() {
   # And whoever calls this should report the error, but keep going.
   dart $snareLangExecutable -i tunes/${tune}Drums.snl -o ${forDrummers}/BandTunes/Midis/${tune}Drums.mid && (
     fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forDrummers}/BandTunes/Mp3s/${tune}Drums.mp3
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forDrummers}/BandTunes/Oggs/${tune}Drums.ogg
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forDrummers}/BandTunes/Wavs/${tune}Drums.wav
+    echo Not doing .wav or .ogg files for now
+#    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forDrummers}/BandTunes/Oggs/${tune}Drums.ogg
+#    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forDrummers}/BandTunes/Midis/${tune}Drums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forDrummers}/BandTunes/Wavs/${tune}Drums.wav
   )
 #    echo "Hey, that drum processing returned this: ${?}"
   dart $pipeLangDartFile -i ${pipeLangDir}/tunes/${tune}Chanter.ppl -o ${forPipers}/BandTunes/Midis/${tune}Chanter.mid && (
     fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forPipers}/BandTunes/Mp3s/${tune}Chanter.mp3
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forPipers}/BandTunes/Oggs/${tune}Chanter.ogg
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forPipers}/BandTunes/Wavs/${tune}Chanter.wav
+#    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forPipers}/BandTunes/Oggs/${tune}Chanter.ogg
+#    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${forPipers}/BandTunes/Midis/${tune}Chanter.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${forPipers}/BandTunes/Wavs/${tune}Chanter.wav
   )
 #    echo "Hey, that pipe processing returned this: ${?}"
   dart $tracksFile -l WARNING -i ${forDrummers}/BandTunes/Midis/${tune}Drums.mid,${forPipers}/BandTunes/Midis/${tune}Chanter.mid -o ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid && (
     fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${learnWithMidi}/BandTunes/Mp3s/${tune}ChanterAndDrums.mp3
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${learnWithMidi}/BandTunes/Oggs/${tune}ChanterAndDrums.ogg
-    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${learnWithMidi}/BandTunes/Wavs/${tune}ChanterAndDrums.wav
+#    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${learnWithMidi}/BandTunes/Oggs/${tune}ChanterAndDrums.ogg
+#    fluidsynth -q -a alsa -g 2.0 -T raw -F - ${soundFontFile} ${learnWithMidi}/BandTunes/Midis/${tune}ChanterAndDrums.mid | ffmpeg -y -hide_banner -loglevel panic -f s32le -i - -filter:a "volume=1.25" ${learnWithMidi}/BandTunes/Wavs/${tune}ChanterAndDrums.wav
   )
 #    echo "Hey, that track processing returned this: ${?}"
   return ${?}
 }
 
 declare -a bandTunesPipesAndDrumsNameArray=(
-#  AmazingGraceSimple
+##  AmazingGraceSimple
   DiuRegnare
-  24MarchSet
-  AmazingGrace
-  BadgeOfScotland
-  BadgeSet
-  BarrenRocksOfAden
-  BattleOfWaterloo
-  BrownHairedMaiden
-  CaptEwing
-  CaptEwingMassedBands
-  CastleDangerousMassedBands
-  CastleDangerousMassedBandsShifted
-  Competition44Set
-  Competition44SetMassedBands
-  FlettFromFlotta
-  HauntingCastleSet
-#  HauntingCastleSetSimple
-  HauntingCastleSetSimpleAndMassedBands
-  HawaiiAloha
-  HighlandLaddie
-  Lochanside
-  MurdosWedding
-  RowanTree
-  ScotlandTheBrave
-  ScotlandTheBrave2XMassedBands
-#  ScotlandTheBraveMarch44
-  ScotlandTheBraveMassedBands
-  TheHaunting
-  TheHaunting
-#  TheHauntingSimple
+#  24MarchSet
+#  AmazingGrace
+#  BadgeOfScotland
+#  BadgeSet
+#  BarrenRocksOfAden
+#  BattleOfWaterloo
+#  BrownHairedMaiden
+#  CaptEwing
+#  CaptEwingMassedBands
+#  CastleDangerousMassedBands
+#  CastleDangerousMassedBandsShifted
+#  Competition44Set
+#  Competition44SetMassedBands
+#  FlettFromFlotta
+#  HauntingCastleSet
+###  HauntingCastleSetSimple
+#  HauntingCastleSetSimpleAndMassedBands
+#  HawaiiAloha
+#  HighlandLaddie
+#  Lochanside
+#  MurdosWedding
+#  RowanTree
+#  ScotlandTheBrave
+#  ScotlandTheBrave2XMassedBands
+###  ScotlandTheBraveMarch44
+#  ScotlandTheBraveMassedBands
+#  TheHaunting
+#  TheHaunting
+##  TheHauntingSimple
 )
 
 # There could be stray files in these various dirs, so might want to check time stamps
@@ -215,7 +216,8 @@ for f in "${bandTunesPipesAndDrumsNameArray[@]}"; do
   bandTunesPipesAndDrums ${f}
   echo "In loop after processing ${f},  returned this value: ${?} "
 done
-
+echo HEY JUST STOPPING THINGS HERE BECAUSE DO NOT WANT TO WASTE PROCESSING TIME.  LATER REMOVE THIS EXIT
+exit
 
 #else
 #  echo should get here

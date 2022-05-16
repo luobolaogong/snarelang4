@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Drive failing.  Gotta checkin everything.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/BuildTunes.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BuildTunes.bash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -935,14 +936,8 @@
       <workItem from="1652486203861" duration="54000" />
       <workItem from="1652487577930" duration="23000" />
       <workItem from="1652488218935" duration="13000" />
-      <workItem from="1652488563247" duration="10395000" />
-    </task>
-    <task id="LOCAL-00079" summary="Mostly worked on the TapRolls thing.">
-      <created>1613695335114</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1613695335115</updated>
+      <workItem from="1652488563247" duration="38557000" />
+      <workItem from="1652676746263" duration="7459000" />
     </task>
     <task id="LOCAL-00080" summary="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded.">
       <created>1613703098152</created>
@@ -1280,7 +1275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652472524098</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Drive failing.  Gotta checkin everything.">
+      <created>1652592051119</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1652592051120</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1371,10 +1373,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="2429" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442264" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652472535483">
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652592062142">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652472535483" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652592062142" />
     <state x="1410" y="1775" width="1084" height="345" key="dock-window-1" timestamp="1651713366484">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -1447,10 +1449,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1681" y="1764" width="1084" height="345" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1651732858876" />
-    <state x="1899" y="768" width="587" height="502" key="find.popup" timestamp="1651734454869">
+    <state x="1899" y="768" width="587" height="502" key="find.popup" timestamp="1652684377323">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1899" y="768" width="587" height="502" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1651734454869" />
+    <state x="1899" y="768" width="587" height="502" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1652684377323" />
     <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup" timestamp="1649029609698">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
