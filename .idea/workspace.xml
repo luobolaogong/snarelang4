@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Drive failing.  Gotta checkin everything.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/BuildTunes.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BuildTunes.bash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -937,14 +936,7 @@
       <workItem from="1652487577930" duration="23000" />
       <workItem from="1652488218935" duration="13000" />
       <workItem from="1652488563247" duration="38557000" />
-      <workItem from="1652676746263" duration="7459000" />
-    </task>
-    <task id="LOCAL-00080" summary="Changed interpretations of rolls that have two taps in them.&#10;Sounds more rounded.">
-      <created>1613703098152</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1613703098152</updated>
+      <workItem from="1652676746263" duration="17081000" />
     </task>
     <task id="LOCAL-00081" summary="Slowly working on Cameronian Rant.">
       <created>1614319073648</created>
@@ -1282,7 +1274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652592051120</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Drive failing.  Gotta checkin everything.">
+      <created>1652686947061</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1652686947061</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1341,22 +1340,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1652486106598" />
-    <state width="3516" height="371" key="GridCell.Tab.0.bottom" timestamp="1651817442268">
+    <state width="3516" height="242" key="GridCell.Tab.0.bottom" timestamp="1652773877437">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="371" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442268" />
-    <state width="3516" height="371" key="GridCell.Tab.0.center" timestamp="1651817442267">
+    <state width="3516" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1652773877437" />
+    <state width="3516" height="242" key="GridCell.Tab.0.center" timestamp="1652773877437">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="371" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442267" />
-    <state width="3516" height="371" key="GridCell.Tab.0.left" timestamp="1651817442267">
+    <state width="3516" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1652773877437" />
+    <state width="3516" height="242" key="GridCell.Tab.0.left" timestamp="1652773877437">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="371" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442267" />
-    <state width="3516" height="371" key="GridCell.Tab.0.right" timestamp="1651817442267">
+    <state width="3516" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1652773877437" />
+    <state width="3516" height="242" key="GridCell.Tab.0.right" timestamp="1652773877437">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3516" height="371" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442267" />
+    <state width="3516" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1652773877437" />
     <state width="2429" height="321" key="GridCell.Tab.1.bottom" timestamp="1651817442264">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -1373,10 +1372,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="2429" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442264" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652592062142">
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652686957974">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652592062142" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652686957974" />
     <state x="1410" y="1775" width="1084" height="345" key="dock-window-1" timestamp="1651713366484">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

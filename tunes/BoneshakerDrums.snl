@@ -1,0 +1,189 @@
+// This is John Scullion's setting/beating to the tune "The Boneshaker".
+// Comes from his recording and his score March 2022
+
+//style 2/4 Hornpipe
+/track snare
+/channel 5
+/time 2/4
+/tempo 82
+
+/mp
+8r . . .
+^8:3r /f 12T 24t
+
+>32:3F /cresc ^32T . . . .   >12T /ff /f  /cresc 24t 32t T t ^T
+>12t /ff /f /cresc 24t ^32F 32t T T   >12t /ff /f /cresc ^24f 32T t t T
+>12t /ff /f /cresc 24D 32T . . .   >12T /ff /f 24t 12D ^24T
+>12t 24D 12T 24t  >32:3D /cresc 32D 32T . . .
+
+12T /ff /f 24t  ^40T 20z . 24z . 24t 12T 24F   // not sure duration of last note because might be start of another run of something strange
+^12t 48T .  ^12T ^24t   /cresc 32T . . .   12T /ff /f 24t
+^12F 72t T T  24t . .    ^24T 24z 30T t T T ^t
+24T . ^24T  32t . . .  ^8t 12T 24t
+
+
+// for fun, repeat it, slower
+/tempo 62
+8F /mp 8r . .
+^8:3r /f 12T 24t
+
+>32:3F /cresc ^32T . . . .   >12T /ff /f  /cresc 24t 32t T t ^T
+>12t /ff /f /cresc 24t ^32F 32t T T   >12t /ff /f /cresc ^24f 32T t t T
+>12t /ff /f /cresc 24D 32T . . .   >12T /ff /f 24t 12D ^24T
+>12t 24D 12T 24t  >32:3D /cresc 32D 32T . . .
+
+12T /ff /f 24t  ^40T 20z . 24z . 24t 12T 24F   // not sure duration of last note because might be start of another run of something strange
+^12t 48T .  ^12T ^24t   /cresc 32T . . .   12T /ff /f 24t
+^12F 72t T T  24t . .    ^24T 24z 30T t T T ^t
+24T . ^24T  32t . . .  ^8t 12T 24t
+
+
+// for fun, repeat it, slower
+/tempo 42
+8F /mp 8r . .
+^8:3r /f 12T 24t
+
+>32:3F /cresc ^32T . . . .   >12T /ff /f  /cresc 24t 32t T t ^T
+>12t /ff /f /cresc 24t ^32F 32t T T   >12t /ff /f /cresc ^24f 32T t t T
+>12t /ff /f /cresc 24D 32T . . .   >12T /ff /f 24t 12D ^24T
+>12t 24D 12T 24t  >32:3D /cresc 32D 32T . . .
+
+12T /ff /f 24t  ^40T 20z . 24z . 24t 12T 24F   // not sure duration of last note because might be start of another run of something strange
+^12t 48T .  ^12T ^24t   /cresc 32T . . .   12T /ff /f 24t
+^12F 72t T T  24t . .    ^24T 24z 30T t T T ^t
+24T . ^24T  32t . . .  ^8t 12T 24t
+
+
+// for fun, repeat it, faster
+/tempo 62
+8F /mp 8r . .
+^8:3r /f 12T 24t
+
+>32:3F /cresc ^32T . . . .   >12T /ff /f  /cresc 24t 32t T t ^T
+>12t /ff /f /cresc 24t ^32F 32t T T   >12t /ff /f /cresc ^24f 32T t t T
+>12t /ff /f /cresc 24D 32T . . .   >12T /ff /f 24t 12D ^24T
+>12t 24D 12T 24t  >32:3D /cresc 32D 32T . . .
+
+12T /ff /f 24t  ^40T 20z . 24z . 24t 12T 24F   // not sure duration of last note because might be start of another run of something strange
+^12t 48T .  ^12T ^24t   /cresc 32T . . .   12T /ff /f 24t
+^12F 72t T T  24t . .    ^24T 24z 30T t T T ^t
+24T . ^24T  32t . . .  ^8t 12T 24t
+
+
+
+// for fun, repeat it, faster
+/tempo 82
+8F /mp 8r . .
+^8:3r /f 12T 24t
+
+>32:3F /cresc ^32T . . . .   >12T /ff /f  /cresc 24t 32t T t ^T
+>12t /ff /f /cresc 24t ^32F 32t T T   >12t /ff /f /cresc ^24f 32T t t T
+>12t /ff /f /cresc 24D 32T . . .   >12T /ff /f 24t 12D ^24T
+>12t 24D 12T 24t  >32:3D /cresc 32D 32T . . .
+
+12T /ff /f 24t  ^40T 20z . 24z . 24t 12T 24F   // not sure duration of last note because might be start of another run of something strange
+^12t 48T .  ^12T ^24t   /cresc 32T . . .   12T /ff /f 24t
+^12F 72t T T  24t . .    ^24T 24z 30T t T T ^t
+24T . ^24T  32t . . .  ^8t 12T 24t
+
+
+
+// for fun, repeat it, faster
+/tempo 92
+8F /mp 8r . .
+^8:3r /f 12T 24t
+
+>32:3F /cresc ^32T . . . .   >12T /ff /f  /cresc 24t 32t T t ^T
+>12t /ff /f /cresc 24t ^32F 32t T T   >12t /ff /f /cresc ^24f 32T t t T
+>12t /ff /f /cresc 24D 32T . . .   >12T /ff /f 24t 12D ^24T
+>12t 24D 12T 24t  >32:3D /cresc 32D 32T . . .
+
+12T /ff /f 24t  ^40T 20z . 24z . 24t 12T 24F   // not sure duration of last note because might be start of another run of something strange
+^12t 48T .  ^12T ^24t   /cresc 32T . . .   12T /ff /f 24t
+^12F 72t T T  24t . .    ^24T 24z 30T t T T ^t
+24T . ^24T  32t . . .  ^8t 12r 24r    // last time no pickup into next part
+
+
+
+
+/track met
+/channel 0
+/mp
+>4M >. >8M . >4M
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+
+>4M >. >8M . >4M
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+
+
+
+>4M >. >8M . >4M
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+
+>4M >. >8M . >4M
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+
+
+
+>4M >. >8M . >4M
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+
+
+
+>4M >. >8M . >4M
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. .
+
+_8M . _. .
+_8M . _. .
+_8M . _. .
+_8M . _. 8r
+
+

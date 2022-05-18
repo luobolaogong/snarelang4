@@ -11,89 +11,109 @@
 
 // The new drummers may possibly only play this:
 /mp
-/marker P1
+/ppp
 8:5r 8r
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+// Part1
+// L1
+8T  8T  ^8t   8T  8T  ^8t
+8T  8T  ^8t   8T  8T  ^8t
+8T ^8t  ^8t   8T ^8t  ^8t
+8T ^8t  ^8t   8T ^8t  ^8t
+// L2
+8T  8T  ^8t   8T  8T  ^8t
+8T  8T  ^8t   8T  8T  ^8t
+8T ^8t  ^8t   8T ^8t  ^8t
 8T 16Z . 8T  >4t 8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+// Repeat
+// L1
+8T  8T  ^8t   8T  8T  ^8t
+8T  8T  ^8t   8T  8T  ^8t
+8T ^8t  ^8t   8T ^8t  ^8t
+8T ^8t  ^8t   8T ^8t  ^8t
+// L2
+8T  8T  ^8t   8T  8T  ^8t
+8T  8T  ^8t   8T  8T  ^8t
+8T ^8t  ^8t   8T ^8t  ^8t
 8T 16Z . 8T  >4t 8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+
+// Part 2
+// L3
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+// L4
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+8T  8T  ^8t  8T  8T  ^8t
 8T 16Z . 8T  >4t 8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+// repeat
+// L3
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+// L2
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+8T  8T  ^8t  8T  8T  ^8t
 8T 16Z . 8T  >4t 8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+// Part 3
+// L5
+8T 12 24 8   4 8
+8T 12 24 8   4 8
+8T 12 24 8   8 12 24 8
+8 8 8   8 12 24 8
+// L6
+8T 12 24 8   4 8
+8T 12 24 8   4 8
+8T 12 24 8   8 12 24 8
 8T 16Z . 8T  >4t 8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+// Repeat
+8T 12 24 8   4 8
+8T 12 24 8   4 8
+8T 12 24 8   8 12 24 8
+8 8 8   8 12 24 8
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+8T 12 24 8   4 8
+8T 12 24 8   4 8
+8T 12 24 8   8 12 24 8
 8T 16Z . 8T  >4t 8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+// Part 4
+// L7
+12T 24 _8 >8 12 24 _8 >8
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+8T 16Z . 8T  >4t 8t
+// L8
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+8T  8T  ^8t  8T  8T  ^8t
 8T 16Z . 8T  >4t 8t
 
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
-
-4T >8T  4t >8t
-4T >8T  4t >8t
-4T >8T  4t >8t
+// repeat
+// L7
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+// L9
+8T  8T  ^8t  8T  8T  ^8t
+12T 24 _8 >8 12 24 _8 >8
+8T  8T  ^8t  8T  8T  ^8t
 8T 16Z . 8T  >4t 8t
 
+// end simple snare
 
 
 
@@ -102,13 +122,14 @@
 /track snare
 /channel 6
 
+// HEY THIS IS ESSENTIALLY A FAST WALTZ.  It's not a 6/8.  It's 3/8
 /ff
 /marker P1
 8:5r 8t
 
 /marker L1
-/mp /< 16Z . . . >8T /ffd /dd  >24:5f 24t >8T
-24:5t 24T >8f  /mp /< 16Z . . . >8T /ffd /dd
+/mp /< 16Z . . . >8T /ff /dd    8 8     >24:5f 24t >8T  // the /ff was /ffd which I think pushed it back an 8th note.  I added 2 8ths to keep it cool.
+24:5t 24T >8f  /mp /< 16Z . . . >8T /ff /dd   // same here, another 8th note.  So with 2 of them, the normal upbeat accent (3rd 8th note) changed to the 2nd
 /mp /< 96:5Z . . . _24T >8t /fff /mp /<  96:5Z . . . _24T >8t /fff /dd
 //4r 8t  96:5Z . . . _24T >8t
 /mp /< 16Z . . . 8t /fff /mp  96:5Z . . . _24T >8t
