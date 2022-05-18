@@ -493,22 +493,27 @@ _12T ^8t 24t   _12T ^8t 24t   12r ^24t 12T 24t  _12T 24T 8t
 1r
 // ----------- Exercise 3.1, 1-buzzPulse, 3 stroke tap roll, not simulated, lasting 18th note duration, Faster/shorter, based on 12th note tempo, 8 bars
 // THIS IS TOO BORING.  MIX IT UP.  FIX THIS.
-// THIS IS TOO BORING.  MIX IT UP.  FIX THIS.
-// THIS IS TOO BORING.  MIX IT UP.  FIX THIS.
-// THIS IS TOO BORING.  MIX IT UP.  FIX THIS.
-// THIS IS TOO BORING.  MIX IT UP.  FIX THIS.
-// THIS IS TOO BORING.  MIX IT UP.  FIX THIS.
-// THIS IS TOO BORING.  MIX IT UP.  FIX THIS.
-// THIS IS TOO BORING.  MIX IT UP.  FIX THIS.
+
 /marker 3.1
 // 10:33
 /ff
-^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
-^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
-^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z
-^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z    ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
-// repeat, reverse hand order
-^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+//^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+//^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+//^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z
+//^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z    ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+//// repeat, reverse hand order
+//^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+//^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+//^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z
+//^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+
+^12T       ^12T       ^12T       ^36T 18z   ^36T 18z   ^12T
+^12t       ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^12t
+^12T       ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z
+^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+
+//// repeat, reverse hand order
+^12t      ^12t      ^12t      ^36t 18Z   ^36t 18Z   ^12t
 ^12T      ^12T      ^12T      ^12T      ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
 ^12t      ^12t      ^12t      ^12t      ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z
 ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z  ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t

@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Drive failing.  Gotta checkin everything.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/DiuRegnareDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/ExerciseSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ExerciseSets.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,7 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.BuildTunes">
+  <component name="RunManager" selected="Dart Command Line App.ExerciseSets">
     <configuration name="1224s" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i exercises/warmups/1224s.snl -o midifiles/1224s.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -937,13 +937,8 @@
       <workItem from="1652488218935" duration="13000" />
       <workItem from="1652488563247" duration="38557000" />
       <workItem from="1652676746263" duration="17081000" />
-    </task>
-    <task id="LOCAL-00081" summary="Slowly working on Cameronian Rant.">
-      <created>1614319073648</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1614319073649</updated>
+      <workItem from="1652848309237" duration="442000" />
+      <workItem from="1652894280961" duration="3141000" />
     </task>
     <task id="LOCAL-00082" summary="Score close to final.">
       <created>1614756343033</created>
@@ -1281,7 +1276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652686947061</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Drive failing.  Gotta checkin everything.">
+      <created>1652848389262</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1652848389262</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1372,10 +1374,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="2429" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442264" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652686957974">
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652848398632">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652686957974" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652848398632" />
     <state x="1410" y="1775" width="1084" height="345" key="dock-window-1" timestamp="1651713366484">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
