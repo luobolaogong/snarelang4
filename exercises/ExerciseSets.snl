@@ -208,12 +208,12 @@ _16t t 8t   _16t t 8t   _16t t 8t   8t t
 ^24T . . . . .   ^12T 24t 12T 24T
 ^24t . . . . .   ^12t 24T 12t 24t
 ^24T . . . . .   ^12T 24t 12T 24T
-^12t 24T 12t 24t ^12T 24t 12T 24T
+^12t 24T 12t 24t ^12T 24t 8T
 //// Reverse hand order of above
 ^24t . . . . .   ^12t 24T 12t 24t
 ^24T . . . . .   ^12T 24t 12T 24T
 ^24t . . . . .   ^12t 24T 12t 24t
-^12T 24t 12T 24T ^12t 24T 12t 24t
+^12T 24t 12T 24T ^12t 24T 8t
 
 
 /marker 1.2
@@ -1371,61 +1371,6 @@ N N N 8N N
 
 
 
-//tempo 74
-1r
-1r
-1r
-1r
-
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-1r
-
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1698,9 +1643,9 @@ B 4B 8r 8B
 >8B 4r  >8B 4r >8B .
 
 // ----------- Exercise 1.7, off beat 32nd stuff, 4 bars
->4B . >. .
+>4B 4r >4B 4r
 >8B 4r  >8B 4r >8B .
->4B . >. .
+>4B 4r >4B 4r
 >8B 4r  >8B 4r >8B .
 
 
@@ -1796,6 +1741,7 @@ B 4B 8r 8B
 // Sync
 1r
 // ----------- Exercise 2.10, Roll-off rest timing
+/ff
 4B . . 4r
 4B . . 4r
 4B . . 4r
@@ -1815,7 +1761,7 @@ B 4B 8r 8B
 // sync
 1r
 // ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, SIMULATED buzz lasting 12th note duration, 8 bars
-/f
+/ff
 2B .
 2B .
 2B .
@@ -1830,15 +1776,16 @@ B 4B 8r 8B
 // Sync
 //1r
 // ----------- Exercise 3.1
+/ff
 4B . . .
 4B . . .
 4B . . .
 4B . . .
 
-4B . . .
-4B . . .
-4B . . .
-4B . . .
+//4B . . .
+//4B . . .
+//4B . . .
+//4B . . .
 
 
 // test sync
@@ -1897,6 +1844,7 @@ B 4B 8r 8B
 //8B 8r 4r . .
 //8r 8r
 // ----------- Exercise 3.5, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
+/ff
 2B .
 2B .
 2B .
@@ -1912,6 +1860,7 @@ B 4B 8r 8B
 
 
 // ----------- Exercise 3.6, 2-buzzPulse, 5 stroke Tap Rolls soft
+/ff
 2B .
 2B .
 2B .
@@ -1940,6 +1889,7 @@ B 4B 8r 8B
 // Sync
 //1r
 // ----------- Exercise 3.7, tap, 2-buzzPulse tap, "6 stroke"
+/ff
 4B . . .
 4B . . .
 4B . . .
@@ -1948,6 +1898,7 @@ B 4B 8r 8B
 
 
 // ----------- Exercise 3.8, tap 3-buzzPulse, "7 stroke"
+/ff
 4B . . .
 4B . . .
 4B . . .
@@ -1956,73 +1907,16 @@ B 4B 8r 8B
 
 
 // ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
+/ff
 2B .
 2B .
 2B .
-2B .
+2B 2r
 
 // tag ending
 1r
 
 
-
-//tempo 74
-1r
-1r
-1r
-1r
-
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-1r
-1r
-1r
-1r
-
-
-
-
-
-
-
-
-
-// Maybe should do that silly black bear thing here
-// 10 stroke roll stuff?
 
 
 
@@ -2046,13 +1940,13 @@ B 4B 8r 8B
 4M . . .
 4M . . .
 4M . . .
-4M . . .
+4M . . 12M . .
 
 // ----------- Exercise 0.1 is triplet based double stops
-2M .
-2M .
-2M .
-2M .
+4M . . .
+4M . 24M 12M 12M 24M 12M 12M 12M
+4M . . .
+4M . . 24M . . . . .
 
 
 // ----------- Exercise 0.2 is even low 24th notes extending by cue
@@ -2066,7 +1960,7 @@ B 4B 8r 8B
 4M . . .
 // (both)
 4M . . .
-4M . . .
+4M . 12M . .  . . .
 
 
 
@@ -2082,7 +1976,8 @@ B 4B 8r 8B
 
 //tempo 110
 //Sync
-/fff  4M . 8M . 4M  /f
+///fff  4M . 8M . 4M  /f
+/fff  ^8M . ^8M . ^8M . ^8M .  /f
 
 // ------------ Exercise 0.4, loud and soft contrast
 4M . . .
@@ -2093,7 +1988,7 @@ B 4B 8r 8B
 4M . . .
 4M . . .
 4M . . .
-4M . . .
+4M . ^16M . . . ^16M . . .
 
 
 
@@ -2107,7 +2002,7 @@ B 4B 8r 8B
 4M . . .
 4M . . .
 4M . . .
-4M . . .
+4M . _16M . 8M  _16M . 8M
 
 
 //////////////  Add Paradiddle and similar stuff here  Prob should be a new set
@@ -2135,7 +2030,7 @@ B 4B 8r 8B
 4M . . .
 4M . . .
 4M . . .
-4M . . .
+16M 8M  16M 8M  16M 8M  16M 8M  8M 8M
 
 // ----------- Exercise 0.6 is Fred Sanford's double stroke
 ^4M . >. .
@@ -2143,17 +2038,17 @@ B 4B 8r 8B
 ^4M . >. .
 . . . .
 
-^4M . >. .
-^. . >. .
+4M . . .
+. . . .
 ////^4M . >. .
 ////. . . .
 //^4M . >. .
 //^. . .
 ^4M
 
-// new tempo
+// new tempo, perhaps 71
 //^4M ^. ^8M . ^. .
->4M 4M >4M 4M
+4M 4M    24M . . . . .  12M 24M 12M 24M
 
 
 // Sync
@@ -2416,7 +2311,10 @@ _8M .  _8M .  _8M .  _8M .
 
 //tempo 72
 // sync
-/ff ^24M 12M  ^24M 12M  ^24M 12M  ^8M       /ff ^24M /> 60M M M M M /p    /ff ^24M /> 60M M M M M /p  /ff ^24M /> 60M M M M M /p   /ff ^8M /mf
+/ff ^24M 12M  ^24M 12M  ^24M 12M  ^8M
+/ff ^24M /> 60M M M M M /p
+/ff ^24M /> 60M M M M M /p
+/ff ^24M /> 60M M M M M /p   /ff ^8M /mf
 // ----------- Exercise 3.0, 1-buzzPulse, 3 stroke tap roll, SIMULATED buzz lasting 12th note duration, 8 bars
 4M . . .
 4M . . .
@@ -2426,7 +2324,7 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 4M . . .
 4M . . .
-4M . . .
+4M . 12M . . . . _12M
 
 
 // ----------- Exercise 3.1, 1-buzzPulse
@@ -2438,7 +2336,7 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 
 4M . . .
-4M . . .
+4M . >24M . >. >. . >. >. . >. >8M
 
 
 // test sync
@@ -2519,8 +2417,8 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 4M . . .
 4M . . .
-4M . . .
-
+//4M . . .
+4M . 24M . . >. >12M  24M . . >. >12M
 //4M . . .
 //4M . . .
 //4M . . .
@@ -2547,7 +2445,7 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 4M . . .
 4M . . .
-4M . . .
+4M . 24M . . . 12M  24M . . . 12M
 
 
 
@@ -2568,46 +2466,6 @@ _8M .  _8M .  _8M .  _8M .
 2r
 
 
-
-
-
-//tempo 74
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
-4M . . .
 
 
 
