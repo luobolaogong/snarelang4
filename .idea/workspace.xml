@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Trying to finish off exercises 0-3.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="A decent release.  Still problems, and still missing flams and ruffs and drags and 6/8 stuff.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/ExerciseSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ExerciseSets.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -950,14 +951,7 @@
       <workItem from="1652676746263" duration="17081000" />
       <workItem from="1652848309237" duration="442000" />
       <workItem from="1652894280961" duration="3141000" />
-      <workItem from="1652907350447" duration="18736000" />
-    </task>
-    <task id="LOCAL-00087" summary="Will process files for website using ProcessThese.bash.">
-      <created>1617596778847</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1617596778852</updated>
+      <workItem from="1652907350447" duration="21135000" />
     </task>
     <task id="LOCAL-00088" summary="Will process files for website using ProcessThese.bash.">
       <created>1617660928838</created>
@@ -1295,7 +1289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652942579244</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="A decent release.  Still problems, and still missing flams and ruffs and drags and 6/8 stuff.">
+      <created>1652943082045</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1652943082045</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1314,7 +1315,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="What the crap, so many changes." />
     <MESSAGE value="Tried incorporating changes due to practice." />
     <MESSAGE value="Tuning and experimenting." />
     <MESSAGE value="Too many changes to remember." />
@@ -1339,7 +1339,8 @@
     <MESSAGE value="Changed note velocity calculations&#10;for initial and when applying&#10;articulations." />
     <MESSAGE value="Drive failing.  Gotta checkin everything." />
     <MESSAGE value="Trying to finish off exercises 0-3." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to finish off exercises 0-3." />
+    <MESSAGE value="A decent release.  Still problems, and still missing flams and ruffs and drags and 6/8 stuff." />
+    <option name="LAST_COMMIT_MESSAGE" value="A decent release.  Still problems, and still missing flams and ruffs and drags and 6/8 stuff." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2083" y="677" width="1320" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1652941502776">
@@ -1350,22 +1351,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1652486106598" />
-    <state width="3608" height="242" key="GridCell.Tab.0.bottom" timestamp="1652942741318">
+    <state width="3608" height="242" key="GridCell.Tab.0.bottom" timestamp="1652985157409">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3608" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1652942741318" />
-    <state width="3608" height="242" key="GridCell.Tab.0.center" timestamp="1652942741318">
+    <state width="3608" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1652985157409" />
+    <state width="3608" height="242" key="GridCell.Tab.0.center" timestamp="1652985157409">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3608" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1652942741318" />
-    <state width="3608" height="242" key="GridCell.Tab.0.left" timestamp="1652942741318">
+    <state width="3608" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1652985157409" />
+    <state width="3608" height="242" key="GridCell.Tab.0.left" timestamp="1652985157408">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3608" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1652942741318" />
-    <state width="3608" height="242" key="GridCell.Tab.0.right" timestamp="1652942741318">
+    <state width="3608" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1652985157408" />
+    <state width="3608" height="242" key="GridCell.Tab.0.right" timestamp="1652985157409">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3608" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1652942741318" />
+    <state width="3608" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1652985157409" />
     <state width="2429" height="321" key="GridCell.Tab.1.bottom" timestamp="1651817442264">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -1382,10 +1383,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="2429" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442264" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652942593794">
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652943098763">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652942593794" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652943098763" />
     <state x="1410" y="1775" width="1084" height="345" key="dock-window-1" timestamp="1651713366484">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
