@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Trying to finish off exercises 0-3.">
-      <change afterPath="$PROJECT_DIR$/bin/Midi2Mp3.bash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/ExerciseSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ExerciseSets.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -952,14 +950,7 @@
       <workItem from="1652676746263" duration="17081000" />
       <workItem from="1652848309237" duration="442000" />
       <workItem from="1652894280961" duration="3141000" />
-      <workItem from="1652907350447" duration="17575000" />
-    </task>
-    <task id="LOCAL-00084" summary="Rant tweaks.">
-      <created>1616047721499</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1616047721500</updated>
+      <workItem from="1652907350447" duration="18236000" />
     </task>
     <task id="LOCAL-00085" summary="Pretty close to final, for single snare.">
       <created>1616737616035</created>
@@ -1297,7 +1288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652927675304</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Trying to finish off exercises 0-3.">
+      <created>1652941954862</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1652941954862</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1384,10 +1382,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="2429" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442264" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652927707336">
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652941973182">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652927707336" />
+    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652941973182" />
     <state x="1410" y="1775" width="1084" height="345" key="dock-window-1" timestamp="1651713366484">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
