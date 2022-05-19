@@ -74,7 +74,7 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Midi2Mp3">
+  <component name="RunManager" selected="Dart Command Line App.ExerciseSets">
     <configuration name="1224s" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i exercises/warmups/1224s.snl -o midifiles/1224s.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
