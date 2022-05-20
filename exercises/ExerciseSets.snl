@@ -30,7 +30,7 @@
 1r
 // 0:06
 // ----------- Exercise 0.0 is eighth note double stops, 4 bars
-/marker 0.0
+/marker 0.1
 // Do double stop stuff to increase control, warm up, check heights.
 // The 2nd snare is below, before tenor stuff.  Offset by a 512th note to simulate inaccuracy
 /f
@@ -41,7 +41,7 @@
 8T T T T T T T T
 
 // ----------- Exercise 0.1 is triplet based double stops, 4 bars
-/marker 0.1
+/marker 0.2
 //0:20
 /fff
 12T T T T T T T T T T T T
@@ -56,7 +56,7 @@
 // at basses, and one bass may need to indicate when to start the solo.
 // At which point snares can play anything for the next 6 bars as long as it fits
 // with 24th notes.
-/marker 0.2
+/marker 0.3
 // 0:34
 /mf
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
@@ -75,7 +75,7 @@
 24T . . . . .    24T . . . . .    24T . . . . .    24T . . . . .
 
 
-/marker 0.3
+/marker 0.4
 // 1:00
 // ----------- Exercise 0.3 is unison 12th notes for all, 4 bars
 /fff
@@ -90,7 +90,7 @@
 // Sync
 4T 4r . .
 
-/marker 0.4
+/marker 0.5
 // 1:15
 // ------------ Exercise 0.4, loud and soft contrast, 8 bars
 // Extremely important for control later.  Maybe need to expand
@@ -110,7 +110,7 @@
 // New location
 // This paradiddle stuff lacks definition.  Sounds like a long set of 16th notes.
 // ------------ Exercise 0.4.1, The Gabe, in preparation for paradiddles
-/marker 0.4.1
+/marker 0.6
 ^16T . . .  ^16T . . .  ^16T . . .  ^8T T
 ^16t . . .  ^16t . . .  ^16t . . .  ^8t t
 ^16T . . .  ^16T . . .  ^16T . . .  ^16T . . .
@@ -143,7 +143,7 @@
 // ----------- Exercise 0.5 is Fred Sanford's triple stroke, 8 bars
 //// Sync
 //4T 4r . .
-/marker 0.5
+/marker 0.7
 // 1:35
 /ff
 _16T T 8T   _16T T 8T   _16T T 8T   8T T
@@ -156,7 +156,7 @@ _16t t 8t   _16t t 8t   _16t t 8t   _16t t 8t
 _16t t 8t   _16t t 8t   _16t t 8t   8t t
 
 
-/marker 0.6
+/marker 0.8
 // 1:52
 // ----------- Exercise 0.6 is Fred Sanford's double stroke, 8 bars
 16T 8T  16T 8T  16T 8T  16T 8T  8T T
@@ -166,16 +166,8 @@ _16t t 8t   _16t t 8t   _16t t 8t   8t t
 
 16t 8t  16t 8t  16t 8t  16t 8t  8t t
 16T 8T  16T 8T  16T 8T  16T 8T  8T T
-////16t 8t  16t 8t  16t 8t  16t 8t  16t 8t  16t
-////8t  16t 8t  16t 8t  16t 8t  16t 8t  t
-//16t 8t  16t ^8t  16t 8t  16t ^8t  16t 8t  16t
-//^8t  16t 8t  16t ^8t  16t 8t  16t
 16t 8t  16t
-
-
 /tempo 74
-//^12T 24t 12T 24t   ^12T 24t 12T 24t   ^12T 24t 12T 24t   ^12T 24t 12T 24t
-//12t 24t 12t 24t   12t 24t 12t 24t   _12T 24t 12T 24t   _12T 24t 12T 24t
 12t 24t 12t 24t   12t 24t 12t 24t   _12T 24t 12T 24t   _12T 24t 8T
 
 
@@ -1928,6 +1920,7 @@ B 4B 8r 8B
 //time 4/4
 //tempo 72
 // Attention
+/marker 0.0
 /fff
 ^24M . . 8M  ^24M . . 8M  ^24M . . >. . .  ^12M >24M ^8M
 /f
