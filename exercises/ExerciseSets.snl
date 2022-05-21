@@ -295,7 +295,7 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 >24z 24T >24z 24T >24z 24T   >24z 24T >24z 24T _12t        >24Z 24t >24Z 24t >24Z 24t   >24Z 24t >24Z 24t _12T
 >24z 24T >24z 24T >24z 24T   >24z 24T >24z 24T >24z 24T    >24z 24T >24z 24T >24z 24T   >24z 24T >24z 24T _12t
 
-/marker 2.4
+//marker 2.4
 // 7:27
 // ----------- Exercise 2.4, 2 pulse buzzes with 24th's, 4 bars
 //>24Z >24z 24T .   >24Z >24z 24T .   >24Z >24z _12T    >24z >24Z 24t .   >24z >24Z 24t .   >24z >24Z _12t
@@ -303,9 +303,9 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 //>24z >24Z 24t .   >24z >24Z 24t .   >24z >24Z _12t    >24Z >24z 24T .   >24Z >24z 24T .   >24Z >24z _12T
 //>24Z >24z 24T .   >24Z >24z 24T .   >24Z >24z 24T .   >24z >24Z 24t .   >24z >24Z 24t .   >24z >24Z _12t
 
-/marker 2.5
+/marker 2.4
 // 7:40
-// ----------- Exercise 2.5, 2 pulse buzzes with 12th's, accents at first, and then at last
+// ----------- Exercise 2., 2 pulse buzzes with 12th's, accents at first, and then at last
 >24Z >24z 12T  >24z >24z 12t  >24Z >24z 12T  >24z >24z 12t  >24Z >24z 12T   >24z >24z 12t
 24Z 24z ^12T  24z 24z ^12t   24Z 24z ^12T  24z 24z ^12t   24Z 24z ^12T  24z 24z ^12t
 >24Z >24z 12T  >24z >24z 12t  >24Z >24z 12T  >24z >24z 12t  >24Z >24z 12T   >24z >24z 12t
@@ -313,18 +313,18 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 
 // Sync
 1r
-/marker 2.6
+/marker 2.5
 // 5:57
-// ----------- Exercise 2.6, 3 pulse buzzes with 24th's, 4 bars
+// ----------- Exercise 2., 3 pulse buzzes with 24th's, 4 bars
 ^24T . . 24z . .   ^24T . . 24z . .   ^24T . . 24z . .   ^24T . . . . .
 24Z . . ^24t . .   24Z . . ^24t . .   24Z . . ^24t . .   ^12T 24t 8T
 ^24t . . 24Z . .   ^24t . . 24Z . .   ^24t . . 24Z . .   ^24t . . . . .
 24z . . ^24T . .   24z . . ^24T . .   24z . . ^24T . .   ^12t 24T 8t
 
 
-/marker 2.7
+/marker 2.6
 // 8:10
-// ----------- Exercise 2.7, 3 pulse buzzes with 8th's, 4 bars
+// ----------- Exercise 2., 3 pulse buzzes with 8th's, 4 bars
 8T 24z . .   8T 24z . .   8T 24z . .   8T .
 24Z . . 8t   24Z . . 8t   24Z . . 8t   12T 24t 8T
 8t 24Z . .   8t 24Z . .   8t 24Z . .   8t .
@@ -333,7 +333,7 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 
 // Sync
 //1r
-// ----------- Exercise 2.7.1, combination 6's  6/8 feel
+// ----------- Exercise 2., combination 6's  6/8 feel
 //marker 2.7.1
 // Scottish style 6/8 rolls are lazy, and how they're played may partly depend on the tempo
 // which could range from 72 to 90 or so for a 6/8 march.  Plus, they're not played as written.
@@ -363,9 +363,9 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 
 
 
-/marker 2.8
+/marker 2.7
 // 8:23
-// ----------- Exercise 2.8, 4 pulse buzzes with 24th's, 4 bars
+// ----------- Exercise 2., 4 pulse buzzes with 24th's, 4 bars
 24T . . . . .  24Z . . . 12T    24t . . . . .  24z . . . 12t
 24T . . . . .  24Z . . . 12T    24z . . . 12t  24Z . . . 12T
 24t . . . . .  24z . . . 12t    24T . . . . .  24Z . . . 12T
@@ -373,9 +373,9 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 
 // Sync
 //4r 4r . .
-/marker 2.9
+//marker 2.
 // 8:37
-// ----------- Exercise 2.9, Accented 24th note buzzes, 4 bars
+// ----------- Exercise 2., Accented 24th note buzzes, 4 bars
 //^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
 //^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
 //^24T . . ^24t . .  ^24T . . ^24t . .  ^24Z . . ^24z . .  ^24Z . . ^24z . .
@@ -383,17 +383,17 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 
 // Sync
 4r 4r . .
-// ----------- Exercise 2.10, Roll-off rest timing, 8 bars
-/marker 2.10
+// ----------- Exercise 2., Roll-off rest timing, 8 bars
+/marker 2.8
 // 8:53
-/f ^24T . . _24t . .  /< 24Z . . . . . _4T /fff 4r
+/f ^24T . . 24t . .  /< 24Z . . . . . _4T /fff 4r
 /f /< 24Z . . . . .   . . . . . .  _4T /fff 4r
-/f ^24T . . _24t . .  /< 24Z . . . . . _4T /fff 4r
+/f ^24T . . 24t . .  /< 24Z . . . . . _4T /fff 4r
 /f /< 24Z . . . . .   . . . . . .  _4T /fff 4r
 // Now stop the the click during rests
-/f ^24T . . _24t . .  /< 24Z . . . . . _4T /fff 4r
+/f ^24T . . 24t . .  /< 24Z . . . . . _4T /fff 4r
 /f /< 24Z . . . . .   . . . . . .  _4T /fff 4r
-/f ^24T . . _24t . .  /< 24Z . . . . . _4T /fff 4r
+/f ^24T . . 24t . .  /< 24Z . . . . . _4T /fff 4r
 /f /< 24Z . . . . .   . . . . . .  _4T /fff 4r
 
 // tag ending
@@ -495,7 +495,7 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 // Sync  Nec?
 //1r
 // ----------- Exercise 3.2, tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, again 18th note buzzes, 8 bars
-/marker 3.2
+/marker 3.
 // 10:54
 ///ff
 //^12T T T T T T   ^36T 18z >12T  ^36T 18z >12T  ^36T 18z >12T
@@ -512,8 +512,8 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 // Sync   Hmmmmm reason for sync here is because we go back into 16ths from 24ths/12ths???????  Move this?
 //1r
 // 11:23
-// ----------- Exercise 3.3, tap 1-buzzPulse tap, alternating "4 stroke", but second tap quiet, 24th note buzzes, faster than prev, Advanced
-///marker 3.3
+// ----------- Exercise 3., tap 1-buzzPulse tap, alternating "4 stroke", but second tap quiet, 24th note buzzes, faster than prev, Advanced
+///marker 3.
 ///ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
 ///ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
 ///ff ^16T /mp 16T  /ff ^16t /mp 16t  /ff ^16T /mp 16T  /ff ^16t /mp 16t   /ff  ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
@@ -525,13 +525,13 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 //^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t    ^48T 24z 16T   ^48t 24Z 16t   ^48T 24z 16T   ^48t 24Z 16t
 
 
-// No Exercise 3.4 at this time
+// No Exercise 3. at this time
 
 // Sync
 //4T 4r . .
 //4T 4r
-// ----------- Exercise 3.5, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.
-/marker 3.5
+// ----------- Exercise 3.2, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.
+/marker 3.2
 // 11:53
 /ff
 ^24T t ^T  ^24t T ^t  ^24T t ^T  ^24t T ^t       ^36T 18z ^24T   ^36t 18Z ^24t   ^36T 18z ^24T   ^36t 18Z ^24t
@@ -547,8 +547,8 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 
 
 // put in Sync here?
-// ----------- Exercise 3.6, tap 2-buzzPulse, 5 stroke Tap Rolls soft, 4 bars
-/marker 3.6
+// ----------- Exercise 3.3, tap 2-buzzPulse, 5 stroke Tap Rolls soft, 4 bars
+/marker 3.3
 // 12:06
 //mp
 ^24T . . ^. . .    ^. . . ^. . .   ^40T 20z .  ^40t 20Z .   ^40T 20z .  ^40t 20Z .
@@ -578,8 +578,8 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 // Sync
 //^4T 4r . .
 // 12::23
-// ----------- Exercise 3.7, tap, 2-buzzPulse tap tap, "6 stroke with extra tap at end", 6/8 feel, alternating
-/marker 3.7
+// ----------- Exercise 3.4, tap, 2-buzzPulse tap tap, "6 stroke with extra tap at end", 6/8 feel, alternating
+/marker 3.4
 /ff
 ^24T . . >. ^12T   ^24t . . >. ^12t   ^40T 20z . >24t ^12T   ^40t 20Z . >24T ^12t
 ^24T . . >. ^12T   ^24t . . >. ^12t   ^40T 20z . >24t ^12T   ^40t 20Z . >24T ^12t
@@ -588,8 +588,8 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 
 
 
-// ----------- Exercise 3.8, tap 3-buzzPulse tap, "7 or 8 stroke depending", 6/8 feel, alternating
-/marker 3.8
+// ----------- Exercise 3.5, tap 3-buzzPulse tap, "7 or 8 stroke depending", 6/8 feel, alternating
+/marker 3.5
 // 12:35
 /ff
 ^24T . . . _12T  ^24t . . . _12t   ^42T 21z . . _12T   ^42t 21Z . . _12t
@@ -598,7 +598,7 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 ^42T 21z . . _12T   ^42t 21Z . . _12t   ^42T 21z . . _12T   ^42t 21Z . . _12t
 
 
-// ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
+// ----------- Exercise 3.6, 6-buzzPulse Tap Rolls
 /marker 3.9
 // 12:50
 /ff
@@ -608,7 +608,7 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 ^44T 22z .  . . .    ^44T 22z .  . . .   ^44T 22z .  . . .    ^44T 22z .  . . .
 
 // tag ending
-2T  /mp _44T 22z .  . . . _4T /ff
+^2T  /mp _44T 22z .  . . . _4T /ff
 
 
 
@@ -1005,12 +1005,12 @@ N N N 8N N
 >8N . >12N 24n 12N 24N
 >8n . >12n 24N 12n 24n
 >8N . >12N 24n 12N 24N
->12n 24N 12n 24n  >12N 24n 12N 24N
+>12n 24N 12n 24n  >12N 24n 8N
 //// Reverse
 >8n . >12n 24N 12n 24n
 >8N . >12N 24n 12N 24N
 >8n . >12n 24N 12n 24n
->12N 24n 12N 24N  >12n 24N 12n 24n
+>12N 24n 12N 24N  >12n 24N 8n
 
 
 // ----------- Exercise 1.2, move the accent on the paradiddle to be 2nd
@@ -1090,14 +1090,14 @@ N N N 8N N
 12n n n n n n 12N N N N N N
 12n n n n n n 12n n n n n n
 
-// ----------- Exercise 2.4, 2 pulse buzzes with 24th's
+// ----------- Exercise 2., 2 pulse buzzes with 24th's
 //6N . 12N .  6N . 12N .
 //6N . .      6N . 12N .
 
 //6N . 12N .  6N . 12N .
 //6N . .      6N . 12N .
 
-// ----------- Exercise 2.5, 2 pulse buzzes with 12th's
+// ----------- Exercise 2., 2 pulse buzzes with 12th's
 >12N 12N >12n 12n >12N 12N   >12n 12n >12N 12N >12n 12n
 12N >12N 12n >12n 12N >12N   12n >12n 12N >12N 12n >12n
 >12N 12N >12n 12n >12N 12N   >12n 12n >12N 12N >12n 12n
@@ -1107,7 +1107,7 @@ N N N 8N N
 // Sync
 1r
 
-// ----------- Exercise 2.6, 3 pulse buzzes with 24th's
+// ----------- Exercise 2., 3 pulse buzzes with 24th's
 24N . . 8n   24N . . 8n   24N . . 8n   8N .
 8N 24n . .   8N 24n . .   8N 24n . .   12N 24n 8N
 24n . . 8N   24n . . 8N   24n . . 8N   8n .
@@ -1115,7 +1115,7 @@ N N N 8N N
 
 
 
-// ----------- Exercise 2.7, 3 pulse buzzes with 8th's
+// ----------- Exercise 2., 3 pulse buzzes with 8th's
 8N 8n   8N 8n   8N 8n   8N .
 8N 8n   8N 8n   8N 8n   12N 24n 8N
 8n 8N   8n 8N   8n 8N   8n .
@@ -1137,7 +1137,7 @@ N N N 8N N
 
 
 
-// ----------- Exercise 2.8, 4 pulse buzzes with 24th's
+// ----------- Exercise 2., 4 pulse buzzes with 24th's
 12N . .  4n  12N . .  4n
 12N . .  6n  12n  6N 12N  6n 12n
 12N . .  4n  12N . .  4n
@@ -1145,7 +1145,7 @@ N N N 8N N
 
 // Sync
 //4r 4r . .
-// ----------- Exercise 2.9, Accented 24th note buzzes
+// ----------- Exercise 2., Accented 24th note buzzes
 //8N . . . . . . .
 //8N . . . . . . .
 //8N . . . . . . .
@@ -1153,7 +1153,7 @@ N N N 8N N
 
 // Sync
 1r
-// ----------- Exercise 2.10, Roll-off rest timing
+// ----------- Exercise 2., Roll-off rest timing
 /f
 8N . 4N 8N 8r 4r
 4N . 8N 8r 4r
@@ -1221,7 +1221,7 @@ N N N 8N N
 
 // Sync
 //1r
-// ----------- Exercise 3.2, tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
+// ----------- Exercise 3., tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
 //12N . . . . . 2r
 //12n . . . . . 2r
 //12N . . . . . 2r
@@ -1238,7 +1238,7 @@ N N N 8N N
 
 // Sync
 //1r
-//// ----------- Exercise 3.3, tap 1-buzzPulse tap,  alternating "4 stroke"
+//// ----------- Exercise 3., tap 1-buzzPulse tap,  alternating "4 stroke"
 //8N . . .  16N 16N 16n 16n   16N 16N 16n 16n
 //8N . . .  16N 16N 16n 16n   16N 16N 16n 16n
 //8N . . .  16N 16N 16n 16n   16N 16N 16n 16n
@@ -1259,7 +1259,7 @@ N N N 8N N
 // Sync  shorter than normal
 //8N 8r 4r . .
 //8r 8r
-// ----------- Exercise 3.5, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.
+// ----------- Exercise 3.2, 1-buzzPulse, 2 tap, which means "4 stroke buzz roll", 4 bars.
 8N . . . . . . .
 8N . . . . . . .
 8N . . . . . . .
@@ -1275,7 +1275,7 @@ N N N 8N N
 
 
 
-// ----------- Exercise 3.6, 2-buzzPulse, 5 stroke Tap Rolls soft
+// ----------- Exercise 3.3, 2-buzzPulse, 5 stroke Tap Rolls soft
 8N . . . . . . .
 8N . . . . . . .
 8N . . . . . . .
@@ -1287,7 +1287,7 @@ N N N 8N N
 //8N . . . . . . .
 
 
-// ----------- Exercise 3.6.1, I think this is just a combination of 6's, (inverted too), and a 7, and a 5.
+// ----------- Exercise 3., I think this is just a combination of 6's, (inverted too), and a 7, and a 5.
 // This is 6/4
 
 //12N 8n 24N 8n   12N 8n 24N 8n   24N . . 8n
@@ -1302,7 +1302,7 @@ N N N 8N N
 
 // Sync
 //1r
-// ----------- Exercise 3.7, tap, 2-buzzPulse tap, "6 stroke"
+// ----------- Exercise 3.4, tap, 2-buzzPulse tap, "6 stroke"
 12N 24r 24n 12N   12n 24r 24N 12n   12N 24r 24n 12N   12n 24r 24N 12n
 12N 24r 24n 12N   12n 24r 24N 12n   12N 24r 24n 12N   12n 24r 24N 12n
 12N 24r 24n 12N   12n 24r 24N 12n   12N 24r 24n 12N   12n 24r 24N 12n
@@ -1311,7 +1311,7 @@ N N N 8N N
 
 
 
-// ----------- Exercise 3.8, tap 3-buzzPulse, "7 stroke"
+// ----------- Exercise 3.5, tap 3-buzzPulse, "7 stroke"
 6N 12N   6n 12n   6N 12N   6n 12n
 6N 12N   6n 12n   6N 12N   6n 12n
 6N 12N   6n 12n   6N 12N   6n 12n
@@ -1320,7 +1320,7 @@ N N N 8N N
 
 
 
-// ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
+// ----------- Exercise 3.6, 6-buzzPulse Tap Rolls
 4N . . .
 4N . . .
 4N . . .
@@ -1652,7 +1652,7 @@ B 4B 8r 8B
 
 
 
-// ----------- Exercise 2.4, 2 pulse buzzes with 24th's
+// ----------- Exercise 2., 2 pulse buzzes with 24th's
 //4B . . .
 //4B . . .
 
@@ -1660,7 +1660,7 @@ B 4B 8r 8B
 //4B . . .
 
 
-// ----------- Exercise 2.5, 2 pulse buzzes with 12th's
+// ----------- Exercise 2., 2 pulse buzzes with 12th's
 4B . . .
 4B . . .
 4B . . .
@@ -1669,14 +1669,14 @@ B 4B 8r 8B
 // Sync
 1r
 
-// ----------- Exercise 2.6, 3 pulse buzzes with 24th's
+// ----------- Exercise 2., 3 pulse buzzes with 24th's
 4B . . .
 4B . . 8B .
 4B . . .
 4B . . 8B .
 
 
-// ----------- Exercise 2.7, 3 pulse buzzes with 8th's
+// ----------- Exercise 2., 3 pulse buzzes with 8th's
 4B . . .
 4B . . 8B .
 4B . . .
@@ -1684,7 +1684,7 @@ B 4B 8r 8B
 
 // Sync
 //1r
-// ----------- Exercise 2.7.1, combination 6's  6/8 feel, alternating
+// ----------- Exercise 2., combination 6's  6/8 feel, alternating
 // Scottish style 6/8 rolls are lazy, and how they're played may partly depend on the tempo
 // which could range from 72 to 90 or so for a 6/8 march.  Plus, they're not played as written.
 // Americans seem to try to play it as written, which requires different pulse speeds depending
@@ -1694,7 +1694,7 @@ B 4B 8r 8B
 //1r 1r 1r 1r   1r 1r 1r 1r
 
 
-// ----------- Exercise 2.8, 4 pulse buzzes with 24th's
+// ----------- Exercise 2., 4 pulse buzzes with 24th's
 /ff
 4B . . .
 4B . . .
@@ -1703,7 +1703,7 @@ B 4B 8r 8B
 
 // Sync
 //4r 4r . .
-// ----------- Exercise 2.9, Accented 24th note buzzes
+// ----------- Exercise 2., Accented 24th note buzzes
 //8B . . . . . . .
 //8B . . . . . . .
 //8B . . . . . . .
@@ -1711,7 +1711,7 @@ B 4B 8r 8B
 
 // Sync
 1r
-// ----------- Exercise 2.10, Roll-off rest timing
+// ----------- Exercise 2., Roll-off rest timing
 /ff
 4B . . 4r
 4B . . 4r
@@ -1776,7 +1776,7 @@ B 4B 8r 8B
 
 // Sync
 //1r
-// ----------- Exercise 3.2, tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
+// ----------- Exercise 3., tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
 //4B . 2r
 //4B . 2r
 //4B . 2r
@@ -1793,7 +1793,7 @@ B 4B 8r 8B
 
 // Sync
 //1r
-//// ----------- Exercise 3.3, tap 1-buzzPulse tap,  alternating "4 stroke"
+//// ----------- Exercise 3., tap 1-buzzPulse tap,  alternating "4 stroke"
 //4B . 8B . . .
 //4B . 8B . . .
 //4B . 8B . . .
@@ -1814,7 +1814,7 @@ B 4B 8r 8B
 // Sync shorter than normal
 //8B 8r 4r . .
 //8r 8r
-// ----------- Exercise 3.5, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
+// ----------- Exercise 3.2, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
 /ff
 2B .
 2B .
@@ -1830,7 +1830,7 @@ B 4B 8r 8B
 
 
 
-// ----------- Exercise 3.6, 2-buzzPulse, 5 stroke Tap Rolls soft
+// ----------- Exercise 3.3, 2-buzzPulse, 5 stroke Tap Rolls soft
 /ff
 2B .
 2B .
@@ -1843,7 +1843,7 @@ B 4B 8r 8B
 //2B .
 
 
-// ----------- Exercise 3.6.1, I think this is just a combination of 6's, (inverted too), and a 7, and a 5.
+// ----------- Exercise 3., I think this is just a combination of 6's, (inverted too), and a 7, and a 5.
 // This is 6/4
 
 //8B 8r .   8B 8r .   4B
@@ -1859,7 +1859,7 @@ B 4B 8r 8B
 
 // Sync
 //1r
-// ----------- Exercise 3.7, tap, 2-buzzPulse tap, "6 stroke"
+// ----------- Exercise 3.4, tap, 2-buzzPulse tap, "6 stroke"
 /ff
 4B . . .
 4B . . .
@@ -1868,7 +1868,7 @@ B 4B 8r 8B
 
 
 
-// ----------- Exercise 3.8, tap 3-buzzPulse, "7 stroke"
+// ----------- Exercise 3.5, tap 3-buzzPulse, "7 stroke"
 /ff
 4B . . .
 4B . . .
@@ -1877,7 +1877,7 @@ B 4B 8r 8B
 
 
 
-// ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
+// ----------- Exercise 3.6, 6-buzzPulse Tap Rolls
 /ff
 2B .
 2B .
@@ -2199,7 +2199,7 @@ B 4B 8r 8B
 
 
 
-// ----------- Exercise 2.4, 2 pulse buzzes with 24th's
+// ----------- Exercise 2, 2 pulse buzzes with 24th's
 //4M . . .
 //4M . . .
 
@@ -2207,7 +2207,7 @@ B 4B 8r 8B
 //4M . . .
 
 
-// ----------- Exercise 2.5, 2 pulse buzzes with 12th's
+// ----------- Exercise 2., 2 pulse buzzes with 12th's
 4M . . .
 4M . . .
 4M . . .
@@ -2215,14 +2215,14 @@ B 4B 8r 8B
 
 // Sync
 /ff ^24M . . 8M  ^24M . . 8M  ^24M . . 8M  ^12M 24M ^8M /mf
-// ----------- Exercise 2.6, 3 pulse buzzes with 24th's
+// ----------- Exercise 2., 3 pulse buzzes with 24th's
 _8M .  _8M .  _8M .  _8M .
 _8M .  _8M .  _8M .  _8M .
 _8M .  _8M .  _8M .  _8M .
 _8M .  _8M .  _8M .  _8M .
 
 
-// ----------- Exercise 2.7, 3 pulse buzzes with 8th's
+// ----------- Exercise 2., 3 pulse buzzes with 8th's
 _8M .  _8M .  _8M .  _8M .
 _8M .  _8M .  _8M .  _8M .
 _8M .  _8M .  _8M .  _8M .
@@ -2231,7 +2231,7 @@ _8M .  _8M .  _8M .  _8M .
 
 // Sync
 ///ff ^8M /mf /< 24M . .     ^8M /ff /mf /< 24M . .     ^8M /ff /mf 24M _12M /ff ^8M /mf 24M _12M /mf
-// ----------- Exercise 2.7.1, combination 6's  6/8 feel, alternating
+// ----------- Exercise 2., combination 6's  6/8 feel, alternating
 // Scottish style 6/8 rolls are lazy, and how they're played may partly depend on the tempo
 // which could range from 72 to 90 or so for a 6/8 march.  Plus, they're not played as written.
 // Americans seem to try to play it as written, which requires different pulse speeds depending
@@ -2244,7 +2244,7 @@ _8M .  _8M .  _8M .  _8M .
 // Sync
 ///ff 24M . . . . .  8M . 4M . /mf
 
-// ----------- Exercise 2.8, 4 pulse buzzes with 24th's
+// ----------- Exercise 2., 4 pulse buzzes with 24th's
 4M . . .
 4M . . .
 4M . . .
@@ -2257,7 +2257,7 @@ _8M .  _8M .  _8M .  _8M .
 ///ff /decresc 48M . . . . .  /ppp
 ///ff /decresc 48M . . . . .  /ppp
 
-// ----------- Exercise 2.9, Accented 24th note buzzes
+// ----------- Exercise 2., Accented 24th note buzzes
 //4M . . .
 //4M . . .
 //4M . . .
@@ -2265,7 +2265,7 @@ _8M .  _8M .  _8M .  _8M .
 
 // sync
 /ff ^24M . . . . .  ^. . . . . .  ^4M ^. /mf
-// ----------- Exercise 2.10, Roll-off rest timing
+// ----------- Exercise 2., Roll-off rest timing
 4M . 8M . . .
 4M . 8M . . .
 4M . 8M . . .
@@ -2331,7 +2331,7 @@ _8M .  _8M .  _8M .  _8M .
 
 // Sync
 ///ff ^12M . .  ^12M . .    ^12M .  ^12M .  ^12M .     /mf
-// ----------- Exercise 3.2, tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
+// ----------- Exercise 3., tap 1-buzzPulse tap, "4 stroke" Faster/shorter, based on 12th note tempo, 8 bars
 //4M . . .
 //4M . . .
 //4M . . .
@@ -2349,7 +2349,7 @@ _8M .  _8M .  _8M .  _8M .
 
 // Sync
 ///ff 8M . . .  >16M . >. . >. . >. . /mf
-//// ----------- Exercise 3.3, tap 1-buzzPulse tap,  "4 stroke"
+//// ----------- Exercise 3., tap 1-buzzPulse tap,  "4 stroke"
 //4M . . .
 //4M . . .
 //4M . . .
@@ -2370,7 +2370,7 @@ _8M .  _8M .  _8M .  _8M .
 // Sync shorter than normal
 ///ff ^24M . .  ^24M . .  ^24M . .  ^24M . .  ^12M ^24M  ^12M ^24M  ^12M ^24M  ^8M
 // /ff ^24M . ^.  ^24M . ^.  ^24M . ^.   ^8M
-// ----------- Exercise 3.5, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
+// ----------- Exercise 3.2, 1-buzzPulse 2 tap, 4 stroke tap roll, simulated, 4 bars
 
 4M . . .
 4M . . .
@@ -2385,7 +2385,7 @@ _8M .  _8M .  _8M .  _8M .
 
 
 
-// ----------- Exercise 3.6, 2-buzzPulse, 5 stroke Tap Rolls soft
+// ----------- Exercise 3.3, 2-buzzPulse, 5 stroke Tap Rolls soft
 4M . . .
 4M . . .
 4M . . .
@@ -2397,7 +2397,7 @@ _8M .  _8M .  _8M .  _8M .
 //4M . . .
 
 
-// ----------- Exercise 3.6.1, I think this is just a combination of 6's, (inverted too), and a 7, and a 5.
+// ----------- Exercise 3., I think this is just a combination of 6's, (inverted too), and a 7, and a 5.
 // This is 6/4
 //4M . . . .  // right???????
 //4M .
@@ -2413,7 +2413,7 @@ _8M .  _8M .  _8M .  _8M .
 // Sync
 ///ff  ^24M . . ^24M 12M   ^24M . . ^24M 12M   12M 24r 24M 12M   12M 24r 24M 12M     /mf
 //// Back on beat every 3 cycles.
-// ----------- Exercise 3.7, tap, 2-buzzPulse tap, "6 stroke"
+// ----------- Exercise 3.4, tap, 2-buzzPulse tap, "6 stroke"
 4M . . .
 4M . . .
 4M . . .
@@ -2421,14 +2421,14 @@ _8M .  _8M .  _8M .  _8M .
 
 
 
-// ----------- Exercise 3.8, tap 3-buzzPulse, "7 stroke"
+// ----------- Exercise 3.5, tap 3-buzzPulse, "7 stroke"
 4M . . .
 4M . . .
 4M . . .
 4M . . .
 
 
-// ----------- Exercise 3.9, 6-buzzPulse Tap Rolls
+// ----------- Exercise 3.6, 6-buzzPulse Tap Rolls
 4M . . .
 4M . . .
 4M . . .
