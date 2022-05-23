@@ -386,18 +386,18 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 // ----------- Exercise 2., Roll-off rest timing, 8 bars
 /marker 2.8
 // 8:53
-/f ^24T . . 24t . .  /< 24Z . . . . . _4T /fff 4r
+/f _24T . . _24t . .  /< 24Z . . . . . _4T /fff 4r
 /f /< 24Z . . . . .   . . . . . .  _4T /fff 4r
-/f ^24T . . 24t . .  /< 24Z . . . . . _4T /fff 4r
+/f _24T . . _24t . .  /< 24Z . . . . . _4T /fff 4r
 /f /< 24Z . . . . .   . . . . . .  _4T /fff 4r
 // Now stop the the click during rests
-/f ^24T . . 24t . .  /< 24Z . . . . . _4T /fff 4r
+/f _24T . . _24t . .  /< 24Z . . . . . _4T /fff 4r
 /f /< 24Z . . . . .   . . . . . .  _4T /fff 4r
-/f ^24T . . 24t . .  /< 24Z . . . . . _4T /fff 4r
+/f _24T . . _24t . .  /< 24Z . . . . . _4T /fff 4r
 /f /< 24Z . . . . .   . . . . . .  _4T /fff 4r
 
 // tag ending
-/mp 24Z . . . . . 4T
+/mp 24Z . . . . . _4T
 
 
 
@@ -456,16 +456,16 @@ _12t ^8T 24t   _12T ^8t 24T   12r ^24t 12T 24t  _12T 24t 8T
 /marker 3.1
 //
 /ff
-^12T       ^12T       ^12T       ^36T 18z   ^36T 18z   ^12T
-^12t       ^12t       ^12t       ^36t 18Z   ^36t 18Z   ^12t
-^12T       ^12T       ^12T       ^36T 18z   ^36T 18z   ^36T 18z
-^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^36T 18z   ^12T
+_12T       _12T       _12T       _36T 18z   _36T 18z   _12T
+_12t       _12t       _12t       _36t 18Z   _36t 18Z   _12t
+_12T       _12T       _12T       _36T 18z   _36T 18z   _36T 18z
+_36T 18z   _36T 18z   _36T 18z   _36T 18z   _36T 18z   _12T
 
 //// repeat, reverse hand order
-^12t      ^12t      ^12t      ^36t 18Z   ^36t 18Z   ^12t
-^12T      ^12T      ^12T      ^36T 18z   ^36T 18z   ^12T
-^12t      ^12t      ^12t      ^36t 18Z   ^36t 18Z   ^36t 18Z
-^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^36t 18Z   ^12t
+_12t      _12t      _12t      _36t 18Z   _36t 18Z   _12t
+_12T      _12T      _12T      _36T 18z   _36T 18z   _12T
+_12t      _12t      _12t      _36t 18Z   _36t 18Z   _36t 18Z
+_36t 18Z   _36t 18Z   _36t 18Z   _36t 18Z   _36t 18Z   _12t
 
 
 // test sync
