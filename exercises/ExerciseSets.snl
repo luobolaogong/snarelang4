@@ -1368,7 +1368,7 @@ B 4B 8r 8B
 
 
 //tempo 110
-/fff  ^8M . ^8M . ^8M . ^8M .  /f
+/ff  ^8M . ^8M . ^8M . ^8M .  /f
 
 // ------------ Exercise 0.5, loud and soft contrast
 4M . . .
@@ -1379,7 +1379,7 @@ B 4B 8r 8B
 4M . . .
 4M . . .
 4M . . .
-4M . ^16M . . . ^16M . . .
+4M . _16M . . . _16M . . .
 
 
 
@@ -1449,15 +1449,15 @@ B 4B 8r 8B
 
 
 // ----------- Exercise 1.1, move the accent on the non-paradiddle to be 2nd
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
+>8M 8M  8M 8M
+>8M 8M  8M 8M
+>8M 8M  8M 8M
+>8M 8M  8M 8M
 // reverse
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
->8M 8M  >8M 8M
+>8M 8M  8M 8M
+>8M 8M  8M 8M
+>8M 8M  8M 8M
+>8M 8M  8M 8M
 
 
 // ----------- Exercise 1.2, 12-24 long pickup timing.  Check JL for accent placement
@@ -1511,6 +1511,12 @@ B 4B 8r 8B
 
 
 //////  SET 2 - BUZZ ROLL DEVELOPMENT ////////
+//Sync  // wrong
+/ff /decresc 48M . . . . .   . . . . . . /ppp
+/ff /decresc 48M . . . . .   . . . . . . /ppp
+/ff /decresc 48M . . . . .   . . . . . . /ppp
+/ff /decresc 48M . . . . .   . . . . . . /ppp
+// end sync
 // ----------- Exercise 2.0, simulated QUARTER NOTE pulse buzzes
 /f
 4M . . .
@@ -1673,10 +1679,10 @@ _8M .  _8M .  _8M .  _8M .
 4M . . .
 4M . . .
 4M . . .
-4M . 4r 4r
+4M . . .
 
 // tag ending
-2r
+4M 4r . .
 
 
 
@@ -2142,7 +2148,7 @@ _8M .  _8M .  _8M .  _8M .
 //8T T T T T T T T
 ///cresc
 //8T T T T T T T T
-///fff
+///ff
 //8T T T T T T T T
 //12T T T T T T T T T T T T
 //12T T T T T T T T T T T T
