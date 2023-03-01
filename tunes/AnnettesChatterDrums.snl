@@ -1,55 +1,56 @@
-// Annette's Chatter
+// Annette's Chatter -- Snare, bass, met   2/12/23
 // 6/8 Jig
 // J. Reid Maxwell
 
 /track met
-
-//// Need time to sync audio and video with 8 quarter notes (4 for nothing then 4 quarters)
-//// Then 4 for nothing.
-//// Then roll off for pipers to pump up.
-////
-///time 4/4
-///tempo 136
-//_4M _. _12M . . _4M    _4M _. _. _.   // sync audio and video, 4 + 4
-//_20M . . . .   _. . . . .   _4M _.   // 4 for nothing
-//_4M _. _20M . . . .   _. . . . .    _4M _. _10M 20M 10M _4M  // roll off   8 counts
-
-
-/time 12/8
-/tempo 136    // 136 recording
-/marker Annette's Chatter
-
-8:3M . . .    . . . .    . . . .    . . . .
-8:3M . . .    . . . .    . . . .    . . . .
-
-8:3M . . .    . . . .    . . . .    . . . .
-8:3M . . .    . . . .    . . . .    . . . .
-
-8:3M . . .    . . . .    . . . .    . . . .
-8:3M . . .    . . . .    . . . .    . . . .
-
-8:3M . . .    . . . .    . . . .    . . . .
-8:3M . . .    . . . .    . . . .    . . . .
-
-
-
-/track snare  // this causes a new track/track which we don't want if we string pieces together
-
-//1r 1r
-//1r
-///marker RollOff
-//>20Z . . . .   . . . . .  >2T   >20Z . . . .   . . . . .  >2T
-
+/channel 1
 //time 12/8
+/time 6/8
+//tempo 136    // Maxwell solo https://youtu.be/dxmITiQysOI?t=83
+/tempo 126    // SFU according to https://youtu.be/ge-Sm_XJckY?t=89
+/tempo 8:3=100   // does this work????  If so, easy to set desired tempo without percentage
+/marker AChat
+
+// Count off
+8:3M . 8M . . 8:3M
+/marker Pt1
+8:3M . . .    . . . .    . . . .    . . . .
+/marker Pt1Rpt
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker Pt2
+8:3M . . .    . . . .    . . . .    . . . .
+/marker Pt2Rpt
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker Pt3
+8:3M . . .    . . . .    . . . .    . . . .
+/marker Pt3Rpt
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker Pt4
+8:3M . . .    . . . .    . . . .    . . . .
+/marker Pt4Rpt
+8:3M . . .    . . . .    . . . .    . . . .
+
+
+//marker Annette's Chatter
+/track snare  // this causes a new track/track which we don't want if we string pieces together
+/channel 2
+//time 6/8
 //tempo 136    // recording: 136
+// Dynamics could be better.  Fix later.
 
-
+// Count off
+8:3r . . .
+/ff
+// Pt1
 // Line 1
 32:3T 32:3z . .  8t . ^8D    16T . . .   ^8T ^8t . .
 ^8F 8t .   ^8f 8T ^8f    16t . . . ^8T  ^8t . .
 //8F 8t ^16T 16t 16t 16T 16T ^16t    ^16T 16t 16t 16T 16T ^16t  ^8T ^8t . .  // 16 is a sextuplet
-8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quntuplet in 6/8
-^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quintuplet in 6/8
+^8F 24t 24T 24T 8t   >8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 
 // Line 2
@@ -59,47 +60,149 @@
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 
-/marker Pt2
+//marker Pt2
 //Line 3
-^8T . .   ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+^8T . .   /p /cresc ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T /ff
 ^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
-16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+//16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+/p /cresc 16T 16z >8T 16t 16Z    ^16t 16Z . .    ^16t 16Z . .   16t . . 16t   /ff  ^8T . 8t
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
-
 
 // Repeat Line 3
-^8T . .   12z . .  ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+^8T . .   /p /cresc ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T /ff
 ^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
-16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+/p /cresc 16T 16z >8T 16t 16Z    ^16t 16Z . .    ^16t 16Z . .    16t . . 16t   /ff  ^8T . 8t
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
-/marker Pt3
+//marker Pt3
 // Line 4
-8T 8f >8T  8t 8F >8t   8T 8f 8T  8D 16T . . .
->8T . 16T . . 16T  >8t >8T . 16T 16T 8t  >8F 8t 8t
-8T 8F . 8t 8F .  8T 8f 8T  8F 8T .
+/p /cresc 8T 8f >8T  8t 8F >8t   8T 8f 8T  8t 16T . . . /ff
+// >8T . 16T . . 16T  >8t >8T . 16T 16T 8t  >8F 8t 8t
+8T . ^40:3T t T T ^40:3t ^8T   8t 16F 16T 8t   8T t t
+8T 8f . 8t 8F .  8T 8f 8T  8F 8T .
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 // Line 5
-8T 8f >8T  8t 8F >8t  8T 8f 8T   8T 16T . . .
->8T .  >16T . . 16T   8t >8T   8t  24T 24t 24t 8T  8t . .
-8F 8t .  8t 8F 8t  8T 8f 8T  >8t . .
+/p /cresc 8T 8f >8T  8t 8F >8t  8T 8f 8T   8T 16T . . . /ff
+//>8T .  >16T . . 16T   8t >8T   8t  24T 24t 24t 8T  8t . .
+8T . ^40:3T t T T ^40:3t ^8T   8t 24T 24t 24t   8t   8T t t
+/p /cresc 8F 8t .  8t 8F 8t  8T 8f 8T  >8t . . /ff
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
-/marker Pt4
+//marker Pt4
 // Line 6
->16T . . . . .   ^12t 12z .    ^12t 12z .    16T . >8T  8t . .
-^8F  24t 24T 24T  8t  4F 12F 12z .  16t . 16t 16t   >8T . .
+>16T . . . . .   /cresc ^12t 12z .    ^12t 12z .    16T . >8T   /fff ^8t . . /ff
+^8F  24t 24T 24T  8t  4T ^12F 12z .  16t . 16t 16t   >8T . .
 ^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 
 // Repeat Line 6
->16T . . . . .   ^12t 12z .    ^12t 12z .    16T . >8T  8t . .
-^8F  24t 24T 24T  8t  4F 12F 12z .  16t . 16t 16t   >8T . .
+>16T . . . . .   /cresc ^12t 12z .    ^12t 12z .    16T . >8T  /fff 8t . . /ff
+^8F  24t 24T 24T  8t  4T ^12F 12z .  16t . 16t 16t   >8T . .
 ^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8:3f
+// Hold last note?
+//^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . 24t 12Z  32:3T 32:3z . .
 
+
+//
+// Bass -- prob could be written better
+// Check out example for tenor:
+// https://youtu.be/ge-Sm_XJckY?t=89
+/track tenor
+/channel 2
+// Currently tenor part is identical with bass.  Shouldn't be.
+// Perhaps play straight quarter notes, except for syncopated accents.
+//
+// Count off
+8:3r . . .
+/p
+// part 1  (2 12/8 bars per line)
+>8:3N 8n 4r     >8:3N 8n 4r        >8:3N 8n 4r     >8:3N 8n 4r
+>8:3N 8:3r      8:3r 8:3n          >8:3N 8n 4r     >8:3N 8n 4r
+
+>8:3N 8n 4r     >8:3N 8n 4r        >8:3N 8n 4r     >8:3N 8n 4r
+>8:3N 8:3r      8:3r 8:3n          >8:3N 8n 4r     >8:3N 8n 4r
+
+// part 2
+_8:3N 8:2N ^8:4N     _8:3N         >8:3N 8n 4r     >8:3N 8n 4r
+8r 8:2n >8:2N ^8:4N 8n 4r         >8:3N  8:2n ^8:4N  8n 4r
+
+_8:3N 8:2n ^8:4N     _8:3N         >8:3N 8n 4r     >8:3N 8n 4r
+8r 8:2n >8:2N ^8:4N 8n 4r          >8:3N  8:2n ^8:4N  8n 4r
+
+
+// Part 3
+/mp
+>8:3N 8:3r . 8:3N   >8:3N 8:3r >8:3N 8:3r
+>8:3N 8:3r . 8:3N   >8:3N  8:2n ^8:4N  8n 4r
+
+>8:3N 8:3r . 8:3N   >8:3N 8:3r >8:3N 8:3r
+>8:3N 8:3r . 8:3N   >8:3N  8:2n ^8:4N  8n 4r
+
+// Part 4
+/f
+>8:3N ^8:2N ^8:4N 8:3n                         >8:3N >8:2N ^8:4N 8:3n
+8:5N ^8:2N ^8:2N ^8:3N                         >8:3N  8:2n ^8:4N  >8n 4r
+
+>8:3N ^8:2N ^8:4N 8:3n                         >8:3N ^8:2N ^8:4N 8:3n
+8:5N ^8:2N ^8:2N ^8:3N                         >8:3n 8:2r ^8:4N ^8n 4r
+
+
+
+
+
+
+
+
+//
+// Bass -- prob could be written better
+// Check out example for bass:
+// https://youtu.be/ge-Sm_XJckY?t=89
+/track bass
+/channel 3
+
+//
+// Count off
+8:3r . . .
+/mf
+// part 1  (2 12/8 bars per line)
+>8:3B 8b 4r     >8:3B 8b 4r        >8:3B 8b 4r     >8:3B 8b 4r
+>8:3B 8:3r      8:3r 8:3b          >8:3B 8b 4r     >8:3B 8b 4r
+
+>8:3B 8b 4r     >8:3B 8b 4r        >8:3B 8b 4r     >8:3B 8b 4r
+>8:3B 8:3r      8:3r 8:3b          >8:3B 8b 4r     >8:3B 8b 4r
+
+// part 2
+_8:3B 8:2B ^8:4B     _8:3B         >8:3B 8b 4r     >8:3B 8b 4r
+8r 8:2b >8:2B ^8:4B 8b 4r         >8:3B  8:2b ^8:4B  8b 4r
+
+_8:3B 8:2b ^8:4B     _8:3B         >8:3B 8b 4r     >8:3B 8b 4r
+8r 8:2b >8:2B ^8:4B 8b 4r          >8:3B  8:2b ^8:4B  8b 4r
+//_8:3B >8:2B ^8:2B 8:2r _8:3B                   >8:3B 8b 4r    >8:3B 8b 4r
+//8r 8:2b >8:2B ^8:4B 8:3B                      >8:3B 8b 4r    >8:3B 8b 4r
+
+
+// Part 3
+/mp
+>8:3B 8:3r . 8:3B   >8:3B 8:3r >8:3B 8:3r
+>8:3B 8:3r . 8:3B   >8:3B  8:2b ^8:4B  8b 4r
+//>8:3B 8b 4r      8r >8:2b ^8:3B          >8:3B 8b 4r     >8:3B 8b 4r
+//>8:3B 8b 4r      8r >8:2b ^8:3B          >8:3B 8b 4r     >8:3B 8b 4r
+
+>8:3B 8:3r . 8:3B   >8:3B 8:3r >8:3B 8:3r
+>8:3B 8:3r . 8:3B   >8:3B  8:2b ^8:4B  8b 4r
+//>8:3B 8b 4r      8r >8:2b ^8:3B          >8:3B 8b 4r     >8:3B 8b 4r
+//>8:3B 8b 4r      8r >8:2b ^8:3B          >8:3B 8b 4r     >8:3B 8b 4r
+
+// Part 4
+/f
+>8:3B ^8:2B ^8:4B 8:3b                         >8:3B >8:2B ^8:4B 8:3b
+8:5B ^8:2B ^8:2B ^8:3B                         >8:3B  8:2b ^8:4B  >8b 4r
+
+>8:3B ^8:2B ^8:4B 8:3b                         >8:3B ^8:2B ^8:4B 8:3b
+8:5B ^8:2B ^8:2B ^8:3B                         >8:3b 8:2r ^8:4B ^8b 4r
 
 
 
