@@ -1,0 +1,282 @@
+// Michael Grey
+// Hornpipe   (not rounded?)
+// https://youtu.be/dxmITiQysOI?t=234
+// J. Reid Maxwell
+
+/track met
+/channel 1
+/time 2/2      // Not sure what this should be.  2/4? 4/4? 4/2?
+/tempo 2=100    // Maxwell solo https://youtu.be/dxmITiQysOI?t=234
+//tempo 2=90    // Jack's tempo in his recording from his website
+/marker M.Grey
+
+// Count off
+2M . 4M . 8M . 4M
+
+/marker Pt1
+2M .  . .  . .  . .
+2M .  . .  . .  . .
+
+/marker P1Rpt
+2M .  . .  . .  . .
+2M .  . .  . .  . .
+
+
+/marker Pt2
+2M .  . .  . .  . .
+2M .  . .  . .  . .
+
+/marker P2Rpt
+2M .  . .  . .  . .
+2M .  . .  . .  . .
+
+
+/marker Pt3
+2M .  . .  . .  . .
+2M .  . .  . .  . .
+
+/marker P3Rpt
+2M .  . .  . .  . .
+2M .  . .  . .  . .
+
+
+/marker Pt4
+2M .  . .  . .  . .
+2M .  . .  . .  . .
+
+/marker P4Rpt
+2M .  . .  . .  . .
+2M .  . .  . .  . .
+
+
+
+/track snare
+/channel 5
+
+// Count off
+2r . . .
+
+/ff
+// Pt1 dot/cut 120:17/120:13   This basically works, but is it worth the effort?
+//>4F >120:17F 120:13t  120:17F 120:13f >8F 16t t   16T T >8t  120:17T 120:13F  120:17T 120:13D 16T . . .
+//4T >8t 24T t t  120:17T >120:13t  24T t t 8T   >120:17T 120:13f 120:17t 120:13f   120:17T 120:13f 16T . . .
+//120:17T 120:13t >120:17F 120:13t  120:17F 120:13f >120:17F 120:13t   16F 16T 8t  16T 16z >8T  16t 16Z >8t 120:17T 120:13t
+//>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T   >120:17T 120:13t 120:17F 120:13f 4F 4r
+
+// Basically two beats per bar.  A beat would be a half note as written
+// Pt1
+>4F >8F 8t  8F . >. 16t t
+16T T >8t  8T 8F  8T 8D 16T . . .
+4T >8t 24T t t  8T >t  24T t t 8T
+>8T f t f   8T f 16T . . .
+
+8T . >F t  8F . >. 8t
+16F 16T 8t  16T z >8T  16t Z >8t 8T .
+>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
+>8T . 8F . 4F 4r
+
+// P1Rpt (except last beat)
+>4F >8F 8t  8F . >. 16t t
+16T T >8t  8T 8F  8T 8D 16T . . .
+4T >8t 24T t t  8T >t  24T t t 8T
+>8T f t f   8T f 16T . . .
+
+8T . >F t  8F . >. 8t
+16F 16T 8t  16T z >8T  16t Z >8t 8T .
+>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
+>8T . 8F . 4F 16T . . .
+
+
+// Pt2
+>8T . >8F 8t 8T ^8t 16T . . .
+>12T 12z . 12t . . /cresc >12T 12z . . . .
+>4T /ff 8f . 8T 8f 16T . . .
+>16T . . .  8T >8t 8T >8t 24T t t 8T
+
+8T 8f 8T 8f 8T 8f 8T 8f
+>8T 16t t 12T . . >12t 12Z . 16T . . .
+>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
+>8T . 8F . 4F 4r
+
+
+
+// P2Rpt
+>8T . >8F 8t 8T ^8t 16T . . .
+>12T 12z . 12t . . /cresc >12T 12z . . . .
+>4T /ff 8f . 8T 8f 16T . . .
+>16T . . .  8T >8t 8T >8t 24T t t 8T
+
+8T 8f 8T 8f 8T 8f 8T 8f
+>8T 16t t 12T . . >12t 12Z . 16T . . .
+>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
+>8T . 8F . 4F 16T . . .
+
+
+// Pt3
+>8T 16t . . . . .  >8t 16T . . . . .
+^8T 16t t 8T >t 8T >8t 16T . . .
+>12T 12z . 12t . . 4F 8T 24t T T
+8t >8T 24t T T 8t  8T 8D  16T . . .
+
+>8T 16t . . . . .  >8t 16T . . . . .
+>8T 16t t 8T >8f  8T >8f >8F 8t
+>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
+>8T . 8F . 4F 4r
+
+
+// P3Rpt
+>8T 16t . . . . .  >8t 16T . . . . .
+^8T 16t t 8T >t 8T >8t 16T . . .
+>12T 12z . 12t . . 4F 8T 24t T T
+8t >8T 24t T T 8t  8T 8D  16T . . .
+
+>8T 16t . . . . .  >8t 16T . . . . .
+>8T 16t t 8T >8f  8T >8f >8F 8t
+>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
+>8T . 8F . 4F 16T 16z _8T
+
+
+// Pt4
+>8T 24t T T  8t >8T 8t . 16t t T t
+>8t 8F 8F 16T . . .  >8D  16T . . .
+>4T >8F 8t 8T . >8F 16t t
+16T T >8t 8T .   8T 8t 16T . . .
+
+12T . . . . >20t 10Z .  >20T 10z . 12t
+12T . . . . >20t 10Z .  >20T 10z . 12t
+>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
+>8T . 8F . 4F 4r
+
+
+
+// P4Rpt
+>8T 24t T T  8t >8T 8t . 16t t T t
+>8t 8F 8F 16T . . .  >8D  16T . . .
+>4T >8F 8t 8T . >8F 16t t
+16T T >8t 8T .   8T 8t 16T . . .
+
+8T >8t 8T . 16T . . . 8T  16T .
+16T . 8D 16T . . .  8T >8t 8T .
+>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
+>8T . 8F . 4F 4r
+
+/track tenor
+/channel 2
+// Currently tenor part is identical with bass.  Shouldn't be.
+// Perhaps play straight quarter notes, except for syncopated accents.
+//
+// Count off
+2r . . .
+
+// Pt1
+/ppp
+_2N . _. .
+_2N . _. .
+_2N . _. .
+_2N . _. .
+
+// P1Rpt
+_2N . _. .
+_2N . _. .
+_2N . _. .
+_2N . _. .
+
+
+// Pt2
+/p
+_2N . _. .
+_2N . _. .
+_2N . _. .
+_2N . _. .
+
+// P2Rpt
+_2N . _. .
+_2N . _. .
+_2N . _. .
+_2N . _. .
+
+
+// Pt3
+/p
+_2N . _. .
+_2N . _. .
+_2N . _. .
+_2N . _. .
+
+// P3Rpt
+_2N . _. .
+_2N . _. .
+_2N . _. .
+_2N . _. .
+
+
+// Pt4
+/p
+_2N . _. .
+_2N . _. .
+_2N . _. .
+_2N . _. .
+
+// P4Rpt
+_2N . _. .
+_2N . _. .
+_2N . _. .
+_2N . _. .
+
+/track bass
+/channel 3
+/p
+2r . . .
+
+// Pt1
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+
+// Pt1 repeat
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+
+
+// Pt2
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+
+// Pt2 repeat
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+
+
+// Pt3
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+
+// Pt3 repeat
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+
+
+// Pt4
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+
+// Pt4 repeat
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+_2B 2r 2B 2r
+
+
