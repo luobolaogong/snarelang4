@@ -1,66 +1,136 @@
-// Battle of Waterloo - Steven McWhirter version, Drums
+// Battle of Waterloo - Drums, Steven McWhirter version, modified by Peter
 /time 4/4
 /tempo 84
 
 /track met
-/channel 0
+/channel 1
+/marker BatWat
 // Sync:
-/ff
+/mp
 _4M _. _8M . _4M
-/f
+/mp
 // Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+/marker P&D Q,M
 4M . . .
-// Roll-off
+/marker RollOff
 _4M _. _8M . _. .  _4M _. _8M . _4M
-
+/mp
+/marker Pt1
 4M . . .  . . . .  . . . .  . . . .
+//marker Pt1b
 4M . . .  . . . .  . . . .  . . . .
 
+/marker Pt2
 4M . . .  . . . .  . . . .  . . . .
-4M . . .  . . . .  . . . .  . . . .
+//marker Pt2b
+4M . . .  . . . .  . . . .  . . . 4r
 
-
-
-// This /unison stuff doesn't sound good at this time due to the recording of SLOT.  So postpone working on this for now
-//unison
 
 /track snare
+/channel 2
 
 // sync
 1r
 // "pipes and drums, One Two"
 // "By the right, quick march"
 /ff
-/marker P&D 1,2
+//marker P&D Q,M
 32:3T 32t 8F 4r 4F .
 // Roll-off
 /f /< 24Z . . . . .    . . . . . .   2T /fff /ff
 /f /< 24Z . . . . .    . . . . . .   4T /fff
 
+/mf 8r 8t // pickup
+// Pt1
+/< 24Z . . . . _24t _8T /fff /f . 24Z . . 8t 8F 24Z . .
+24:5t /fff /f 24t /< 24Z . . 8t /fff /f 4F /< 24Z . . t . .
+24:5F /fff /f 24t 24t . . 8f F /< 24Z . . 24t . . 8F /fff /f
+24:5f 24t /< 24Z . . 8t /fff 4F /f 24Z . _24T _8t    // depends on how pipes play it???
 
-/f
-/marker L1
-8r 8t
-/cresc 24Z . . . . . 8T /ff /f . /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
-24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
-24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /f
-24:5f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . . 8T /ff /f 24T 12t  // changed ending to match pipes
+/< 24Z . . . . _24t _8T /fff /f 8t /< 24Z . . 8t /fff /f 8F /< 24Z . .
+24:5t /fff /f 24t /< 24Z . . 8t /fff /f 4F /< 24Z . . t . .
+24:5F /fff /f 24t 24t . . 8f F /< 24Z . . 24t . . 8F /ff
+4F /mf /< 24Z . . . . .  4T /fff /mf /< 24Z . . . . .
 
-/marker L2
-/cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
-24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
-24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /mp
-/cresc 24Z . . . . .   . . . . . .  4T /ff /f 8r /cresc 24Z . .
+// Pt2
+24:5t /fff /f 24t /< 24Z . . 8t /fff /f /< 24Z . . . . .   _40T 20z . _40t 20Z .
+//24:5T /fff /f 30t . . . . 8T 4f /< 24Z . . t . .
+>12T 24t 12T >30t . . . . >8T 4f 24Z . . 24t . .
+24:5F /fff /f 24t 24t . . 8f F /< 24Z . . 24t . . 8F /fff /f
+24:5f 24t /< 24Z . . 8t /fff 4F /f 24Z . _24T _8t
 
-/marker L3
-24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . .   40T 20z . 40t 20Z .
-24:5T /ff /f 30t . . . . 8T 4f /cresc 24Z . . t . .
-24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /f
-24:5f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . . 8T /ff /f 24T 12t // changed ending to match pipes
 
-/marker L4
-/cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
-24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
-24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /mf
-4f 4r /cresc 24Z . . . . .   . . . . . .
-4T /ff
+/mf /< 24Z . . . . 24t 8T /fff /f 8t /< 24Z . . 8t /fff /f 8F /< 24Z . .
+24:5t /fff /f 24t /< 24Z . . 8t /fff /f 4F /< 24Z . . t . .
+24:5F /fff /f 24t 24t . . 8f F /< 24Z . . 24t . . 8F /fff /mf
+4f /cresc 24Z . . . . .   4T /fff 4r
+
+/track tenor
+/channel 3
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/mf
+// Roll off
+4N . 2N
+4N . 2N
+
+/mf
+4N 8r 8n 4N 4r
+4N 8r 8n 4N 4r
+4N 24N . . 8n 4r 4r
+24:5N 24n 8N . 4N 4r
+
+4N 8r 8n 4N 4r
+4N 8r 8n 4N 4r
+4N 24N . . 8n 4r 24N . . 8n
+4N 4r 2r
+
+// Pt2
+24:5N 24n 8N . 4N 4r
+24:5N 24:4n  8n 4N 4r
+4N 24N . . 8n 4r .
+24:5N 24n 8N . 4N 4r
+
+4N 8r 8n 4N 4r
+4N 8r 8n 4N 4r
+4N 24N . . 8n 4r 24N . . 8n
+4N 4r 2r
+
+
+/track bass
+/channel 4
+
+// Sync:
+1r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+1r
+/mf
+// Roll off
+4B . 2B
+4B . 2B
+
+/mf
+4B . 8r 8b 4B
+4B 4r 4B .
+4B 4r /cresc 8B . . .
+_4B /f /mf 4r 4B .
+
+/mf
+4B . 8r 8b 4B
+4B 4r 4B .
+4B 4r /cresc 8B . . .
+_4B /f /mf 4r 4B .
+
+// Pt2
+4B 4r . 8B .
+24:5B 6b 8b 4B 4r
+4B 4r /cresc 8B . . .
+_4B /f /mf 4r 4B .
+
+4B . 8r 8b 4B
+4B 4r 4B .
+4B 4r /cresc 8B . . .
+_4B /f /mf 4r 4B 4r

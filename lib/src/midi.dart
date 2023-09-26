@@ -354,7 +354,7 @@ class Midi {
     var controllerEvent = ControllerEvent();
     log.fine('controllerEvent: $controllerEvent');
     log.fine('controllerEvent: channel, number, type, value, deltaTime: ${controllerEvent.channel}, ${controllerEvent.number}, ${controllerEvent.type}, ${controllerEvent.value}, ${controllerEvent.deltaTime}');
-    controllerEvent.channel = 0;
+    controllerEvent.channel = 0; // What?????
     controllerEvent.number = 1; // guess
     controllerEvent.type = "Bajingo"; // guess
     controllerEvent.value = 0; // guess
@@ -475,33 +475,33 @@ class Midi {
           case TrackId.snare:
             snareNumber = 5;
             break;
-          case TrackId.snare1:
-            snareNumber = 1;
-            break;
-          case TrackId.snare2:
-            snareNumber = 2;
-            break;
-          case TrackId.snare3:
-            snareNumber = 3;
-            break;
-          case TrackId.snare4:
-            snareNumber = 4;
-            break;
-          case TrackId.snare5:
-            snareNumber = 5;
-            break;
-          case TrackId.snare6:
-            snareNumber = 6;
-            break;
-          case TrackId.snare7:
-            snareNumber = 7;
-            break;
-          case TrackId.snare8:
-            snareNumber = 8;
-            break;
-          case TrackId.snare9:
-            snareNumber = 9;
-            break;
+          // case TrackId.snare1:
+          //   snareNumber = 1;
+          //   break;
+          // case TrackId.snare2:
+          //   snareNumber = 2;
+          //   break;
+          // case TrackId.snare3:
+          //   snareNumber = 3;
+          //   break;
+          // case TrackId.snare4:
+          //   snareNumber = 4;
+          //   break;
+          // case TrackId.snare5:
+          //   snareNumber = 5;
+          //   break;
+          // case TrackId.snare6:
+          //   snareNumber = 6;
+          //   break;
+          // case TrackId.snare7:
+          //   snareNumber = 7;
+          //   break;
+          // case TrackId.snare8:
+          //   snareNumber = 8;
+          //   break;
+          // case TrackId.snare9:
+          //   snareNumber = 9;
+          //   break;
           default:
             //print('Huh?  Whats this element.id?: ${thisTrack.id}'); // could be met or tenor or bass...
             break;

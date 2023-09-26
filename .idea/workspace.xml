@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,9 +22,36 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="A decent release.  Still problems, and still missing flams and ruffs and drags and 6/8 stuff.">
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="1st cut at Michael Grey">
+      <change afterPath="$PROJECT_DIR$/bin/FromMauiToKona.bash" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/AnnettesStonecutterDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/FromMauiToKonaDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/RyleyLoops.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/StonecuttersChatterDrums.snl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunes/StonecuttersRantDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/ExerciseSets.snl" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ExerciseSets.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/BuildTunes.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BuildTunes.bash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Midi2Mp3.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Midi2Mp3.bash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ProcessThese.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/AnnettesChatterDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/AnnettesChatterDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/AnnettesChatterMetSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/AnnettesChatterMetSnare.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/AnnettesChatterSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/AnnettesChatterSnare.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/BattleOfWaterlooDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BattleOfWaterlooDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/CockneyJocksDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CockneyJocksDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/Competition44SetDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/Competition44SetDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/FlettFromFlottaDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/FlettFromFlottaDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/JohWalshsWalkDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/JohWalshsWalkDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/MichaelGreyDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MichaelGreyDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/MurdosWeddingDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MurdosWeddingDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/StonecuttersPhoenixDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/StonecuttersPhoenixDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,29 +83,37 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/exercises" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/exercises" />
-      <recent name="$PROJECT_DIR$/tunes" />
-      <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/exercises/warmups" />
-      <recent name="$PROJECT_DIR$/FanfaresSalutes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/exercises" />
       <recent name="$PROJECT_DIR$/bin" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/exercises" />
+      <recent name="$PROJECT_DIR$/tunes" />
+      <recent name="$PROJECT_DIR$/exercises/warmups" />
+      <recent name="$PROJECT_DIR$/FanfaresSalutes" />
+    </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.ExerciseSets">
+  <component name="RunManager" selected="Dart Command Line App.FromMauiToKonaDrums">
     <configuration name="1224s" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i exercises/warmups/1224s.snl -o midifiles/1224s.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -101,6 +139,11 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="AnnettesStonecutter" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="false">
+      <option name="arguments" value="-i tunes/AnnettesStonecutterDrums.snl -o midifiles/AnnettesStonecutterDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="BanjoBreakdown" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/BanjoBreakdownDrums.snl -o midifiles/BanjoBreakdownDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -108,11 +151,6 @@
     </configuration>
     <configuration name="BarrenRocks" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/BarrenRocksOfAdenDrums.snl -o midifiles/BarrenRocksOfAdenDrums.mid" />
-      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="BattleOfWaterloo" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="arguments" value="-i tunes/BattleOfWaterloo.snl -o midifiles/BattleOfWaterloo.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -181,7 +219,13 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="CockneyJocks" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="false">
+      <option name="arguments" value="-i tunes/CockneyJocksDrums.snl -o midifiles/CockneyJocksDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="Comp44Set" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" value="--no-sound-null-safety" />
       <option name="arguments" value="-i tunes/Competition44SetDrums.snl -o midifiles/Competition44SetDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
@@ -218,6 +262,11 @@
     </configuration>
     <configuration name="ForRecordingDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i exercises/ForRecordingDrums.ppl -o midifiles/ForRecordingDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FromMauiToKonaDrums" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/FromMauiToKonaDrums.snl -o midifiles/FromMauiToKonaDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -281,6 +330,11 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="MaxRayneOneSnareWithMidAndMet" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneTenorBass.snl,FanfaresSalutes/MaxRayneTempoAndMet.snl -o midifiles/MaxRayneOneSnareWithMidAndMet.mid -S 1.00" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="MaxRayneSnareLine" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i FanfaresSalutes/MaxRayneSnare1.snl,FanfaresSalutes/MaxRayneSnare2.snl,FanfaresSalutes/MaxRayneSnare3.snl,FanfaresSalutes/MaxRayneSnare4.snl,FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneSnare6.snl,FanfaresSalutes/MaxRayneSnare7.snl,FanfaresSalutes/MaxRayneSnare8.snl,FanfaresSalutes/MaxRayneSnare9.snl -o midifiles/MaxRayneSnareLine.mid -S 1.25" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -288,6 +342,11 @@
     </configuration>
     <configuration name="MetQuarter44" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i Metronomes/QuarterNotes44.snl -o midifiles/QuarterNotes44.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MichaelGrey" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="arguments" value="-i tunes/MichaelGreyDrums.snl -o midifiles/MichaelGreyDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -356,6 +415,12 @@
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="Ryley" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" value="--no-sound-null-safety" />
+      <option name="arguments" value="-i tunes/RyleyLoops.snl -o midifiles/RyleyLoopsDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="ScotBraveChips" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/ScotlandTheBraveSnareChips.snl -o midifiles/ScotlandTheBraveSnareChips.mid -l ALL" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
@@ -378,6 +443,16 @@
     </configuration>
     <configuration name="SlowMarchNo2" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="arguments" value="-i tunes/SlowMarchNo2.snl -o midifiles/SlowMarchNo2.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="StonecuttersPhoenix" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="false">
+      <option name="arguments" value="-i tunes/StonecuttersPhoenixDrums.snl -o midifiles/StonecuttersPhoenixDrums.mid" />
+      <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="StonecuttersRant" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="false">
+      <option name="arguments" value="-i tunes/StonecuttersRantDrums.snl -o midifiles/StonecuttersRantDrums.mid" />
       <option name="filePath" value="$PROJECT_DIR$/bin/snl.dart" />
       <method v="2" />
     </configuration>
@@ -486,6 +561,17 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="FromMauiToKonaBash" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/bin/FromMauiToKona.bash" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="JackLee" type="ShConfigurationType">
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/bin/JackLee.bash" />
@@ -519,6 +605,17 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ProcessThese.bash (1)" type="ShConfigurationType" temporary="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/bin/ProcessThese.bash" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/bin" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ProcessThese.bash" type="ShConfigurationType">
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/bin/ProcessThese.bash" />
@@ -538,7 +635,7 @@
       <item itemvalue="Dart Command Line App.AmazingGraceDrums" />
       <item itemvalue="Dart Command Line App.BanjoBreakdown" />
       <item itemvalue="Dart Command Line App.BarrenRocks" />
-      <item itemvalue="Dart Command Line App.BattleOfWaterloo" />
+      <item itemvalue="Dart Command Line App.FromMauiToKonaDrums" />
       <item itemvalue="Dart Command Line App.BattleWaterMcWhirter" />
       <item itemvalue="Dart Command Line App.BeginMrch" />
       <item itemvalue="Dart Command Line App.BlackBearIntro" />
@@ -553,6 +650,7 @@
       <item itemvalue="Dart Command Line App.CastleDangerousDrums" />
       <item itemvalue="Dart Command Line App.CastleDangerousMassedBandsDrums" />
       <item itemvalue="Dart Command Line App.Comp44Set" />
+      <item itemvalue="Dart Command Line App.Ryley" />
       <item itemvalue="Dart Command Line App.DotCut" />
       <item itemvalue="Dart Command Line App.DrumSaluteMaui" />
       <item itemvalue="Dart Command Line App.ExerciseSets" />
@@ -567,11 +665,18 @@
       <item itemvalue="Dart Command Line App.JLVol1" />
       <item itemvalue="Dart Command Line App.JLVol2" />
       <item itemvalue="Dart Command Line App.JaneCampbell" />
+      <item itemvalue="Dart Command Line App.MichaelGrey" />
+      <item itemvalue="Dart Command Line App.AnnettesChatterDrums" />
+      <item itemvalue="Dart Command Line App.CockneyJocks" />
+      <item itemvalue="Dart Command Line App.AnnettesStonecutter" />
+      <item itemvalue="Dart Command Line App.StonecuttersPhoenix" />
+      <item itemvalue="Dart Command Line App.StonecuttersRant" />
       <item itemvalue="Dart Command Line App.Jig" />
       <item itemvalue="Dart Command Line App.Lochanside" />
       <item itemvalue="Dart Command Line App.March44" />
       <item itemvalue="Dart Command Line App.MaxRayneDrumLine" />
       <item itemvalue="Dart Command Line App.MaxRayneOneSnare" />
+      <item itemvalue="Dart Command Line App.MaxRayneOneSnareWithMidAndMet" />
       <item itemvalue="Dart Command Line App.MaxRayneSnareLine" />
       <item itemvalue="Dart Command Line App.MetQuarter44" />
       <item itemvalue="Dart Command Line App.MsBnd24JL" />
@@ -614,9 +719,16 @@
       <item itemvalue="Shell Script.BuildTunes" />
       <item itemvalue="Shell Script.Midi2Mp3" />
       <item itemvalue="Shell Script.JackLee" />
+      <item itemvalue="Shell Script.FromMauiToKonaBash" />
       <item itemvalue="Shell Script.PaddysDayBuild" />
       <item itemvalue="Shell Script.ProcessThese.bash" />
+      <item itemvalue="Shell Script.ProcessThese.bash (1)" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.ProcessThese.bash (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -952,34 +1064,34 @@
       <workItem from="1652848309237" duration="442000" />
       <workItem from="1652894280961" duration="3141000" />
       <workItem from="1652907350447" duration="21135000" />
-    </task>
-    <task id="LOCAL-00088" summary="Will process files for website using ProcessThese.bash.">
-      <created>1617660928838</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1617660928838</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Most of bash file finished.">
-      <created>1618026475540</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1618026475541</updated>
-    </task>
-    <task id="LOCAL-00090" summary="Most of bash file finished.">
-      <created>1618118644371</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1618118644372</updated>
-    </task>
-    <task id="LOCAL-00091" summary="More tuning of the bash script.">
-      <created>1618380062373</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1618380062374</updated>
+      <workItem from="1652994259049" duration="270000" />
+      <workItem from="1652994565346" duration="644000" />
+      <workItem from="1653274900192" duration="3627000" />
+      <workItem from="1672361798221" duration="1242000" />
+      <workItem from="1672702291845" duration="2173000" />
+      <workItem from="1674163514176" duration="3378000" />
+      <workItem from="1675310688596" duration="646000" />
+      <workItem from="1676147021411" duration="26080000" />
+      <workItem from="1676918587448" duration="12312000" />
+      <workItem from="1677373753496" duration="147769000" />
+      <workItem from="1678779288366" duration="1547000" />
+      <workItem from="1678815520905" duration="15938000" />
+      <workItem from="1679361772191" duration="30853000" />
+      <workItem from="1680034645371" duration="11334000" />
+      <workItem from="1680067888199" duration="21631000" />
+      <workItem from="1680566227674" duration="7034000" />
+      <workItem from="1681157771757" duration="4052000" />
+      <workItem from="1681777925494" duration="1864000" />
+      <workItem from="1682302491275" duration="21267000" />
+      <workItem from="1682384462943" duration="4555000" />
+      <workItem from="1684870151243" duration="1036000" />
+      <workItem from="1684871201380" duration="750000" />
+      <workItem from="1684871975520" duration="21160000" />
+      <workItem from="1684893349608" duration="1838000" />
+      <workItem from="1694879418551" duration="18103000" />
+      <workItem from="1694915565622" duration="8919000" />
+      <workItem from="1695087890851" duration="3312000" />
+      <workItem from="1695662050592" duration="3576000" />
     </task>
     <task id="LOCAL-00092" summary="Additions and corrections to several tunes.">
       <created>1619740085355</created>
@@ -1296,7 +1408,35 @@
       <option name="project" value="LOCAL" />
       <updated>1652943082045</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Stonecutter groove for simple massed learning.">
+      <created>1677471629794</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1677471629794</updated>
+    </task>
+    <task id="LOCAL-00138" summary="Prob no signif changes">
+      <created>1677654067884</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1677654067884</updated>
+    </task>
+    <task id="LOCAL-00139" summary="Still developing this.">
+      <created>1677654097892</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1677654097892</updated>
+    </task>
+    <task id="LOCAL-00140" summary="1st cut at Michael Grey">
+      <created>1677827792077</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1677827792077</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1315,10 +1455,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tried incorporating changes due to practice." />
-    <MESSAGE value="Tuning and experimenting." />
-    <MESSAGE value="Too many changes to remember." />
-    <MESSAGE value="Checkin prior to swapping sets 2 and 3." />
     <MESSAGE value="End of day, swapped 2 and 3.  Syncs off in 3rd set." />
     <MESSAGE value="Keep rearranging." />
     <MESSAGE value="Keep rearranging and shortening." />
@@ -1340,133 +1476,53 @@
     <MESSAGE value="Drive failing.  Gotta checkin everything." />
     <MESSAGE value="Trying to finish off exercises 0-3." />
     <MESSAGE value="A decent release.  Still problems, and still missing flams and ruffs and drags and 6/8 stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="A decent release.  Still problems, and still missing flams and ruffs and drags and 6/8 stuff." />
+    <MESSAGE value="Stonecutter groove for simple massed learning." />
+    <MESSAGE value="Prob no signif changes" />
+    <MESSAGE value="Still developing this." />
+    <MESSAGE value="1st cut at Michael Grey" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st cut at Michael Grey" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2083" y="677" width="1320" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1652941502776">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state x="92" y="190" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1695088229872">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2083" y="677" width="1320" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1652941502776" />
-    <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl" timestamp="1652486106598">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state x="92" y="190" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1695088229872" />
+    <state x="640" y="454" width="502" height="265" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1694888445865">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2204" y="865" width="424" height="478" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1652486106598" />
-    <state width="3608" height="242" key="GridCell.Tab.0.bottom" timestamp="1652985157409">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state x="640" y="454" width="502" height="265" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1694888445865" />
+    <state x="689" y="265" width="426" height="485" key="FileChooserDialogImpl" timestamp="1694888032826">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="3608" height="242" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1652985157409" />
-    <state width="3608" height="242" key="GridCell.Tab.0.center" timestamp="1652985157409">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state x="689" y="265" width="426" height="485" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1694888032826" />
+    <state width="1708" height="238" key="GridCell.Tab.0.bottom" timestamp="1695689382238">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="3608" height="242" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1652985157409" />
-    <state width="3608" height="242" key="GridCell.Tab.0.left" timestamp="1652985157408">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state width="1708" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1695689382238" />
+    <state width="1708" height="238" key="GridCell.Tab.0.center" timestamp="1695689382238">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="3608" height="242" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1652985157408" />
-    <state width="3608" height="242" key="GridCell.Tab.0.right" timestamp="1652985157409">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state width="1708" height="238" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1695689382238" />
+    <state width="1708" height="238" key="GridCell.Tab.0.left" timestamp="1695689382237">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="3608" height="242" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1652985157409" />
-    <state width="2429" height="321" key="GridCell.Tab.1.bottom" timestamp="1651817442264">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state width="1708" height="238" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1695689382237" />
+    <state width="1708" height="238" key="GridCell.Tab.0.right" timestamp="1695689382238">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="2429" height="321" key="GridCell.Tab.1.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442264" />
-    <state width="2429" height="321" key="GridCell.Tab.1.center" timestamp="1651817442263">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state width="1708" height="238" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1695689382238" />
+    <state x="385" y="221" width="992" height="731" key="SettingsEditor" timestamp="1694913138158">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="2429" height="321" key="GridCell.Tab.1.center/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442263" />
-    <state width="2429" height="321" key="GridCell.Tab.1.left" timestamp="1651817442268">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state x="385" y="221" width="992" height="731" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1694913138158" />
+    <state x="769" y="621" width="383" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1694887817468">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="2429" height="321" key="GridCell.Tab.1.left/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442268" />
-    <state width="2429" height="321" key="GridCell.Tab.1.right" timestamp="1651817442264">
-      <screen x="0" y="0" width="3840" height="2120" />
+    <state x="769" y="621" width="383" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1694887817468" />
+    <state x="733" y="608" width="448" height="192" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1694887984806">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="2429" height="321" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1651817442264" />
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1652943098763">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2074" y="826" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1652943098763" />
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-1" timestamp="1651713366484">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-1/0.0.3840.2120@0.0.3840.2120" timestamp="1651713366484" />
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-10" timestamp="1651733221662">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-10/0.0.3840.2120@0.0.3840.2120" timestamp="1651733221662" />
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-11" timestamp="1651734455399">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-11/0.0.3840.2120@0.0.3840.2120" timestamp="1651734455399" />
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-12" timestamp="1651734455399">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-12/0.0.3840.2120@0.0.3840.2120" timestamp="1651734455399" />
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-13" timestamp="1651734634496">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-13/0.0.3840.2120@0.0.3840.2120" timestamp="1651734634496" />
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-14" timestamp="1651734718375">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-14/0.0.3840.2120@0.0.3840.2120" timestamp="1651734718375" />
-    <state x="921" y="1764" width="2429" height="345" key="dock-window-15" timestamp="1651735089909">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="921" y="1764" width="2429" height="345" key="dock-window-15/0.0.3840.2120@0.0.3840.2120" timestamp="1651735089909" />
-    <state x="921" y="1764" width="2429" height="345" key="dock-window-16" timestamp="1651735089909">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="921" y="1764" width="2429" height="345" key="dock-window-16/0.0.3840.2120@0.0.3840.2120" timestamp="1651735089909" />
-    <state x="921" y="1764" width="2429" height="345" key="dock-window-17" timestamp="1651735089909">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="921" y="1764" width="2429" height="345" key="dock-window-17/0.0.3840.2120@0.0.3840.2120" timestamp="1651735089909" />
-    <state x="1294" y="1770" width="2429" height="345" key="dock-window-18" timestamp="1651796174955">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1294" y="1770" width="2429" height="345" key="dock-window-18/0.0.3840.2120@0.0.3840.2120" timestamp="1651796174955" />
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-2" timestamp="1651713734076">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-2/0.0.3840.2120@0.0.3840.2120" timestamp="1651713734075" />
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-3" timestamp="1651713734076">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-3/0.0.3840.2120@0.0.3840.2120" timestamp="1651713734076" />
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-4" timestamp="1651730550329">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-4/0.0.3840.2120@0.0.3840.2120" timestamp="1651730550329" />
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-5" timestamp="1651730904303">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-5/0.0.3840.2120@0.0.3840.2120" timestamp="1651730904303" />
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-6" timestamp="1651731988364">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-6/0.0.3840.2120@0.0.3840.2120" timestamp="1651731988364" />
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-7" timestamp="1651731988364">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-7/0.0.3840.2120@0.0.3840.2120" timestamp="1651731988364" />
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-8" timestamp="1651731988364">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1410" y="1775" width="1084" height="345" key="dock-window-8/0.0.3840.2120@0.0.3840.2120" timestamp="1651731988364" />
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-9" timestamp="1651732858876">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1681" y="1764" width="1084" height="345" key="dock-window-9/0.0.3840.2120@0.0.3840.2120" timestamp="1651732858876" />
-    <state x="1899" y="768" width="587" height="502" key="find.popup" timestamp="1652684377323">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1899" y="768" width="587" height="502" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1652684377323" />
-    <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup" timestamp="1649029609698">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="2252" y="601" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1649029609698" />
+    <state x="733" y="608" width="448" height="192" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1694887984806" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1685,6 +1741,56 @@
           <url>file://$PROJECT_DIR$/lib/src/score.dart</url>
           <line>419</line>
           <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>391</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>408</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>449</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>475</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>478</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>579</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>613</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>666</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/midi.dart</url>
+          <line>668</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/commandline.dart</url>
+          <line>219</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

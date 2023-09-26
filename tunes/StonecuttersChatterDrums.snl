@@ -1,0 +1,401 @@
+// Stonecutter's Phoenix followed directly by Annette's Chatter
+
+/track met
+/channel 1
+/time 6/8
+/tempo 120 // for Allison
+// Count off
+/f
+8:3M . 8M . . 8:3M
+
+/mf    // good level if playing with pipes
+//ff   // good level if comparing pipes to timing
+/pp  // a metronome is distracting for some pipers
+/marker Pt1
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker Pt2
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker Pt3
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker Pt4
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker Pt5
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker Pt6
+8:3M . . .    . . . .    . . . .    . . . .
+//8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .   /ff 8:6M .    8:3M . 8M . . 8:3M /p
+
+//
+// Annette's Chatter
+//
+/marker AChat
+
+/marker A1
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker A2
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker A3
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+/marker A4
+8:3M . . .    . . . .    . . . .    . . . .
+8:3M . . .    . . . .    . . . .    . . . .
+
+
+
+///////////////////////////////
+// Stonecutter's Phoenix -- Snare nearly removed.  They don't want snare at all.  Because I got in the way I think.
+// But I cannot ask any questions or they'll think I'm hard to get along with.  They think they're clear, but
+// they are not.  What are the tenors and bass supposed to play if nobody tells them what to play?
+// So this is my stop-gap thing that I wrote, with the snare part burried.
+///////////////////////////////
+
+/track snare
+/channel 2
+
+// Count off
+8:3r . . .
+
+
+// Pt1
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r . .   // stick clicks during rests
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r . .
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r . .
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r . .
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r . .
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  8:3r /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp
+
+// Pt2
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp /cresc 8:3t 8:3F . /pp   // stick flip, or twirl or backstick during quarters
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp /cresc 8:3t 8:3F . /p
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp /cresc 8:3t 8:3F . /p
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 8:3t /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 8:3t
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp /cresc 8:3t 8:3F . /p
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp /cresc 8:3t 8:3F . /p
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 8:3t /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 8:3t
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 8:3t /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp
+
+
+// Pt3
+/p
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t  _8T . .  _8:3t
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t  _8T . .  _8:3t
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t  _8T . .  _8:3t
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t  /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t
+
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t  _8T . .  _8:3t
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t  _8T . .  _8:3t
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t  /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t
+/pp /decresc 32F 32Z . . . . . .  . . 16r /ppp  /pp 4t 8t  /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp
+
+
+// Pt4
+/pp
+8Z . >8T  _4t 8t  _4T 8T  _4t 8t
+8Z . >8T  _4t 8t  _4T 8T  _4t 8t
+8Z . >8T  _4t 8t  _4T 8T  _4t 8t
+8Z . >8T  _4t 8t  8Z . >8T  _4t 8t
+
+8Z . >8T  _4t 8t  _4T 8T  _4t 8t
+8Z . >8T  _4t 8t  _4T 8T  _4t 8t
+8Z . >8T  _4t 8t  8Z . >8T  _4t 8t
+8Z . >8T  _4t 8t   /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp
+
+// Pt5
+/pp
+8Z . _8T  _8t . . 8Z . _8T 8Z . _8T
+8Z . _8T  _8t . . 8Z . _8T 8Z . _8T
+8Z . _8T  _8t . . 8Z . _8T 8Z . _8T
+8Z . _8T  _8t . . 8Z . _8T  _8t . .
+
+8Z . _8T  _8t . . 8Z . _8T 8Z . _8T
+8Z . _8T  _8t . . 8Z . _8T 8Z . _8T
+8Z . _8T  _8t . . 8Z . _8T  _8t . .
+8Z . _8T  _8t . . /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp /pp /decresc 32F 32Z . . . . . .  . . 16r /ppp
+
+// Pt6
+/pp
+//add backsticking at the "_" accents
+_8T t t   _8T t t   8T T _t  8T T _t
+_8T t t   _8T t t   8T T _t  8T T _t
+_8T t t   _8T t t   8T T _t  8T T _t
+_8T t t   _8T t t   _8T t t   _8T t t
+
+_8T t t   _8T t t   8T T _t  8T T _t
+_8T t t   _8T t t   8T T _t  8T T _t
+_8T t t   _8T t t   _8T t t   _8T t t
+_8T t t   _8T t t   8T 8f .  8:3F
+
+
+
+
+
+
+
+
+//8:12r . . . . . . .
+//8:12r . . . . . . .
+//8:12r . . . . . . .
+//8:12r . . . . . . .
+//8:12r . . . . . . .
+//8:12r . . . . . . .
+
+
+// ANNETTE'S CHATTER
+// ANNETTE'S CHATTER
+// ANNETTE'S CHATTER
+// ANNETTE'S CHATTER
+/ff
+// Pt1
+32:3T 32:3z . .  8t . ^8D    16T . . .   ^8T ^8t . .
+^8F 8t .   ^8f 8T ^8f    16t . . . ^8T  ^8t . .
+//8F 8t ^16T 16t 16t 16T 16T ^16t    ^16T 16t 16t 16T 16T ^16t  ^8T ^8t . .  // 16 is a sextuplet
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quintuplet in 6/8
+^8F 24t 24T 24T 8t   >8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+8F 8t 8F   16T 16T 16t 16t ^8T   ^8t  24T 24t 24t  8T  ^8t . .
+8T 8f 8T 8f 8T 8f 16T . . . ^8T ^8t . .
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quntuplet in 6/8
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+//marker Pt2
+^8T . .   /p /cresc ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T /ff
+^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
+//16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+/p /cresc 16T 16z >8T 16t 16Z    ^16t 16Z . .    ^16t 16Z . .   16t . . 16t   /ff  ^8T . 8t
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+^8T . .   /p /cresc ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T /ff
+^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
+/p /cresc 16T 16z >8T 16t 16Z    ^16t 16Z . .    ^16t 16Z . .    16t . . 16t   /ff  ^8T . 8t
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+//marker Pt3
+/p /cresc 8T 8f >8T  8t 8F >8t   8T 8f 8T  8t 16T . . . /ff
+// >8T . 16T . . 16T  >8t >8T . 16T 16T 8t  >8F 8t 8t
+8T . ^40:3T t T T ^40:3t ^8T   8t 16F 16T 8t   8T t t
+8T 8f . 8t 8F .  8T 8f 8T  8F 8T .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+/p /cresc 8T 8f >8T  8t 8F >8t  8T 8f 8T   8T 16T . . . /ff
+//>8T .  >16T . . 16T   8t >8T   8t  24T 24t 24t 8T  8t . .
+8T . ^40:3T t T T ^40:3t ^8T   8t 24T 24t 24t   8t   8T t t
+/p /cresc 8F 8t .  8t 8F 8t  8T 8f 8T  >8t . . /ff
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+//marker Pt4
+>16T . . . . .   /cresc ^12t 12z .    ^12t 12z .    16T . >8T   /fff ^8t . . /ff
+^8F  24t 24T 24T  8t  4T ^12F 12z .  16t . 16t 16t   >8T . .
+^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+
+>16T . . . . .   /cresc ^12t 12z .    ^12t 12z .    16T . >8T  /fff 8t . . /ff
+^8F  24t 24T 24T  8t  4T ^12F 12z .  16t . 16t 16t   >8T . .
+^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
+^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8:3f
+// Hold last note?
+//^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . 24t 12Z  32:3T 32:3z . .
+
+
+
+// Tenor
+/track tenor
+/channel 3
+// Count off
+8:3r . . .
+
+// Stonecutter
+/p
+//Pt1
+_8:3N 8:9r
+_8:3N 8:9r
+_8:3N 8:9r
+_8:3N 8:3r _8:3N 8:3r
+_8:3N 8:9r
+_8:3N 8:9r
+_8:3N 8:3r _8:3N 8:3r
+_8:3N 8:3r _8:3N 8:3N
+
+// Pt2
+// ripple down the line
+_8:3N . . .
+_8:3N . . .
+_8:3N . . .
+_8:3N . _. .
+_8:3N . . .
+_8:3N . . .
+_8:3N . _. .
+_8:3N . _. _.
+
+// Pt3
+_8:3N 4N 8N _8:3N 8:3r
+_8:3N 4N 8N _8:3N 8:3r
+_8:3N 4N 8N _8:3N 8:3r
+_8:3N 4N 8N  _8:3N 4N 8N
+
+_8:3N 4N 8N _8:3N 8:3r
+_8:3N 4N 8N _8:3N 8:3r
+_8:3N 4N 8N  _8:3N 4N 8N
+_8:3N 4N 8N _8:3N 8:3N
+
+// Pt4 tacit? Super soft.  One tenor
+4N 8N  8:3N  4N 8N  8:3N
+4N 8N  8:3N  4N 8N  8:3N
+4N 8N  8:3N  4N 8N  8:3N
+4N 8N  8:3N  4N 8N  8:3N
+
+4N 8N  8:3N  4N 8N  8:3N
+4N 8N  8:3N  4N 8N  8:3N
+4N 8N  8:3N  4N 8N  8:3N
+4N 8N  8:3N  8:3N  8:3N
+
+
+
+// P5
+8:3N 8N . . 8:3N 8:3r
+8:3N 8N . . 8:3N 8:3r
+8:3N 8N . . 8:3N 8:3r
+8:3N 8N . . 8:3N 8N . .
+
+8:3N 8N . . 8:3N 8:3r
+8:3N 8N . . 8:3N 8:3r
+8:3N 8N . . 8:3N 8N . .
+8:3N 8N . . 8:3N 8:3N
+
+// Pt6
+4N 8N   4N 8N   4N 8N   4N 8N
+4N 8N   4N 8N   4N 8N   4N 8N
+4N 8N   4N 8N   4N 8N   4N 8N
+4N 8N   4N 8N   4N 8N   4N 8N
+
+4N 8N   4N 8N   4N 8N   4N 8N
+4N 8N   4N 8N   4N 8N   4N 8N
+4N 8N   4N 8N   4N 8N   4N 8N
+4N 8N   8:3N   8N . . 8:2N 8r
+
+// Annette's Chatter
+/pp
+// part 1  (2 12/8 bars per line)
+_8:3N 8n 4r     _8:3N 8n 4r        _8:3N 8n 4r     _8:3N 8n 4r
+_8:3N 8:3r      8:3r 8:3n          _8:3N 8n 4r     _8:3N 8n 4r
+
+_8:3N 8n 4r     _8:3N 8n 4r        _8:3N 8n 4r     _8:3N 8n 4r
+_8:3N 8:3r      8:3r 8:3n          _8:3N 8n 4r     _8:3N 8n 4r
+
+// part 2
+_8:3N 8:2N >8:4N     _8:3N         _8:3N 8n 4r     _8:3N 8n 4r
+8r 8:2n _8:2N >8:4N 8n 4r         _8:3N  8:2n >8:4N  8n 4r
+
+_8:3N 8:2n >8:4N     _8:3N         _8:3N 8n 4r     _8:3N 8n 4r
+8r 8:2n _8:2N >8:4N 8n 4r          _8:3N  8:2n >8:4N  8n 4r
+
+
+// Part 3
+_8:3N 8:3r . 8:3N   _8:3N 8:3r _8:3N 8:3r
+_8:3N 8:3r . 8:3N   _8:3N  8:2n >8:4N  8n 4r
+
+_8:3N 8:3r . 8:3N   _8:3N 8:3r _8:3N 8:3r
+_8:3N 8:3r . 8:3N   _8:3N  8:2n >8:4N  8n 4r
+
+// Part 4
+_8:3N >8:2N >8:4N 8:3n                         _8:3N _8:2N >8:4N 8:3n
+8:5N >8:2N >8:2N >8:3N                         _8:3N  8:2n >8:4N  _8n 4r
+
+_8:3N >8:2N >8:4N 8:3n                         _8:3N >8:2N >8:4N 8:3n
+8:5N >8:2N >8:2N >8:3N                         _8:3n 8:2r >8:4N >8n 4r
+
+
+
+
+
+//
+// Bass
+/track bass
+/channel 4
+// Stone Cutter
+
+//
+// Count off
+8:3r . . .
+// Intro
+
+/mp
+// Pt1
+8:12B  8:12B  8:12B   8:6B   8:6B
+8:12B  8:12B   8:6B   8:6B   8:6B   8:3B 8:3B
+
+// Pt2
+8:9B 8:3B   8:9B 8:3B   8:9B 8:3B   8:6B 8:6B
+8:9B 8:3B   8:9B 8:3B   8:6B 8:6B   8:6B 8:3B 8:3B
+
+// Pt3
+8:3B 8:3r  8:3B .   8:3B 8:3r  8:3B .   8:3B 8:3r  8:3B .   8:3B 8:3r  8:3B 8:3r
+8:3B 8:3r  8:3B .   8:3B 8:3r  8:3B .   8:3B 8:3r  8:3B 8:3r   8:3B 8:3r  8:3B .
+
+// Pt4
+8:3B . . 4B 8B   8:3B . . 4B 8B   8:3B . . 4B 8B   8:3B . . .
+8:3B . . 4B 8B   8:3B . . 4B 8B   8:3B . . .   8:3B . . .
+
+// Pt5
+4B 8B 8:3B 8B . . 8:3B   4B 8B 8:3B 8B . . 8:3B   4B 8B 8:3B 8B . . 8:3B   4B 8B 8:3B 4B 8B 8:3B
+4B 8B 8:3B 8B . . 8:3B   4B 8B 8:3B 8B . . 8:3B   4B 8B 8:3B 4B 8B 8:3B    4B 8B 8:3B 8:3B .
+
+// Pt6
+8:2B 8r  8:2B 8r  8:2B 8r  8:2B 8r
+8:2B 8r  8:2B 8r  8:2B 8r  8:2B 8r
+8:2B 8r  8:2B 8r  8:2B 8r  8:2B 8r
+8:2B 8r  8:2B 8r  8:2B 8r  8:2B 8r
+
+8:2B 8r  8:2B 8r  8:2B 8r  8:2B 8r
+8:2B 8r  8:2B 8r  8:2B 8r  8:2B 8r
+8:2B 8r  8:2B 8r  8:2B 8r  8:2B 8r
+8:2B 8r  8:2B 8r  _8B _. _.  >8:2B 8r
+
+// Annettes
+/p
+// part 1  (2 12/8 bars per line)
+_8:3B 8b 4r     _8:3B 8b 4r        _8:3B 8b 4r     _8:3B 8b 4r
+_8:3B 8:3r      8:3r 8:3b          _8:3B 8b 4r     _8:3B 8b 4r
+
+_8:3B 8b 4r     _8:3B 8b 4r        _8:3B 8b 4r     _8:3B 8b 4r
+_8:3B 8:3r      8:3r 8:3b          _8:3B 8b 4r     _8:3B 8b 4r
+
+// part 2
+_8:3B 8:2B >8:4B     _8:3B         _8:3B 8b 4r     _8:3B 8b 4r
+8r 8:2b _8:2B >8:4B 8b 4r         _8:3B  8:2b >8:4B  8b 4r
+
+_8:3B 8:2b >8:4B     _8:3B         _8:3B 8b 4r     _8:3B 8b 4r
+8r 8:2b _8:2B >8:4B 8b 4r          _8:3B  8:2b >8:4B  8b 4r
+
+
+// Part 3
+_8:3B 8:3r . 8:3B   _8:3B 8:3r _8:3B 8:3r
+_8:3B 8:3r . 8:3B   _8:3B  8:2b >8:4B  8b 4r
+
+_8:3B 8:3r . 8:3B   _8:3B 8:3r _8:3B 8:3r
+_8:3B 8:3r . 8:3B   _8:3B  8:2b >8:4B  8b 4r
+
+// Part 4
+_8:3B >8:2B >8:4B 8:3b   _8:3B _8:2B >8:4B 8:3b
+8:5B >8:2B >8:2B >8:3B   _8:3B  8:2b >8:4B  _8b 4r
+
+_8:3B >8:2B >8:4B 8:3b   _8:3B >8:2B >8:4B 8:3b
+8:5B >8:2B >8:2B >8:3B   _8:3b 8:2r >8:4B >8b 4r

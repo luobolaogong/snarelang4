@@ -40,7 +40,7 @@ class CommandLine {
   static final tempoScalarMapIndex = 'temposcalar'; // -S? --ts --temposcalar
   static final nSnaresMapIndex = 'nSnares'; // --ns --nsnares
   static final timeSigMapIndex = 'timesig'; // --timesig --sig
-  static final usePadSoundFontMapIndex = 'usepad'; // --pad
+  static final usePadSoundFontMapIndex = 'usepad'; // --pad  Does this work?  Don't think so.
 
   List<String> get inputFilesList {
     return _inputFilesList;
@@ -290,7 +290,8 @@ class CommandLine {
           valueHelp: 'WARNING')
 
       ..addOption(CommandLine.trackMapIndex, // prob should also allow --stave and --track
-          allowed: ['snare', 'snare1', 'snare2', 'snare3', 'snare4', 'snare5', 'snare6', 'snare7', 'snare8', 'snare9' 'tenor', 'bass', 'metronome', 'met', 'pipes', 'tempo'], // tempo?  what about trackzero?  those hold events
+          //allowed: ['snare', 'snare1', 'snare2', 'snare3', 'snare4', 'snare5', 'snare6', 'snare7', 'snare8', 'snare9' 'tenor', 'bass', 'metronome', 'met', 'pipes', 'tempo'], // tempo?  what about trackzero?  those hold events
+          allowed: ['snare', 'tenor', 'bass', 'metronome', 'met', 'pipes', 'tempo'], // pad?  tempo?  what about trackzero?  those hold events
           defaultsTo: 'snare', // I think this is the reason we get a value!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 without a constructor
           help:
           'Set the staff/stave/instrument/track name.',

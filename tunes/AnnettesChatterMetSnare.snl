@@ -4,7 +4,7 @@
 
 /track met
 /time 12/8
-/tempo 136    // 136 recording
+/tempo 136    // 136 recording (https://youtu.be/dxmITiQysOI?t=83)
 
 8:3M . . .    . . . .    . . . .    . . . .
 8:3M . . .    . . . .    . . . .    . . . .
@@ -23,14 +23,14 @@
 /track snare  // this causes a new track/track which we don't want if we string pieces together
 //time 12/8
 //tempo 136    // recording: 136
-
-
+// Dynamics could be better.  Fix later.
+/f
 // Line 1
 32:3T 32:3z . .  8t . ^8D    16T . . .   ^8T ^8t . .
 ^8F 8t .   ^8f 8T ^8f    16t . . . ^8T  ^8t . .
 //8F 8t ^16T 16t 16t 16T 16T ^16t    ^16T 16t 16t 16T 16T ^16t  ^8T ^8t . .  // 16 is a sextuplet
-8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quntuplet in 6/8
-^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
+8F 8t ^40:3T . . . ^40:3T    ^40:3T . . . ^40:3T   ^8T ^8t . .  // 40:3 is a quintuplet in 6/8
+^8F 24t 24T 24T 8t   >8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 
 // Line 2
@@ -42,45 +42,86 @@
 
 /marker Pt2
 //Line 3
-^8T . .   ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+^8T . .   /p /cresc ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T /f
 ^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
-16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+//16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+/p /cresc 16T 16z >8T 16t 16Z    ^16t 16Z . .    ^16t 16Z . .   16t . . 16t   /f  ^8T . 8t
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 
 // Repeat Line 3
-^8T . .   12z . .  ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T
+
+^8T . .   /p /cresc ^20T 10Z .    ^20T 10Z .   16t . 16t 16t     16T 16T 16t 16t  ^8T /f
 ^8t . .   16F 16T 8t ^8T   8t 24T 24T 24t ^8T   ^8t . .
-16Z . ^20t 10z .    ^16t 16Z . .    ^16t 16Z . .     16t . . 16t    ^8T . 8t
+/p /cresc 16T 16z >8T 16t 16Z    ^16t 16Z . .    ^16t 16Z . .    16t . . 16t   /f  ^8T . 8t
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 /marker Pt3
 // Line 4
-8T 8f >8T  8t 8F >8t   8T 8f 8T  8D 16T . . .
->8T . 16T . . 16T  >8t >8T . 16T 16T 8t  >8F 8t 8t
-8T 8F . 8t 8F .  8T 8f 8T  8F 8T .
+/p /cresc 8T 8f >8T  8t 8F >8t   8T 8f 8T  8t 16T . . . /f
+// >8T . 16T . . 16T  >8t >8T . 16T 16T 8t  >8F 8t 8t
+8T . ^40:3T t T T ^40:3t ^8T   8t 16F 16T 8t   8T t t
+8T 8f . 8t 8F .  8T 8f 8T  8F 8T .
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 // Line 5
-8T 8f >8T  8t 8F >8t  8T 8f 8T   8T 16T . . .
->8T .  >16T . . 16T   8t >8T   8t  24T 24t 24t 8T  8t . .
-8F 8t .  8t 8F 8t  8T 8f 8T  >8t . .
+/p /cresc 8T 8f >8T  8t 8F >8t  8T 8f 8T   8T 16T . . . /f
+//>8T .  >16T . . 16T   8t >8T   8t  24T 24t 24t 8T  8t . .
+8T . ^40:3T t T T ^40:3t ^8T   8t 24T 24t 24t   8t   8T t t
+/p /cresc 8F 8t .  8t 8F 8t  8T 8f 8T  >8t . . /f
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 /marker Pt4
 // Line 6
->16T . . . . .   ^12t 12z .    ^12t 12z .    16T . >8T  8t . .
-^8F  24t 24T 24T  8t  4F 12F 12z .  16t . 16t 16t   >8T . .
+>16T . . . . .   /cresc ^12t 12z .    ^12t 12z .    16T . >8T   /ff ^8t . . /f
+^8F  24t 24T 24T  8t  4T ^12F 12z .  16t . 16t 16t   >8T . .
 ^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8f 8T .
 
 
 // Repeat Line 6
->16T . . . . .   ^12t 12z .    ^12t 12z .    16T . >8T  8t . .
-^8F  24t 24T 24T  8t  4F 12F 12z .  16t . 16t 16t   >8T . .
+>16T . . . . .   /cresc ^12t 12z .    ^12t 12z .    16T . >8T  /ff 8t . . /f
+^8F  24t 24T 24T  8t  4T ^12F 12z .  16t . 16t 16t   >8T . .
 ^8F  24t 24T 24T   >8   8T . >8F    24T 24t 24t  >8T  24t 24T 24T  >8f . .
 ^8F 24t 24T 24T 8t   8T .   >16F 16t 16t 16T  8t . ^8:3f
 
+//
+// Bass -- prob could be written better
+// Check out example for bass:
+// https://youtu.be/ge-Sm_XJckY?t=89
+/track bass
+//
+/f
+// part 1  (2 12/8 bars per line)
+>8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r        >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+>8:3B 8:3r             8:3r 8:3b               >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+
+>8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r        >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+>8:3B 8:3r             8:3r 8:3b               >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+
+// part 2
+_8:3B >8:2B ^8:2B      8:2r _8:3B              >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+8r _8:2B >8:2B ^8:4B 8:3B                      >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+
+_8:3B >8:2B ^8:2B 8:2r _8:3B                   >8:3B 16:3b 16:3r    >8:3B 16:3b 16:3r
+8r _8:2B >8:2B ^8:4B 8:3B                      >8:3B 16:3b 16:3r    >8:3B 16:3b 16:3r
+
+
+// Part 3
+/mp
+>8:3B 16:3b 16:3r      8r >8:2b ^8:3B          >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+>8:3B 16:3b 16:3r      8r >8:2b ^8:3B          >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+
+>8:3B 16:3b 16:3r      8r >8:2b ^8:3B          >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+>8:3B 16:3b 16:3r      8r >8:2b ^8:3B          >8:3B 16:3b 16:3r     >8:3B 16:3b 16:3r
+
+// Part 4
+/f
+>8:3B ^8:2B ^8:4B 8:3b                         >8:3B ^8:2B ^8:4B 8:3b
+8:5B ^8:2B ^8:2B ^8:3B                         >8:3b 8:2r ^8:4B 16:3b 16:3r
+
+>8:3B ^8:2B ^8:4B 8:3b                         >8:3B ^8:2B ^8:4B 8:3b
+8:5B ^8:2B ^8:2B ^8:3B                         >8:3b 8:2r ^8:4B ^16:3b 16:3r
 
 
 

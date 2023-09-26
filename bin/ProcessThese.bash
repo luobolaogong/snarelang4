@@ -1,13 +1,13 @@
 #!/bin/bash
 echo "Processing .snl and .ppl files, to create .mid and audio files under ~/MyHobby/ which can be copied into Google Drive for the .org website use."
-echo "There's also the file BuildTunes.bash, which I think is old, so be careful to choose correctly"
+echo "There's also the file BuildTunes.bash, so be careful to choose correctly"
 #echo This is being run out of the bin directory of the snarelang4 project, and not the pipelang project, so later pipes wont work right
 #echo We are here: `pwd`
 
 declare myHobby=/home/rob/MyHobby
 #echo myHobby is $myHobby and it has `ls $myHobby`
 
-declare snareLangDir=/home/rob/WebstormProjects/snarelang4
+declare snareLangDir=/home/rob/WebstormProjects/SnareLang4
 declare snareLangExecutable=${snareLangDir}/bin/snl.dart
 declare pipeLangDir=/home/rob/WebstormProjects/pipelang
 declare pipeLangDartFile=${pipeLangDir}/bin/ppl.dart
@@ -354,7 +354,7 @@ echo "Starting to process Non-Band tunes"
 
 
 declare -a nonBandTunes=( \
-AnnettesChatterMetSnare \
+AnnettesChatter \
 JaneCampbellSnare \
 JimmyRolloMetSnare \
 JohnWalshsWalkMetSnare )

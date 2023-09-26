@@ -1,0 +1,135 @@
+// Snare part from Cameronian Rant, to be played against Stonecutter's Phoenix.
+// An experiment.
+// Bummer.  Though Rant was written in 12/8, I think, I wrote this in 4/4.
+// So to match with the pipes I have to convert one or the other.  Pipes or drums
+// Looks like easier to convert pipes to 4/4 from 12/8.
+
+
+/time 4/4
+/tempo 120
+/track met
+/channel 0
+
+// Count off
+4M . 12M . . 4M
+
+// why does metronome sometimes come out so loud?
+
+//mp
+/pp
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+
+//4M . . .   4M . . .   4M . . .   4M . . .
+//4M . . .   4M . . .   4M . . .   4M . . .
+//4M . . .   4M . . .   4M . . .   4M . . .
+//4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+4M . . .   4M . . .   4M . . .   4M . . .
+
+
+
+/track snare
+/channel 2
+
+// Count off
+4T . 12T . . 4T
+
+/marker P1
+/fff ^12D /f 24T . 12T  . . .      /fff ^12D /f 12t .   . /cresc 18Z . .
+^12t /fff /f 24T . 12T    12t 12T t   /f /cresc >20Z . . . .   ^12t /fff /f  . .
+^24Z ^24z 12T .     12T 12t ^24Z ^24z   24T . . . 12T  12t . .
+^6D ^24T .  24T . . . >12D  12t . . >4d
+
+/fff ^12D /f 24T . >12T  . . .      /fff ^12D /f 12t .   . /cresc 18Z . .
+^12t /fff /f 24T . >12T    12t 12T t  /f /cresc >20Z . . . .   ^12t /fff /f  . .
+/mp /cresc _30T 15z Z  _30t 15Z z       _12T _36t 18Z     _30t 15Z z    _30T 15z Z   _12t _36T 18z
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _36t 18Z . . .  ^4T /ff
+
+/marker P2
+/ff 20Z . . . .  _6t /f ^12f 12T . _12F ^6f >24Z >.
+^6T 12t 6F >12f 12r >24Z >. >12T _6t 12t
+^24T . . . . .   ^24T . . .   ^24T . . . . . ^12T  ^6t 12t
+24Z 24z 24T . ^12T  ^6t ^24Z ^24z 24T . . . _12T ^6t 12t
+
+^6D /cresc 20t 20t   20T . _20T ^12t /ff /f 12T . >12F >6f 12t
+>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+>24T . . . >. .    ^. . . . . .   . . ^. . . .   ^. . . . . .
+>24T . . . ^. .     . . ^. . . .     /cresc >30T 15z . . . . . .
+
+/marker P3
+^24T /fff /f  . . . . .   ^12D 24T . . .    ^24T . . . >12T  >12t . .
+>24T >. _. _. >12T  12t . .    >20Z >. >. >. >.  >12t . .
+>24Z >. 12T .   12T . ^24Z ^.   24T . . . 12T  12t . .
+>6D >24T .   24T . . . >12D   12t . . >4D
+
+>24T . . . . .   >12D 24T . . .   >. . . . >12T  >12t . .
+>24T >. _. _. _12T  12t . .   _20Z _. _. _. _. /f 12t . .
+/f /cresc _30T 15z Z    _30t 15Z z       _12T _36t 18Z     _12t _36T 18z    _12T _36t 18Z   _12t _36T 18z
+_30T 15z Z  _30t 15Z z       _12T _36t 18Z     _36t 18Z . . .  ^4T  /ff /f
+
+/marker P4
+^6F 24z .  12t . .  >24Z >. 12T .   6T 12t
+>24Z >. 24T . 12T  6t >24Z >.  24T . . .  12T  6t 12t
+>6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+27:2z     ^12T ^36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+
+^6T /cresc 20t 20t   20T . _20T ^12t /ff /f 12T . >12F >6f 12t
+>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+>24T . . . >. .    ^. . . . . .   . . ^. . . .   ^. . . . . .
+>24T . . . ^. .     . . ^. . . .     >28T /mf /cresc 14z . . 16Z . . .
+
+
+///marker P5
+//>30T /fff /mf /cresc 15z . 18Z . . . . .    >36t 18Z . . .   >36T 18z . . .
+//>30t 15Z . 18z . . . . .    >36T 18z . . .   >36t 18Z . . .
+//12T /fff /f 12t . . . >d >t . . >D 24T . . .
+//12T . >D 24T . . . 12T 12t . >f T . >F      // watch out for errors in parsing in this line 9
+//
+///mp /cresc
+//>30T 15z . 18Z . . . . .    >36t 18Z . . .   >36T 18z . . .
+//>30t 15Z . 18z . . . . .    >36T 18z . . .   >36t 18Z . . .
+//12T /fff /f 12t >D 24T . . . >12T 12t . >. >12D 24T . . .
+//12T . >D 24T . . . >12T 12t . >. >4F
+
+///marker P6
+//^6F 24z .  12t . .  >24Z >. >12T >.   6T 12t
+//_24Z _. 24T . >12T  ^6t >24Z >.  24T . . .  >12T  ^6t 12t
+//6D 12t >24T . . . ^. .  24T . . . >12T  ^27t 27:2Z . .
+//27:2z     ^12T ^36t 18Z   ^30 15Z .   ^30T 15z .  >12t  ^36T 18z    >28T 14z . .
+//
+//^6T /cresc 20t 20t   20T . _20T ^12t /ff /f 12T . >12F >6f 12t
+//>12D 12T .   12T _12d ^12t  12T . _12D  ^6T 12t
+//>24T . >. . >. .    >. . . . >. .   . . >. . >. .   >. . . . . .
+//>24T . . . >. .     . . >. . . .     /cresc >28T 14z . . 16Z . . . // good way to do this roll?
+
+/marker P7
+/ff >6T 18Z . . . . . 16:3t /f  16T >16:3f 16t
+/ff >6F 18Z . . . . . 16:3t /f  16T >16:3f 16t
+^30T 15z . 24t 24Z . . . 16T 16T  /cresc ^34t 17Z . . . . . . .
+^30T /fff /ff 15z . >30t 15Z . >12T >12T  /cresc ^34t 17Z . . . . . . .
+
+/ff >6T 18Z . . . . . 16:3t /f  16T >16:3f 16t
+/ff >6F 18Z . . . . . 16:3t /f  16T >16:3f 16t
+>30T 15z .  >30t 15Z .  >12T   >36t 18Z 12t   >36T 18z 12T   >36t 18Z 12t  >36T 18z
+>36T 18z 12T  >36t 18Z  >30t 15Z .   >30T   15z .   >12t  >36T 18z    >28T 14z . .
+
+/marker P8
+/f /cresc 18T . . ^12t /fff /f  12T . >12T  12t >12T .  >16Z >. >. >.
+/f /cresc 18T . . ^12t /fff /f  12T . >12T  12t >12T .  >16Z >. >. >.
+12T . >12D  24T . . . 12T  12t . .  >12D 24T . . .
+12T . >12D  24T . . . 12T  12t . .  >16Z >. >. >.
+
+/f /cresc 18T . . ^12t /fff /f 12T . >12T  12t >12T .  >24Z >. 12T .
+>12D T t   12T _12d >12t  12T . _12D   >6T 12t
+>24T . . . >. .    ^24T . . . . .   24T . >. . . .   ^24t . . . . .
+>24T . . . >. .  24T . >. . . .  /cresc 12T ^12f ^.  ^12f /fff
+

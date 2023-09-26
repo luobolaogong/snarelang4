@@ -8,7 +8,8 @@
 /time 6/8
 //tempo 136    // Maxwell solo https://youtu.be/dxmITiQysOI?t=83
 /tempo 126    // SFU according to https://youtu.be/ge-Sm_XJckY?t=89
-/tempo 8:3=100   // does this work????  If so, easy to set desired tempo without percentage
+//tempo 8:3=100   // does this work????  If so, easy to set desired tempo without percentage
+/tempo 120   // Allison's target tempo
 /marker AChat
 
 // Count off
@@ -184,7 +185,7 @@ _8:3B 8:2b ^8:4B     _8:3B         >8:3B 8b 4r     >8:3B 8b 4r
 //8r 8:2b >8:2B ^8:4B 8:3B                      >8:3B 8b 4r    >8:3B 8b 4r
 
 
-// Part 3
+// Part 3    change this to be quieter, and just quarter notes??????????????????????????????????????????????????????????
 /mp
 >8:3B 8:3r . 8:3B   >8:3B 8:3r >8:3B 8:3r
 >8:3B 8:3r . 8:3B   >8:3B  8:2b ^8:4B  8b 4r

@@ -127,7 +127,8 @@ Future <void> main(List<String> arguments) async {
   if (dirExists) {
     midiWriterCopy.writeMidiToFile(midiFile,
         midiFileOutFile); // will crash here.  Why?  "cannot write negative variable-length integer" ?
-    print('Done writing midifile ${midiFileOutFile.path} (${midiFileOutFile.absolute})');
+    //print('Done writing midifile ${midiFileOutFile.path} (${midiFileOutFile.absolute})');
+    print('Done writing midifile ${midiFileOutFile.absolute}');
   }
   else {
     print('parent dir of ${midiFileOutFile.absolute} did not exist');

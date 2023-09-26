@@ -709,33 +709,33 @@ class Score {
           case TrackId.snare:
             snareNumber = 5;
             break;
-          case TrackId.snare1:
-            snareNumber = 1;
-            break;
-          case TrackId.snare2:
-            snareNumber = 2;
-            break;
-          case TrackId.snare3:
-            snareNumber = 3;
-            break;
-          case TrackId.snare4:
-            snareNumber = 4;
-            break;
-          case TrackId.snare5:
-            snareNumber = 5;
-            break;
-          case TrackId.snare6:
-            snareNumber = 6;
-            break;
-          case TrackId.snare7:
-            snareNumber = 7;
-            break;
-          case TrackId.snare8:
-            snareNumber = 8;
-            break;
-          case TrackId.snare9:
-            snareNumber = 9;
-            break;
+          // case TrackId.snare1:
+          //   snareNumber = 1;
+          //   break;
+          // case TrackId.snare2:
+          //   snareNumber = 2;
+          //   break;
+          // case TrackId.snare3:
+          //   snareNumber = 3;
+          //   break;
+          // case TrackId.snare4:
+          //   snareNumber = 4;
+          //   break;
+          // case TrackId.snare5:
+          //   snareNumber = 5;
+          //   break;
+          // case TrackId.snare6:
+          //   snareNumber = 6;
+          //   break;
+          // case TrackId.snare7:
+          //   snareNumber = 7;
+          //   break;
+          // case TrackId.snare8:
+          //   snareNumber = 8;
+          //   break;
+          // case TrackId.snare9:
+          //   snareNumber = 9;
+          //   break;
           default:
           //print('Huh?  Whats this element.id?: ${thisTrack.id}');
             break;
@@ -1127,15 +1127,15 @@ Parser scoreParser = ((commentParser | markerParser | textParser | trackParser |
 /// So, it's 'track <name>'
 enum TrackId {
   snare,
-  snare1,
-  snare2,
-  snare3,
-  snare4,
-  snare5,
-  snare6,
-  snare7,
-  snare8,
-  snare9,
+  // snare1,
+  // snare2,
+  // snare3,
+  // snare4,
+  // snare5,
+  // snare6,
+  // snare7,
+  // snare8,
+  // snare9,
   //unison, // snareEnsemble
   pad,
   tenor, // possibly pitch based notes rather than having tenor1, tenor2, ...
@@ -1183,33 +1183,33 @@ TrackId trackStringToId(String trackString) {
     case 'snare':
       trackId = TrackId.snare;
       break;
-    case 'snare1':
-      trackId = TrackId.snare1;
-      break;
-    case 'snare2':
-      trackId = TrackId.snare2;
-      break;
-    case 'snare3':
-      trackId = TrackId.snare3;
-      break;
-    case 'snare4':
-      trackId = TrackId.snare4;
-      break;
-    case 'snare5':
-      trackId = TrackId.snare5;
-      break;
-    case 'snare6':
-      trackId = TrackId.snare6;
-      break;
-    case 'snare7':
-      trackId = TrackId.snare7;
-      break;
-    case 'snare8':
-      trackId = TrackId.snare8;
-      break;
-    case 'snare9':
-      trackId = TrackId.snare9;
-      break;
+    // case 'snare1':
+    //   trackId = TrackId.snare1;
+    //   break;
+    // case 'snare2':
+    //   trackId = TrackId.snare2;
+    //   break;
+    // case 'snare3':
+    //   trackId = TrackId.snare3;
+    //   break;
+    // case 'snare4':
+    //   trackId = TrackId.snare4;
+    //   break;
+    // case 'snare5':
+    //   trackId = TrackId.snare5;
+    //   break;
+    // case 'snare6':
+    //   trackId = TrackId.snare6;
+    //   break;
+    // case 'snare7':
+    //   trackId = TrackId.snare7;
+    //   break;
+    // case 'snare8':
+    //   trackId = TrackId.snare8;
+    //   break;
+    // case 'snare9':
+    //   trackId = TrackId.snare9;
+    //   break;
     case 'pad':
       trackId = TrackId.pad;
       break;
@@ -1241,24 +1241,24 @@ String trackIdToString(TrackId id) {
   switch (id) {
     case TrackId.snare:
       return 'snare';
-    case TrackId.snare1:
-      return 'snare1';
-    case TrackId.snare2:
-      return 'snare2';
-    case TrackId.snare3:
-      return 'snare3';
-    case TrackId.snare4:
-      return 'snare4';
-    case TrackId.snare5:
-      return 'snare5';
-    case TrackId.snare6:
-      return 'snare6';
-    case TrackId.snare7:
-      return 'snare7';
-    case TrackId.snare8:
-      return 'snare8';
-    case TrackId.snare9:
-      return 'snare9';
+    // case TrackId.snare1:
+    //   return 'snare1';
+    // case TrackId.snare2:
+    //   return 'snare2';
+    // case TrackId.snare3:
+    //   return 'snare3';
+    // case TrackId.snare4:
+    //   return 'snare4';
+    // case TrackId.snare5:
+    //   return 'snare5';
+    // case TrackId.snare6:
+    //   return 'snare6';
+    // case TrackId.snare7:
+    //   return 'snare7';
+    // case TrackId.snare8:
+    //   return 'snare8';
+    // case TrackId.snare9:
+    //   return 'snare9';
     // case TrackId.unison:
     //   return 'unison';
     case TrackId.pad:

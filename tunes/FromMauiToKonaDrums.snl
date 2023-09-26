@@ -1,0 +1,535 @@
+// From Maui To Kona
+// Hornpipe by Bob Worrall 2004
+// See xxxxx
+
+/track met
+/channel 0
+/time 2/4
+/tempo 80
+/marker Maui2Kona
+// Sync:
+/mf
+_4M _. _8M . _4M
+/mf
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+/marker PD
+4M . . .
+// No standard Roll-off for this tune.  Instead, a drum intro
+/marker Intro
+//_4M _. _8M . _. .  _4M _. _8M . _. .
+_8M . . .
+_8M . . .
+_8M . . .
+_8M _8M _4M
+
+// Now the tune
+/mp
+/marker Pt1
+4M .  . .  . .  . .
+. .  . .  . .  . .
+/marker P3Rpt
+4M .  . .  . .  . .
+. .  . .  . .  . .
+
+/marker Pt2
+4M .  . .  . .  . .
+4M .  . .  . .  . .
+/marker P2Rpt
+4M .  . .  . .  . .
+4M .  . .  . .  . .
+
+/marker Pt3
+4M .  . .  . .  . .
+4M .  . .  . .  . .
+/marker P3Rpt
+4M .  . .  . .  . .
+4M .  . .  . .  . .
+
+/marker Pt4
+4M .  . .  . .  . .
+4M .  . .  . .  . .
+/marker P4Rpt
+4M .  . .  . .  . .
+/marker P1 2of4
+4M .  . .  . .  . .  . .  . .
+
+
+// The CHIPS part or whatever, is below this snare track
+// Add more dynamics on the rolls, though they're not exactly written in.
+
+/track snare
+/channel 2
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+//marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// No standard Roll-off
+// Intro instead
+/ff
+24Z . . 16t >. . t >8F
+24Z . . 16t >. . t >8F
+24Z . . 16t >. . t >8F
+/< 24Z . . . . .   4T /fff
+
+
+/mf
+// Hey, remember that 5 stroke tap rolls that take up an 8th note each are 40T 20z . 40t 20Z .
+//marker Pt1
+>8F >16F 16t . . >40T 20z .
+8t _32T . . .  _16T ._8F
+16T >f T ._8F t
+>16F t 8  >40T 20z . >40t 20Z .
+
+>8T >16F 16t . . >40T 20z .
+8t 32T . . .  16T ._8F
+24Z . . 16t >T 16t t >8F
+/< 24Z . . . . . 8T /ff /mf 24Z . .
+
+// repeat Pt1
+>8t >16F 16t . . >40T 20z .
+8t _32T . . .  _16T ._8F
+16T >f T ._8F t
+>16F t 8  >40T 20z . >40t 20Z .
+
+>8T >16F 16t . . >40T 20z .
+8t 32T . . .  16T ._8F
+24Z . . 16t >T 16t t >8F
+/< 24Z . . . . . 4T /ff /mf
+
+//marker Pt2
+16T >f T ._8F 8t
+8F 24z . .  16t ._8f
+16T >f 16t ._8F t
+>16F t 8T >40T 20z . >40t 20Z .
+
+16T >f T ._8F 8t
+8F 24z . .  16t ._8f
+24Z . . 16t >T 16t t >8F
+/< 24Z . . . . . 4T /ff /mf
+
+// repeat Pt2
+16T >f T ._8F 8t
+8F 24z . .  16t ._8f
+16T >f 16t ._8F t
+>16F t 8T >40T 20z . >40t 20Z .
+
+16T >f T ._8F 8t
+8F 24z . .  16t ._8f
+24Z . . 16t >T 16t t >8F
+/< 24Z . . . . . 4T /ff /mf
+
+// Pt3
+32T . . .  >16T >40t 20Z . >16T t t
+>8F 24Z . .  16t >T t t
+32T . . .  >16T >40t 20Z . >16T t t
+>4F 4r
+
+32T . . .  >16T >40t 20Z . >16T t t
+>8F 24Z . .  16t . _8f
+24Z . . 16t >T t t >8F
+24Z . . . . . 8T 8r
+
+// Pt3 Repeat
+32T . . .  >16T >40t 20Z . >16T t t
+>8F 24Z . .  16t >T t t
+32T . . .  >16T >40t 20Z . >16T t t
+>4F 4r
+
+32T . . .  >16T >40t 20Z . >16T t t
+>8F 24Z . .  16t T_8f
+24Z . . 16t >T t t >8F
+24Z . . . . . 8T 16T .
+
+// Pt4
+>40T 20z . 16t >40T 20z . >16t . .
+_8F >16F t T _f T .
+>48T 24z . . .  >40t 20Z .   >16T  >40t 20Z .
+>16T . . >f 8r 16T .
+
+>40T 20z . 16t >40T 20z . >16t . .
+_8F 24Z . . 16t . _8f
+24Z . . 16t >T t t >8F
+/< 24Z . . . . . 8T /fff /mf 16T .
+
+
+// Pt4 Repeat
+>40T 20z . 16t >40T 20z . >16t . .
+_8F >16F t T _f T .
+>48T 24z . . .  >40t 20Z .   >16T  >40t 20Z .
+>16T . . >f 8r 24Z . .
+
+// Pt1 2 of 4
+>8F >16F 16t . . >40T 20z .
+8t >32T . . .  _16T ._8F
+//24Z . . 16t >T 16t t >8F
+///< 24Z . . . . . 4T /ff /mf
+
+// New ending
+/mp /<
+24Z . . 16t >. . t >8F
+24Z . . 16t >. . t >8F
+24Z . . 16t >. . t >8F
+24Z . . . . .   4T /fff
+
+
+
+//////////////////////////////////////////////////////
+
+// CHIPS OR WHATEVER IT'S CALLED
+// CHIPS OR WHATEVER IT'S CALLED
+// CHIPS OR WHATEVER IT'S CALLED
+// CHIPS OR WHATEVER IT'S CALLED
+/track snare
+/channel 5
+
+// sync
+1r
+// "pipes and drums, One Two" or "By the right, quick march"
+/ff
+//marker P&D 1,2
+32:3T 32t 8F 4r ^4F ^.
+// No standard Roll-off
+// Intro instead
+24Z . . 16t >. . t >8F
+24Z . . 16t >. . t >8F
+24Z . . 16t >. . t >8F
+/< 24Z . . . . .   4T /fff
+
+// Cheap simulation of 2 or more snares
+256r
+
+//mf
+/f
+// Hey, remember that 5 stroke tap rolls that take up an 8th note each are 40T 20z . 40t 20Z .
+//marker Pt1
+>8F >16F 16t . . >40T 20z .
+8t 8:3r
+16T >f T ._8F t
+>16F t 8  >40T 20z . >40t 20Z .
+
+>8T >16F 16t . . >40T 20z .
+8t 8:3r
+24Z . . 16t >T 16t t >8F
+/< 24Z . . . . . 8T /ff /f 24Z . .
+
+// repeat Pt1
+>8t >16F 16t . . >40T 20z .
+8t _32T . . .  _16T ._8F
+16T >f T ._8F t
+>16F t 8  >40T 20z . >40t 20Z .
+
+>8T >16F 16t . . >40T 20z .
+8t 32T . . .  16T ._8F
+24Z . . 16t >T 16t t >8F
+/< 24Z . . . . . 4T /ff /f
+
+//marker Pt2
+16T >f T ._8F 8t
+8F 8:3r
+16T >f 16t ._8F t
+>16F t 8T >40T 20z . >40t 20Z .
+
+16T >f T ._8F 8t
+8F 8:3r
+24Z . . 16t >T 16t t >8F
+/< 24Z . . . . . 4T /ff /f
+
+// repeat Pt2
+16T >f T ._8F 8t
+8F 24z . .  16t ._8f
+16T >f 16t ._8F t
+>16F t 8T >40T 20z . >40t 20Z .
+
+16T >f T ._8F 8t
+8F 24z . .  16t ._8f
+24Z . . 16t >T 16t t >8F
+/< 24Z . . . . . 4T /ff /f
+
+// Pt3
+32T . . .  >16T >16t 4r
+>8F 24Z . .  16t >T t t
+32T . . .  >16T >16t 4r
+>4F 4r
+
+32T . . .  >16T >16t 4r
+>8F 24Z . .  16t . _8f
+24Z . . 16t >T t t >8F
+24Z . . . . . 8T 8r
+
+// Pt3 Repeat
+32T . . .  >16T >40t 20Z . >16T t t
+>8F 24Z . .  16t >T t t
+32T . . .  >16T >40t 20Z . >16T t t
+>4F 4r
+
+32T . . .  >16T >40t 20Z . >16T t t
+>8F 24Z . .  16t T_8f
+24Z . . 16t >T t t >8F
+24Z . . . . . 8T 16T .
+
+// Pt4
+2r
+_8F >16F t T _f T .
+2T
+>16T . . >f 8r 8r
+
+2r
+_8F 24Z . . 16t . _8f
+24Z . . 16t >T t t >8F
+/< 24Z . . . . . 8T /fff /f 8r
+
+
+// Pt4 Repeat
+>40T 20z . 16t >40T 20z . >16t . .
+_8F >16F t T _f T .
+>48T 24z . . .  >40t 20Z .   >16T  >40t 20Z .
+>16T . . >f 8r 24Z . .
+
+// Pt1 2 of 4
+>8F >16F 16t . . >40T 20z .
+8t >32T . . .  _16T ._8F
+//24Z . . 16t >T 16t t >8F
+///< 24Z . . . . . 4T /ff /mf
+
+// New ending
+/mp /<
+24Z . . 16t >. . t >8F
+24Z . . 16t >. . t >8F
+24Z . . 16t >. . t >8F
+24Z . . . . .   4T /fff
+
+
+
+
+
+
+
+/track tenor
+/channel 3
+
+// Sync:
+2r 2r
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+2r 2r
+
+/mf
+// Roll off Intro
+>16:3N . 8n
+>16:3N . 8n
+>16:3N . 8n
+>4N >4N
+
+/mf
+// Pt1
+8N . 8r 8n
+4N 4r
+16r /< 16n . . >4N /f /mf
+>16N . 8N 4r
+
+8N . 8r 8n
+4N 4r
+>16:3N . 8n
+>4N >4N
+
+// Pt1 rpt
+8N . 8r 8n
+4N 4r
+16r /< 16n . . >4N /f /mf
+>16N . 8N 4r
+
+8N . 8r 8n
+4N 4r
+>16:3N . 8n
+>4N >4N
+
+// Pt2
+4r 8r 8n
+4N 4r
+/< 16r 16n . . >4N /f /mf
+>16N . 8N 4r
+
+4r 8r 8n
+4N 4r
+>16:3N . 8n
+>4N >4N
+
+// Pt2 rpt
+4r 8r 8n
+4N 4r
+/< 16r 16n . . >4N /f /mf
+>16N . 8N 4r
+
+4r 8r 8n
+4N 4r
+>16:3N . 8n
+>4N >4N
+
+// Pt3
+>16:3N . 8n
+>4N 4r
+>16:3N . 8n
+>4N 4r
+
+>16:3N . 8n
+>4N 4r
+>16:3N . 8n
+>4N >4N
+
+// Pt3 rpt
+>16:3N . 8n
+>4N 4r
+>16:3N . 8n
+>4N 4r
+
+>16:3N . 8n
+>4N 4r
+>16:3N . 8n
+>4N >4N
+
+// Pt4
+>16:3N . 8n
+>4N 4r
+>16:3N . 8n
+/< >16N . . >16n 4r /f /mf
+
+>16:3N . 8n
+>4N 4r
+>16:3N . 8n
+>4N >4N
+
+// Pt4 rpt
+>16:3N . 8n
+>4N 4r
+>16:3N . 8n
+/< >16N . . >16n 4r /f /mf
+
+// Pt1 2 of 4
+8N . 8r 8n
+4N 4r
+//>16:3N . 8n
+//>4N >4N
+/mp
+/<
+>16:3N . 8n
+>16:3N . 8n
+>16:3N . 8n
+>4N >4N
+/ff
+
+
+///////////////////////////////////////////
+/track bass
+/channel 4
+
+// Sync:
+2r 2r  // wow you can't use a "." for repeating a rest!
+// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+2r 2r
+
+/mf
+// Roll off Intro
+>16:3B . 8b
+>16:3B . 8b
+>16:3B . 8b
+>4B >4B
+
+/mf
+// Pt 1
+>4B .
+>4B 8B >8b
+2r
+>4B 8B .
+
+>4B .
+>4B 8B .
+>16:3B . 8b
+>4B >4B
+
+// Pt 1 rpt
+>4B .
+>4B 8B >8b
+2r
+>4B 8B .
+
+>4B .
+>4B 8B .
+>16:3B . 8b
+>4B >4B
+
+
+// Pt2
+>4B 4r
+>4B 8B >8b
+2r
+>4B 8B .
+
+4B 4r
+>4B 8B .
+>16:3B . 8B
+>4B >4B
+
+// Pt2 rpt
+>4B 4r
+>4B 8B >8b
+2r
+>4B 8B .
+
+4B 4r
+>4B 8B .
+>16:3B . 8B
+>4B >4B
+
+// Pt3
+>16:3B . 8b
+>4B .
+>16:3B . 8b
+>4B 4r
+
+>16:3B . 8b
+>4B 8B .
+>16:3B . 8b
+>4B >4B
+
+// Pt3 rpt
+>16:3B . 8b
+>4B .
+>16:3B . 8b
+>4B 4r
+
+>16:3B . 8b
+>4B 8B .
+>16:3B . 8b
+>4B >4B
+
+// Pt4
+>16:3B . 8b
+>4B .
+>16:3B . 8b
+>16:3B >16b 4r
+
+>16:3B . 8b
+>4B 8B .
+>16:3B . 8b
+>4B >4B
+
+// Pt4 rpt
+>16:3B . 8b
+>4B .
+>16:3B . 8b
+>16:3B >16b 4r
+
+// Pt1 2 of 4
+>4B .
+>4B 8B .
+//>16:3B . 8b
+//>4B >4B
+/mp
+/<
+>16:3B . 8b
+>16:3B . 8b
+>16:3B . 8b
+>4B >4B
+/ff

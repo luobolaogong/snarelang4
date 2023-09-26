@@ -3,6 +3,7 @@
 // J. Reid Maxwell
 
 /track met
+/channel 1
 /time 12/8
 /tempo 136    // 136 recording
 
@@ -21,6 +22,7 @@
 
 /marker Annette's Chatter
 /track snare  // this causes a new track/track which we don't want if we string pieces together
+/channel 2
 //time 12/8
 //tempo 136    // recording: 136
 

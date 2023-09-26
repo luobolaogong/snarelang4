@@ -5,15 +5,17 @@
 // All this stuff is supposedly from the JL Massed Bands 4/4 drum parts
 
 /track met
-/channel 4
+/channel 1
 /time 4/4
-/tempo 76   // for b'day gig
+/tempo 4=84
 
+/marker CJocks
 // Sync:
 /ff
 _4M _. _8M . _4M
 /f
 // Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+/marker P&D 1,2
 4M . . .
 // Roll-off
 _4M _. _8M . _. .  _4M _. _8M . _4M
@@ -21,61 +23,73 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 
 
 // Cockney Jocks 1,3 - met
-
+/marker Pt1
+/mp
 4M . . .  . . . .  . . . .  . . . .
+//marker Pt1b
 4M . . .  . . . .  . . . .  . . . .
-
+/marker Pt2
 4M . . .  . . . .  . . . .  . . . .
-4M . . .  . . . .  . . . .  . . . .
+//marker Pt2b
+4M . . .  . . . .  . . . .  . . . 4r
 
 
 /////////////////// Snare ///////////////////////////////////
 
-/track snare5
-/channel 5
+/track snare
+/channel 2
 
 
 // sync
 1r
 // "pipes and drums, One Two", or "By the right, quick march"
 /ff
-/marker P&D 1,2
+//marker P&D 1,2
 32:3T 32t 8F 4r 4F .
 /f
 // Roll-off
 /cresc 24Z . . . . .    . . . . . .   2T /fff /f
-/cresc 24Z . . . . .    . . . . . .   2T /fff /f
+/cresc 24Z . . . . .    . . . . . .   4T /fff
+
+///f /cresc 12t . .   // pickup
+///f /cresc 16t . 8   // pickup this is according to Allison
+/f /cresc 24Z . 24T 8t   // This is according to Peter who wrote it as dotted 16, 32, 8
+
+// Cockney Jocks - snare part for the competition set, which
+// skips part 2 of the tune, I think.
+
+//marker Cockney Jocks
+// 16 bars for competition rather than 24
+//marker Pt1
+// one bar per line
+4F /fff /mf /< 24Z . . . . .  _40T 20z . 24z . .  32T . . . _8T /fff /f
+12F 24t 12T 24f 12T 24t 8F   24:5F 24t  24Z . . 8t
+
+24:5F 72T 36z 8T .  24Z . . 24t . .  8F 8t
+4F /mf /< 24Z . . . . . 6T /fff /f 24r 24t 8F 8t
+
+4F /fff /mf /< 24Z . . . . .  _40T 20z . 24z . .  32T . . . _8T /fff /f
+12F 24t 12T 24f 12T 24t 8F   24:5F 24t  24Z . . 8t
+
+24:5F 72T 36z 8T .  24Z . . 24t . .  12T ^24t 12T 24T
+4f /mf /< 24Z . . . . . 4T /fff /f 8r 8t
+
+//marker Pt2
+8F 24Z . . 8t 8F  24Z . . _40t 20Z .  32T . . . _8T
+12F 24t 12T 24f 12T 24t 8F   24:5F 24t  24Z . . 8t
+
+24:5F 72T 36z 8T .  24Z . . 24t . .  8F 8t
+4F /mf /< 24Z . . . . . 6T /fff /f 24r 24t 8F 8t
+
+8F 24Z . . 8t 8F  24Z . . _40t 20Z .  32T . . . _8T
+12F 24t 12T 24f 12T 24t 8F   24:5F 24t  24Z . . 8t
+
+24:5F 72T 36z 8T .  24Z . . 24t . .  12T ^24t 12T 24T
+4f /mf /< 24Z . . . . . 2T /fff /f
 
 
 
-// Cockney Jocks - snare but probably from massed bands score
-/marker Cockney Jocks (Massed Bands)
-// 16 bars
-/marker Pt1
-/f
-^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
-^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
 
-/marker Pt1Rpt
-/f
-^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-^8F 24Z . .  _8t  24Z . .  _8t  ^t 24Z . . _8t
-^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
-
-/marker Pt2
-/mp /cresc 24Z . . . . . 8T /fff /f 8t  /mp /cresc 24Z . . . . . 8T /fff /mf 8t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /fff /f 8t  /mp /cresc 24Z . . . . . 8T /fff /mf 8t
-^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
-
-/marker Pt2Rpt
-/mp /cresc 24Z . . . . . 8T /fff /mf 8t  /mp /cresc 24Z . . . . . 8T /fff /mf 8t
-^12T 24t 12T ^24t 12T 24t ^8T  ^12T 24t 12T ^24t 12T 24t ^8T
-/mp /cresc 24Z . . . . . 8T /fff /mf 8t  /mp /cresc 24Z . . . . . 8T /fff /mf 8t
-^4F /mp /cresc 24Z . . . . . >4T /fff /mf 8r t
 
 
 
@@ -92,38 +106,40 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /mf
 // Roll off
 4N . 2N
-4N . 2N
-
-
-/mf
+4N . 4N
 
 /mf
-4N . . .
-24:5N 6n 8n   24:5N 6n 8n
-4N . . .
-4N . 2N
+//16n . 8  // pickup beat // according to Allison
+/mp /cresc 12n 24N 8n // Interpreting Peter's writing
 
-4N . . .
-24:5N 6n 8n   24:5N 6n 8n
-4N . . .
-4N . 2N
+// One bar per line
+4N /mf 4r . 8N .
+24:5N 6n     8n 4N 4r
+4r . 8N 24n . . 4N
+4N 4r 24:5N 24n 8N .
 
+4N 4r . 8N .
+24:5N 6n     8n 4N 4r
+4r . 8N 24n . . 24:5N 24n
+4N 4r . .
 
-4N 8N . 4N 8N .
-24:5N 6n 8n   24:5N 6n 8n
-4N 8N . 4N 8N .
-4N . 2N
+// Part 2
+4N 8N . 4r .
+24:5N 6n     8n 4N 4r
+4r . 8N 24n . . 4N
+4N 4r 24:5N 24n 8N .
 
-4N 8N . 4N 8N .
-24:5N 6n 8n   24:5N 6n 8n
-4N 8N . 4N 8N .
-4N . 2N
+4N 8N . 4r .
+24:5N 6n     8n 4N 4r
+4r . 8N 24n . . 24:5N 24n
+4N 4r . .
+
 
 
 
 
 /track bass
-/channel 7
+/channel 4
 // Sync:
 1r
 // Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
@@ -131,31 +147,32 @@ _4M _. _8M . _. .  _4M _. _8M . _4M
 /mf
 // Roll off
 4B . 2B
-4B . 2B
-
-
+4B . 4B
 
 /mf
-4B . . .
-24:5B 6b 8b   24:5B 6b 8b
-4B . . .
-4B . 2B
+4b  // pickup beat
 
+4B 4r 4B .
+24:5B 6b         8b 4B 4r
+4
+B . . .
+4B . . 4r
+
+4B 4r 4B .
+24:5B 6b         8b 4B 4r
 4B . . .
-24:5B 6b 8b   24:5B 6b 8b
+4B . . 4r
+
+// part 2
+4B 4r 8r 8b 4B
+24:5B 6b         8b 4B 4r
 4B . . .
-4B . 2B
+4B . . 4r
 
-
-8B . 4B 8B . 4B
-24:5B 6b 8b   24:5B 6b 8b
-8B . 4B 8B . 4B
-4B . 2B
-
-8B . 4B 8B . 4B
-24:5B 6b 8b   24:5B 6b 8b
-8B . 4B 8B . 4B
-4B . 2B
+4B 4r 8r 8b 4B
+24:5B 6b         8b 4B 4r
+4B . . .
+4B . . 4r
 
 
 

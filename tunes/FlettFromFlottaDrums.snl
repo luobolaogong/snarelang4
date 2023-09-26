@@ -10,71 +10,77 @@
 /tempo 84
 
 /track met
-/channel 0
+/channel 1
+/marker FletFlot
 // Sync:
-/ff
+/mf
 _4M _. _8M . _4M
-/f
+/mf
 // Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+/marker P&D Q,M
 4M . . .
+/marker RollOff
 // Roll-off
 _4M _. _8M . _. .  _4M _. _8M . _4M
 
 
 /mp
+/marker Pt1
 4M . . .   . . . .   . . . .   . . . .
+//marker Pt1b
 4M . . .   . . . .   . . . .   . . . .
+/marker Pt2
 4M . . .   . . . .   . . . .   . . . .
+//marker Pt2b
 4M . . .   . . . .   . . . .   . . . .
 
 //////////////////////////////////////////////////////
 
 
-/track snare5
-/channel 5
+/track snare
+/channel 2
 
 // sync
 1r
 // "pipes and drums, One Two" or "By the right, quick march"
 /ff
-/marker P&D 1,2
+//marker P&D 1,2
 32:3T 32t 8F 4r ^4F ^.
 // Roll-off
 /ff /< 24Z . . . . .    . . . . . .   2T /fff
-/ff /< 24Z . . . . .    . . . . . .   4T /fff
+/ff /< 24Z . . . . .    . . . . . .   2T /fff
+///ff /< 24Z . . . . .    . . . . . .   4T /fff
 
 
 /mf
-8r  12T  24  // pickups
+//8r  12T  24  // pickups  Hey, this was wrong anyway, shoulda been 24:5T 24t
 
-/marker L1
-6F 24r 24t           /mf /< 24z . .  8t /ff        /mf /< 24Z . . . . .  >8T /ff     /mf /<  24Z . .
-_6t /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        4F              /< 24Z . . 24t . .
-_6F /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        /< 24Z . . . . .    >8T /ff.  /mf
-/< 24Z . . . . /ff >24t /mf    ^40T 20z . _8t      /< 24Z . . . . .   >6T /ff  /mf   24r 24t
+//marker Pt1
+24:5F 24t           /mf /< 24z . .  8t /fff        /mf /< 24Z . . . . .  >8T /fff     /mf /<  24Z . .
+_24:5t /fff /mf 24t          /< 24z . . 8t /fff /mf        _4F              /< 24Z . . 24t . .
+_24:5F /fff /mf 24t          /< 24z . . 8t /fff /mf        /< 24Z . . . . .    >8T /fff .  /mf
+/< 24Z . . . . /fff >24t /mf    ^40T 20z . _8t      /< 24Z . . . . .   >24:5T /fff  /mf   24t
 
-/marker L2
-6F 24r 24t           /< 24z . . 8t /ff /mf         /< 24Z . . . . .   >8T /ff  /mf   /< 24z . .
-6t /ff /mf 24r 24t           /< 24z . . 8t /ff /mf         /< 24Z . . . . .   >40T /ff /mf  /< 20z . 24t . .
-8F /ff /mf 12t >24T          12t 24t 12F >24t    /< 24t . .  8F /ff /mf    /< 24Z . . . . _24t /ff /mf
-/< ^40T 20z . 24z . .    24Z . . . . .      ^4T /ff   /mf          /< 24Z . . 8t /ff /mf
+24:5F 24t           /< 24z . . 8t /fff /mf         /< 24Z . . . . .   >8T /fff  /mf   /< 24z . .
+24:5t /fff /mf 24t           /< 24z . . 8t /fff /mf         /< 24Z . . . . .   >40T 20z . 24t . .
+8F /fff /mf 12t >24T          12t 24t 12F >24t    /< 24t . .  8F /fff /mf    /< 24Z . . . . _24t /fff /mf
+/< ^40T 20z . 24z . .    24Z . . . . .      ^4T /fff   /mf          /< 24Z . . 8t /fff /mf
 
-/marker L3
-/< 24Z . . . . .      >8T  /ff /mf    .          /< 24Z . . . . .  >8T /ff   /mf   /< 24Z . .
-6t /ff /mf 24r 24t           /< 24z . . 8t /ff    4F      /mf        /< 24Z . . _24t . .
-4F /ff                  /mf /< 24z . . 8t /ff    /mf /< 24Z . . . . .  _40T /ff  /mf 20z .  _8t /f
-/mf /< 24Z . . . . >24t /ff /mf   _40T 20z . 8t /f /mf     /< 24Z . . . . .   ^6T /ff /mf 24r 24t
+//marker Pt2
+/< 24Z . . . . .      >8T  /fff /mf    .          /< 24Z . . . . .  >8T /fff   /mf   /< 24Z . .
+24:5t /fff /mf 24t           /< 24z . . 8t /fff    4F      /mf        /< 24Z . . _24t . .
+_4F /fff                  /mf /< 24z . . 8t /fff    /mf /< 24Z . . . . .  _40T /fff  /mf 20z .  _8t /f
+/mf /< 24Z . . . . >24t /fff /mf   >40T 20z . 8t /f /mf     /< 24Z . . . . .   ^24:5T /fff /mf 24t
 
-/marker L4
-6F 24r 24t           /mf /< 24z . . 8t /ff         /mf  /< 24Z . . . . .  ^8T /ff /mf /< 24Z . .
-6t /ff /mf 24r 24t           /mf /< 24z . . 8t /ff        /mf  /< 24Z . . . . .   /ff   /mf /< _40T 20z . 24t . .
-8F /ff 12t ^24T          12t 24t 12F ^24t    /mf /< 24t . . 8F /ff /mf    24Z . . . . _24t
-^40T /ff /mf /< 20z . 24z . .    24Z . . . . .        ^4T /ff              4r
+24:5F 24t           /mf /< 24z . . 8t /fff         /mf  /< 24Z . . . . .  ^8T /fff /mf /< 24Z . .
+24:5t /fff /mf 24t           /mf /< 24z . . 8t /fff        /mf  /< 24Z . . . . .   >40T 20z . 24t . .
+8F /fff 12t ^24T          12t 24t 12F ^24t    /mf /< 24t . . 8F /fff /mf    24Z . . . . >24t
+^40T /fff /mf /< 20z . 24z . .    24Z . . . . .        ^4T /fff              4r
 
 //////////////////////////////////////////////////////
 
 /track tenor
-/channel 2
+/channel 3
 
 // Sync:
 1r
@@ -114,7 +120,7 @@ _6F /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        /< 24Z . . . . .    >8
 
 ///////////////////////////////////////////
 /track bass
-/channel 3
+/channel 4
 
 // Sync:
 1r

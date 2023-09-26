@@ -11,7 +11,7 @@ declare learnWithMidi=/home/rob/LearnWithMidi
 declare forDrummers=${learnWithMidi}/ForDrummers
 declare forPipers=${learnWithMidi}/ForPipers
 
-declare soundFontFile=DrumLineMelodyChanter20210518.sf2
+declare soundFontFile=~/Desktop/MySoundFonts/DrumLineMelodyChanter20210518.sf2
 #echo soundfont is $soundFontFile
 
 declare tune=ExerciseSets

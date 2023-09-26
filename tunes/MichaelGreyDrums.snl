@@ -8,11 +8,15 @@
 /time 2/2      // Not sure what this should be.  2/4? 4/4? 4/2?
 /tempo 2=100    // Maxwell solo https://youtu.be/dxmITiQysOI?t=234
 //tempo 2=90    // Jack's tempo in his recording from his website
+/tempo 2=88 // for Mark?
+
 /marker M.Grey
 
 // Count off
-2M . 4M . 8M . 4M
+/fff
+2M . 4M . 2M
 
+/f
 /marker Pt1
 2M .  . .  . .  . .
 2M .  . .  . .  . .
@@ -51,7 +55,7 @@
 
 
 /track snare
-/channel 5
+/channel 2
 
 // Count off
 2r . . .
@@ -64,104 +68,110 @@
 //>8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T   >120:17T 120:13t 120:17F 120:13f 4F 4r
 
 // Basically two beats per bar.  A beat would be a half note as written
+// Changing all regular accents to bigger ones for now.
 // Pt1
->4F >8F 8t  8F . >. 16t t
-16T T >8t  8T 8F  8T 8D 16T . . .
-4T >8t 24T t t  8T >t  24T t t 8T
->8T f t f   8T f 16T . . .
+^4F ^8F 8t  8F . ^. 16t t
+16T T ^8t  8T 8F  8T 8D 16T . . .
+4T ^8t 24T t t  8T ^t  24T t t 8T
+^8T f t f   8T f 16T . . .
 
-8T . >F t  8F . >. 8t
-16F 16T 8t  16T z >8T  16t Z >8t 8T .
->8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
->8T . 8F . 4F 4r
+8T . ^F t  8F . ^. 8t
+16F 16T 8t  16T z ^8T  16t Z ^8t 8T .
+^8T 24t T T  ^8t 24T t t  ^8T ^t  24T t t 8T
+^8T . 8F . ^4F 4r
 
 // P1Rpt (except last beat)
->4F >8F 8t  8F . >. 16t t
-16T T >8t  8T 8F  8T 8D 16T . . .
-4T >8t 24T t t  8T >t  24T t t 8T
->8T f t f   8T f 16T . . .
+^4F ^8F 8t  8F . ^. 16t t
+16T T ^8t  8T 8F  8T 8D 16T . . .
+4T ^8t 24T t t  8T ^t  24T t t 8T
+^8T f t f   8T f 16T . . .
 
-8T . >F t  8F . >. 8t
-16F 16T 8t  16T z >8T  16t Z >8t 8T .
->8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
->8T . 8F . 4F 16T . . .
+8T . ^F t  8F . ^. 8t
+16F 16T 8t  16T z ^8T  16t Z ^8t 8T .
+^8T 24t T T  ^8t 24T t t  ^8T ^t  24T t t 8T
+^8T . 8F . ^4F 16T . . .
 
 
 // Pt2
->8T . >8F 8t 8T ^8t 16T . . .
->12T 12z . 12t . . /cresc >12T 12z . . . .
->4T /ff 8f . 8T 8f 16T . . .
->16T . . .  8T >8t 8T >8t 24T t t 8T
+^8T . ^8F 8t 8T ^8d 16T T t t
+^12T 12z . 12t . . /cresc ^12T 12z . . . .
+^4T /ff 8f . 8T 8f 16T . . .
+//^16T . . .  8T ^8t 8T ^8t 24T t t 8T
+^16T . . .  8T ^8t 8T ^8t 16T T t t
 
 8T 8f 8T 8f 8T 8f 8T 8f
->8T 16t t 12T . . >12t 12Z . 16T . . .
->8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
->8T . 8F . 4F 4r
+^8T 16t t 12T . . ^12t 12Z . 16T T t t
+^8T 24t T T  ^8t 24T t t  ^8T ^t  24T t t 8T
+^8t . 8f . ^4f 16T T t t
 
 
 
 // P2Rpt
->8T . >8F 8t 8T ^8t 16T . . .
->12T 12z . 12t . . /cresc >12T 12z . . . .
->4T /ff 8f . 8T 8f 16T . . .
->16T . . .  8T >8t 8T >8t 24T t t 8T
+^8T . ^8F 8t 8T ^8d 16T T t t
+^12T 12z . 12t . . /cresc ^12T 12z . . . .
+^4T /ff 8f . 8T 8f 16T . . .
+//^16T . . .  8T ^8t 8T ^8t 24T t t 8T
+^16T . . .  8T ^8t 8T ^8t 16T T t t
 
 8T 8f 8T 8f 8T 8f 8T 8f
->8T 16t t 12T . . >12t 12Z . 16T . . .
->8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
->8T . 8F . 4F 16T . . .
+^8T 16t t 12T . . ^12t 12Z . 16T T t t
+^8T 24t T T  ^8t 24T t t  ^8T ^t  24T t t 8T
+^8t . 8f . ^4f 4r
 
 
 // Pt3
->8T 16t . . . . .  >8t 16T . . . . .
-^8T 16t t 8T >t 8T >8t 16T . . .
->12T 12z . 12t . . 4F 8T 24t T T
-8t >8T 24t T T 8t  8T 8D  16T . . .
+^8T 16t . . . . .  ^8t 16T . . . . .
+^8T 16t t 8T ^t 8T ^8t 16T . . .
+^12T 12z . 12t . . >4F >8T 24t T T
+8t ^8T 16T T t t  8T 8D  16T T t t
 
->8T 16t . . . . .  >8t 16T . . . . .
->8T 16t t 8T >8f  8T >8f >8F 8t
->8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
->8T . 8F . 4F 4r
+^8T 16t . . . . .  ^8t 16T . . . . .
+^8T 16t t 8T ^8f  8T ^8f ^8F 8t
+^8T 24t T T  ^8t 24T t t  ^8T ^t  24T t t 8T
+^8T . >8F >. ^4F 4r
 
 
 // P3Rpt
->8T 16t . . . . .  >8t 16T . . . . .
-^8T 16t t 8T >t 8T >8t 16T . . .
->12T 12z . 12t . . 4F 8T 24t T T
-8t >8T 24t T T 8t  8T 8D  16T . . .
+^8T 16t . . . . .  ^8t 16T . . . . .
+^8T 16t t 8T ^t 8T ^8t 16T . . .
+^12T 12z . 12t . . >4F >8T 24t T T
+8t ^8T 16T T t t  8T 8D  16T T t t
 
->8T 16t . . . . .  >8t 16T . . . . .
->8T 16t t 8T >8f  8T >8f >8F 8t
->8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
->8T . 8F . 4F 16T 16z _8T
+^8T 16t . . . . .  ^8t 16T . . . . .
+^8T 16t t 8T ^8f  8T ^8f ^8F 8t
+^8T 24t T T  ^8t 24T t t  ^8T ^t  24T t t 8T
+^8T . >8F >. ^4F 16T 16z _8T
 
 
 // Pt4
->8T 24t T T  8t >8T 8t . 16t t T t
->8t 8F 8F 16T . . .  >8D  16T . . .
->4T >8F 8t 8T . >8F 16t t
-16T T >8t 8T .   8T 8t 16T . . .
+^8T 24t T T  8t ^8T 8t 8T 16t T t t
+^8T 8F 8F 16t t T t ^8D  16t t T t
+^4T ^8F 8f 8T . ^8F 16t t
+16T T ^8t 8T .   8F . 16T T t t
 
-12T . . . . >20t 10Z .  >20T 10z . 12t
-12T . . . . >20t 10Z .  >20T 10z . 12t
->8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
->8T . 8F . 4F 4r
-
+_24T 12z . . .  >20t 10Z .  >20T 10z . 8t
+_14Z . 13Z . . >20t 10Z .  >20T 10z . 8t   // close.  Don't know if it's exact
+^8T 24t T T  ^8t 24T t t  ^8T ^t  24T t t 8T
+^8T . 8F . ^4F 4r
 
 
 // P4Rpt
->8T 24t T T  8t >8T 8t . 16t t T t
->8t 8F 8F 16T . . .  >8D  16T . . .
->4T >8F 8t 8T . >8F 16t t
-16T T >8t 8T .   8T 8t 16T . . .
+^8T 24t T T  8t ^8T 8t 8T 16t T t t
+^8T 8F 8F 16t t T t ^8D  16t t T t
+^4T ^8F 8f 8T . ^8F 16t t
+16T T ^8t 8T .   8F . 16T T t t
+//^8T 24t T T  8t ^8T 8t . 16t t T t
+//^8t 8F 8F 16T . . .  ^8D  16T . . .
+//^4T ^8F 8t 8T . ^8F 16t t
+//16T T ^8t 8T .   8T 8t 16T . . .
 
-8T >8t 8T . 16T . . . 8T  16T .
-16T . 8D 16T . . .  8T >8t 8T .
->8T 24t T T  >8t 24T t t  >8T ^t  24T t t 8T
->8T . 8F . 4F 4r
+8T ^8t 8T . 16T . . . 8T  16t t
+16T . 8D 16t t T t  >8T ^8t 8T .
+^8T 24t T T  ^8t 24T t t  ^8T ^t  24T t t 8T
+^8t . 8f . ^4f 4r
 
 /track tenor
-/channel 2
+/channel 3
 // Currently tenor part is identical with bass.  Shouldn't be.
 // Perhaps play straight quarter notes, except for syncopated accents.
 //
@@ -183,7 +193,7 @@ _2N . _. .
 
 
 // Pt2
-/p
+/ppp
 _2N . _. .
 _2N . _. .
 _2N . _. .
@@ -197,7 +207,7 @@ _2N . _. .
 
 
 // Pt3
-/p
+/ppp
 _2N . _. .
 _2N . _. .
 _2N . _. .
@@ -211,7 +221,7 @@ _2N . _. .
 
 
 // Pt4
-/p
+/ppp
 _2N . _. .
 _2N . _. .
 _2N . _. .
@@ -224,8 +234,8 @@ _2N . _. .
 _2N . _. .
 
 /track bass
-/channel 3
-/p
+/channel 4
+/pp
 2r . . .
 
 // Pt1

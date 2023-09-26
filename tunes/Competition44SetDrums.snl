@@ -3,172 +3,212 @@
 // This version is NOT the massed bands snare settings
 
 /track met
-/channel 4
+/channel 0
 /time 4/4
-/tempo 82
-
+/tempo 84
+/marker Comp44Set
 // Sync:
-/ff
+/mf
 _4M _. _8M . _4M
-/f
+/mf
 // Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+/marker PD
 4M . . .
 // Roll-off
-_4M _. _8M . _. .  _4M _. _8M . _4M
+/marker RO
+//_4M _. _8M . _. .  _4M _. _8M . _4M
+_4M _. _8M . _. .  _4M _. _8M . _. .
 
 
 
 
 // Flett From Flotta - met
-/mf
-// Line 1
+/mp
+/marker FF1
 4M . . . . . . . . . . . . . . .
 
-// Line 2
+//marker FF1b
 4M . . . . . . . . . . . . . . .
 
-// Line 3
+/marker FF2
 4M . . . . . . . . . . . . . . .
 
-// Line 4
-4M . . . . . . . . . . . . . .
+//marker FF2b
+4M . . . . . . . . . . . . . . .
 
 /// Waterloo - met
 
+/marker BW1
 4M . . .  . . . .  . . . .  . . . .
+//marker BW1b
 4M . . .  . . . .  . . . .  . . . .
-
+/marker BW2
 4M . . .  . . . .  . . . .  . . . .
+//marker BW2b
 4M . . .  . . . .  . . . .  . . . .
 
 // Cockney Jocks 1,3 - met
+/marker CJ1
+4M . . .  . . . .  . . . .  . . . .
+//marker CJ1b
+4M . . .  . . . .  . . . .  . . . .
 
+/marker CJ2
 4M . . .  . . . .  . . . .  . . . .
-4M . . .  . . . .  . . . .  . . . .
-
-4M . . .  . . . .  . . . .  . . . .
+//marker CJ2b
 4M . . .  . . . .  . . . .  . . . .
 
 // Murdo's Wedding - met
-
+/marker MwA
 4M . . .   . . . .   . . . .   . . . .
+//marker MwA2
 4M . . .   . . . .   . . . .   . . . .
+/marker MwB
 4M . . .   . . . .   . . . .   . . . .
+//marker MwB2
 4M . . .   . . . .   . . . .   . . . 4r
 
 
 
 /////////////////// Snare ///////////////////////////////////
 // Flett from Flotta - Snare
-
-/track snare5
-/channel 5
+// I updated some dynamics and a few figures in this file for snare 4/22/23,
+// but not in the individual tunes because I don't care.
+/track snare
+/channel 1
 
 
 // sync
 1r
 // "pipes and drums, One Two", or "By the right, quick march"
 /ff
-/marker P&D 1,2
+//marker P&D 1,2
 32:3T 32t 8F 4r 4F .
 /f
 // Roll-off
-/cresc 24Z . . . . .    . . . . . .   2T /fff /f
-/cresc 24Z . . . . .    . . . . . .   4T /fff /f
+/< 24Z . . . . .    . . . . . .   2T /fff /f
+/< 24Z . . . . .    . . . . . .   2T /fff /f
+///< 24Z . . . . .    . . . . . .   4T /fff /f
 
 
 
-/marker FlettFlotta
+//marker FlettFlotta
 /mf
-8r  12T  24  // pickups
+//8r  12T  24  // pickups
 
-/marker L1
-6F 24r 24t           /mf /< 24z . .  8t /ff        /mf /< 24Z . . . . .  >8T /ff     /mf /<  24Z . .
-_6t /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        4F              /< 24Z . . 24t . .
-_6F /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        /< 24Z . . . . .    >8T /ff.  /mf
-/< 24Z . . . . /ff >24t /mf    ^40T 20z . _8t      /< 24Z . . . . .   >6T /ff  /mf   24r 24t
+//marker L1
+_24:5F 24t               /mf /< 24Z . . 8t /fff        /mf /< 24Z . . . . .  _8T /fff     /mf /<  24Z . .
+_24:5t /fff /mf 24t          /< 24Z . . 8t /fff /mf        >4F              /< 24Z . . 24t . .
+_24:5F /fff /mf 24t          /< 24Z . . 8t /fff /mf        /< 24Z . . . . .    _8T /fff .  /mf
+/< 24Z . . . . /fff >24t /mf    >40T 20z . _8t      /< 24Z . . . . .   >24:5T /fff /mf 24t
 
-/marker L2
-6F 24r 24t           /< 24z . . 8t /ff /mf         /< 24Z . . . . .   >8T /ff  /mf   /< 24z . .
-6t /ff /mf 24r 24t           /< 24z . . 8t /ff /mf         /< 24Z . . . . .   >40T /ff /mf  /< 20z . 24t . .
-8F /ff /mf 12t >24T          12t 24t 12F >24t    /< 24t . .  8F /ff /mf    /< 24Z . . . . _24t /ff /mf
-/< ^40T 20z . 24z . .    24Z . . . . .      ^4T /ff   /mf          /< 24Z . . 8t /ff /mf
+//marker L2
+_24:5F 24t                   /< 24Z . . 8t /fff /mf         /< 24Z . . . . .   >8T /fff  /mf   /< 24Z . .
+24:5t /fff /mf 24t           /< 24Z . . 8t /fff /mf         /< 24Z . . . . .   >40T 20z . 24t . .
+8F /fff /mf 12t >24T          12t 24t 12F >24t    /< 24t . .  8F /fff /mf    /< 24Z . . . . _24t /fff /mf
+/< ^40T 20z . 24z . .    24Z . . . . .      >4T /fff   /mf          /< 24Z . . 8t /fff /mf
 
-/marker L3
-/< 24Z . . . . .      >8T  /ff /mf    .          /< 24Z . . . . .  >8T /ff   /mf   /< 24Z . .
-6t /ff /mf 24r 24t           /< 24z . . 8t /ff    4F      /mf        /< 24Z . . _24t . .
-4F /ff                  /mf /< 24z . . 8t /ff    /mf /< 24Z . . . . .  _40T /ff  /mf 20z .  _8t /f
-/mf /< 24Z . . . . >24t /ff /mf   _40T 20z . 8t /f /mf     /< 24Z . . . . .   ^6T /ff /mf 24r 24t
+//marker L3
+/< 24Z . . . . .      >8T  /fff /mf    .          /< 24Z . . . . .  _8T /fff   /mf   /< 24z . .
+24:5T /fff /mf 24t           /< 24Z . . 8t /fff    _4F      /mf        /< 24Z . . _24t . .
+4F /fff                  /mf /< 24Z . . 8t /fff    /mf /< 24Z . . . . .  _40T /fff  /mf 20z .  _8t /f
+/mf /< 24Z . . . . _24t    >40T 20z . _8t /fff /mf     /< 24Z . . . . .   _24:5F /fff /mf 24t
 
-/marker L4
-6F 24r 24t           /mf /< 24z . . 8t /ff         /mf  /< 24Z . . . . .  ^8T /ff /mf /< 24Z . .
-6t /ff /mf 24r 24t           /mf /< 24z . . 8t /ff        /mf  /< 24Z . . . . .   /ff   /mf /< _40T 20z . 24t . .
-8F /ff 12t ^24T          12t 24t 12F ^24t    /mf /< 24t . . 8F /ff /mf    24Z . . . . _24t
-^40T /ff /mf /< 20z . 24z . .    24Z . . . . .        ^4T /ff              // 4r
+//marker L4
+_24:5F 24t           /mf /< 24Z . . 8t /fff         /mf  /< 24Z . . . . .  ^8T /fff /mf /< 24Z . .
+_24:5T /fff /mf 24t           /mf /< 24Z . . _8t /fff        /mf  /< 24Z . . . . .   >40T 20z . 24t . .
+_8F /fff 12t ^24T          12t 24t 12F ^24t    /mf /< 24t . . _8F /fff /mf  /< 24Z . . . . _24t
+_40T  20z . 24z . .    24Z . . . . .        ^4T /fff               // 4r
 
 
 // Battle of Waterloo - snare
-/marker BttlWaterloo
-8r 8t
-/cresc 24Z . . . . . 8T /ff /f . /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
-24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
-24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /f
-24:5f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . . 8T /ff /f 24T 12t  // changed ending to match pipes
 
-/marker L2
-/cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
-24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
-24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /mp
-/cresc 24Z . . . . .   . . . . . .  4T /ff /f 8r /cresc 24Z . .
+/mf 8r 8t // pickup
+// Pt1
+/< 24Z . . . . _24t _8T /fff /f . 24Z . . 8t 8F 24Z . .
+24:5t /fff /f 24t /< 24Z . . 8t /fff /f 4F /< 24Z . . t . .
+24:5F /fff /f 24t 24t . . 8f F /< 24Z . . 24t . . 8F /fff /f
+24:5f 24t /< 24Z . . 8t /fff 4F /f 24Z . _24T _8t    // depends on how pipes play it???
 
-/marker L3
-24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . .   40T 20z . 40t 20Z .
-24:5T /ff /f 30t . . . . 8T 4f /cresc 24Z . . t . .
-24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /f
-24:5f 24t /cresc 24Z . . 8t /ff /f /cresc 24Z . . . . . 8T /ff /f 24T 12t  // changed ending to match pipes
+/< 24Z . . . . _24t _8T /fff /f 8t /< 24Z . . 8t /fff /f 8F /< 24Z . .
+24:5t /fff /f 24t /< 24Z . . 8t /fff /f 4F /< 24Z . . t . .
+24:5F /fff /f 24t 24t . . 8f F /< 24Z . . 24t . . 8F /ff
+4F /mf /< 24Z . . . . .  4T /fff /mf /< 24Z . . . . .
 
-/marker L4
-/cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . 8t /ff /f 8F /cresc 24Z . .
-24:5t /ff /f 24t /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . t . .
-24:5F /ff /f 24t 24t . . 8f F /cresc 24Z . . 24t . . 8F /ff /mf
-4f 4r /cresc 24Z . . . . .   . . . . . .
+// Pt2
+24:5t /fff /f 24t /< 24Z . . 8t /fff /f /< 24Z . . . . .   _40T 20z . _40t 20Z .
+//24:5T /fff /f 30t . . . . 8T 4f /< 24Z . . t . .
+>12T 24t 12T >30t . . . . >8T 4f 24Z . . 24t . .
+24:5F /fff /f 24t 24t . . 8f F /< 24Z . . 24t . . 8F /fff /f
+24:5f 24t /< 24Z . . 8t /fff 4F /f 24Z . _24T _8t
+
+
+/mf /< 24Z . . . . 24t 8T /fff /f 8t /< 24Z . . 8t /fff /f 8F /< 24Z . .
+24:5t /fff /f 24t /< 24Z . . 8t /fff /f 4F /< 24Z . . t . .
+24:5F /fff /f 24t 24t . . 8f F /< 24Z . . 24t . . 8F /fff /mf
+4f /< 24Z . . . . .   4T /fff  // 4r
+
+
 
 
 // Cockney Jocks - snare
-/marker Cockney Jocks (no drum parts yet)
-4T /ff /f 4r . .
-1r . .   . . . .
-1r . . .   . . .
-4r . .
+/f /< 24Z . 24T 8t   // pickup according to Peter who wrote it as dotted 16, 32, 8
+
+
+// one bar per line
+
+4F /fff /mf /< 24Z . . . . .  _40T 20z . 24z . .  32T . . . _8T /fff /f
+12F 24t 12T 24f 12T 24t 8F   24:5F 24t  24Z . . 8t
+
+24:5F 72T 36z 8T .  24Z . . 24t . .  8F 8t
+4F /mf /< 24Z . . . . . 6T /fff /f 24r 24t 8F 8t
+
+4F /fff /mf /< 24Z . . . . .  _40T 20z . 24z . .  32T . . . _8T /fff /f
+12F 24t 12T 24f 12T 24t 8F   24:5F 24t  24Z . . 8t
+
+24:5F 72T 36z 8T .  24Z . . 24t . .  12T ^24t 12T 24T
+4f /mf /< 24Z . . . . . 4T /fff /f 8r 8t
+
+//marker Pt2
+8F 24Z . . 8t 8F  24Z . . _40t 20Z .  32T . . . _8T
+12F 24t 12T 24f 12T 24t 8F   24:5F 24t  24Z . . 8t
+
+24:5F 72T 36z 8T .  24Z . . 24t . .  8F 8t
+4F /mf /< 24Z . . . . . 6T /fff /f 24r 24t 8F 8t
+
+8F 24Z . . 8t 8F  24Z . . _40t 20Z .  32T . . . _8T
+12F 24t 12T 24f 12T 24t 8F   24:5F 24t  24Z . . 8t
+
+24:5F 72T 36z 8T .  24Z . . 24t . .  12T ^24t 12T 24T
+4f /mf /< 24Z . . . . . 2T /fff /f
+
+
+
 
 // Murdo's Wedding - snare
-/marker MurdoWedd
+//marker MurdoWedd
 /f
-8r /cresc 24Z . .
+24:5F 24t 8F . /< 24Z . . . . . 8T /fff /f 8t
+24:5F 72T 36z       8T . /< 24Z . . 24t . . 8F /fff /f 8t
+/< 24Z . . . . t  8T /fff /f 8t  12T 24f 12T 24t 8F .
+24F t T 12t 24t 8F . /< 24Z . . . . .  24:5T /fff /f 24t
 
-/marker Pt1b1
-24:5t /ff /f 24t 8F . /cresc 24Z . . . . . 8T /ff /f f
-24:5F 48Z . 8T f /cresc 24Z . . 24t . . 8T /ff /f f
-/cresc 24Z . . . . t  8T /ff /f t  12T 24f 12T 24t 8F .
-24F t T 12t 24t 8F . /cresc 24Z . . . . .  8T /ff /f /cresc 24Z . .
+>24:5F 24t 8F . /< 24Z . . . . .  8T /fff /f 8t
+24:5F 72T 36z       8T . /< 24Z . . 24t . . 8F /fff /f 8t
+/< 24Z . . . . t  8T /fff /f .  12T 24f 12T 24t 8F .
+>4F /< 24Z . . . . . 4T /fff /f /< 24Z . . . . .
 
-/marker Pt1b5
-24:5t /ff /f 24t 8F . /cresc 24Z . . . . .  8T /ff /f 8f
-24:5F 48Z . 8T f /cresc 24Z . . 24t . . 8T /ff /f f
-/cresc 24Z . . . . t  8T /ff /f .  12T 24f 12T 24t 8F .
-/cresc 24Z . . . . . 8T /ff /f 8t /cresc 24Z . . . . . 4T /ff /f
+// Part B
+4T /fff /f /< 24Z . . 8t /fff /f >4F /< 24Z . . . . .
+4T /fff /f /< 24Z . . 8t /fff /f >4F 12T _24f 12T 24t
+/< 24Z . . . . 24t 8T /fff /f 8t 12T _24f 12T 24t 8F .
+24F t T 12t 24t 8F . /< 24Z . . . . . 24:5T /fff /f 24t
 
-/marker Pt2b9
-4F /cresc 24Z . . 8t /ff /f 4F /cresc 24Z . . . . .
-4T /ff /f /cresc 24Z . . 8t /ff /f 4F 12T 24t 12T 24t
-/cresc 24Z . . . . 24t 8T /ff /f 8t 12T 24f 12T 24t 8F .
-24F t T 12t 24t 8F . /cresc 24Z . . . . . 8T /ff /f /cresc 24Z . .
-
-/marker Pt2b13
-24:5t /ff /f 24t 8F . /cresc 24Z . . . . . 8T /ff /f f
-24:5F 48Z .   8T f /cresc 24Z . . t . . 8T /ff /f f
-/cresc 24Z . . . .  t 8T /ff /f . 12T 24f 12T 24t 8F .
-/cresc 24Z . . . . . 8T /ff /f f 4F 4r
+24:5F /fff /f 24t 8F . /< 24Z . . . . . 8T /fff /f 8t
+24:5F 72T 36z   8T . /< 24Z . . t . . 8F /fff /f 8t
+/< 24Z . . . .  t 8T /fff /f . 12T _24f 12T 24t _8F _.
+//_4F /< 24Z . . . . . >24T 24z . 24t . . >4F /fff
+_4F /< 24Z . . . . . >40T 20z . 24t . . >4F /fff
 
 
 
@@ -216,8 +256,190 @@ _6F /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        /< 24Z . . . . .    >8
 2N 2N
 
 // Battle of Waterloo
+/mf
+4N 8r 8n 4N 4r
+4N 8r 8n 4N 4r
+4N 24N . . 8n 4r 4r
+24:5N 24n 8N . 4N 4r
+
+4N 8r 8n 4N 4r
+4N 8r 8n 4N 4r
+4N 24N . . 8n 4r 24N . . 8n
+4N 4r 2r
+
+// Pt2
+24:5N 24n 8N . 4N 4r
+24:5N 24:4n  8n 4N 4r
+4N 24N . . 8n 4r .
+24:5N 24n 8N . 4N 4r
+
+4N 8r 8n 4N 4r
+4N 8r 8n 4N 4r
+4N 24N . . 8n 4r 24N . . 8n
+4N 4r 4r
+
 // Cockney Jocks
+//16n . 8  // pickup beat (the newer way, according to Allison)
+/mp /< 12n 24N 8n // Interpreting what Peter wrote based on what Allison did at practice
+// One bar per line
+4N /mf 4r . 8N .
+24:5N 6n  8n 4N 4r
+4r . 8N 24n . . 4N
+4N 4r 24:5N 24n 8N .
+
+4N 4r . 8N .
+24:5N 6n  8n 4N 4r
+4r . 8N 24n . . 24:5N 24n
+4N 4r . .
+
+// Part 2
+4N 8N . 4r .
+24:5N 6n  8n 4N 4r
+4r . 8N 24n . . 4N
+4N 4r 24:5N 24n 8N .
+
+4N 8N . 4r .
+24:5N 6n  8n 4N 4r
+4r . 8N 24n . . 24:5N 24n
+4N 4r . .
+
 // Murdo's Wedding
+4N 8N . 4N 8N .
+4N 4r 8r 24n . . 4N
+24:5N 24n 8N . 4r .
+24N . . 12n 24n 8N . 4N 4r
+
+4N 8N . 4N 8N .
+4N 4r 8r 24n . . 4N
+24:5N 24n 8N . 4r .
+4N 4r . .
+
+// part B
+4N 8N . 4N .
+4N 8N . 4N 4r
+24:5N 24n 8N . 4r .
+24N . . 12n 24n 8N . 4N 4r
+
+4N 8N . 4N 8N .
+4N 4r 8r 24n . . 4N
+24:5N 24n 8N . 4r .
+4N 4r 8r 24n . . 4N
+
+/////////////////// Tenor Augmentation to help hear the part ///////////////////////////////////
+
+//// Flett From Flotta - tenor augmentation!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+///track snare
+///channel 5
+//
+//// Sync:
+//1r
+//// Commands: "By the Right, quick march", or "Pipes & Drums, One, Two"
+//1r
+//
+///fff
+//
+//// Roll off
+//4F . 2F
+//4F . 2F
+//
+///fff
+//
+//// Life 1
+//2F 2f
+//2F 2f
+//2F 2r
+//24:5F 24f 8F 8:3f 4f
+//
+//// Line 2
+//2F 2f
+//2F 8:3F 24f . .
+//24:5F 24F 12f 24f 8:3F 4r
+//2F 2F
+//
+//// Line 3
+//2F 4r 8F .
+//2F 2f
+//2F 4r 8F .
+//24:5F 24f 8F 8:3f 4f
+//
+//// Line 4
+//2F 2f
+//2F 8:3F 24f . .
+//24:5F 24F 12f 24f 8:3F 4r
+//2F 2F
+//
+//// Battle of Waterloo
+///fff
+//4F 8r 8f 4F 4r
+//4F 8r 8f 4F 4r
+//4F 24F . . 8f 4r 4r
+//24:5F 24f 8F . 4F 4r
+//
+//4F 8r 8f 4F 4r
+//4F 8r 8f 4F 4r
+//4F 24F . . 8f 4r 24F . . 8f
+//4F 4r 2r
+//
+//// Pt2
+//24:5F 24f 8F . 4F 4r
+//24:5F 24:4f  8f 4F 4r
+//4F 24F . . 8f 4r .
+//24:5F 24f 8F . 4F 4r
+//
+//4F 8r 8f 4F 4r
+//4F 8r 8f 4F 4r
+//4F 24F . . 8f 4r 24F . . 8f
+//4F 4r 4r
+//
+//// Cockney Jocks
+////16f . 8  // pickup beat (the newer way, according to Allison)
+///fff /< 12f 24F 8f // Interpreting what Peter wrote based on what Allison did at practice
+//// One bar per line
+//4F /fff 4r . 8F .
+//24:5F 6f  8f 4F 4r
+//4r . 8F 24f . . 4F
+//4F 4r 24:5F 24f 8F .
+//
+//4F 4r . 8F .
+//24:5F 6f  8f 4F 4r
+//4r . 8F 24f . . 24:5F 24f
+//4F 4r . .
+//
+//// Part 2
+//4F 8F . 4r .
+//24:5F 6f  8f 4F 4r
+//4r . 8F 24f . . 4F
+//4F 4r 24:5F 24f 8F .
+//
+//4F 8F . 4r .
+//24:5F 6f  8f 4F 4r
+//4r . 8F 24f . . 24:5F 24f
+//4F 4r . .
+//
+//// Murdo's Wedding
+//4F 8F . 4F 8F .
+//4F 4r 8r 24f . . 4F
+//24:5F 24f 8F . 4r .
+//24F . . 12f 24f 8F . 4F 4r
+//
+//4F 8F . 4F 8F .
+//4F 4r 8r 24f . . 4F
+//24:5F 24f 8F . 4r .
+//4F 4r . .
+//
+//// part B
+//4F 8F . 4F .
+//4F 8F . 4F 4r
+//24:5F 24f 8F . 4r .
+//24F . . 12f 24f 8F . 4F 4r
+//
+//4F 8F . 4F 8F .
+//4F 4r 8r 24f . . 4F
+//24:5F 24f 8F . 4r .
+//4F 4r 8r 24f . . 4F
+
+
+
 
 
 
@@ -264,5 +486,72 @@ _6F /ff /mf 24r 24t          /< 24z . . 8t /ff /mf        /< 24Z . . . . .    >8
 2B 2B
 
 // Battle of Waterloo
+/mf
+4B . 8r 8b 4B
+4B 4r 4B .
+4B 4r /< 8B . . .
+_4B /f /mf 4r 4B .
+
+/mf
+4B . 8r 8b 4B
+4B 4r 4B .
+4B 4r /< 8B . . .
+_4B /f /mf 4r 4B .
+
+// Pt2
+4B 4r . 8B .
+24:5B 6b 8b 4B 4r
+4B 4r /< 8B . . .
+_4B /f /mf 4r 4B .
+
+4B . 8r 8b 4B
+4B 4r 4B .
+4B 4r /< 8B . . .
+_4B /f /mf 4r 4B
+
+
 // Cockney Jocks
+4b  // pickup beat
+4B 4r 4B .
+24:5B 6b  8b 4B 4r
+4
+B . . .
+4B . . 4r
+
+4B 4r 4B .
+24:5B 6b 8b 4B 4r
+4B . . .
+4B . . 4r
+
+// part 2
+4B 4r 8r 8b 4B
+24:5B 6b  8b 4B 4r
+4B . . .
+4B . . 4r
+
+4B 4r 8r 8b 4B
+24:5B 6b  8b 4B 4r
+4B . . .
+4B . . 4r
+
+
 // Murdo's Wedding
+// part A
+4B . . .
+4B 8B . 4B 4r
+4B . . 8B .
+4B . . .
+4B . . .
+4B 8B . 4B 4r
+4B . . .
+4B . . 4r
+
+// part B
+4B 4r . 4b
+4B 8B . 4B 4r
+4B . . 8B .
+4B . . .
+4B . . .
+4B 8B . 4B 4r
+4B . . .
+4B 4r 8B . 4B

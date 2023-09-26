@@ -1,5 +1,8 @@
 // "Salute To Max Rayne", A Fanfare by Alex Duthart
 // Snare Score from Cantebury Cale Pipe Band
+// Params for building the midi file:
+// -i FanfaresSalutes/MaxRayneSnare.snl,FanfaresSalutes/MaxRayneTenorBass.snl,FanfaresSalutes/MaxRayneTempoAndMet.snl -o midifiles/MaxRayneOneSnareWithMidAndMet.mid -S 1.10
+// The tempo above is 10% faster than what J.L. wanted:
 // Tempos
 // Page 1 Lines 1-10: 88
 // Page 1 Lines 11-12 50
@@ -140,14 +143,14 @@ _36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z . 
 
 // start accel
 /marker accel ...
-//^24T t t _T t t _T t t _T t t
-//^24T t t T t t T t t T t t
-//^24T t t T t t T t t T t t
-//^24T t t T t t T t t T t t
-2r
-2r
-2r
-2r
+^24T t t _T t t _T t t _T t t
+^24T t t T t t T t t T t t
+^24T t t T t t T t t T t t
+^24T t t T t t T t t T t t
+//2r
+//2r
+//2r
+//2r
 
 /marker P2L1Rpt
 ^24T t t T t t T t t T t t
@@ -189,7 +192,9 @@ _36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z . 
 /marker P2L6
 // The fourth bar of this line is hard to decipher.  In the oldest recording of this
 // They DO NOT play it as written.  They play simple 16T . 32T T t t  16T . 32T T t t
-// They are not playing the same number of notes!!!!
+// They are not playing the same number of notes as is written!!!!  So, did they change it,
+// or did the person who wrote it out screw it up because he was stupid?  Probably both.
+// This is the original, at this part:     https://youtu.be/f-WQXqRGv_Y?t=160
 ^16T 32t t T T t t   T T t t T T t t
 ^16T t _F ^f   T _f ^F t
 ^16F 32t t T T t t   T T t t T T t t
@@ -205,7 +210,10 @@ _36T 18z >24T      _36t 18Z >24t     _36T 18z >24T     >40t 20Z .    >40T 20z . 
 //^16T ^32t T T t t ^T          ^36t  T T t t    T T t t // not too bad
 //^16T ^t 32T T t t  ^24T ^24t  48T T t t T T t t // probaby what Alex wanted, but smoothed it out
 //^12T ^40t T T t t ^24T  ^20t 40T T t t T T t t // Would be closer to swing, but only at slower tempo
-^20T ^t 40T T t t ^20T  ^20t 40T T t t T T t t  // makes best mathematical sense
+//^28T ^t T T t t ^28T   ^36t T T t t T T t t    // Based on 5 tuples, but accents too close.
+^20T ^t 40T T t t ^20T  ^20t 40T T t t T T t t  // Also based on 5 tuples, Sounds best, good compromise between written and played.
+
+
 
 /marker P2L7
 ^16T 32t t T T t t   T T t t T T t t
