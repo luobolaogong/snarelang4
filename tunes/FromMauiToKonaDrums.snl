@@ -75,7 +75,8 @@ _8M _8M _4M
 /< 24Z . . . . .   4T /fff
 
 
-/mf
+//mf
+/f
 // Hey, remember that 5 stroke tap rolls that take up an 8th note each are 40T 20z . 40t 20Z .
 //marker Pt1
 >8F >16F 16t . . >40T 20z .
@@ -97,7 +98,7 @@ _8M _8M _4M
 >8T >16F 16t . . >40T 20z .
 8t 32T . . .  16T ._8F
 24Z . . 16t >T 16t t >8F
-/< 24Z . . . . . 4T /ff /mf
+/< 24Z . . . . . 4T /ff /f
 
 //marker Pt2
 16T >f T ._8F 8t
@@ -108,7 +109,7 @@ _8M _8M _4M
 16T >f T ._8F 8t
 8F 24z . .  16t ._8f
 24Z . . 16t >T 16t t >8F
-/< 24Z . . . . . 4T /ff /mf
+/< 24Z . . . . . 4T /ff /f
 
 // repeat Pt2
 16T >f T ._8F 8t
@@ -119,7 +120,7 @@ _8M _8M _4M
 16T >f T ._8F 8t
 8F 24z . .  16t ._8f
 24Z . . 16t >T 16t t >8F
-/< 24Z . . . . . 4T /ff /mf
+/< 24Z . . . . . 4T /ff /f
 
 // Pt3
 32T . . .  >16T >40t 20Z . >16T t t
@@ -152,7 +153,7 @@ _8F >16F t T _f T .
 >40T 20z . 16t >40T 20z . >16t . .
 _8F 24Z . . 16t . _8f
 24Z . . 16t >T t t >8F
-/< 24Z . . . . . 8T /fff /mf 16T .
+/< 24Z . . . . . 8T /fff /f 16T .
 
 
 // Pt4 Repeat
@@ -165,7 +166,7 @@ _8F >16F t T _f T .
 >8F >16F 16t . . >40T 20z .
 8t >32T . . .  _16T ._8F
 //24Z . . 16t >T 16t t >8F
-///< 24Z . . . . . 4T /ff /mf
+///< 24Z . . . . . 4T /ff /f
 
 // New ending
 /mp /<
@@ -199,10 +200,11 @@ _8F >16F t T _f T .
 /< 24Z . . . . .   4T /fff
 
 // Cheap simulation of 2 or more snares
-256r
+//256r
+280r  // This is about the smallest amount of rest that the program can handle currently
 
 //mf
-/f
+/ff
 // Hey, remember that 5 stroke tap rolls that take up an 8th note each are 40T 20z . 40t 20Z .
 //marker Pt1
 >8F >16F 16t . . >40T 20z .
@@ -224,7 +226,7 @@ _8F >16F t T _f T .
 >8T >16F 16t . . >40T 20z .
 8t 32T . . .  16T ._8F
 24Z . . 16t >T 16t t >8F
-/< 24Z . . . . . 4T /ff /f
+/< 24Z . . . . . 4T /fff /ff
 
 //marker Pt2
 16T >f T ._8F 8t
@@ -235,7 +237,7 @@ _8F >16F t T _f T .
 16T >f T ._8F 8t
 8F 8:3r
 24Z . . 16t >T 16t t >8F
-/< 24Z . . . . . 4T /ff /f
+/< 24Z . . . . . 4T /fff /ff
 
 // repeat Pt2
 16T >f T ._8F 8t
@@ -246,7 +248,7 @@ _8F >16F t T _f T .
 16T >f T ._8F 8t
 8F 24z . .  16t ._8f
 24Z . . 16t >T 16t t >8F
-/< 24Z . . . . . 4T /ff /f
+/< 24Z . . . . . 4T /fff /ff
 
 // Pt3
 32T . . .  >16T >16t 4r
@@ -279,7 +281,7 @@ _8F >16F t T _f T .
 2r
 _8F 24Z . . 16t . _8f
 24Z . . 16t >T t t >8F
-/< 24Z . . . . . 8T /fff /f 8r
+/< 24Z . . . . . 8T /fff /ff 8r
 
 
 // Pt4 Repeat
@@ -292,7 +294,7 @@ _8F >16F t T _f T .
 >8F >16F 16t . . >40T 20z .
 8t >32T . . .  _16T ._8F
 //24Z . . 16t >T 16t t >8F
-///< 24Z . . . . . 4T /ff /mf
+///< 24Z . . . . . 4T /fff /ff
 
 // New ending
 /mp /<

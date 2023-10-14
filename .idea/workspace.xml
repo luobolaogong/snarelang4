@@ -22,36 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="1st cut at Michael Grey">
-      <change afterPath="$PROJECT_DIR$/bin/FromMauiToKona.bash" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/AnnettesStonecutterDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/FromMauiToKonaDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/RyleyLoops.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/StonecuttersChatterDrums.snl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tunes/StonecuttersRantDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+    <list default="true" id="55489c4a-596a-4fdb-b5bb-8e0fd15502af" name="Default Changelist" comment="Maui To Kona">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/FanfaresSalutes/MaxRayneSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/BuildTunes.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BuildTunes.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Midi2Mp3.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Midi2Mp3.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ProcessThese.bash" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ProcessThese.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/commandline.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/commandline.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/midi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/midi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/score.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/score.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/AnnettesChatterDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/AnnettesChatterDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/AnnettesChatterMetSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/AnnettesChatterMetSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/AnnettesChatterSnare.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/AnnettesChatterSnare.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/BattleOfWaterlooDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/BattleOfWaterlooDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/CockneyJocksDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/CockneyJocksDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/Competition44SetDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/Competition44SetDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/FlettFromFlottaDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/FlettFromFlottaDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/JohWalshsWalkDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/JohWalshsWalkDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/MichaelGreyDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MichaelGreyDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/MurdosWeddingDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/MurdosWeddingDrums.snl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunes/StonecuttersPhoenixDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/StonecuttersPhoenixDrums.snl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunes/FromMauiToKonaDrums.snl" beforeDir="false" afterPath="$PROJECT_DIR$/tunes/FromMauiToKonaDrums.snl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1091,14 +1064,8 @@
       <workItem from="1694879418551" duration="18103000" />
       <workItem from="1694915565622" duration="8919000" />
       <workItem from="1695087890851" duration="3312000" />
-      <workItem from="1695662050592" duration="3576000" />
-    </task>
-    <task id="LOCAL-00092" summary="Additions and corrections to several tunes.">
-      <created>1619740085355</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1619740085356</updated>
+      <workItem from="1695662050592" duration="3625000" />
+      <workItem from="1697242948461" duration="2469000" />
     </task>
     <task id="LOCAL-00093" summary="Added bass part to drum salute.">
       <created>1619828790713</created>
@@ -1436,7 +1403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677827792077</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Maui To Kona">
+      <created>1695712613624</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1695712613624</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1455,7 +1429,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="End of day, swapped 2 and 3.  Syncs off in 3rd set." />
     <MESSAGE value="Keep rearranging." />
     <MESSAGE value="Keep rearranging and shortening." />
     <MESSAGE value="Updates for St. Patrick's Day." />
@@ -1480,7 +1453,8 @@
     <MESSAGE value="Prob no signif changes" />
     <MESSAGE value="Still developing this." />
     <MESSAGE value="1st cut at Michael Grey" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st cut at Michael Grey" />
+    <MESSAGE value="Maui To Kona" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maui To Kona" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="190" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1695088229872">
@@ -1495,26 +1469,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="265" width="426" height="485" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1694888032826" />
-    <state width="1708" height="238" key="GridCell.Tab.0.bottom" timestamp="1695689382238">
+    <state width="1708" height="238" key="GridCell.Tab.0.bottom" timestamp="1697252159025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1708" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1695689382238" />
-    <state width="1708" height="238" key="GridCell.Tab.0.center" timestamp="1695689382238">
+    <state width="1708" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1697252159025" />
+    <state width="1708" height="238" key="GridCell.Tab.0.center" timestamp="1697252159025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1708" height="238" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1695689382238" />
-    <state width="1708" height="238" key="GridCell.Tab.0.left" timestamp="1695689382237">
+    <state width="1708" height="238" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1697252159025" />
+    <state width="1708" height="238" key="GridCell.Tab.0.left" timestamp="1697252159025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1708" height="238" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1695689382237" />
-    <state width="1708" height="238" key="GridCell.Tab.0.right" timestamp="1695689382238">
+    <state width="1708" height="238" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1697252159025" />
+    <state width="1708" height="238" key="GridCell.Tab.0.right" timestamp="1697252159025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1708" height="238" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1695689382238" />
+    <state width="1708" height="238" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1697252159025" />
     <state x="385" y="221" width="992" height="731" key="SettingsEditor" timestamp="1694913138158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="385" y="221" width="992" height="731" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1694913138158" />
+    <state x="538" y="481" width="802" height="529" key="Vcs.Push.Dialog.v2" timestamp="1695712624080">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="538" y="481" width="802" height="529" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1695712624080" />
     <state x="769" y="621" width="383" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1694887817468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
